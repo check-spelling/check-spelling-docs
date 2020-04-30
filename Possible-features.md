@@ -1,5 +1,5 @@
 # Possible features
 
-* [Update whitelist](Feature: Update whitelist)
-* [Non posix shell friendly commands](Feature: Other shells)
-* [Blacklist](Feature: Blacklist)
+* [Update whitelist](wiki/Feature: Update whitelist)
+* [Non posix shell friendly commands](wiki/Feature: Other shells)
+* [Blacklist](wiki/Feature: Blacklist)
