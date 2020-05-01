@@ -2,9 +2,9 @@
 
 ## Near term
 * [[Avoid using colors in names|Feature: Expectlist]]
+* [[Dictionary deltas|Feature: Dictionary deltas]]
 * [[Update whitelist|Feature: Update whitelist]]
 * [[Non posix shell friendly commands|Feature: Other shells]]
-* [[Dictionary deltas|Feature: Dictionary deltas]]
 
 
 ## Distant future
