@@ -4,7 +4,7 @@
 * [[Avoid using colors in names|Feature: Expectlist]]
 * [[Update whitelist|Feature: Update whitelist]]
 * [[Non posix shell friendly commands|Feature: Other shells]]
-* [[Blacklist|Feature: Blacklist]]
+* [[Dictionary deltas|Feature: Dictionary deltas]]
 
 
 ## Distant future
