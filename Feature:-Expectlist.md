@@ -4,7 +4,7 @@ I received feedback that colors were problematic.
 
 I think to address this, I'll add support for:
 
-* `expectlist` <=> `whitelist`
+* `expect` <=> `whitelist`
 
 I'll probably make this the primary term and offer the old one as backwards compatibility (along w/ making PRs to existing consumers to migrate).
 
