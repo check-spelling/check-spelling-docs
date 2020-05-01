@@ -1,7 +1,7 @@
 # Possible features
 
 ## Near term
-* [[Avoid using colors in names|Feature: Allowlist]]
+* [[Avoid using colors in names|Feature: Expectlist]]
 * [[Update whitelist|Feature: Update whitelist]]
 * [[Non posix shell friendly commands|Feature: Other shells]]
 * [[Blacklist|Feature: Blacklist]]
