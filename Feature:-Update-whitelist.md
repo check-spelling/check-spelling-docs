@@ -1,3 +1,5 @@
+⚠️ This feature will probably be [[renamed|Feature: Expectlist]]
+
 # Update whitelist
 
 Presently, the action reports a comment which includes a posix shell command to update the whitelist.
