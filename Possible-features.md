@@ -2,14 +2,13 @@
 
 ## Ready but not published
 * [[Avoid using colors in names|Feature: Expectlist]]
+* [[Dictionary deltas|Feature: Dictionary deltas]]
 
 ## In progress
 * [[Non posix shell friendly commands|Feature: Other shells]]
-
-## Near term
-* [[Dictionary deltas|Feature: Dictionary deltas]]
 * [[Update whitelist|Feature: Update whitelist]]
 
+## Near term
 
 ## Distant future
 
