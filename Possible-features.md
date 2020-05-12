@@ -10,6 +10,8 @@
 
 ## Near term
 
+* [[Run locally|Feature: Run locally]]
+
 ## Distant future
 
 * [[Correct misspelled words within GitHub|Feature: Correct misspelling]]
