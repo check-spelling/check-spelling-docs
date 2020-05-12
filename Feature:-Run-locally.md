@@ -2,8 +2,8 @@
 
 Possible approaches:
 
-* [[Single script|#single-script]]
-* [[Docker image|#Docker-image]]
+* [Single script](#single-script)
+* [Docker image](#Docker-image)
 
 ## Single script
 
