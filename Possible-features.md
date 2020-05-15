@@ -1,11 +1,8 @@
 # Possible features
 
 ## Ready but not published
-* [[Avoid using colors in names|Feature: Expectlist]]
-* [[Dictionary deltas|Feature: Dictionary deltas]]
 
 ## In progress
-* [[Non posix shell friendly commands|Feature: Other shells]]
 * [[Update whitelist|Feature: Update whitelist]]
 
 ## Near term
