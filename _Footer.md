@@ -1,1 +1,1 @@
-[[Showcase|Showcase]] | [[Possible features]]
+[[Showcase|Showcase]] | [[Possible features]] | [[Release notes]]
