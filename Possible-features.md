@@ -4,10 +4,9 @@
 
 ## In progress
 * [[Update whitelist|Feature: Update whitelist]]
+* [[Run locally|Feature: Run locally]]
 
 ## Near term
-
-* [[Run locally|Feature: Run locally]]
 
 ## Distant future
 
