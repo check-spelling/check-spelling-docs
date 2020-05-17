@@ -2,8 +2,100 @@
 
 Possible approaches:
 
-* [Single script](#single-script)
+* [Act](#act)
+* [Single script](#Single-script)
 * [Docker image](#Docker-image)
+
+## Act
+
+[Act](https://github.com/nektos/act) is a tool which uses Docker to run GitHub Actions locally.
+
+It doesn't currently work with check-spelling, but [nektos/act#243](https://github.com/nektos/act/pull/243) should fix that.
+
+```
+$ act
+[Spell checking/Spell checker] 🚀  Start image=node:12.6-buster-slim
+[Spell checking/Spell checker]   🐳  docker run image=node:12.6-buster-slim entrypoint=["/usr/bin/tail" "-f" "/dev/null"] cmd=[]
+[Spell checking/Spell checker]   🐳  docker cp src=/Users/jsoref/code/spelling-org/check-spelling.git/. dst=/github/workspace
+[Spell checking/Spell checker] ⭐  Run actions/checkout@v2.0.0
+[Spell checking/Spell checker]   ✅  Success - actions/checkout@v2.0.0
+[Spell checking/Spell checker] ⭐  Run ./
+| cwd: /github/workspace
+| spellchecker: /github/workspace
+[Spell checking/Spell checker]   ❓  ::add-matcher::.git/reporter.json
+| Retrieving expect from .github/actions/spelling/expect/Dockerfile.txt
+| .github/actions/spelling/expect/README.md.txt
+| .github/actions/spelling/expect/action.yml.txt
+| .github/actions/spelling/expect/check-pull-requests.sh.txt
+| .github/actions/spelling/expect/common.sh.txt
+| .github/actions/spelling/expect/docker-setup.sh.txt
+| .github/actions/spelling/expect/exclude.pl.txt
+| .github/actions/spelling/expect/porcelain.pl.txt
+| .github/actions/spelling/expect/reporter.json.txt
+| .github/actions/spelling/expect/reporter.pl.txt
+| .github/actions/spelling/expect/spelling-unknown-word-splitter.pl.txt
+| .github/actions/spelling/expect/trampoline.js.txt
+| .github/actions/spelling/expect/unknown-words.sh.txt
+| .github/actions/spelling/expect/words.txt
+| .github/actions/spelling/expect/xargs_zero.txt
+| Retrieving excludes from .github/actions/spelling/excludes.txt
+| Retrieving patterns from .github/actions/spelling/patterns.txt
+| Retrieving advice from .github/actions/spelling/advice.txt
+| Checking spelling...
+| (...Excluded paths...)
+| Excluded paths:
+| \.png$
+| ^LICENSE\.txt$
+| ^\.dockerignore$
+| ^\.github/
+| (...Only paths restriction...)
+| No only paths restriction file
+| (...Spell check...)
+| (...Compare expect with new output...)
+| (...New output...)
+| (...Fewer misspellings...)
+|
+| There are now fewer misspellings than before
+|
+| <details><summary>To accept these changes, run the following commands</summary>
+|
+|
+| ```
+| perl -e '
+| my @expect_files=qw('".github/actions/spelling/expect/Dockerfile.txt
+| .github/actions/spelling/expect/README.md.txt
+| .github/actions/spelling/expect/action.yml.txt
+| .github/actions/spelling/expect/check-pull-requests.sh.txt
+| .github/actions/spelling/expect/common.sh.txt
+| .github/actions/spelling/expect/docker-setup.sh.txt
+| .github/actions/spelling/expect/exclude.pl.txt
+| .github/actions/spelling/expect/porcelain.pl.txt
+| .github/actions/spelling/expect/reporter.json.txt
+| .github/actions/spelling/expect/reporter.pl.txt
+| .github/actions/spelling/expect/spelling-unknown-word-splitter.pl.txt
+| .github/actions/spelling/expect/trampoline.js.txt
+| .github/actions/spelling/expect/unknown-words.sh.txt
+| .github/actions/spelling/expect/words.txt
+| .github/actions/spelling/expect/xargs_zero.txt"');
+| @ARGV=@expect_files;
+| my @stale=qw('"aarch aeiou api argv bdc cbeaff chmod cmp config css cwd debian dest dirname elif elsif ENTRYPOINT eol esac excludelist fchurn fileformat FRONTEND github graphql grep gsutil homepage html http ies jq json jsoref junit linux metadata misspellled mkdir mktemp noarch noreply oid oneline pdf perl PIPESTATUS pne png py qq qw rawfile README regex regexp rpmfind rsqm rsync rtn Soref spellchecker spellchecking ssh stderr stdin stdio stdout stedolan substr svg symlinks SZ timeframe tmp uname undef unicode url usr uuid vnd whitelist woord wordlist WORKDIR workflow www xargs xslx "');
+| my $re=join "|", @stale;
+| my $suffix=".".time();
+| my $previous="";
+| sub maybe_unlink { unlink($_[0]) if $_[0]; }
+| while (<>) {
+|   if ($ARGV ne $old_argv) { maybe_unlink($previous); $previous="$ARGV$suffix"; rename($ARGV, $previous); open(ARGV_OUT, ">$ARGV"); select(ARGV_OUT); $old_argv = $ARGV; }
+|   next if /^($re)(?:$| .*)/; print;
+| }; maybe_unlink($previous);'
+| git add .github/actions/spelling/expect || echo '... you want to ensure .github/actions/spelling/expect/5f7f35b25e6bce7b1e5a8f226369a86ab19a623e.txt is added to your repository...'
+| ```
+| </details>
+|
+| Please add expect items to a file corresponding to the file with the word.
+|
+[Spell checking/Spell checker]   ❓  ::remove-matcher owner=check-spelling::
+[Spell checking/Spell checker]   ✅  Success - ./
+```
 
 ## Single script
 
