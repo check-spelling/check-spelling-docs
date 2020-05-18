@@ -12,3 +12,4 @@
 
 * [[Correct misspelled words within GitHub|Feature: Correct misspelling]]
 * [[Learn from corrections|Feature: Learn from corrections]]
+* [[Plug into Pantsbuild|Feature: Pantsbuild plugin]]
