@@ -8,7 +8,7 @@
 
 ## Near term
 
-* [[Collapse older check comments|Feature: Collapse older check comments]
+* [[Collapse older check comments|Feature: Collapse older check comments]]
 
 ## Distant future
 
