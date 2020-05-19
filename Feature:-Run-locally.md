@@ -10,7 +10,7 @@ Possible approaches:
 
 [Act](https://github.com/nektos/act) is a tool which uses Docker to run GitHub Actions locally.
 
-It doesn't currently work with check-spelling, but [nektos/act#243](https://github.com/nektos/act/pull/243) should fix that.
+[v0.2.8](https://github.com/nektos/act/releases/tag/v0.2.8) doesn't currently work with check-spelling, but [nektos/act#243](https://github.com/nektos/act/pull/243) fixes that, so I expect [v0.2.9](https://github.com/nektos/act/releases/tag/v0.2.9)+ should.
 
 ```
 $ act
