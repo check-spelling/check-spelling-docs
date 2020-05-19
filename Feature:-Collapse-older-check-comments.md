@@ -1,0 +1,1 @@
+If a PR has a commit that introduces a spelling mistake, and then a new commit cleans it up, or introduces new mispellings, it'd be nice if the older comment were collapsed as **outdated**.
