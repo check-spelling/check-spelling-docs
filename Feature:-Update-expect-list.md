@@ -1,10 +1,19 @@
-⚠️ This feature will probably be [[renamed|Feature: Expectlist]]
+# Update expect list
 
-# Update whitelist
+Presently, the action reports a comment which includes a posix shell command to update the expect list.
 
-Presently, the action reports a comment which includes a posix shell command to update the whitelist.
+It would be much nicer if one could click something and have the action update the expect list.
 
-It would be much nicer if one could click something and have the action update the whitelist.
+### Comment limit
+
+GitHub returns an error if the comment is too long:
+> "body is too long (maximum is 65536 characters)"
+
+This functions as a limit on the number of words reported initially.
+
+Also, duplicating the words to expect list is just ugly.
+
+Once the comment is effectively self-aware, it makes sense for the command to retrieve the bullet list instead of encoding the words twice.
 
 ## User trigger implementation paths
 
