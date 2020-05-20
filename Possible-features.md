@@ -3,7 +3,7 @@
 ## Ready but not published
 
 ## In progress
-* [[Update whitelist|Feature: Update whitelist]]
+* [[Update expect list|Feature: Update expect list]]
 * [[Run locally|Feature: Run locally]]
 
 ## Near term
