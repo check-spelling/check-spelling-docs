@@ -9,6 +9,7 @@
 ## Near term
 
 * [[Collapse older check comments|Feature: Collapse older check comments]]
+* [[Versioned dictionaries|Feature: Versioned dictionaries]]
 
 ## Distant future
 
