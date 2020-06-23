@@ -5,3 +5,5 @@ I plan to make to changes:
 1. Give the dictionary a tag and have each release download a release pinned version
 
 Going forward, this will enable me to update the dictionary by, e.g. removing [Archaic words](Archaic-words) or adding words that are commonly used by consumers.
+
+When I make such updates, I'll be able to include the list of changes in the release notes 😄 
