@@ -7,3 +7,5 @@ I plan to make to changes:
 Going forward, this will enable me to update the dictionary by, e.g. removing [Archaic words](Archaic-words) or adding words that are commonly used by consumers.
 
 When I make such updates, I'll be able to include the list of changes in the release notes 😄 
+
+🛠️ This is ready for release in 0.0.17-alpha
