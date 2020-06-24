@@ -10,7 +10,7 @@ Possible approaches:
 
 [Act](https://github.com/nektos/act) is a tool which uses Docker to run GitHub Actions locally.
 
-[v0.2.8](https://github.com/nektos/act/releases/tag/v0.2.8) doesn't currently work with check-spelling, but [nektos/act#243](https://github.com/nektos/act/pull/243) fixes that, so I expect [v0.2.9](https://github.com/nektos/act/releases/tag/v0.2.9)+ should.
+Requires Act [v0.2.9](https://github.com/nektos/act/releases/tag/v0.2.9)+.
 
 ```
 $ act
@@ -108,7 +108,7 @@ In the long term, I'd rather this, but I don't expect to implement this anytime 
 ## Docker image
 
 As of **0.0.15-alpha**, there is a `Dockerfile` and its default path is to *check spelling* (there are other paths for checking pull requests and there will be a path for interacting with comments).
-⚠️ The Docker file will no longer be the main entrypoint in GitHub as of **0.0.16-alpha**.
+⚠️ The Docker file is no longer be the main entrypoint in GitHub as of **0.0.16-alpha**.
 
 * Publish a docker image.
 
