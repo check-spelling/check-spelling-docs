@@ -1,11 +1,11 @@
 # Possible features
 
 ## Ready but not published
+* [[Run locally|Feature: Run locally]]
+* [[Versioned dictionaries|Feature: Versioned dictionaries]]
 
 ## In progress
 * [[Update expect list|Feature: Update expect list]]
-* [[Run locally|Feature: Run locally]]
-* [[Versioned dictionaries|Feature: Versioned dictionaries]]
 
 ## Near term
 
