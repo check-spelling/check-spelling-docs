@@ -2,10 +2,12 @@
 
 I received feedback that colors were problematic.
 
-I think to address this, I'll add support for:
+To address this, I've add support for:
 
 * `expect` <=> `whitelist`
 
-I'll probably make this the primary term and offer the old one for backward compatibility (along w/ making PRs to existing consumers to migrate).
+I've made this the primary term and am offering the old one for backward compatibility (along w/ making PRs to existing consumers to migrate).
 
 In some ways, `expect` is actually more accurate as the action tries to prune the list of things which are no longer necessary.
+
+Released in [0.0.16-alpha](https://github.com/check-spelling/check-spelling/releases/tag/0.0.16-alpha)
