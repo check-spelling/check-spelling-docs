@@ -1,0 +1,1 @@
+I've also been thinking about having the system do heuristics, if there are proportionally many items for a given file, it's probably worth suggesting to `exclude` the file.
