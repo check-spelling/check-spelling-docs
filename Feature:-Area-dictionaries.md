@@ -16,8 +16,11 @@
   * Alexa
 * Names
   * Common
+  * Emoji (for, e.g., :smile:)
+  * HTML entities
   * GitHub
   * Major Twitter users?
+  * Unicode entities
 * Programming language keywords -- See [programming-languages](https://github.com/collections/programming-languages) for ideas?
   * Basic
   * C
