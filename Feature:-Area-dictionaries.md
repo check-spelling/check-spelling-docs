@@ -39,4 +39,8 @@
   * SVG
   * TypeScript
   * ...
-
+* Licenses
+  * creativecommons
+  * MPL
+  * GPL
+  * ...
