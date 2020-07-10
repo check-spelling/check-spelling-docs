@@ -1,6 +1,7 @@
 * Colors
   * HTML/CSS
   * Pantone
+  * X11
   * ?
 * Companies
   * Tech
@@ -11,6 +12,8 @@
     * ...
 * Countries
   * ccTLDs
+* Domains
+  * Alexa
 * Names
   * Common
   * GitHub
