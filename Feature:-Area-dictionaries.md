@@ -14,6 +14,8 @@
   * ccTLDs -- https://github.com/incognico/list-of-top-level-domains
 * Domains
   * Alexa
+* Jargon
+  * Lorem -- https://www.lipsum.com/
 * Names
   * Common
   * Emoji (for, e.g., :smile:)
