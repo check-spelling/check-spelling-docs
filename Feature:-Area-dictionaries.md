@@ -1,5 +1,5 @@
 * Colors
-  * HTML/CSS
+  * HTML/CSS -- https://drafts.csswg.org/css-color-3/
   * Pantone
   * X11
   * ?
