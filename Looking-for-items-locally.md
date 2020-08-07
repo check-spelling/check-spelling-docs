@@ -32,7 +32,7 @@ patterns=$(
 peek() {
   echo "$files" |
   tr "\n" "\0" |
-  xargs -0 grep "$1" |
+  xargs -0 grep "$1" 2>/dev/null |
   perl -pne 's{'"$patterns"'}{}g' |
   uniq |
   grep --color=always "[^a-zA-Z]$1\([^a-zA-Z]\|$\)";
