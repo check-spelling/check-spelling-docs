@@ -35,7 +35,14 @@ peek() {
   xargs -0 grep "$1" 2>/dev/null |
   perl -pne 's{'"$patterns"'}{}g' |
   uniq |
-  grep --color=always "[^a-zA-Z]$1\([^a-zA-Z]\|$\)";
+  grep --color=always "$( 
+    perl -e '$pattern="'$1'";
+      $search = q<[A-Z]\)>.$pattern.q<\(\b\|[A-Z]> if $pattern =~ /^[a-z]/;
+      $search = q<[a-z]\)>.$pattern.q<\(\b\|[a-z]> if $pattern =~ /^[A-Z]{2,}$/;
+      $search = q<[a-z]\)>.$pattern.q<\(\b\|[A-Z]> if $pattern =~ /^[A-Z]+[a-z]/;
+      print q<\(\b\|>.$search.q<\)>;
+   '
+  )";
 }
 
 review() {
