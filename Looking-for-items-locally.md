@@ -37,10 +37,31 @@ peek() {
   uniq |
   grep --color=always "$( 
     perl -e '$pattern="'$1'";
-      $search = q<[A-Z]\)>.$pattern.q<\(\b\|[A-Z]> if $pattern =~ /^[a-z]/;
-      $search = q<[a-z]\)>.$pattern.q<\(\b\|[a-z]\|[A-Z][a-z][a-z]> if $pattern =~ /^[A-Z]{2,}$/;
-      $search = q<[a-z]\)>.$pattern.q<\(\b\|[A-Z]> if $pattern =~ /^[A-Z]+[a-z]/;
-      print q<\(\b\|>.$search.q<\)>;
+      $b = q<\b>;
+      $p = q<\|>;
+      $o = q<\(>;
+      $c = q<\)>;
+      $u = q<[A-Z]>;
+      $l = q<[a-z]>;
+      sub format_lower {
+        return "$o$b$p$u$c$_[0]$o$b$p$u$c";
+      }
+      sub format_upper {
+        return "$o$b$p$l$c$_[0]$o$b$p$l$p$u$l$l$c";
+      }
+      sub format_title {
+        return "$o$b$p$l$c$_[0]$o$b$p$u$c";
+      }
+      if ($pattern =~ /^$l/) {
+        $upper_pattern = $pattern;
+        $upper_pattern =~ tr/[a-z]/[A-Z]/;
+        $title_pattern = substr($upper_pattern, 0, 1).(substr $pattern, 1);
+        print format_lower($pattern).$p.format_upper($upper_pattern).$p.format_title($title_pattern);
+      } elsif ($pattern =~ /^$u{2,}$/) {
+        print format_upper($pattern);
+      } elsif ($pattern =~ /^$u+$l/) {
+        print format_title($pattern) ;
+      }
    '
   )";
 }
