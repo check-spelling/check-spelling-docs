@@ -41,8 +41,8 @@ peek() {
       $p = q<\|>;
       $o = q<\(>;
       $c = q<\)>;
-      $u = q<[A-Z]>;
-      $l = q<[a-z]>;
+      $l = q<[^A-Z]>;
+      $u = q<[^a-z]>;
       sub format_lower {
         return "$o$b$p$u$c$_[0]$o$b$p$u$c";
       }
