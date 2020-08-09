@@ -62,7 +62,7 @@ peek() {
       } elsif ($pattern =~ /^$u+$l/) {
         print format_title($pattern) ;
       }
-   '
+    '
   )";
 }
 
