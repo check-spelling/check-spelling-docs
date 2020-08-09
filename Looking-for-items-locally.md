@@ -38,7 +38,7 @@ peek() {
   grep --color=always "$( 
     perl -e '$pattern="'$1'";
       $search = q<[A-Z]\)>.$pattern.q<\(\b\|[A-Z]> if $pattern =~ /^[a-z]/;
-      $search = q<[a-z]\)>.$pattern.q<\(\b\|[a-z]> if $pattern =~ /^[A-Z]{2,}$/;
+      $search = q<[a-z]\)>.$pattern.q<\(\b\|[a-z]\|[A-Z][a-z][a-z]> if $pattern =~ /^[A-Z]{2,}$/;
       $search = q<[a-z]\)>.$pattern.q<\(\b\|[A-Z]> if $pattern =~ /^[A-Z]+[a-z]/;
       print q<\(\b\|>.$search.q<\)>;
    '
