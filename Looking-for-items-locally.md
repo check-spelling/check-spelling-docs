@@ -74,7 +74,7 @@ review() {
     echo;
     peek $a; done |
   uniq |
-  less -r
+  less -R
 }
 ```
 
