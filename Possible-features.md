@@ -3,6 +3,7 @@
 ## Ready but not published
 * [[Run locally|Feature: Run locally]]
 * [[Versioned dictionaries|Feature: Versioned dictionaries]]
+* [[Easier bootstrapping|Feature: Easier bootstrapping]]
 
 ## In progress
 * [[Update expect list|Feature: Update expect list]]
