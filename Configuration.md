@@ -1,5 +1,6 @@
 * [Workflow Variables](#Workflow_Variables)
 * [Files](#Files)
+* See [[Configuration: Workflows]] for the general workflow modes
 
 ## Workflow Variables
 
