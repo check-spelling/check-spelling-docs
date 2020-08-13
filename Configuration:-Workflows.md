@@ -5,6 +5,7 @@ Supported GitHub actions:
 * [push](#push)
 * [pull_request](#pull_request) :warning:
 * [schedule](#schedule)
+* See [[Workflow Variables|Configuration#Workflow_Variables]] 
 
 ### push
 
