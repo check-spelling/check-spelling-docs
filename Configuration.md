@@ -4,6 +4,8 @@
 
 ## Workflow Variables
 
+See [[Configuration: Workflows]] for the supported GitHub workflows.
+
 | Variable | Description |
 | ------------- | ------------- |
 | [config](#config) | directory with config files |
