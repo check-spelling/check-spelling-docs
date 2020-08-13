@@ -52,7 +52,6 @@ There are two ways to address this:
 Used by the **[schedule](#schedule)** action. Any open pull requests from another repository
 will be checked, and if the commit is within that timeframe, it will be processed.
 
-
 ## Files
 
 Note that each of the below items can either be a file w/ a `.txt` suffix,
@@ -79,7 +78,7 @@ where to put new entries.
 ### allow
 
 This allows you to add supplemental words to
-the dictionary without relacing the core dictionary.
+the dictionary without replacing the core dictionary.
 
 ### dictionary
 
