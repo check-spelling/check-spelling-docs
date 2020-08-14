@@ -3,4 +3,5 @@
   * [[Configuration Examples: only]]
   * [[Configuration Examples: patterns]]
 * [[Configuration: Advanced]]
+* [[Configuration: Multiple languages]]
 * [[Configuration: Workflows]]
