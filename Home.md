@@ -8,7 +8,7 @@ and filenames.
 
 Often, programmers will use `InitialCapitalization`, `camelCase`,
 `ALL_CAPS`, or `IDLCase` when naming their things. When they do this, it makes
-it much harder for naive spelling tools to recognize misspellings, and as such,
+it much harder for naïve spelling tools to recognize misspellings, and as such,
 with a really high false-positive rate, people don't tend to enable spellchecking
 at all.
 
