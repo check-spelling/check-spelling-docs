@@ -33,7 +33,7 @@ on:
 
 :warning: Non-member contributors who create a pull request
 from a forked repository will trigger an action run with a
-special read-only github token.
+special [read-only github token](https://docs.github.com/en/actions/configuring-and-managing-workflows/authenticating-with-the-github_token#permissions-for-the-github_token).
 This token is enough to retrieve and process the pull request,
 including generating annotations,
 but it doesn't have permission to post a comment.
