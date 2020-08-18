@@ -25,7 +25,7 @@ https://groups\.google\.com/d/topic/[^/]+/[a-zA-Z0-9]+/discussion
 # hex in url queries
 =[0-9a-fA-F]+&
 # hex digits including css/html color classes:
-(?:0[xX]|[uU]\+|#)[0-9a-fA-FgGrR]{2,}[uU]?[lL]{0,2}\b
+(?:[\\0][xX]|[uU]\+|#)[0-9a-fA-FgGrR]{2,}[uU]?[lL]{0,2}\b
 # uuid:
 [{"'][0-9a-fA-F]{8}-(?:[0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}['"}]
 # the negative lookahead here is to allow catching 'templatesz' as a misspelling
