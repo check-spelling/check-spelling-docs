@@ -3,6 +3,8 @@
 ```
 # patch hunk comments
 ^\@\@ -\d+(?:,\d+|) \+\d+(?:,\d+|) \@\@ .*
+# git index header
+index [0-9a-z]{12}\.\.[0-9a-z]{12}
 # this is a comment
 # YouTube
 https?://(?:(?:www\.|)youtube\.com|youtu.be)/(?:embed/|)[-a-zA-Z0-9?&=]*
