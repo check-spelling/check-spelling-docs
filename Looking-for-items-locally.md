@@ -33,7 +33,7 @@ peek() {
   echo "$files" |
   tr "\n" "\0" |
   xargs -0 grep -- "$1" 2>/dev/null |
-  pattern="$patterns" perl -pne 's{$ENV{pattern}}{}g' |
+  pattern="$patterns" perl -pne '$pattern=$ENV{pattern};$pattern=~s{\^}{^[^:]*:};s{$pattern}{}g' |
   uniq |
   grep --color=always -- "$( 
     pattern="$1" perl -e '$pattern=$ENV{pattern};
