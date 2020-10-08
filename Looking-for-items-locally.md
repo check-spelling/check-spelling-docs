@@ -30,6 +30,7 @@ patterns=$(
 )
 
 peek() {
+  [ -z "$1" ] && return;
   echo "$files" |
   tr "\n" "\0" |
   xargs -0 grep -- "$1" 2>/dev/null |
