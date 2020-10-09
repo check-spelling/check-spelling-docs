@@ -1,6 +1,6 @@
 # Looking for items locally
 
-This is a lazy script -- which isn't aware of all the features, but for average cases:
+This is a lazy script -- which isn't aware of all the features, but for average cases it should work:
 ```sh
 files=$(
   git ls-files | 
@@ -67,6 +67,17 @@ peek() {
   )";
 }
 
+tokenlist() {
+  echo "$files" |
+  tr "\n" "\0" |
+  xargs -0 cat 2>/dev/null |
+  pattern="$patterns" perl -pne '$pattern=$ENV{pattern};s{$pattern}{}g;' |
+  w
+}
+splittokens() {
+  perl -pne 'next unless s/.*\((.*)\)/$1/; s/[ ,]+/\n/g'
+}
+
 review() {
   for a in $(cat $1); do
     echo;
@@ -79,10 +90,21 @@ review() {
 }
 ```
 
-usage:
+### usage
+#### find instances
 ```sh
 peek "some"t"hang"
 ```
+#### look for and review items
+```sh
+tokenlist | splittokens > file
+review file
+```
+#### build an expect file
+```sh
+tokenlist | perl -pne 's/ .*/' > .github/actions/spell*/expect.txt
+```
+#### review the expect file
 ```sh
 review .github/actions/spell*/expect.txt
 ```
