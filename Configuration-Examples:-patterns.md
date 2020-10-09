@@ -17,7 +17,7 @@ https://groups\.google\.com/d/topic/[^/]+/[a-zA-Z0-9]+/discussion
 # Goo.gl
 /goo\.gl/[a-zA-Z0-9]+
 # GitHub SHAs
-/github\.com/[^/]+/[^/]+/[^/]+/[0-9a-f]+\b
+(?:\[[0-9a-f]+\]\(https:/|)/github\.com/[^/]+/[^/]+/[^/]+/[0-9a-f]+\b
 # githubusercontent
 /[a-z-]+\.githubusercontent\.com/[-a-zA-Z0-9?&=_\/.]*
 # gist github
