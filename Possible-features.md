@@ -15,7 +15,7 @@
 
 ## Distant future
 
-* [[Only changes|Feature: Only-changes]
+* [[Only changes|Feature: Only-changes]]
 * [[Area dictionaries|Feature: Area dictionaries]]
 * [[Correct misspelled words within GitHub|Feature: Correct misspelling]]
 * [[Learn from corrections|Feature: Learn from corrections]]
