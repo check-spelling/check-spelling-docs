@@ -12,5 +12,5 @@ for a in $(git ls-remote $1|perl -pne 's/^\S*\s+/:/'); do git push $1 $a 2>/dev/
 
 ### Adding another remote
 ```sh
-git remote add -t $BRANCH --no-tags $ORG git remote get-url origin |perl -pne 's{:.*/}{:'$ORG'/}'
+git remote add $ORG -t $BRANCH --no-tags $(git remote get-url origin |perl -pne 's{:.*/}{:'$ORG'/}')
 ```
