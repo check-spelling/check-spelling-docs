@@ -4,7 +4,7 @@
 # patch hunk comments
 ^\@\@ -\d+(?:,\d+|) \+\d+(?:,\d+|) \@\@ .*
 # git index header
-index [0-9a-z]{12}\.\.[0-9a-z]{12}
+index [0-9a-z]{7,12}\.\.[0-9a-z]{7,12}
 # this is a comment
 # YouTube
 https?://(?:(?:www\.|)youtube\.com|youtu.be)/(?:channel/|embed/|)[-a-zA-Z0-9?&=_]*
