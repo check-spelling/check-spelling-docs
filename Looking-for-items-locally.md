@@ -3,7 +3,9 @@
 This is a lazy script -- which isn't aware of all the features, but for average cases it should work:
 ```sh
 files=$(
-  git ls-files | 
+  (
+    git ls-files 2>/dev/null
+  ) | 
   perl -e '
     sub readstring {
       open F, q{<}, glob($_[0]);
@@ -21,13 +23,30 @@ files=$(
   ')
 
 patterns=$(
-  perl -ne '
-    next if /^#/;
-    next unless /./;
-    print' .github/actions/spell*/patterns.txt |
+  (
+    perl -ne '
+      next if /^#/;
+      next unless /./;
+      print' .github/actions/spell*/patterns.txt
+  ) 2>/dev/null |
   tr "\n" "|"|
   perl -pne 's/\|$//'
 )
+
+search() {
+  (
+    echo "$files" |
+    tr "\n" "\0" |
+    xargs -0 cat 2>/dev/null |
+    pattern="$patterns" perl -pne '$pattern=$ENV{pattern};s{$pattern}{ }g if $pattern;' |
+    w |
+    perl -pne 'next unless s/.*\((.*)\)/$1/; s/[ ,]+/\n/g'
+    cat .github/actions/spell*/expect.txt .github/actions/spell*/expect.txt 2> /dev/null
+  ) |
+    sort |
+    uniq -u |
+    sort -f
+}
 
 peek() {
   [ -z "$1" ] && return;
@@ -67,17 +86,6 @@ peek() {
   )";
 }
 
-tokenlist() {
-  echo "$files" |
-  tr "\n" "\0" |
-  xargs -0 cat 2>/dev/null |
-  pattern="$patterns" perl -pne '$pattern=$ENV{pattern};s{$pattern}{}g;' |
-  w
-}
-splittokens() {
-  perl -pne 'next unless s/.*\((.*)\)/$1/; s/[ ,]+/\n/g'
-}
-
 review() {
   for a in $(cat $1); do
     echo;
@@ -95,14 +103,9 @@ review() {
 ```sh
 peek "some"t"hang"
 ```
-#### look for and review items
-```sh
-tokenlist | splittokens > file
-review file
-```
 #### build an expect file
 ```sh
-tokenlist | perl -pne 's/ .*/' > .github/actions/spell*/expect.txt
+search > .github/actions/spell*/expect.txt
 ```
 #### review the expect file
 ```sh
