@@ -30,6 +30,9 @@ https://groups\.google\.com/d/topic/[^/]+/[a-zA-Z0-9]+/discussion
 /[0-9a-z-.]+\.now\.sh\b
 # chromatic.com
 /\S+.chromatic.com\S*[")]
+# Slack
+slack://[a-zA-Z0-9?&=]+
+
 # URL escaped characters
 \%[0-9A-F]{2}
 # c99 hex digits (not the full format, just one I've seen)
