@@ -37,6 +37,8 @@ slack://[a-zA-Z0-9?&=]+
 \%[0-9A-F]{2}
 # c99 hex digits (not the full format, just one I've seen)
 0x[0-9a-fA-F](?:\.[0-9a-fA-F]*|)[pP]
+# sha256
+sha256:[0-9a-f]+
 # sha-1
 "[0-9a-f]{40}"
 # hex in url queries
