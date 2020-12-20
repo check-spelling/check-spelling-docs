@@ -92,7 +92,7 @@ review() {
     echo;
     echo ::$a:;
     echo;
-    peek $a; done |
+    peek $a | head -15; done |
   uniq |
   less -R
 }
