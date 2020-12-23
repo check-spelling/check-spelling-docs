@@ -60,8 +60,8 @@ sha256:[0-9a-f]+
 ^.*/\* #no-spell-check-line \*/.*$
 # marker for ignoring a comment to the end of the line
 // #no-spell-check.*$
-# <word>v1
-v1(?:\b|(?=[a-z]))
+# <word>v#
+v\d+(?:\b|(?=[a-zA-Z]))
 # curl arguments
 \b(?:)curl(?:\s+-[a-zA-Z]+)+
 # tar arguments
