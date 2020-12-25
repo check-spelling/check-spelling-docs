@@ -11,7 +11,7 @@ https?://(?:(?:www\.|)youtube\.com|youtu.be)/(?:channel/|embed/|)[-a-zA-Z0-9?&=_
 # data urls
 data:[a-zA-Z=;,/0-9+-]+
 # Google Analytics
-\bgoogle-analytics\.com/collect.[0-9a-zA-Z?%=&_.~-]*
+\bgoogle-analytics\.com/collect.[-0-9a-zA-Z?%=&_.~]*
 # Google Docs
 /docs\.google\.com/[a-z]+/d/(?:e/|)[0-9a-zA-Z_-]+/
 # Google Groups
@@ -35,6 +35,7 @@ https://groups\.google\.com/d/topic/[^/]+/[a-zA-Z0-9]+/discussion
 /\S+.chromatic.com\S*[")]
 # Slack
 slack://[a-zA-Z0-9?&=]+
+\bslack\.com/[-0-9a-zA-Z/]*
 
 # URL escaped characters
 \%[0-9A-F]{2}
