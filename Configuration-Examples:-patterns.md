@@ -10,6 +10,8 @@ index [0-9a-z]{7,12}\.\.[0-9a-z]{7,12}
 https?://(?:(?:www\.|)youtube\.com|youtu.be)/(?:channel/|embed/|)[-a-zA-Z0-9?&=_]*
 # data urls
 data:[a-zA-Z=;,/0-9+-]+
+# Google Analytics
+\bgoogle-analytics\.com/collect.[0-9a-zA-Z?%=&_.~-]*
 # Google Docs
 /docs\.google\.com/[a-z]+/d/(?:e/|)[0-9a-zA-Z_-]+/
 # Google Groups
