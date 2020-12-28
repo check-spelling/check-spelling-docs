@@ -33,7 +33,7 @@ https://groups\.google\.com/d/topic/[^/]+/[a-zA-Z0-9]+/discussion
 # imgur
 \.imgur\.com/[^.]+
 # Internet Archive
-\barchive\.org/web/\d+/([-\w.?,'/\\+&%$#_]*)
+\barchive\.org/web/\d+/([-\w.?,'/\\+&%$#_:]*)
 # discord
 /discord(?:app\.com|\.gg)/(?:invite/)?[a-zA-Z0-9]{7,8}
 # now.sh
