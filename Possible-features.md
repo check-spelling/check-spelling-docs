@@ -12,6 +12,7 @@
 
 * [[First run advice|Feature: First run advice]]
 * [[Collapse older check comments|Feature: Collapse older check comments]]
+* [[Check filenames and paths|Feature: check filenames and paths]]
 
 ## Distant future
 
