@@ -12,6 +12,8 @@ https?://(?:(?:www\.|)youtube\.com|youtu.be)/(?:channel/|embed/|)[-a-zA-Z0-9?&=_
 data:[a-zA-Z=;,/0-9+-]+
 # Google Analytics
 \bgoogle-analytics\.com/collect.[-0-9a-zA-Z?%=&_.~]*
+# Google APIs
+\bgoogleapis\.com/[a-z]+/v\d+/[a-z]+/[@./?=\w]+
 # Google Docs
 /docs\.google\.com/[a-z]+/d/(?:e/|)[0-9a-zA-Z_-]+/
 # Google Groups
