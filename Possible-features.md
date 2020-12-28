@@ -10,6 +10,7 @@
 
 ## Near term
 
+* [[Support pull_request_target|Feature: support pull_request_target]]
 * [[First run advice|Feature: First run advice]]
 * [[Collapse older check comments|Feature: Collapse older check comments]]
 * [[Check filenames and paths|Feature: check filenames and paths]]
