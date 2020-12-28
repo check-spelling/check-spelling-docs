@@ -43,6 +43,8 @@ https://groups\.google\.com/d/topic/[^/]+/[a-zA-Z0-9]+/discussion
 # Slack
 slack://[a-zA-Z0-9?&=]+
 \bslack\.com/[-0-9a-zA-Z/]*
+# Sentry
+[0-9a-f]{32}\@o\d+\.ingest\.sentry\.io\b
 
 # URL escaped characters
 \%[0-9A-F]{2}
