@@ -97,6 +97,14 @@ $ act
 [Spell checking/Spell checker]   ✅  Success - ./
 ```
 
+### Concerns
+
+Nektos/Act may be missing support for newer GitHub Action features:
+
+* [composite](https://github.blog/changelog/2020-08-07-github-actions-composite-run-steps/) - [nektos/act#339](https://github.com/nektos/act/issues/339)
+* [pull_request_target](https://github.blog/2020-08-03-github-actions-improvements-for-fork-and-pull-request-workflows/)
+* [workflow_run](https://github.blog/2020-08-03-github-actions-improvements-for-fork-and-pull-request-workflows/)
+
 ## Single script
 
 The original tool was self contained, but the current script is considerably fancier...
