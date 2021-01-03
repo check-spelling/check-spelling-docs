@@ -36,6 +36,8 @@ https://groups\.google\.com/d/topic/[^/]+/[a-zA-Z0-9]+/discussion
 \barchive\.org/web/\d+/([-\w.?,'/\\+&%$#_:]*)
 # discord
 /discord(?:app\.com|\.gg)/(?:invite/)?[a-zA-Z0-9]{7,8}
+# medium
+link\.medium\.com/[a-zA-Z0-9]+
 # now.sh
 /[0-9a-z-.]+\.now\.sh\b
 # chromatic.com
