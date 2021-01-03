@@ -45,7 +45,7 @@ link\.medium\.com/[a-zA-Z0-9]+
 # Slack
 slack://[a-zA-Z0-9?&=]+
 \bslack\.com/[-0-9a-zA-Z/]*
-# stackoverflow.com/questions/17532033
+# stackoverflow.com
 \bstackoverflow.com/questions/\d+/[a-z-]+
 # Sentry
 [0-9a-f]{32}\@o\d+\.ingest\.sentry\.io\b
