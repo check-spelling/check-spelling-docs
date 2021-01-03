@@ -24,3 +24,7 @@
 * [[Learn from corrections|Feature: Learn from corrections]]
 * [[Plug into Pantsbuild|Feature: Pantsbuild plugin]]
 * [[Suggest adding files to exclude|Feature: Heuristic exclude suggestions]]
+
+## Related but currently out of scope
+
+* [[Generate .git-blame-ignore-revs|Wishlist: .git blame ignore revs]]
