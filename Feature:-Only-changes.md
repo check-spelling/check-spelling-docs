@@ -2,7 +2,7 @@
 
 Currently this action scans the entire repository (or at least everything that isn't covered by `excludes` / skipped by `only`).
 
-Some repositories may take ~20 minutes to scan. As GitHub bills by the minute, and this action is mostly interested in preventing users from adding new typos, it could be useful to only scan files changed recently (or even only the hunks that were changed recently).
+Some repositories may take ~20 (or even 60) minutes to scan. As GitHub bills by the minute, and this action is mostly interested in preventing users from adding new typos, it could be useful to only scan files changed recently (or even only the hunks that were changed recently).
 
 ## Recognizing expect misses
 
