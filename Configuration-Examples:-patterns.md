@@ -21,6 +21,7 @@ data:[a-zA-Z=;,/0-9+-]+
 /docs\.google\.com/[a-z]+/d/(?:e/|)[0-9a-zA-Z_-]+/
 # Google Groups
 https://groups\.google\.com/d/topic/[^/]+/[a-zA-Z0-9]+/discussion
+https://groups\.google\.com/d/msg/[^/]+/[a-zA-Z0-9]+/[a-zA-Z0-9]+
 # Goo.gl
 /goo\.gl/[a-zA-Z0-9]+
 # GitHub SHAs
