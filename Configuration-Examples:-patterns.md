@@ -23,6 +23,8 @@ data:[a-zA-Z=;,/0-9+-]+
 # Google Groups
 https://groups\.google\.com/d/topic/[^/]+/[a-zA-Z0-9]+/discussion
 https://groups\.google\.com/d/msg/[^/]+/[a-zA-Z0-9]+/[a-zA-Z0-9]+
+# Google themes
+themes\.googleusercontent\.com/static/fonts/[^/]+/v\d+/[^.]+.
 # Goo.gl
 /goo\.gl/[a-zA-Z0-9]+
 # GitHub SHAs
