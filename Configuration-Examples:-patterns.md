@@ -8,6 +8,7 @@ index [0-9a-z]{7,12}\.\.[0-9a-z]{7,12}
 # this is a comment
 # YouTube
 https?://(?:(?:www\.|)youtube\.com|youtu.be)/(?:channel/|embed/|)[-a-zA-Z0-9?&=_]*
+<\s*youtube\s+id=['"][-a-zA-Z0-9?_]*['"]
 # data urls
 data:[a-zA-Z=;,/0-9+-]+
 # Google Analytics
