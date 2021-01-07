@@ -40,6 +40,8 @@ https://groups\.google\.com/d/msg/[^/]+/[a-zA-Z0-9]+/[a-zA-Z0-9]+
 /discord(?:app\.com|\.gg)/(?:invite/)?[a-zA-Z0-9]{7,8}
 # medium
 link\.medium\.com/[a-zA-Z0-9]+
+# msdn
+msdn\.microsoft\.com/[^/]+/library/[^/]*\.aspx
 # now.sh
 /[0-9a-z-.]+\.now\.sh\b
 # chromatic.com
