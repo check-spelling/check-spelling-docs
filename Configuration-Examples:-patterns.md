@@ -44,6 +44,8 @@ link\.medium\.com/[a-zA-Z0-9]+
 /[0-9a-z-.]+\.now\.sh\b
 # chromatic.com
 /\S+.chromatic.com\S*[")]
+# sched
+\b[a-z0-9]+\.sched\.com\b
 # Slack
 slack://[a-zA-Z0-9?&=]+
 \bslack\.com/[-0-9a-zA-Z/]*
