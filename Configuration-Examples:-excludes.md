@@ -4,6 +4,8 @@
 (?:^|/)vendor/
 # Ignore files named (yarn for Node.js) `yarn.lock`
 (?:^|/)yarn\.lock$
+# Ignore files named (rust) `Cargo.toml`
+(?:^|/)Cargo\.toml$
 # Ignore files or directories that have `LICENSE` somewhere in their path
 LICENSE
 # Ignore files ending in...
