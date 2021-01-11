@@ -16,7 +16,7 @@ The entry-point needs to support the event, and then it's just a couple of chang
 
 ```yaml
 on:
-  pull_request_target
+  pull_request_target:
 ```
 
 ```yaml
