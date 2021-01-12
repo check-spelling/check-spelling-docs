@@ -1,4 +1,4 @@
-* [[Too many unrecognized words|#Too many unrecognized words]]
+* [Too many unrecognized word](#Too_many_unrecognized_words)
 
 ## Too many unrecognized words
 
