@@ -24,6 +24,7 @@
 * [[Learn from corrections|Feature: Learn from corrections]]
 * [[Plug into Pantsbuild|Feature: Pantsbuild plugin]]
 * [[Suggest adding files to exclude|Feature: Heuristic exclude suggestions]]
+* [[Honor gitattributes|Feature: honor gitattributes]]
 
 ## Related but currently out of scope
 
