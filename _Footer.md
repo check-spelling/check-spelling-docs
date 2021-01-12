@@ -1,1 +1,1 @@
-[[Showcase]] | [[Configuration information]] | [[Possible features]] | [[Release notes]] | [[Helpful scripts]]
+[[Showcase]] | [[Configuration information]] | [[Known Issues]] | [[Possible features]] | [[Release notes]] | [[Helpful scripts]]
