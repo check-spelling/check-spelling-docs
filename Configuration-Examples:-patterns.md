@@ -43,7 +43,7 @@ themes\.googleusercontent\.com/static/fonts/[^/]+/v\d+/[^.]+.
 # medium
 link\.medium\.com/[a-zA-Z0-9]+
 # msdn
-msdn\.microsoft\.com/[^/]+/library/[^/]*\.aspx
+msdn\.microsoft\.com/[^/]+/library/\S*\.aspx
 # now.sh
 /[0-9a-z-.]+\.now\.sh\b
 # chromatic.com
