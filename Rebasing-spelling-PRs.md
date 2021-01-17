@@ -19,13 +19,19 @@ where_are_they_now() {
 }
 
 handle_conflicts() {
-  GIT_EDITOR=true git rebase --continue
-  git rm $(git status|perl -ne 'next unless s/deleted by us://; print')
-  vi $(git status|perl -ne 'next unless s/both modified://; print')
+  conflict_files=$(git status|perl -ne 'next unless s/^\s*deleted by us:\s*//; print')
+  if [ -n "$conflict_files" ]; then
+    git rm $(echo $conflict_files|xargs echo)
+  fi
+  conflict_files=$(git status|perl -ne 'next unless s/^\s*both modified:\s*//; print')
+  if [ -n "$conflict_files" ]; then
+    vi $(echo $conflict_files|xargs echo)
+  fi
 }
 
 moving_on() {
   git add -u
+  GIT_EDITOR=true git rebase --continue
   handle_conflicts
 }
 ```
