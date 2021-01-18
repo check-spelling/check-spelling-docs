@@ -6,6 +6,8 @@
 # git index header
 index [0-9a-z]{7,12}\.\.[0-9a-z]{7,12}
 # this is a comment
+# AWS
+\b[0-9a-z]{10}\.execute-api\.[-0-9a-z]+\.amazonaws\.com\b
 # YouTube
 https?://(?:(?:www\.|)youtube\.com|youtu.be)/(?:channel/|embed/|)[-a-zA-Z0-9?&=_]*
 <\s*youtube\s+id=['"][-a-zA-Z0-9?_]*['"]
