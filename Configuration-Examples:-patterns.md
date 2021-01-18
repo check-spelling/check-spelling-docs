@@ -18,6 +18,8 @@ data:[a-zA-Z=;,/0-9+-]+
 # Google Calendar
 \bcalendar\.google\.com/calendar/u/\d+/embed\?src=[@./?=\w]+
 \w+\@group\.calendar\.google\.com\b
+# Google DataStudio
+\bdatastudio\.google\.com/(?:(?:c/|)u/\d+/|)(?:embed/|)(?:open|reporting|datasources|s)/[-0-9a-zA-Z]+(?:/page/[-0-9a-zA-Z]+|)
 # Google Docs
 /docs\.google\.com/[a-z]+/d/(?:e/|)[0-9a-zA-Z_-]+/
 # Google Groups
