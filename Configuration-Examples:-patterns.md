@@ -52,7 +52,7 @@ msdn\.microsoft\.com/[^/]+/library/\S*\.aspx
 \b[a-z0-9]+\.sched\.com\b
 # Slack
 slack://[a-zA-Z0-9?&=]+
-\bslack\.com/[-0-9a-zA-Z/]*
+\bslack\.com/[-0-9a-zA-Z/_]*
 # stackexchange -- https://stackexchange.com/feeds/sites
 \b(?:askubuntu|serverfault|stack(?:exchange|overflow)|superuser).com/questions/\d+/[a-z-]+
 # Sentry
