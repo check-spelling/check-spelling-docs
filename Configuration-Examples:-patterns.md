@@ -9,7 +9,7 @@ index [0-9a-z]{7,12}\.\.[0-9a-z]{7,12}
 # AWS
 \b[0-9a-z]{10}\.execute-api\.[-0-9a-z]+\.amazonaws\.com\b
 # YouTube
-https?://(?:(?:www\.|)youtube\.com|youtu.be)/(?:channel/|embed/|)[-a-zA-Z0-9?&=_]*
+https?://(?:(?:www\.|)youtube\.com|youtu.be)/(?:channel/|embed/|playlist\?list=|watch\?v=)[-a-zA-Z0-9?&=_]*
 <\s*youtube\s+id=['"][-a-zA-Z0-9?_]*['"]
 # data urls
 data:[a-zA-Z=;,/0-9+-]+
@@ -52,6 +52,8 @@ msdn\.microsoft\.com/[^/]+/library/\S*\.aspx
 /[0-9a-z-.]+\.now\.sh\b
 # chromatic.com
 /\S+.chromatic.com\S*[")]
+# codacy
+\bapi\.codacy\.com/project/badge/Grade/[0-9a-f]+
 # sched
 \b[a-z0-9]+\.sched\.com\b
 # Slack
