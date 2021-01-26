@@ -7,16 +7,15 @@ This script implements a version of that (the slices aren't precisely as describ
 ```perl
 my $input=shift;
 for ($i = 1; $i <= 4; $i++) {
-  my $x= 1 << $i;
-  my $branch = "spelling-$x";
+  my $x = 1 << $i;
+  my $branch = "spelling-$i";
   print "
 git branch -f $branch baseline; git checkout $branch
 git cherry-pick ";
   open LIST, "<", $input;
-  my $y = 1;
   while (<LIST>) {
     my $line = $.;
-    $line = ($line % $x) << 0;
+    $line = $line % $x;
     if ($line < ($x / 2)) {
       chomp;
       print "$_ ";
