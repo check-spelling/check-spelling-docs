@@ -12,11 +12,12 @@ for ($i = 1; $i <= 4; $i++) {
   print "
 git branch -f $branch baseline; git checkout $branch
 git cherry-pick ";
+  my $y = $x / 2;
   open LIST, "<", $input;
   while (<LIST>) {
     my $line = $.;
     $line = $line % $x;
-    if ($line < ($x / 2)) {
+    if ($line < $y) {
       chomp;
       print "$_ ";
     }
