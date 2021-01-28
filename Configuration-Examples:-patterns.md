@@ -91,7 +91,7 @@ sha256:[0-9a-f]+
 # marker for ignoring a comment to the end of the line
 // #no-spell-check.*$
 # <word>v#
-v\d+(?:\b|(?=[a-zA-Z_]))
+[Vv]\d+(?:\b|(?=[a-zA-Z_]))
 # curl arguments
 \b(?:)curl(?:\s+-[a-zA-Z]+)+
 # tar arguments
