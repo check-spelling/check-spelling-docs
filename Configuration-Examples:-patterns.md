@@ -82,7 +82,7 @@ sha256:[0-9a-f]+
 # but to otherwise recognize a Windows path with \templates\foo.template or similar:
 \\templates(?![a-z])
 # ignore long runs of a single character:
-\b([A-Za-z])\1{3,}\b
+\b([A-Za-z])\g{-1}{3,}\b
 # Note that the next example is no longer necessary if you are using
 # to match a string starting with a `#`, use a character-class:
 [#]backwards
