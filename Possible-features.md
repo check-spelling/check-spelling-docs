@@ -8,11 +8,12 @@
 
 ## In progress
 * [[Update expect list|Feature: Update expect list]]
+* [[Collapse older check comments|Feature: Collapse older check comments]]
 
 ## Near term
 
 * [[First run advice|Feature: First run advice]]
-* [[Collapse older check comments|Feature: Collapse older check comments]]
+* [[Update expect commandline|Feature: update expect commandline]]
 * [[Check filenames and paths|Feature: check filenames and paths]]
 * [[Aliases|Feature: Aliases]]
 
