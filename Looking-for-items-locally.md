@@ -12,7 +12,7 @@ files=$(
       local $/;
       local $f = <F>;
       $f =~ s/\n$//;
-      $f =~ s/\n/|/g;
+      $f =~ s/(.*)\n/(?:$1)|/g;
       return $f;
     }
     my $e = readstring(".github/actions/spell*/excludes.txt");
