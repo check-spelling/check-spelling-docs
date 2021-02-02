@@ -103,6 +103,10 @@ This file contains Perl regular expressions.
 Generally, one regular expression per line.
 They are merged using an `OR` (`|`).
 
+Note that these are generally case-sensitive
+unless you explicitly use `(?:(?i)...)` or
+`[Gg]it[Hh]ub` or similar.
+
 Files matching these patterns will be skipped.
 
 See [[Configuration Examples: excludes]] for examples.
@@ -145,6 +149,10 @@ This file contains Perl regular expressions.
 Generally, one regular expression per line.
 Lines that begin with `#` will be skipped.
 They are merged using an `OR` (`|`).
+
+Note that these are generally case-sensitive
+unless you explicitly use `(?:(?i)...)` or
+`[Gg]it[Hh]ub` or similar.
 
 Tokens within files that match these expressions will be skipped.
 
