@@ -18,8 +18,6 @@ See [[Configuration: Workflows]] for the supported GitHub workflows.
 | [config](#config) | directory with config files |
 | [dictionary_url](#dictionary_url) | url for primary dictionary |
 | [dictionary_version](#dictionary_version) | version of primary dictionary |
-| [GITHUB_TOKEN](#GITHUB_TOKEN) | Secret used to retrieve your code and comment on PRs/commits. |
-| [timeframe](#timeframe) | number of minutes (default 60) to consider when a **schedule** workflow checks for updated PRs. |
 
 See [[Configuration: Advanced]] for additional options.
 
