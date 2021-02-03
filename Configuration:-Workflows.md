@@ -3,6 +3,7 @@
 Supported GitHub actions:
 
 * [push](#push)
+* [pull_request_target](#pull_request_target)
 * [pull_request](#pull_request) :warning:
 * [schedule](#schedule)
 * See [[Workflow Variables|Configuration#Workflow_Variables]] 
@@ -29,7 +30,23 @@ on:
   push:
 ```
 
+### pull_request_target
+
+New in [0.0.17-alpha](https://github.com/check-spelling/check-spelling/releases/tag/0.0.17-alpha).
+
+Example workflow snippet:
+
+```workflow
+on:
+  push:
+  pull_request_target:
+    # this is recommended for all repositories that have PRs.
+```
+
 ### pull_request
+
+ℹ️ You should be able to migrate to [pull_request_target](#pull_request_target)
+when you upgrade to 0.0.17-alpha.
 
 :warning: Non-member contributors who create a pull request
 from a forked repository will trigger an action run with a
