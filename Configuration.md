@@ -7,7 +7,7 @@
 
 The easiest way to get started is by copying the contents of `.github` from https://github.com/check-spelling/spell-check-this/ into your repository.
 
-(Currently this doesn't handle PRs, but hopefully it will soon.)
+(Currently this doesn't handle PRs, but [it will soon](https://github.com/check-spelling/spell-check-this/tree/prerelease/).)
 
 ## Workflow Variables
 
@@ -47,20 +47,6 @@ Over time, the default version will probably change.
 See [[versioned dictionaries|Feature: Versioned dictionaries]]
 for more information.
 
-### GITHUB_TOKEN
-
-GitHub Actions get an automatic token which allows for read operations.
-If the Action is a [pull_request](#pull_request) and the originating repository isn't trusted, then the automatic token will not have write permission, which means it won't be able to post a comment to the PR.
-
-There are two ways to address this:
-* Create a custom Personal Access Token with `repo read` + `comment`
-* Use [schedule](#schedule) instead
-
-### timeframe
-
-Used by the **[schedule](#schedule)** action. Any open pull requests from another repository
-will be checked, and if the commit is within that timeframe, it will be processed.
-
 ## Files
 
 Note that each of the below items can either be a file w/ a `.txt` suffix,
@@ -80,7 +66,7 @@ or a directory, where each file with a `.txt` suffix will be merged together.
 ### advice
 
 This adds a supplemental portion to the comment
-posted to github. It's freeform. You can use
+posted to GitHub. It's freeform. You can use
 it to explain how contributors should decide
 where to put new entries.
 
