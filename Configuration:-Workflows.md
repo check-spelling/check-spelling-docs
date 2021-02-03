@@ -82,7 +82,7 @@ Instead, for projects that receive PRs, I've settled on using a
 
 This is basically a cron job run by GitHub.
 It will look through open PRs and comment if they've been updated
-since the last run (assuming the [timeframe](#timeframe) is correct).
+since the last run (assuming the [timeframe](./Configuration:-Advanced#timeframe) is correct).
 
 See [timeframe](./Configuration:-Advanced#timeframe) for the configuration window.
 
