@@ -5,7 +5,7 @@ I had a model of assuming people would want to review things and use the output 
 
 ### Consideration
 In retrospect, and based on experience and feedback, I've decided that having the output and commands to construct the `expect` file should be reported as a comment just as with later runs.
-s
+
 Also, because of the way GitHub formats the logs, it's actually moderately painful to extract output from them to run as a command, and thus relying on a comment is generally better.
 
 ### Behavior Change
