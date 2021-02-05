@@ -1,11 +1,5 @@
 # Possible features
 
-## Ready but not published
-* [[Run locally|Feature: Run locally]]
-* [[Versioned dictionaries|Feature: Versioned dictionaries]]
-* [[Easier bootstrapping|Feature: Easier bootstrapping]]
-* [[Support pull_request_target|Feature: support pull_request_target]]
-
 ## In progress
 * [[Update expect list|Feature: Update expect list]]
 * [[Collapse older check comments|Feature: Collapse older check comments]]
