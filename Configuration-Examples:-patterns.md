@@ -11,6 +11,9 @@ index [0-9a-z]{7,12}\.\.[0-9a-z]{7,12}
 # data urls
 data:[a-zA-Z=;,/0-9+-]+
 
+# asciinema
+\basciinema\.org/a/[0-9a-zA-Z]+
+
 # AWS
 \b[0-9a-z]{10}\.execute-api\.[-0-9a-z]+\.amazonaws\.com\b
 \b\w+\.[-0-9a-z]+\.elb\.amazonaws\.com\b
