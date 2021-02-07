@@ -1,20 +1,24 @@
 # `patterns` Examples
 
 ```
+# this is a comment
+
 # patch hunk comments
 ^\@\@ -\d+(?:,\d+|) \+\d+(?:,\d+|) \@\@ .*
 # git index header
 index [0-9a-z]{7,12}\.\.[0-9a-z]{7,12}
-# this is a comment
+
+# data urls
+data:[a-zA-Z=;,/0-9+-]+
+
 # AWS
 \b[0-9a-z]{10}\.execute-api\.[-0-9a-z]+\.amazonaws\.com\b
 \b\w+\.[-0-9a-z]+\.elb\.amazonaws\.com\b
+
 # YouTube
 https?://(?:(?:www\.|)youtube\.com|youtu.be)/(?:channel/|embed/|playlist\?list=|watch\?v=)[-a-zA-Z0-9?&=_]*
 <\s*youtube\s+id=['"][-a-zA-Z0-9?_]*['"]
 \bimg\.youtube\.com/vi/[-a-zA-Z0-9?&=_]*
-# data urls
-data:[a-zA-Z=;,/0-9+-]+
 # Google Analytics
 \bgoogle-analytics\.com/collect.[-0-9a-zA-Z?%=&_.~]*
 # Google APIs
@@ -33,6 +37,7 @@ https://groups\.google\.com/d/msg/[^/]+/[a-zA-Z0-9]+/[a-zA-Z0-9]+
 themes\.googleusercontent\.com/static/fonts/[^/]+/v\d+/[^.]+.
 # Goo.gl
 /goo\.gl/[a-zA-Z0-9]+
+
 # GitHub SHAs
 (?:\[[0-9a-f]+\]\(https:/|)/github\.com/[^/]+/[^/]+/[^/]+/[0-9a-f]+\b
 \bgithub\.com/[^/]+/[^/]+[@#][0-9a-f]+\b
@@ -40,29 +45,41 @@ themes\.googleusercontent\.com/static/fonts/[^/]+/v\d+/[^.]+.
 /[a-z-]+\.githubusercontent\.com/[-a-zA-Z0-9?&=_\/.]*
 # gist github
 /gist\.github\.com/[^/]+/[0-9a-f]+
+
 # imgur
 \.imgur\.com/[^.]+
+
 # Internet Archive
 \barchive\.org/web/\d+/([-\w.?,'/\\+&%$#_:]*)
+
 # discord
 /discord(?:app\.com|\.gg)/(?:invite/)?[a-zA-Z0-9]{7,8}
+
 # medium
 link\.medium\.com/[a-zA-Z0-9]+
+
 # msdn
 msdn\.microsoft\.com/[^/]+/library/\S*\.aspx
+
 # now.sh
 /[0-9a-z-.]+\.now\.sh\b
+
 # chromatic.com
 /\S+.chromatic.com\S*[")]
+
 # codacy
 \bapi\.codacy\.com/project/badge/Grade/[0-9a-f]+
+
 # sched
 \b[a-z0-9]+\.sched\.com\b
+
 # Slack
 slack://[a-zA-Z0-9?&=]+
 \bslack\.com/[-0-9a-zA-Z/_]*
+
 # stackexchange -- https://stackexchange.com/feeds/sites
 \b(?:askubuntu|serverfault|stack(?:exchange|overflow)|superuser).com/questions/\d+/[a-z-]+
+
 # Sentry
 [0-9a-f]{32}\@o\d+\.ingest\.sentry\.io\b
 
