@@ -98,4 +98,6 @@ sha256:[0-9a-f]+
 \b(?:)curl(?:\s+-[a-zA-Z]+)+
 # tar arguments
 \b(?:)tar(?:\s+-[a-zA-Z]+|\s[a-z]+)+
+# macOS temp folders
+/var/folders/\w\w/\w+/T/
 ```
