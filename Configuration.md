@@ -68,6 +68,8 @@ posted to GitHub. It's freeform. You can use
 it to explain how contributors should decide
 where to put new entries.
 
+See [[Configuration Examples: advice]] for examples.
+
 ### allow
 
 This allows you to add supplemental words to
