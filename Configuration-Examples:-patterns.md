@@ -19,7 +19,7 @@ data:[a-zA-Z=;,/0-9+-]+
 \b\w+\.[-0-9a-z]+\.elb\.amazonaws\.com\b
 
 # YouTube
-https?://(?:(?:www\.|)youtube\.com|youtu.be)/(?:channel/|embed/|playlist\?list=|watch\?v=)[-a-zA-Z0-9?&=_]*
+https?://(?:(?:www\.|)youtube\.com|youtu.be)/(?:channel/|embed/|playlist\?list=|watch\?v=|)[-a-zA-Z0-9?&=_]*
 <\s*youtube\s+id=['"][-a-zA-Z0-9?_]*['"]
 \bimg\.youtube\.com/vi/[-a-zA-Z0-9?&=_]*
 # Google Analytics
