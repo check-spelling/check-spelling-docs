@@ -73,6 +73,10 @@ msdn\.microsoft\.com/[^/]+/library/\S*\.aspx
 # codacy
 \bapi\.codacy\.com/project/badge/Grade/[0-9a-f]+
 
+# mailgun
+\.api\.mailgun\.net/v3/domains/[0-9a-z]+\.mailgun.org/messages/[0-9a-zA-Z=@]*
+\b[0-9a-z]+.mailgun.org
+
 # sched
 \b[a-z0-9]+\.sched\.com\b
 
