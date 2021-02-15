@@ -49,6 +49,9 @@ themes\.googleusercontent\.com/static/fonts/[^/]+/v\d+/[^.]+.
 # gist github
 /gist\.github\.com/[^/]+/[0-9a-f]+
 
+# circleci
+https://circleci.com/gh/[^/]+/[^/]+/[^/]+(?:/[^/]+|).[a-z]+\?[-0-9a-zA-Z=&]+
+
 # imgur
 \.imgur\.com/[^.]+
 
