@@ -6,6 +6,7 @@ Supported GitHub actions:
 * [pull_request_target](#pull_request_target)
 * [pull_request](#pull_request) :warning:
 * [schedule](#schedule)
+* [Checking potential merges for PRs](#checking-prs-by-their-merge-commit)
 * See [[Workflow Variables|Configuration#Workflow_Variables]] 
 
 ### push
@@ -98,3 +99,28 @@ on:
 
 Cons: There will not be a :x: for the PR, so you have to look
 for a comment.
+
+### Checking PRs by their merge commit
+
+If you use `actions/checkout` to get the source for checking, `push` and `pull_request` will naturally do the right thing.
+However, `pull_request_target` will check out the _base_ of the PR, not the **HEAD**.
+
+If you want to check the results of a potential merge, you need something fancier:
+
+```
+    steps:
+    # This step allows checking against a merge of the PR head with the destination.
+    - name: checkout-merge
+      # if you aren't handling `on: [push, ...]`, you don't need this condition:
+      if: "contains(github.event_name, 'pull_request')"
+      uses: actions/checkout@v2.0.0
+      with:
+        ref: refs/pull/${{github.event.pull_request.number}}/merge
+        fetch-depth: 5
+    # To handle `on: [push, ...]`, you'll want this step:
+    - name: checkout
+      if: "!contains(github.event_name, 'pull_request')"
+      uses: actions/checkout@v2.0.0
+      with:
+        fetch-depth: 5
+```
