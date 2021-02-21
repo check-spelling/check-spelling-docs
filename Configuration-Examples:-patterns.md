@@ -104,6 +104,8 @@ sha256:[0-9a-f]+
 '[0-9a-fA-F]{40}'
 # hex in url queries
 =[0-9a-fA-F]+&
+# GPG
+\b(?:[0-9A-F]{4} ){9}[0-9A-F]{4}\b
 # hex digits including css/html color classes:
 (?:[\\0][xX]|\\u|[uU]\+|#x?|\%23)[0-9a-fA-FgGrR_]{2,}(?:[uU]?[lL]{0,2}|u\d+)\b
 # uuid:
