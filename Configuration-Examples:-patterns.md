@@ -11,6 +11,8 @@ index [0-9a-z]{7,12}\.\.[0-9a-z]{7,12}
 # data urls
 data:[a-zA-Z=;,/0-9+-]+
 
+# The `\b` here means a break, it's the fancy way to handle urls, but it makes things harder to read
+# In this examples content, I'm using a number of different ways to match things to show various approaches
 # asciinema
 \basciinema\.org/a/[0-9a-zA-Z]+
 
@@ -18,6 +20,7 @@ data:[a-zA-Z=;,/0-9+-]+
 \b[0-9a-z]{10}\.execute-api\.[-0-9a-z]+\.amazonaws\.com\b
 \b\w+\.[-0-9a-z]+\.elb\.amazonaws\.com\b
 
+# Here, we're matching `http://` and `https://` by using `s?`
 # YouTube
 https?://(?:(?:www\.|)youtube\.com|youtu.be)/(?:channel/|embed/|playlist\?list=|watch\?v=|)[-a-zA-Z0-9?&=_]*
 <\s*youtube\s+id=['"][-a-zA-Z0-9?_]*['"]
@@ -31,6 +34,8 @@ https?://(?:(?:www\.|)youtube\.com|youtu.be)/(?:channel/|embed/|playlist\?list=|
 \w+\@group\.calendar\.google\.com\b
 # Google DataStudio
 \bdatastudio\.google\.com/(?:(?:c/|)u/\d+/|)(?:embed/|)(?:open|reporting|datasources|s)/[-0-9a-zA-Z]+(?:/page/[-0-9a-zA-Z]+|)
+# The leading `/` here is as opposed to the `\b` above
+# ... a short way to match `https://` or `http://` since most urls have one of those prefixes
 # Google Docs
 /docs\.google\.com/[a-z]+/d/(?:e/|)[0-9a-zA-Z_-]+/
 # Google Groups
