@@ -45,6 +45,6 @@ fileUrl="$baseUrl&itemPath=$artifactFileName"
 fileParams=$(mktemp)
 curl -X POST -d @$fileToUpload -vvv \
  -H "Authorization: Bearer $ACTIONS_RUNTIME_TOKEN" \
- \"$fileUrl"
+ "$fileUrl"
 
 ```
