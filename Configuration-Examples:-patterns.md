@@ -58,6 +58,9 @@ themes\.googleusercontent\.com/static/fonts/[^/]+/v\d+/[^.]+.
 # gist github
 /gist\.github\.com/[^/]+/[0-9a-f]+
 
+# binanace
+accounts.binance.com/[a-z/]*oauth/authorize\?[-0-9a-zA-Z&%]*
+
 # circleci
 https://circleci.com/gh/[^/]+/[^/]+/[^/]+(?:/[^/]+|).[a-z]+\?[-0-9a-zA-Z=&]+
 
