@@ -48,6 +48,7 @@ themes\.googleusercontent\.com/static/fonts/[^/]+/v\d+/[^.]+.
 /goo\.gl/[a-zA-Z0-9]+
 
 # GitHub SHAs
+\bapi.github\.com/repos/[^/]+/[^/]+/[^/]+/[0-9a-f]+\b
 (?:\[[0-9a-f]+\]\(https:/|)/github\.com/[^/]+/[^/]+/[^/]+/[0-9a-f]+\b
 \bgithub\.com/[^/]+/[^/]+[@#][0-9a-f]+\b
 # githubusercontent
