@@ -106,9 +106,8 @@ slack://[a-zA-Z0-9?&=]+
 0x[0-9a-fA-F](?:\.[0-9a-fA-F]*|)[pP]
 # sha256
 sha256:[0-9a-f]+
-# sha-1
-"[0-9a-fA-F]{40}"
-'[0-9a-fA-F]{40}'
+# sha-... -- uses a fancy capture
+(['"]|&quot;)[0-9a-f]{40,}\g{-1}
 # hex in url queries
 =[0-9a-fA-F]+&
 # PGP
