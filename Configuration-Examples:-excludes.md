@@ -18,6 +18,9 @@ Note that regular expressions are generally case-sensitive. You can use `(?:(?i)
 \.png$
 # Ignore Excel files (`.xsl` and `.xslx`)
 \.xslx?$
+# Ignore locales that aren't en / en_GB (roughly: keep en_US and drop everything else)
+locales/(?!en)
+locales/en_GB
 # Ignore GitHub `CONTRIBUTING.md` in the root
 ^CONTRIBUTING\.md$
 # Ignore the action's configuration data
