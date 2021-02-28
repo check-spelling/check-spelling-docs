@@ -6,7 +6,7 @@
 # patch hunk comments
 ^\@\@ -\d+(?:,\d+|) \+\d+(?:,\d+|) \@\@ .*
 # git index header
-index [0-9a-z]{7,12}\.\.[0-9a-z]{7,12}
+index [0-9a-z]{7,40}\.\.[0-9a-z]{7,40}
 
 # data urls
 data:[a-zA-Z=;,/0-9+-]+
