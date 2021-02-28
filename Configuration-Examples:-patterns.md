@@ -44,6 +44,8 @@ https://groups\.google\.com/d/topic/[^/]+/[a-zA-Z0-9]+/discussion
 https://groups\.google\.com/d/msg/[^/]+/[a-zA-Z0-9]+/[a-zA-Z0-9]+
 # Google themes
 themes\.googleusercontent\.com/static/fonts/[^/]+/v\d+/[^.]+.
+# Google CDN
+\bclients2\.google(?:usercontent|)\.com[-0-9a-zA-Z/.]*
 # Goo.gl
 /goo\.gl/[a-zA-Z0-9]+
 
