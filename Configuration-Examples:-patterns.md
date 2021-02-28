@@ -105,6 +105,10 @@ slack://[a-zA-Z0-9?&=]+
 # Sentry
 [0-9a-f]{32}\@o\d+\.ingest\.sentry\.io\b
 
+# ipfs
+ipfs://[0-9a-f]*
+\bdweb\.link/ipfs/[0-9a-f]*
+
 # URL escaped characters
 \%[0-9A-F]{2}
 # c99 hex digits (not the full format, just one I've seen)
