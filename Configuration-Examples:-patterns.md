@@ -40,7 +40,7 @@ https?://(?:(?:www\.|)youtube\.com|youtu.be)/(?:channel/|embed/|playlist\?list=|
 # The leading `/` here is as opposed to the `\b` above
 # ... a short way to match `https://` or `http://` since most urls have one of those prefixes
 # Google Docs
-/docs\.google\.com/[a-z]+/d/(?:e/|)[0-9a-zA-Z_-]+/
+/docs\.google\.com/[a-z]+/d/(?:e/|)[0-9a-zA-Z_-]+/?
 # Google Groups
 https://groups\.google\.com/d/topic/[^/]+/[a-zA-Z0-9]+/discussion
 https://groups\.google\.com/d/msg/[^/]+/[a-zA-Z0-9]+/[a-zA-Z0-9]+
