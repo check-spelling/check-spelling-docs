@@ -82,6 +82,9 @@ msdn\.microsoft\.com/[^/]+/library/\S*\.aspx
 # now.sh
 /[0-9a-z-.]+\.now\.sh\b
 
+# oracle
+\bdocs\.oracle\.com/[-0-9a-zA-Z./_?#&=]*
+
 # chromatic.com
 /\S+.chromatic.com\S*[")]
 
