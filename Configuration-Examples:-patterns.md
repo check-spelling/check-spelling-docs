@@ -9,7 +9,9 @@
 index [0-9a-z]{7,40}\.\.[0-9a-z]{7,40}
 
 # data urls
-data:[a-zA-Z=;,/0-9+-]+
+"data:[^"]*"
+'data:[^']*'
+data:[-a-zA-Z=;:/0-9+]*,\S*
 
 # The `\b` here means a break, it's the fancy way to handle urls, but it makes things harder to read
 # In this examples content, I'm using a number of different ways to match things to show various approaches
