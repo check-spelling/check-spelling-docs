@@ -97,6 +97,9 @@ msdn\.microsoft\.com/[^/]+/library/\S*\.aspx
 \.api\.mailgun\.net/v3/domains/[0-9a-z]+\.mailgun.org/messages/[0-9a-zA-Z=@]*
 \b[0-9a-z]+.mailgun.org
 
+# requestb.in
+\brequestb\.in/[0-9a-z]+
+
 # sched
 \b[a-z0-9]+\.sched\.com\b
 
