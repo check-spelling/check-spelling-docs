@@ -79,7 +79,7 @@ https://circleci.com/gh/[^/]+/[^/]+/[^/]+(?:/[^/]+|).[a-z]+\?[-0-9a-zA-Z=&]+
 link\.medium\.com/[a-zA-Z0-9]+
 
 # msdn
-msdn\.microsoft\.com/([^/]+/|)library/\S*\.aspx?
+msdn\.microsoft\.com/(?:[^/]+/|)library/\S*\.aspx?
 
 # now.sh
 /[0-9a-z-.]+\.now\.sh\b
