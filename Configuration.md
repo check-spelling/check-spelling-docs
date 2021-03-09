@@ -7,8 +7,6 @@
 
 The easiest way to get started is by copying the contents of `.github` from https://github.com/check-spelling/spell-check-this/ into your repository.
 
-(Currently this doesn't handle PRs, but [it will soon](https://github.com/check-spelling/spell-check-this/tree/prerelease/).)
-
 ## Workflow Variables
 
 See [[Configuration: Workflows]] for the supported GitHub workflows.
