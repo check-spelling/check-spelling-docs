@@ -4,3 +4,15 @@ Here are some examples:
 * https://github.com/microsoft/terminal/blob/main/.github/actions/spelling/advice.txt
 * https://github.com/imazen/imageflow/blob/main/.github/actions/spell-check/advice.txt
 * https://github.com/jsoref/jitsi-videobridge/blob/e26301eab0a15f2366f5d2b73e2c0cc714007a14/.github/actions/spell-check/advice.txt
+
+```
+<details><summary>If you see a bunch of garbage and it relates to a binary-ish string</summary>
+
+Please add a file path to the `excludes.txt` file instead of just accepting the garbage.
+
+File paths are Perl 5 Regular Expressions - you can [test](
+https://www.regexplanet.com/advanced/perl/) yours before committing to verify it will match your files.
+
+`^` refers to the file's path from the root of the repository, so `^README\.md$` would exclude [README.md](https://github.com/check-spelling-bot/example/blob/master/README.md) (on whichever branch you're using).
+</details>
+```
