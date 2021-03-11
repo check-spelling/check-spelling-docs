@@ -78,8 +78,8 @@ https://circleci.com/gh/[^/]+/[^/]+/[^/]+(?:/[^/]+|).[a-z]+\?[-0-9a-zA-Z=&]+
 # medium
 link\.medium\.com/[a-zA-Z0-9]+
 
-# msdn
-msdn\.microsoft\.com/(?:[^/]+/|)library/\S*\.aspx?
+# microsoft
+\b(?:download\.visualstudio|docs|msdn)\.microsoft\.com/[-_a-zA-Z0-9()=./]*
 
 # now.sh
 /[0-9a-z-.]+\.now\.sh\b
