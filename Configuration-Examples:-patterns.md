@@ -50,6 +50,8 @@ themes\.googleusercontent\.com/static/fonts/[^/]+/v\d+/[^.]+.
 \bclients2\.google(?:usercontent|)\.com[-0-9a-zA-Z/.]*
 # Goo.gl
 /goo\.gl/[a-zA-Z0-9]+
+# Google Chrome Store
+\bchrome\.google\.com/webstore/detail/\w*(?:/\w*|)
 
 # GitHub SHAs
 \bapi.github\.com/repos/[^/]+/[^/]+/[^/]+/[0-9a-f]+\b
