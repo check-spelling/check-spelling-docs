@@ -81,6 +81,9 @@ One word per line.
 If you want to include the default dictionary,
 place it into the directory next to your own.
 
+Alternatively, if you want to retrieve a dictionary from a remote URL,
+see the workflow configuration values [dictionary_url](#dictionary_url) and [dictionary_version](#dictionary_version).
+
 ### excludes
 
 This file contains Perl regular expressions.
