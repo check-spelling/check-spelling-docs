@@ -150,9 +150,9 @@ sha256:[0-9a-f]+
 # <word>v#
 [Vv]\d+(?:\b|(?=[a-zA-Z_]))
 # curl arguments
-\b(?:)curl(?:\s+-[a-zA-Z]+)+
+\b(?:\\n|)curl(?:\s+-[a-zA-Z]+)+
 # tar arguments
-\b(?:)tar(?:\s+-[a-zA-Z]+|\s[a-z]+)+
+\b(?:\\n|)tar(?:\s+-[a-zA-Z]+|\s[a-z]+)+
 # macOS temp folders
 /var/folders/\w\w/\w+/T/
 ```
