@@ -20,6 +20,7 @@
 * [[Plug into Pantsbuild|Feature: Pantsbuild plugin]]
 * [[Suggest adding files to exclude|Feature: Heuristic exclude suggestions]]
 * [[Honor gitattributes|Feature: honor gitattributes]]
+* [[Block/Multiline Ignore|Feature: Block Ignore]]
 
 ## Related but currently out of scope
 
