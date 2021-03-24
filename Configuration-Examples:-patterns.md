@@ -3,6 +3,11 @@
 ```
 # this is a comment
 
+# marker to ignore all code on line
+^.*/\* #no-spell-check-line \*/.*$
+# marker for ignoring a comment to the end of the line
+// #no-spell-check.*$
+
 # patch hunk comments
 ^\@\@ -\d+(?:,\d+|) \+\d+(?:,\d+|) \@\@ .*
 # git index header
@@ -146,10 +151,6 @@ sha256:[0-9a-f]+
 # Note that the next example is no longer necessary if you are using
 # to match a string starting with a `#`, use a character-class:
 [#]backwards
-# marker to ignore all code on line
-^.*/\* #no-spell-check-line \*/.*$
-# marker for ignoring a comment to the end of the line
-// #no-spell-check.*$
 # <word>v#
 [Vv]\d+(?:\b|(?=[a-zA-Z_]))
 # curl arguments
@@ -159,3 +160,9 @@ sha256:[0-9a-f]+
 # macOS temp folders
 /var/folders/\w\w/\w+/T/
 ```
+
+## Notes
+
+* `patterns` operate on a per line basis
+* the first match wins, and matches are replaced by a single space character -- roughly resulting in the matched content being treated as a word break (and not seen by the word checker)
+* there is no support for multiline patterns, see [[Feature: Block Ignore]] for my current thoughts
