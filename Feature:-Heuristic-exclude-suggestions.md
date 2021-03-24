@@ -38,4 +38,4 @@ for each extension from `get_extension_counts` compare the should_exclude and ch
 
 ### File names
 
-Like File extensions, but instead of capturing the rhs of the `.` for the filename, capture the lhs.
+Like File extensions, but instead of capturing the rhs of the `.` for the filename, capture the whole filename.
