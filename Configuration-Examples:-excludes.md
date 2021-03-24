@@ -28,3 +28,7 @@ locales/en_GB
 # Ignore all GitHub workflow files
 ^\.github/workflows/
 ```
+
+## Convert paths to regular expressions
+
+If you have full file paths you want to exclude, see [[Files to Excludes]] for a script to convert them to a regular expression for use in `excludes.txt`.
