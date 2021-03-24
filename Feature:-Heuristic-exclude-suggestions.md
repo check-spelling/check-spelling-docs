@@ -11,6 +11,10 @@ To get a file to be checked, one will need to:
 * reduce the number of non dictionary by masking patterns (`patterns.txt`)
 * reduce the number of non dictionary words (by fixing typos)
 
+## Simple exclusion suggestions
+
+I think initially if the number of files is large, I'll suggest that users look for entire directories to exclude, file names to exclude, or file extensions to exclude. (Pure static text)
+
 ## Advanced exclusion suggestions
 
 The heuristics can also try to suggest ignoring common directories, common file names, or file extensions.
