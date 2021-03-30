@@ -153,3 +153,5 @@ without having to replace the core dictionary.
 The order of operations is:
 
 > `(dictionary + allows) - reject`
+
+See [[Configuration Examples: reject]] for examples.
