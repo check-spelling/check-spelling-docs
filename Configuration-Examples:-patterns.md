@@ -144,8 +144,9 @@ sha256:[0-9a-f]+
 # uuid:
 [<({"'>][0-9a-fA-F]{8}-(?:[0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}[<'"})>]
 
+# https://www.gnu.org/software/groff/manual/groff.html
 # man troff content
-\\f[BCIP]
+\\f[BCIPR]
 
 # the negative lookahead here is to allow catching 'templatesz' as a misspelling
 # but to otherwise recognize a Windows path with \templates\foo.template or similar:
