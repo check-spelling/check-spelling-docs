@@ -1,4 +1,5 @@
 * [[Configuration]]
+  * [[Configuration Examples: advice]]
   * [[Configuration Examples: excludes]]
   * [[Configuration Examples: only]]
   * [[Configuration Examples: patterns]]
