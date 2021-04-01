@@ -7,6 +7,7 @@ See [[Archaic-words]]
 ^attache$
 benefitting
 occurence
+Sorce
 ^[Ss]pae
 ^untill
 ^wether
