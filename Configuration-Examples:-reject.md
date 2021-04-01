@@ -6,6 +6,7 @@ See [[Archaic-words]]
 ```
 ^attache$
 benefitting
+occurence
 ^[Ss]pae
 ^untill
 ^wether
