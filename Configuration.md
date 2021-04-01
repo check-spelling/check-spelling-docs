@@ -7,6 +7,8 @@
 
 The easiest way to get started is by copying the contents of `.github` from https://github.com/check-spelling/spell-check-this/ into your repository.
 
+This will give you handling for `push`, `pull_request_target`, and example files with a README describing the files and linking to more examples in this wiki.
+
 ## Workflow Variables
 
 See [[Configuration: Workflows]] for the supported GitHub workflows.
