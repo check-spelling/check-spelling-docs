@@ -72,6 +72,7 @@ See [[Configuration Examples: advice]] for examples.
 
 This allows you to add supplemental words to
 the dictionary without replacing the core dictionary.
+One word per line.
 
 ### dictionary
 
