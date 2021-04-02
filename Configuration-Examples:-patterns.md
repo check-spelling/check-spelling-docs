@@ -88,6 +88,9 @@ link\.medium\.com/[a-zA-Z0-9]+
 # microsoft
 \b(?:download\.visualstudio|docs|msdn)\.microsoft\.com/[-_a-zA-Z0-9()=./]*
 
+# mvnrepository.com
+\bmvnrepository\.com/[-0-9a-z./]+
+
 # now.sh
 /[0-9a-z-.]+\.now\.sh\b
 
