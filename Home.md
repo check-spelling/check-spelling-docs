@@ -17,6 +17,7 @@ Specifically, [w](https://github.com/jsoref/spelling/blob/master/w) understands
 enough about how programmers name things that it can split the above conventions
 into word-like things for checking against a dictionary.
 
+* [[Template repository for using check-spelling|https://github.com/check-spelling/spell-check-this/]]
 * [[Showcase]]
 * [[Configuration information]]
 * [[Possible features]]
