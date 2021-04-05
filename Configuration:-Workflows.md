@@ -10,7 +10,7 @@ Supported GitHub actions:
 
 Notes:
 
-* [draft](#draft)
+* [Ignore Draft PRs](#draft)
 * See [[Workflow Variables|Configuration#Workflow_Variables]] 
 
 ### push
