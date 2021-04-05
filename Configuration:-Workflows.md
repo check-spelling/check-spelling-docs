@@ -7,6 +7,10 @@ Supported GitHub actions:
 * [pull_request](#pull_request) :warning:
 * [schedule](#schedule)
 * [Checking potential merges for PRs](#checking-prs-by-their-merge-commit)
+
+Notes:
+
+* [draft](#draft)
 * See [[Workflow Variables|Configuration#Workflow_Variables]] 
 
 ### push
@@ -100,6 +104,26 @@ on:
 Cons: There will not be a :x: for the PR, so you have to look
 for a comment.
 
+### Draft
+
+If you don't want PRs to be spell checked eagerly, you can do something like:
+
+```workflow
+name: Spell checking
+on:
+  pull_request_target:
+    branches:
+      - "**"
+    types: ['opened', 'reopened', 'synchronize', 'ready_for_review']
+
+jobs:
+  build:
+    name: Spell checking
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.draft == false
+...
+```
+
 ### Checking PRs by their merge commit
 
 If you use `actions/checkout` to get the source for checking, `push` and `pull_request` will naturally do the right thing.
@@ -107,7 +131,7 @@ However, `pull_request_target` will check out the _base_ of the PR, not the **HE
 
 If you want to check the results of a potential merge, you need something fancier:
 
-```
+```workflow
     steps:
     # This step allows checking against a merge of the PR head with the destination.
     - name: checkout-merge
