@@ -12,6 +12,7 @@
 * [[Update expect commandline|Feature: update expect commandline]]
 * [[Check filenames and paths|Feature: check filenames and paths]]
 * [[Aliases|Feature: Aliases]]
+* [[Suppress comments|Feature: Suppress comments]]
 
 ## Distant future
 
