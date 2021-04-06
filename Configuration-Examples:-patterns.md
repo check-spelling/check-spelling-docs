@@ -87,6 +87,8 @@ link\.medium\.com/[a-zA-Z0-9]+
 
 # microsoft
 \b(?:download\.visualstudio|docs|msdn)\.microsoft\.com/[-_a-zA-Z0-9()=./]*
+# powerbi
+\bapp\.powerbi\.com/reportEmbed/[^"' ]*
 
 # mvnrepository.com
 \bmvnrepository\.com/[-0-9a-z./]+
