@@ -1,7 +1,7 @@
 # `only` Examples
 
 ```
-# Ignore perl / JavaScript / Python files
+# Only process perl / JavaScript / Python files
 \.pl$
 \.js$
 \.py$
