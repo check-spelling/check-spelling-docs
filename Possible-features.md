@@ -5,14 +5,15 @@
 * [[Update expect list|Feature: Update expect list]]
 * [[Collapse older check comments|Feature: Collapse older check comments]]
 * [[Suggest adding files to exclude|Feature: Heuristic exclude suggestions]]
+* [[Suppress comments|Feature: Suppress comments]]
 
 ## Near term
 
 * [[First run advice|Feature: First run advice]]
+* [[Easier to understand filenames|Feature: Easier to understand filenames]]
 * [[Update expect commandline|Feature: update expect commandline]]
 * [[Check filenames and paths|Feature: check filenames and paths]]
 * [[Aliases|Feature: Aliases]]
-* [[Suppress comments|Feature: Suppress comments]]
 
 ## Distant future
 
