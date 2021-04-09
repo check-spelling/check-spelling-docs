@@ -2,7 +2,7 @@ These scripts require functions from [[Looking for items locally|Looking for ite
 
 * `what_was_removed` is vaguely helpful to search for hunks that moved outside of merge conflicts
 * `where_are_they_now` is the counterpart to `what_was_removed` -- when this happens, use `rs what_was_removed replacement commit_word` -- if there's more than one, then use `git reset HEAD~` and repeat
-* `handle_conflicts` and `moving_on` are a way to move through `git rebase master`
+* `handle_conflicts` and `moving_on` are a way to move through `git rebase main`
 * `git_compare_branches` `git_compare_branches fork/main...fork/spelling upstream/main...spelling`
 * `git_diff_filter` -- mostly for use w/ `git_compare_branches`
 
