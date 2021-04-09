@@ -1,6 +1,7 @@
 ## 0.0.18-alpha
 🛠️ In various states of `prerelease`
 
+* [[Behavior change: Dropping word stemming]]
 * [[Update expect list|Feature: Update expect list]]
 * [[Collapse older check comments|Feature: Collapse older check comments]]
 * [[Suggest adding files to exclude|Feature: Heuristic exclude suggestions]]
