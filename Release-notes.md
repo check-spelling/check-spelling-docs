@@ -6,6 +6,7 @@
 * [[Update expect list|Feature: Update expect list]]
 * [[Collapse older check comments|Feature: Collapse older check comments]]
 * [[Suggest adding files to exclude|Feature: Heuristic exclude suggestions]]
+* All unrecognized words are reported in the log, instead of just the ones introduced by the current changes.
 
 ## 0.0.17-alpha
 
