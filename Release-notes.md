@@ -1,5 +1,6 @@
 ## 0.0.18-alpha
-🛠️ In various states of `prerelease`
+<!--🛠️ In various states of `prerelease`-->
+🌟 Almost ready to transition from `prerelease` to release 🍽️
 
 * [[Behavior change: Dropping word stemming]]
 * [[Behavior change: Ignoring two letter words]]
