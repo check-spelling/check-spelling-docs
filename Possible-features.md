@@ -24,6 +24,7 @@
 * [[Plug into Pantsbuild|Feature: Pantsbuild plugin]]
 * [[Honor gitattributes|Feature: honor gitattributes]]
 * [[Block/Multiline Ignore|Feature: Block Ignore]]
+* [[Non-English languages|Feature: Non-English languages]]
 
 ## Related but currently out of scope
 
