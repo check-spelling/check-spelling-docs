@@ -2,3 +2,6 @@ While [[Correct misspelled words within GitHub|Feature: Correct misspelling]] wo
 
 My tentative idea for this is to rely on https://github.com/laurikari/tre's aspell tool and suggest the one best match if such a thing exists. I've done some [[back of the napkin|Notes on suggested replacements]] work on this.
 
+In the interim, I've shared a [Google Sheet](
+https://docs.google.com/spreadsheets/d/1ehtjuiKF5mHUq_eVuz3lYB2Ui7XztEFBgnNjOmb9R20/edit)
+that I use that works pretty well.
