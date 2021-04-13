@@ -153,6 +153,9 @@ sha256:[0-9a-f]+
 # man troff content
 \\f[BCIPR]
 
+# python f-string https://www.python.org/dev/peps/pep-0498/
+\bf'
+
 # Regular expressions for (P|p)assword
 \([A-Z]\|[a-z]\)[a-z]+
 
