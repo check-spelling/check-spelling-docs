@@ -101,7 +101,7 @@ review() {
 ### usage
 #### find instances
 ```sh
-peek "some"t"hang"
+peek 'some"t"hang'
 ```
 #### build an expect file
 ```sh
