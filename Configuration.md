@@ -50,7 +50,7 @@ for more information.
 Note that each of the below items can either be a file w/ a `.txt` suffix,
 or a directory, where each file with a `.txt` suffix will be merged together.
 
-| Variable | Description |
+| File | Description |
 | ------------- | ------------- |
 | [advice](#advice) | This allows you to supplement the comment. |
 | [allow](#allow) | This allows you to supplement the dictionary. |
@@ -75,6 +75,17 @@ See [[Configuration Examples: advice]] for examples.
 This allows you to add supplemental words to
 the dictionary without replacing the core dictionary.
 One word per line.
+
+They're really words, just not in the ancient base dictionary. They might not be used today in your project, but there's no reason for the spell checker to complain to a contributor tomorrow because it's foreseeable that they might be.
+
+Some candidates:
+* every html tag & attribute,
+* the name of everyone in your company (and the name of your company)
+* names of css attributes/properties
+* C or JavaScript reserved words
+* The names of all types/ functions from the C standard library
+
+See [Area dictionaries](https://github.com/check-spelling/check-spelling/wiki/Feature%3A-Area-dictionaries) for other examples (and my plan for eventually making this easier).
 
 ### dictionary
 
@@ -106,6 +117,9 @@ Lines that start with `#` will be ignored.
 ### expect
 
 This contains of expected "words" that aren't in the dictionary, one word per line.
+
+Some arbitrary strings that are in test files that aren't really words. They should be removed if the test are changed/removed.
+
 Expected words that are not otherwise present in the corpus will be suggested for removal,
 but will not trigger a failure.
 
@@ -113,13 +127,25 @@ Words that are present (i.e. not matched by the excludes file) in the repository
 and which are not listed in the expect list will trigger a failure as part of **push** and
 **pull_request** actions (depending on how you've configured this action).
 
-You can use `#` followed by text to add a comment at the end of a line..
+#### comments in expect
+
+You can use `#` followed by text to add a comment at the end of a line.
 Note that some automatic pruning may not properly handle this.
+
+#### expect - previous name
 
 :warning: This was previously called `whitelist` -- that name is *deprecated*.
 Support for the deprecated name may be removed in a future release.
 Until then, warnings will be reported in the action run log.
 At a future date, comments may report this as well.
+
+#### Allow vs Expect
+
+Roughly if it's a proper noun of some sort of exists in the real world outside the project, it's a good candidate for `allow`. If it's just something you're temporally using that isn't really a word, it probably belongs in `expect`.
+
+##### Note
+
+The bot doesn't really care. You could put everything into `allow` or everything into `expect`. The difference is that the bot will help you remove unused items from expect and add new items to it. You could also periodically migrate items from expect to allow (think about it like Java object lifespan promotions).
 
 ### only
 
