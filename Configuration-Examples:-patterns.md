@@ -159,6 +159,9 @@ sha256:[0-9a-f]+
 # Regular expressions for (P|p)assword
 \([A-Z]\|[a-z]\)[a-z]+
 
+# JavaScript regular expressions
+/.*/\.test\(
+
 # the negative lookahead here is to allow catching 'templatesz' as a misspelling
 # but to otherwise recognize a Windows path with \templates\foo.template or similar:
 \\templates(?![a-z])
