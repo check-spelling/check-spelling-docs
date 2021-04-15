@@ -3,15 +3,20 @@
 This is a lazy script -- which isn't aware of all the features, but for average cases it should work:
 ```sh
 files=$(
-  (
-    git ls-files 2>/dev/null
-  ) | 
+  (git ls-files 2>/dev/null||hg locate) | 
   perl -e '
-    sub readstring {
-      open F, q{<}, glob($_[0]);
+    sub readfile {
+      open F, q{<}, $_;
       local $/;
       local $f = <F>;
+      $f =~ s/^#.*\$\n//gm;
       $f =~ s/\n$//;
+      return $f;
+    }
+    sub readstring {
+      my @files=glob($_[0]);
+      my @lines=map readfile, @files; 
+      my $f=join "\n", @lines;
       $f =~ s/(.*)\n/(?:$1)|/g;
       return $f;
     }
@@ -26,6 +31,7 @@ patterns=$(
   (
     perl -ne '
       next if /^#/;
+      s/\r//;
       next unless /./;
       print' .github/actions/spell*/patterns.txt
   ) 2>/dev/null |
@@ -35,6 +41,7 @@ patterns=$(
 
 search() {
   (
+    setopt +o nomatch
     echo "$files" |
     tr "\n" "\0" |
     xargs -0 cat 2>/dev/null |
