@@ -168,6 +168,9 @@ content: "[-a-zA-Z=;:/0-9+]*="
 # JavaScript regular expressions
 /.*/\.test\(
 
+# Go regular expressions
+regexp\.MustCompile\(`[^`]*`\)
+
 # kubernetes pod status lists
 # https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#pod-phase
 \w+(?:-\w+)+\s+\d+/\d+\s+(?:Running|Pending|Succeeded|Failed|Unknown)\s+
