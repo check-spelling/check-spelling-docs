@@ -153,6 +153,12 @@ sha256:[0-9a-f]+
 # man troff content
 \\f[BCIPR]
 
+# GitHub JSON
+"node_id": "[-a-zA-Z=;:/0-9+]*"
+
+# Input to GitHub JSON
+content: "[-a-zA-Z=;:/0-9+]*="
+
 # python f-string https://www.python.org/dev/peps/pep-0498/
 \bf'
 
