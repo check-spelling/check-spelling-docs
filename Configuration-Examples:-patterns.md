@@ -132,6 +132,9 @@ ipfs://[0-9a-f]*
 # w3
 \bw3\.org/[-0-9a-zA-Z/#.]+
 
+# kubectl.kubernetes.io/last-applied-configuration
+"kubectl.kubernetes.io/last-applied-configuration": ".*"
+
 # URL escaped characters
 \%[0-9A-F]{2}
 # c99 hex digits (not the full format, just one I've seen)
