@@ -125,6 +125,9 @@ slack://[a-zA-Z0-9?&=]+
 # Sentry
 [0-9a-f]{32}\@o\d+\.ingest\.sentry\.io\b
 
+# Twitter
+\[\@[^[/\]:]*?]\(https://twitter.com/[^/]*\)
+
 # ipfs
 ipfs://[0-9a-f]*
 \bdweb\.link/ipfs/[0-9a-f]*
