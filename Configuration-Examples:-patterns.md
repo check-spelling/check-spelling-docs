@@ -76,7 +76,7 @@ accounts.binance.com/[a-z/]*oauth/authorize\?[-0-9a-zA-Z&%]*
 https://circleci.com/gh/[^/]+/[^/]+/[^/]+(?:/[^/]+|).[a-z]+\?[-0-9a-zA-Z=&]+
 
 # imgur
-\.imgur\.com/[^.]+
+\bimgur\.com/[^.]+
 
 # Internet Archive
 \barchive\.org/web/\d+/([-\w.?,'/\\+&%$#_:]*)
