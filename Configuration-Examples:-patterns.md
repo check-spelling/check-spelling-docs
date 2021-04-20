@@ -132,6 +132,7 @@ slack://[a-zA-Z0-9?&=]+
 
 # Twitter
 \[\@[^[/\]:]*?]\(https://twitter.com/[^/]*\)
+\bt\.co/\w+
 
 # ipfs
 ipfs://[0-9a-f]*
