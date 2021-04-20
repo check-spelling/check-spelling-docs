@@ -172,7 +172,7 @@ content: "[-a-zA-Z=;:/0-9+]*="
 \([A-Z]\|[a-z]\)[a-z]+
 
 # JavaScript regular expressions
-/.*/\.test\(
+/.*/i?\.test\(
 
 # Go regular expressions
 regexp\.MustCompile\(`[^`]*`\)
