@@ -38,7 +38,7 @@ https?://(?:(?:www\.|)youtube\.com|youtu.be)/(?:channel/|embed/|playlist\?list=|
 \bgoogleapis\.com/[a-z]+/v\d+/[a-z]+/[@./?=\w]+
 \b[-a-zA-Z0-9.]*\bstorage\d*\.googleapis\.com(?:/\S*|)
 # Google Calendar
-\bcalendar\.google\.com/calendar/u/\d+/embed\?src=[@./?=\w]+
+\bcalendar\.google\.com/calendar(?:/u/\d+|)/embed\?src=[@./?=\w&%]+
 \w+\@group\.calendar\.google\.com\b
 # Google DataStudio
 \bdatastudio\.google\.com/(?:(?:c/|)u/\d+/|)(?:embed/|)(?:open|reporting|datasources|s)/[-0-9a-zA-Z]+(?:/page/[-0-9a-zA-Z]+|)
