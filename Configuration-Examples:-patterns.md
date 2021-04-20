@@ -13,9 +13,11 @@
 # git index header
 index [0-9a-z]{7,40}\.\.[0-9a-z]{7,40}
 
+# cid urls
+(['"])cid:.*?\g{-1}
+
 # data urls
-"data:[^"]*"
-'data:[^']*'
+(['"])data:.*?\g{-1}
 data:[-a-zA-Z=;:/0-9+]*,\S*
 
 # The `\b` here means a break, it's the fancy way to handle urls, but it makes things harder to read
