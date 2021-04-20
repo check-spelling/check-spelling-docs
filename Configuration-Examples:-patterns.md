@@ -29,7 +29,7 @@ data:[-a-zA-Z=;:/0-9+]*,\S*
 
 # Here, we're matching `http://` and `https://` by using `s?`
 # YouTube
-https?://(?:(?:www\.|)youtube\.com|youtu.be)/(?:channel/|embed/|playlist\?list=|watch\?v=|)[-a-zA-Z0-9?&=_]*
+https?://(?:(?:www\.|)youtube\.com|youtu.be)/(?:channel/|embed/|playlist\?list=|watch\?v=|v/|)[-a-zA-Z0-9?&=_]*
 <\s*youtube\s+id=['"][-a-zA-Z0-9?_]*['"]
 \bimg\.youtube\.com/vi/[-a-zA-Z0-9?&=_]*
 # Google Analytics
