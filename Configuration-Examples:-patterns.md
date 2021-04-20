@@ -84,6 +84,9 @@ https://circleci.com/gh/[^/]+/[^/]+/[^/]+(?:/[^/]+|).[a-z]+\?[-0-9a-zA-Z=&]+
 # discord
 /discord(?:app\.com|\.gg)/(?:invite/)?[a-zA-Z0-9]{7,8}
 
+# Disqus
+\bdisqus\.com/[-\w/%.()!?&=_]*
+
 # medium
 link\.medium\.com/[a-zA-Z0-9]+
 
