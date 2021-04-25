@@ -7,6 +7,8 @@ Note that regular expressions are generally case-sensitive. You can use `(?:(?i)
 (?:^|/)vendor/
 # Ignore directories named `third_party`
 (?:^|/)third_party/
+# Ignore npm files
+(?:^|/)package(?:-lock|)\.json$
 # Ignore files named (yarn for Node.js) `yarn.lock`
 (?:^|/)yarn\.lock$
 # Ignore files named (rust) `Cargo.toml`
