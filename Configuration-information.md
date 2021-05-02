@@ -1,3 +1,5 @@
+# Configuration information
+
 * [[Configuration]]
   * [[Configuration Examples: advice]]
   * [[Configuration Examples: excludes]]
