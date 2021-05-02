@@ -1,8 +1,13 @@
-Problem space:
+# Limit schedule branches 
+
+## Problem space
+
 1. Users should be able to get spell checking feedback without creating a PR.
    - Solution: use `push` to trigger spell checking
 1. If one uses both `push` and `pull_request`, then things run twice, which looks bad (and is fairly confusing)
 1. If users create forks that don't enable actions, then the `push` trigger can easily not run.
+
+## Background
 
 I added `schedule` which goes in and looks for PRs and potentially checks things, ideally it should be able to suppress itself if there's already a run. I think that logic may be missing.
 
@@ -13,4 +18,4 @@ I think `schedule` can be suppressed by adding an `only.txt` file to a target br
 
 If I retain `schedule`, I probably need to introduce a way to define branches to check/ignore.
 
-
+I expect that before a 1.0.0 release I will remove support for `schedule`, however, I suspect that I'll still need to resolve an interaction between `push` and `pull_request_target`. I think this probably requires support from GitHub.
