@@ -75,7 +75,8 @@ One word per line.
 They're really words, just not in the ancient base dictionary. They might not be used today in your project, but there's no reason for the spell checker to complain to a contributor tomorrow because it's foreseeable that they might be.
 
 Some candidates:
-* every html tag & attribute,
+
+* every html tag & attribute
 * the name of everyone in your company (and the name of your company)
 * names of css attributes/properties
 * C or JavaScript reserved words
