@@ -1,8 +1,10 @@
+# Aliases
+
 Currently there are a couple of hard-coded aliases in the word splitter.
 
 There are a couple of others that probably should be offered, and it'd be better if this were something that users could configure instead of requiring a new release each time.
 
-### Right Single Quotation Mark
+## Right Single Quotation Mark
 
 Right Single Quotation Mark (`’`)
 
