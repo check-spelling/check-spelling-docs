@@ -1,3 +1,5 @@
+# Rebasing spelling PRs
+
 These scripts require functions from [[Looking for items locally|Looking for items locally]]
 
 * `what_was_removed` is vaguely helpful to search for hunks that moved outside of merge conflicts
