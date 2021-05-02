@@ -1,3 +1,5 @@
+# Parallel check CI failures
+
 Sometimes I generate a series that's >250 items, and then tests fail, and the question is why.
 Given that CI is expensive for me to set up locally, and I have limited local CPU cycles, it makes sense to parallelize my testing.
 
