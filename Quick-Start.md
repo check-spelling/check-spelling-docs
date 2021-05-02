@@ -10,6 +10,8 @@
 
 ## Notes
 
+This will give you handling for `push`, `pull_request_target`, and example files with a README describing the files and linking to more examples in this wiki.
+
 1. Best-practice for workflows is to use a pinned version.
    There is generally a `prerelease` branch with evolving features,
    but you should not use it unless you need a specific feature from it.
