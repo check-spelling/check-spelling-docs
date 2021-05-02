@@ -1,3 +1,5 @@
+# `.git-blame-ignore-revs`
+
 One concern people have about taking spelling fixes
 (or whitespace cleanup for that matter)
 is that blame is shifted
