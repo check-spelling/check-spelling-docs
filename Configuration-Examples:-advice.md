@@ -1,3 +1,5 @@
+# Configuration Examples: advice
+
 Advice is a file that is inserted raw into GitHub comments (or potentially in the log if the commit results in stale expect items and no unexpected items).
 
 Here are some examples:
@@ -16,4 +18,9 @@ https://www.regexplanet.com/advanced/perl/) yours before committing to verify it
 `^` refers to the file's path from the root of the repository, so `^README\.md$` would exclude [README.md](https://github.com/check-spelling-bot/example/blob/master/README.md) (on whichever branch you're using).
 </details>
 ```
+
 ![Advice about garbage](https://raw.githubusercontent.com/check-spelling/images/main/sample-advice.png)
+
+## advice.md
+
+As of 0.0.18, the file can be named `advice.md` instead of `advice.txt`.
