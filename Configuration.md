@@ -1,3 +1,5 @@
+# Configuration
+
 * [Quick Setup](#Quick_Setup)
 * [Workflow Variables](#Workflow_Variables)
 * [Files](#Files)
