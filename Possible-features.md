@@ -11,7 +11,7 @@
 
 * [[First run advice|Feature: First run advice]]
 * [[Easier to understand filenames|Feature: Easier to understand filenames]]
-* [[Update expect commandline|Feature: update expect commandline]]
+* [[Update expect command-line|Feature: update expect command-line]]
 * [[Check filenames and paths|Feature: check filenames and paths]]
 * [[Aliases|Feature: Aliases]]
 
