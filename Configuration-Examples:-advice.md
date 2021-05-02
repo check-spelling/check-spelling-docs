@@ -1,4 +1,4 @@
-# Configuration Examples: advice
+# `advice` Examples
 
 Advice is a file that is inserted raw into GitHub comments (or potentially in the log if the commit results in stale expect items and no unexpected items).
 
