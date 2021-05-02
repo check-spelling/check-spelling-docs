@@ -1,3 +1,5 @@
+# Update expect commandline
+
 Currently the action generates a shell command that runs perl that users can use to update their expect file(s).
 
 In prerelease, it's possible to ask [@check-spelling-bot](https://github.com/check-spelling-bot) to update the expect files on the PR directly.
