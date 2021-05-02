@@ -1,3 +1,5 @@
+# Behavior change: Dropping word stemming
+
 The engine behind the word splitter has code to group related words together (this is known as "stemming").
 
 Word | Stem
