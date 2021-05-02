@@ -1,4 +1,7 @@
+# Release notes
+
 ## 0.0.18-alpha
+
 <!--🛠️ In various states of `prerelease`-->
 🌟 Almost ready to transition from `prerelease` to release 🍽️
 
@@ -22,6 +25,7 @@
 If you're using a private repository, the `push` event won't work correctly.
 
 ## 0.0.16-alpha
+
 * [[Feature: Allow]]
 * [[Feature: Expectlist]]
 * [[Feature: Dictionary deltas]]
