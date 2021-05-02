@@ -1,4 +1,4 @@
-# Update expect commandline
+# Update expect command-line
 
 Currently the action generates a shell command that runs perl that users can use to update their expect file(s).
 
@@ -8,7 +8,7 @@ Currently, if a commit/branch results in no new spelling errors, the output is s
 
 At this point, it'd be helpful if there was a script one could get from the check-spelling repository which could consume the expect updates and apply them.
 
-#### Goals
+## Goals
 
 * Support URLs pointing to markdown flavored comments
 * Support URLs pointing to GitHub action check logs (requires [[Log Check Run URL|Todo: Log Check Run URL]])
