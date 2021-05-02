@@ -1,3 +1,5 @@
+# Notes on suggested replacements
+
 ## Simple script
 
 * [Input description](#Input-description)
@@ -5,14 +7,17 @@
 * [Command run](#Command-run)
 
 ### Input description
+
 `/tmp/input` is based on the output for an actual repository.
 I haven't created a PR for the repository yet because the list was so large.
 `/tmp/words` is the standard dictionary
 
 ### Observations
+
 This output is a good argument in favor of a smaller dictionary along with [[Area dictionaries|Feature: Area dictionaries]].
 
 ### Command run
+
 ```sh
 root@docker-desktop:/github/workspace# for a in $(cat /tmp/input |egrep '.....' |tr "'" '_'|xargs -n 10 echo |tr ' ' '|'); do
 >   tre-agrep -i -1 -e '^('$a')$' /tmp/words > /tmp/input2;
