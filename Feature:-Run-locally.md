@@ -142,3 +142,5 @@ This would require picking a registry.
 
 * [[GitHub|https://github.com/features/packages#pricing]] charges after 1GB of outbound use. I'd hope that I wouldn't hit this, but I could easily be unlucky.
 * [[Quay.io|https://quay.io]] appears to be free for open source, although their web portal instructions point to a path which isn't free.
+
+Thankfully, this is no longer a concern, as Dockerfile is no longer used by the action.
