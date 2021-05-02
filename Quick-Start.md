@@ -2,7 +2,7 @@
 
 ## Instructions
 
-1. Clone https://github.com/check-spelling/spell-check-this/
+1. Clone [[https://github.com/check-spelling/spell-check-this/]]
 2. Copy the contents of `.github/` into your repository
 3. `git add .github/`
 4. `git commit`
