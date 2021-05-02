@@ -1,3 +1,5 @@
+# Check filenames and paths
+
 While this tool was written to catch misspellings within files, it's actually fairly common for filenames themselves to encode misspellings. Sometimes this is a big problem and failing to fix them at the same time results in pain. The canonical example of this is Java classes where generally the filename needs to match the name of the class within.
 
 Thoughts:
