@@ -1,3 +1,5 @@
+# PR Template
+
 This PR corrects misspellings identified by the [check-spelling action](https://github.com/marketplace/actions/check-spelling).
 
 The misspellings have been reported at {link-to-comment}
