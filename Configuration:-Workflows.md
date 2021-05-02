@@ -11,7 +11,7 @@ Supported GitHub actions:
 Notes:
 
 * [Ignore Draft PRs](#draft)
-* See [[Workflow Variables|Configuration#Workflow_Variables]] 
+* See [[Workflow Variables|Configuration#Workflow_Variables]]
 
 ### push
 
