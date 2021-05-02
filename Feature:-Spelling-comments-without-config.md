@@ -1,14 +1,19 @@
-### Past
+# Spelling comments without config
+
+## Past
+
 Through [[0.0.16-alpha|https://github.com/check-spelling/check-spelling/releases/tag/0.0.16-alpha]], if you didn't create an `expect` file, the output listing unrecognized words (and the command to create the `expect` file) was only available in the Action run logs.
 
 I had a model of assuming people would want to review things and use the output before merging somewhere.
 
-### Consideration
+## Consideration
+
 In retrospect, and based on experience and feedback, I've decided that having the output and commands to construct the `expect` file should be reported as a comment just as with later runs.
 
 Also, because of the way GitHub formats the logs, it's actually moderately painful to extract output from them to run as a command, and thus relying on a comment is generally better.
 
-### Behavior Change
+## Behavior Change
+
 With this change, any run which results in unrecognized words should post a comment, even if there isn't an `expect` file.
 
 ⚠️ Note: The comment may fail if the number of unrecognized words is incredibly long.
