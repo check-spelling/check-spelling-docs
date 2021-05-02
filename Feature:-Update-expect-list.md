@@ -1,8 +1,15 @@
 # Update expect list
 
-Presently, the action reports a comment which includes a posix(ish) shell command to update the expect list.
+Prior to 0.0.18, the action reports a comment which includes a posix(ish) shell command to update the expect list.
 
 It would be much nicer if one could click something and have the action update the expect list.
+
+As of 0.0.18, you can enable this with:
+
+```yaml
+    with:
+      experimental_apply_changes_via_bot: 1
+```
 
 ## Implementation
 
@@ -52,7 +59,7 @@ This functions as a limit on the number of words reported initially.
 
 Also, duplicating the words to expect list is just ugly.
 
-Once the comment is effectively self-aware, it makes sense for the command to retrieve the bullet list instead of encoding the words twice.
+Once the comment is effectively self-aware, the command is able to retrieve the bullet list instead of encoding the words twice.
 
 ### CheckRunEvent: action
 
