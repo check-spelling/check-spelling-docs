@@ -1,13 +1,17 @@
-Proposal:
+# Area dictionaries
+
+## Proposal
+
 Allow users to just pull in [streetsidesoftware/cspell-dicts](https://github.com/streetsidesoftware/cspell-dicts/tree/master/dictionaries/).
 
 This will be much easier than doing the work of building/maintaining them.
 
-Notes:
+## Notes
+
 * For items that are single word-per-line, this will just work.
 * For companies which is a multi word string per line, they could either be converted into patterns or split on whitespace -- treating each individual word as legal. (The latter is easier.)
 
----
+## Areas
 
 * Colors
   * HTML/CSS -- https://drafts.csswg.org/css-color-3/
