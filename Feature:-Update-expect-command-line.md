@@ -11,7 +11,7 @@ At this point, it'd be helpful if there was a script one could get from the chec
 ## Goals
 
 * Support URLs pointing to markdown flavored comments
-* Support URLs pointing to GitHub action check logs (requires [[Log Check Run URL|Todo: Log Check Run URL]])
+* Support URLs pointing to GitHub action check logs (requires [Log Check Run URL](Todo: Log Check Run URL))
 * Support simple lists of adds/removes
 
 * Potentially switch reported shell script / logged shell script to use this script instead

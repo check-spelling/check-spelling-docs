@@ -1,1 +1,1 @@
-[[Showcase]] | [[Warning descriptions]] | [[Configuration information]] | [[Known Issues]] | [[Possible features]] | [[Release notes]] | [[Helpful scripts]]
+[Showcase](Showcase.md) | [Warning descriptions](Warning-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

@@ -1,7 +1,14 @@
 # Known Issues
 
-* [Too many unrecognized word](#Too_many_unrecognized_words)
-* [@dependabot can't comment](#dependabot-cant-comment)
+- [Known Issues](#known-issues)
+  - [Too many unrecognized words](#too-many-unrecognized-words)
+    - [Problem](#problem)
+    - [Cause](#cause)
+    - [Indications](#indications)
+    - [Recommendations](#recommendations)
+  - [@dependabot can't comment](#dependabot-cant-comment)
+    - [Cause](#cause-1)
+    - [Resolution](#resolution)
 
 ## Too many unrecognized words
 

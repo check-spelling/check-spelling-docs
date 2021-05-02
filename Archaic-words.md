@@ -5,7 +5,7 @@ check-spelling can use any dictionary you like. By default, it uses a [version f
 That dictionary is fairly comprehensive. Unfortunately, it has a number of archaic spellings. On the bright side, it means if you have some old documents, it won't scream about them. On the not so bright side, it'll tolerate various things you'd find surprising.
 
 ## Compensating
-* You can remove words using `reject` see [[Configuration Examples: reject]]
+* You can remove words using `reject` see [Configuration Examples: reject](Configuration-Examples:-reject.md)
 * You can replace the dictionary using `dictionary` (`dictionary.txt` or `dictionary/*.txt`)
 * I plan to offer reduced dictionaries (based on implementation experience) which one could select using `DICTIONARY_VERSION`
 

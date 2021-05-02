@@ -1,6 +1,6 @@
 # Autodetect valid word lengths
 
-With [[Heuristic exclude suggestions|Feature: Heuristic exclude suggestions]], I've started reviewing what's worth checking.
+With [Heuristic exclude suggestions](Feature: Heuristic exclude suggestions), I've started reviewing what's worth checking.
 
 For one, a significant portion of the two letter space is already in the dictionary.
 

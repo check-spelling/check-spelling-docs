@@ -3,15 +3,15 @@
 Supported GitHub actions:
 
 * [push](#push)
-* [pull_request_target](#pull_request_target)
-* [pull_request](#pull_request) :warning:
+* [pull_request_target](#pull-request-target)
+* [pull_request](#pull-request) :warning:
 * [schedule](#schedule)
 * [Checking potential merges for PRs](#checking-prs-by-their-merge-commit)
 
 Notes:
 
 * [Ignore Draft PRs](#draft)
-* See [[Workflow Variables|Configuration#Workflow_Variables]]
+* See [Workflow Variables](Configuration.md#workflow-variables)
 
 ### push
 
@@ -50,7 +50,7 @@ on:
 
 ### pull_request
 
-ℹ️ You should be able to migrate to [pull_request_target](#pull_request_target)
+ℹ️ You should be able to migrate to [pull_request_target](#pull-request-target)
 when you upgrade to 0.0.17-alpha.
 
 :warning: Non-member contributors who create a pull request
@@ -87,9 +87,9 @@ Instead, for projects that receive PRs, I've settled on using a
 
 This is basically a cron job run by GitHub.
 It will look through open PRs and comment if they've been updated
-since the last run (assuming the [timeframe](./Configuration:-Advanced#timeframe) is correct).
+since the last run (assuming the [timeframe](./Configuration:-Advanced.md#timeframe) is correct).
 
-See [timeframe](./Configuration:-Advanced#timeframe) for the configuration window.
+See [timeframe](./Configuration:-Advanced.md#timeframe) for the configuration window.
 
 Example workflow snippet:
 

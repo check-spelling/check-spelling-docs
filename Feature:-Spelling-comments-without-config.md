@@ -2,7 +2,7 @@
 
 ## Past
 
-Through [[0.0.16-alpha|https://github.com/check-spelling/check-spelling/releases/tag/0.0.16-alpha]], if you didn't create an `expect` file, the output listing unrecognized words (and the command to create the `expect` file) was only available in the Action run logs.
+Through [0.0.16-alpha](https://github.com/check-spelling/check-spelling/releases/tag/0.0.16-alpha), if you didn't create an `expect` file, the output listing unrecognized words (and the command to create the `expect` file) was only available in the Action run logs.
 
 I had a model of assuming people would want to review things and use the output before merging somewhere.
 

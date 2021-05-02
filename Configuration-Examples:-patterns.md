@@ -260,4 +260,4 @@ regexp\.MustCompile\(`[^`]*`\)
 
 * `patterns` operate on a per line basis
 * the first match wins, and matches are replaced by a single space character -- roughly resulting in the matched content being treated as a word break (and not seen by the word checker)
-* there is no support for multiline patterns, see [[Feature: Block Ignore]] for my current thoughts
+* there is no support for multiline patterns, see [Feature: Block Ignore](Feature:-Block-Ignore.md) for my current thoughts

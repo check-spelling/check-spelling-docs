@@ -6,7 +6,7 @@ At least one project has identified words that they'd like to remove from the di
 
 As the initial implementation includes a `whitelist` of acceptable words, it seems reasonable to handle rejecting words by adding a `blacklist` which would remove words from the dictionary (instead of removing them from the corpus).
 
-⚠️ See caveat about [[Avoid using colors in names|Feature: Expectlist]].
+⚠️ See caveat about [Avoid using colors in names](Feature: Expectlist).
 
 As this feature hasn't shipped, and as there's a desire/need for both additions and removals, I think I'm going to go with:
 

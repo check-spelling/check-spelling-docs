@@ -3,7 +3,7 @@
 1. The official way to upload an artifact is [actions/upload-artifact](https://github.com/actions/upload-artifact)
 2. That uses [@actions/artifact](https://github.com/actions/toolkit/tree/main/packages/artifact)
 3. Specifically, it uses `artifact.create().uploadArtifact(artifactName, files, rootDirectory, options)` see [example](https://github.com/actions/toolkit/tree/main/packages/artifact#example-using-absolute-file-paths)
-4. That uses [@actions/http-client/auth](https://github.com/actions/http-client/blob/544584c8ca4a255395fd73c66bc5eb90ac8abea1/auth.ts)
+4. That uses [@actions/http-client/auth](https://raw.githubusercontent.com/actions/http-client/544584c8ca4a255395fd73c66bc5eb90ac8abea1/auth.ts)
 
 The underlying stuff uses:
 * `ACTIONS_RUNTIME_TOKEN`
@@ -15,7 +15,7 @@ The underlying stuff uses:
 ```js
     const artifactUrl = `${ACTIONS_RUNTIME_URL}_apis/pipelines/workflows/${GITHUB_RUN_ID}/artifacts?api-version=${getApiVersion()}`;
 ```
-https://github.com/actions/toolkit/blob/c861dd8859fe5294289fcada363ce9bc71e9d260/packages/artifact/src/internal/utils.ts#L176
+https://raw.githubusercontent.com/actions/toolkit/c861dd8859fe5294289fcada363ce9bc71e9d260/packages/artifact/src/internal/utils.ts#L176
 ```js
   requestOptions['Accept'] = `application/json;api-version=${getApiVersion()}`
 ```

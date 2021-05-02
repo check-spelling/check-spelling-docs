@@ -1,26 +1,26 @@
 # Configuration
 
-* [[Quick Start]]
-* [Workflow Variables](#Workflow_Variables)
-* [Files](#Files)
-* See [[Configuration: Workflows]] for the general workflow modes
+* [Quick Start](Quick-Start.md)
+* [Workflow Variables](#workflow-variables)
+* [Files](#files)
+* See [Configuration: Workflows](Configuration:-Workflows.md) for the general workflow modes
 
 ## Workflow Variables
 
-See [[Configuration: Workflows]] for the supported GitHub workflows.
+See [Configuration: Workflows](Configuration:-Workflows.md) for the supported GitHub workflows.
 
 | Variable | Description |
 | ------------- | ------------- |
 | [GITHUB_TOKEN](#github_token) | github credential secret for api requests |
 | [config](#config) | directory with config files |
-| [dictionary_url](#dictionary_url) | url for primary dictionary |
-| [dictionary_version](#dictionary_version) | version of primary dictionary |
-| [experimental_apply_changes_via_bot](#experimental_apply_changes_via_bot) | allow [@check-spelling-bot](https://github.com/check-spelling-bot) to update PRs |
-| [experimental_parallel_jobs](#experimental_parallel_jobs) | parallelize spell checking file tasks |
-| [shortest_word](#shortest_word) | minimum word length |
-| [longest_word](#longest_word) | maximum word length |
+| [dictionary_url](#dictionary-url) | url for primary dictionary |
+| [dictionary_version](#dictionary-version) | version of primary dictionary |
+| [experimental_apply_changes_via_bot](#experimental-apply-changes-via-bot) | allow [@check-spelling-bot](https://github.com/check-spelling-bot) to update PRs |
+| [experimental_parallel_jobs](#experimental-parallel-jobs) | parallelize spell checking file tasks |
+| [shortest_word](#shortest-word) | minimum word length |
+| [longest_word](#longest-word) | maximum word length |
 
-See [[Configuration: Advanced]] for additional options.
+See [Configuration: Advanced](Configuration:-Advanced.md) for additional options.
 
 ### GITHUB_TOKEN
 
@@ -33,24 +33,24 @@ By default the [GITHUB_TOKEN](https://docs.github.com/en/actions/reference/authe
 
 Default: `.github/actions/spelling`
 
-In this directory, you can place [files](#Files) to influence the spell checker.
+In this directory, you can place [files](#files) to influence the spell checker.
 
 ### dictionary_url
 
 If you don't define a dictionary using [dictionary](#dictionary) files,
 the spell checker will retrieve a dictionary. You can provide a different url
 if you have a preferred base. The default includes a variable (`$DICTIONARY_VERSION`)
-for a [version](#dictionary_version).
+for a [version](#dictionary-version).
 
-This [[feature|Feature: Versioned dictionaries]] is new with 0.0.17.
+This [feature](Feature: Versioned dictionaries) is new with 0.0.17.
 
 ### dictionary_version
 
-If [dictionary_url](#dictionary_url) includes (`$DICTIONARY_VERSION`),
+If [dictionary_url](#dictionary-url) includes (`$DICTIONARY_VERSION`),
 you can override the default version.
 
 Over time, the default version will probably change.
-See [[versioned dictionaries|Feature: Versioned dictionaries]]
+See [versioned dictionaries](Feature: Versioned dictionaries)
 for more information.
 
 ### experimental_apply_changes_via_bot
@@ -107,7 +107,7 @@ posted to GitHub. It's freeform. You can use
 it to explain how contributors should decide
 where to put new entries.
 
-See [[Configuration Examples: advice]] for examples.
+See [Configuration Examples: advice](Configuration-Examples:-advice.md) for examples.
 
 ### allow
 
@@ -136,7 +136,7 @@ If you want to include the default dictionary,
 place it into the directory next to your own.
 
 Alternatively, if you want to retrieve a dictionary from a remote URL,
-see the workflow configuration values [dictionary_url](#dictionary_url) and [dictionary_version](#dictionary_version).
+see the workflow configuration values [dictionary_url](#dictionary-url) and [dictionary_version](#dictionary-version).
 
 ### excludes
 
@@ -150,7 +150,7 @@ unless you explicitly use `(?:(?i)...)` or
 
 Files matching these patterns will be skipped.
 
-See [[Configuration Examples: excludes]] for examples.
+See [Configuration Examples: excludes](Configuration-Examples:-excludes.md) for examples.
 
 Lines that start with `#` will be ignored.
 
@@ -195,7 +195,7 @@ They are merged using an `OR` (`|`).
 
 Files not matching these patterns will be skipped.
 
-See [[Configuration Examples: only]] for examples.
+See [Configuration Examples: only](Configuration-Examples:-only.md) for examples.
 
 Lines that start with `#` will be ignored.
 
@@ -212,7 +212,7 @@ unless you explicitly use `(?:(?i)...)` or
 
 Tokens within files that match these expressions will be skipped.
 
-See [[Configuration Examples: patterns]] for examples.
+See [Configuration Examples: patterns](Configuration-Examples:-patterns.md) for examples.
 
 ### reject
 
@@ -223,4 +223,4 @@ The order of operations is:
 
 > `(dictionary + allows) - reject`
 
-See [[Configuration Examples: reject]] for examples.
+See [Configuration Examples: reject](Configuration-Examples:-reject.md) for examples.

@@ -27,7 +27,7 @@ This is implemented today in prerelease:
 ### Commit implementation
 
 1. Retrieve the shell script from the comment, run its equivalent, git add -u, commit.
-1. The command (which used to be **posix shell**) is now [[Perl|Feature: Other shells]]
+1. The command (which used to be **posix shell**) is now [Perl](Feature: Other shells)
 1. With the command retrieved from the comment
 1. Perform the command equivalent (the command is refactored so that the same code can be shared between the two code paths)
 1. I don't intend to delete empty files, as they represent structure even if they're temporarily empty.

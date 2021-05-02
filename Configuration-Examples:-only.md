@@ -8,4 +8,4 @@
 ```
 
 ℹ️ The syntax of this file is identical to the one for `excludes`.
-You can look at [[Configuration Examples: excludes]] for more examples.
+You can look at [Configuration Examples: excludes](Configuration-Examples:-excludes.md) for more examples.

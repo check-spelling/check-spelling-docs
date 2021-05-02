@@ -12,7 +12,7 @@ This is obviously appealing, but at present it's fairly low on my list of things
 ## Today
 As long as you have a local repository (and I usually do, although of late I've been taking advantage of the GitHub editor to skip this), it's pretty easy to fix things yourself.
 
-At the present time, you can use [[jsoref/spelling|https://github.com/jsoref/spelling]]'s `rs` command for this or various other things.
+At the present time, you can use [jsoref/spelling](https://github.com/jsoref/spelling)'s `rs` command for this or various other things.
 
 ### Renaming files
 Note: there's an extra script `hgmv` which sometimes needs to be run before `rs` (it takes the same first two arguments as `rs` and manages renaming files). This is especially important for programming languages where classes are tied to filenames, but it also matters for build system changes and Markdown/HTML links.

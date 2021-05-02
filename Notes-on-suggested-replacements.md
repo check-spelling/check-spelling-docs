@@ -2,9 +2,9 @@
 
 ## Simple script
 
-* [Input description](#Input-description)
-* [Observations](#Observations)
-* [Command run](#Command-run)
+* [Input description](#input-description)
+* [Observations](#observations)
+* [Command run](#command-run)
 
 ### Input description
 
@@ -14,7 +14,7 @@ I haven't created a PR for the repository yet because the list was so large.
 
 ### Observations
 
-This output is a good argument in favor of a smaller dictionary along with [[Area dictionaries|Feature: Area dictionaries]].
+This output is a good argument in favor of a smaller dictionary along with [Area dictionaries](Feature: Area dictionaries).
 
 ### Command run
 

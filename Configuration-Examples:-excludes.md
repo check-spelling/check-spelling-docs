@@ -33,4 +33,4 @@ locales/en_GB
 
 ## Convert paths to regular expressions
 
-If you have full file paths you want to exclude, see [[Files to Excludes]] for a script to convert them to a regular expression for use in `excludes.txt`.
+If you have full file paths you want to exclude, see [Files to Excludes](Files-to-Excludes.md) for a script to convert them to a regular expression for use in `excludes.txt`.
