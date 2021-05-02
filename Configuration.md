@@ -1,15 +1,9 @@
 # Configuration
 
-* [Quick Setup](#Quick_Setup)
+* [[Quick Start]]
 * [Workflow Variables](#Workflow_Variables)
 * [Files](#Files)
 * See [[Configuration: Workflows]] for the general workflow modes
-
-## Quick Setup
-
-The easiest way to get started is by copying the contents of `.github` from https://github.com/check-spelling/spell-check-this/ into your repository.
-
-This will give you handling for `push`, `pull_request_target`, and example files with a README describing the files and linking to more examples in this wiki.
 
 ## Workflow Variables
 
