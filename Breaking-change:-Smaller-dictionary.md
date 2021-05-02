@@ -6,7 +6,7 @@ The downside of its comprehensiveness is that it has lots of archaic words.
 This means that it's rather forgiving of typos for common words in favor of those archaic words.
 It also means that if/when I implement [[correction suggestions|Feature: suggest corrections]] suggestions are pretty quirky (e.g. `Debian` -> `cebian`).
 
-I'll probably test the upgrade with known consumers and maybe switch in 0.0.18-alpha.
+I'll probably test the upgrade with known consumers and maybe switch in 0.0.19-alpha.
 
 Note that as of 0.0.17-alpha, it's possible to specify a specific [[dictionary revision|Feature: Versioned dictionaries]], which means that consumers will be able to avoid adopting the newer dictionary.
 
