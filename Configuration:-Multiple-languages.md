@@ -1,3 +1,5 @@
+# Configuration: Multiple languages
+
 ## Background
 
 Projects often contain code written in multiple programming languages
