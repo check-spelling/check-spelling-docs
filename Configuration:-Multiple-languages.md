@@ -112,3 +112,7 @@ I think, generally, a developer is only writing changes in one language at a tim
 Also, there's a limit that I've hit where if there are more than ~10 (?) items to report,
 the rest aren't tagged.
 I suspect that this would mean each category would get its own 10 😃 .
+
+## See also
+
+Using [[Area dictionaries|Feature: Area dictionaries]] (once they're supported) should make this pretty reasonable.
