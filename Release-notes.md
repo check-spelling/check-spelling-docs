@@ -1,6 +1,6 @@
 # Release notes
 
-## 0.0.18-alpha
+## v0.0.18
 
 <!--🛠️ In various states of `prerelease`-->
 🌟 Almost ready to transition from `prerelease` to release 🍽️
