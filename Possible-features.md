@@ -14,16 +14,17 @@
 * [[Update expect command-line|Feature: update expect command-line]]
 * [[Check filenames and paths|Feature: check filenames and paths]]
 * [[Aliases|Feature: Aliases]]
+* [[Area dictionaries|Feature: Area dictionaries]]
+* [[Honor gitattributes|Feature: honor gitattributes]]
 
 ## Distant future
 
 * [[Only changes|Feature: Only-changes]]
-* [[Area dictionaries|Feature: Area dictionaries]]
+* [[Tolerate engine upgrades|Feature: Tolerate engine upgrades]]
 * [[Correct misspelled words within GitHub|Feature: Correct misspelling]]
 * [[Learn from corrections|Feature: Learn from corrections]]
 * [[Plug into Pantsbuild|Feature: Pantsbuild plugin]]
 * [[Plug into Visual Studio Code|Feature: Visual Studio Code plugin]]
-* [[Honor gitattributes|Feature: honor gitattributes]]
 * [[Block/Multiline Ignore|Feature: Block Ignore]]
 * [[Non-English languages|Feature: Non-English languages]]
 
