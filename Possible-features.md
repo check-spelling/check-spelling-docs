@@ -7,12 +7,12 @@
 
 ## Near term
 
+* [[Area dictionaries|Feature: Area dictionaries]]
 * [[First run advice|Feature: First run advice]]
 * [[Easier to understand filenames|Feature: Easier to understand filenames]]
 * [[Update expect command-line|Feature: update expect command-line]]
 * [[Check filenames and paths|Feature: check filenames and paths]]
 * [[Aliases|Feature: Aliases]]
-* [[Area dictionaries|Feature: Area dictionaries]]
 * [[Honor gitattributes|Feature: honor gitattributes]]
 
 ## Distant future
