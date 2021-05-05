@@ -180,7 +180,8 @@ content: "[-a-zA-Z=;:/0-9+]*="
 \([A-Z]\|[a-z]\)[a-z]+
 
 # JavaScript regular expressions
-/.*/i?\.test\(
+/.*/[gim]*\.test\(
+\.replace\(/[^/]*/[gim]*\s*,
 
 # Go regular expressions
 regexp\.MustCompile\(`[^`]*`\)
