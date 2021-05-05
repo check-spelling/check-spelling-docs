@@ -55,6 +55,13 @@ for more information.
 
 ### experimental_apply_changes_via_bot
 
+❗ As of 0.0.18, this feature is not ready for repositories with non members/other bots.
+   - It will 💬 in response to other bot's comments or other accounts not associated with the
+   PR explaining that it's confused.
+   - If everyone in a repository is a member, or if PRs from externals are unlikely to receive
+   comments from externals besides the PR author, and you don't have other bots that would
+   write comments on PRs, then you could use it.
+
 Allow [@check-spelling-bot](https://github.com/check-spelling-bot) to update PRs by
 incorporating the feedback it reports.
 
