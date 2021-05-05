@@ -11,11 +11,23 @@ See [[Configuration: Workflows]] for the supported GitHub workflows.
 
 | Variable | Description |
 | ------------- | ------------- |
+| [GITHUB_TOKEN](#github_token) | github credential secret for api requests |
 | [config](#config) | directory with config files |
 | [dictionary_url](#dictionary_url) | url for primary dictionary |
 | [dictionary_version](#dictionary_version) | version of primary dictionary |
+| [experimental_apply_changes_via_bot](#experimental_apply_changes_via_bot) | allow [@check-spelling-bot](https://github.com/check-spelling-bot) to update PRs |
+| [experimental_parallel_jobs](#experimental_parallel_jobs) | parallelize spell checking file tasks |
+| [shortest_word](#shortest_word) | minimum word length |
+| [longest_word](#longest_word) | maximum word length |
 
 See [[Configuration: Advanced]] for additional options.
+
+### GITHUB_TOKEN
+
+Specify the token to be used when making API calls to GitHub.
+By default the [GITHUB_TOKEN](https://docs.github.com/en/actions/reference/authentication-in-a-workflow#about-the-github_token-secret) is used.
+
+⚠️ [@dependabot](https://github.com/dependabot) appears to be unfriendly to this token.
 
 ### config
 
@@ -40,6 +52,30 @@ you can override the default version.
 Over time, the default version will probably change.
 See [[versioned dictionaries|Feature: Versioned dictionaries]]
 for more information.
+
+### experimental_apply_changes_via_bot
+
+Allow [@check-spelling-bot](https://github.com/check-spelling-bot) to update PRs by
+incorporating the feedback it reports.
+
+### experimental_parallel_jobs
+
+The number of concurrent spell checking tasks to run.
+
+GitHub Linux/Windows VMs have 2 cores and thus the default is `2`.
+GitHub's macOS VMs have 3 cores.
+
+If you run your own VMs w/ more cores, you could use a higher number.
+
+### shortest_word
+
+The minimum word length to consider. The default is `3` (previously it was `2`).
+Note that this will autotune to no shorter than the shortest word in the dictionary.
+
+### longest_word
+
+The longest word length to consider. The default is two characters longer than
+the longest word in the dictionary. Previously strings that were thousands of characters long were flagged.
 
 ## Files
 
