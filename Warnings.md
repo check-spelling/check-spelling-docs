@@ -72,6 +72,8 @@ Since it doesn't see `sea-green` as a single word, trying to add `sea-green` to 
 
 ### Resolution
 
+* If the word is `pre-emptively`, just replace it with `preemptively`
+
 If you want to accept `avii-ridge` in your repository, you can:
 * add `avii` to your dictionary (by adding it to `allow.txt`),
 * add `\bavii-ridge\b` in `patterns.txt`, or
