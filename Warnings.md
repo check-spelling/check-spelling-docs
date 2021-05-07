@@ -30,6 +30,34 @@ Technically it means there are fewer unique dictionary words in the file than un
   - add entries to the dictionary (via `allow.txt`)
   - mask runs of noise (via `patterns.txt`)
 
+## bad-regex
+
+> Warning: .github/actions/spelling/patterns.txt: line 5, columns 1-$9, Warning - bad regex (bad-regex)
+
+Perl 5 didn't like your regular expression.
+
+The log should actually provide a more detailed message from Perl.
+
+You can testing your pattern with [Regular Expression Test Page for Perl](https://www.regexplanet.com/advanced/perl/).
+
+The tool generally doesn't apply flags that significantly modify evaluation (it might apply `/g`).
+
+## no-newline-at-eof
+
+This means that you used a tool that didn't include a newline at the end of your text file.
+
+Unix tools get quite upset and confused by this.
+
+(git) `diff` and `patch` get frustrated and will yield odd jitter markings because of it.
+
+`wc -l` will not treat the last line of your file as a file (an off by one error of sorts).
+
+### Resolution
+
+`echo >> file`
+
+Or open it in a text editor that will fix it for you (`vi`, `nano`, ...).
+
 ## whitespace-in-dictionary
 
 > Warning: .github/actions/spelling/expect.txt: line 1, columns 5-6, Warning - entry has unexpected whitespace (whitespace-in-dictionary)
