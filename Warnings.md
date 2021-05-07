@@ -32,7 +32,7 @@ Technically it means there are fewer unique dictionary words in the file than un
 
 ## bad-regex
 
-> Warning: .github/actions/spelling/patterns.txt: line 5, columns 1-$9, Warning - bad regex (bad-regex)
+> Warning: .github/actions/spelling/patterns.txt: line 5, columns 1-9, Warning - bad regex (bad-regex)
 
 Perl 5 didn't like your regular expression.
 
