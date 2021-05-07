@@ -58,6 +58,25 @@ Unix tools get quite upset and confused by this.
 
 Or open it in a text editor that will fix it for you (`vi`, `nano`, ...).
 
+## non-alpha-in-dictionary
+
+Dictionary entries are composed of 26 letters (`a-z` in both uppercase and lowercase), apostrophe (`'`), and a newline (`\n`).
+
+Words are generally at least 3 characters long. (This is tunable.)
+
+If you include any other characters (including `-`), the entry will be ignored.
+
+This is mostly a matter of pragmatism. You might be worried that the tool doesn't know the color `sea-green`, that's ok, the tool doesn't _see_ `sea-green`, it ignores the `-` and sees the words `sea` and `green`, and unless you remove one or both of those words from its dictionary (using `reject.txt`), it will accept both.
+
+Since it doesn't see `sea-green` as a single word, trying to add `sea-green` to your dictionary won't work.
+
+### Resolution
+
+If you want to accept `avii-ridge` in your repository, you can:
+* add `avii` to your dictionary (by adding it to `allow.txt`),
+* add `\bavii-ridge\b` in `patterns.txt`, or
+* add `avii` to `expect.txt`.
+
 ## whitespace-in-dictionary
 
 > Warning: .github/actions/spelling/expect.txt: line 1, columns 5-6, Warning - entry has unexpected whitespace (whitespace-in-dictionary)
