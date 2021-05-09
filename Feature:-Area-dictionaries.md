@@ -1,10 +1,10 @@
 # Area dictionaries
 
-## Proposal
+## Basic implementation
 
-Allow users to just pull in [streetsidesoftware/cspell-dicts](https://github.com/streetsidesoftware/cspell-dicts/tree/master/dictionaries/).
+You can pull in any public url that has a flat list of words.
 
-This will be much easier than doing the work of building/maintaining them.
+By default, you can easily pull in dictionaries from [streetsidesoftware/cspell-dicts](https://github.com/streetsidesoftware/cspell-dicts/tree/master/dictionaries/).
 
 Implemented in `prerelease` as:
 
@@ -16,7 +16,22 @@ Implemented in `prerelease` as:
           cspell:html/html.txt
 ```
 
-These values should work although most aren't tested:
+You can define other prefixes using `dictionary_source_prefixes`, the default definition is:
+
+```yaml
+    - uses: check-spelling/check-spelling@prerelease
+      with:
+        dictionary_source_prefixes: >
+          {
+            "cspell": "https://raw.githubusercontent.com/check-spelling/cspell-dicts/HEAD/dictionaries/"
+          }
+```
+
+(You can also redefine `cspell`, e.g. to change the _branch_ or _repository_.)
+
+### `cspell` dictionaries
+
+These `cspell:` dictionaries should work although most aren't tested:
 ```
 cspell:ada/ada.txt
 cspell:aws/aws.txt
@@ -55,7 +70,7 @@ cspell:scala/scala.txt
 
 The current version ignores any line with characters outside [A-Za-z'].
 
-## Areas
+## Potential Areas
 
 * Colors
   * HTML/CSS -- https://drafts.csswg.org/css-color-3/
