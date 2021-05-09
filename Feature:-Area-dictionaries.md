@@ -63,12 +63,16 @@ cspell:rust/rust.txt
 cspell:scala/scala.txt
 ```
 
-## Notes
+### Notes
 
 * For items that are single word-per-line, this will just work.
 * For companies which is a multi word string per line, they could either be converted into patterns or split on whitespace -- treating each individual word as legal. (The latter is easier.)
 
 The current version ignores any line with characters outside [A-Za-z'].
+
+## Future work
+
+[[Suggest Area dictionaries|Feature: Suggest Area Dictionaries]]
 
 ## Potential Areas
 
