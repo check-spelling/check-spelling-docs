@@ -2,12 +2,12 @@
 
 ## In progress
 
+* [[Area dictionaries|Feature: Area dictionaries]]
 * [[Collapse older check comments|Feature: Collapse older check comments]]
 * [[Suppress comments|Feature: Suppress comments]]
 
 ## Near term
 
-* [[Area dictionaries|Feature: Area dictionaries]]
 * [[First run advice|Feature: First run advice]]
 * [[Easier to understand filenames|Feature: Easier to understand filenames]]
 * [[Update expect command-line|Feature: update expect command-line]]
