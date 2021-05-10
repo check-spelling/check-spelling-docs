@@ -6,6 +6,7 @@
 * [[Suggest Area dictionaries|Feature: Suggest Area Dictionaries]]
 * [[Collapse older check comments|Feature: Collapse older check comments]]
 * [[Suppress comments|Feature: Suppress comments]]
+* [Play nice with `@dependabot`](@dependabot)
 
 ## Near term
 
