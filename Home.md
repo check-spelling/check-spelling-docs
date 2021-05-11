@@ -19,6 +19,6 @@ into word-like things for checking against a dictionary.
 
 * [[Quick Start]]
 * [[Showcase]]
-* [[Warnings]]
+* [[Warning descriptions]]
 * [[Configuration information]]
 * [[Possible features]]
