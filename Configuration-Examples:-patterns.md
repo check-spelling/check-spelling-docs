@@ -210,7 +210,7 @@ regexp\.MustCompile\(`[^`]*`\)
 # <word>v#
 [Vv]\d+(?:\b|(?=[a-zA-Z_]))
 # Compiler flags
-[ >"]-[DPWXY]
+[ >"`]-[DPWXY]
 # curl arguments
 \b(?:\\n|)curl(?:\s+-[a-zA-Z]+)+
 # tar arguments
