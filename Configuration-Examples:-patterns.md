@@ -74,12 +74,28 @@ themes\.googleusercontent\.com/static/fonts/[^/]+/v\d+/[^.]+.
 /[-a-z0-9]+\.githubusercontent\.com/[-a-zA-Z0-9?&=_\/.]*
 # gist github
 /gist\.github\.com/[^/]+/[0-9a-f]+
+# Contributor
+\[[^\]]+]\(https://github\.com/[^/]+\)
+
+# gitlab
+\bgitlab\.com/uploads/[-a-zA-Z=;:/0-9+]*
 
 # binanace
 accounts.binance.com/[a-z/]*oauth/authorize\?[-0-9a-zA-Z&%]*
 
+# bitbucket
+\bapi\.bitbucket\.org/\d+\.\d+/repositories/[^/]+/[^/]+/diff(?:stat|)/[^/]+/[^/]+:[0-9a-f]+
+\bapi\.bitbucket\.org/\d+\.\d+/repositories/[^/]+/[^/]+/commits?/[0-9a-f]+
+\bbitbucket\.org/[^/]+/[^/]+/commits?/[0-9a-f]+
+
 # circleci
 https://circleci.com/gh/[^/]+/[^/]+/[^/]+(?:/[^/]+|).[a-z]+\?[-0-9a-zA-Z=&]+
+
+# gitter
+\bgitter\.im/[^/]+/[^/]+\?at=[0-9a-f]+
+
+# gravatar
+\bgravatar\.com/avatar/[0-9a-f]+
 
 # imgur
 \bimgur\.com/[^.]+
