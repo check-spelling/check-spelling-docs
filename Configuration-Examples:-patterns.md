@@ -74,6 +74,8 @@ themes\.googleusercontent\.com/static/fonts/[^/]+/v\d+/[^.]+.
 /[-a-z0-9]+\.githubusercontent\.com/[-a-zA-Z0-9?&=_\/.]*
 # gist github
 /gist\.github\.com/[^/]+/[0-9a-f]+
+# GitHub JSON
+"node_id": "[-a-zA-Z=;:/0-9+]*"
 # Contributor
 \[[^\]]+]\(https://github\.com/[^/]+\)
 
@@ -186,9 +188,6 @@ sha256:[0-9a-f]+
 # https://www.gnu.org/software/groff/manual/groff.html
 # man troff content
 \\f[BCIPR]
-
-# GitHub JSON
-"node_id": "[-a-zA-Z=;:/0-9+]*"
 
 # Input to GitHub JSON
 content: "[-a-zA-Z=;:/0-9+]*="
