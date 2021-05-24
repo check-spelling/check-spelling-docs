@@ -67,6 +67,12 @@ cspell:scala/scala.txt
 
 * For items that are single word-per-line, this will just work.
 * For companies which is a multi word string per line, they could either be converted into patterns or split on whitespace -- treating each individual word as legal. (The latter is easier.)
+* A number of these dictionaries include misspelled words.
+  * You may want to review them and add words to `reject.txt`
+  * If you're keeping track of which dictionary contributed, `reject/cpp.txt`, e.g.
+    ```
+    defintions
+    ```
 
 The current version ignores any line with characters outside [A-Za-z'].
 
