@@ -228,6 +228,8 @@ regexp\.MustCompile\(`[^`]*`\)
 [ >"`]-[DPWXY]
 # curl arguments
 \b(?:\\n|)curl(?:\s+-[a-zA-Z]+)+
+# set arguments
+\bset\s+-[abefiuox]+\b
 # tar arguments
 \b(?:\\n|)tar(?:\s+-[a-zA-Z]+|\s[a-z]+)+
 # macOS temp folders
