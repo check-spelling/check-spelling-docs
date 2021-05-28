@@ -19,6 +19,7 @@
 
 ## Distant future
 
+* [[Duplicate word detection|Feature: Duplicate word detection]]
 * [[Only changes|Feature: Only-changes]]
 * [[Tolerate engine upgrades|Feature: Tolerate engine upgrades]]
 * [[Correct misspelled words within GitHub|Feature: Correct misspelling]]
