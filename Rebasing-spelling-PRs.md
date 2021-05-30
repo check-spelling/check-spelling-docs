@@ -51,4 +51,8 @@ git_compare_branches() {
   diff -u $orig $repl|less
   rm $orig $repl
 }
+
+drop_everything() {
+  handle_conflicts; while [ -e .git/rebase-merge/git-rebase-todo ] ; do moving_on; done
+}
 ```
