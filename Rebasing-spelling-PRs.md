@@ -4,6 +4,7 @@ These scripts require functions from [[Looking for items locally|Looking for ite
 
 * `what_was_removed` is vaguely helpful to search for hunks that moved outside of merge conflicts
 * `where_are_they_now` is the counterpart to `what_was_removed` -- when this happens, use `rs what_was_removed replacement commit_word` -- if there's more than one, then use `git reset HEAD~` and repeat
+* `remap_pair` -- calls `rs` to replace a word pair, but then uncommits (because rebase)
 * `are_they_still_here` -- checking to see if typos have relocated
 * `lets_go_with_this` -- accepts the current state of things
 * `handle_conflicts` and `moving_on` are a way to move through `git rebase main`
@@ -23,6 +24,11 @@ where_are_they_now() {
   for a in `cat`; do
     peek $a
   done
+}
+
+remap_pair() {
+  rs "$1" "$2";
+  git reset HEAD~
 }
 
 are_they_still_here() {
