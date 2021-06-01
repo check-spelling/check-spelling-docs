@@ -13,66 +13,69 @@ depending on the language.
 
 It is possible to enforce this today using a single workflow file.
 
+One can also use this when spell checking takes too long (in general, anything over 15 minutes is probably too long).
+
 ## Working approach
 
-(as of 0.0.16-alpha)
+(as of 0.0.19)
 
-To define multiple language sets, one can:
+To define multiple sets, one can:
 
 `.github/workflows/spelling.yml`:
 ```yml
 name: Spell checking
 on:
+  pull_request_target:
   push:
-    branches:
-      - "**"
-    tags-ignore:
-      - "**"
-  schedule:
-    # * is a special character in YAML so you have to quote this string
-    - cron: '5 * * * *'
 
 jobs:
-  spell-check:
-    name: Spell checker
+  spelling:
     runs-on: ubuntu-latest
-    continue-on-error: true
     strategy:
+      fail-fast: false
       matrix:
-        language: [python, java]
+        category: ["java", "python", "other"]
+    name: Spell checking (${{matrix.category}})
     steps:
-    - uses: actions/checkout@v2.0.0
+    - name: checkout-merge
+      if: "contains(github.event_name, 'pull_request')"
+      uses: actions/checkout@v2
       with:
-        fetch-depth: 2
-    - uses: check-spelling/check-spelling@0.0.16-alpha
-      env:
-        bucket: .github/actions/spelling
-        project: ${{ matrix.language }}
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        ref: refs/pull/${{github.event.pull_request.number}}/merge
+    - name: checkout
+      if: "!contains(github.event_name, 'pull_request')"
+      uses: actions/checkout@v2
+    - uses: check-spelling/check-spelling@prerelease
+      id: spelling
+      with:
+        config: .github/actions/spelling-${{matrix.category}}
+        report_title_suffix: ${{matrix.category}}
 ```
 
-* `.github/actions/spelling/common/`:
+* `.github/actions/spelling`:
   * `advice.txt`:
     You can include advice explaining how to update things and
-    when to put items into `common/` instead of into the specific directories.
-  * `dictionary.txt`:
-    *Your global dictionary*
+    when to put items here instead of into the specific directories.
+  * `allow.txt`:
+    *Your global dictionary supplements*
+  * `reject.txt`:
+    *Your global dictionary removals*
   * `excludes.txt`
     *Your global excludes*
   * `patterns.txt`:
     *Your global patterns*
-  * ⚠️ You probably do not want to include `expect` in `common/`.
-* `.github/actions/spelling/python/`:
+  * ⚠️ You probably do not want to include `expect` in `spelling/`.
+* `.github/actions/spelling-python/`:
   * `advice.txt`:
-    *symlink* to `../common/advice.txt`
-  * `dictionary/`:
-    * `dictionary.txt`:
-      *symlink* to `../../common/dictionary.txt`
+    *symlink* to `../spelling/advice.txt`
+  * `allow/`:
+    * `allow.txt`:
+      *symlink* to `../../spelling/allow.txt`
     * `python.txt`:
-      *Python dictionary*
+      *Python dictionary supplements* (note: you could use `extra_dictionaries: cspell:python/python.txt` instead)
    * `excludes/`:
      * `excludes.txt`:
-       *symlink* to `../../common/excludes.txt`
+       *symlink* to `../../spelling/excludes.txt`
      * `python.txt`:
        *Rules to exclude non python files*
    * `only.txt`:
@@ -82,23 +85,23 @@ jobs:
    * `expect/`:
       * `expect.txt`:
         *Python expect*
-* `.github/actions/spelling/java/`:
+* `.github/actions/spelling-java/`:
   * `advice.txt`:
-    *symlink* to `../common/advice.txt`
+    *symlink* to `../spelling/advice.txt`
   * `dictionary/`:
-    * `dictionary.txt`:
-      *symlink* to `../../common/dictionary.txt`
+    * `allow.txt`:
+      *symlink* to `../../spelling/allow.txt`
     * `java.txt`:
-      *Java dictionary*
+      *Java dictionary* (note: you could use `extra_dictionaries: cspell:java/java.txt` instead)
    * `excludes/`:
      * `excludes.txt`:
-       *symlink* to `../../common/excludes.txt`
+       *symlink* to `../../spelling/excludes.txt`
+     * `java.txt`:
+       *Rules to exclude non java files*
    * `only.txt`:
        ```text
        \.java$
        ```
-     * `java.txt`:
-       *Rules to exclude non java files*
    * `expect/`:
       * `expect.txt`:
         *Java expect*
@@ -115,4 +118,4 @@ I suspect that this would mean each category would get its own 10 😃 .
 
 ## See also
 
-Using [[Area dictionaries|Feature: Area dictionaries]] (once they're supported) should make this pretty reasonable.
+Using [[Area dictionaries|Feature: Area dictionaries]] should make this pretty reasonable (you could specify distinct area dictionaries using the matrix, but, you the cost for the extra dictionaries is minimal, so I'd just include all of them unconditionally).
