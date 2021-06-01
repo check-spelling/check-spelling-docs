@@ -28,7 +28,8 @@ where_are_they_now() {
 are_they_still_here() {
   git show $(cat .git/rebase-merge/stopped-sha) |
     rediff |
-    perl -ne 'next unless s/^-([^-])/$1/;print' |
+    perl -ne 'next unless s/^-([^-])/$1/;s/[(), ]/\n/g;print' |
+    sort -u |
     review -
 }
 
