@@ -4,9 +4,11 @@ These scripts require functions from [[Looking for items locally|Looking for ite
 
 * `what_was_removed` is vaguely helpful to search for hunks that moved outside of merge conflicts
 * `where_are_they_now` is the counterpart to `what_was_removed` -- when this happens, use `rs what_was_removed replacement commit_word` -- if there's more than one, then use `git reset HEAD~` and repeat
+* `are_they_still_here` -- checking to see if typos have relocated
 * `handle_conflicts` and `moving_on` are a way to move through `git rebase main`
 * `git_compare_branches` `git_compare_branches fork/main...fork/spelling upstream/main...spelling`
 * `git_diff_filter` -- mostly for use w/ `git_compare_branches`
+* `drop_everything` -- mostly for rebasing onto trees that have deleted files (typically for splitting a branch)
 
 ```
 what_was_removed() {
@@ -20,6 +22,13 @@ where_are_they_now() {
   for a in `cat`; do
     peek $a
   done
+}
+
+are_they_still_here() {
+  git show $(cat .git/rebase-merge/stopped-sha) |
+    rediff |
+    perl -ne 'next unless s/^-([^-])/$1/;print' |
+    review -
 }
 
 handle_conflicts() {
@@ -53,6 +62,8 @@ git_compare_branches() {
 }
 
 drop_everything() {
-  handle_conflicts; while [ -e .git/rebase-merge/git-rebase-todo ] ; do moving_on; done
+  handle_conflicts; while [ -e .git/rebase-merge/git-rebase-todo ] ; do
+    moving_on
+  done
 }
 ```
