@@ -5,6 +5,7 @@ These scripts require functions from [[Looking for items locally|Looking for ite
 * `what_was_removed` is vaguely helpful to search for hunks that moved outside of merge conflicts
 * `where_are_they_now` is the counterpart to `what_was_removed` -- when this happens, use `rs what_was_removed replacement commit_word` -- if there's more than one, then use `git reset HEAD~` and repeat
 * `are_they_still_here` -- checking to see if typos have relocated
+* `lets_go_with_this` -- accepts the current state of things
 * `handle_conflicts` and `moving_on` are a way to move through `git rebase main`
 * `git_compare_branches` `git_compare_branches fork/main...fork/spelling upstream/main...spelling`
 * `git_diff_filter` -- mostly for use w/ `git_compare_branches`
@@ -31,6 +32,11 @@ are_they_still_here() {
     review -
 }
 
+lets_go_with_this() {
+  git add -u
+  GIT_EDITOR=true git rebase --continue 
+}
+
 handle_conflicts() {
   conflict_files=$(git status|perl -ne 'next unless s/^\s*deleted by us:\s*//; print')
   if [ -n "$conflict_files" ]; then
@@ -43,8 +49,7 @@ handle_conflicts() {
 }
 
 moving_on() {
-  git add -u
-  GIT_EDITOR=true git rebase --continue
+  lets_go_with_this
   handle_conflicts
 }
 
