@@ -16,6 +16,7 @@
 * [[Check filenames and paths|Feature: check filenames and paths]]
 * [[Aliases|Feature: Aliases]]
 * [[Honor gitattributes|Feature: honor gitattributes]]
+* [[Regression testing]]
 
 ## Distant future
 
