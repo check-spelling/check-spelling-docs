@@ -99,6 +99,9 @@ https://circleci.com/gh/[^/]+/[^/]+/[^/]+(?:/[^/]+|).[a-z]+\?[-0-9a-zA-Z=&]+
 # gravatar
 \bgravatar\.com/avatar/[0-9a-f]+
 
+# ibm
+\bibm\.com/developerworks/community/wikis/[_#=%!?/\d\w]*
+
 # imgur
 \bimgur\.com/[^.]+
 
