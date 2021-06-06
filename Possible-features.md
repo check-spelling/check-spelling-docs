@@ -1,11 +1,15 @@
 # Possible features
 
+## Ready
+
+* [[Suppress push comment for open PRs|Feature: Suppress push comment for open PRs]]
 ## In progress
 
 * [[Area dictionaries|Feature: Area dictionaries]]
 * [[Suggest Area dictionaries|Feature: Suggest Area Dictionaries]]
 * [[Collapse older check comments|Feature: Collapse older check comments]]
 * [[Suppress comments|Feature: Suppress comments]]
+* [[Matrix support|Feature: Matrix support]]
 * [Play nice with `@dependabot`](@dependabot)
 
 ## Near term
