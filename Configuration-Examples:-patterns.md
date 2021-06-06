@@ -90,6 +90,9 @@ accounts.binance.com/[a-z/]*oauth/authorize\?[-0-9a-zA-Z&%]*
 \bapi\.bitbucket\.org/\d+\.\d+/repositories/[^/]+/[^/]+/commits?/[0-9a-f]+
 \bbitbucket\.org/[^/]+/[^/]+/commits?/[0-9a-f]+
 
+# bit.ly
+\bbit\.ly/\w+
+
 # circleci
 https://circleci.com/gh/[^/]+/[^/]+/[^/]+(?:/[^/]+|).[a-z]+\?[-0-9a-zA-Z=&]+
 
