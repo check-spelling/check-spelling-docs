@@ -176,6 +176,9 @@ ipfs://[0-9a-f]*
 # kubectl.kubernetes.io/last-applied-configuration
 "kubectl.kubernetes.io/last-applied-configuration": ".*"
 
+# pgp
+\bgnupg\.net/pks/lookup[?&=0-9a-zA-Z]*
+
 # URL escaped characters
 \%[0-9A-F]{2}
 # c99 hex digits (not the full format, just one I've seen)
