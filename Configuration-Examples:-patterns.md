@@ -237,6 +237,7 @@ regexp\.MustCompile\(`[^`]*`\)
 [Vv]\d+(?:\b|(?=[a-zA-Z_]))
 # Compiler flags
 [\t >"`](?:-J|)-[DPWXY]
+[\t "`]-[DPWXYLl]
 # curl arguments
 \b(?:\\n|)curl(?:\s+-[a-zA-Z]+)+
 # set arguments
