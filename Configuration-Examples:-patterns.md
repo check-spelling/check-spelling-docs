@@ -53,8 +53,7 @@ https?://(?:(?:www\.|)youtube\.com|youtu.be)/(?:channel/|embed/|playlist\?list=|
 # Google Docs
 /docs\.google\.com/[a-z]+/d/(?:e/|)[0-9a-zA-Z_-]+/?
 # Google Groups
-https://groups\.google\.com/d/topic/[^/]+/[a-zA-Z0-9]+/discussion
-https://groups\.google\.com/d/msg/[^/]+/[a-zA-Z0-9]+/[a-zA-Z0-9]+
+\bgroups\.google\.com/(?:forum/#!|d/)(?:msg|topic)/[^/]+/[a-zA-Z0-9]+(?:/[a-zA-Z0-9]+|)
 # Google themes
 themes\.googleusercontent\.com/static/fonts/[^/]+/v\d+/[^.]+.
 # Google CDN
