@@ -199,6 +199,9 @@ sha256:[0-9a-f]+
 # man troff content
 \\f[BCIPR]
 
+# crypt
+"\$2[ayb]\$.{56}"
+
 # Input to GitHub JSON
 content: "[-a-zA-Z=;:/0-9+]*="
 
