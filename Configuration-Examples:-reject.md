@@ -12,6 +12,7 @@ occurence
 Sorce
 ^[Ss]pae
 ^untill
+vender
 ^wether
 ```
 
@@ -22,4 +23,5 @@ Here these patterns are quite broad.
 * `benefitting` would match a substring, but the default dictionary has no other matching words, the current accepted English spelling is `benefiting`
 * `^[Ss]pae` matches a number of things include `spaetzle` (which is a word, but, the odds are you won't be using it), most of them will be typos of words in the `space` family.
 * `^untill` will match some farming terms, but again, it's unlikely you're using them (if you are, add a `$` to the line to just match `until`).
+* `vender` is archaic (formerly used by the New Yorker) https://english.stackexchange.com/questions/28201/vendor-vs-vender-in-standard-american-english -- note that the New Yorker appears to have abandoned this spelling as well see https://www.newyorker.com/video/watch/the-fruit-vendor
 * `^wether` matches a number of terms, the main one is a typo for `whether`, if you need `wetherhog` or similar, adjust the pattern.
