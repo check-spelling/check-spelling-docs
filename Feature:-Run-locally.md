@@ -8,6 +8,8 @@ Possible approaches:
 
 ## Act
 
+As of https://github.com/check-spelling/check-spelling/commit/7e768f663a790a551211c157ff83716f29e5f39f (Tue, 22 Jun 2021 18:13:26 -0400), running `act` in a repository with `push` and `pull_request_target` (with `suppress_push_for_open_pull_request`) should work reasonably well.
+
 [Act](https://github.com/nektos/act) is a tool which uses Docker to run GitHub Actions locally.
 
 Requires Act [v0.2.9](https://github.com/nektos/act/releases/tag/v0.2.9)+.
