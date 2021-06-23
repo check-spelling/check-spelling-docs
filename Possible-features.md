@@ -3,14 +3,16 @@
 ## Ready
 
 * [[Suppress push comment for open PRs|Feature: Suppress push comment for open PRs]]
-## In progress
-
+* [[Run locally|Feature: Run locally]] using `act` (note: support for `act` is a bit of a moving target, but in general it should work)
 * [[Area dictionaries|Feature: Area dictionaries]]
 * [[Suggest Area dictionaries|Feature: Suggest Area Dictionaries]]
-* [[Collapse older check comments|Feature: Collapse older check comments]]
 * [[Suppress comments|Feature: Suppress comments]]
 * [[Matrix support|Feature: Matrix support]]
+* [[Only changes|Feature: Only-changes]]
+* [[Collapse older check comments|Feature: Collapse older check comments]]
 * [Play nice with `@dependabot`](@dependabot)
+
+## In progress
 
 ## Near term
 
@@ -25,7 +27,6 @@
 ## Distant future
 
 * [[Duplicate word detection|Feature: Duplicate word detection]]
-* [[Only changes|Feature: Only-changes]]
 * [[Tolerate engine upgrades|Feature: Tolerate engine upgrades]]
 * [[Correct misspelled words within GitHub|Feature: Correct misspelling]]
 * [[Learn from corrections|Feature: Learn from corrections]]
