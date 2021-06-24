@@ -63,11 +63,11 @@ themes\.googleusercontent\.com/static/fonts/[^/]+/v\d+/[^.]+.
 # Google Chrome Store
 \bchrome\.google\.com/webstore/detail/\w*(?:/\w*|)
 # Google Books
-\bbooks\.google\.(\w{2,4})/books\?[-\w\d=&#.]*
+\bbooks\.google\.(?:\w{2,4})/books\?[-\w\d=&#.]*
 
 # GitHub SHAs
 \bapi.github\.com/repos/[^/]+/[^/]+/[^/]+/[0-9a-f]+\b
-(?:\[[0-9a-f]+\]\(https:/|)/github\.com/[^/]+/[^/]+(?:/[^/]+/[0-9a-f]+(?:[-0-9a-zA-Z/#.]*|)\b|)
+(?:\[[0-9a-f]+\]\(?:https:/|)/github\.com/[^/]+/[^/]+(?:/[^/]+/[0-9a-f]+(?:[-0-9a-zA-Z/#.]*|)\b|)
 \bgithub\.com/[^/]+/[^/]+[@#][0-9a-f]+\b
 # githubusercontent
 /[-a-z0-9]+\.githubusercontent\.com/[-a-zA-Z0-9?&=_\/.]*
@@ -78,7 +78,7 @@ themes\.googleusercontent\.com/static/fonts/[^/]+/v\d+/[^.]+.
 # GitHub JSON
 "node_id": "[-a-zA-Z=;:/0-9+]*"
 # Contributor
-\[[^\]]+]\(https://github\.com/[^/]+\)
+\[[^\]]+]\(?:https://github\.com/[^/]+\)
 
 # gitlab
 \bgitlab\.com/uploads/[-a-zA-Z=;:/0-9+]*
@@ -110,7 +110,7 @@ https://circleci.com/gh/[^/]+/[^/]+/[^/]+(?:/[^/]+|).[a-z]+\?[-0-9a-zA-Z=&]+
 \bimgur\.com/[^.]+
 
 # Internet Archive
-\barchive\.org/web/\d+/([-\w.?,'/\\+&%$#_:]*)
+\barchive\.org/web/\d+/(?:[-\w.?,'/\\+&%$#_:]*)
 
 # discord
 /discord(?:app\.com|\.gg)/(?:invite/)?[a-zA-Z0-9]{7,8}
