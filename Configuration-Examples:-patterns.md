@@ -30,6 +30,7 @@ data:[-a-zA-Z=;:/0-9+]*,\S*
 \bci\.appveyor\.com/project/[^/]*/[^/]*/builds?/\d+/job/[0-9a-z]+
 
 # AWS
+\b\w*\.s3\.amazonaws\.com/[-\w/&#%_?:=]*
 \b[0-9a-z]{10}\.execute-api\.[-0-9a-z]+\.amazonaws\.com\b
 \b\w+\.[-0-9a-z]+\.elb\.amazonaws\.com\b
 
