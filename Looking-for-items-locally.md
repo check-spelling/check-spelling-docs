@@ -97,9 +97,11 @@ review() {
   for a in $(cat $1); do
     echo;
     echo;
-    echo ::$a:;
-    echo;
-    peek $a | head -15; done |
+    (
+      echo ::$a:;
+      echo;
+      peek $a | head -15; done |
+    ) | grep -B2 '^[^:]' | grep -v ^--
   uniq |
   less -R
 }
