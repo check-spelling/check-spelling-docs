@@ -22,3 +22,4 @@ into word-like things for checking against a dictionary.
 * [[Warning descriptions]]
 * [[Configuration information]]
 * [[Possible features]]
+* [[Security|Security]]
