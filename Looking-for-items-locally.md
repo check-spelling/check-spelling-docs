@@ -100,8 +100,9 @@ review() {
     (
       echo ::$a:;
       echo;
-      peek $a | head -15; done |
+      peek $a | head -15
     ) | grep -B2 '^[^:]' | grep -v ^--
+    done |
   uniq |
   less -R
 }
