@@ -26,6 +26,8 @@
 
 ## Distant future
 
+* [[Check commit messages|Feature: Check commit messages]]
+* [[Reject patterns|Feature: Reject patterns]]
 * [[Duplicate word detection|Feature: Duplicate word detection]]
 * [[Tolerate engine upgrades|Feature: Tolerate engine upgrades]]
 * [[Correct misspelled words within GitHub|Feature: Correct misspelling]]
