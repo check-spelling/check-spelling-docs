@@ -15,6 +15,8 @@
 
 ## In progress
 
+* [[Suggest commit after expect update|Feature: Suggest commit after expect update]]
+
 ## Near term
 
 * [[First run advice|Feature: First run advice]]
