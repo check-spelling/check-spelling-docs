@@ -202,6 +202,9 @@ sha256:[0-9a-f]+
 # man troff content
 \\f[BCIPR]
 
+# IServiceProvider
+\bI(?=(?:[A-Z][a-z]{2,})+\b)
+
 # crypt
 "\$2[ayb]\$.{56}"
 
