@@ -11,6 +11,7 @@
 * [[Only changes|Feature: Only-changes]]
 * [[Collapse older check comments|Feature: Collapse older check comments]]
 * [[Restricted Permissions|Feature: Restricted Permissions]]
+* [[Concurrency|Feature: Concurrency]]
 * [Play nice with `@dependabot`](@dependabot)
 
 ## In progress
