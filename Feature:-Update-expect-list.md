@@ -83,6 +83,13 @@ I may need to add fallback code whereby I create / recycle a branch (based on th
 
 ## Downsides
 
+### Required checks
+If you have set the spell checker check as mandatory, you're going to need to add a dummy commit to the end of the branch, otherwise the spell checker will not run again and validate that it's happy with the branch.
+
+The best dummy change is a blank line in the expect file itself. It will have minimal impact on blame, should be an easy merge conflict to resolve, and another pass of this feature will wipe it out.
+
+### Blind Updates
 I see a lot of people running the commands blindly and missing the fact that there are real misspellings in the output.
 
 * Part of this is that they aren't used to looking at the output.
+
