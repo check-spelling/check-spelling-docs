@@ -19,6 +19,10 @@ There are two modes:
     only_check_changed_files: 1
 ```
 
+### Incompatible with
+
+* `concurrency` -> `cancel-in-progress`
+
 ## Future Work
 
 ### Recognizing expect misses
