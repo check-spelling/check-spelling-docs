@@ -13,6 +13,7 @@
 * [[Only changes|Feature: Only-changes]]
 * [[Collapse older check comments|Feature: Collapse older check comments]]
 * [[Restricted Permissions|Feature: Restricted Permissions]]
+* [[Bug fix: Case changes should fail]]
 * [Play nice with `@dependabot`](@dependabot)
 
 ## v0.0.19
