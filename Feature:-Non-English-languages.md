@@ -9,6 +9,7 @@ In theory it could also spell check (classical) Latin, Rotokas, Interlingua, and
 For everything else, if it works on something, it's probably just the English programming language/markup, and if you're lucky it's ignoring everything else.
 
 At some point in the distant future, I can try to figure out how to refactor things to deal w/ character sets and things (I suspect I'll require all content to be in Unicode, since I really don't want to have to deal with encodings, and Unicode still gives me enough headaches with UTF-8/UTF-16/UCS-2/UTF-32/UCS-4, endianness, and normalization).
+- See [[Feature: Character Encoding Auto Detection]] for some thoughts.
 
 The simplification makes the code much easier to work with and lets me work on things a piece at a time. Any character roughly not in that set is effectively equivalent to a ` ` by the time the spell checker starts looking for words. The `patterns.txt` file can strip out your non ascii words if you like.
 
