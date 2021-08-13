@@ -5,11 +5,11 @@
 * [Files](#Files)
 * See [[Configuration: Workflows]] for the general workflow modes
 
-## Workflow Variables
+## Workflow Parameters
 
 See [[Configuration: Workflows]] for the supported GitHub workflows.
 
-| Variable | Description |
+| Parameter | Description |
 | ------------- | ------------- |
 | [GITHUB_TOKEN](#github_token) | github credential secret for api requests |
 | [config](#config) | directory with config files |
@@ -19,6 +19,7 @@ See [[Configuration: Workflows]] for the supported GitHub workflows.
 | [experimental_parallel_jobs](#experimental_parallel_jobs) | parallelize spell checking file tasks |
 | [shortest_word](#shortest_word) | minimum word length |
 | [longest_word](#longest_word) | maximum word length |
+| [post_comment](#post_comment) | post comment |
 
 See [[Configuration: Advanced]] for additional options.
 
@@ -83,6 +84,12 @@ Note that this will autotune to no shorter than the shortest word in the diction
 
 The longest word length to consider. The default is two characters longer than
 the longest word in the dictionary. Previously strings that were thousands of characters long were flagged.
+
+### post_comment
+
+If you want to suppress commenting, you can use this.
+
+Note: if you're using a split workflow, you will use this in the main task stage, and will not use it in the comment stage.
 
 ## Files
 
