@@ -79,7 +79,7 @@ themes\.googleusercontent\.com/static/fonts/[^/]+/v\d+/[^.]+.
 # GitHub JSON
 "node_id": "[-a-zA-Z=;:/0-9+]*"
 # Contributor
-\[[^\]]+]\(?:https://github\.com/[^/]+\)
+\[[^\]]+]\(https://github\.com/[^/]+\)
 
 # gitlab
 \bgitlab\.com/uploads/[-a-zA-Z=;:/0-9+]*
