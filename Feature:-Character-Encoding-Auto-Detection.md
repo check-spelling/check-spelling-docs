@@ -1,6 +1,6 @@
 Currently the spell-checker assumes ascii encoding and roughly ignores anything outside [a-zA-Z'].
 
-In order to support non-English languages, the acceptable character-set will have to grow to include:
+In order to support [[non-English languages|Feature: Non English languages]], the acceptable character-set will have to grow to include:
 Spanish (plus uppercase): á é í ó ú ü ñ ¿ ¡
 French (plus upperase): é à è ù â ê î ô û ä ë ü ç
 And most other languages add other characters. Sadly, these characters are outside basic ASCII and close enough to having a conflict between Latin-1 and Unicode.
