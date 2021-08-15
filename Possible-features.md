@@ -17,6 +17,7 @@
 ## In progress
 
 * [[Suggest commit after expect update|Feature: Suggest commit after expect update]]
+* [[Automatically truncate comment|Feature: Automatically truncate comment]]
 
 ## Near term
 
