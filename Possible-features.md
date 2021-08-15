@@ -40,6 +40,7 @@
 * [[Plug into Visual Studio Code|Feature: Visual Studio Code plugin]]
 * [[Block/Multiline Ignore|Feature: Block Ignore]]
 * [[Non-English languages|Feature: Non-English languages]]
+  * [[Configurable word characters|Feature: Configurable word characters]]
   * [[Character Encoding Auto Detection|Feature: Character Encoding Auto Detection]]
 
 ## Related but currently out of scope
