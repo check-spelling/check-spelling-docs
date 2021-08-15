@@ -43,6 +43,7 @@
   * [[Configurable word characters|Feature: Configurable word characters]]
   * [[Character Encoding Auto Detection|Feature: Character Encoding Auto Detection]]
 * [[Forbidden patterns|Feature: Forbidden patterns]]
+* [[Custom escape mappings|Feature: Custom escape mappings]]
 
 ## Related but currently out of scope
 
