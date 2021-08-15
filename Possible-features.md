@@ -42,6 +42,7 @@
 * [[Non-English languages|Feature: Non-English languages]]
   * [[Configurable word characters|Feature: Configurable word characters]]
   * [[Character Encoding Auto Detection|Feature: Character Encoding Auto Detection]]
+* [[Forbidden patterns|Feature: Forbidden patterns]]
 
 ## Related but currently out of scope
 
