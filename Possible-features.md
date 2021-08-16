@@ -13,17 +13,17 @@
 * [[Restricted Permissions|Feature: Restricted Permissions]]
 * [[Concurrency|Feature: Concurrency]]
 * [Play nice with `@dependabot`](@dependabot)
+* [[Check filenames and paths|Feature: check filenames and paths]]
+* [[Automatically truncate comment|Feature: Automatically truncate comment]]
 
 ## In progress
 
 * [[Suggest commit after expect update|Feature: Suggest commit after expect update]]
-* [[Automatically truncate comment|Feature: Automatically truncate comment]]
 
 ## Near term
 
 * [[Easier to understand filenames|Feature: Easier to understand filenames]]
 * [[Update expect command-line|Feature: update expect command-line]]
-* [[Check filenames and paths|Feature: check filenames and paths]]
 * [[Aliases|Feature: Aliases]]
 * [[Honor gitattributes|Feature: honor gitattributes]]
 * [[Regression testing]]
