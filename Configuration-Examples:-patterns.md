@@ -80,6 +80,8 @@ themes\.googleusercontent\.com/static/fonts/[^/]+/v\d+/[^.]+.
 "node_id": "[-a-zA-Z=;:/0-9+]*"
 # Contributor
 \[[^\]]+]\(https://github\.com/[^/]+\)
+# GHSA
+GHSA(?:-[0-9a-z]{4}){3}
 
 # gitlab
 \bgitlab\.com/uploads/[-a-zA-Z=;:/0-9+]*
