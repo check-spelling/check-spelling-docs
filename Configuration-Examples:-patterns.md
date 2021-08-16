@@ -123,7 +123,7 @@ https://circleci.com/gh/[^/]+/[^/]+/[^/]+(?:/[^/]+|).[a-z]+\?[-0-9a-zA-Z=&]+
 link\.medium\.com/[a-zA-Z0-9]+
 
 # microsoft
-\b(?:download\.visualstudio|docs|msdn)\.microsoft\.com/[-_a-zA-Z0-9()=./]*
+\b(?:https?://|)(?:(?:download\.visualstudio|docs|msdn2?)\.microsoft|blogs\.msdn)\.com/[-_a-zA-Z0-9()=./%]*
 # powerbi
 \bapp\.powerbi\.com/reportEmbed/[^"' ]*
 
