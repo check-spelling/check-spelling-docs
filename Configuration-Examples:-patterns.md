@@ -195,10 +195,10 @@ sha256:[0-9a-f]+
 =[0-9a-fA-F]+&
 # PGP
 \b(?:[0-9A-F]{4} ){9}[0-9A-F]{4}\b
-# hex digits including css/html color classes:
-(?:[\\0][xX]|\\u|[uU]\+|#x?|\%23)[0-9a-fA-FgGrR_]{2,}(?:[uU]?[lL]{0,2}|u\d+)\b
 # uuid:
 [<({"'>][0-9a-fA-F]{8}-(?:[0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}[<'"})>]
+# hex digits including css/html color classes:
+(?:[\\0][xX]|\\u|[uU]\+|#x?|\%23)[0-9a-fA-FgGrR_]{2,}(?:[uU]?[lL]{0,2}|u\d+)\b
 
 # https://www.gnu.org/software/groff/manual/groff.html
 # man troff content
