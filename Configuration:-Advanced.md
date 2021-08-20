@@ -6,7 +6,6 @@
 | debug | If set, will print more debug messages in the job logs |
 | [bucket](#bucket) | file/url for which the tool has read access to a couple of files. |
 | [project](#project) | a folder within `bucket`. This allows you to share common items across projects. |
-| [GITHUB_TOKEN](#GITHUB_TOKEN) | Secret used to retrieve your code and comment on PRs/commits. |
 | [timeframe](#timeframe) | number of minutes (default 60) to consider when a **schedule** workflow checks for updated PRs. |
 
 ## bucket
