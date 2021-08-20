@@ -20,6 +20,11 @@ See [[Configuration: Workflows]] for the supported GitHub workflows.
 | [shortest_word](#shortest_word) | minimum word length |
 | [longest_word](#longest_word) | maximum word length |
 | [post_comment](#post_comment) | post comment |
+| [experimental_path](#experimental_path) | Directory root to check for spelling (note that bucket/project/config are independent of this) |
+| [capture_output_unknown_words](#capture_output_unknown_words) | Capture unknown words (should be added to expect.txt) as an action output |
+| [capture_output_stale_words](#capture_output_stale_words) | Capture stale words (should be removed from expect.txt) as an action output |
+| [capture_output_skipped_files](#capture_output_skipped_files) | Capture skipped files (could be added to excludes.txt) as an action output |
+| [experimental_commit_note](#experimental_commit_note) | If set, commit updates to expect automatically with this note |
 
 See [[Configuration: Advanced]] for additional options.
 
@@ -29,6 +34,14 @@ Specify the token to be used when making API calls to GitHub.
 By default the [GITHUB_TOKEN](https://docs.github.com/en/actions/reference/authentication-in-a-workflow#about-the-github_token-secret) is used.
 
 ⚠️ [@dependabot](https://github.com/dependabot) appears to be unfriendly to this token.
+
+> **Note:** GitHub Actions get an automatic token which allows for read operations.
+> If the Action is a [pull_request](#pull_request) and the originating repository isn't trusted, then the automatic token will not have write permission, > which means it won't be able to post a comment to the PR.
+>
+> There are three ways to address this:
+> * Use [pull_request_target](./Configuration:-Workflows#pull_request_target) recommended as of 0.0.17-alpha
+> * Create a custom Personal Access Token with `repo read` + `comment`
+> * Use [schedule](./Configuration:-Workflows#schedule) instead
 
 ### config
 
@@ -90,6 +103,26 @@ the longest word in the dictionary. Previously strings that were thousands of ch
 If you want to suppress commenting, you can use this.
 
 Note: if you're using a split workflow, you will use this in the main task stage, and will not use it in the comment stage.
+
+### experimental_path
+
+If you want to specify the directory to test, and so to not test all the project files. Default is `.`.
+
+### capture_output_unknown_words
+
+Capture unknown words as an action output so it can be used in following actions. It would be stored in the variable `unknown_words`.
+
+### capture_output_stale_words
+
+Capture stale words as an action output so it can be used in following actions. It would be stored in the variable `stale_words`.
+
+### capture_output_skipped_files
+
+Capture skipped files as an action output so it can be used in following actions. It would be stored in the variable `skipped_files`.
+
+### experimental_commit_note
+
+Used to add a new commit to `HEAD` with the specified note as the commit body.
 
 ## Files
 
