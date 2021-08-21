@@ -36,8 +36,7 @@ By default the [GITHUB_TOKEN](https://docs.github.com/en/actions/reference/authe
 ⚠️ [@dependabot](https://github.com/dependabot) appears to be unfriendly to this token.
 
 > **Note:** GitHub Actions get an automatic token which allows for read operations.
-> If the Action is a [pull_request](#pull_request) and the originating repository isn't trusted, then the automatic token will not have write permission, > which means it won't be able to post a comment to the PR.
->
+> If the Action is a [pull_request](#pull_request) and the originating repository isn't trusted, then the automatic token will not have write permission, > which means it won't be able to post a comment to the PR.  
 > There are three ways to address this:
 > * Use [pull_request_target](./Configuration:-Workflows#pull_request_target) recommended as of 0.0.17-alpha
 > * Create a custom Personal Access Token with `repo read` + `comment`
@@ -122,7 +121,7 @@ Capture skipped files as an action output so it can be used in following actions
 
 ### experimental_commit_note
 
-Used to add a new commit to `HEAD` with the specified note as the commit body.
+Used as the commit body when a commit is created.
 
 ## Files
 
