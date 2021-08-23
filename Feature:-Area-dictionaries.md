@@ -76,6 +76,20 @@ cspell:scala/scala.txt
 
 The current version ignores any line with characters outside [A-Za-z'].
 
+## FAQ
+
+### Why can't I limit certain dictionaries to certain file types?
+
+It isn't impossible to change this, however it's quite possible for a word to be applied for a language (.cpp, .lua) and then referenced in documentation (.txt, .rst, .md, .html, ...). Or if code is cross called, a lua item might be referenced in a cpp file.
+
+So far, the cost of preprocessing the dictionary for each possible file extension (which would have to be done up front, as there are multiple spell checking processes that run concurrently) appears to exceed the complexity and time required to support some other strategy.
+
+Most of the time carrying extra words in the dictionary won't actually matter.
+
+About the only time it does is for `elif` / `elsif` -- where one programming language likes one thing and the other is a syntax error. For that, recommended practice is a compiler/linter instead of relying on the spell checker, if you have both "words" in code, they could easily both be referenced in documentation, and thus they're both words, it's just that in certain circumstances you want to use one and not the other, that's effectively grammar and not spelling.
+
+That said, if you really want to be fancy, you can use a matrix and apply certain dictionaries only in certain circumstances. While this isn't recommended, it is possible.
+
 ## Future work
 
 [[Suggest Area dictionaries|Feature: Suggest Area Dictionaries]]
