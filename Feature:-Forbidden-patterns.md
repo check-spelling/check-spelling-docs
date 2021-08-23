@@ -1,10 +1,15 @@
 # Forbidden patterns
 
-People have asked about being able to reject certain patterns. They aren't technically spelling errors, but since check-spelling is already looking.
+Since the spell checker has to run against all lines, there was a request to be able to reject a pattern, even though it is technically composed of valid words.
 
-## Proposal
+The canonical example was [m_data](https://github.com/nasa/fprime/discussions/855#discussion-3469739).
 
-`forbidden.txt` that works like `patterns.txt`, but is run between patterns and the main spelling pass.
+But there are definitely other examples, e.g., of a deprecated API.
+
+## Implementation
+
+I can imagine adding an extra pass right before (or after? still thinking about this) `patterns.txt` which looks for `reject-patterns.txt` 
+ / `forbidden.txt` that works like `patterns.txt`, but is run between patterns and the main spelling pass and screams if it finds matches.
 
 ## Implementation details
 
