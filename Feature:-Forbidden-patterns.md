@@ -21,6 +21,10 @@ To date, the check-spelling has not really cared which file contributed a piece 
 
 ## Sample consumers
 
+### `m_data`
+
+Add as `\bm_data\b`
+
 ### `Javascript`
 
 - When you add `javascript` to `expect.txt`, it will start accepting `Javascript` even though it should be `JavaScript`
@@ -32,3 +36,10 @@ Add as `\bJavascript\b`
 Both `micro` and `soft` are in the dictionary, so this will not naturally be flagged, even though it is probably problematic.
 
 Add as `\bMicroSoft\b`
+
+### Duplicate words
+
+```
+# Reject duplicate words
+\b(\w{3,})\s\g{-1}\b
+```
