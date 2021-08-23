@@ -258,6 +258,10 @@ regexp\.MustCompile\(`[^`]*`\)
 /var/folders/\w\w/\w+/T/
 ```
 
+## See also
+
+* [[Forbidden patterns|Feature: Forbidden patterns]]
+
 ## Notes
 
 * `patterns` operate on a per line basis
