@@ -14,8 +14,26 @@ a per-file basis.
 
 I'm not sure what the threshold for suggesting a word list should be.
 
-Possibilities:
+## Possibilities
 
 * covers `>x(%)` of the unknown words
+* known word list covers `>x(%)` of the dictionary
 * grows the known word list by `>x(%)`
 * results in `>x(%)` files having `0` unknown words
+
+### Samples
+
+#### [tianocore/edk2-libc](https://github.com/tianocore/edk2-libc)
+> ##### Unrecognized words (6658)
+> Available dictionaries could cover words not in the dictionary
+> * cspell:cpp/cpp.txt (104293) covers 1169 of them
+> * cspell:lua/lua.txt (391) covers 53 of them
+
+* cpp "covers `>x(%)` of the unknown words" for `x=17`
+* lua "known word list covers `>x(%)` of the dictionary" for `x=13`
+
+Note: there's overlap between **cpp** and **lua**, so merging in the cpp dictionary drops the apparent value of lua to 35 (just under 9%).
+
+Arguably, dictionaries should be reviewed smallest to largest to give them an independent chance to be appreciated. But, generally as long as they're all scored at the same time (before application), they'll shine through.
+
+You might wonder "why did the spell checker suggest lua?", the answer is that [Lua is in the EDK-II trunk]( https://firmwaresecurity.com/2015/05/28/lua-for-uefi/).
