@@ -7,14 +7,20 @@ As the work to parallelize the spell checker yields lists of unknown words,
 it's possible to check a number of potential supplemental dictionaries against
 files and determine which ones would have the most benefit.
 
-I'm still thinking about how to do this.
+I'm still thinking about how best to do this, however I have an initial implementation.
 
 It could be done against the final unknown list, or it could be done on
 a per-file basis.
 
-I'm not sure what the threshold for suggesting a word list should be.
+## Initial implementation
 
-## Possibilities
+The initial implementation will report raw numbers for each dictionary it knows about (this list is configurable), and will sort by most matches to fewest.
+
+Note that some dictionaries have a large number of typos (this is especially true of the `cpp` dictionary) and thus adding it will result in a lot of false-negatives (i.e. the spell checker will no longer flag a misspelled word as misspelled because the word is in its dictionary of "correctly" spelled words).
+
+## Suggesting thresholds
+
+I'm not sure what the threshold for suggesting a word list should be.
 
 * covers `>x(%)` of the unknown words
 * known word list covers `>x(%)` of the dictionary
@@ -37,3 +43,7 @@ Note: there's overlap between **cpp** and **lua**, so merging in the cpp diction
 Arguably, dictionaries should be reviewed smallest to largest to give them an independent chance to be appreciated. But, generally as long as they're all scored at the same time (before application), they'll shine through.
 
 You might wonder "why did the spell checker suggest lua?", the answer is that [Lua is in the EDK-II trunk]( https://firmwaresecurity.com/2015/05/28/lua-for-uefi/).
+
+## Future work
+
+I intend to work through at least the cpp dictionary to weed out some portion of the misspelled words. Sadly, the dictionary has >100k entries, and thus it is a fairly daunting task.
