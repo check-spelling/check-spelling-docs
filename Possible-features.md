@@ -28,6 +28,7 @@
 
 * [[Update expect command-line|Feature: update expect command-line]]
 * [[Honor gitattributes|Feature: honor gitattributes]]
+* [[Support gitignore|Feature: Support gitignore]]
 * [[Regression testing]]
 
 ## Distant future
