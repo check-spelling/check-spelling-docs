@@ -19,20 +19,20 @@
 ## In progress
 
 * [[Suggest commit after expect update|Feature: Suggest commit after expect update]]
+* [[Easier to understand filenames|Feature: Easier to understand filenames]]
+* [[Aliases|Feature: Aliases]]
+* [[Reject patterns|Feature: Reject patterns]]
+* [[Duplicate word detection|Feature: Duplicate word detection]]
 
 ## Near term
 
-* [[Easier to understand filenames|Feature: Easier to understand filenames]]
 * [[Update expect command-line|Feature: update expect command-line]]
-* [[Aliases|Feature: Aliases]]
 * [[Honor gitattributes|Feature: honor gitattributes]]
 * [[Regression testing]]
 
 ## Distant future
 
 * [[Check commit messages|Feature: Check commit messages]]
-* [[Reject patterns|Feature: Reject patterns]]
-* [[Duplicate word detection|Feature: Duplicate word detection]]
 * [[Tolerate engine upgrades|Feature: Tolerate engine upgrades]]
 * [[Correct misspelled words within GitHub|Feature: Correct misspelling]]
 * [[Learn from corrections|Feature: Learn from corrections]]
