@@ -21,7 +21,7 @@
 * [[Suggest commit after expect update|Feature: Suggest commit after expect update]]
 * [[Easier to understand filenames|Feature: Easier to understand filenames]]
 * [[Aliases|Feature: Aliases]]
-* [[Reject patterns|Feature: Reject patterns]]
+* [[Forbidden patterns|Feature: Forbidden patterns]]
 * [[Duplicate word detection|Feature: Duplicate word detection]]
 
 ## Near term
@@ -42,7 +42,6 @@
 * [[Non-English languages|Feature: Non-English languages]]
   * [[Configurable word characters|Feature: Configurable word characters]]
   * [[Character Encoding Auto Detection|Feature: Character Encoding Auto Detection]]
-* [[Forbidden patterns|Feature: Forbidden patterns]]
 * [[Custom escape mappings|Feature: Custom escape mappings]]
 
 ## Related but currently out of scope
