@@ -81,7 +81,7 @@ Since it doesn't see `sea-green` as a single word, trying to add `sea-green` to 
 
 ### Resolution
 
-* If the word you're trying to put in the dictionary is `pre-emptively`, just replace all instances of it with `preemptively`
+* If the word you're trying to put in the dictionary is `pre-emptively`, just replace all instances of it with `preemptively`.
 
 If you want to accept `avii-ridge` in your repository, you can:
 * add `avii` to your dictionary (by adding it to `allow.txt`),
