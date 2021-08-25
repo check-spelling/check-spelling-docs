@@ -7,6 +7,7 @@
 * [non-alpha-in-dictionary](#non-alpha-in-dictionary)
 * [whitespace-in-dictionary](#whitespace-in-dictionary)
 * [forbidden-pattern](#forbidden-pattern)
+* [deprecated-feature](#deprecated-feature)
 
 ## unrecognized-spelling
 
@@ -117,3 +118,6 @@ The repository has a specific regular expression defining a pattern that it does
 
 Identify the pattern and either rewrite your code not to match it, or adjust the pattern not to match your code.
 
+## deprecated-feature
+
+Over time, features will be deprecated. Typically a replacement will be available. Please try to migrate to the newer supported item. Eventually support for the deprecated feature will be removed.
