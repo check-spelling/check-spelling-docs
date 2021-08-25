@@ -120,4 +120,9 @@ Identify the pattern and either rewrite your code not to match it, or adjust the
 
 ## deprecated-feature
 
-Over time, features will be deprecated. Typically a replacement will be available. Please try to migrate to the newer supported item. Eventually support for the deprecated feature will be removed.
+Over time, features will be deprecated. Typically a replacement will be available.
+Eventually support for the deprecated feature will be removed.
+
+### Resolution
+
+Please try to migrate to the newer supported item.
