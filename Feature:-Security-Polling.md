@@ -11,7 +11,7 @@ If there's a reported security advisory, you should read it and take a recommend
 
 2. If there is a reported security advisory and your workflow doesn't acknowledge that advisory, the action will abort.
 
-   You should read the advisory, and preferably upgrade to a later version. The advisory should offer advise about what to do.
+   You should read the advisory, and preferably upgrade to a later version. The advisory should offer advice about what to do.
 
    The advice might be "please disable this action for the time being", if that happens, I'm sorry, but, better safe than sorry.
 
