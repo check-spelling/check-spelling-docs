@@ -85,7 +85,7 @@ The number of concurrent spell checking tasks to run.
 GitHub Linux/Windows VMs have 2 cores and thus the default is `2`.
 GitHub's macOS VMs have 3 cores.
 
-If you run your own VMs w/ more cores, you could use a higher number.
+If you run your own VMs with more cores, you could use a higher number.
 
 ### shortest_word
 
@@ -125,7 +125,7 @@ Used as the commit body when a commit is created.
 
 ## Files
 
-Note that each of the below items can either be a file w/ a `.txt` suffix,
+Note that each of the below items can either be a file with a `.txt` suffix,
 or a directory, where each file with a `.txt` suffix will be merged together.
 
 | File | Description |
