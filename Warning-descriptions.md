@@ -1,5 +1,7 @@
 # Warnings
 
+Each warning should be listed in the [**Action Log**](https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/using-workflow-run-logs#viewing-logs-to-diagnose-failures).
+
 * [unrecognized-spelling](#unrecognized-spelling)
 * [noisy-file](#noisy-file)
 * [bad-regex](#bad-regex)
