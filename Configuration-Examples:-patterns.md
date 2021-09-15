@@ -97,6 +97,9 @@ accounts.binance.com/[a-z/]*oauth/authorize\?[-0-9a-zA-Z&%]*
 # bit.ly
 \bbit\.ly/\w+
 
+# bitrise
+\bapp\.bitrise\.io/app/[0-9a-f]*/[\w.?=&]*
+
 # circleci
 https://circleci.com/gh/[^/]+/[^/]+/[^/]+(?:/[^/]+|).[a-z]+\?[-0-9a-zA-Z=&]+
 
