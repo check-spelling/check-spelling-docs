@@ -25,7 +25,7 @@ I think the following (untested) `patterns.txt` entry should work:
 
 I'd love to hear if it does. Note that it will prevent the auto-detection in 0.0.18-alpha from working, but that's not a big deal.
 
-If it does, I'll probably add it to sample patterns, and add it commented out to spell-check-this. -- It conflicts w/ auto-detecting files to skip, so I wouldn't want it on by default.
+If it does, I'll probably add it to sample patterns, and add it commented out to spell-check-this. -- It conflicts w/ [[auto-detecting files to skip|Feature: Autodetect noisy files]], so I wouldn't want it on by default.
 
 ## Unicode
 
