@@ -22,3 +22,22 @@ I think the following (untested) `patterns.txt` entry should work:
 I'd love to hear if it does. Note that it will prevent the auto-detection in 0.0.18-alpha from working, but that's not a big deal.
 
 If it does, I'll probably add it to sample patterns, and add it commented out to spell-check-this. -- It conflicts w/ auto-detecting files to skip, so I wouldn't want it on by default.
+
+## Unicode
+
+From cmouse:
+```
+use 5.022;
+use feature 'unicode_strings';
+use strict;
+use warnings;
+use Encode qw/decode_utf8 FB_DEFAULT/;
+binmode STDIN;
+binmode STDOUT, ':utf8';
+
+while (<<>>) {
+  $_ = decode_utf8($_, FB_DEFAULT);
+  s/[^[:word:][:space:]]+/ /g;
+  print;
+}
+```
