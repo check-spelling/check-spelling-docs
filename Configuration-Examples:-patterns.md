@@ -65,6 +65,8 @@ themes\.googleusercontent\.com/static/fonts/[^/]+/v\d+/[^.]+.
 \bchrome\.google\.com/webstore/detail/\w*(?:/\w*|)
 # Google Books
 \bbooks\.google\.(?:\w{2,4})/books\?[-\w\d=&#.]*
+# Google Fonts
+\bfonts\.googleapis\.com/[?=:;+&0-9a-zA-Z]*
 
 # GitHub SHAs
 \bapi.github\.com/repos/[^/]+/[^/]+/[^/]+/[0-9a-f]+\b
