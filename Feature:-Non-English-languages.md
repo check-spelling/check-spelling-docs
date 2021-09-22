@@ -52,7 +52,7 @@ For normal files, that's:
 ...
 open FILE, '<', $filename;
 binmode FILE;
-while (<>)
+while (<>) {
   $_ = decode_utf8($_, FB_DEFAULT);
 ...
 }
