@@ -15,6 +15,7 @@
 * [Play nice with `@dependabot`](@dependabot)
 * [[Check filenames and paths|Feature: check filenames and paths]]
 * [[Automatically truncate comment|Feature: Automatically truncate comment]]
+* [[Perl module testing|Feature: Perl module testing]]
 
 ## In progress
 
