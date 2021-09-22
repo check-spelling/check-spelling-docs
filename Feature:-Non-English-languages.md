@@ -30,7 +30,7 @@ If it does, I'll probably add it to sample patterns, and add it commented out to
 ## Unicode
 
 From cmouse:
-```
+```perl
 use 5.022;
 use feature 'unicode_strings';
 use strict;
@@ -45,3 +45,16 @@ while (<<>>) {
   print;
 }
 ```
+
+For normal files, that's:
+
+```perl
+...
+open FILE, '<', $filename;
+binmode FILE;
+while (<>)
+  $_ = decode_utf8($_, FB_DEFAULT);
+...
+}
+```
+
