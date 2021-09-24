@@ -31,6 +31,7 @@
 * [[Honor gitattributes|Feature: honor gitattributes]]
 * [[Support gitignore|Feature: Support gitignore]]
 * [[Regression testing]]
+* [[Update base branch|Feature: Update base branch]]
 
 ## Distant future
 
