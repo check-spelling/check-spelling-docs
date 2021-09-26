@@ -32,6 +32,7 @@
 * [[Support gitignore|Feature: Support gitignore]]
 * [[Regression testing]]
 * [[Update base branch|Feature: Update base branch]]
+* [[Behavior change: Log output order]]
 
 ## Distant future
 
