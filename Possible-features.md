@@ -33,6 +33,7 @@
 * [[Regression testing]]
 * [[Update base branch|Feature: Update base branch]]
 * [[Behavior change: Log output order]]
+* [[Configurable file size limits|Feature: Configurable file size limits]]
 
 ## Distant future
 
