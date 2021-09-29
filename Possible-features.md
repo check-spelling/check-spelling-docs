@@ -24,6 +24,7 @@
 * [[Aliases|Feature: Aliases]]
 * [[Forbidden patterns|Feature: Forbidden patterns]]
 * [[Duplicate word detection|Feature: Duplicate word detection]]
+* [[Configurable file size limits|Feature: Configurable file size limits]]
 
 ## Near term
 
@@ -33,7 +34,6 @@
 * [[Regression testing]]
 * [[Update base branch|Feature: Update base branch]]
 * [[Behavior change: Log output order]]
-* [[Configurable file size limits|Feature: Configurable file size limits]]
 
 ## Distant future
 
