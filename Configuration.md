@@ -2,7 +2,7 @@
 
 * [[Quick Start]]
 * [Workflow Parameters](#workflow-parameters)
-* [Files](#Files)
+* [Files](#files)
 * See [[Configuration: Workflows]] for the general workflow modes
 
 ## Workflow Parameters
