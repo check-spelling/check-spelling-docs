@@ -190,6 +190,8 @@ ipfs://[0-9a-f]*
 
 # URL escaped characters
 \%[0-9A-F]{2}
+# IPv6
+\b(?:[0-9a-f]{0,4}:){5}[0-9a-f]{0,4}\b
 # c99 hex digits (not the full format, just one I've seen)
 0x[0-9a-fA-F](?:\.[0-9a-fA-F]*|)[pP]
 # sha256
