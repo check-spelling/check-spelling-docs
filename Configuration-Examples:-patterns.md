@@ -53,6 +53,8 @@ https?://(?:(?:www\.|)youtube\.com|youtu.be)/(?:channel/|embed/|playlist\?list=|
 # ... a short way to match `https://` or `http://` since most urls have one of those prefixes
 # Google Docs
 /docs\.google\.com/[a-z]+/d/(?:e/|)[0-9a-zA-Z_-]+/?
+# Google Drive
+\bdrive\.google\.com/file/d/[0-9a-zA-Z_?=]*
 # Google Groups
 \bgroups\.google\.com/(?:forum/#!|d/)(?:msg|topic)/[^/]+/[a-zA-Z0-9]+(?:/[a-zA-Z0-9]+|)
 # Google themes
