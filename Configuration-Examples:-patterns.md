@@ -218,6 +218,11 @@ sha256:[0-9a-f]+
 # man troff content
 \\f[BCIPR]
 
+# .desktop mime types
+^MimeTypes?=.*$
+# .desktop localized entries
+^[A-Z][a-z]+\[[a-z]+\]=.*$
+
 # IServiceProvider
 \bI(?=(?:[A-Z][a-z]{2,})+\b)
 
