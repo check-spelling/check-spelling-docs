@@ -50,7 +50,7 @@ curl -X POST -d @$fileToUpload -vvv \
 ```
 
 
-The implementation in python: https://github.com/KOLANICH-libs/miniGHAPI.py/blob/09388fba1145275181fe6ca7f7e3c526abc96d4f/miniGHAPI/undocumented.py (it is hound to hash because can be moved into another file in future)
+The implementation in python: https://github.com/KOLANICH-libs/miniGHAPI.py/blob/09388fba1145275181fe6ca7f7e3c526abc96d4f/miniGHAPI/undocumented.py (it is bound to hash because can be moved into another file in future)
 
 Few highlights:
 
