@@ -155,6 +155,9 @@ link\.medium\.com/[a-zA-Z0-9]+
 \.api\.mailgun\.net/v3/domains/[0-9a-z]+\.mailgun.org/messages/[0-9a-zA-Z=@]*
 \b[0-9a-z]+.mailgun.org
 
+# Reddit
+\breddit\.com/r/[/\w_]*
+
 # requestb.in
 \brequestb\.in/[0-9a-z]+
 
