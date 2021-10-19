@@ -68,7 +68,7 @@ themes\.googleusercontent\.com/static/fonts/[^/]+/v\d+/[^.]+.
 # Google Books
 \bbooks\.google\.(?:\w{2,4})/books\?[-\w\d=&#.]*
 # Google Fonts
-\bfonts\.(?:googleapis|gstatic)\.com/[?=:;+&0-9a-zA-Z]*
+\bfonts\.(?:googleapis|gstatic)\.com/[-/?=:;+&0-9a-zA-Z]*
 
 # GitHub SHAs
 \bapi.github\.com/repos/[^/]+/[^/]+/[^/]+/[0-9a-f]+\b
