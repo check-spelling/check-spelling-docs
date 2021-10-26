@@ -25,6 +25,7 @@ See [[Configuration: Workflows]] for the supported GitHub workflows.
 | [capture_output_stale_words](#capture_output_stale_words) | Capture stale words (should be removed from expect.txt) as an action output |
 | [capture_output_skipped_files](#capture_output_skipped_files) | Capture skipped files (could be added to excludes.txt) as an action output |
 | [experimental_commit_note](#experimental_commit_note) | If set, commit updates to expect automatically with this note |
+| [only_check_changed_files](#only_check_changed_files) | If set, only check changed files |
 
 See [[Configuration: Advanced]] for additional options.
 
@@ -122,6 +123,12 @@ Capture skipped files as an action output so it can be used in following actions
 ### experimental_commit_note
 
 Used as the commit body when a commit is created.
+
+### only_check_changed_files
+
+Normally check-spelling will check all files that match `( (only||all) - excluded)`. Some repositories are quite large and typically have very few files changing at once. Assuming a good baseline, or a willingness to force people to fix all typos in a file as they touch it, one can use this flag (in `@prerelease`) to dramatically improve the time it takes to run.
+
+Downside: if someone changes any of the config files, it's likely that they will have changed files that aren't being checked and you won't find out until they're touched at a later date. This can be frustrating for contributors (although, any linter can be frustrating).
 
 ## Files
 
