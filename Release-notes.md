@@ -4,6 +4,7 @@
 <!--🛠️ In various states of `prerelease`-->
 🌟 Almost ready to transition from `prerelease` to release 🍽️
 
+* [[Smarter scheduling 2021 October|Feature: Smarter scheduling 2021 October]]
 * [[Suppress push comment for open PRs|Feature: Suppress push comment for open PRs]]
 * [[Run locally|Feature: Run locally]] using `act` (note: support for `act` is a bit of a moving target, but in general it should work)
 * [[Area dictionaries|Feature: Area dictionaries]]
