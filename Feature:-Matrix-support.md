@@ -2,6 +2,8 @@
 
 In order to make the clock time for spell checking large repositories tolerable, you can use a matrix.
 
+⚠️ You shouldn't need to use this as of the release after 0.0.19, as it should run much faster on its own.
+
 ## Flags
 
 You almost certainly want `fail-fast: false`, otherwise the first matrix branch to find an unrecognized word will kill all the others, and thus people would have to fix each thing to discover the next, instead of being told about all unrecognized words at once:
