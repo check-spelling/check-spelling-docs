@@ -7,3 +7,10 @@ Thoughts:
 1. The easiest way for the action to manage this is to synthesize a file containing the list of files the tool intends to check right before it proceeds to check files.
    - Generated a synthetic list of files (roughly the filtered output from `git ls-files | exclude.pl`) and add that to the list of files to check.
 1. A misspelled directory would create lots of hits, making it very noisy. This half argues in favor of `echo "$files"|tree --fromfile=.`, however it's much nicer to be able to ignore a specific directory that's a child of another directory, and that's easier to do with a flat file path with the existing patterns system.
+
+## Use
+
+```
+  with:
+    check_file_names: 1
+```
