@@ -8,11 +8,14 @@ Possible approaches:
 
 ## Act
 
-As of https://github.com/check-spelling/check-spelling/commit/7e768f663a790a551211c157ff83716f29e5f39f (Tue, 22 Jun 2021 18:13:26 -0400), running `act` in a repository with `push` and `pull_request_target` (with `suppress_push_for_open_pull_request`) should work reasonably well.
-
 [Act](https://github.com/nektos/act) is a tool which uses Docker to run GitHub Actions locally.
 
-Requires Act [v0.2.9](https://github.com/nektos/act/releases/tag/v0.2.9)+.
+You should generally use the [latest version of act](https://github.com/nektos/act/releases/latest).
+
+### General status
+Act [v0.2.24](https://github.com/nektos/act/releases/tag/v0.2.24)+ should work reasonably well...
+
+Running `act` in a repository with `push` and `pull_request_target` (with `suppress_push_for_open_pull_request`) should work.
 
 ```
 $ act
@@ -99,13 +102,18 @@ $ act
 [Spell checking/Spell checker]   ✅  Success - ./
 ```
 
+You can use `perl -pne 's{^\| }{}'` to strip the Act padding when check-spelling provides a script that it wants you to run (you can of course always manually apply the equivalent changes).
+
 ### Concerns
 
 Nektos/Act may be missing support for newer GitHub Action features:
 
-* [composite](https://github.blog/changelog/2020-08-07-github-actions-composite-run-steps/) - [nektos/act#339](https://github.com/nektos/act/issues/339)
 * [pull_request_target](https://github.blog/2020-08-03-github-actions-improvements-for-fork-and-pull-request-workflows/)
 * [workflow_run](https://github.blog/2020-08-03-github-actions-improvements-for-fork-and-pull-request-workflows/)
+
+#### Output steps
+As of Act [v0.2.24](https://github.com/nektos/act/releases/tag/v0.2.24), act can't handle [outputs from later steps](https://github.com/nektos/act/issues/758), as used in [https://github.com/check-spelling/spell-check-this/blob/prerelease/.github/workflows/spelling.yml#L17](https://github.com/check-spelling/spell-check-this/blob/18764e6cbb019a5d2067d6abe62ce43eb83275bd/.github/workflows/spelling.yml#L17) - It's possible to build a [patched version of act](https://github.com/ChristopherHX/act/commit/4c692919754ab0a72b340604e2c5c597e95f463a) -- but it requires fixing a [merge failure](https://github.com/jsoref/act/commit/a8f69e39d9b534d4eef09f37ab0d082cd308bb00). This shouldn't be a big deal as the output portions of the workflow won't work in act anyway...
+
 
 ## Single script
 
@@ -117,32 +125,10 @@ In the long term, I'd rather this, but I don't expect to implement this anytime 
 
 ## Docker image
 
-As of **0.0.15-alpha**, there is a `Dockerfile` and its default path is to *check spelling* (there are other paths for checking pull requests and there will be a path for interacting with comments).
-⚠️ The Docker file is no longer be the main entrypoint in GitHub as of **0.0.16-alpha**.
+I investigated using Docker directly and did in the initial versions.
 
-* Publish a docker image.
+⚠️ The Docker file is no longer the main entrypoint in GitHub as of **0.0.16-alpha**.
 
-* Provide a command:
+It is likely to be removed in an upcoming release.
 
-   `docker run --rm some-registry/check-spelling:prelease -v $PWD:/check-this:ro`
-
-### Users pass environment variables
-
-The simplest version would require the user to pass `-e bucket ...` and `-e project ...`.
-
-The implementation cost for this isn't terribly high, as there's already a Docker file and the changes required to support this are fairly minimal.
-
-### GitHub Workflow discovery
-
-A fancier version could look through `.github/workflows/` and find the check-spelling configurations.
-
-This would require much more work and would never be perfect. It should be able to fish out multiple run cases, but I don't expect that I'd handle `if` conditions or any prerequisites.
-
-### Pick a registry
-
-This would require picking a registry.
-
-* [[GitHub|https://github.com/features/packages#pricing]] charges after 1GB of outbound use. I'd hope that I wouldn't hit this, but I could easily be unlucky.
-* [[Quay.io|https://quay.io]] appears to be free for open source, although their web portal instructions point to a path which isn't free.
-
-Thankfully, this is no longer a concern, as Dockerfile is no longer used by the action.
+If you want to use check-spelling in Docker, please consider using `act` which wraps Docker...
