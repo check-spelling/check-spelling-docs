@@ -66,7 +66,7 @@ cspell:scala/scala.txt
 ### Notes
 
 * For items that are single word-per-line, this will just work.
-* For companies which is a multi word string per line, they could either be converted into patterns or split on whitespace -- treating each individual word as legal. (The latter is easier.)
+* For companies which have multiple words on a line (e.g. `Johny's Farming Ltd.`), they could either be converted into patterns or split on whitespace -- treating each individual word as legal. (The latter is easier.)
 * A number of these dictionaries include misspelled words.
   * You may want to review them and add words to `reject.txt`
   * If you're keeping track of which dictionary contributed, `reject/cpp.txt`, e.g.
