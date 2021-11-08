@@ -74,7 +74,7 @@ cspell:scala/scala.txt
     defintions
     ```
 
-The current version ignores any line with characters outside [A-Za-z'].
+The current version ignores any line with characters outside `[A-Za-z']` (because those are effectively the only characters that the spell checker will consider part of a word, and thus a word containing any character not in the set will never match anything).
 
 ## FAQ
 
