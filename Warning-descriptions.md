@@ -95,7 +95,7 @@ If you want to accept `avii-ridge` in your repository, you can:
 
 > Warning: .github/actions/spelling/expect.txt: line 1, columns 5-6, Warning - entry has unexpected whitespace (whitespace-in-dictionary)
 
-This generally means you have a mix of Dos and Unix line endings.
+This generally means you have a mix of DOS and Unix line endings.
 
 The tool generally assumes it's only going to see Unix line endings.
 
