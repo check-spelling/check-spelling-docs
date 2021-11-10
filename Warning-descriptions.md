@@ -109,6 +109,10 @@ e.g.:
 dos2unix .github/actions/spelling/expect.txt > .github/actions/spelling/expect.txt.new && mv .github/actions/spelling/expect.txt.new .github/actions/spelling/expect.txt
 ```
 
+### Future
+
+This may be renamed to `unexpected-line-ending` in the future.
+
 ## forbidden-pattern
 
 > Warning: unknown-words.sh: line 894, columns 43-59, Warning - `patterns patterns` matches an objections.patterns entry. (forbidden-pattern)
