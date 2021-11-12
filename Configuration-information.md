@@ -1,4 +1,4 @@
-## # # Configuration information
+## Configuration information
 
 * [[Configuration]]
   * [[Configuration Examples: advice]]
