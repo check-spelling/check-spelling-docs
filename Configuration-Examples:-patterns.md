@@ -87,8 +87,11 @@ themes\.googleusercontent\.com/static/fonts/[^/]+/v\d+/[^.]+.
 # GHSA
 GHSA(?:-[0-9a-z]{4}){3}
 
-# gitlab
-\bgitlab\.com/uploads/[-a-zA-Z=;:/0-9+]*
+# GitLab
+\bgitlab\.[^/]*//\S+/\S+/commit/[0-9a-f]{7,16}#[0-9a-f]{40}\b
+\bgitlab\.[^/]*//\S+/\S+/-/merge_requests/\d+/diffs#[0-9a-f]{40}\b
+\bgitlab\.[^/]*/uploads/[-a-zA-Z=;:/0-9+]*
+\bgitlab\.[^/]*/[^/]+/[^/]+/commits?/[0-9a-f]+\b
 
 # binanace
 accounts.binance.com/[a-z/]*oauth/authorize\?[-0-9a-zA-Z&%]*
