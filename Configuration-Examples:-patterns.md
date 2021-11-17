@@ -268,8 +268,8 @@ regexp\.MustCompile\(`[^`]*`\)
 # <word>v#
 [Vv]\d+(?:\b|(?=[a-zA-Z_]))
 # Compiler flags
-[\t >"'`](?:-J|)-[DPWXY]
-[\t "'`]-[DPWXYLl]
+[\t >"'`=](?:-J|)-[DPWXY]
+[\t "'`=]-[DPWXYLlf]
 ,-B
 # curl arguments
 \b(?:\\n|)curl(?:\s+-[a-zA-Z]+)+
