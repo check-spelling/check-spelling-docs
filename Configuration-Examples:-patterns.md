@@ -235,8 +235,8 @@ sha256:[0-9a-f]+
 # Input to GitHub JSON
 content: "[-a-zA-Z=;:/0-9+]*="
 
-# python f-string https://www.python.org/dev/peps/pep-0498/
-\bf'
+# Python stringprefix / binaryprefix
+\b(?:B|BR|Br|F|FR|Fr|R|RB|RF|Rb|Rf|U|UR|Ur|b|bR|br|f|fR|fr|r|rB|rF|rb|rf|u|uR|ur)'
 
 # Regular expressions for (P|p)assword
 \([A-Z]\|[a-z]\)[a-z]+
