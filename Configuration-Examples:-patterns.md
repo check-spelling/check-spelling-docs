@@ -170,6 +170,7 @@ link\.medium\.com/[a-zA-Z0-9]+
 # Slack
 slack://[a-zA-Z0-9?&=]+
 \bslack\.com/[-0-9a-zA-Z/_~]*
+\bslack-imgs\.com/[-a-zA-Z0-9?&=%.]+
 
 # stackexchange -- https://stackexchange.com/feeds/sites
 \b(?:askubuntu|serverfault|stack(?:exchange|overflow)|superuser).com/questions/\d+/[a-z-]+
