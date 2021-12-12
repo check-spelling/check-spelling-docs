@@ -8,6 +8,7 @@ Each warning should be listed in the [**Action Log**](https://docs.github.com/en
 * [no-newline-at-eof](#no-newline-at-eof)
 * [non-alpha-in-dictionary](#non-alpha-in-dictionary)
 * [whitespace-in-dictionary](#whitespace-in-dictionary)
+* [unexpected-line-ending](#unexpected-line-ending)
 * [forbidden-pattern](#forbidden-pattern)
 * [deprecated-feature](#deprecated-feature)
 * [large-file](#large-file)
@@ -106,12 +107,30 @@ Use `dos2unix`.
 e.g.:
 
 ```
-dos2unix .github/actions/spelling/expect.txt > .github/actions/spelling/expect.txt.new && mv .github/actions/spelling/expect.txt.new .github/actions/spelling/expect.txt
+dos2unix .github/actions/spelling/expect.txt
 ```
 
 ### Future
 
 This may be renamed to `unexpected-line-ending` in the future.
+
+## unexpected-line-ending
+
+> Warning: .github/actions/spelling/expect.txt: line 1, columns 5-6, Warning - entry has unexpected whitespace (whitespace-in-dictionary)
+
+This generally means you have a mix of DOS and Unix line endings.
+
+The tool generally assumes it's only going to see Unix line endings.
+
+### Resolution
+
+Use `dos2unix`.
+
+e.g.:
+
+```
+dos2unix .github/actions/spelling/expect.txt
+```
 
 ## forbidden-pattern
 
