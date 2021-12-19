@@ -205,6 +205,8 @@ ipfs://[0-9a-f]*
 \b(?:[0-9a-f]{0,4}:){5}[0-9a-f]{0,4}\b
 # c99 hex digits (not the full format, just one I've seen)
 0x[0-9a-fA-F](?:\.[0-9a-fA-F]*|)[pP]
+# Punycode
+\bxn--[-0-9a-z]+
 # sha256
 sha256:[0-9a-f]+
 # sha-... -- uses a fancy capture
