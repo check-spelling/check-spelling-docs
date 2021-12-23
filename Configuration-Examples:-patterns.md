@@ -195,6 +195,9 @@ ipfs://[0-9a-f]*
 # w3
 \bw3\.org/[-0-9a-zA-Z/#.]+
 
+# HyperKitty lists
+/archives/list/[^@/]+\@[^/]*/message/[^/]*/
+
 # kubectl.kubernetes.io/last-applied-configuration
 "kubectl.kubernetes.io/last-applied-configuration": ".*"
 
