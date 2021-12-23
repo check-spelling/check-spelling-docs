@@ -39,6 +39,8 @@ data:[-a-zA-Z=;:/0-9+]*,\S*
 https?://(?:(?:www\.|)youtube\.com|youtu.be)/(?:channel/|embed/|playlist\?list=|watch\?v=|v/|)[-a-zA-Z0-9?&=_]*
 <\s*youtube\s+id=['"][-a-zA-Z0-9?_]*['"]
 \bimg\.youtube\.com/vi/[-a-zA-Z0-9?&=_]*
+# Google Accounts
+\baccounts.google.com/[-_/?=.:;+%&0-9a-zA-Z]*
 # Google Analytics
 \bgoogle-analytics\.com/collect.[-0-9a-zA-Z?%=&_.~]*
 # Google APIs
