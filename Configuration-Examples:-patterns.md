@@ -29,10 +29,15 @@ data:[-a-zA-Z=;:/0-9+]*,\S*
 \bci\.appveyor\.com/api/projects/status/[0-9a-z]+
 \bci\.appveyor\.com/project/[^/]*/[^/]*/builds?/\d+/job/[0-9a-z]+
 
-# AWS
+# Amazon
+# AWS S3
 \b\w*\.s3\.amazonaws\.com/[-\w/&#%_?:=]*
+# AWS execute-api
 \b[0-9a-z]{10}\.execute-api\.[-0-9a-z]+\.amazonaws\.com\b
+# AWS ELB
 \b\w+\.[-0-9a-z]+\.elb\.amazonaws\.com\b
+# AWS SNS
+\bsns\.[-0-9a-z]+.amazonaws\.com/[-\w/&#%_?:=]*
 
 # Here, we're matching `http://` and `https://` by using `s?`
 # YouTube
