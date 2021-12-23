@@ -54,7 +54,7 @@ https?://(?:(?:www\.|)youtube\.com|youtu.be)/(?:channel/|embed/|playlist\?list=|
 # The leading `/` here is as opposed to the `\b` above
 # ... a short way to match `https://` or `http://` since most urls have one of those prefixes
 # Google Docs
-/docs\.google\.com/[a-z]+/d/(?:e/|)[0-9a-zA-Z_-]+/?
+/docs\.google\.com/[a-z]+/d/(?:e/|)[0-9a-zA-Z_-]+/?(?:edit\?[-\w=#.]*|)
 # Google Drive
 \bdrive\.google\.com/file/d/[0-9a-zA-Z_?=]*
 # Google Groups
