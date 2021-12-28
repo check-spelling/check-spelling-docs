@@ -104,7 +104,7 @@ review() {
     ) | grep -B2 '^[^:]' | grep -v ^--
     done |
   uniq |
-  less -R
+  less -nR
 }
 ```
 
