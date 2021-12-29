@@ -18,6 +18,12 @@ export GITHUB_EVENT_NAME=push
 $spellchecker/fast-install.pl && $spellchecker/unknown-words.sh
 ```
 
+## Notes
+
+1. `spellchecker` points to the directory where you want your local check-spelling to live.
+2. `INPUT_CONFIG` is the equivalent of the `with: / config:` field from your workflow.
+3. The repository to be checked is the current working directory.
+
 ## Disclaimers
 
 1. Both this script and check-spelling itself will try to install software globally (curl, git, jq, and CheckSpelling's Perl modules)
