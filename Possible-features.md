@@ -16,22 +16,22 @@
 * [[Check filenames and paths|Feature: check filenames and paths]]
 * [[Automatically truncate comment|Feature: Automatically truncate comment]]
 * [[Perl module testing|Feature: Perl module testing]]
+* [[Suggest commit after expect update|Feature: Suggest commit after expect update]]
+* [[Forbidden patterns|Feature: Forbidden patterns]]
+* [[Configurable file size limits|Feature: Configurable file size limits]]
 
 ## In progress
 
-* [[Suggest commit after expect update|Feature: Suggest commit after expect update]]
 * [[Easier to understand filenames|Feature: Easier to understand filenames]]
 * [[Aliases|Feature: Aliases]]
-* [[Forbidden patterns|Feature: Forbidden patterns]]
 * [[Duplicate word detection|Feature: Duplicate word detection]]
-* [[Configurable file size limits|Feature: Configurable file size limits]]
+* [[Regression testing]]
 
 ## Near term
 
 * [[Update expect command-line|Feature: update expect command-line]]
 * [[Honor gitattributes|Feature: honor gitattributes]]
 * [[Support gitignore|Feature: Support gitignore]]
-* [[Regression testing]]
 * [[Update base branch|Feature: Update base branch]]
 * [[Behavior change: Log output order]]
 
