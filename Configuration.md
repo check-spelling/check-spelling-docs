@@ -26,6 +26,19 @@ See [[Configuration: Workflows]] for the supported GitHub workflows.
 | [capture_output_skipped_files](#capture_output_skipped_files) | Capture skipped files (could be added to excludes.txt) as an action output |
 | [experimental_commit_note](#experimental_commit_note) | If set, commit updates to expect automatically with this note |
 | [only_check_changed_files](#only_check_changed_files) | If set, only check changed files |
+| [dictionary_source_prefixes](#dictionary_source_prefixes) | prefixes for urls for dictionaries defined in [extra_dictionaries](#extra_dictionaries) |
+| [extra_dictionaries](#extra_dictionaries) | Dictionaries to include |
+| [check_extra_dictionaries](#check_extra_dictionaries) | If there are unknown words, see if they are in these additional dictionaries |
+| [event_aliases](#event_aliases) | Map an unsupported GitHub event to a known event |
+| [suppress_push_for_open_pull_request](#suppress_push_for_open_pull_request) | If running from a `push` event and there's an open `pull_request`, stop working and rely on the `pull_request` handling to check the branch |
+| [report_title_suffix](#report_title_suffix) | Appended to title (for use in [matrix configurations](https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#jobsjob_idstrategymatrix)) |
+| [custom_task](#custom_task) | Workflow magic |
+| [internal_state_directory](#internal_state_directory) | Workflow magic |
+| [check_file_names](#check_file_names) | Spell check file paths |
+| [anonymize_secpoll_source](#anonymize_secpoll_source) | Use public dns to check action security state |
+| [ignore_security_advisory](#ignore_security_advisory) | Override action security state warning |
+| [largest_file](#largest_file) | Ignore large files |
+| [unknown_word_limit](#unknown_word_limit) | Limit the number of reports per unknown word |
 
 See [[Configuration: Advanced]] for additional options.
 
@@ -129,6 +142,94 @@ Used as the commit body when a commit is created.
 Normally check-spelling will check all files that match `( (only||all) - excluded)`. Some repositories are quite large and typically have very few files changing at once. Assuming a good baseline, or a willingness to force people to fix all typos in a file as they touch it, one can use this flag (in `@prerelease`) to dramatically improve the time it takes to run.
 
 Downside: if someone changes any of the config files, it's likely that they will have changed files that aren't being checked and you won't find out until they're touched at a later date. This can be frustrating for contributors (although, any linter can be frustrating).
+
+### dictionary_source_prefixes
+
+Currently this holds a single prefix `cspell` which maps to `https://raw.githubusercontent.com/check-spelling/cspell-dicts/HEAD/dictionaries/`.
+
+Used with [extra_dictionaries](#extra_dictionaries) / [check_extra_dictionaries](#check_extra_dictionaries) to define supplemental dictionary urls in a compact form.
+
+### extra_dictionaries
+
+Extra dictionaries to be used when looking for unknown words.
+
+### check_extra_dictionaries
+
+After unknown words are identified, they can be checked against additional dictionaries.
+
+This enables users to choose additional dictionaries to add to [extra_dictionaries](#extra_dictionaries) in future runs.
+
+### event_aliases
+
+GitHub has many many events, and Check Spelling isn't specifically designed for most of them. If you want to use it with an event that it doesn't recognize, you can map the event to one it does. As long as the event has enough fields to work, Check Spelling will treat it as if it is the mapped even.
+
+This is mostly because `pull_request_target` was added by GitHub and realistically one should have been able to use Check Spelling with it based on its support for the `pull_request` event long before it was updated to use the `pull_request_target` event.
+
+### suppress_push_for_open_pull_request
+
+When running from a `push` event, check's to see if there's an open `pull_request` for the same branch.
+If there is, it will stop the current run, yielding a message explaining it didn't actually check spelling and report a ✅.
+
+The actual Check Spelling pass will happen in the pull request event (as long as it's properly configured and it's mergeable).
+
+### report_title_suffix
+
+When running in a [matrix configurations](https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#jobsjob_idstrategymatrix), each section will produce its own comment.
+
+The report_title_suffix enables each comment to have a distinct bit to help hint that the comment is not just an accidental duplicate.
+
+### custom_task
+
+In order to run with restricted permissions under `pull_request_target`, check-spelling is split between two phases:
+
+* `check-spelling` which has limited permissions but would include potentially untrusted content (this is the default task)
+* `comment` this phase should have permission to post a comment (but the untrusted content shouldn't be checked out)
+
+### internal_state_directory
+
+As part of [custom_task](#custom_task), the default task returns its internal state. This needs to be passed to the `custom_task`: `comment` phase.
+
+Use this parameter to indicate where the internal state was stashed.
+
+Generally stashing is done via `actions/upload-artifact@v2` and unstrashing via `actions/download-artifact@v2`, but the action itself doesn't care, so if you want to use something else, you can.
+
+### check_file_names
+
+People misspell file names too. If you want, Check Spelling can complain about them too.
+
+### anonymize_secpoll_source
+
+As of 0.0.19, Check Spelling will check to see if the action is known to be unsafe to use. It does this using a DNS query.
+
+If you don't want your DNS provider to be disclosed to the DNS servers hosting check-spelling, you can use this flag to ask it to pick a public dns server.
+
+I don't expect anyone to use this feature, since on average check spelling runs inside GitHub hosted runners which means the IP addresses are incredibly uninteresting (and I have no intention of setting up a DNS server that logs queries).
+
+That said, if you're running it in your own private infrastructure and want to be sure I can't check, you can use this flag.
+
+### ignore_security_advisory
+
+If the version of Check Spelling you're using is insecure, you really should update.
+
+By default, Check Spelling will not run if it believes it's unsafe.
+
+It's possible there isn't a fixed version available (this shouldn't be for very long), and perhaps you're using a private repository where you trust everyone. If that's the case, you can use this flag to override the security advisory.
+
+Please don't use this flag. In general, it's a really bad idea to run known unsafe code.
+
+A couple of typos are probably a better tradeoff than running known unsafe code for a short interval.
+
+### largest_file
+
+This is a file size limit in bytes. Files larger than this will be ignored.
+
+### unknown_word_limit
+
+Each instance of an unknown word up to this limit will be reported.
+
+GitHub will try to attach annotations for the first couple of reported items.
+
+The downside of this limit, of course, is that if there are more instances of a given misspelled word than this limit, you will have to find the others on your own and fix them as well. (Or just iterate with the action until it's happy...)
 
 ## Files
 
