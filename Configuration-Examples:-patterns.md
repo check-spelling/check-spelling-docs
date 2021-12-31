@@ -211,7 +211,7 @@ ipfs://[0-9a-f]*
 \bgnupg\.net/pks/lookup[?&=0-9a-zA-Z]*
 
 # ANSI color codes
-\u001b\[\d+(?:;\d+)m
+\\u001b\[\d+(?:;\d+|)m
 
 # URL escaped characters
 \%[0-9A-F]{2}
