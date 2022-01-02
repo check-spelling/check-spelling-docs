@@ -204,6 +204,9 @@ ipfs://[0-9a-f]*
 # HyperKitty lists
 /archives/list/[^@/]+\@[^/]*/message/[^/]*/
 
+# list-management
+\blist-manage\.com/subscribe(?:[?&](?:u|id)=[0-9a-f]+)+
+
 # kubectl.kubernetes.io/last-applied-configuration
 "kubectl.kubernetes.io/last-applied-configuration": ".*"
 
