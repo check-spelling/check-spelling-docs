@@ -26,6 +26,7 @@
 * [[Aliases|Feature: Aliases]]
 * [[Duplicate word detection|Feature: Duplicate word detection]]
 * [[Regression testing]]
+* [[JSON configuration|Feature: JSON configuration]]
 
 ## Near term
 
@@ -34,7 +35,6 @@
 * [[Support gitignore|Feature: Support gitignore]]
 * [[Update base branch|Feature: Update base branch]]
 * [[Behavior change: Log output order]]
-* [[JSON configuration|Feature: JSON configuration]]
 
 ## Distant future
 
