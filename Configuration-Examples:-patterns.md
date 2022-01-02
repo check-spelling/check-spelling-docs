@@ -282,7 +282,7 @@ regexp\.MustCompile\(`[^`]*`\)
 # Note that the next example is no longer necessary if you are using
 # to match a string starting with a `#`, use a character-class:
 [#]backwards
-# <word>v#
+# version suffix <word>v#
 [Vv]\d+(?:\b|(?=[a-zA-Z_]))
 # Compiler flags
 [\t >"'`=](?:-J|)-[DPWXY]
