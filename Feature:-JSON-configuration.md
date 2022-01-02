@@ -19,6 +19,12 @@ Instead of having lots of lines of config in the `action.yml` file, and similar 
 
 A new file will be added (tentatively `config.json`) containing the other configuration that used to be defined in `action.yml` and specified in the workflow.
 
+## Migration
+
+It looks like `toJSON(inputs)` should allow me to capture the current inputs (and thus greatly simplify the workflow code).
+
+I might do this even if I don't switch to a pure JSON config, although I'm pretty sure I will.
+
 ### Benefits
 
 * Configuration doesn't need to be specified 2+ times (spelling, comment, optional update phase).
