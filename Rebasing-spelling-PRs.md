@@ -11,7 +11,7 @@ These scripts require functions from [[Looking for items locally|Looking for ite
 * `git_compare_branches` `git_compare_branches fork/main...fork/spelling upstream/main...spelling`
 * `git_diff_filter` -- mostly for use w/ `git_compare_branches`
 * `drop_everything` -- mostly for rebasing onto trees that have deleted files (typically for splitting a branch)
-
+* `top_wins` -- pick the first side of a three way merge
 ```
 what_was_removed() {
   git show --word-diff -U0 $1 |
@@ -77,5 +77,9 @@ drop_everything() {
   handle_conflicts; while [ -e .git/rebase-merge/git-rebase-todo ] ; do
     moving_on
   done
+}
+
+top_wins() {
+  perl -pi -e '$/=undef; s/^<<<<<<< HEAD\n//gms;s/\n=======.*?>>>>>>>[^\n]*//msg' "$@"
 }
 ```
