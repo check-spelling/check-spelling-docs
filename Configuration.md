@@ -243,6 +243,7 @@ or a directory, where each file with a `.txt` suffix will be merged together.
 | [dictionary](#dictionary) | This allows you to replace the dictionary. |
 | [excludes](#excludes) | This allows you to skip checking files/directories. |
 | [expect](#expect) | This defines the list of words in the repository that aren't in the dictionary. |
+| [forbidden](#forbidden) | This allows you to define patterns of unacceptable strings. |
 | [only](#only) | This allows you to limit checking to certain files/directories. |
 | [patterns](#patterns) | This allows you to define patterns of acceptable strings. |
 | [reject](#reject) | This allows you to remove items from the default dictionary. |
@@ -333,6 +334,21 @@ Roughly if it's a proper noun of some sort of exists in the real world outside t
 ##### Note
 
 The bot doesn't really care. You could put everything into `allow` or everything into `expect`. The difference is that the bot will help you remove unused items from expect and add new items to it. You could also periodically migrate items from expect to allow (think about it like Java object lifespan promotions).
+
+### forbidden
+
+This file contains Perl regular expressions.
+Generally, one regular expression per line.
+Lines that begin with `#` will be skipped.
+They are merged using an `OR` (`|`).
+
+Note that these are generally case-sensitive
+unless you explicitly use `(?:(?i)...)` or
+`[Gg]it[Hh]ub` or similar.
+
+Tokens within files that match these expressions will be flagged.
+
+See [[Configuration Examples: forbidden]] for examples.
 
 ### only
 
