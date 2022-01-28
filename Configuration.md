@@ -337,6 +337,8 @@ The bot doesn't really care. You could put everything into `allow` or everything
 
 ### forbidden
 
+Note: the file name is currently `line_forbidden.patterns` instead of `forbidden.txt`
+
 This file contains Perl regular expressions.
 Generally, one regular expression per line.
 Lines that begin with `#` will be skipped.
