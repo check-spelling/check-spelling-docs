@@ -1,4 +1,4 @@
-# Breaking change: Consumed line endings
+# Behavior change: Consumed line endings
 
 Through 0.0.19, the line ending was included as part of the line being parsed.
 
