@@ -195,8 +195,8 @@ slack://[a-zA-Z0-9?&=]+
 \bt\.co/\w+
 
 # ipfs
-ipfs://[0-9a-f]*
-\bdweb\.link/ipfs/[0-9a-f]*
+ipfs://[0-9a-z]*
+/ipfs/[0-9a-z]*
 
 # w3
 \bw3\.org/[-0-9a-zA-Z/#.]+
