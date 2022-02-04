@@ -65,6 +65,8 @@ https?://(?:(?:www\.|)youtube\.com|youtu.be)/(?:channel/|embed/|playlist\?list=|
 \bdrive\.google\.com/file/d/[0-9a-zA-Z_?=]*
 # Google Groups
 \bgroups\.google\.com/(?:forum/#!|d/)(?:msg|topic)/[^/]+/[a-zA-Z0-9]+(?:/[a-zA-Z0-9]+|)
+# Google Maps
+\bmaps\.google\.com/maps\?[\w&;=]*
 # Google themes
 themes\.googleusercontent\.com/static/fonts/[^/]+/v\d+/[^.]+.
 # Google CDN
