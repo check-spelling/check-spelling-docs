@@ -301,7 +301,7 @@ regexp\.MustCompile\(`[^`]*`\)
 # tar arguments
 \b(?:\\n|)tar(?:\s+-[a-zA-Z]+|\s[a-z]+)+
 # macOS temp folders
-/var/folders/\w\w/\w+/T/
+/var/folders/\w\w/[+\w]+/(?:T|-Caches-)/
 ```
 
 ## See also
