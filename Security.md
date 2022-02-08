@@ -4,6 +4,10 @@ Please note: this wiki is not secured.
 
 Spammers do periodically attack GitHub wikis and at least a couple of attacks have been made to this specific wiki.
 
+## Security Polling
+
+Check Spelling performs [[Security Polling|Feature: Security Polling]] to verify that the running version isn't known insecure.
+
 ## Policy
 
 The formal [security/policy](https://github.com/check-spelling/check-spelling/security/policy) is in the repository.
