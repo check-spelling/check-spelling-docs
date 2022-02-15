@@ -197,6 +197,12 @@ slack://[a-zA-Z0-9?&=]+
 \btwimg\.com/media/[-_\w./?=]*
 \bt\.co/\w+
 
+# facebook
+\bfburl\.com/[0-9a-z_]+
+
+# dropbox
+\bdropbox\.com/s/[^/]+/[-0-9A-Za-z_.%]+
+
 # ipfs
 ipfs://[0-9a-z]*
 /ipfs/[0-9a-z]*
