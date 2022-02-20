@@ -143,6 +143,7 @@ https://circleci.com/gh/[^/]+/[^/]+/[^/]+(?:/[^/]+|).[a-z]+\?[-0-9a-zA-Z=&]+
 
 # medium
 link\.medium\.com/[a-zA-Z0-9]+
+\bmedium\.com/\@[^/]+/[-\w]+
 
 # microsoft
 \b(?:https?://|)(?:(?:download\.visualstudio|docs|msdn2?)\.microsoft|blogs\.msdn)\.com/[-_a-zA-Z0-9()=./%]*
