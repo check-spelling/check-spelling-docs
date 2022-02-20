@@ -242,6 +242,8 @@ sha256:[0-9a-f]+
 (['"]|&quot;)[0-9a-f]{40,}\g{-1}
 # hex in url queries
 =[0-9a-fA-F]+&
+# ssh
+(?:ssh-\S+|-nistp256) [-a-zA-Z=;:/0-9+]*
 # PGP
 \b(?:[0-9A-F]{4} ){9}[0-9A-F]{4}\b
 # uuid:
