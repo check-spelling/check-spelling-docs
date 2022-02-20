@@ -214,6 +214,9 @@ ipfs://[0-9a-z]*
 # loom
 \bloom\.com/embed/[0-9a-f]+
 
+# regex101
+\bregex101\.com/r/[^/]+/\d+
+
 # HyperKitty lists
 /archives/list/[^@/]+\@[^/]*/message/[^/]*/
 
