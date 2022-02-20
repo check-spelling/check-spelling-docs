@@ -210,6 +210,9 @@ ipfs://[0-9a-z]*
 # w3
 \bw3\.org/[-0-9a-zA-Z/#.]+
 
+# loom
+\bloom\.com/embed/[0-9a-f]+
+
 # HyperKitty lists
 /archives/list/[^@/]+\@[^/]*/message/[^/]*/
 
