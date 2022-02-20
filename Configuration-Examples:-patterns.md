@@ -284,6 +284,12 @@ regexp\.MustCompile\(`[^`]*`\)
 # https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#pod-phase
 \w+(?:-\w+)+\s+\d+/\d+\s+(?:Running|Pending|Succeeded|Failed|Unknown)\s+
 
+# kubectl - pods in CrashLoopBackOff
+\w+-[0-9a-f]+-\w+\s+\d+/\d+\s+CrashLoopBackOff\s+
+
+# posthog secrets
+posthog\.init\((['"])phc_[^"',]+\g{-1},
+
 # Update Lorem based on your content (requires `ge` and `w` from https://github.com/jsoref/spelling; and `review` from https://github.com/check-spelling/check-spelling/wiki/Looking-for-items-locally )
 # grep lorem .github/actions/spelling/patterns.txt|perl -pne 's/.*i..\?://;s/\).*//' |tr '|' "\n"|sort -f |xargs -n1 ge|perl -pne 's/^[^:]*://'|sort -u|w|sed -e 's/ .*//'|w|review -
 # Warning, while `(?i)` is very neat and fancy, if you have some binary files that aren't proper unicode, you might run into:
