@@ -184,6 +184,9 @@ slack://[a-zA-Z0-9?&=]+
 \bslack-edge\.com/[-a-zA-Z0-9?&=%./]+
 \bslack-imgs\.com/[-a-zA-Z0-9?&=%.]+
 
+# shields.io
+\bshields\.io/[-\w/%]*
+
 # stackexchange -- https://stackexchange.com/feeds/sites
 \b(?:askubuntu|serverfault|stack(?:exchange|overflow)|superuser).com/questions/\d+/[a-z-]+
 
