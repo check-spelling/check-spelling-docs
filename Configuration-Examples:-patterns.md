@@ -32,7 +32,7 @@ data:[-a-zA-Z=;:/0-9+]*,\S*
 
 # Amazon
 # AWS S3
-\b\w*\.s3\.amazonaws\.com/[-\w/&#%_?:=]*
+\b\w*\.s3[^.]*\.amazonaws\.com/[-\w/&#%_?:=]*
 # AWS execute-api
 \b[0-9a-z]{10}\.execute-api\.[-0-9a-z]+\.amazonaws\.com\b
 # AWS ELB
@@ -185,7 +185,7 @@ slack://[a-zA-Z0-9?&=]+
 \bslack-imgs\.com/[-a-zA-Z0-9?&=%.]+
 
 # shields.io
-\bshields\.io/[-\w/%]*
+\bshields\.io/[-\w/%?=&.]*
 
 # stackexchange -- https://stackexchange.com/feeds/sites
 \b(?:askubuntu|serverfault|stack(?:exchange|overflow)|superuser).com/questions/\d+/[a-z-]+
