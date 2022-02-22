@@ -50,6 +50,28 @@ This is implemented today in prerelease:
 
 ## Constraints
 
+### Commit Credentials
+
+One can push to GitHub using two mechanisms:
+* [HTTPS tokens](#https-tokens)
+* [SSH keys](#ssh-keys)
+
+#### HTTPS tokens
+Historically HTTPS tokens could have been a user's password, but support for that was [removed a while back](https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/).
+
+HTTPS tokens can be a [personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) with various arbitrary permissions or the [`GITHUB_TOKEN`](#github_token).
+
+##### `GITHUB_TOKEN`
+The [`GITHUB_TOKEN`](https://docs.github.com/en/actions/security-guides/automatic-token-authentication). can allow pushes, but when used, it [doesn't trigger other workflows](https://docs.github.com/en/actions/security-guides/automatic-token-authentication#using-the-github_token-in-a-workflow), which means it's problematic for automatic updates.
+
+#### SSH keys
+SSH keys can be user keys, or deploy keys.
+
+Deploy keys can be read-only or read-write.
+
+##### read-write deploy keys
+Using a [read-write deploy key](https://docs.github.com/en/developers/overview/managing-deploy-keys#setup-2) should allow [**@check-spelling-bot**](https://github.com/check-spelling-bot) to update your PR and also trigger workflows. This will be the recommended approach as of v0.0.20 or thereabouts.
+
 ### Comment limit
 
 GitHub returns an error if the comment is too long:
