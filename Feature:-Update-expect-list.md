@@ -76,7 +76,7 @@ Using a [read-write deploy key](https://docs.github.com/en/developers/overview/m
 
 Essentially, this involves:
 1. [Creating an encrypted secret](https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository) -- be mindful of the [secret naming constraints](https://docs.github.com/en/actions/security-guides/encrypted-secrets#naming-your-secrets), e.g., `CHECKSPELLING`.
-2. Changing the workflow for the update comment handler's `uses action/checkout` step to provide the secret, e.g.:
+2. Changing the workflow for the update comment handler's `uses: action/checkout` step to provide the secret, e.g.:
 
 ```yaml
 - name: checkout
@@ -84,6 +84,17 @@ Essentially, this involves:
   with:
     ssh-key: "${{ secrets.CHECKSPELLING }}"
 ```
+
+###### read-write deploy key limitations
+ℹ️ This will only work if the pull request source and destination are in the same repository.
+If you're reading this and were trying to make a pull request from a fork into a different repository and would like to take advantage of this feature, you can follow these steps:
+
+1. Go to your fork (`your-fork`).
+2. If necessary, [Enable workflows in your fork](https://github.com/github/docs/issues/15761)
+2. [Create a read-write deploy key](https://docs.github.com/en/developers/overview/managing-deploy-keys#deploy-keys)
+3. [Create a secret](https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository) using the public key for the deploy key using the name of the secret from the check-spelling workflow
+4. Create a pull request in your fork (`your-fork`) from the same branch (`head-branch`) as in the upstream pull request, targeting the same base branch (`destination-branch`) as the upstream (`upstream-fork`) pull's base branch (`destination-branch`).
+5. Follow the instructions from the workflow in order to seamlessly update your branch -- doing this will update the branch, and thus should update the branch in the upstream PR and trigger workflows in it.
 
 ### Comment limit
 
