@@ -82,7 +82,7 @@ themes\.googleusercontent\.com/static/fonts/[^/]+/v\d+/[^.]+.
 
 # GitHub SHAs
 \bapi.github\.com/repos/[^/]+/[^/]+/[^/]+/[0-9a-f]+\b
-(?:\[[0-9a-f]+\]\(https:/|)/(?:www\.|)github\.com/[^/]+/[^/]+(?:/[^/]+/[0-9a-f]+(?:[-0-9a-zA-Z/#.]*|)\b|)
+(?:\[[0-9a-f]+\]\(https:/|)/(?:www\.|)github\.com/[^/)]+/[^/)]+(?:/[^/)]+/[0-9a-f]+(?:[-0-9a-zA-Z/#.]*|)\b|)
 \bgithub\.com/[^/]+/[^/]+[@#][0-9a-f]+\b
 # githubusercontent
 /[-a-z0-9]+\.githubusercontent\.com/[-a-zA-Z0-9?&=_\/.]*
@@ -194,9 +194,9 @@ slack://[a-zA-Z0-9?&=]+
 [0-9a-f]{32}\@o\d+\.ingest\.sentry\.io\b
 
 # Twitter
-\[\@[^[/\]:]*?]\(https://twitter.com/[^/]*\)
+\[\@[^[/\]:]*?]\(https://twitter.com/[^/]*(?:/status/\d+(?:\?[-_0-9a-zA-Z&=]*|)|)\)
 \btwitter\.com/hashtag/[\w?_=&]*
-\btwitter\.com/[^/]*(?:/status/\d+|)
+\btwitter\.com/[^/]*(?:/status/\d+(?:\?[-_0-9a-zA-Z&=]*|)|)
 \btwimg\.com/profile_images/[_\w./]*
 \btwimg\.com/media/[-_\w./?=]*
 \bt\.co/\w+
