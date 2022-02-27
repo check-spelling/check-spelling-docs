@@ -62,7 +62,7 @@ https?://(?:(?:www\.|)youtube\.com|youtu.be)/(?:channel/|embed/|playlist\?list=|
 # Google Docs
 /docs\.google\.com/[a-z]+/d/(?:e/|)[0-9a-zA-Z_-]+/?(?:edit\?[-\w=#.]*|)
 # Google Drive
-\bdrive\.google\.com/file/d/[0-9a-zA-Z_?=]*
+\bdrive\.google\.com/(?:file/d/|open)[0-9a-zA-Z_?=]*
 # Google Groups
 \bgroups\.google\.com/(?:(?:forum/#!|d/)(?:msg|topic)|a)/[^/]+/[a-zA-Z0-9]+(?:/[a-zA-Z0-9]+|)
 # Google Maps
