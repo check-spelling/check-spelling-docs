@@ -74,7 +74,7 @@ themes\.googleusercontent\.com/static/fonts/[^/]+/v\d+/[^.]+.
 # Goo.gl
 /goo\.gl/[a-zA-Z0-9]+
 # Google Chrome Store
-\bchrome\.google\.com/webstore/detail/\w*(?:/\w*|)
+\bchrome\.google\.com/webstore/detail/[-\w]*(?:/\w*|)
 # Google Books
 \bbooks\.google\.(?:\w{2,4})/books\?[-\w\d=&#.]*
 # Google Fonts
