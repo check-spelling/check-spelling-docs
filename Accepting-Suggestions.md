@@ -2,7 +2,7 @@
 
 ## Linux and macOS
 
-1. Click the copy button (❐) at the top right corner of the script from the GitHub comment.
+1. Click the copy button (![copy icon](https://raw.githubusercontent.com/primer/octicons/0d9000c50255bac736eb0fbbc1ffee839130a708/icons/copy-16.svg)) at the top right corner of the script from the GitHub comment.
 1. Open your favorite terminal / shell.
 1. Use `cd` to change to the directory containing your local clone of the GitHub repository.
 1. If you haven't checked out the branch specified in the comment, use `git fetch` (possibly with the appropriate origin) and `git checkout` with the listed branch name.
