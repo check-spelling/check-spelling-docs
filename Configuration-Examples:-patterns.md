@@ -60,7 +60,7 @@ https?://(?:(?:www\.|)youtube\.com|youtu.be)/(?:channel/|embed/|playlist\?list=|
 # The leading `/` here is as opposed to the `\b` above
 # ... a short way to match `https://` or `http://` since most urls have one of those prefixes
 # Google Docs
-/docs\.google\.com/[a-z]+/d/(?:e/|)[0-9a-zA-Z_-]+/?(?:edit\?[-\w=#.]*|)
+/docs\.google\.com/[a-z]+/(?:u/\d+|d/(?:e/|)[0-9a-zA-Z_-]+/)?(?:edit\?[-\w=#.]*|/\?[\w=&]*|)
 # Google Drive
 \bdrive\.google\.com/(?:file/d/|open)[-0-9a-zA-Z_?=]*
 # Google Groups
@@ -165,6 +165,9 @@ link\.medium\.com/[a-zA-Z0-9]+
 # codacy
 \bapi\.codacy\.com/project/badge/Grade/[0-9a-f]+
 
+# compai
+\bcompai\.pub/v1/png/[0-9a-f]+
+
 # mailgun
 \.api\.mailgun\.net/v3/domains/[0-9a-z]+\.mailgun.org/messages/[0-9a-zA-Z=@]*
 \b[0-9a-z]+.mailgun.org
@@ -219,6 +222,9 @@ ipfs://[0-9a-z]*
 
 # regex101
 \bregex101\.com/r/[^/]+/\d+
+
+# figma
+\bfigma\.com/file(?:/[0-9a-zA-Z]+/)+
 
 # HyperKitty lists
 /archives/list/[^@/]+\@[^/]*/message/[^/]*/
