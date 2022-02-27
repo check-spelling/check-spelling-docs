@@ -197,9 +197,9 @@ slack://[a-zA-Z0-9?&=]+
 [0-9a-f]{32}\@o\d+\.ingest\.sentry\.io\b
 
 # Twitter
-\[\@[^[/\]:]*?]\(https://twitter.com/[^/]*(?:/status/\d+(?:\?[-_0-9a-zA-Z&=]*|)|)\)
+\[\@[^[/\]:]*?]\(https://twitter.com/[^/)]*(?:/status/\d+(?:\?[-_0-9a-zA-Z&=]*|)|)\)
 \btwitter\.com/hashtag/[\w?_=&]*
-\btwitter\.com/[^/]*(?:/status/\d+(?:\?[-_0-9a-zA-Z&=]*|)|)
+\btwitter\.com/[^/)]*(?:/status/\d+(?:\?[-_0-9a-zA-Z&=]*|)|)
 \btwimg\.com/profile_images/[_\w./]*
 \btwimg\.com/media/[-_\w./?=]*
 \bt\.co/\w+
