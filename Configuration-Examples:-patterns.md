@@ -31,6 +31,8 @@ data:[-a-zA-Z=;:/0-9+]*,\S*
 \bci\.appveyor\.com/project/[^/]*/[^/]*/builds?/\d+/job/[0-9a-z]+
 
 # Amazon
+# Amazon
+\bamazon\.com/[-\w]+/(?:dp/[0-9A-Z]+|)
 # AWS S3
 \b\w*\.s3[^.]*\.amazonaws\.com/[-\w/&#%_?:=]*
 # AWS execute-api
