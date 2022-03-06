@@ -55,7 +55,7 @@ https?://(?:(?:www\.|)youtube\.com|youtu.be)/(?:channel/|embed/|playlist\?list=|
 # Google Analytics
 \bgoogle-analytics\.com/collect.[-0-9a-zA-Z?%=&_.~]*
 # Google APIs
-\bgoogleapis\.com/[a-z]+/v\d+/[a-z]+/[@./?=\w]+
+\bgoogleapis\.com/[a-z]+/(?:v\d+/|)[a-z]+/[@:./?=\w]+
 \b[-a-zA-Z0-9.]*\bstorage\d*\.googleapis\.com(?:/\S*|)
 # Google Calendar
 \bcalendar\.google\.com/calendar(?:/u/\d+|)/embed\?src=[@./?=\w&%]+
