@@ -6,7 +6,7 @@ Warning: samples/client/petstore/java/okhttp-gson-parcelableModel/src/main/java/
 
 Using this script:
 ```
-perl -ne 'next unless s{Warning: ([^:]+): line (\d+).*?- .(.*?). is not.*}{grep -H -n . $1 |grep :$2:|grep --color=always "$3"};print' 
+perl -ne 'next unless s{Warning: ([^:]+): line (\d+).*?- \`(.*?)\`.*}{grep -H -n . $1 |grep :$2:|grep --color=always "$3"};print'
 ```
 
 Into a command like this:
