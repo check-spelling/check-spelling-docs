@@ -122,6 +122,12 @@ accounts.binance.com/[a-z/]*oauth/authorize\?[-0-9a-zA-Z&%]*
 # bitrise
 \bapp\.bitrise\.io/app/[0-9a-f]*/[\w.?=&]*
 
+# bootstrapcdn.com
+\bbootstrapcdn\.com/[-./\w]+
+
+# cdn.cloudflare.com
+\bcdnjs\.cloudflare\.com/[./\w]+
+
 # circleci
 https://circleci.com/gh/[^/]+/[^/]+/[^/]+(?:/[^/]+|).[a-z]+\?[-0-9a-zA-Z=&]+
 
