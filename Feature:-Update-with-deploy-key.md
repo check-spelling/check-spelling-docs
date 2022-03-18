@@ -1,6 +1,6 @@
 ## Overview
 
-Deploy keys allow repositories can make pushes that trigger workflows, unlike the `GITHUB_TOKEN`.
+Deploy keys allow repositories can make pushes that trigger workflows, [unlike the `GITHUB_TOKEN`](https://docs.github.com/en/actions/security-guides/automatic-token-authentication#using-the-github_token-in-a-workflow).
 
 The easiest way to set up a deploy key (or lots of them) is via scripting.
 
