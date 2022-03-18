@@ -8,7 +8,10 @@ This is possible using the [`gh` cli](https://cli.github.com/).
 
 ## Script
 
-Here's a script that you can run which will create an ssh key, add it as a deploy key to your repository (controlled by the `REPO` environment variable, or as automatically determined by the `gh` command):
+This script will:
+* create an ssh key,
+* add it as a deploy key to your repository (controlled by the `REPO` environment variable, or as automatically determined by the `gh` command),
+* add a corresponding secret.
 
 `create-check-spelling-deploy-key.sh`:
 ```
