@@ -14,7 +14,7 @@ This script will:
 * add a corresponding secret.
 
 `create-check-spelling-deploy-key.sh`:
-```
+```sh
 #!/bin/sh
 # create-check-spelling-deploy-key.sh
 set -e
