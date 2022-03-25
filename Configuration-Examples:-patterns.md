@@ -84,6 +84,8 @@ themes\.googleusercontent\.com/static/fonts/[^/]+/v\d+/[^.]+.
 \bbooks\.google\.(?:\w{2,4})/books\?[-\w\d=&#.]*
 # Google Fonts
 \bfonts\.(?:googleapis|gstatic)\.com/[-/?=:;+&0-9a-zA-Z]*
+# Google Forms
+\bforms\.gle/\w+
 
 # GitHub SHAs
 \bapi.github\.com/repos/[^/]+/[^/]+/[^/]+/[0-9a-f]+\b
