@@ -196,7 +196,7 @@ link\.medium\.com/[a-zA-Z0-9]+
 
 # Slack
 slack://[a-zA-Z0-9?&=]+
-\bslack\.com/[-0-9a-zA-Z/_~]*
+\bslack\.com/[-0-9a-zA-Z/_~?&=.]*
 \bslack-edge\.com/[-a-zA-Z0-9?&=%./]+
 \bslack-imgs\.com/[-a-zA-Z0-9?&=%.]+
 
