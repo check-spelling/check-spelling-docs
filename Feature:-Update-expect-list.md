@@ -75,14 +75,14 @@ Deploy keys can be read-only or read-write.
 Using a [read-write deploy key](https://docs.github.com/en/developers/overview/managing-deploy-keys#setup-2) should allow [**@check-spelling-bot**](https://github.com/check-spelling-bot) to update your PR and also trigger workflows. This will be the recommended approach as of v0.0.20 or thereabouts.
 
 Essentially, this involves:
-1. [Creating an encrypted secret](https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository) -- be mindful of the [secret naming constraints](https://docs.github.com/en/actions/security-guides/encrypted-secrets#naming-your-secrets), e.g., `CHECKSPELLING`.
+1. [Creating an encrypted secret](https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository) -- be mindful of the [secret naming constraints](https://docs.github.com/en/actions/security-guides/encrypted-secrets#naming-your-secrets), e.g., `CHECK_SPELLING`.
 2. Changing the workflow for the update comment handler's `uses: action/checkout` step to provide the secret, e.g.:
 
 ```yaml
 - name: checkout
   uses: actions/checkout@v3
   with:
-    ssh-key: "${{ secrets.CHECKSPELLING }}"
+    ssh-key: "${{ secrets.CHECK_SPELLING }}"
 ```
 
 ###### read-write deploy key limitations
