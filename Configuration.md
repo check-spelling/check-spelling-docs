@@ -273,7 +273,7 @@ Some candidates:
 * C or JavaScript reserved words
 * The names of all types/ functions from the C standard library
 
-See [Area dictionaries](https://github.com/check-spelling/check-spelling/wiki/Feature%3A-Area-dictionaries) for other examples (and my plan for eventually making this easier).
+See [Area dictionaries](https://github.com/check-spelling/check-spelling/wiki/Feature:-Area-dictionaries) for other examples (and my plan for eventually making this easier).
 
 ### dictionary
 
