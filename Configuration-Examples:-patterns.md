@@ -277,7 +277,7 @@ sha256:[0-9a-f]+
 # hex digits including css/html color classes:
 (?:[\\0][xX]|\\u|[uU]\+|#x?|\%23)[0-9a-fA-FgGrR_]{2,}(?:[uUlL]{0,3}|u\d+)\b
 # integrity
-integrity="sha384-[-a-zA-Z=;:/0-9+]{64}"
+integrity="sha\d+-[-a-zA-Z=;:/0-9+]{40,}"
 
 # https://www.gnu.org/software/groff/manual/groff.html
 # man troff content
