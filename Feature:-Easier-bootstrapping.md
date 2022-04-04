@@ -2,6 +2,8 @@
 
 You should be able to copy the contents of https://github.com/check-spelling/spell-check-this/ into your repository and push.
 
+Versions 0.0.20 and newer can offer to install [spell-check-this](https://github.com/check-spelling/spell-check-this/)'s template content.
+
 Versions 0.0.17 and newer will walk you through improvements (as will that repository's template content).
 
 ## Historical information
