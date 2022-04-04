@@ -19,13 +19,14 @@
 * [[Suggest commit after expect update|Feature: Suggest commit after expect update]]
 * [[Forbidden patterns|Feature: Forbidden patterns]]
 * [[Configurable file size limits|Feature: Configurable file size limits]]
+* [[Duplicate word detection|Feature: Duplicate word detection]]
+* [[Regression testing]]
+* [[Update with deploy key|Feature: Update with deploy key]]
 
 ## In progress
 
 * [[Easier to understand filenames|Feature: Easier to understand filenames]]
 * [[Aliases|Feature: Aliases]]
-* [[Duplicate word detection|Feature: Duplicate word detection]]
-* [[Regression testing]]
 * [[JSON configuration|Feature: JSON configuration]]
 
 ## Near term
