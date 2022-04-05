@@ -1,6 +1,8 @@
 # Breaking change: Smaller dictionary
 
-The default dictionary 📘 through [[0.0.16-alpha|https://github.com/check-spelling/check-spelling/releases/tag/0.0.16-alpha]] (and at least 0.0.17-alpha) is quite large.
+⏸️ There is no timeline for this work.
+
+The default dictionary 📘 through [[v0.0.19|https://github.com/check-spelling/check-spelling/releases/tag/v0.0.19]] is quite large.
 
 The downside of its comprehensiveness is that it has lots of archaic words.
 This means that it's rather forgiving of typos for common words in favor of those archaic words.
