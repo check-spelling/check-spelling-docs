@@ -1,8 +1,8 @@
 # Behavior change: Consumed line endings
 
-Through 0.0.19, the line ending was included as part of the line being parsed.
+Through [[v0.0.19|https://github.com/check-spelling/check-spelling/releases/tag/v0.0.19]], the line ending was included as part of the line being parsed.
 
-Tentatively, with the next version, the line ending will not be included in the parsed content.
+With the [[v0.0.20|https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20]], the line ending will not be included in the parsed content.
 
 This could impact patterns that specifically look for `\n` / `\r` / ….
 
