@@ -10,3 +10,11 @@
 1. On Linux, paste from your clipboard (possibly `control`-`shift`-`v`, but this may vary based on your terminal). You may need to press `enter`.
 1. Optionally, review the changes.
 1. `git commit` and `git push` as usual.
+
+## Windows
+
+<!-- From
+https://github.com/microsoft/terminal/blame/866d22e3a140ef252e2d777c4bbf0c6d4861a3d4/.github/actions/spelling/advice.md#L7-L9
+-->
+⚠️ The command is written for posix shells. You can copy the contents of each `perl` command excluding the outer `'` marks and dropping any `'"`/`"'` quotation mark pairs into a `file.pl` and then run `perl file.pl` from the root of the repository to run the code. Alternatively, you can manually insert the items...
+
