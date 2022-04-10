@@ -21,6 +21,9 @@ index [0-9a-z]{7,40}\.\.[0-9a-z]{7,40}
 (['"])data:.*?\g{-1}
 data:[-a-zA-Z=;:/0-9+]*,\S*
 
+# mailto urls
+mailto:[-a-zA-Z=;:/?%&0-9+]*
+
 # magnet urls
 magnet:[?=:\w]+
 
