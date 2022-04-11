@@ -19,7 +19,7 @@ into word-like things for checking against a dictionary.
 
 * [[Quick Start]]
 * [[Showcase]]
-* [[Warning descriptions]]
+* [[Event descriptions]]
 * [[Configuration information]]
 * [[Possible features]]
 * [[Security|Security]]
