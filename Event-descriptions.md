@@ -1,6 +1,6 @@
-# Warnings
+# Event
 
-Each warning should be listed in the [**Action Log**](https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/using-workflow-run-logs#viewing-logs-to-diagnose-failures).
+Each event should be listed in the [**Action Log**](https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/using-workflow-run-logs#viewing-logs-to-diagnose-failures).
 
 * [unrecognized-spelling](#unrecognized-spelling)
 * [noisy-file](#noisy-file)
@@ -13,6 +13,8 @@ Each warning should be listed in the [**Action Log**](https://docs.github.com/en
 * [deprecated-feature](#deprecated-feature)
 * [large-file](#large-file)
 * [limited-references](#limited-references)
+
+ℹ️ As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), workflows can configured whether specific events are treated as ❌Errors or ⚠️Warnings.
 
 ## unrecognized-spelling
 
