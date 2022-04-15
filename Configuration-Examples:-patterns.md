@@ -332,6 +332,13 @@ posthog\.init\((['"])phc_[^"',]+\g{-1},
 # Lorem
 (?:\w|\s|[,.])*\b(?i)(?:amet|consectetur|cursus|dolor|eros|ipsum|lacus|libero|ligula|lorem|magna|neque|nulla|suscipit|tempus)\b(?:\w|\s|[,.])*
 
+# Non-English
+[a-zA-Z]*[ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýÿĀāŁłŃńŅņŒœŚśŸŽž][a-zA-ZÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýÿĀāŁłŃńŅņŒœŚśŸŽž]*
+
+# French
+# This corpus only had capital letters, but you probably want lowercase ones as well.
+\b[LN]'+[a-z]+\b
+
 # the negative lookahead here is to allow catching 'templatesz' as a misspelling
 # but to otherwise recognize a Windows path with \templates\foo.template or similar:
 \\templates(?![a-z])
