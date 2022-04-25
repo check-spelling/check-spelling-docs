@@ -13,8 +13,225 @@
 
 ## Windows
 
+### Dissecting the command 
+
 <!-- From
 https://github.com/microsoft/terminal/blame/866d22e3a140ef252e2d777c4bbf0c6d4861a3d4/.github/actions/spelling/advice.md#L7-L9
 -->
 ⚠️ The command is written for posix shells. You can copy the contents of each `perl` command excluding the outer `'` marks and dropping any `'"`/`"'` quotation mark pairs into a `file.pl` and then run `perl file.pl` from the root of the repository to run the code. Alternatively, you can manually insert the items...
 
+Note that if the command is fancy and relies on `curl`, `jq`, and `||`, this will probably be a bit frustrating.
+
+### Programs potentially used by the command in the comment
+
+* curl
+* git
+* jq
+* mktemp
+* perl
+* rm
+* sh
+
+The easiest way to run the command from the comment is via a git bash shell (which gives you everything except `jq`).
+
+You can install everything using [chocolatey aka `choco`](https://chocolatey.org/install) with `choco install git jq`.
+
+### Example using Git Bash
+
+Consider https://github.com/check-spelling/examples-testing/pull/8#issuecomment-766297354
+
+#### Set up the repository
+
+- First, we need the repository
+
+```ps
+# clone the repository
+git clone https://github.com/check-spelling/examples-testing
+# enter the directory
+cd examples-testing
+# normally you'd do `git checkout mary`, but the branch isn't available, so we're grabbing the commit associated with the example comment:
+git fetch origin 56b9b8b81420136ca50362111f700e51e3a9331e:mary
+```
+
+- Open a Git Bash shell
+
+```bash
+# enter the directory
+cd examples-testing
+# check out the appropriate branch
+git checkout mary
+```
+
+- Copy the command from the [comment](https://github.com/check-spelling/examples-testing/pull/8#issuecomment-766297354)
+
+<details><summary>The comment text is included here for reference</summary>
+
+```sh
+update_files() {
+perl -e '
+my @expect_files=qw('".github/actions/spelling/expect.txt"');
+@ARGV=@expect_files;
+my @stale=qw('"$patch_remove"');
+my $re=join "|", @stale;
+my $suffix=".".time();
+my $previous="";
+sub maybe_unlink { unlink($_[0]) if $_[0]; }
+while (<>) {
+if ($ARGV ne $old_argv) { maybe_unlink($previous); $previous="$ARGV$suffix"; rename($ARGV, $previous); open(ARGV_OUT, ">$ARGV"); select(ARGV_OUT); $old_argv = $ARGV; }
+next if /^(?:$re)(?:(?:\r|\n)*$| .*)/; print;
+}; maybe_unlink($previous);'
+perl -e '
+my $new_expect_file=".github/actions/spelling/expect.txt";
+use File::Path qw(make_path);
+use File::Basename qw(dirname);
+make_path (dirname($new_expect_file));
+open FILE, q{<}, $new_expect_file; chomp(my @words = <FILE>); close FILE;
+my @add=qw('"$patch_add"');
+my %items; @items{@words} = @words x (1); @items{@add} = @add x (1);
+@words = sort {lc($a) cmp lc($b)} keys %items;
+open FILE, q{>}, $new_expect_file; for my $word (@words) { print FILE "$word\n" if $word =~ /\w/; };
+close FILE;'
+}
+
+comment_json=$(mktemp)
+curl -L -s -S \
+  --header "Content-Type: application/json" \
+  "https://api.github.com/repos/check-spelling/examples-testing/issues/comments/766297354" > "$comment_json"
+comment_body=$(mktemp)
+jq -r .body < "$comment_json" > $comment_body
+rm $comment_json
+patch_remove=$(perl -ne 'next unless s{^</summary>(.*)</details>$}{$1}; print' < "$comment_body")
+patch_add=$(perl -e '$/=undef;
+$_=<>;
+s{<details>.*}{}s;
+s{^#.*}{};
+s{\n##.*}{};
+s{(?:^|\n)\s*\*}{}g;
+s{\s+}{ }g;
+print' < "$comment_body")
+update_files
+rm $comment_body
+git add -u &&
+[ ! -e "$new_expect_file" ] || git add "$new_expect_file"
+```
+
+</details>
+
+Paste it into the shell. You should see something like this:
+
+```sh
+IEUser@VM MINGW64 ~/examples-testing (mary)
+$ update_files() {
+> perl -e '
+> my @expect_files=qw('".github/actions/spelling/expect.txt"');
+> @ARGV=@expect_files;
+> my @stale=qw('"$patch_remove"');
+> my $re=join "|", @stale;
+> my $suffix=".".time();
+> my $previous="";
+> sub maybe_unlink { unlink($_[0]) if $_[0]; }
+> while (<>) {
+> if ($ARGV ne $old_argv) { maybe_unlink($previous); $previous="$ARGV$suffix"; rename($ARGV, $previous); open(ARGV_OUT, ">$ARGV"); select(ARGV_OUT); $old_argv = $ARGV; }
+> next if /^(?:$re)(?:(?:\r|\n)*$| .*)/; print;
+> }; maybe_unlink($previous);'
+> perl -e '
+> my $new_expect_file=".github/actions/spelling/expect.txt";
+> use File::Path qw(make_path);
+> use File::Basename qw(dirname);
+> make_path (dirname($new_expect_file));
+> open FILE, q{<}, $new_expect_file; chomp(my @words = <FILE>); close FILE;
+>  @wmy @add=qw('"$patch_add"');
+> my %items; @items{@words} = @words x (1); @items{@add} = @add x (1);
+> /\w/@words = sort {lc($a) cmp lc($b)} keys %items;
+> open FILE, q{>}, $new_expect_file; for my $word (@words) { print FILE "$word\n" if $word =~ /\w/; };
+> close FILE;'
+> }
+
+comment_json=$(mktemp)
+curl -L -s -S \
+  --header "Content-Type: application/json" \
+  "https://api.github.com/repos/check-spelling/examples-testing/issues/comments/766297354" > "$comment_json"
+comment_body=$(mktemp)
+jq -r .body < "$comment_json" > $comment_body
+rm $comment_json
+patch_remove=$(perl -ne 'next unless s{^</summary>(.*)</details>$}{$1}; print' < "$comment_body")
+patch_add=$(perl -e '$/=undef;
+$_=<>;
+s{<details>.*}{}s;
+s{^#.*}{};
+s{\n##.*}{};
+s{(?:^|\n)\s*\*}{}g;
+s{\s+}{ }g;
+print' < "$comment_body")
+update_files
+rm $comment_body
+git add -u &&
+[ ! -e "$new_expect_file" ] || git add "$new_expect_file"
+IEUser@VM MINGW64 ~/examples-testing (mary)
+$
+
+IEUser@VM MINGW64 ~/examples-testing (mary)
+$ comment_json=$(mktemp)
+
+IEUser@VM MINGW64 ~/examples-testing (mary)
+$ curl -L -s -S \
+>   --header "Content-Type: application/json" \
+>   "https://api.github.com/repos/check-spelling/examples-testing/issues/comments/766297354" > "$comment_json"
+
+IEUser@VM MINGW64 ~/examples-testing (mary)
+$ comment_body=$(mktemp)
+
+IEUser@VM MINGW64 ~/examples-testing (mary)
+$ jq -r .body < "$comment_json" > $comment_body
+
+IEUser@VM MINGW64 ~/examples-testing (mary)
+$ rm $comment_json
+
+IEUser@VM MINGW64 ~/examples-testing (mary)
+$ patch_remove=$(perl -ne 'next unless s{^</summary>(.*)</details>$}{$1}; print' < "$comment_body")
+
+IEUser@VM MINGW64 ~/examples-testing (mary)
+$ patch_add=$(perl -e '$/=undef;
+> $_=<>;
+> s{<details>.*}{}s;
+> s{^#.*}{};
+> s{\n##.*}{};
+> s{(?:^|\n)\s*\*}{}g;
+> s{\s+}{ }g;
+> print' < "$comment_body")
+
+IEUser@VM MINGW64 ~/examples-testing (mary)
+$ update_files
+
+IEUser@VM MINGW64 ~/examples-testing (mary)
+$ rm $comment_body
+
+IEUser@VM MINGW64 ~/examples-testing (mary)
+$ git add -u &&
+> [ ! -e "$new_expect_file" ] || git add "$new_expect_file"
+warning: LF will be replaced by CRLF in .github/actions/spelling/expect.txt.
+The file will have its original line endings in your working directory
+
+IEUser@VM MINGW64 ~/examples-testing (mary)
+$
+```
+
+#### Finishing up
+
+Check to see what changed (as you would before creating any commit):
+
+```sh
+IEUser@VM MINGW64 ~/examples-testing (mary)
+$ git status
+On branch mary
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   .github/actions/spelling/expect.txt
+```
+
+Create a commit as usual:
+
+```sh
+IEUser@VM MINGW64 ~/examples-testing (mary)
+$ git commit -m 'Updating expect'
+```
