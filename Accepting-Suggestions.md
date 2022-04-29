@@ -24,7 +24,7 @@ https://github.com/microsoft/terminal/blame/866d22e3a140ef252e2d777c4bbf0c6d4861
 
 Note that if the command is fancy and relies on `curl`, `jq`, and `||`, this will probably be a bit frustrating.
 
-### Programs potentially used by the command in the comment
+<details><summary>Programs potentially used by the command in the comment</summary>
 
 * cat
 * curl
@@ -40,6 +40,8 @@ Note that if the command is fancy and relies on `curl`, `jq`, and `||`, this wil
 * sort
 * tr
 * uniq
+
+</details>
 
 ⚠️ If the command includes `rsync`, it probably won't work on Windows, and certain commands that use `jq` to send output to `perl` w/o an intermediate `tr` will probably not work either. (An unreleased version of `jq` could make this work, but...) -- These commands will be replaced by 0.0.20.
 
