@@ -138,7 +138,9 @@ git add -u &&
 
 </details>
 
-Paste it into the shell. You should see something like this:
+Paste it into the shell.
+
+<details><summary>You should see something like this</summary>
 
 ```sh
 IEUser@VM MINGW64 ~/examples-testing (mary)
@@ -236,6 +238,8 @@ The file will have its original line endings in your working directory
 IEUser@VM MINGW64 ~/examples-testing (mary)
 $
 ```
+
+</details>
 
 #### Finishing up
 
