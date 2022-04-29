@@ -13,6 +13,8 @@
 
 ## Windows
 
+🚧  There are unfortunately quite a few quirks in tooling. Most effort has been made to make it possible to ask the bot to update the commit for users and that feature is in fairly good shape at this point. Work is underway to get the commands to work reasonably well on Windows in 2022-May for 0.0.20.
+
 ### Dissecting the command 
 
 <!-- From
@@ -34,10 +36,12 @@ Note that if the command is fancy and relies on `curl`, `jq`, and `||`, this wil
 * mv
 * perl
 * rm
-* rsync
 * sh
 * sort
+* tr
 * uniq
+
+⚠️ If the command includes `rsync`, it probably won't work on Windows, and certain commands that use `jq` to send output to `perl` w/o an intermediate `tr` will probably not work either. (An unreleased version of `jq` could make this work, but...) -- These commands will be replaced by 0.0.20.
 
 The easiest way to run the command from the comment is via a git bash shell (which should give you most of the above, but notably not `jq`).
 
