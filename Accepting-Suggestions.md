@@ -24,15 +24,22 @@ Note that if the command is fancy and relies on `curl`, `jq`, and `||`, this wil
 
 ### Programs potentially used by the command in the comment
 
+* cat
 * curl
 * git
+* grep
 * jq
+* mkdir
 * mktemp
+* mv
 * perl
 * rm
+* rsync
 * sh
+* sort
+* uniq
 
-The easiest way to run the command from the comment is via a git bash shell (which gives you everything except `jq`).
+The easiest way to run the command from the comment is via a git bash shell (which should give you most of the above, but notably not `jq`).
 
 You can install everything using [chocolatey aka `choco`](https://chocolatey.org/install) with `choco install git jq`.
 
