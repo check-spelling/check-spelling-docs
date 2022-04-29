@@ -45,11 +45,19 @@ Note that if the command is fancy and relies on `curl`, `jq`, and `||`, this wil
 
 The easiest way to run the command from the comment is via a git bash shell (which should give you most of the above, but notably not `jq`).
 
-You can install everything using [chocolatey aka `choco`](https://chocolatey.org/install) with `choco install git jq`.
+You can get a reasonably good `Git Bash` environment using [chocolatey aka `choco`](https://chocolatey.org/install): `choco install git jq`.
 
 ### Example using Git Bash
 
 Consider https://github.com/check-spelling/examples-testing/pull/8#issuecomment-766297354
+
+Open Git Bash from the start menu:
+
+<img alt="Git Bash Start Menu entry" src="https://raw.githubusercontent.com/check-spelling/art/git-bash/windows/git-bash-start-menu-item.png" height="100">
+
+The window will look like this:
+
+<img alt="Git Bash window" src="https://raw.githubusercontent.com/check-spelling/art/git-bash/windows/git-bash-window.png" width="500">
 
 #### Set up the repository
 
