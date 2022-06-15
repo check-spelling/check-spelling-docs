@@ -32,6 +32,9 @@ magnet:[?=:\w]+
 # asciinema
 \basciinema\.org/a/[0-9a-zA-Z]+
 
+# apple
+\bdeveloper\.apple\.com/[-\w?=/]+
+
 # appveyor
 \bci\.appveyor\.com/api/projects/status/[0-9a-z]+
 \bci\.appveyor\.com/project/[^/]*/[^/]*/builds?/\d+/job/[0-9a-z]+
