@@ -27,6 +27,9 @@ mailto:[-a-zA-Z=;:/?%&0-9+]*
 # magnet urls
 magnet:[?=:\w]+
 
+# obs:
+"obs:[^"]*"
+
 # The `\b` here means a break, it's the fancy way to handle urls, but it makes things harder to read
 # In this examples content, I'm using a number of different ways to match things to show various approaches
 # asciinema
@@ -245,8 +248,14 @@ ipfs://[0-9a-z]*
 # figma
 \bfigma\.com/file(?:/[0-9a-zA-Z]+/)+
 
+# gitweb
+[^"\s]+/gitweb/\S+;h=[0-9a-f]+
+
 # HyperKitty lists
 /archives/list/[^@/]+\@[^/]*/message/[^/]*/
+
+# lists
+/thread\.html/[^"\s]+
 
 # list-management
 \blist-manage\.com/subscribe(?:[?&](?:u|id)=[0-9a-f]+)+
