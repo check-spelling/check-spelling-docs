@@ -332,6 +332,9 @@ regexp\.MustCompile\(`[^`]*`\)
 # kubectl - pods in CrashLoopBackOff
 \w+-[0-9a-f]+-\w+\s+\d+/\d+\s+CrashLoopBackOff\s+
 
+# kubernetes object suffix
+-[0-9a-f]{10}-\w{5}\s
+
 # posthog secrets
 posthog\.init\((['"])phc_[^"',]+\g{-1},
 
