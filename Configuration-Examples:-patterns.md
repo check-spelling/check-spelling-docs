@@ -171,6 +171,8 @@ link\.medium\.com/[a-zA-Z0-9]+
 \b(?:https?://|)(?:(?:download\.visualstudio|docs|msdn2?)\.microsoft|blogs\.msdn)\.com/[-_a-zA-Z0-9()=./%]*
 # powerbi
 \bapp\.powerbi\.com/reportEmbed/[^"' ]*
+# vs deveops
+\bvisualstudio.com(?::443|)/[-\w/?=%&.]*
 
 # mvnrepository.com
 \bmvnrepository\.com/[-0-9a-z./]+
