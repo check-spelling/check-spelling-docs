@@ -12,6 +12,8 @@ These scripts require functions from [[Looking for items locally|Looking for ite
 * `git_diff_filter` -- mostly for use w/ `git_compare_branches`
 * `drop_everything` -- mostly for rebasing onto trees that have deleted files (typically for splitting a branch)
 * `top_wins` -- pick the first side of a three way merge
+* `what_needs_to_be_fixed` -- look for items that were removed in the current proposed commit but are still present when the commit conflicted
+
 ```
 what_was_removed() {
   git show --word-diff -U0 $1 |
@@ -81,5 +83,17 @@ drop_everything() {
 
 top_wins() {
   perl -pi -e '$/=undef; s/^<<<<<<< HEAD\n//gms;s/\n=======.*?>>>>>>>[^\n]*//msg' "$@"
+}
+
+what_needs_to_be_fixed() {
+  git show $(
+    git status |
+    grep -B1 'see more' |
+    head -1 |
+    perl -ne 'next unless s/^.* pick (\w+) .*/$1/;print'
+  ) --oneline -U0 |
+  rediff |
+  perl -ne 'next unless s/^-//;next if /^-/; print' |
+  review
 }
 ```
