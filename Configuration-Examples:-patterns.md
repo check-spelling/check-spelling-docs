@@ -375,7 +375,7 @@ posthog\.init\((['"])phc_[^"',]+\g{-1},
 # set arguments
 \bset\s+-[abefiuoxE]+\b
 # tar arguments
-\b(?:\\n|)tar(?:(?:\s+--[-a-zA-Z]+|\s+-[a-zA-Z]+|\s[a-z]+)(?:=[^ ]*|))+
+\b(?:\\n|)tar(?:\.exe|)(?:(?:\s+--[-a-zA-Z]+|\s+-[a-zA-Z]+|\s[a-z]+)(?:=[^ ]*|))+
 # macOS temp folders
 /var/folders/\w\w/[+\w]+/(?:T|-Caches-)/
 ```
