@@ -373,7 +373,7 @@ posthog\.init\((['"])phc_[^"',]+\g{-1},
 # curl arguments
 \b(?:\\n|)curl(?:\s+-[a-zA-Z]+)+
 # set arguments
-\bset\s+-[abefiuoxE]+\b
+\bset\s+-[abefimouxE]+\b
 # tar arguments
 \b(?:\\n|)tar(?:\.exe|)(?:(?:\s+--[-a-zA-Z]+|\s+-[a-zA-Z]+|\s[a-z]+)(?:=[^ ]*|))+
 # macOS temp folders
