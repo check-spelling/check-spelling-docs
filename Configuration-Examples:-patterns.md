@@ -90,7 +90,7 @@ themes\.googleusercontent\.com/static/fonts/[^/]+/v\d+/[^.]+.
 # Google Chrome Store
 \bchrome\.google\.com/webstore/detail/[-\w]*(?:/\w*|)
 # Google Books
-\bgoogle\.(?:\w{2,4})/books\?[-\w\d=&#.]*
+\bgoogle\.(?:\w{2,4})/books(?:/\w+)*\?[-\w\d=&#.]*
 # Google Fonts
 \bfonts\.(?:googleapis|gstatic)\.com/[-/?=:;+&0-9a-zA-Z]*
 # Google Forms
