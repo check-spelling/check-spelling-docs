@@ -215,7 +215,7 @@ slack://[a-zA-Z0-9?&=]+
 \bshields\.io/[-\w/%?=&.]*
 
 # stackexchange -- https://stackexchange.com/feeds/sites
-\b(?:askubuntu|serverfault|stack(?:exchange|overflow)|superuser).com/(?:questions/\d+/[a-z-]+|a/)
+\b(?:askubuntu|serverfault|stack(?:exchange|overflow)|superuser).com/(?:questions/\w+/[a-z-]+|a/)
 
 # Sentry
 [0-9a-f]{32}\@o\d+\.ingest\.sentry\.io\b
