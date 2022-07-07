@@ -341,7 +341,7 @@ regexp\.MustCompile\(`[^`]*`\)
 posthog\.init\((['"])phc_[^"',]+\g{-1},
 
 # Update Lorem based on your content (requires `ge` and `w` from https://github.com/jsoref/spelling; and `review` from https://github.com/check-spelling/check-spelling/wiki/Looking-for-items-locally )
-# grep lorem .github/actions/spelling/patterns.txt|perl -pne 's/.*i..\?://;s/\).*//' |tr '|' "\n"|sort -f |xargs -n1 ge|perl -pne 's/^[^:]*://'|sort -u|w|sed -e 's/ .*//'|w|review -
+# grep '^[^#].*lorem' .github/actions/spelling/patterns.txt|perl -pne 's/.*i..\?://;s/\).*//' |tr '|' "\n"|sort -f |xargs -n1 ge|perl -pne 's/^[^:]*://'|sort -u|w|sed -e 's/ .*//'|w|review -
 # Warning, while `(?i)` is very neat and fancy, if you have some binary files that aren't proper unicode, you might run into:
 ## Operation "substitution (s///)" returns its argument for non-Unicode code point 0x1C19AE (the code point will vary).
 ## You could manually change `(?i)X...` to use `[Xx]...`
