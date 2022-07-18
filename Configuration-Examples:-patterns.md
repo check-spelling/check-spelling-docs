@@ -380,6 +380,14 @@ posthog\.init\((['"])phc_[^"',]+\g{-1},
 /var/folders/\w\w/[+\w]+/(?:T|-Caches-)/
 ```
 
+## Duplicates
+
+If you have [duplicate detection](https://github.com/check-spelling/check-spelling/wiki/Feature%3A-Forbidden-patterns#duplicate-words), you may run into false positives, here are some examples of ways to suppress them:
+```
+# mounts
+mount (?:-n |)-t (\w+)\s+\g{-1}
+```
+
 ## See also
 
 * [[Forbidden patterns|Feature: Forbidden patterns]]
