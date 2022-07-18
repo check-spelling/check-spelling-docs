@@ -274,7 +274,7 @@ ipfs://[0-9a-z]*
 # URL escaped characters
 \%[0-9A-F]{2}
 # IPv6
-\b(?:[0-9a-f]{0,4}:){7}[0-9a-f]{0,4}\b
+\b(?:[0-9a-f]{0,4}:){3,7}[0-9a-f]{0,4}\b
 # c99 hex digits (not the full format, just one I've seen)
 0x[0-9a-fA-F](?:\.[0-9a-fA-F]*|)[pP]
 # Punycode
