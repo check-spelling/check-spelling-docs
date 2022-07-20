@@ -299,6 +299,8 @@ integrity="sha\d+-[-a-zA-Z=;:/0-9+]{40,}"
 # https://www.gnu.org/software/groff/manual/groff.html
 # man troff content
 \\f[BCIPR]
+# '
+\\\(aq
 
 # .desktop mime types
 ^MimeTypes?=.*$
