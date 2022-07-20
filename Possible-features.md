@@ -22,6 +22,7 @@
 * [[Duplicate word detection|Feature: Duplicate word detection]]
 * [[Regression testing]]
 * [[Update with deploy key|Feature: Update with deploy key]]
+* [[Artifacts are zipped|Breaking change: Artifacts are zipped]]
 
 ## In progress
 
