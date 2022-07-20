@@ -378,6 +378,8 @@ posthog\.init\((['"])phc_[^"',]+\g{-1},
 \bset\s+-[abefimouxE]+\b
 # tar arguments
 \b(?:\\n|)tar(?:\.exe|)(?:(?:\s+--[-a-zA-Z]+|\s+-[a-zA-Z]+|\s[a-z]+)(?:=[^ ]*|))+
+# tput arguments -- https://man7.org/linux/man-pages/man5/terminfo.5.html -- technically they can be more than 5 chars long...
+\btput\s+(?:(?:-[SV]|-T\s*\w+)\s+)*\w{3,5}\b
 # macOS temp folders
 /var/folders/\w\w/[+\w]+/(?:T|-Caches-)/
 ```
