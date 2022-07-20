@@ -1,10 +1,14 @@
 # Aliases
 
-Currently there are a couple of hard-coded aliases in the word splitter.
+Currently there are a couple of [hard-coded](#hard-coded) aliases in the word splitter.
 
-There are a couple of others that probably should be offered, and it'd be better if this were something that users could configure instead of requiring a new release each time.
+There are a couple of others that probably [should be offered](#Future), and it'd be better if this were something that users could configure instead of requiring a new release each time.
 
-## Right Single Quotation Mark
+## hard-coded
+
+### Right Single Quotation Mark
+
+This happened enough that it was worth supporting before I wrote a proper module for it.
 
 Right Single Quotation Mark (`’`)
 
@@ -14,20 +18,31 @@ Right Single Quotation Mark (`’`)
    s/$rsqm/'/g;
 ```
 
-## HTML Entities
-
-It might make sense to just teach the tool to convert all HTML entities into their pretty forms...
-
-The main ones that I'm considering are:
-
-### html entity encoded single and double quotes
+#### html entity encoded single quote
 
 apostrophe (`'`)
 ```pl
   s/\&(?:apos|#39|#x27);/'/g;
 ```
 
+## Future
+
+### HTML Entities
+
+It might make sense to just teach the tool to convert all HTML entities into their pretty forms...
+
+The main ones that I'm considering are:
+
+#### html entity encoded double quotes
+
 quotation mark (`"`)
 ```pl
   s/\&(?:quot|#34|#x22);/"/g;
+```
+
+### troff
+
+apostrophe (`'`)
+```pl
+  s/\\(aq/'/g
 ```
