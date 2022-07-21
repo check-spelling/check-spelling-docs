@@ -1,6 +1,10 @@
 ## Overview
 
-Deploy keys allow repository workflows to make pushes that trigger workflows, [unlike the `GITHUB_TOKEN`](https://docs.github.com/en/actions/security-guides/automatic-token-authentication#using-the-github_token-in-a-workflow).
+Deploy keys allow repository workflows to make pushes that trigger workflows, [unlike the `GITHUB_TOKEN`](https://docs.github.com/en/actions/security-guides/automatic-token-authentication#using-the-github_token-in-a-workflow):
+
+> When you use the repository's `GITHUB_TOKEN` to perform tasks, events triggered by the `GITHUB_TOKEN` will not create a new workflow run. This prevents you from accidentally creating recursive workflow runs. For example, if a workflow run pushes code using the repository's `GITHUB_TOKEN`, a new workflow will not run even when the repository contains a workflow configured to run when push events occur.
+
+
 
 The easiest way to set up a deploy key (or lots of them) is via scripting.
 
