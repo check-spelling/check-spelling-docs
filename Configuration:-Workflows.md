@@ -1,6 +1,20 @@
 # GitHub Action Events
 
-Supported GitHub actions:
+## Permissions
+
+If your spelling workflow & action haven't been updated to [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), it may not have permissions specified.
+
+[Organizations](https://docs.github.com/en/organizations/managing-organization-settings/disabling-or-limiting-github-actions-for-your-organization#configuring-the-default-github_token-permissions) and [Repositories](https://docs.github.com/en/actions/security-guides/automatic-token-authentication#modifying-the-permissions-for-the-github_token) can set default permissions for workflows to be read-only.
+
+If you see this error (instead of getting comments):
+
+>  curl: (6) Could not resolve host: null
+
+That's probably the problem. The fix is to [upgrade the workflow](https://github.com/check-spelling/spell-check-this/blob/main/.github/workflows/spelling.yml).
+
+Note that this can happen in a fork even if things are working fine in the upstream repository as default permissions can vary from organization to organization or repository to repository.
+
+## Supported GitHub actions
 
 * [push](#push)
 * [pull_request_target](#pull_request_target)
@@ -8,7 +22,7 @@ Supported GitHub actions:
 * [schedule](#schedule)
 * [Checking potential merges for PRs](#checking-prs-by-their-merge-commit)
 
-Notes:
+### Notes
 
 * [Ignore Draft PRs](#draft)
 * See [[Workflow Variables|Configuration#Workflow_Variables]]
