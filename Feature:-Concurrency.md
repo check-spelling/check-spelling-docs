@@ -1,5 +1,7 @@
 # Concurrency
 
+Documented for [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20) and included in the [recommended workflow](https://github.com/check-spelling/spell-check-this/blob/main/.github/workflows/spelling.yml)
+
 ## Background
 Added in April 2021, [GitHub Actions: Limit workflow run or job concurrency](https://github.blog/changelog/2021-04-19-github-actions-limit-workflow-run-or-job-concurrency/).
 
