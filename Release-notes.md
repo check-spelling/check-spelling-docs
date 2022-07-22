@@ -1,8 +1,12 @@
 # Release notes
 
 ## prerelease
+
 <!--🛠️ In various states of `prerelease`-->
 🌟 Almost ready to transition from `prerelease` to release 🍽️
+
+
+## [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20)
 
 * [[Smarter scheduling 2021 October|Feature: Smarter scheduling 2021 October]]
 * [[Suppress push comment for open PRs|Feature: Suppress push comment for open PRs]]
@@ -15,15 +19,23 @@
 * [[Collapse older check comments|Feature: Collapse older check comments]]
 * [[Restricted Permissions|Feature: Restricted Permissions]]
 * [[Bug fix: Case changes should fail]]
-* [Play nice with `@dependabot`](@dependabot)
+* [Play nice with `@dependabot`](https://github.com/check-spelling/check-spelling/wiki/@dependabot)
+* [[Check filenames and paths|Feature: check filenames and paths]]
+* [[Automatically truncate comment|Feature: Automatically truncate comment]]
+* [[Perl module testing|Feature: Perl module testing]]
+* [[Suggest commit after expect update|Feature: Suggest commit after expect update]]
+* [[Forbidden patterns|Feature: Forbidden patterns]]
+* [[Configurable file size limits|Feature: Configurable file size limits]]
+* [[Duplicate word detection|Feature: Duplicate word detection]]
+* [[Update with deploy key|Feature: Update with deploy key]]
+* [[Artifacts are zipped|Breaking change: Artifacts are zipped]]
 
-## v0.0.19
-
+## [v0.0.19](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.19)
 ❗ Please do not use versions older than this.
 
 Information will be available in [GHSA-g86g-chm8-7r2p](https://github.com/check-spelling/check-spelling/security/advisories/GHSA-g86g-chm8-7r2p)
 
-## v0.0.18
+## [v0.0.18](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.18)
 
 * [[Behavior change: Dropping word stemming]]
 * [[Behavior change: Ignoring two letter words]]
