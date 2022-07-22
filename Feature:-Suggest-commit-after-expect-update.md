@@ -1,5 +1,7 @@
 # Suggest commit after expect update
 
+Included in [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20)
+
 ##  Currently the flow is
 1. User creates a PR.
 2. This triggers a workflow which could add a ❌ status.
