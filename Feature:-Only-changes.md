@@ -1,5 +1,7 @@
 # Only files changed in a commit / series
 
+Included in [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20)
+
 Originally, this action would scan the entire repository (or at least everything that isn't covered by `excludes` / skipped per `only`).
 
 Some repositories may take ~20-40 (or even 60-180) minutes to scan. As GitHub bills by the minute, and this action is mostly interested in preventing users from adding new typos, it is useful to only scan files changed recently (or even only the hunks that were changed recently).
