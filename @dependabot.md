@@ -1,5 +1,7 @@
 # @dependabot
 
+I believe this should work in [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20)
+
 `@dependabot` creates commits in the host repository and triggers a special `push` -- where it _doesn't_ have permission to comment (_by default?_).
 
 https://github.community/t/permissions-nesecary-to-comment-on-a-pr/179047/2
