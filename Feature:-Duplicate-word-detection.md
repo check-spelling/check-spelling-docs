@@ -6,7 +6,7 @@ The classic example is `the the quick`
 
 ## Proposal
 
-This will be possible using [[Forbidden patterns|Feature: Forbidden patterns]]:
+This is possible using [[Forbidden patterns|Feature: Forbidden patterns]]:
 
 `line_objections.patterns`:
 ```
