@@ -1,3 +1,7 @@
+# Update with deploy key
+
+Included in [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20)
+
 ## Overview
 
 Deploy keys allow repository workflows to make pushes that trigger workflows, [unlike the `GITHUB_TOKEN`](https://docs.github.com/en/actions/security-guides/automatic-token-authentication#using-the-github_token-in-a-workflow):
