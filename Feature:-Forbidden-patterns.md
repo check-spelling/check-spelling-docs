@@ -1,5 +1,7 @@
 # Forbidden patterns
 
+Included in [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20)
+
 Since the spell checker has to run against all lines, there was a request to be able to reject a pattern, even though it is technically composed of valid words.
 
 The canonical example was [m_data](https://github.com/nasa/fprime/discussions/855#discussion-3469739).
