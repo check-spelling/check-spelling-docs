@@ -17,3 +17,16 @@ It's somewhat similar to [[Feature: Check filenames and paths]].
 * PR summary
 
 Note: while PR description and PR summary aren't technically commit messages, there are a number of `commit` strategies (especially `Squash`) that will end up integrating them into a future commit, and thus it makes sense to offer to check them as well.
+
+## Lazy hackish implementation
+
+1. Create a branch w/ the selected items as files
+2. push it
+3. let check spelling run normally
+
+## Presentation
+
+* Possibly show the git commands to see the individual commit message, e.g.
+  - `git show [SHA]`
+  - curl api to get the pr description
+* Possibly use GITHUB_STEP_SUMMARY
