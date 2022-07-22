@@ -33,4 +33,8 @@ locales/en_GB
 
 ## Convert paths to regular expressions
 
-As of v0.0.20-alpha1, if you have full file paths you want to exclude, you can wrap the path in `^\Q`...`\E$` and add it as a line in `excludes.txt`.
+As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), if you have full file paths you want to exclude, you can wrap the path in `^\Q`...`\E$` and add it as a line in `excludes.txt`.
+
+Note that `\Q`...`\E` notation is not compatible with [v0.0.19](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.19] / older releases, so during migration one should be sure not to use it.
+
+Once you've upgraded, you can safely convert...
