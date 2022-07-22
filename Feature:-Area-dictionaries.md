@@ -1,5 +1,7 @@
 # Area dictionaries
 
+Included in [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20)
+
 ## Basic implementation
 
 You can pull in any public url that has a flat list of words.
@@ -37,7 +39,6 @@ cspell:ada/ada.txt
 cspell:aws/aws.txt
 cspell:bash/bash-words.txt
 cspell:companies/companies.txt
-cspell:cpp/cpp.txt
 cspell:csharp/csharp.txt
 cspell:css/css.txt
 cspell:django/django.txt
@@ -62,6 +63,8 @@ cspell:ruby/ruby.txt
 cspell:rust/rust.txt
 cspell:scala/scala.txt
 ```
+
+Note, while `cspell:cpp/cpp.txt` exists, it includes too many typos to be included by default.
 
 ### Notes
 
