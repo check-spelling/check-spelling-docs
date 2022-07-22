@@ -1,5 +1,7 @@
 # Automatically truncate comment
 
+Included in [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20)
+
 ## Background
 
 GitHub comments are limited to 64k.
@@ -11,6 +13,8 @@ Typically, as part of the first-run experience, it's possible that there will be
 * Split report into multiple comments. - I've chosen not to do this, it seems too annoying, and people already hate comments.
 
 * Somehow truncate portions of the message
+
+* Switch to GITHUB_STEP_SUMMARY
 
 ## Truncation
 
