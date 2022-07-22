@@ -1,8 +1,10 @@
 # Breaking change: Artifacts are zipped
 
+Included in [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20)
+
 ## Background
 
-Prior to v0.0.20, check-spelling produced a number of (generally) tiny files which it used to produce a comment in a secondary pass.
+Prior to [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), check-spelling produced a number of (generally) tiny files which it used to produce a comment in a secondary pass.
 
 Occasionally [actions/upload-artifact](https://github.com/actions/upload-artifact) / [actions/download-artifact](https://github.com/actions/download-artifact) would hit some error on some of the files and trigger a backoff that would take a while to resolve.
 
