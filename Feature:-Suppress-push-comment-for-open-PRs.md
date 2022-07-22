@@ -1,5 +1,7 @@
 # Suppress push comment for open PRs
 
+Included in [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20)
+
 ## Background
 
 The design of check-spelling is such that if you push to a branch, you get instant feedback.
