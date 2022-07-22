@@ -2,36 +2,16 @@
 
 ## Ready
 
-* [[Suppress push comment for open PRs|Feature: Suppress push comment for open PRs]]
-* [[Run locally|Feature: Run locally]] using `act` (note: support for `act` is a bit of a moving target, but in general it should work)
-* [[Area dictionaries|Feature: Area dictionaries]]
-* [[Suggest Area dictionaries|Feature: Suggest Area Dictionaries]]
-* [[Suppress comments|Feature: Suppress comments]]
-* [[Matrix support|Feature: Matrix support]]
-* [[Only changes|Feature: Only-changes]]
-* [[Collapse older check comments|Feature: Collapse older check comments]]
-* [[Restricted Permissions|Feature: Restricted Permissions]]
-* [[Concurrency|Feature: Concurrency]]
-* [Play nice with `@dependabot`](@dependabot)
-* [[Check filenames and paths|Feature: check filenames and paths]]
-* [[Automatically truncate comment|Feature: Automatically truncate comment]]
-* [[Perl module testing|Feature: Perl module testing]]
-* [[Suggest commit after expect update|Feature: Suggest commit after expect update]]
-* [[Forbidden patterns|Feature: Forbidden patterns]]
-* [[Configurable file size limits|Feature: Configurable file size limits]]
-* [[Duplicate word detection|Feature: Duplicate word detection]]
-* [[Regression testing]]
-* [[Update with deploy key|Feature: Update with deploy key]]
-* [[Artifacts are zipped|Breaking change: Artifacts are zipped]]
-
 ## In progress
 
+* [[Regression testing]]
 * [[Easier to understand filenames|Feature: Easier to understand filenames]]
 * [[Aliases|Feature: Aliases]]
 * [[JSON configuration|Feature: JSON configuration]]
 
 ## Near term
 
+* [[Check commit messages|Feature: Check commit messages]]
 * [[Update expect command-line|Feature: update expect command-line]]
 * [[Honor gitattributes|Feature: honor gitattributes]]
 * [[Support gitignore|Feature: Support gitignore]]
@@ -41,7 +21,6 @@
 
 ## Distant future
 
-* [[Check commit messages|Feature: Check commit messages]]
 * [[Tolerate engine upgrades|Feature: Tolerate engine upgrades]]
 * [[Correct misspelled words within GitHub|Feature: Correct misspelling]]
 * [[Learn from corrections|Feature: Learn from corrections]]
