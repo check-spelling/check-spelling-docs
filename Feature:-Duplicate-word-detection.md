@@ -1,5 +1,7 @@
 # Duplicate word detection
 
+Included in [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20)
+
 The classic example is `the the quick`
 
 ## Proposal
