@@ -1,5 +1,7 @@
 # Configurable file size limits
 
+Included in [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20)
+
 ## Background
 
 Historically, check-spelling would check any file it could open.
