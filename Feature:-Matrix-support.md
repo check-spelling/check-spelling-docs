@@ -1,5 +1,7 @@
 # Matrix support
 
+Included in [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20)
+
 In order to make the clock time for spell checking large repositories tolerable, you can use a matrix.
 
 ⚠️ You shouldn't need to use this as of the release after 0.0.19, as it should run much faster on its own.
