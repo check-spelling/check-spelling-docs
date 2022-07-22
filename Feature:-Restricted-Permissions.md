@@ -1,5 +1,7 @@
 # Restricted Permissions
 
+Included in [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20)
+
 GitHub introduced [permissions for GITHUB_TOKEN](https://github.blog/changelog/2021-04-20-github-actions-control-permissions-for-github_token/) which enables one to restrict tokens to just the necessary permissions.
 
 check-spelling has a couple of distinct phases that have differing requirements.
