@@ -2,6 +2,8 @@
 
 ## Ready
 
+* [[Check commit messages|Feature: Check commit messages]]
+
 ## In progress
 
 * [[Regression testing]]
