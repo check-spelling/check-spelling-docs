@@ -2,9 +2,10 @@
 
 ## prerelease
 
-<!--🛠️ In various states of `prerelease`-->
+<!--🛠️ In various states of `prerelease`
 🌟 Almost ready to transition from `prerelease` to release 🍽️
 
+-->
 
 ## [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20)
 
