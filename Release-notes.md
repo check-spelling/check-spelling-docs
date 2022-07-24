@@ -1,8 +1,9 @@
 # Release notes
 
+<!--
 ## prerelease
 
-<!--🛠️ In various states of `prerelease`
+🛠️ In various states of `prerelease`
 🌟 Almost ready to transition from `prerelease` to release 🍽️
 
 -->
