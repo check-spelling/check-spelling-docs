@@ -230,6 +230,7 @@ slack://[a-zA-Z0-9?&=]+
 
 # facebook
 \bfburl\.com/[0-9a-z_]+
+\bfbcdn\.net/[\w/.,]*
 
 # dropbox
 \bdropbox\.com/s/[^/]+/[-0-9A-Za-z_.%]+
