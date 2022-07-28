@@ -140,7 +140,7 @@ accounts.binance.com/[a-z/]*oauth/authorize\?[-0-9a-zA-Z&%]*
 \bcdnjs\.cloudflare\.com/[./\w]+
 
 # circleci
-https://circleci.com/gh/[^/]+/[^/]+/[^/]+(?:/[^/]+|).[a-z]+\?[-0-9a-zA-Z=&]+
+https://circleci.com/gh/[^/]+/[^/]+/[^/]+(?:/[^/]+){0,2}.[a-z]+\?[-0-9a-zA-Z=&]+
 
 # gitter
 \bgitter\.im/[^/]+/[^/]+\?at=[0-9a-f]+
