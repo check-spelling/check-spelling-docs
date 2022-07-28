@@ -54,9 +54,9 @@ magnet:[?=:\w]+
 # AWS SNS
 \bsns\.[-0-9a-z]+.amazonaws\.com/[-\w/&#%_?:=]*
 
-# Here, we're matching `http://` and `https://` by using `s?`
+# While you could try to match `http://` and `https://` by using `s?` in `https?://`, sometimes there
 # YouTube
-https?://(?:(?:www\.|)youtube\.com|youtu.be)/(?:channel/|embed/|playlist\?list=|watch\?v=|v/|)[-a-zA-Z0-9?&=_]*
+\b(?:(?:www\.|)youtube\.com|youtu.be)/(?:channel/|embed/|playlist\?list=|watch\?v=|v/|)[-a-zA-Z0-9?&=_]*
 <\s*youtube\s+id=['"][-a-zA-Z0-9?_]*['"]
 \bimg\.youtube\.com/vi/[-a-zA-Z0-9?&=_]*
 # Google Accounts
