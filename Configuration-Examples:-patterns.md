@@ -74,7 +74,7 @@ magnet:[?=:\w]+
 # The leading `/` here is as opposed to the `\b` above
 # ... a short way to match `https://` or `http://` since most urls have one of those prefixes
 # Google Docs
-/docs\.google\.com/[a-z]+/(?:u/\d+|d/(?:e/|)[0-9a-zA-Z_-]+/)?(?:edit\?[-\w=#.]*|/\?[\w=&]*|)
+/docs\.google\.com/[a-z]+/(?:ccc\?key=\w+|(?:u/\d+|d/(?:e/|)[0-9a-zA-Z_-]+/)?(?:edit\?[-\w=#.]*|/\?[\w=&]*|))
 # Google Drive
 \bdrive\.google\.com/(?:file/d/|open)[-0-9a-zA-Z_?=]*
 # Google Groups
