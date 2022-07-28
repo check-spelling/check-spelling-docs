@@ -78,7 +78,7 @@ https?://(?:(?:www\.|)youtube\.com|youtu.be)/(?:channel/|embed/|playlist\?list=|
 # Google Drive
 \bdrive\.google\.com/(?:file/d/|open)[-0-9a-zA-Z_?=]*
 # Google Groups
-\bgroups\.google\.com/(?:(?:forum/#!|d/)(?:msg|topics|searchin)|a)/[^/]+/[-a-zA-Z0-9]+(?:/[-a-zA-Z0-9]+)*
+\bgroups\.google\.com/(?:(?:forum/#!|d/)(?:msg|topics|searchin)|a)/[^/]+/[-a-zA-Z0-9$]+(?:/[-a-zA-Z0-9]+)*
 # Google Maps
 \bmaps\.google\.com/maps\?[\w&;=]*
 # Google themes
