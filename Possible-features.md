@@ -6,6 +6,7 @@
 
 ## In progress
 
+* [[Suggest patterns|Feature: Suggest patterns]]
 * [[Regression testing]]
 * [[Easier to understand filenames|Feature: Easier to understand filenames]]
 * [[Aliases|Feature: Aliases]]
