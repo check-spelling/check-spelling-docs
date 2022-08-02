@@ -376,7 +376,7 @@ posthog\.init\((['"])phc_[^"',]+\g{-1},
 # curl arguments
 \b(?:\\n|)curl(?:\s+-[a-zA-Z]+)+
 # set arguments
-\bset\s+-[abefimouxE]+\b
+\bset(?:\s+-[abefimouxE]{1,2})*\s+-[abefimouxE]{3,}(?:\s+-[abefimouxE]+)*
 # tar arguments
 \b(?:\\n|)tar(?:\.exe|)(?:(?:\s+--[-a-zA-Z]+|\s+-[a-zA-Z]+|\s[a-z]+)(?:=[^ ]*|))+
 # tput arguments -- https://man7.org/linux/man-pages/man5/terminfo.5.html -- technically they can be more than 5 chars long...
