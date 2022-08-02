@@ -38,11 +38,13 @@ magnet:[?=:\w]+
 # apple
 \bdeveloper\.apple\.com/[-\w?=/]+
 
-# appveyor
+# appveyor api
 \bci\.appveyor\.com/api/projects/status/[0-9a-z]+
+# appveyor project
 \bci\.appveyor\.com/project/[^/]*/[^/]*/builds?/\d+/job/[0-9a-z]+
 
 # Amazon
+
 # Amazon
 \bamazon\.com/[-\w]+/(?:dp/[0-9A-Z]+|)
 # AWS S3
@@ -55,9 +57,11 @@ magnet:[?=:\w]+
 \bsns\.[-0-9a-z]+.amazonaws\.com/[-\w/&#%_?:=]*
 
 # While you could try to match `http://` and `https://` by using `s?` in `https?://`, sometimes there
-# YouTube
+# YouTube url
 \b(?:(?:www\.|)youtube\.com|youtu.be)/(?:channel/|embed/|playlist\?list=|watch\?v=|v/|)[-a-zA-Z0-9?&=_]*
+# YouTube tag
 <\s*youtube\s+id=['"][-a-zA-Z0-9?_]*['"]
+# YouTube image
 \bimg\.youtube\.com/vi/[-a-zA-Z0-9?&=_]*
 # Google Accounts
 \baccounts.google.com/[-_/?=.:;+%&0-9a-zA-Z]*
@@ -65,6 +69,7 @@ magnet:[?=:\w]+
 \bgoogle-analytics\.com/collect.[-0-9a-zA-Z?%=&_.~]*
 # Google APIs
 \bgoogleapis\.(?:com|dev)/[a-z]+/(?:v\d+/|)[a-z]+/[@:./?=\w]+
+# Google Storage
 \b[-a-zA-Z0-9.]*\bstorage\d*\.googleapis\.com(?:/\S*|)
 # Google Calendar
 \bcalendar\.google\.com/calendar(?:/u/\d+|)/embed\?src=[@./?=\w&%]+
@@ -96,9 +101,11 @@ themes\.googleusercontent\.com/static/fonts/[^/]+/v\d+/[^.]+.
 # Google Forms
 \bforms\.gle/\w+
 
-# GitHub SHAs
+# GitHub SHAs (api)
 \bapi.github\.com/repos/[^/]+/[^/]+/[^/]+/[0-9a-f]+\b
+# GitHub SHAs (markdown)
 (?:\[`?[0-9a-f]+`?\]\(https:/|)/(?:www\.|)github\.com/[^/)]+/[^/)]+(?:/[^/)]+/[0-9a-f]+(?:[-0-9a-zA-Z/#.]*|)\b|)
+# GitHub SHAs
 \bgithub\.com/[^/]+/[^/]+[@#][0-9a-f]+\b
 # githubusercontent
 /[-a-z0-9]+\.githubusercontent\.com/[-a-zA-Z0-9?&=_\/.]*
@@ -113,18 +120,23 @@ themes\.googleusercontent\.com/static/fonts/[^/]+/v\d+/[^.]+.
 # GHSA
 GHSA(?:-[0-9a-z]{4}){3}
 
-# GitLab
+# GitLab commit
 \bgitlab\.[^/]*/\S+/\S+/commit/[0-9a-f]{7,16}#[0-9a-f]{40}\b
+# GitLab merge requests
 \bgitlab\.[^/]*/\S+/\S+/-/merge_requests/\d+/diffs#[0-9a-f]{40}\b
+# GitLab uploads
 \bgitlab\.[^/]*/uploads/[-a-zA-Z=;:/0-9+]*
+# GitLab commits
 \bgitlab\.[^/]*/[^/]+/[^/]+/commits?/[0-9a-f]+\b
 
 # binanace
 accounts.binance.com/[a-z/]*oauth/authorize\?[-0-9a-zA-Z&%]*
 
-# bitbucket
+# bitbucket diff
 \bapi\.bitbucket\.org/\d+\.\d+/repositories/[^/]+/[^/]+/diff(?:stat|)/[^/]+/[^/]+:[0-9a-f]+
+# bitbucket repositories commits
 \bapi\.bitbucket\.org/\d+\.\d+/repositories/[^/]+/[^/]+/commits?/[0-9a-f]+
+# bitbucket commits
 \bbitbucket\.org/[^/]+/[^/]+/commits?/[0-9a-f]+
 
 # bit.ly
@@ -163,8 +175,9 @@ accounts.binance.com/[a-z/]*oauth/authorize\?[-0-9a-zA-Z&%]*
 # Disqus
 \bdisqus\.com/[-\w/%.()!?&=_]*
 
+# medium link
+\blink\.medium\.com/[a-zA-Z0-9]+
 # medium
-link\.medium\.com/[a-zA-Z0-9]+
 \bmedium\.com/\@[^/]+/[-\w]+
 
 # microsoft
@@ -192,8 +205,9 @@ link\.medium\.com/[a-zA-Z0-9]+
 # compai
 \bcompai\.pub/v1/png/[0-9a-f]+
 
-# mailgun
+# mailgun api
 \.api\.mailgun\.net/v3/domains/[0-9a-z]+\.mailgun.org/messages/[0-9a-zA-Z=@]*
+# mailgun
 \b[0-9a-z]+.mailgun.org
 
 # Reddit
@@ -205,10 +219,13 @@ link\.medium\.com/[a-zA-Z0-9]+
 # sched
 \b[a-z0-9]+\.sched\.com\b
 
-# Slack
+# Slack url
 slack://[a-zA-Z0-9?&=]+
+# Slack
 \bslack\.com/[-0-9a-zA-Z/_~?&=.]*
+# Slack edge
 \bslack-edge\.com/[-a-zA-Z0-9?&=%./]+
+# Slack images
 \bslack-imgs\.com/[-a-zA-Z0-9?&=%.]+
 
 # shields.io
@@ -220,23 +237,30 @@ slack://[a-zA-Z0-9?&=]+
 # Sentry
 [0-9a-f]{32}\@o\d+\.ingest\.sentry\.io\b
 
-# Twitter
+# Twitter markdown
 \[\@[^[/\]:]*?]\(https://twitter.com/[^/)]*(?:/status/\d+(?:\?[-_0-9a-zA-Z&=]*|)|)\)
+# Twitter hashtag
 \btwitter\.com/hashtag/[\w?_=&]*
+# Twitter status
 \btwitter\.com/[^/)]*(?:/status/\d+(?:\?[-_0-9a-zA-Z&=]*|)|)
+# Twitter profile images
 \btwimg\.com/profile_images/[_\w./]*
+# Twitter media
 \btwimg\.com/media/[-_\w./?=]*
+# Twitter link shortened
 \bt\.co/\w+
 
 # facebook
 \bfburl\.com/[0-9a-z_]+
+# facebook CDN
 \bfbcdn\.net/[\w/.,]*
 
 # dropbox
 \bdropbox\.com/s/[^/]+/[-0-9A-Za-z_.%]+
 
-# ipfs
+# ipfs protocol
 ipfs://[0-9a-z]*
+# ipfs url
 /ipfs/[0-9a-z]*
 
 # w3
@@ -369,9 +393,11 @@ posthog\.init\((['"])phc_[^"',]+\g{-1},
 [#]backwards
 # version suffix <word>v#
 [Vv]\d+(?:\b|(?=[a-zA-Z_]))
-# Compiler flags
+# Compiler flags (Scala)
 (?:^|[\t ,>"'`=(])(?:-J|)-[DPWXY]
+# Compiler flags
 (?:^|[\t ,"'`=(])-[DPWXYLlf]
+# Compiler flags (linker)
 ,-B
 # curl arguments
 \b(?:\\n|)curl(?:\s+-[a-zA-Z]+)+
@@ -383,6 +409,7 @@ posthog\.init\((['"])phc_[^"',]+\g{-1},
 \btput\s+(?:(?:-[SV]|-T\s*\w+)\s+)*\w{3,5}\b
 # macOS temp folders
 /var/folders/\w\w/[+\w]+/(?:T|-Caches-)/
+
 ```
 
 ## Duplicates
