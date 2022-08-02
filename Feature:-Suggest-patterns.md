@@ -11,7 +11,9 @@ This could be run after applying current patterns but before checking words agai
 
 ### Cons
 
-This would scale poorly (each line of each file cross each pattern).
+This might scale poorly (each line of each file cross each pattern).
+
+I'm experimenting with this in `prerelease` post the 0.0.20 release.
 
 ## After a word is found to not be in the dictionary
 
@@ -20,3 +22,31 @@ After finding a word, in order to report the word's position in the unmasked lin
 ### Cons
 
 If a pattern is bad, it could introduce unrecognized words that aren't naturally present. - Suggestions should be curated, so this shouldn't be a real problem.
+
+## Poor patterns
+
+### Greedy
+
+This is an example of a pattern that is great once the corpus has been heavily filtered, but not great when applied too eagerly:
+```
+# version suffix <word>v#
+[Vv]\d+(?:\b|(?=[a-zA-Z_]))
+```
+
+### Not demanding enough
+
+This isn't a bad pattern, but it isn't useful as is:
+
+```
+# set arguments
+\bset\s+-[abefimouxE]+\b
+```
+
+It would match:
+
+`set -e`, but `set` is in the dictionary, and `e` is too short to be checked. To be a useful pattern, it would need to be something more like:
+
+```
+# set arguments
+\bset(?:\s+-[abefimouxE]{1,2})*\s+-[abefimouxE]{3,}(?:\s+-[abefimouxE]+)*
+```
