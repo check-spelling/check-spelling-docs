@@ -14,6 +14,7 @@
 
 ## Near term
 
+* [[Sarif output|Feature: Sarif output]]
 * [[Check commit messages|Feature: Check commit messages]]
 * [[Update expect command-line|Feature: update expect command-line]]
 * [[Honor gitattributes|Feature: honor gitattributes]]
