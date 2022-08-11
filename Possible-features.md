@@ -16,6 +16,7 @@
 
 * [[Sarif output|Feature: Sarif output]]
 * [[Check commit messages|Feature: Check commit messages]]
+* [[Behavior change: case changes in expect|Behavior change: case changes in expect]]
 * [[Update expect command-line|Feature: update expect command-line]]
 * [[Honor gitattributes|Feature: honor gitattributes]]
 * [[Support gitignore|Feature: Support gitignore]]
