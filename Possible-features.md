@@ -2,20 +2,20 @@
 
 ## Ready
 
-* [[Check commit messages|Feature: Check commit messages]]
+* 🔍 [[Check commit messages|Feature: Check commit messages]]
+* 🗜️ [[Breaking change: Smaller cspell dictionaries]]
 
 ## In progress
 
-* [[Suggest patterns|Feature: Suggest patterns]]
-* [[Regression testing]]
+* 🧙 [[Suggest patterns|Feature: Suggest patterns]]
+* 🧪 [[Regression testing]]
 * [[Easier to understand filenames|Feature: Easier to understand filenames]]
-* [[Aliases|Feature: Aliases]]
-* [[JSON configuration|Feature: JSON configuration]]
+* ↪️ [[Aliases|Feature: Aliases]]
+* ⚙️ [[JSON configuration|Feature: JSON configuration]]
 
 ## Near term
 
 * [[Sarif output|Feature: Sarif output]]
-* [[Check commit messages|Feature: Check commit messages]]
 * [[Behavior change: case changes in expect|Behavior change: case changes in expect]]
 * [[Update expect command-line|Feature: update expect command-line]]
 * [[Honor gitattributes|Feature: honor gitattributes]]
