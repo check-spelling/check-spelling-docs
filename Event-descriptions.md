@@ -38,6 +38,8 @@ This generally means that the file doesn't appear to be English.
 
 Technically it means there are fewer unique dictionary words in the file than unique non-word tokens.
 
+ℹ️ Info: [[Feature: Autodetect noisy files]]
+
 ### Resolution
 
 * If the file shouldn't be in the repository, `git rm` it (recently the tool flagged a spurious `.mp4` file)
@@ -45,6 +47,7 @@ Technically it means there are fewer unique dictionary words in the file than un
 * If the file should be checked, some combination of:
   - add entries to the dictionary (via `allow.txt`)
   - mask runs of noise (via `patterns.txt`)
+* If you really just need to check the files, see [[Scan noisy files|Feature: Scan noisy files]]
 
 ## bad-regex
 
