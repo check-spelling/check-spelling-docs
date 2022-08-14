@@ -39,6 +39,7 @@ See [[Configuration: Workflows]] for the supported GitHub workflows.
 | [ignore_security_advisory](#ignore_security_advisory) | Override action security state warning |
 | [largest_file](#largest_file) | Ignore large files |
 | [unknown_word_limit](#unknown_word_limit) | Limit the number of reports per unknown word |
+| [disable_checks](#disable_checks) | Disable various check-spelling behaviors |
 
 See [[Configuration: Advanced]] for additional options.
 
@@ -389,3 +390,12 @@ The order of operations is:
 > `(dictionary + allows) - reject`
 
 See [[Configuration Examples: reject]] for examples.
+
+## disable_checks
+
+Introduced after v0.0.20:
+
+This is a comma-delimited list of flags:
+
+* `noisy-file` - [[Scan noisy files|Feature: Scan noisy files]]
+* `word-collating` - [[Disable word collating|Feature: Disable word collating]]
