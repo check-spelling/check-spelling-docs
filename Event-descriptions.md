@@ -13,6 +13,7 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
 * [deprecated-feature](#deprecated-feature)
 * [large-file](#large-file)
 * [limited-references](#limited-references)
+* [dictionary-not-found](#dictionary-not-found)
 
 ℹ️ As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), workflows can configure whether specific events are treated as ❌Errors or ⚠️Warnings.
 
@@ -189,3 +190,52 @@ If the file(s) containing it shouldn't be checked, add patterns to skip them to 
 
 If the item is misspelled, fixing the reported instances will disclose additional instances.
 You could of course use your local tools to find the remaining instances.
+
+## dictionary-not-found
+
+> Error: Failed to retrieve cspell:software-terms/softwareTerms.txt -- https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20220814/dictionaries/software-terms/softwareTerms.txt (dictionary-not-found)
+
+This can happen if a path to a dictionary is incorrect. The most common case is when upgrading versions of check-spelling. Newer versions may use refreshed versions of the [cspell: dictionaries](https://github.com/streetsidesoftware/cspell-dicts) which may have reorganized their dictionaries.
+
+### Resolution
+
+#### Auto-detect
+
+You can simply remove the dictionary reference(s) and remove (if present):
+
+```yaml
+  with:
+    check_extra_dictionaries: ''
+```
+
+This will let check-spelling suggest new dictionaries.
+
+#### Update
+
+You can browse through the current dictionaries and identify suitable replacements. The output will show a URL which includes a repository and tag (e.g. `check-spelling/cspell-dicts/v20220814`), you can thus browse to https://github.com/check-spelling/cspell-dicts/tree/v20220814/dictionaries/. That might be something like (although you should consider which dictionary/dictionaries are relevant to your repository):
+
+```yaml
+  with:
+    extra_dictionaries:
+      cspell:software-terms/src/network-os.txt
+      cspell:software-terms/src/software-tools.txt
+      cspell:software-terms/src/network-protocols.txt
+```
+
+#### Use older dictionaries
+
+If you want to continue to use the previous dictionaries, you can check the `action.yml` for the previous version of check-spelling or the `with:` output from a working run of check-spelling and copy the `dictionary_source_prefixes` value, e.g.:
+
+```yaml
+  with:
+    dictionary_source_prefixes: '{"cspell": "https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20220427/dictionaries/"}'
+```
+
+or you can specify the single dictionary directly (by expanding any url prefixes, e.g. `cspell:` appropriately):
+
+```diff
+   with:
+     extra_dictionaries:
+-      cspell:software-terms/softwareTerms.txt
++      https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20220427/dictionaries/software-terms/softwareTerms.txt
+```
