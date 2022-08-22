@@ -195,7 +195,7 @@ You could of course use your local tools to find the remaining instances.
 
 > Error: Failed to retrieve cspell:software-terms/softwareTerms.txt -- https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20220814/dictionaries/software-terms/softwareTerms.txt (dictionary-not-found)
 
-This can happen if a path to a dictionary is incorrect. The most common case is when upgrading versions of check-spelling. Newer versions may use refreshed versions of the [cspell: dictionaries](https://github.com/streetsidesoftware/cspell-dicts) which may have reorganized their dictionaries.
+This can happen if a path to a dictionary is incorrect. The most common case is when upgrading versions of check-spelling. Newer versions may use refreshed versions of the [cspell: dictionaries](https://github.com/streetsidesoftware/cspell-dicts) and their dictionaries are reorganized periodically.
 
 ### Resolution
 
@@ -224,18 +224,48 @@ You can browse through the current dictionaries and identify suitable replacemen
 
 #### Use older dictionaries
 
-If you want to continue to use the previous dictionaries, you can check the `action.yml` for the previous version of check-spelling or the `with:` output from a working run of check-spelling and copy the `dictionary_source_prefixes` value, e.g.:
-
-```yaml
+If you want to continue to use the previous dictionaries, you can check the run output of a previous version of check-spelling for the `with:` output, e.g.:
+```
   with:
-    dictionary_source_prefixes: '{"cspell": "https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20220427/dictionaries/"}'
+    dictionary_source_prefixes: {"cspell": "https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20220427/dictionaries/"}
 ```
 
-or you can specify the single dictionary directly (by expanding any url prefixes, e.g. `cspell:` appropriately):
+and specify the single dictionary directly (by expanding any url prefixes, e.g. `cspell:` appropriately), e.g.:
 
 ```diff
    with:
      extra_dictionaries:
 -      cspell:software-terms/softwareTerms.txt
 +      https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20220427/dictionaries/software-terms/softwareTerms.txt
+```
+
+You could also copy over the prefix into your configuration, but note that `check_extra_dictionaries` will probably not match, so using:
+
+```yaml
+  with:
+    dictionary_source_prefixes: '{"cspell": "https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20220427/dictionaries/"}'
+```
+
+Will result in the same warning, but it will be non-fatal:
+
+> Failed to retrieve cspell:public-licenses/src/generated/public-licenses.txt -- https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20220427/dictionaries/public-licenses/src/generated/public-licenses.txt (dictionary-not-found)
+
+#### Use multiple prefixes
+
+In order to retain the `check_extra_dictionaries` behavior, while still retaining the old dictionary reference, and without having long urls in `extra_dictionaries`, you can add additional prefixes to `dictionary_source_prefixes`.
+
+In this example, the default for `dictionary_source_prefixes` is `{"cspell": "https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20220814/dictionaries/"}` and the previous default was `{"cspell": "https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20220427/dictionaries/"}`. By changing the previous default's prefix to `cspell0` and copying over the current default, it's possible to use dictionaries from both and a manner that might be slightly easier to read:
+
+```diff
+   with:
++    dictionary_source_prefixes: |
++      {
++        "cspell": "https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20220814/dictionaries/",
++        "cspell0": "https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20220427/dictionaries/"
++      }
+     extra_dictionaries:
+       cspell:aws/aws.txt
+       cspell:filetypes/filetypes.txt
+-      cspell:software-terms/softwareTerms.txt
++      cspell0:software-terms/softwareTerms.txt
 ```
