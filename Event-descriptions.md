@@ -258,11 +258,7 @@ In this example, the default for `dictionary_source_prefixes` is `{"cspell": "ht
 
 ```diff
    with:
-+    dictionary_source_prefixes: |
-+      {
-+        "cspell": "https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20220814/dictionaries/",
-+        "cspell0": "https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20220427/dictionaries/"
-+      }
++    dictionary_source_prefixes: '{"cspell": "https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20220814/dictionaries/","cspell0": "https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20220427/dictionaries/"}'
      extra_dictionaries:
        cspell:aws/aws.txt
        cspell:filetypes/filetypes.txt
