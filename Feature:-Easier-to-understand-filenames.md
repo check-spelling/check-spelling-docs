@@ -29,7 +29,7 @@ Dictionary | [Remove items from dictionary](https://github.com/check-spelling/ch
 Files | [Ignore files](https://github.com/check-spelling/check-spelling/wiki/Configuration-Examples:-excludes) | patterns | excludes | file_ignore
 Files | [Limit file checking](https://github.com/check-spelling/check-spelling/wiki/Configuration-Examples:-only) | patterns | only | file_exclusive
 Content | [Mask file content](https://github.com/check-spelling/check-spelling/wiki/Configuration-Examples:-patterns) | patterns | patterns | line_masks
-Content | [Forbidden patterns](https://github.com/check-spelling/check-spelling/wiki/Feature:-Forbidden-patterns) | patterns | | line_objections
+Content | [Forbidden patterns](https://github.com/check-spelling/check-spelling/wiki/Feature:-Forbidden-patterns) | patterns | line_forbidden | line_objections
 Output | [Acknowledge some word-like things that aren't in the dictionary](https://github.com/check-spelling/check-spelling/wiki/Configuration#expect) | words | expect | word_expectations
 Output | [Help users respond to the bot](https://github.com/check-spelling/check-spelling/wiki/Configuration-Examples:-advice) | md | advice | `?`
 
