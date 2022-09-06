@@ -14,6 +14,7 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
 * [large-file](#large-file)
 * [limited-references](#limited-references)
 * [dictionary-not-found](#dictionary-not-found)
+* [candidate-pattern](#candidate-pattern)
 
 ℹ️ As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), workflows can configure whether specific events are treated as ❌Errors or ⚠️Warnings.
 
@@ -269,3 +270,17 @@ In this example, the default for `dictionary_source_prefixes` is `{"cspell": "ht
 -      cspell:software-terms/softwareTerms.txt
 +      cspell0:software-terms/softwareTerms.txt
 ```
+
+## candidate-pattern
+
+👩‍🔬 In a version after 0.0.20, as part of [[Suggest patterns|Feature: Suggest patterns]], you can provide a `candidate.patterns` file.
+
+If a line in a file (that isn't _excluded_), and after being filtered for patterns has word-like items that aren't in the dictionary,
+then those lines will be checked against _candidate patterns_. Each candidate will report separately against each line.
+
+If a candidate pattern appeals to you, you can (tinker with, and) add it to `patterns`.
+
+Simple comment lines `# ` preceding a candidate line will be included in the output for candidates in the comment in the report.
+
+In order to give users a chance to understand how useful a given candidate is, a couple of lines that match each pattern are reported.
+These are just line matches at present, the system isn't recording which part of the line matches, although if that turns out to be important, it's possible to adjust the code to report that as well...
