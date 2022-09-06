@@ -53,7 +53,7 @@ By default the [GITHUB_TOKEN](https://docs.github.com/en/actions/reference/authe
 > **Note:** GitHub Actions get an automatic token which allows for read operations.
 > If the Action is a [pull_request](#pull_request) and the originating repository isn't trusted, then the automatic token will not have write permission, 
 > which means it won't be able to post a comment to the PR, there are three ways to address this:
-> * Use [pull_request_target](./Configuration:-Workflows#pull_request_target) recommended as of 0.0.17-alpha
+> * Use [pull_request_target](./Configuration:-Workflows#pull_request_target) recommended as of [0.0.17-alpha](https://github.com/check-spelling/check-spelling/releases/tag/0.0.17-alpha)
 > * Create a custom Personal Access Token with `repo read` + `comment`
 > * Use [schedule](./Configuration:-Workflows#schedule) instead
 
@@ -70,7 +70,7 @@ the spell checker will retrieve a dictionary. You can provide a different url
 if you have a preferred base. The default includes a variable (`$DICTIONARY_VERSION`)
 for a [version](#dictionary_version).
 
-This [[feature|Feature: Versioned dictionaries]] is new with 0.0.17.
+This [[feature|Feature: Versioned dictionaries]] is new with [0.0.17](https://github.com/check-spelling/check-spelling/releases/tag/0.0.17-alpha).
 
 ### dictionary_version
 
@@ -83,7 +83,7 @@ for more information.
 
 ### experimental_apply_changes_via_bot
 
-❗ As of 0.0.18, this feature is not ready for repositories with non members/other bots.
+❗ As of [0.0.18](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.18), this feature is not ready for repositories with non members/other bots.
    - It will 💬 in response to other bot's comments or other accounts not associated with the
    PR explaining that it's confused.
    - If everyone in a repository is a member, or if PRs from externals are unlikely to receive
@@ -146,7 +146,19 @@ Downside: if someone changes any of the config files, it's likely that they will
 
 ### dictionary_source_prefixes
 
-Currently this holds a single prefix `cspell` which maps to `https://raw.githubusercontent.com/check-spelling/cspell-dicts/HEAD/dictionaries/`.
+As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), this holds a single prefix `cspell` which maps to `https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20220427/dictionaries/`.
+
+Future versions will select different tags for `cspell`, and you can mix and match them, e.g.:
+
+```
+        dictionary_source_prefixes: '{"cspell": "https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20220427/dictionaries/","cspell1": "https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20220814/dictionaries/"}'
+        extra_dictionaries:
+          cspell:lorem-ipsum/dictionary.txt
+          cspell1:software-terms/src/software-terms.txt
+```
+
+> **Warning**
+> If you don't override `check_extra_dictionaries`, you'll want to ensure that `cspell:` maps to something that has each of the items in it, otherwise check-spelling will be a bit upset...
 
 Used with [extra_dictionaries](#extra_dictionaries) / [check_extra_dictionaries](#check_extra_dictionaries) to define supplemental dictionary urls in a compact form.
 
@@ -200,7 +212,7 @@ People misspell file names too. If you want, Check Spelling can complain about t
 
 ### anonymize_secpoll_source
 
-As of 0.0.19, Check Spelling will check to see if the action is known to be unsafe to use. It does this using a DNS query.
+As of [0.0.19](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.19), Check Spelling will check to see if the action is known to be unsafe to use. It does this using a DNS query.
 
 If you don't want your DNS provider to be disclosed to the DNS servers hosting check-spelling, you can use this flag to ask it to pick a public dns server.
 
