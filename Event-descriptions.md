@@ -273,6 +273,21 @@ In this example, the default for `dictionary_source_prefixes` is `{"cspell": "ht
 
 ## candidate-pattern
 
+
+> Notice: src/Stack/Build/Source.hs:214:1 ... 1, Notice - Line matches candidate pattern `(?:^|[\t ,"'`=(])-[DPWXYLlf](?=[A-Z]{2,}|[A-Z][a-z]|[a-z]{2,})` (candidate-pattern)
+
+The report will also include an entry like:
+```perl
+# hit-count: 169 file-count: 40
+# Compiler flags
+(?:^|[\t ,"'`=(])-[DPWXYLlf](?=[A-Z]{2,}|[A-Z][a-z]|[a-z]{2,})
+```
+
+The [line in question](https://github.com/commercialhaskell/stack/blob/f3a167873f6081751babb8a6bb17de7c96f4d8a2/src/Stack/Build/Source.hs#L214) is:
+```hs
+    , concat [["-fhpc"] | isLocal && toCoverage (boptsTestOpts bopts)]
+```
+
 👩‍🔬 In a version after 0.0.20, as part of [[Suggest patterns|Feature: Suggest patterns]], you can provide a `candidate.patterns` file.
 
 If a line in a file (that isn't _excluded_), and after being filtered for patterns has word-like items that aren't in the dictionary,
@@ -284,3 +299,15 @@ Simple comment lines `# ` preceding a candidate line will be included in the out
 
 In order to give users a chance to understand how useful a given candidate is, a couple of lines that match each pattern are reported.
 These are just line matches at present, the system isn't recording which part of the line matches, although if that turns out to be important, it's possible to adjust the code to report that as well...
+
+### Resolution
+
+You can add the pattern into `patterns.txt`:
+
+```perl
+# hit-count: 169 file-count: 40
+# Compiler flags
+(?:^|[\t ,"'`=(])-[DPWXYLlf](?=[A-Z]{2,}|[A-Z][a-z]|[a-z]{2,})
+```
+
+Or, if you've decided that the candidate pattern doesn't make sense for the repository, you can remove it from or comment it out in the `candidate.patterns` file.
