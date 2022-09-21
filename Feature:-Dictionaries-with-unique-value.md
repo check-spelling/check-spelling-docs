@@ -61,3 +61,5 @@ To stop checking additional dictionaries, add:
 Where _unique matching entries_ + _common matching entries_ = _matching entry count_.
 
 An entry in a dictionary would be scored into _unique matching entries_ only if it isn't present in other dictionaries.
+
+https://github.com/check-spelling/zio-flow/commit/b5b7d5f991d234c67f309bc98499c2f86d431bba#commitcomment-84656084 is an example of a single unknown word and many expected words; this example, more than most, drives home the question "would any of these dictionaries reduce this list" -- consider columns for both expected words and unknown words.
