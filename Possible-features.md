@@ -12,6 +12,7 @@
 * [[Easier to understand filenames|Feature: Easier to understand filenames]]
 * ↪️ [[Aliases|Feature: Aliases]]
 * ⚙️ [[JSON configuration|Feature: JSON configuration]]
+* ❄️ [[Dictionaries with unique value|Feature: Dictionaries with unique value]]
 
 ## Near term
 
