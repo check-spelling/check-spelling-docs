@@ -15,6 +15,7 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
 * [limited-references](#limited-references)
 * [dictionary-not-found](#dictionary-not-found)
 * [candidate-pattern](#candidate-pattern)
+* [unsupported-repo-notation](#unsupported-repo-notation)
 
 ℹ️ As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), workflows can configure whether specific events are treated as ❌Errors or ⚠️Warnings.
 
@@ -311,3 +312,9 @@ You can add the pattern into `patterns.txt`:
 ```
 
 Or, if you've decided that the candidate pattern doesn't make sense for the repository, you can remove it from or comment it out in the `candidate.patterns` file.
+
+## unsupported-repo-notation
+
+`spell_check_this` expects a repository and revision of the form `owner/repository@revision`
+
+If the revision you selected doesn't work, feel free to file a bug with a public example (it's certainly possible the pattern is too strict).
