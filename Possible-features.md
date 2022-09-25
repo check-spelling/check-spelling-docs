@@ -13,10 +13,10 @@
 * ↪️ [[Aliases|Feature: Aliases]]
 * ⚙️ [[JSON configuration|Feature: JSON configuration]]
 * ❄️ [[Dictionaries with unique value|Feature: Dictionaries with unique value]]
+* 🌟  [[Sarif output|Feature: Sarif output]]
 
 ## Near term
 
-* [[Sarif output|Feature: Sarif output]]
 * [[Behavior change: case changes in expect|Behavior change: case changes in expect]]
 * [[Update expect command-line|Feature: update expect command-line]]
 * [[Honor gitattributes|Feature: honor gitattributes]]
