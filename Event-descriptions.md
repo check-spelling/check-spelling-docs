@@ -16,6 +16,7 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
 * [dictionary-not-found](#dictionary-not-found)
 * [candidate-pattern](#candidate-pattern)
 * [unsupported-repo-notation](#unsupported-repo-notation)
+* [unsupported-configuration](#unsupported-configuration)
 
 ℹ️ As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), workflows can configure whether specific events are treated as ❌Errors or ⚠️Warnings.
 
@@ -318,3 +319,13 @@ Or, if you've decided that the candidate pattern doesn't make sense for the repo
 `spell_check_this` expects a repository and revision of the form `owner/repository@revision`
 
 If the revision you selected doesn't work, feel free to file a bug with a public example (it's certainly possible the pattern is too strict).
+
+## unsupported-configuration
+
+### `only_check_changed_files` and `use_sarif`
+
+* `only_check_changed_files` will only check certain files
+* `use_sarif` generates a report which GitHub will diff against a previous report with anything missing being marked as resolved
+
+You can choose one or the other. By default, check-spelling favors the former. If you want to use the latter, you'll have to turn off the former.
+
