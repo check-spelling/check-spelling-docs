@@ -329,3 +329,17 @@ If the revision you selected doesn't work, feel free to file a bug with a public
 
 You can choose one or the other. By default, check-spelling favors the former. If you want to use the latter, you'll have to turn off the former.
 
+### `use_sarif` and `security-events: write`
+
+To [upload sarif results](https://docs.github.com/en/code-security/code-scanning/integrating-with-code-scanning/uploading-a-sarif-file-to-github), `use_sarif` needs `security-events: write`.
+
+#### Resolution
+
+Add
+
+```yaml
+permissions:
+  security-events: write
+```
+
+to the `job` that contains the `use_sarif` configuration (or remove the configuration).
