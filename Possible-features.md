@@ -14,11 +14,11 @@
 * ⚙️ [[JSON configuration|Feature: JSON configuration]]
 * ❄️ [[Dictionaries with unique value|Feature: Dictionaries with unique value]]
 * 🌟  [[Sarif output|Feature: Sarif output]]
+* 🏗️  [[Update expect command-line|Feature: update expect command-line]]
 
 ## Near term
 
 * [[Behavior change: case changes in expect|Behavior change: case changes in expect]]
-* [[Update expect command-line|Feature: update expect command-line]]
 * [[Honor gitattributes|Feature: honor gitattributes]]
 * [[Support gitignore|Feature: Support gitignore]]
 * [[Update base branch|Feature: Update base branch]]
