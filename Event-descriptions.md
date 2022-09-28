@@ -335,11 +335,13 @@ To [upload sarif results](https://docs.github.com/en/code-security/code-scanning
 
 #### Resolution
 
-Add
+If you want to use sarif, add:
 
 ```yaml
 permissions:
   security-events: write
 ```
 
-to the `job` that contains the `use_sarif` configuration (or remove the configuration).
+to the `job` that contains the `use_sarif` configuration.
+
+Alternatively, you can remove `use_sarif: ...` from the job in which case the classic error reporting mechanism will be used.
