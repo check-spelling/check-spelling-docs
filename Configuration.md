@@ -40,6 +40,7 @@ See [[Configuration: Workflows]] for the supported GitHub workflows.
 | [largest_file](#largest_file) | Ignore large files |
 | [unknown_word_limit](#unknown_word_limit) | Limit the number of reports per unknown word |
 | [disable_checks](#disable_checks) | Disable various check-spelling behaviors |
+| [check_commit_messages](#check_commit_messages) | Check commit / PR metadata |
 
 See [[Configuration: Advanced]] for additional options.
 
@@ -411,3 +412,15 @@ This is a comma-delimited list of flags:
 
 * `noisy-file` - [[Scan noisy files|Feature: Scan noisy files]]
 * `word-collating` - [[Disable word collating|Feature: Disable word collating]]
+
+## check_commit_messages
+
+Check commit / PR metadata
+
+Value|Check
+-|-
+`commit` | The commit message for the latest commit
+`commits` | The commit messages for pending commits
+`summary` | The PR summary
+`description | The PR description
+
