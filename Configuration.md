@@ -425,6 +425,6 @@ Value|Check
 -|-
 `commit` | The commit message for the latest commit
 `commits` | The commit messages for pending commits
-`summary` | The PR summary
+`title` | The PR title
 `description` | The PR description
 
