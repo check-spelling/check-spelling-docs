@@ -417,10 +417,12 @@ This is a comma-delimited list of flags:
 
 Check commit / PR metadata
 
+You can specify multiple values
+
 Value|Check
 -|-
 `commit` | The commit message for the latest commit
 `commits` | The commit messages for pending commits
 `summary` | The PR summary
-`description | The PR description
+`description` | The PR description
 
