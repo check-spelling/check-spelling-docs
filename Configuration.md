@@ -415,6 +415,8 @@ This is a comma-delimited list of flags:
 
 ## check_commit_messages
 
+Introduced after v0.0.20
+
 Check commit / PR metadata
 
 You can specify multiple values
