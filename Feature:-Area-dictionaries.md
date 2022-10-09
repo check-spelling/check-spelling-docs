@@ -18,14 +18,14 @@ Implemented in `prerelease` as:
           cspell:html/html.txt
 ```
 
-You can define other prefixes using `dictionary_source_prefixes`, the default definition is:
+You can define other prefixes using `dictionary_source_prefixes`, the default definition is something like (but generally using some tag):
 
 ```yaml
     - uses: check-spelling/check-spelling@prerelease
       with:
         dictionary_source_prefixes: >
           {
-            "cspell": "https://raw.githubusercontent.com/check-spelling/cspell-dicts/HEAD/dictionaries/"
+            "cspell": "https://raw.githubusercontent.com/check-spelling/cspell-dicts/master/dictionaries/"
           }
 ```
 
