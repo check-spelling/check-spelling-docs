@@ -24,3 +24,8 @@ It's better from a security perspective to use "least privilege".
 
 * `contents: write` -- to write new commits
 * `pull-requests: write` -- to collapse existing comments and write a new comment
+
+## Workflow
+
+* https://github.com/check-spelling/spell-check-this/blob/main/.github/workflows/spelling.yml defines a workflow that is compatible with these requirements
+
