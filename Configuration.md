@@ -167,6 +167,10 @@ Used with [extra_dictionaries](#extra_dictionaries) / [check_extra_dictionaries]
 
 Extra dictionaries to be used when looking for unknown words.
 
+This is a list of urls, additional url prefixes are defined by [`dictionary_source_prefixes`](#dictionary_source_prefixes).
+
+See [Area dictionaries](https://github.com/check-spelling/check-spelling/wiki/Feature:-Area-dictionaries).
+
 ### check_extra_dictionaries
 
 After unknown words are identified, they can be checked against additional dictionaries.
@@ -287,7 +291,7 @@ Some candidates:
 * C or JavaScript reserved words
 * The names of all types/ functions from the C standard library
 
-See [Area dictionaries](https://github.com/check-spelling/check-spelling/wiki/Feature:-Area-dictionaries) for other examples (and my plan for eventually making this easier).
+See [Area dictionaries](https://github.com/check-spelling/check-spelling/wiki/Feature:-Area-dictionaries) for other examples.
 
 ### dictionary
 
@@ -299,6 +303,8 @@ place it into the directory next to your own.
 
 Alternatively, if you want to retrieve a dictionary from a remote URL,
 see the workflow configuration values [dictionary_url](#dictionary_url) and [dictionary_version](#dictionary_version).
+
+If you just want to supplement the dictionary, you can use [`extra_dictionaries`](#extra_dictionaries) or [allow](#allow).
 
 ### excludes
 
