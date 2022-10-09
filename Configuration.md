@@ -293,6 +293,8 @@ Some candidates:
 
 See [Area dictionaries](https://github.com/check-spelling/check-spelling/wiki/Feature:-Area-dictionaries) for other examples.
 
+For entire reusable lists that don't live in your repository, you can use [extra_dictionaries](#extra_dictionaries) instead.
+
 ### dictionary
 
 This replaces the [default dictionary](https://github.com/check-spelling/check-spelling/raw/dictionary/dict.txt).
