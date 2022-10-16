@@ -17,6 +17,6 @@ While this tool was written to catch misspellings within files, it's actually fa
     check_file_names: 1
 ```
 
-## Improvements
+## Improvements in v0.0.21
 
 In the next version, it will trigger its own warning `check-file-path`
