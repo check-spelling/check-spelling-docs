@@ -17,6 +17,7 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
 * [candidate-pattern](#candidate-pattern)
 * [unsupported-repo-notation](#unsupported-repo-notation)
 * [unsupported-configuration](#unsupported-configuration)
+* [minified-file](#minified-file)
 
 ℹ️ As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), workflows can configure whether specific events are treated as ❌Errors or ⚠️Warnings.
 
@@ -345,3 +346,13 @@ permissions:
 to the `job` that contains the `use_sarif` configuration.
 
 Alternatively, you can remove `use_sarif: ...` from the job in which case the classic error reporting mechanism will be used.
+
+## minified-file
+
+The file has really long lines. It's probably minified.
+
+### Resolution
+
+* If it's minified, add it to excludes
+* If it really should be checked, you can suppress the check by adding `minified-file` to `with:`/`disabled_checks:`
+* If you think the heuristic should be improved, please file a bug with an example
