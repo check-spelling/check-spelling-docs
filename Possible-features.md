@@ -4,6 +4,7 @@
 
 * 🔍 [[Check commit messages|Feature: Check commit messages]]
 * 🗜️ [[Breaking change: Smaller cspell dictionaries]]
+* 🧃 [[Minified file detection|Feature: Minified file detection]]
 
 ## In progress
 
