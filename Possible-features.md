@@ -5,6 +5,7 @@
 * 🔍 [[Check commit messages|Feature: Check commit messages]]
 * 🗜️ [[Breaking change: Smaller cspell dictionaries]]
 * 🧃 [[Minified file detection|Feature: Minified file detection]]
+* ⚠️ [Check filenames and paths `check-file-path`](https://github.com/check-spelling/check-spelling/wiki/Feature%3A-Check-filenames-and-paths#improvements-in-v0021)
 
 ## In progress
 
