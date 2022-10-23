@@ -18,6 +18,7 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
 * [unsupported-repo-notation](#unsupported-repo-notation)
 * [unsupported-configuration](#unsupported-configuration)
 * [minified-file](#minified-file)
+* [duplicate-extra-dictionary](#duplicate-extra-dictionary)
 
 ℹ️ As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), workflows can configure whether specific events are treated as ❌Errors or ⚠️Warnings.
 
@@ -356,3 +357,11 @@ The file has really long lines. It's probably minified.
 * If it's minified, add it to excludes
 * If it really should be checked, you can suppress the check by adding `minified-file` to `with:`/`disabled_checks:`
 * If you think the heuristic should be improved, please file a bug with an example
+
+## duplicate-extra-dictionary
+
+This can happen if you have the same entry multiple times in `extra_dictionaries`.
+
+### Resolution
+
+Remove duplicate entries. check-spelling will ignore duplicate instances.
