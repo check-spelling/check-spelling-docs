@@ -10,14 +10,15 @@ At this point, it'd be helpful if there was a script one could get from the chec
 
 ## Goals
 
-* Supports 
-* Support URLs pointing to Markdown flavored comments
-* Support URLs pointing to GitHub action check logs (requires [[Log Check Run URL|Todo: Log Check Run URL]])
-* Support simple lists of adds/removes
-* Support private repositories (you can't use `curl` to retrieve content from these w/o a token, and I don't want to task users for a token)
-* Enable switching from using a `comment` to using `github_step_summary`
+- [ ] Support URLs pointing to Markdown flavored comments
+- [x] Support URLs pointing to GitHub action check logs (requires [[Log Check Run URL|Todo: Log Check Run URL]])
+- [x] Support simple lists of adds/removes
+- [x] Support excludes
+- [x] Support spell-check-this
+- [x] Support private repositories (you can't use `curl` to retrieve content from these w/o a token, and I don't want to task users for a token)
+- [x] Enable switching from using a `comment` to using `github_step_summary`
 
-* Potentially switch reported shell script / logged shell script to use this script instead
+- [x] Switch reported shell script / logged shell script to use this script instead
 
 ### Distant goals
 
