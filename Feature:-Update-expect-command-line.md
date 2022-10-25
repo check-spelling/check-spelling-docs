@@ -21,19 +21,21 @@ At this point, it'd be helpful if there was a script one could get from the chec
 
 ### Distant goals
 
-* Support a version that would work on Windows.
+* Support a version that would work on Windows. (This might just work)
 
 ## Design choices
 
 * I think that the Windows goal means the script itself would want to be pure `perl`, and the program would be run as `perl update-check-spelling.pl ARGS...`
 
-* Retrieving the data would probably assume `gh` is present and possibly authorized (for private repositories).
-* Retrieving the script would probably assume `curl` is present to have it retrieve the script.
-* I think I'd unconditionally replace the script each time I ran, and I'd probably have the code generate a filename that's based on the commit-sha of the running version of check-spelling so that it is _relatively hard_ for it to collide with anything else.
+* Retrieving the data will assume `gh` is present and possibly authorized (for private repositories).
+* Retrieving the script will assume `curl` is present to have it retrieve the script.
+* I'll unconditionally replace the script each time it runs, if run from a file it can check to see if it's stale.
 
 ## Status
 
-1. `prerelease` can currently report the action run -- e.g. `https://github.com/check-spelling/retrobot/actions/runs/3141578109` -- from which one can identify and retrieve the `check-spelling-comment.zip` artifact, e.g. `gh run download -R check-spelling/retrobot 3141578109 -n check-spelling-comment`.
-2. As the comment is generated more or less directly from that artifact, it would be possible to recreate the data inputs from it.
-3. I think I'm going to adjust the artifact content to provide the inputs that the comment pass uses (currently the comment pass performs some diff actions in order to generate the bits that it renders).
-4. With that, it should be pretty easy to switch the step summary command to a thing that works -- from there, writing an actual command that retrieves the code and then runs it wouldn't be particularly hard.
+- [x] `prerelease` generates something like `curl -L 'https://raw.githubusercontent.com/check-spelling/check-spelling/prerelease/apply.pl' |
+perl - 'https://github.com/check-spelling/lit/actions/runs/3319354094/attempts/1'`
+- [ ] `prerelease` talk-to-bot can't handle such a url
+  - [ ] `prerelease` needs to validate that the url corresponds to its PR
+  - [ ] `prerelease` needs to consume the url (and handle errors)
+- [ ] `prerelease` will need to generate comments of this form
