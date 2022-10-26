@@ -13,9 +13,11 @@
 
 ## Windows
 
+🙏  Hopefully this will just work as of 0.0.21.
+
 🚧  There are unfortunately quite a few quirks in tooling. Most effort has been made to make it possible to ask the bot to update the commit for users and that feature is in fairly good shape at this point. Work is underway to get the commands to work reasonably well on Windows in 2022-May for 0.0.20.
 
-### Dissecting the command 
+### Dissecting the 0.0.20 command 
 
 <!-- From
 https://github.com/microsoft/terminal/blame/866d22e3a140ef252e2d777c4bbf0c6d4861a3d4/.github/actions/spelling/advice.md#L7-L9
