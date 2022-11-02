@@ -348,6 +348,18 @@ to the `job` that contains the `use_sarif` configuration.
 
 Alternatively, you can remove `use_sarif: ...` from the job in which case the classic error reporting mechanism will be used.
 
+### `use_sarif` and private repositories
+
+GitHub SARIF processing requires GitHub Advanced Security to be enabled.
+
+This is possible for Public repositories on GitHub.com and for Enterprise Repositories, but it's possible that you can't use it with Private repositories on GitHub.com.
+
+#### Resolution
+
+* Switch to an enterprise plan (?)
+* Remove `use_sarif`
+* If you have a use for the sarif output beyond GitHub's handling, please file a bug describing your use case -- it's possible to adjust the code to handle this case, but this wasn't supported in the initial implementation, so you are here.
+
 ## minified-file
 
 The file has really long lines. It's probably minified.
