@@ -29,6 +29,7 @@ See [[Configuration: Workflows]] for the supported GitHub workflows.
 | [dictionary_source_prefixes](#dictionary_source_prefixes) | prefixes for urls for dictionaries defined in [extra_dictionaries](#extra_dictionaries) |
 | [extra_dictionaries](#extra_dictionaries) | Dictionaries to include |
 | [check_extra_dictionaries](#check_extra_dictionaries) | If there are unknown words, see if they are in these additional dictionaries |
+| [extra_dictionary_limit](#extra_dictionary_limit) | The number of [check_extra_dictionaries](#check_extra_dictionaries) to report |
 | [event_aliases](#event_aliases) | Map an unsupported GitHub event to a known event |
 | [suppress_push_for_open_pull_request](#suppress_push_for_open_pull_request) | If running from a `push` event and there's an open `pull_request`, stop working and rely on the `pull_request` handling to check the branch |
 | [report_title_suffix](#report_title_suffix) | Appended to title (for use in [matrix configurations](https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#jobsjob_idstrategymatrix)) |
@@ -176,6 +177,10 @@ See [Area dictionaries](https://github.com/check-spelling/check-spelling/wiki/Fe
 After unknown words are identified, they can be checked against additional dictionaries.
 
 This enables users to choose additional dictionaries to add to [extra_dictionaries](#extra_dictionaries) in future runs.
+
+### extra_dictionary_limit
+
+In order to not drown in [check_extra_dictionaries](#check_extra_dictionaries) suggestions, only this number of dictionaries are suggested in reports. The rest are available in the generated artifact. If you find the number of listed dictionaries isn't sufficient, you can increase this number.
 
 ### event_aliases
 
