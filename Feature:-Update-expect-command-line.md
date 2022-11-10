@@ -10,7 +10,7 @@ At this point, it'd be helpful if there was a script one could get from the chec
 
 ## Goals
 
-- [ ] Support URLs pointing to Markdown flavored comments
+- [x] Support URLs pointing to Markdown flavored comments
 - [x] Support URLs pointing to GitHub action check logs (requires [[Log Check Run URL|Todo: Log Check Run URL]])
 - [x] Support simple lists of adds/removes
 - [x] Support excludes
@@ -20,23 +20,21 @@ At this point, it'd be helpful if there was a script one could get from the chec
 
 - [x] Switch reported shell script / logged shell script to use this script instead
 
-### Distant goals
-
-* Support a version that would work on Windows. (This might just work)
+- [x] Support running on Windows
 
 ## Design choices
 
-* I think that the Windows goal means the script itself would want to be pure `perl`, and the program would be run as `perl update-check-spelling.pl ARGS...`
+* The Windows goal means the script itself would want to be pure `perl`, and the program would be run as `perl apply.pl ARGS...`
 
-* Retrieving the data will assume `gh` is present and possibly authorized (for private repositories).
+* Retrieving the data will assume `gh` is present and authorized (`gh` insists on being logged in for most (all?) operations).
 * Retrieving the script will assume `curl` is present to have it retrieve the script.
-* I'll unconditionally replace the script each time it runs, if run from a file it can check to see if it's stale.
+* I'll unconditionally replace the script each time it runs, if run from a file it will check to see if it's stale.
 
 ## Status
 
 - [x] `prerelease` generates something like `curl -L 'https://raw.githubusercontent.com/check-spelling/check-spelling/prerelease/apply.pl' |
 perl - 'https://github.com/check-spelling/lit/actions/runs/3319354094/attempts/1'`
-- [ ] `prerelease` talk-to-bot can't handle such a url
-  - [ ] `prerelease` needs to validate that the url corresponds to its PR
-  - [ ] `prerelease` needs to consume the url (and handle errors)
-- [ ] `prerelease` will need to generate comments of this form
+- [x] `prerelease` talk-to-bot can handle such a url
+  - [x] `prerelease` needs to validate that the url corresponds to its PR
+  - [x] `prerelease` needs to consume the url (and handle errors)
+- [x] `prerelease` will need to generate comments of this form
