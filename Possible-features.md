@@ -6,17 +6,17 @@
 * 🗜️ [[Breaking change: Smaller cspell dictionaries]]
 * 🧃 [[Minified file detection|Feature: Minified file detection]]
 * ⚠️ [Check filenames and paths `check-file-path`](https://github.com/check-spelling/check-spelling/wiki/Feature%3A-Check-filenames-and-paths#improvements-in-v0021)
+* 🧙 [[Suggest patterns|Feature: Suggest patterns]]
+* 🌟  [[Sarif output|Feature: Sarif output]]
+* 🏗️  [[Update expect command-line|Feature: update expect command-line]]
 
 ## In progress
 
-* 🧙 [[Suggest patterns|Feature: Suggest patterns]]
 * 🧪 [[Regression testing]]
 * [[Easier to understand filenames|Feature: Easier to understand filenames]]
 * ↪️ [[Aliases|Feature: Aliases]]
 * ⚙️ [[JSON configuration|Feature: JSON configuration]]
 * ❄️ [[Dictionaries with unique value|Feature: Dictionaries with unique value]]
-* 🌟  [[Sarif output|Feature: Sarif output]]
-* 🏗️  [[Update expect command-line|Feature: update expect command-line]]
 
 ## Near term
 
