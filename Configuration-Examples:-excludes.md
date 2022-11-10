@@ -38,3 +38,7 @@ As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0
 Note that `\Q`...`\E` notation is not compatible with [v0.0.19](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.19] / older releases, so during migration one should be sure not to use it.
 
 Once you've upgraded, you can safely convert...
+
+## Purpose
+
+`excludes` is designed to enable check-spelling to skip files that match any of the patterns in `excludes`.
