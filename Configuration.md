@@ -42,6 +42,7 @@ See [[Configuration: Workflows]] for the supported GitHub workflows.
 | [unknown_word_limit](#unknown_word_limit) | Limit the number of reports per unknown word |
 | [disable_checks](#disable_checks) | Disable various check-spelling behaviors |
 | [check_commit_messages](#check_commit_messages) | Check commit / PR metadata |
+| [use_magic_file](#use_magic_file) | Detect binary files |
 
 See [[Configuration: Advanced]] for additional options.
 
@@ -428,7 +429,7 @@ This is a comma-delimited list of flags:
 
 ## check_commit_messages
 
-Introduced after v0.0.20
+Introduced in [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21)
 
 Check commit / PR metadata
 
@@ -441,3 +442,10 @@ Value|Check
 `title` | The PR title
 `description` | The PR description
 
+## use_magic_file
+
+Introduced in [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21)
+
+Quickly check if files are binary and skip them if they are.
+
+(This is off by default because enabling it by default would be a behavior change and it would be hard to allow users to override it.)
