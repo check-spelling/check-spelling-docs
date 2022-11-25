@@ -456,4 +456,11 @@ Quickly check if files are binary and skip them if they are.
 Introduced in [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21)
 
 See [[Feature: Sarif output]]. This can be used as an alternative to having the tool generate
-comments on PRs / commits. It integrates with GitHub's SARIF analysis and reporting.
+comments on PRs / commits (i.e. you could remove the comment `jobs`).
+
+It integrates with GitHub's SARIF analysis and reporting.
+
+The sarif reports can be made available for download (the spell-check-this sample workflow does this).
+
+Note that GitHub's defaults to not making it easy for people who aren't collaborators to a repository
+to see reports, so the experience may be slightly bumpy for projects w/ external contributors.
