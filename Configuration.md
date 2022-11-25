@@ -43,6 +43,7 @@ See [[Configuration: Workflows]] for the supported GitHub workflows.
 | [disable_checks](#disable_checks) | Disable various check-spelling behaviors |
 | [check_commit_messages](#check_commit_messages) | Check commit / PR metadata |
 | [use_magic_file](#use_magic_file) | Detect binary files |
+| [use_sarif](#use_sarif) | Generate SARIF Reports |
 
 See [[Configuration: Advanced]] for additional options.
 
@@ -449,3 +450,10 @@ Introduced in [v0.0.21](https://github.com/check-spelling/check-spelling/release
 Quickly check if files are binary and skip them if they are.
 
 (This is off by default because enabling it by default would be a behavior change and it would be hard to allow users to override it.)
+
+## use_sarif
+
+Introduced in [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21)
+
+See [[Feature: Sarif output]]. This can be used as an alternative to having the tool generate
+comments on PRs / commits. It integrates with GitHub's SARIF analysis and reporting.
