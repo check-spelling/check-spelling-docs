@@ -8,9 +8,9 @@
 * ⚠️ [Check filenames and paths `check-file-path`](https://github.com/check-spelling/check-spelling/wiki/Feature%3A-Check-filenames-and-paths#improvements-in-v0021)
 * 🧙 [[Suggest patterns|Feature: Suggest patterns]]
 * 🌟 [[Sarif output|Feature: Sarif output]]
+* 📰 [[Step Summary|Feature: Step Summary]]
 * 🏗️ [[Update expect command-line|Feature: update expect command-line]]
 * 🧮 [[Detect binary files|Feature: Detect binary files]]
-* 📰 [[Step Summary|Feature: Step Summary]]
 * 🚫 [[Disable word collating|Feature: Disable word collating]]
 * 🔕 [[Scan noisy files|Feature: Scan noisy files]]
 
