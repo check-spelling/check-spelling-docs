@@ -360,6 +360,14 @@ This is possible for Public repositories on GitHub.com and for Enterprise Reposi
 * Remove `use_sarif`
 * If you have a use for the sarif output beyond GitHub's handling, please file a bug describing your use case -- it's possible to adjust the code to handle this case, but this wasn't supported in the initial implementation, so you are here.
 
+### `use_sarif` and `act`
+
+You can try setting [`GITHUB_TOKEN`](https://github.com/nektos/act#github_token).
+
+This isn't supported and is unlikely to work.
+
+Eventually provisions will be made to generally expose the artifact itself. There is an artifact server which could help....
+
 ## minified-file
 
 The file has really long lines. It's probably minified.
