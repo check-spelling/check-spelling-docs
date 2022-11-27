@@ -11,6 +11,8 @@
 * 🏗️ [[Update expect command-line|Feature: update expect command-line]]
 * 🧮 [[Detect binary files|Feature: Detect binary files]]
 * 📰 [[Step Summary|Feature: Step Summary]]
+* 🚫 [[Disable word collating|Feature: Disable word collating]]
+
 
 ## In progress
 
