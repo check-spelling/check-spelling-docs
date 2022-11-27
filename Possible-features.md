@@ -10,6 +10,7 @@
 * 🌟 [[Sarif output|Feature: Sarif output]]
 * 🏗️ [[Update expect command-line|Feature: update expect command-line]]
 * 🧮 [[Detect binary files|Feature: Detect binary files]]
+* 📰 [[Step Summary|Feature: Step Summary]]
 
 ## In progress
 
