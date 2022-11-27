@@ -3,8 +3,8 @@
 ## Ready
 
 * 🗜️ [[Breaking change: Smaller cspell dictionaries]]
-* 🌟 [[Sarif output|Feature: Sarif output]]
 * 📰 [[Step Summary|Feature: Step Summary]]
+* 🌟 [[Sarif output|Feature: Sarif output]]
 * 🧙 [[Suggest patterns|Feature: Suggest patterns]]
 * 🏗️ [[Update expect command-line|Feature: update expect command-line]]
 * 🔍 [[Check commit messages|Feature: Check commit messages]]
