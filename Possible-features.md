@@ -13,6 +13,7 @@
 * 🧮 [[Detect binary files|Feature: Detect binary files]]
 * 🚫 [[Disable word collating|Feature: Disable word collating]]
 * 🔕 [[Scan noisy files|Feature: Scan noisy files]]
+* 🚧 [[Workaround broken dependencies|Feature: Workaround broken dependencies]]
 
 ## In progress
 
