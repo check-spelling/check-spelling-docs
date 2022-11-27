@@ -12,7 +12,7 @@
 * 🧮 [[Detect binary files|Feature: Detect binary files]]
 * 📰 [[Step Summary|Feature: Step Summary]]
 * 🚫 [[Disable word collating|Feature: Disable word collating]]
-
+* 🔕 [[Scan noisy files|Feature: Scan noisy files]]
 
 ## In progress
 
