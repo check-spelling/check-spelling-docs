@@ -8,6 +8,7 @@
 * 🧙 [[Suggest patterns|Feature: Suggest patterns]]
 * 🏗️ [[Update expect command-line|Feature: update expect command-line]]
 * 🔍 [[Check commit messages|Feature: Check commit messages]]
+* 🪖 [[Restricted Permissions|Feature: Restricted Permissions]]
 * 🧃 [[Minified file detection|Feature: Minified file detection]]
 * ⚠️ [Check filenames and paths `check-file-path`](https://github.com/check-spelling/check-spelling/wiki/Feature%3A-Check-filenames-and-paths#improvements-in-v0021)
 * 🧮 [[Detect binary files|Feature: Detect binary files]]
