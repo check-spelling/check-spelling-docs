@@ -2,7 +2,7 @@
 
 Job Summaries are an alternative to comments
 
-## Comments (present)
+## Comments (...v0.0.20)
 
 * Currently, check-spelling writes its reports using comments which have a 64k size limit. Some repositories hit this limit (although typically only during the initial onboarding).
 * Creating a comment requires write permissions to either PRs to repositories (which is a security concern).
@@ -11,7 +11,7 @@ Job Summaries are an alternative to comments
 * Comments don't inherently know their own url, but when one creates one, the result includes the url, and one can rewrite the comment to embed the url.
 * Artifact urls aren't known until after a workflow completes, which is a real problem, but the download-artifact feature is able to find them anyway...
 
-## Job Summaries (future)
+## Job Summaries ([v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21)+)
 
 * Job Summaries can be considerably larger (1mb?).
 * Job Summaries don't require write permissions.
