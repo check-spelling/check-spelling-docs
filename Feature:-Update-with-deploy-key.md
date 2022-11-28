@@ -64,3 +64,7 @@ rm -rf "$scratch"
        with:
          experimental_apply_changes_via_bot: 1
 ```
+
+## Improvements in [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21)
+
+The advice is now tailored to based on the workflow configuration.
