@@ -3,6 +3,7 @@
 ## Ready
 
 * 🗜️ [[Breaking change: Smaller cspell dictionaries]]
+* 🏛️ [[Behavior change: File line column notation]]
 * 📰 [[Step Summary|Feature: Step Summary]]
 * 🌟 [[Sarif output|Feature: Sarif output]]
 * 🧙 [[Suggest patterns|Feature: Suggest patterns]]
