@@ -1,3 +1,5 @@
+As of [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21), you won't need to do this.
+
 As of a certain version, you can convert this output:
 
 ```
