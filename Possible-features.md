@@ -32,6 +32,7 @@
 * [[Update base branch|Feature: Update base branch]]
 * [[Behavior change: Log output order]]
 * [[Workflow: retest support]]
+* [[Run in GitLab|Feature: Run in GitLab]]
 
 ## Distant future
 
