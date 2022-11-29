@@ -16,6 +16,8 @@
 * `https://` (or `http://`) - curl compatible
 * `gs://` - gsutil url
 
+ℹ️ This has been superseded by [`config`](https://github.com/check-spelling/check-spelling/wiki/Configuration#config)
+
 ## project
 
 * unset - especially initially
@@ -23,7 +25,13 @@
 * `./` - if you don't need an extra nesting layer
 * directory - especially for sharing a general bucket across multiple projects
 
+ℹ️ This has been superseded by [`config`](https://github.com/check-spelling/check-spelling/wiki/Configuration#config)
+
 ## timeframe
 
 Used by the **[schedule](./Configuration:-Workflows#schedule)** action. Any open pull requests from another repository
 will be checked, and if the commit is within that timeframe, it will be processed.
+
+ℹ️ In general you shouldn't need to use this as there are more recent ways to achieve desired goals.
+
+In [`v0.0.21`](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21), reports are available via the step summary w/o requiring any special permissions.
