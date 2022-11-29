@@ -8,6 +8,8 @@
 | [project](#project) | a folder within `bucket`. This allows you to share common items across projects. |
 | [timeframe](#timeframe) | number of minutes (default 60) to consider when a **schedule** workflow checks for updated PRs. |
 
+ℹ️ These are additional items beyond the core items listed in [Configuration](https://github.com/check-spelling/check-spelling/wiki/Configuration).
+
 ## bucket
 
 * unset - especially initially...
