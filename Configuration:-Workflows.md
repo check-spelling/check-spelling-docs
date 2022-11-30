@@ -147,18 +147,8 @@ If you want to check the results of a potential merge, you need something fancie
 
 ```workflow
     steps:
-    # This step allows checking against a merge of the PR head with the destination.
-    - name: checkout-merge
-      # if you aren't handling `on: [push, ...]`, you don't need this condition:
-      if: "contains(github.event_name, 'pull_request')"
-      uses: actions/checkout@v2.0.0
+    - name: Check Spelling
+      uses: check-spelling/check-spelling@v0.0.21
       with:
-        ref: refs/pull/${{github.event.pull_request.number}}/merge
-        fetch-depth: 5
-    # To handle `on: [push, ...]`, you'll want this step:
-    - name: checkout
-      if: "!contains(github.event_name, 'pull_request')"
-      uses: actions/checkout@v2.0.0
-      with:
-        fetch-depth: 5
+        checkout: 1
 ```
