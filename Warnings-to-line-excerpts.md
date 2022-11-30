@@ -74,8 +74,7 @@ while (<>) {
     } elsif (m{Warning: ([^:]+): line (\d+).*?- \`(.*?)\`.*}) {
         ($file, $line, $needle) = ($1, $2, $3);
     }
-    if ($start)
-    {
+    if ($start) {
         show_context($show_context, $file, $line, $start, $end);
     } elsif ($needle) {
         find_context($show_context, $file, $line, $needle);
