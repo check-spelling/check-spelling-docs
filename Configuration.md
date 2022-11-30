@@ -144,7 +144,11 @@ Used as the commit body when a commit is created.
 
 ### only_check_changed_files
 
-Normally check-spelling will check all files that match `( (only||all) - excluded)`. Some repositories are quite large and typically have very few files changing at once. Assuming a good baseline, or a willingness to force people to fix all typos in a file as they touch it, one can use this flag (in `@prerelease`) to dramatically improve the time it takes to run.
+If you don't specify `only_check_changed_files: 1`, check-spelling will check all files that aren't filtered by `only` / `excluded`.
+
+Some repositories are quite large and typically have very few files changing at once. Assuming a good baseline, or a willingness to force people to fix all typos in a file as they touch it, one can use this flag (in [`v0.0.20`](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20)+) to dramatically improve the time it takes to run.
+
+With `only_check_changed_files: 1`, only the files changed (either by a PR, or since the previous commit tracked by GitHub for the branch/tag) will be checked.
 
 Downside: if someone changes any of the config files, it's likely that they will have changed files that aren't being checked and you won't find out until they're touched at a later date. This can be frustrating for contributors (although, any linter can be frustrating).
 
