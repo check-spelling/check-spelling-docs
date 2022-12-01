@@ -21,6 +21,7 @@
 * [[Behavior change: Log output order]]
 * [[Workflow: retest support]]
 * [[Run in GitLab|Feature: Run in GitLab]]
+* [[Reusable Workflows|Feature: Reusable Workflows]]
 
 ## Distant future
 
