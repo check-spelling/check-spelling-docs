@@ -1,8 +1,10 @@
 # Release notes
 
-<!--
 ## prerelease
 
+* 🏃 Performance fix for workflows that don't use patterns / forbidden / candidates
+
+<!--
 🛠️ In various states of `prerelease`
 🌟 Almost ready to transition from `prerelease` to release 🍽️
 
