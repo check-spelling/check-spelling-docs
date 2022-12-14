@@ -3,6 +3,7 @@
 ## prerelease
 
 * 🏃 Performance fix for workflows that don't use patterns / forbidden / candidates
+* 🔧 Matrixes generate archives that the latest apply.pl can consume (fixes regression in [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21))
 
 <!--
 🛠️ In various states of `prerelease`
