@@ -22,6 +22,7 @@
 * [[Behavior change: Log output order]]
 * [[Workflow: retest support]]
 * [[Run in GitLab|Feature: Run in GitLab]]
+* [[Run in Gitea|Feature: Run in Gitea]]
 * [[Reusable Workflows|Feature: Reusable Workflows]]
 
 ## Distant future
