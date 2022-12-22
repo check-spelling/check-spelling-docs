@@ -9,3 +9,5 @@ At some point it broke:
 https://gitlab.com/yaook/meta/-/jobs/3267487105
 
 It's unclear why.
+
+I think this was a regression in nektos/act that was fixed in https://github.com/nektos/act/pull/1493
