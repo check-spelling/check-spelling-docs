@@ -4,7 +4,7 @@
 
 ## Tasks
 
-- [ ] `--slurpfile` is pretty magical, but it's only used in one place
+- [x] `--slurpfile` is pretty magical, but it's only used in one place
 - [ ] `wrap_in_json` is a function, so replacing it should be pretty easy
 - [ ] `wrap_file_in_json` is a function, so replacing it should be pretty easy
 - [ ] `jq -s` is used once
