@@ -2,6 +2,9 @@
 
 `jq` is a handy tool for writing shell scripts, but it's also frustrating.
 
+perl (5.14+) provides [JSON::PP](https://perldoc.perl.org/JSON::PP) which can handle the json parsing side of things.
+Evaluating then becomes a problem for perl instead of another programming language.
+
 ## Tasks
 
 - [x] `--slurpfile` is pretty magical, but it's only used in one place
