@@ -11,6 +11,7 @@
 * ↪️ [[Aliases|Feature: Aliases]]
 * ⚙️ [[JSON configuration|Feature: JSON configuration]]
 * ❄️ [[Dictionaries with unique value|Feature: Dictionaries with unique value]]
+* 🔧 [[Replace jq|Task: Replace jq]]
 
 ## Near term
 
