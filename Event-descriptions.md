@@ -20,7 +20,7 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
 * [minified-file](#minified-file)
 * [duplicate-extra-dictionary](#duplicate-extra-dictionary)
 
-ℹ️ As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), workflows can configure whether specific events are treated as ❌Errors or ⚠️Warnings.
+ℹ️ As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), workflows can [[configure whether specific events are treated as ❌Errors or ⚠️Warnings|Feature: Treat specific errors as warnings]].
 
 ## unrecognized-spelling
 
