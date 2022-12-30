@@ -76,7 +76,7 @@ Information will be available in [GHSA-g86g-chm8-7r2p](https://github.com/check-
 * [[First run advice|Feature: First run advice]]
 * All unrecognized words are reported in the log, instead of just the ones introduced by the current changes.
 
-## 0.0.17-alpha
+## [0.0.17-alpha](https://github.com/check-spelling/check-spelling/releases/tag/0.0.17-alpha)
 
 * [[Feature: Easier bootstrapping]]
 * [[Feature: Spelling comments without config]]
@@ -88,7 +88,7 @@ Information will be available in [GHSA-g86g-chm8-7r2p](https://github.com/check-
 
 If you're using a private repository, the `push` event won't work correctly.
 
-## 0.0.16-alpha
+## [0.0.16-alpha](https://github.com/check-spelling/check-spelling/releases/tag/0.0.16-alpha)
 
 * [[Feature: Allow]]
 * [[Feature: Expectlist]]
