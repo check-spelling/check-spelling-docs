@@ -1,5 +1,13 @@
 # Release notes
 
+* [prerelease](#prelease)
+* [v0.0.21](#v0021)
+* [v0.0.20](#v0020)
+* [v0.0.19](#v0019)
+* [v0.0.18](#v0018)
+* [0.0.17-alpha](#0017alpha)
+* [0.0.16-alpha](#0016alpha)
+
 ## prerelease
 
 * 🏃 Performance fix for workflows that don't use patterns / forbidden / candidates
