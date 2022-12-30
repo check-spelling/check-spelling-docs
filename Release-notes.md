@@ -1,6 +1,6 @@
 # Release notes
 
-* [prerelease](#prelease)
+* [prerelease](#prerelease)
 * [v0.0.21](#v0021)
 * [v0.0.20](#v0020)
 * [v0.0.19](#v0019)
