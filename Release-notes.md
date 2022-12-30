@@ -32,6 +32,7 @@
 
 * [[Smarter scheduling 2021 October|Feature: Smarter scheduling 2021 October]]
 * [[Suppress push comment for open PRs|Feature: Suppress push comment for open PRs]]
+* [[Treat specific errors as warnings|Feature: Treat specific errors as warnings]]
 * [[Run locally|Feature: Run locally]] using `act` (note: support for `act` is a bit of a moving target, but in general it should work)
 * [[Area dictionaries|Feature: Area dictionaries]]
 * [[Suggest Area dictionaries|Feature: Suggest Area Dictionaries]]
