@@ -33,6 +33,7 @@ See [[Configuration: Workflows]] for the supported GitHub workflows.
 | [event_aliases](#event_aliases) | Map an unsupported GitHub event to a known event |
 | [suppress_push_for_open_pull_request](#suppress_push_for_open_pull_request) | If running from a `push` event and there's an open `pull_request`, stop working and rely on the `pull_request` handling to check the branch |
 | [report_title_suffix](#report_title_suffix) | Appended to title (for use in [matrix configurations](https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#jobsjob_idstrategymatrix)) |
+| [warnings](#warnings) | Treat specific errors as warnings |
 | [custom_task](#custom_task) | Workflow magic |
 | [internal_state_directory](#internal_state_directory) | Workflow magic |
 | [check_file_names](#check_file_names) | Spell check file paths |
@@ -206,6 +207,13 @@ The actual Check Spelling pass will happen in the pull request event (as long as
 When running in a [matrix configurations](https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#jobsjob_idstrategymatrix), each section will produce its own comment.
 
 The report_title_suffix enables each comment to have a distinct bit to help hint that the comment is not just an accidental duplicate.
+
+### warnings
+
+check-spelling defaults to defining certain events as errors and others as warnings. If you disagree with these
+values, you can change the mapping by using this field.
+
+See [[Treat specific errors as warnings|Feature: Treat specific errors as warnings]] for more information.
 
 ### custom_task
 
