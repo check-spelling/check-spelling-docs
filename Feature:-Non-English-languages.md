@@ -58,3 +58,9 @@ while (<>) {
 }
 ```
 
+### See also
+* [[Character Encoding Auto Detection|Feature: Character Encoding Auto Detection]]
+* [[Configurable word characters|Feature: Configurable word characters]]
+
+
+
