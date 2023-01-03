@@ -13,9 +13,10 @@ To support Spanish, this needs to be extended to allow some accent characters an
 ## Unicode
 
 [Unicode categories](https://www.compart.com/en/unicode/category)
-* Li, Lm, Lt, Lu
+* Ll, Lm, Lt, Lu
 
-[perl unicode: General Category](https://perldoc.perl.org/perlunicode#General_Category)
+[Perl Unicode: General Category](https://perldoc.perl.org/perlunicode#General_Category)
+ `[\p{Ll}\p{Lm}\p{Lt}\p{Lu}]`
 
 ## Proposal
 
