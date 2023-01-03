@@ -15,6 +15,8 @@ To support Spanish, this needs to be extended to allow some accent characters an
 [Unicode categories](https://www.compart.com/en/unicode/category)
 * Li, Lm, Lt, Lu
 
+[perl unicode: General Category](https://perldoc.perl.org/perlunicode#General_Category)
+
 ## Proposal
 
 Add a regex that's configured using `with:`
