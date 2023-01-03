@@ -10,6 +10,11 @@ Certain escaped characters are converted to decoded characters first.
 
 To support Spanish, this needs to be extended to allow some accent characters and ñ.
 
+## Unicode
+
+[Unicode categories](https://www.compart.com/en/unicode/category)
+* Li, Lm, Lt, Lu
+
 ## Proposal
 
 Add a regex that's configured using `with:`
