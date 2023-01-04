@@ -9,7 +9,7 @@ When data is published to GitHub in this format, GitHub is supposed to automatic
 Release | Features
 -|-
 [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21) | [Initial support](#Enabling)
-[prerelease](https://github.com/check-spelling/check-spelling/commits/prerelease) | [Adjusting sarif.json](adjusting-sarifjson)
+[prerelease](https://github.com/check-spelling/check-spelling/commits/prerelease) | [Adjusting sarif.json](#adjusting-sarifjson)
 
 ## Enabling
 
