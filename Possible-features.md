@@ -2,7 +2,7 @@
 
 ## Ready
 
-* 📊 [[Sorting suggested dictionaries|Feature: Improve suggested dictionaries order]]
+* 📊 [[Improve suggested dictionaries order|Feature: Improve suggested dictionaries order]]
 * 🎨 [Adjust Sarif output](https://github.com/check-spelling/check-spelling/wiki/Feature:-Sarif-output#adjusting-sarifjson)
 
 ## In progress
