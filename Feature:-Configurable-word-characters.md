@@ -18,9 +18,29 @@ To support Spanish, this needs to be extended to allow some accent characters an
 [Perl Unicode: General Category](https://perldoc.perl.org/perlunicode#General_Category)
  `[\p{Ll}\p{Lm}\p{Lt}\p{Lu}]`
 
+## Dictionaries
+
+In order for this to work reasonably well, support for hunspell `.aff` files will have to be added.
+
+There are two possible approaches:
+1. Treat `.aff` as a compression mechanism and decompress (either to generate dictionaries that can be downloaded or after downloading)
+2. Somehow enable check-spelling to try to use the `.aff` files to perform lookups.
+
+### compressed dictionaries
+
+### reverse stemming dictionaries 
+
+The second approach is probably more complicated but would reduce the memory costs in exchange for lookup complexity--basically each prefix and suffix would be checked against the token to see if a base token can be found in the dictionary. If one can be found, validate it against the mutations defined for it.
+
+A line `hablar/x` would be converted into `hablar`=>`x`.
+
+And `x`'s definition would be imported.
+
+When `hablo` is encountered, it'd be checked against the `-o` suffix rule which would hopefully map to `/x` and suggest replacing `-o` with `-ar`.
+
 ## Proposal
 
-Add a regex that's configured using `with:`
+- [x] Add a regex that's configured using `with:` (currently it's about half a dozen entries)
 
 ## Related
 
