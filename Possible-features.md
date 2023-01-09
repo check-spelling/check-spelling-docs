@@ -8,11 +8,14 @@
 ## In progress
 
 * 🧪 [[Regression testing]]
-* [[Easier to understand filenames|Feature: Easier to understand filenames]]
+* 😄 [[Easier to understand filenames|Feature: Easier to understand filenames]]
 * ↪️ [[Aliases|Feature: Aliases]]
 * ⚙️ [[JSON configuration|Feature: JSON configuration]]
 * ❄️ [[Dictionaries with unique value|Feature: Dictionaries with unique value]]
 * 🔧 [[Replace jq|Task: Replace jq]]
+* 🗣️ [[Non-English languages|Feature: Non-English languages]]
+  * 🔢 [[Configurable word characters|Feature: Configurable word characters]]
+  * 🧙 [[Character Encoding Auto Detection|Feature: Character Encoding Auto Detection]]
 
 ## Near term
 
@@ -35,9 +38,6 @@
 * [[Plug into Pantsbuild|Feature: Pantsbuild plugin]]
 * [[Plug into Visual Studio Code|Feature: Visual Studio Code plugin]]
 * [[Block/Multiline Ignore|Feature: Block Ignore]]
-* [[Non-English languages|Feature: Non-English languages]]
-  * [[Configurable word characters|Feature: Configurable word characters]]
-  * [[Character Encoding Auto Detection|Feature: Character Encoding Auto Detection]]
 * [[Custom escape mappings|Feature: Custom escape mappings]]
 
 ## Related but currently out of scope
