@@ -15,7 +15,7 @@ To support Spanish, this needs to be extended to allow some accent characters an
 ```yaml
         extra_dictionaries:
           cspell:es_ES/src/hunspell/index.dic
-        ignore-pattern: "[^'\wáéíóúÁÉÍÓÚñÑçÇüÜ]"
+        ignore-pattern: "[^'a-záéíóúñçüA-ZÁÉÍÓÚÑÇÜ]"
         upper-pattern: '[A-ZÁÉÍÓÚÑÇÜ]'
         lower-pattern: '[a-záéíóúñçü]'
         not-lower-pattern: '[^a-záéíóúñçü]'
