@@ -98,4 +98,4 @@ In order for this to work reasonably well, support for hunspell `.dic` and `.aff
 
 ## Related
 
-Right now, characters that fall outside the recognized set are effectively blanked (replaced with spaces). I might switch to only parsing characters that match the regex. That'd save me a pass.
+Right now, characters that fall outside the recognized set are effectively blanked (replaced with a non-word character, currently `=`). I might switch to only parsing characters that match the regex. That'd save me a pass.
