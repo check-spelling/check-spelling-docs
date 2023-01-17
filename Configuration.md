@@ -444,7 +444,7 @@ This is a comma-delimited list of flags:
 
 Introduced in [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21)
 
-Check commit / PR metadata
+[[Check commit / PR metadata|Feature: Check commit messages]]
 
 You can specify multiple values
 
