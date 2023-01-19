@@ -29,6 +29,7 @@
 * [[Run in GitLab|Feature: Run in GitLab]]
 * [[Run in Gitea|Feature: Run in Gitea]]
 * [[Reusable Workflows|Feature: Reusable Workflows]]
+* [[Handle GitHub Varnish failures|Feature: Handle GitHub Varnish failures]]
 
 ## Distant future
 
