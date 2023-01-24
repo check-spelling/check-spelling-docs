@@ -30,6 +30,7 @@
 * [[Run in Gitea|Feature: Run in Gitea]]
 * [[Reusable Workflows|Feature: Reusable Workflows]]
 * [[Handle GitHub Varnish failures|Feature: Handle GitHub Varnish failures]]
+* [[Cache dictionaries|Feature: Cache dictionaries]]
 
 ## Distant future
 
