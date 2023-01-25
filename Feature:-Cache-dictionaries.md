@@ -8,3 +8,9 @@ I think I'll change dictionaries to go to a specific directory and use @actions/
 
 The dictionary retrieval code can choose to skip retrieving any file(s) it already has.
 
+### Invalidation
+
+Each dictionary's ETAG and url should be stored.
+
+If the url is different, invalidate.
+Use the ETAG to retrieve (or not) the content.
