@@ -19,6 +19,7 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
 * [unsupported-configuration](#unsupported-configuration)
 * [minified-file](#minified-file)
 * [duplicate-extra-dictionary](#duplicate-extra-dictionary)
+* [required-download-failed](#required-download-failed)
 
 ℹ️ As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), workflows can [[configure whether specific events are treated as ❌Errors or ⚠️Warnings|Feature: Treat specific errors as warnings]].
 
@@ -389,3 +390,23 @@ This can happen if you have the same entry multiple times in `extra_dictionaries
 ### Resolution
 
 Remove duplicate entries. check-spelling will ignore duplicate instances.
+
+## required-download-failed
+
+Nothing on the internet is guaranteed to be 💯% reliable. Sometimes a server will be unable to offer content.
+
+Unfortunately, most programs have required content and won't work without it. If you see this message, e.g.:
+
+```
+Failed to download https://raw.githubusercontent.com/check-spelling/check-spelling/dictionary-20200211/dict.txt (to /tmp/tmp.PqDJv9CiN8) (required-download-failed)
+```
+
+Then you've run into a case where check-spelling needed a resource (here, the dictionary), and the server it asked returned an error.
+
+Because the dictionary is required in order to determine whether things are misspelled, check-spelling gave up.
+
+### Resolution
+
+Most of the time, this will be a transient error, you can click the [`Re-run jobs` drop down and select `Re-run failed jobs`](https://docs.github.com/en/actions/managing-workflow-runs/re-running-workflows-and-jobs#re-running-failed-jobs-in-a-workflow).
+
+It's possible that your workflow is misconfigured and is pointing to a resource that doesn't exist (whether because it was removed or someone made an error), in which case you'll have to identify a correct URL and update the workflow.
