@@ -16,6 +16,8 @@
 * 🗣️ [[Non-English languages|Feature: Non-English languages]]
   * 🔢 [[Configurable word characters|Feature: Configurable word characters]]
   * 🧙 [[Character Encoding Auto Detection|Feature: Character Encoding Auto Detection]]
+* [[Handle GitHub Varnish failures|Feature: Handle GitHub Varnish failures]]
+* [[Cache dictionaries|Feature: Cache dictionaries]]
 
 ## Near term
 
@@ -29,8 +31,6 @@
 * [[Run in GitLab|Feature: Run in GitLab]]
 * [[Run in Gitea|Feature: Run in Gitea]]
 * [[Reusable Workflows|Feature: Reusable Workflows]]
-* [[Handle GitHub Varnish failures|Feature: Handle GitHub Varnish failures]]
-* [[Cache dictionaries|Feature: Cache dictionaries]]
 
 ## Distant future
 
