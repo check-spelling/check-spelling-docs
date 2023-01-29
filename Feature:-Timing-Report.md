@@ -5,3 +5,5 @@
 ```yaml
         report-timing: 1
 ```
+
+Expected release: [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22)
