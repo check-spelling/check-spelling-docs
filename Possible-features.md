@@ -14,7 +14,7 @@
 * ⚙️ [[JSON configuration|Feature: JSON configuration]]
 * ❄️ [[Dictionaries with unique value|Feature: Dictionaries with unique value]]
 * 🔧 [[Replace jq|Task: Replace jq]]
-* 🗣️ [[Support for non English languages|Support for non English languages]]
+* 🗣️ [[Support for non English languages|Feature: Support for non English languages]]
   * 🗣️ [[Non-English languages|Feature: Non-English languages]]
   * 🚆 [[Hunspell dictionary support|Feature: Hunspell dictionary support]]
   * 🔢 [[Configurable word characters|Feature: Configurable word characters]]
