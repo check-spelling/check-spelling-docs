@@ -1,4 +1,4 @@
-# Non English languages
+# Non-English languages
 
 The spell checker is really only aware of ~26 letters and some variations of `'`.
 
