@@ -15,6 +15,7 @@
 * ❄️ [[Dictionaries with unique value|Feature: Dictionaries with unique value]]
 * 🔧 [[Replace jq|Task: Replace jq]]
 * 🗣️ [[Non-English languages|Feature: Non-English languages]]
+  * 🚆 [[Hunspell dictionary support|Feature: Hunspell dictionary support]]
   * 🔢 [[Configurable word characters|Feature: Configurable word characters]]
   * 🧙 [[Character Encoding Auto Detection|Feature: Character Encoding Auto Detection]]
 * 🔁 [[Handle GitHub Varnish failures|Feature: Handle GitHub Varnish failures]]
