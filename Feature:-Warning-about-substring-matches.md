@@ -15,6 +15,10 @@ The html escapes are mapped to `'` and are obviously not one character to one ch
 
 When it doesn't find a match, you'll be left with some confusing output. Through [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21) that meant the list of misspelled words would tell you about the token it found and hope you didn't notice it didn't tell you were it found it (because it couldn't find it when it looked more carefully). With [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22), it should tell you about the line that it found the token on, and you might be brought to this documentation and be wondering "ok, it found it on the line, what do I do?".
 
+## Guessing
+
+As of [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22), if there's only one match, check-spelling will identify it even if it the word boundary rules didn't enable it to be confident.
+
 ## Sample
 
 ### Example input
