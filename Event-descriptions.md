@@ -421,5 +421,5 @@ Most of the time, the fault is in pattern definitions, especially patterns that 
 ### Resolution
 
 * Consider adding a `\b` or `\s` to the edges of your pattern.
-
 * It's possible to add the items to expect or to the dictionary if they're really correct.
+* See [[Warning about substring matches|Feature: Warning about substring matches]] for more advice.
