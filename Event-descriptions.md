@@ -20,7 +20,7 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
 * [minified-file](#minified-file)
 * [duplicate-extra-dictionary](#duplicate-extra-dictionary)
 * [required-download-failed](#required-download-failed)
-* [token-is-a-substring](#token-is-a-substring)
+* [token-is-substring](#token-is-substring)
 
 ℹ️ As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), workflows can [[configure whether specific events are treated as ❌Errors or ⚠️Warnings|Feature: Treat specific errors as warnings]].
 
@@ -412,7 +412,7 @@ Most of the time, this will be a transient error, you can click the [`Re-run job
 
 It's possible that your workflow is misconfigured and is pointing to a resource that doesn't exist (whether because it was removed or someone made an error), in which case you'll have to identify a correct URL and update the workflow.
 
-## token-is-a-substring
+## token-is-substring
 
 check-spelling tries to find "words" in your repository that it doesn't have in the dictionaries you've configured. It does that by applying heuristics to identify word boundaries. It also allows you to apply patterns to mask portions of lines. Most likely as a result of some patterns in the configuration, it found a "word" that wasn't in the dictionary, but when it looked through the line w/o applying the patterns, it couldn't determine where the word was.
 
