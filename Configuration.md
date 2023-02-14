@@ -443,6 +443,8 @@ This is a comma-delimited list of flags:
 
 ## check_commit_messages
 
+⚠️ While check-spelling will be able to identify typos, any items you add to `expect.txt` will be suggested for removal once your PR merges, which will be very confusing. This feature will be reworked in a future release.
+
 Introduced in [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21)
 
 [[Check commit / PR metadata|Feature: Check commit messages]]
