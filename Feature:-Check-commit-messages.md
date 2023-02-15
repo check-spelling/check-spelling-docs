@@ -47,3 +47,4 @@ Use [`$GITHUB_STEP_SUMMARY`](https://github.blog/2022-05-09-supercharging-github
 
 ## Potential additional modes
 * n commits - This is trivial to implement, but without a use case, I don't intend to implement it
+* commits since a specific sha or branch - This might be necessary in order to support adding items to [`expect.txt`](../Configuration#expect), although I'm convinced it makes more sense to use [`allow.txt`](../Configuration#allow) or [`patterns.txt`](../Configuration#patterns).
