@@ -14,7 +14,7 @@ It's somewhat similar to [[Feature: Check filenames and paths]].
 
 See [Future work](#future-work) for thoughts on how to improve the implementation.
 
-If you choose to use this feature today, you should probably include text in `advice.md` suggesting that commit message / PR items be added to `allow.txt` instead of `expect.txt`.
+If you choose to use this feature today, you should either use [`only_check_changed_files`](../Configuration#only_check_changed_files) or include text in [`advice.md`](../Configuration#advice) suggesting that commit message / PR items be added to [`allow.txt`](../Configuration#allow) instead of [`expect.txt`](../Configuration#expect).
 
 ## Implemented modes
 
