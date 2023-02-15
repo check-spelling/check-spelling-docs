@@ -10,7 +10,11 @@ It's somewhat similar to [[Feature: Check filenames and paths]].
 
 ## Status
 
-🐛 Flaky in [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21)
+🐛 Flaky in [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21).
+
+See [Future work](#future-work) for thoughts on how to improve the implementation.
+
+If you choose to use this feature today, you should probably include text in `advice.md` suggesting that commit message / PR items be added to `allow.txt` instead of `expect.txt`.
 
 ## Implemented modes
 
@@ -23,7 +27,7 @@ It's somewhat similar to [[Feature: Check filenames and paths]].
 
 # Future work
 
-Split the check pass for these objects from the main pass. In order to handle them, items really need to be added to `allow`, otherwise a commit that adds a term to expect to accept a commit message will then force the next PRs to remove the newly inserted expect items.
+Split the check pass for these objects from the main pass. In order to handle them, items really need to be added to `allow.txt`, otherwise a commit that adds a term to `expect.txt` to accept a commit message will then force the next PRs to remove the newly inserted `expect.txt` items.
 
 ## Presentation
 
