@@ -8,6 +8,10 @@ This would be *optional*, and I **don't expect** it to be on by default (althoug
 
 It's somewhat similar to [[Feature: Check filenames and paths]].
 
+## Status
+
+🐛 Flaky in [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21)
+
 ## Implemented modes
 
 * latest commit
@@ -15,9 +19,11 @@ It's somewhat similar to [[Feature: Check filenames and paths]].
 * PR description
 * PR summary
 
-Note: while PR description and PR summary aren't technically commit messages, there are a number of `commit` strategies (especially `Squash`) that will end up integrating them into a future commit, and thus it makes sense to offer to check them as well.
+ℹ️ Note: While PR description and PR summary aren't technically commit messages, there are a number of `commit` strategies (especially `Squash`) that will end up integrating them into a future commit, and thus it makes sense to offer to check them as well.
 
 # Future work
+
+Split the check pass for these objects from the main pass. In order to handle them, items really need to be added to `allow`, otherwise a commit that adds a term to expect to accept a commit message will then force the next PRs to remove the newly inserted expect items.
 
 ## Presentation
 
