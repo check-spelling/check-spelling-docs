@@ -45,6 +45,7 @@ See [[Configuration: Workflows]] for the supported GitHub workflows.
 | [check_commit_messages](#check_commit_messages) | Check commit / PR metadata |
 | [use_magic_file](#use_magic_file) | Detect binary files |
 | [use_sarif](#use_sarif) | Generate SARIF Reports |
+| [summary_table](#summary_table) | Summary Table |
 | [report-timing](#report-timing) | Report file processing times |
 
 See [[Configuration: Advanced]] for additional options.
@@ -479,6 +480,14 @@ The sarif reports can be made available for download (the spell-check-this sampl
 
 Note that GitHub's defaults to not making it easy for people who aren't collaborators to a repository
 to see reports, so the experience may be slightly bumpy for projects w/ external contributors.
+
+## summary_table
+
+Introduced in [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22)
+
+Include a [[Summary Table|Feature: Summary Table]] in the [[Step Summary|Feature: Step Summary]].
+
+See [[Feature: Summary Table]]
 
 ## report-timing
 
