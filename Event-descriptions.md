@@ -21,6 +21,7 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
 * [duplicate-extra-dictionary](#duplicate-extra-dictionary)
 * [required-download-failed](#required-download-failed)
 * [token-is-substring](#token-is-substring)
+* [summary-table-skipped](#summary-table-skipped)
 
 ℹ️ As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), workflows can [[configure whether specific events are treated as ❌Errors or ⚠️Warnings|Feature: Treat specific errors as warnings]].
 
@@ -423,3 +424,18 @@ Most of the time, the fault is in pattern definitions, especially patterns that 
 * Consider adding a `\b` or `\s` to the edges of your pattern.
 * It's possible to add the items to expect or to the dictionary if they're really correct.
 * See [[Warning about substring matches|Feature: Warning about substring matches]] for more advice.
+
+## summary-table-skipped
+
+When producing a [[Summary Table|Feature: Summary Table]], if sections would cause the Summary to exceed its size limit, they'll be dropped.
+
+### Resolution
+
+Remove items
+
+* If there are suggested dictionaries, resolve them/disable the feature
+* Expand the dictionary by adding items to `allow.txt` or including additional `extra_dictionaries`
+* If there are too many forbidden items, remove some from `line_forbidden.patterns`
+* If there are pattern suggestions add them to `patterns.txt` or remove them from `candidate.patterns`
+* If files trigger too many items, skip them with `exclude.txt`
+* Focus on specific files with `only.txt`
