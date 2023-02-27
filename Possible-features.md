@@ -22,6 +22,7 @@
   * 🧙 [[Character Encoding Auto Detection|Feature: Character Encoding Auto Detection]]
 * 🔁 [[Handle GitHub Varnish failures|Feature: Handle GitHub Varnish failures]]
 * 🏦 [[Cache dictionaries|Feature: Cache dictionaries]]
+* 🐣 [[Breaking change: Dropping printf special cases]]
 
 ## Near term
 
