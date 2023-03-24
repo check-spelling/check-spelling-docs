@@ -2,6 +2,7 @@
 
 ```
 # reject `m_data`
+# - vxworks defined it: https://github.com/qtproject/qt-solutions/blame/fb7bc42bfcc578ff3fa3b9ca21a41e96eb37c1c7/qtscriptclassic/src/qscriptbuffer_p.h#L46
 \bm_data\b
 
 # Javascript
