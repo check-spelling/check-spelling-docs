@@ -2,6 +2,7 @@
 
 ## Ready
 
+* ❄️ [[Dictionaries with unique value|Feature: Dictionaries with unique value]]
 * 📊 [[Improve suggested dictionaries order|Feature: Improve suggested dictionaries order]]
 * 🎨 [Adjust Sarif output](https://github.com/check-spelling/check-spelling/wiki/Feature:-Sarif-output#adjusting-sarifjson)
 * ⏱️ [[Timing Report|Feature: Timing Report]]
@@ -13,7 +14,6 @@
 * 😄 [[Easier to understand filenames|Feature: Easier to understand filenames]]
 * ↪️ [[Aliases|Feature: Aliases]]
 * ⚙️ [[JSON configuration|Feature: JSON configuration]]
-* ❄️ [[Dictionaries with unique value|Feature: Dictionaries with unique value]]
 * 🔧 [[Replace jq|Task: Replace jq]]
 * 🗣️ [[Support for non English languages|Feature: Support for non English languages]]
   * 🗣️ [[Non-English languages|Feature: Non-English languages]]
