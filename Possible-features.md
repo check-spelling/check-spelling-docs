@@ -26,6 +26,7 @@
 
 ## Near term
 
+* [[Report associated comment for forbidden patterns|Feature: Report associated comment for forbidden patterns]]
 * [[Behavior change: case changes in expect|Behavior change: case changes in expect]]
 * [[Subrepos|Feature: Subrepos]]
 * [[Honor gitattributes|Feature: honor gitattributes]]
