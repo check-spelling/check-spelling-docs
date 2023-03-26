@@ -7,6 +7,7 @@
 * 🎨 [Adjust Sarif output](https://github.com/check-spelling/check-spelling/wiki/Feature:-Sarif-output#adjusting-sarifjson)
 * ⏱️ [[Timing Report|Feature: Timing Report]]
 * 🃏 [[Warning about substring matches|Feature: Warning about substring matches]]
+* 🐣 [[Breaking change: Dropping printf special cases]]
 
 ## In progress
 
@@ -22,7 +23,6 @@
   * 🧙 [[Character Encoding Auto Detection|Feature: Character Encoding Auto Detection]]
 * 🔁 [[Handle GitHub Varnish failures|Feature: Handle GitHub Varnish failures]]
 * 🏦 [[Cache dictionaries|Feature: Cache dictionaries]]
-* 🐣 [[Breaking change: Dropping printf special cases]]
 
 ## Near term
 
