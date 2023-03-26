@@ -10,6 +10,8 @@ The dictionary retrieval code can choose to skip retrieving any file(s) it alrea
 
 ### Invalidation
 
+(This is not yet implemented)
+
 Each dictionary's ETAG and url should be stored.
 
 If the url is different, invalidate.
