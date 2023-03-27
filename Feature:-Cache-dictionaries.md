@@ -1,6 +1,6 @@
 # Cache dictionaries
 
-There is _some_ cost to dictionaries, so it might be worth caching them (especially with `.dic`+`.aff`).
+There is _some_ cost to dictionaries, so it seems to be worth caching them (especially with `.dic`+`.aff`).
 
 ## Implementation
 
@@ -10,14 +10,16 @@ The dictionary retrieval code can choose to skip retrieving any file(s) it alrea
 
 ### Invalidation
 
-(This is not yet implemented)
+Each dictionary's ETAG will be stored.
 
-Each dictionary's ETAG and url should be stored.
-
-If the url is different, invalidate.
 Use the ETAG to retrieve (or not) the content.
 
 ### Clearing cache entries manually
 
+#### Programmatically
 1. You can get a list of caches using [actions/cache: list-github-actions-caches-for-a-repository](https://docs.github.com/rest/actions/cache#list-github-actions-caches-for-a-repository)
 2. You can delete a cache entry by id using [actions/cache: delete-a-github-actions-cache-for-a-repository-using-a-cache-id](https://docs.github.com/rest/actions/cache#delete-a-github-actions-cache-for-a-repository-using-a-cache-id)
+
+#### Interactively
+
+Caches are accessible below workflows on the actions page of each repository and can be deleted directly.
