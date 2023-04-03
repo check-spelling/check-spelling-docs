@@ -8,6 +8,7 @@
 * ⏱️ [[Timing Report|Feature: Timing Report]]
 * 🃏 [[Warning about substring matches|Feature: Warning about substring matches]]
 * 🐣 [[Breaking change: Dropping printf special cases]]
+* 🗑️ [[Removed Dictionaries]]
 
 ## In progress
 
