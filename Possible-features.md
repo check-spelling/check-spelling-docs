@@ -28,18 +28,19 @@
 
 ## Near term
 
-* [[Report associated comment for forbidden patterns|Feature: Report associated comment for forbidden patterns]]
-* [[Behavior change: case changes in expect|Behavior change: case changes in expect]]
-* [[Subrepos|Feature: Subrepos]]
-* [[Honor gitattributes|Feature: honor gitattributes]]
-* [[Support gitignore|Feature: Support gitignore]]
+* [[💬Report associated comment for forbidden patterns|Feature: Report associated comment for forbidden patterns]]
+* [[👪Behavior change: case changes in expect|Behavior change: case changes in expect]]
+* [[🪆Subrepos|Feature: Subrepos]]
+* [[🪄Honor gitattributes|Feature: honor gitattributes]]
+* [[🙈Support gitignore|Feature: Support gitignore]]
 * [[Update base branch|Feature: Update base branch]]
 * [[Behavior change: Log output order]]
-* [[Workflow: retest support]]
-* [[Run in GitLab|Feature: Run in GitLab]]
-* [[Run in Gitea|Feature: Run in Gitea]]
-* [[Reusable Workflows|Feature: Reusable Workflows]]
-
+* [[♻️Workflow: retest support|Workflow: retest support]]
+* [[🏃Run in GitLab|Feature: Run in GitLab]]
+* [[🏃Run in Gitea|Feature: Run in Gitea]]
+* [[📄Reusable Workflows|Feature: Reusable Workflows]]
+* [🙈Detect file extensions to exclude](https://github.com/check-spelling/check-spelling/wiki/Feature:-Heuristic-exclude-suggestions#file-extensions)
+ 
 ## Distant future
 
 * [[Tolerate engine upgrades|Feature: Tolerate engine upgrades]]
