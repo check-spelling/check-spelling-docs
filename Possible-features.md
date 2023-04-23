@@ -25,7 +25,7 @@
 * 🔧 [[Replace jq|Task: Replace jq]]
 * 🔁 [[Handle GitHub Varnish failures|Feature: Handle GitHub Varnish failures]]
 * 🏦 [[Cache dictionaries|Feature: Cache dictionaries]]
-* 🙈 [Detect file extensions to exclude](https://github.com/check-spelling/check-spelling/wiki/Feature:-Heuristic-exclude-suggestions#file-extensions)
+* 🙈 [Advanced exclusion suggestions](https://github.com/check-spelling/check-spelling/wiki/Feature:-Heuristic-exclude-suggestions#advanced-exclusion-suggestions)
 
 ## Near term
 
