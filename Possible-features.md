@@ -25,6 +25,7 @@
 * 🔧 [[Replace jq|Task: Replace jq]]
 * 🔁 [[Handle GitHub Varnish failures|Feature: Handle GitHub Varnish failures]]
 * 🏦 [[Cache dictionaries|Feature: Cache dictionaries]]
+* 🙈 [Detect file extensions to exclude](https://github.com/check-spelling/check-spelling/wiki/Feature:-Heuristic-exclude-suggestions#file-extensions)
 
 ## Near term
 
@@ -39,7 +40,6 @@
 * [[🏃Run in GitLab|Feature: Run in GitLab]]
 * [[🏃Run in Gitea|Feature: Run in Gitea]]
 * [[📄Reusable Workflows|Feature: Reusable Workflows]]
-* [🙈Detect file extensions to exclude](https://github.com/check-spelling/check-spelling/wiki/Feature:-Heuristic-exclude-suggestions#file-extensions)
  
 ## Distant future
 
