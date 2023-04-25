@@ -40,7 +40,7 @@
 * [[🏃Run in GitLab|Feature: Run in GitLab]]
 * [[🏃Run in Gitea|Feature: Run in Gitea]]
 * [[📄Reusable Workflows|Feature: Reusable Workflows]]
-* [[⏱️Pattern Timeouts|Feature: Pattern Timeouts]]
+* [[⏱️Parsing Timeouts|Feature: Parsing Timeouts]]
 
 ## Distant future
 
