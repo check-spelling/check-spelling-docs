@@ -22,6 +22,7 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
 * [required-download-failed](#required-download-failed)
 * [token-is-substring](#token-is-substring)
 * [summary-table-skipped](#summary-table-skipped)
+* [slow-file](slow-file)
 
 ℹ️ As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), workflows can [[configure whether specific events are treated as ❌Errors or ⚠️Warnings|Feature: Treat specific errors as warnings]].
 
@@ -439,3 +440,13 @@ Remove items
 * If there are pattern suggestions add them to `patterns.txt` or remove them from `candidate.patterns`
 * If files trigger too many items, skip them with `exclude.txt`
 * Focus on specific files with `only.txt`
+
+## slow-file
+
+When processing a file, if the time to parse exceeds the `splitter_timeout` environment variable, parsing will stop.
+
+### Resolution
+
+* Add the file to `excludes.txt`
+* Adjust patterns to improve parsing behavior
+* Increase [`splitter_timeout`](https://github.com/check-spelling/check-spelling/wiki/Feature%3A-Parsing-Timeouts#configuration)
