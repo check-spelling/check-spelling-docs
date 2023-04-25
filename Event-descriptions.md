@@ -22,7 +22,7 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
 * [required-download-failed](#required-download-failed)
 * [token-is-substring](#token-is-substring)
 * [summary-table-skipped](#summary-table-skipped)
-* [slow-file](slow-file)
+* [slow-file](#slow-file)
 
 ℹ️ As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), workflows can [[configure whether specific events are treated as ❌Errors or ⚠️Warnings|Feature: Treat specific errors as warnings]].
 
