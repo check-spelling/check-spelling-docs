@@ -43,3 +43,14 @@ for each extension from `get_extension_counts` compare the should_exclude and ch
 ### File names
 
 Like File extensions, but instead of capturing the rhs of the `.` for the filename, capture the whole filename.
+
+## Scoring suggestions
+
+1. Regenerate all reasonable regular expressions
+2. Calculate the matching files for each (and the count of matching files)
+3. Sort from most matches to fewest (tie-breaker being shorter regular expressions)
+4. Loop through candidates, taking the first one
+5. Add all of its files to the list of files no longer interesting
+6. Go to the next candidate, subtract out no longer interesting files, and check its current count against the next candidate count
+7. If it's still highest, select it
+8. If it isn't, queue it to be rechecked at approximately where it should be in the scoring world and go to the next candidate
