@@ -46,7 +46,7 @@ Like File extensions, but instead of capturing the rhs of the `.` for the filena
 
 ## Scoring suggestions
 
-1. Regenerate all reasonable regular expressions
+1. Generate all reasonable regular expressions (this excludes ones where they match too many non excluded files)
 2. Calculate the matching files for each (and the count of matching files)
 3. Sort from most matches to fewest (tie-breaker being shorter regular expressions)
 4. Loop through candidates, taking the first one
