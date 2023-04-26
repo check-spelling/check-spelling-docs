@@ -10,7 +10,7 @@
 * 🐣 [[Breaking change: Dropping printf special cases]]
 * 🗑️ [[Removed Dictionaries]]
 * 🔢 [[Fix error counts for Check filenames and paths|Feature: Check filenames and paths]]
-* ⏱️ [[Parsing Timeouts|Feature: Parsing Timeouts]]
+* ⌛ [[Parsing Timeouts|Feature: Parsing Timeouts]]
 * 🗣️ [[Support for non English languages|Feature: Support for non English languages]]
   * 🗣️ [[Non-English languages|Feature: Non-English languages]]
   * 🚆 [[Hunspell dictionary support|Feature: Hunspell dictionary support]]
