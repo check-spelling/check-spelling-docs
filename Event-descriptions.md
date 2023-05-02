@@ -419,6 +419,15 @@ Most of the time, this will be a transient error, you can click the [`Re-run job
 
 It's possible that your workflow is misconfigured and is pointing to a resource that doesn't exist (whether because it was removed or someone made an error), in which case you'll have to identify a correct URL and update the workflow.
 
+If the version of check-spelling was recently upgraded (this can happen if you're using `@main`, especially if you're using `@prerelease`, or if you're using another action which wraps check-spelling), then it's possible that the configuration is now referencing a version of a resource that doesn't exist.
+
+#### Examples
+
+> Failed to retrieve cspell:bash/bash-words.txt -- https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20230502/dictionaries/bash/bash-words.txt (dictionary-not-found)
+
+Between [v20220816](https://github.com/check-spelling/cspell-dicts/releases/tag/v20220816) and [v20230502](https://github.com/check-spelling/cspell-dicts/releases/tag/v20230502), a number of the dictionaries were renamed, mostly changing from `foo/bar.txt` to `foo/dict/bar.txt`, so, for this one, `cspell:bash/bash-words.txt` would become `cspell:bash/dict/bash-words.txt`.
+ 
+
 ## check-file-path
 
 If you have enabled [[Check filenames and paths|Feature: Check filenames and paths]] with [`check_file_names: 1`](https://github.com/check-spelling/check-spelling/wiki/Configuration#check_file_names), then in addition to checking the contents of files, check-spelling will check the file paths.
