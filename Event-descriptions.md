@@ -433,7 +433,7 @@ In the log form, the numbers `9 ... 18` refer to character offsets within the fi
 ### Identifying the problematic items
 
 * If you enabled [[Summary Table|Feature: Summary Table]] with [`summary_table: 1`](https://github.com/check-spelling/check-spelling/wiki/Configuration#summary_table) and there is enough space, the individual paths should appear in the details table.
-* If you enabled [[Sarif output|Feature: Sarif output]] with [`use_sarif: 1`](https://github.com/check-spelling/check-spelling/wiki/Configuration#use_sarif) and the repository is public or is private and has advanced security enabled and you are a member of the security group / an owner/admin, then individual items should appear in the Sarif report.
+* If you enabled [[Sarif output|Feature: Sarif output]] with [`use_sarif: 1`](https://github.com/check-spelling/check-spelling/wiki/Configuration#use_sarif) and the repository is public (or is private and has advanced security enabled) and you are a member of the security group / an owner/admin, then individual items should appear in the Sarif report.
 * You can find them listed in the `Spell check` section of the Action log (they should have `(check-file-path)` on each line).
 
 ### Resolution
