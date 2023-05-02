@@ -2,13 +2,16 @@
 
 ## Ready
 
-* ❄️ [[Dictionaries with unique value|Feature: Dictionaries with unique value]]
+* 📚 Dictionary changes
+  * ❄️ [[Dictionaries with unique value|Feature: Dictionaries with unique value]]
+  * 🗑️ [[Removed Dictionaries]]
+  * 📗 [[K8s|Dictionary: K8s]]
+  * 📙 [[Lisp|Dictionary: Lisp]]
 * 📊 [[Improve suggested dictionaries order|Feature: Improve suggested dictionaries order]]
 * 🎨 [Adjust Sarif output](https://github.com/check-spelling/check-spelling/wiki/Feature:-Sarif-output#adjusting-sarifjson)
 * ⏱️ [[Timing Report|Feature: Timing Report]]
 * 🃏 [[Warning about substring matches|Feature: Warning about substring matches]]
 * 🐣 [[Breaking change: Dropping printf special cases]]
-* 🗑️ [[Removed Dictionaries]]
 * 🔢 [[Fix error counts for Check filenames and paths|Feature: Check filenames and paths]]
 * ⌛ [[Parsing Timeouts|Feature: Parsing Timeouts]]
 * 🗣️ [[Support for non English languages|Feature: Support for non English languages]]
