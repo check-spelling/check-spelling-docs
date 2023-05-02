@@ -421,13 +421,24 @@ It's possible that your workflow is misconfigured and is pointing to a resource 
 
 ## check-file-path
 
-If you have enabled [[Check filenames and paths|Feature: Check filenames and paths]] with `check_file_names`, then in addition to checking the contents of files, check-spelling will check the file paths as well.
+If you have enabled [[Check filenames and paths|Feature: Check filenames and paths]] with [`check_file_names: 1`](https://github.com/check-spelling/check-spelling/wiki/Configuration#check_file_names), then in addition to checking the contents of files, check-spelling will check the file paths.
 
-A reported item will correspond to a portion of a file path, possibly a folder, possibly a file name, possibly the file extension. Initially, a bunch of the items listed will be false positives, but it's quite possible that one or two of them will be misspellings.
+A reported item will correspond to a portion of a file path, possibly a folder, possibly a file name, or possibly the file extension. Initially, a bunch of the items listed will be false positives, but it's quite possible that one or two of them will be misspellings.
+
+    Error: .github/workflows/graphql-inspector.yml:1:9 ... 18, Error - `workflows` is not a recognized word. (check-file-path)
+    Error: .github/workflows/graphql-inspector.yml:1:37 ... 40, Error - `yml` is not a recognized word. (check-file-path)
+
+In the log form, the numbers `9 ... 18` refer to character offsets within the file path. Here `9 ... 18` refers to `workflows` and `37 ... 40` refer to `yml` for the same file path.
+
+### Identifying the problematic items
+
+* If you enabled [[Summary Table|Feature: Summary Table]] with [`summary_table: 1`](https://github.com/check-spelling/check-spelling/wiki/Configuration#summary_table) and there is enough space, the individual paths should appear in the details table.
+* If you enabled [[Sarif output|Feature: Sarif output]] with [`use_sarif: 1`](https://github.com/check-spelling/check-spelling/wiki/Configuration#use_sarif) and the repository is public or is private and has advanced security enabled and you are a member of the security group / an owner/admin, then individual items should appear in the Sarif report.
+* You can find them listed in the `Spell check` section of the Action log (they should have `(check-file-path)` on each line).
 
 ### Resolution
 
-For false positives, you can add entries to `expect.txt` just as if the items were found in the files themselves, or add patterns to `patterns.txt`.
+For false positives, you can add entries to `expect.txt` or `allow.txt` (this is an especially good idea if you're using a term as a term of art, e.g. `graphql`) just as if the items were found in the files themselves, or add patterns to `patterns.txt`.
 
 If the file / directory is misspelled, you'll need to use `git mv` to rename it.
 
