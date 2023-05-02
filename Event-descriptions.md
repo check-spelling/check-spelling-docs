@@ -20,6 +20,7 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
 * [minified-file](#minified-file)
 * [duplicate-extra-dictionary](#duplicate-extra-dictionary)
 * [required-download-failed](#required-download-failed)
+* [check-file-path](#check-file-path)
 * [token-is-substring](#token-is-substring)
 * [summary-table-skipped](#summary-table-skipped)
 * [slow-file](#slow-file)
@@ -417,6 +418,22 @@ Because the dictionary is required in order to determine whether things are miss
 Most of the time, this will be a transient error, you can click the [`Re-run jobs` drop down and select `Re-run failed jobs`](https://docs.github.com/en/actions/managing-workflow-runs/re-running-workflows-and-jobs#re-running-failed-jobs-in-a-workflow).
 
 It's possible that your workflow is misconfigured and is pointing to a resource that doesn't exist (whether because it was removed or someone made an error), in which case you'll have to identify a correct URL and update the workflow.
+
+## check-file-path
+
+If you have enabled [[Check filenames and paths|Feature: Check filenames and paths]] with `check_file_names`, then in addition to checking the contents of files, check-spelling will check the file paths as well.
+
+A reported item will correspond to a portion of a file path, possibly a folder, possibly a file name, possibly the file extension. Initially, a bunch of the items listed will be false positives, but it's quite possible that one or two of them will be misspellings.
+
+### Resolution
+
+For false positives, you can add entries to `expect.txt` just as if the items were found in the files themselves, or add patterns to `patterns.txt`.
+
+If the file / directory is misspelled, you'll need to use `git mv` to rename it.
+
+- You may also need to update any references.
+  - It's possible references may live outside the repository. If that's the case, you may need to leave temporary shims (just as with fixing misspelled public APIs).
+
 
 ## token-is-substring
 
