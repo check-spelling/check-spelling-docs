@@ -212,6 +212,8 @@ The most common case is when upgrading versions of check-spelling. Newer version
 
 #### Auto-detect
 
+🪄 **Recommended Solution**
+
 You can simply remove the dictionary reference(s) and remove (if present):
 
 ```yaml
