@@ -384,10 +384,10 @@ The file has really long lines. It's probably minified.
 ### Resolution
 
 * If it's minified, add it to excludes
-* If it really should be checked, you can suppress the check by adding `minified-file` to `with:`/`disabled_checks:`, e.g.:
+* If it really should be checked, you can suppress the check by adding `minified-file` to `with:`/`disable_checks:`, e.g.:
   ```yaml
   with:
-    disabled_checks: minified-file
+    disable_checks: minified-file
   ```
 * If you think the heuristic should be improved, please file a bug with an example
 
