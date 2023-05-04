@@ -8,4 +8,4 @@
 * [[Parallel check CI failures]]
 * [[Script: Files to Excludes]]
 * [[Script: Staging PRs]]
-* [[What-does-each-dictionary-cover]]
+* [[What does each dictionary cover]]
