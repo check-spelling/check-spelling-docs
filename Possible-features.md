@@ -33,6 +33,7 @@
 
 ## Near term
 
+* [[Suggest dictionaries when dictionaries aren't available|Feature: Suggest dictionaries when dictionaries aren't available]]
 * [[💬Report associated comment for forbidden patterns|Feature: Report associated comment for forbidden patterns]]
 * [[👪Behavior change: case changes in expect|Behavior change: case changes in expect]]
 * [[🪆Subrepos|Feature: Subrepos]]
