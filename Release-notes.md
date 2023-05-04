@@ -26,7 +26,7 @@
 * [[Step Summary|Feature: Step Summary]]
 * [[Sarif output|Feature: Sarif output]]
 * [[Suggest patterns|Feature: Suggest patterns]]
-* [[Update expect command-line|Feature: update expect command-line]]
+* [[Update expect command-line|Feature: Update expect command-line]]
 * [[Check commit messages|Feature: Check commit messages]]
 * [[Restricted Permissions|Feature: Restricted Permissions]]
 * [[Minified file detection|Feature: Minified file detection]]
