@@ -2,8 +2,8 @@
 
 `jq` is a handy tool for writing shell scripts, but it's also frustrating.
 
-perl (5.14+) provides [JSON::PP](https://perldoc.perl.org/JSON::PP) which can handle the json parsing side of things.
-Evaluating then becomes a problem for perl instead of another programming language.
+Perl (5.14+) provides [JSON::PP](https://perldoc.perl.org/JSON::PP) which can handle the json parsing side of things.
+Evaluating then becomes a problem for Perl instead of another programming language.
 
 ## Tasks
 
