@@ -43,7 +43,7 @@ for maybe_missing_eol in *.md; do
     echo >> "$maybe_missing_eol"
   fi
 done
-if [ -s  _Footer.md ]; then
+if [ -s _Footer.md ]; then
   footer=$(head -1 _Footer.md)
   for file in $(
     git ls-files '*.md' -z |
