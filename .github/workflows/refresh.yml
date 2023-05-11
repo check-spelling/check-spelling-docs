@@ -1,0 +1,54 @@
+name: Refresh Docs
+
+on:
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    name: Refresh Website Content
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+    - name: checkout docs
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    - name: update docs
+      shell: bash
+      env:
+        wiki: https://github.com/check-spelling/check-spelling.wiki.git
+        GIT_COMMITTER_NAME: check-spelling-bot
+        GIT_COMMITTER_EMAIL: check-spelling-bot@users.noreply.github.com
+      run: |
+        set -x
+        old_commit=$(git rev-parse HEAD)
+        latest_commit_message="$(git log --pretty=format:%s -1)"
+        if [ "Convert for docs" != "$latest_commit_message" ] ; then
+          echo "::error ::Unexpected commit message: '$latest_commit_message'"
+          exit 1
+        fi
+        git reset --hard "$old_commit"~
+        git remote add wiki "${wiki:-https://github.com/check-spelling/check-spelling.wiki.git}"
+        git fetch wiki
+        git rebase FETCH_HEAD
+        ./build.sh
+        git add -u
+        git config user.email "$GIT_COMMITTER_EMAIL"
+        git config user.name "$GIT_COMMITTER_NAME"
+        git commit -m "$latest_commit_message"
+        new_commit=$(git rev-parse HEAD)
+        (
+          echo '# Refresh website'
+          URL_BASE="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY"
+          echo "[Updates]($URL_BASE/compare/$old_commit..$new_commit) • [All Changes]($URL_BASE/compare/$old_commit...$new_commit)"
+          echo "[$old_commit]($URL_BASE/commit/$old_commit) :arrow_right: [$new_commit]($URL_BASE/commit/$new_commit)"
+          echo
+          echo '---'
+          echo '```'
+          git diff "$old_commit" --stat
+          echo '```'
+        ) >> "$GITHUB_STEP_SUMMARY"
+        if ! git push origin HEAD --force-with-lease; then
+          git log -p FETCH_HEAD..HEAD | cat
+        fi
