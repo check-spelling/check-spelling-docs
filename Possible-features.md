@@ -4,6 +4,7 @@
 
 * 📚 Dictionary changes
   * ❄️ [[Dictionaries with unique value|Feature: Dictionaries with unique value]]
+  * 🥷 [[Suggest dictionaries when dictionaries aren't available|Feature: Suggest dictionaries when dictionaries aren't available]]
   * 🗑️ [[Removed Dictionaries]]
   * 📗 [[K8s|Dictionary: K8s]]
   * 📙 [[Lisp|Dictionary: Lisp]]
@@ -33,13 +34,12 @@
 
 ## Near term
 
-* [[Suggest dictionaries when dictionaries aren't available|Feature: Suggest dictionaries when dictionaries aren't available]]
 * [[💬Report associated comment for forbidden patterns|Feature: Report associated comment for forbidden patterns]]
 * [[👪Behavior change: case changes in expect|Behavior change: case changes in expect]]
 * [[🪆Subrepos|Feature: Subrepos]]
 * [[🪄Honor gitattributes|Feature: honor gitattributes]]
 * [[🙈Support gitignore|Feature: Support gitignore]]
-* [[Update base branch|Feature: Update base branch]]
+* [[↬Update base branch|Feature: Update base branch]]
 * [[Behavior change: Log output order]]
 * [[♻️Workflow: retest support|Workflow: retest support]]
 * [[🏃Run in GitLab|Feature: Run in GitLab]]
