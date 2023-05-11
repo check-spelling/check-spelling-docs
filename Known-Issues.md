@@ -1,6 +1,6 @@
 # Known Issues
 
-* [Too many unrecognized word](#Too_many_unrecognized_words)
+* [Too many unrecognized words](#Too_many_unrecognized_words)
 * [@dependabot can't comment](#dependabot-cant-comment)
 
 ## Too many unrecognized words
@@ -28,7 +28,7 @@ Usually this happens when a bunch of binary files are added and are not in `excl
 
 See [[Automatically truncate comment|Feature: Automatically truncate comment]]
 
-👷 Upgrade to v0.0.20 (or the latest 0.0.20-alpha...)
+👷 Upgrade to [v0.0.20](https://github.com/check-spelling/check-spelling/releases/v0.0.20) (or newer)
 
 ## @dependabot can't comment
 
