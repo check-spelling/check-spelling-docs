@@ -65,4 +65,4 @@ jobs:
 
 ### See also
 
-* [[Configuration: Multiple languages]]
+* [[Configuration: Multiple programming languages]]
