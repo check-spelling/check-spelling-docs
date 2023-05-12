@@ -1,4 +1,4 @@
-# Configuration: Multiple languages
+# Configuration: Multiple programming languages
 
 ## Background
 
