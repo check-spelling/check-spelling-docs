@@ -7,5 +7,5 @@
   * [[Configuration Examples: patterns]]
   * [[Configuration Examples: reject]]
 * [[Configuration: Advanced]]
-* [[Configuration: Multiple languages]]
+* [[Configuration: Multiple programming languages]]
 * [[Configuration: Workflows]]
