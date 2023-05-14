@@ -83,7 +83,7 @@ Information will be available in [GHSA-g86g-chm8-7r2p](https://github.com/check-
 * [[Feature: Spelling comments without config]]
 * [[Feature: Run locally]]
 * [[Feature: Versioned dictionaries]]
-* [[Feature: support pull_request_target]]
+* [[Feature: Support pull_request_target]]
 
 ### Known issues
 
