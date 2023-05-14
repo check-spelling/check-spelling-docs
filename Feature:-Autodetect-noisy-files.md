@@ -13,7 +13,10 @@ Consider keeping stats on a per file / line basis...
 
 Look for new filename extensions?
 
-See also [[Detect non text files|Feature: Detect non text files]]
+## See also
+
+* [[Detect non text files|Feature: Detect non text files]]
+* [[Detect binary files|Feature: Detect binary files]]
 
 ## Escape path
 
