@@ -48,7 +48,7 @@ As a duplicate word (`azure`).
 
 ## Change
 
-Instead of masking `patterns` with "` `", as of v0.0.20, patterns will be masked with "`=`".
+Instead of masking `patterns` with "` `", as of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), patterns will be masked with "`=`".
 
 It's unlikely that anyone will notice this change as the only place this should matter is forbidden patterns which are v0.0.20 feature.
 
