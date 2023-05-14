@@ -270,6 +270,8 @@ GitHub will try to attach annotations for the first couple of reported items.
 
 The downside of this limit, of course, is that if there are more instances of a given misspelled word than this limit, you will have to find the others on your own and fix them as well. (Or just iterate with the action until it's happy...)
 
+See [[Limit reports for each unknown word|Feature: Cap reports per unknown word]]
+
 ## Files
 
 Note that each of the below items can either be a file with a `.txt` suffix,
