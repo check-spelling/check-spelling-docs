@@ -64,7 +64,9 @@ HTTPS tokens can be a [personal access token](https://docs.github.com/en/authent
 ##### `GITHUB_TOKEN`
 The [`GITHUB_TOKEN`](https://docs.github.com/en/actions/security-guides/automatic-token-authentication). can allow pushes, but when used, it [doesn't trigger other workflows](https://docs.github.com/en/actions/security-guides/automatic-token-authentication#using-the-github_token-in-a-workflow), which means it's problematic for automatic updates.
 
-To enable a smoother approach, the repository can be configured to use a [[read-write deploy key|Feature:-Update-with-deploy-key]]
+This mode will trigger a [[Disclaimer about missing status|Feature: Disclaimer about missing status]].
+
+To enable a smoother approach, the repository can be configured to use a [[read-write deploy key|Feature:-Update-with-deploy-key]].
 
 #### SSH keys
 SSH keys can be user keys, or deploy keys.
