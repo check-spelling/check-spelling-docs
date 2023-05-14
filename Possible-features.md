@@ -1,5 +1,7 @@
 # Possible features
 
+[Ready](#Ready) | [In progress](#In-progress) | [Near term](#Near-term) | [Distant future](#Distant-future) | [Currently out of scope](#Related-but-currently-out-of-scope)
+
 ## Ready
 
 * 📚 Dictionary changes
@@ -45,6 +47,7 @@
 * [[🏃Run in GitLab|Feature: Run in GitLab]]
 * [[🏃Run in Gitea|Feature: Run in Gitea]]
 * [[📄Reusable Workflows|Feature: Reusable Workflows]]
+* [[😸Customer satisfaction survey|Feature: Customer satisfaction survey]]
 
 ## Distant future
 
