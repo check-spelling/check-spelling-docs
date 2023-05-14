@@ -60,6 +60,7 @@
 * [[Duplicate word detection|Feature: Duplicate word detection]]
 * [[Update with deploy key|Feature: Update with deploy key]]
 * [[Artifacts are zipped|Breaking change: Artifacts are zipped]]
+* [[User visible warning codes|Feature: User visible warning codes]]
 
 ## [v0.0.19](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.19)
 ❗ Please do not use versions older than this.
