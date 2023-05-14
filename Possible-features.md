@@ -61,4 +61,5 @@
 
 ## Related but currently out of scope
 
+* [[Suggest corrections|Feature: Suggest corrections]]
 * [[Generate .git-blame-ignore-revs|Wishlist: .git blame ignore revs]]
