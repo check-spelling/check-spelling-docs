@@ -23,7 +23,7 @@ There are two modes:
 
 ### Incompatible with
 
-* `concurrency` -> `cancel-in-progress`
+* [[Concurrency|Feature: Concurrency]] -> `cancel-in-progress`
 
 ## Future Work
 
