@@ -6,7 +6,7 @@ The default dictionary 📘 through [[v0.0.19|https://github.com/check-spelling/
 
 The downside of its comprehensiveness is that it has lots of archaic words.
 This means that it's rather forgiving of typos for common words in favor of those archaic words.
-It also means that if/when I implement [[correction suggestions|Feature: suggest corrections]] suggestions are pretty quirky (e.g. `Debian` -> `cebian`).
+It also means that if/when I implement [[correction suggestions|Feature: Suggest corrections]] suggestions are pretty quirky (e.g. `Debian` -> `cebian`).
 
 I'll probably test the upgrade with known consumers and maybe switch in 0.0.19-alpha.
 
