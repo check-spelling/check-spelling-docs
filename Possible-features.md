@@ -38,6 +38,7 @@
 
 * [[💬Report associated comment for forbidden patterns|Feature: Report associated comment for forbidden patterns]]
 * [[👪Behavior change: case changes in expect|Behavior change: case changes in expect]]
+* [[🗜️Breaking change: Smaller dictionary|Breaking change: Smaller dictionary]]
 * [[🪆Subrepos|Feature: Subrepos]]
 * [[🪄Honor gitattributes|Feature: Honor gitattributes]]
 * [[🙈Support gitignore|Feature: Support gitignore]]
