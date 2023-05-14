@@ -10,6 +10,8 @@ It would be nice if the tool could recognize files that aren't interesting to it
 
 If a file has more *non-words* than dictionary *words*, it's a good candidate for exclusion.
 
+This is implemented in [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21) as part of [[Autodetect noisy files|Feature: Autodetect noisy files]]
+
 ### Implementation
 
 1. Files would need to be scanned individually
@@ -19,6 +21,8 @@ If a file has more *non-words* than dictionary *words*, it's a good candidate fo
 1. If there's an imbalance (51%?), a warning should be issued
 
 ## File patterns
+
+This is implemented in [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22) as part of [[Heuristic exclude suggestions|Feature: Heuristic exclude suggestions]]
 
 Totals for files could be checked by *file extension*, *file infix*, *file prefix*, and *directory name*
 
