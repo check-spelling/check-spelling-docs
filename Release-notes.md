@@ -38,6 +38,7 @@
 
 ## [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20)
 
+* [[Behavior change: Patterns masking character|Behavior change: Patterns masking character]]
 * [[Behavior change: Consumed line endings]]
 * [[Smarter scheduling 2021 October|Feature: Smarter scheduling 2021 October]]
 * [[Suppress push comment for open PRs|Feature: Suppress push comment for open PRs]]
