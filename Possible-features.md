@@ -39,7 +39,7 @@
 * [[💬Report associated comment for forbidden patterns|Feature: Report associated comment for forbidden patterns]]
 * [[👪Behavior change: case changes in expect|Behavior change: case changes in expect]]
 * [[🪆Subrepos|Feature: Subrepos]]
-* [[🪄Honor gitattributes|Feature: honor gitattributes]]
+* [[🪄Honor gitattributes|Feature: Honor gitattributes]]
 * [[🙈Support gitignore|Feature: Support gitignore]]
 * [[↬Update base branch|Feature: Update base branch]]
 * [[Behavior change: Log output order]]
