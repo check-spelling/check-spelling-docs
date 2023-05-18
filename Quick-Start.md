@@ -12,6 +12,8 @@
 
 This will give you handling for `push`, `pull_request_target`, and example files with a `README.md` describing the files and linking to more examples in this wiki.
 
+* If you have existing forks, you should see [[Onboarding]] for information about tweaks you can make to the workflow in order to improve the experience for PRs from those existing forks.
+
 * Best-practice for workflows is to use a pinned version.
 
 * There is generally a `prerelease` branch with evolving features,
