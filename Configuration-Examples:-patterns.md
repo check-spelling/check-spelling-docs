@@ -184,7 +184,7 @@ accounts.binance.com/[a-z/]*oauth/authorize\?[-0-9a-zA-Z&%]*
 \b(?:https?://|)(?:(?:download\.visualstudio|docs|msdn2?|research)\.microsoft|blogs\.msdn)\.com/[-_a-zA-Z0-9()=./%]*
 # powerbi
 \bapp\.powerbi\.com/reportEmbed/[^"' ]*
-# vs deveops
+# vs devops
 \bvisualstudio.com(?::443|)/[-\w/?=%&.]*
 
 # mvnrepository.com
