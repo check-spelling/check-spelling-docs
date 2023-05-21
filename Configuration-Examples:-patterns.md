@@ -129,7 +129,7 @@ GHSA(?:-[0-9a-z]{4}){3}
 # GitLab commits
 \bgitlab\.[^/]*/[^/]+/[^/]+/commits?/[0-9a-f]+\b
 
-# binanace
+# binance
 accounts.binance.com/[a-z/]*oauth/authorize\?[-0-9a-zA-Z&%]*
 
 # bitbucket diff
