@@ -12,7 +12,7 @@ Subrepos enable a git repository to reference other git repositories.
 
 ## Just do it
 
-Caveats asside, a naive implementation that ignores all the likely problems and at least is able to report unrecognized words as seen in a checkout shouldn't be too hard.
+Caveats aside, a naive implementation that ignores all the likely problems and at least is able to report unrecognized words as seen in a checkout shouldn't be too hard.
 
 ## Workaround
 
