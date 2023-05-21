@@ -2,35 +2,68 @@
 
 Each event should be listed in the [**Action Log**](https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/using-workflow-run-logs#viewing-logs-to-diagnose-failures).
 
-* [unrecognized-spelling](#unrecognized-spelling)
-* [noisy-file](#noisy-file)
-* [bad-regex](#bad-regex)
-* [no-newline-at-eof](#no-newline-at-eof)
-* [non-alpha-in-dictionary](#non-alpha-in-dictionary)
-* [whitespace-in-dictionary](#whitespace-in-dictionary)
-* [unexpected-line-ending](#unexpected-line-ending)
-* [forbidden-pattern](#forbidden-pattern)
-* [deprecated-feature](#deprecated-feature)
-* [large-file](#large-file)
-* [limited-references](#limited-references)
-* [dictionary-not-found](#dictionary-not-found)
-* [candidate-pattern](#candidate-pattern)
-* [unsupported-repo-notation](#unsupported-repo-notation)
-* [unsupported-configuration](#unsupported-configuration)
-* [minified-file](#minified-file)
-* [duplicate-extra-dictionary](#duplicate-extra-dictionary)
-* [required-download-failed](#required-download-failed)
-* [check-file-path](#check-file-path)
-* [token-is-substring](#token-is-substring)
-* [summary-table-skipped](#summary-table-skipped)
-* [slow-file](#slow-file)
+- [Event](#event)
+  - [unrecognized-spelling](#unrecognized-spelling)
+    - [Resolution](#resolution)
+  - [noisy-file](#noisy-file)
+    - [Resolution](#resolution-1)
+  - [bad-regex](#bad-regex)
+  - [no-newline-at-eof](#no-newline-at-eof)
+    - [Resolution](#resolution-2)
+  - [non-alpha-in-dictionary](#non-alpha-in-dictionary)
+    - [Resolution](#resolution-3)
+  - [whitespace-in-dictionary](#whitespace-in-dictionary)
+    - [Resolution](#resolution-4)
+    - [Future](#future)
+  - [unexpected-line-ending](#unexpected-line-ending)
+    - [Resolution](#resolution-5)
+  - [forbidden-pattern](#forbidden-pattern)
+    - [Resolution](#resolution-6)
+  - [deprecated-feature](#deprecated-feature)
+    - [Resolution](#resolution-7)
+  - [large-file](#large-file)
+    - [Resolution](#resolution-8)
+  - [limited-references](#limited-references)
+    - [Resolution](#resolution-9)
+  - [dictionary-not-found](#dictionary-not-found)
+    - [Resolution](#resolution-10)
+      - [Auto-detect](#auto-detect)
+      - [Update](#update)
+      - [Use older dictionaries](#use-older-dictionaries)
+      - [Use multiple prefixes](#use-multiple-prefixes)
+  - [candidate-pattern](#candidate-pattern)
+    - [Resolution](#resolution-11)
+  - [unsupported-repo-notation](#unsupported-repo-notation)
+  - [unsupported-configuration](#unsupported-configuration)
+    - [`only_check_changed_files` and `use_sarif`](#only_check_changed_files-and-use_sarif)
+    - [`use_sarif` and `security-events: write`](#use_sarif-and-security-events-write)
+      - [Resolution](#resolution-12)
+    - [`use_sarif` and private repositories](#use_sarif-and-private-repositories)
+      - [Resolution](#resolution-13)
+    - [`use_sarif` and `act`](#use_sarif-and-act)
+  - [minified-file](#minified-file)
+    - [Resolution](#resolution-14)
+  - [duplicate-extra-dictionary](#duplicate-extra-dictionary)
+    - [Resolution](#resolution-15)
+  - [required-download-failed](#required-download-failed)
+    - [Resolution](#resolution-16)
+      - [Examples](#examples)
+  - [check-file-path](#check-file-path)
+    - [Identifying the problematic items](#identifying-the-problematic-items)
+    - [Resolution](#resolution-17)
+  - [token-is-substring](#token-is-substring)
+    - [Resolution](#resolution-18)
+  - [summary-table-skipped](#summary-table-skipped)
+    - [Resolution](#resolution-19)
+  - [slow-file](#slow-file)
+    - [Resolution](#resolution-20)
 
 ℹ️ As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), workflows can [[configure whether specific events are treated as ❌Errors or ⚠️Warnings|Feature: Treat specific errors as warnings]].
 
 ## unrecognized-spelling
 
-> Warning: reffy.js: line 27, columns 4-17, Warning - `compatilibity` is not a recognized word. (unrecognized-spelling)
-> Warning: src/browserlib/extract-dfns.mjs: line 159, columns 11-20, Warning - `hyperlink` is not a recognized word. (unrecognized-spelling)
+> Warning: reffy.js:27:4 ... 17, Warning - `compatilibity` is not a recognized word. (unrecognized-spelling)
+> Warning: src/browserlib/extract-dfns.mjs:159:11 ... 20, Warning - `hyperlink` is not a recognized word. (unrecognized-spelling)
 
 The token isn't in the dictionary
 
@@ -43,7 +76,7 @@ The token isn't in the dictionary
 
 ## noisy-file
 
-> Warning: bridge/client/app/_models/metadata.ts: line 1, columns 1-1, Warning - Skipping `bridge/client/app/_models/metadata.ts` because there seems to be more noise (6) than unique words (3) (total: 6 / 7). (noisy-file)
+> Warning: bridge/client/app/_models/metadata.ts:1:1 ... 1, Warning - Skipping `bridge/client/app/_models/metadata.ts` because there seems to be more noise (6) than unique words (3) (total: 6 / 7). (noisy-file)
 
 This generally means that the file doesn't appear to be English.
 
@@ -62,7 +95,7 @@ Technically it means there are fewer unique dictionary words in the file than un
 
 ## bad-regex
 
-> Warning: .github/actions/spelling/patterns.txt: line 5, columns 1-9, Warning - bad regex (bad-regex)
+> Warning: .github/actions/spelling/patterns.txt:5:1 ... 9, Warning - bad regex (bad-regex)
 
 Perl 5 didn't like your regular expression.
 
@@ -111,7 +144,7 @@ If you want to accept `avii-ridge` in your repository, you can:
 
 ## whitespace-in-dictionary
 
-> Warning: .github/actions/spelling/expect.txt: line 1, columns 5-6, Warning - entry has unexpected whitespace (whitespace-in-dictionary)
+> Warning: .github/actions/spelling/expect.txt:1:5 ... 6, Warning - entry has unexpected whitespace (whitespace-in-dictionary)
 
 This generally means you have a mix of DOS and Unix line endings.
 
@@ -133,7 +166,7 @@ This may be renamed to `unexpected-line-ending` in the future.
 
 ## unexpected-line-ending
 
-> Warning: .github/actions/spelling/expect.txt: line 1, columns 5-6, Warning - entry has unexpected whitespace (whitespace-in-dictionary)
+> Warning: .github/actions/spelling/expect.txt:1:5 ... 6, Warning - entry has unexpected whitespace (whitespace-in-dictionary)
 
 This generally means you have a mix of DOS and Unix line endings.
 
@@ -151,7 +184,7 @@ dos2unix .github/actions/spelling/expect.txt
 
 ## forbidden-pattern
 
-> Warning: unknown-words.sh: line 894, columns 43-59, Warning - `patterns patterns` matches an objections.patterns entry. (forbidden-pattern)
+> Warning: unknown-words.sh:894:43 ... 59, Warning - `patterns patterns` matches an objections.patterns entry. (forbidden-pattern)
 
 This is generated by [[Forbidden patterns|Feature: Forbidden patterns]].
 
@@ -174,7 +207,7 @@ Please try to migrate to the newer supported item.
 
 ## large-file
 
-> Warning: gigantic-file.sh: line 0, columns 0-0, Warning - size `10000000` exceeds limit `1000000`. (large-file)
+> Warning: gigantic-file.sh:0:0 ... 0, Warning - size `10000000` exceeds limit `1000000`. (large-file)
 
 This is generated by [[Configurable file size limits|Feature: Configurable file size limits]].
 
@@ -186,7 +219,7 @@ If the file should be skipped, please add it to `excludes.txt`.
 
 ## limited-references
 
-> Warning: pkg/testutil/testutil_windows.go: line 26, columns 67-69, Warning - `amd` is not a recognized word-- found 80 times. (limited-references)
+> Warning: pkg/testutil/testutil_windows.go:26:67 ... 69, Warning - `amd` is not a recognized word-- found 80 times. (limited-references)
 
 This is generated when a word appears more than [[unknown_word_limit|Configuration#unknown_word_limit]] times.
 
