@@ -74,7 +74,7 @@ Note, while `cspell:cpp/cpp.txt` exists, it includes too many typos to be includ
   * You may want to review them and add words to `reject.txt`
   * If you're keeping track of which dictionary contributed, `reject/cpp.txt`, e.g.
     ```
-    defintions
+    definitions
     ```
 
 The current version ignores any line with characters outside `[A-Za-z']` (because those are effectively the only characters that the spell checker will consider part of a word, and thus a word containing any character not in the set will never match anything).
