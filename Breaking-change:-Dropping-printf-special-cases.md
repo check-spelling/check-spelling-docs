@@ -4,7 +4,7 @@
 
 When the core for check-spelling was initially developed, it was a lot simpler and didn't have any support for [`patterns`](https://github.com/check-spelling/check-spelling/wiki/Configuration-Examples:-patterns).
 
-As it was often run against C/C++ repositories, code was baked in to handle `\n`, `\r`, and `\t`.
+As it was often run against C/C++ repositories, code was baked-in to handle `\n`, `\r`, and `\t`.
 
 ## Changes
 
