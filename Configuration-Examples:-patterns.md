@@ -341,7 +341,7 @@ integrity="sha\d+-[-a-zA-Z=;:/0-9+]{40,}"
 # Input to GitHub JSON
 content: "[-a-zA-Z=;:/0-9+]*="
 
-# Python stringprefix / binaryprefix
+# Python string prefix / binary prefix
 \b(?:B|BR|Br|F|FR|Fr|R|RB|RF|Rb|Rf|U|UR|Ur|b|bR|br|f|fR|fr|r|rB|rF|rb|rf|u|uR|ur)'
 
 # Regular expressions for (P|p)assword
