@@ -193,7 +193,7 @@ In order to not drown in [check_extra_dictionaries](#check_extra_dictionaries) s
 
 ### event_aliases
 
-GitHub has many many events, and Check Spelling isn't specifically designed for most of them. If you want to use it with an event that it doesn't recognize, you can map the event to one it does. As long as the event has enough fields to work, Check Spelling will treat it as if it is the mapped even.
+GitHub has many events, and Check Spelling isn't specifically designed for most of them. If you want to use it with an event that it doesn't recognize, you can map the event to one it does. As long as the event has enough fields to work, Check Spelling will treat it as if it is the mapped even.
 
 This is mostly because `pull_request_target` was added by GitHub and realistically one should have been able to use Check Spelling with it based on its support for the `pull_request` event long before it was updated to use the `pull_request_target` event.
 
