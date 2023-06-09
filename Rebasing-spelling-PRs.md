@@ -14,7 +14,7 @@ These scripts require functions from [[Looking for items locally|Looking for ite
 * `top_wins` -- pick the first side of a three way merge
 * `what_needs_to_be_fixed` -- look for items that were removed in the current proposed commit but are still present when the commit conflicted
 
-```
+```sh
 what_was_removed() {
   git show --word-diff -U0 $1 |
     perl -ne 'next unless s/(\[-[^\]]+-\])/\n$1\n/g; print' |
