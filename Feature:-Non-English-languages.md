@@ -18,7 +18,7 @@ The simplification makes the code much easier to work with and lets me work on t
 The `patterns.txt` file can strip out your non-ascii words if you like.
 
 I think the following (untested) `patterns.txt` entry should work:
-```
+```js
 # skip any word that has at least one non-ascii character (the spell checker would split on those characters)
 \S*(?:[^[:ascii:]]+\S*)+
 ```
