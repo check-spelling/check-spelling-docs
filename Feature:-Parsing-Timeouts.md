@@ -21,7 +21,7 @@ https://perldoc.perl.org/functions/alarm
 
 There is not currently a `with` field for this, but you can use:
 
-```
+```yaml
 env:
   splitter_timeout: ...
 ```
