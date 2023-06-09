@@ -18,7 +18,7 @@ Note that this can happen in a fork even if things are working fine in the upstr
 
 * [push](#push)
 * [pull_request_target](#pull_request_target)
-* [pull_request](#pull_request) :warning:
+* [pull_request](#pull_request) ⚠️
 * [schedule](#schedule)
 * [Checking potential merges for PRs](#checking-prs-by-their-merge-commit)
 
@@ -38,7 +38,7 @@ the spell checker can run and comment on the commit.
 Comments on commits will appear when those commits are offered
 as part of a pull request to another repository.
 
-:warning: Forks can disable actions,
+⚠️ Forks can disable actions,
 and thus it's possible for this workflow
 not to have been run by your contributors.
 
@@ -67,7 +67,7 @@ on:
 ℹ️ You should be able to migrate to [pull_request_target](#pull_request_target)
 when you upgrade to 0.0.17-alpha.
 
-:warning: Non-member contributors who create a pull request
+⚠️ Non-member contributors who create a pull request
 from a forked repository will trigger an action run with a
 special [read-only github token](https://docs.github.com/en/actions/configuring-and-managing-workflows/authenticating-with-the-github_token#permissions-for-the-github_token).
 This token is enough to retrieve and process the pull request,
@@ -115,7 +115,7 @@ on:
     - cron: '15 * * * *'
 ```
 
-Cons: There will not be a :x: for the PR, so you have to look
+Cons: There will not be a ❌ for the PR, so you have to look
 for a comment.
 
 ### Draft
