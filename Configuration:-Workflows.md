@@ -138,6 +138,11 @@ jobs:
 ...
 ```
 
+There are two sides to this:
+1. An additional `if:` condition for `github.event.pull_request.draft == false` -- this suppresses checks while the PR is in draft (note that any initial `push` events will still run and may trigger scanning / reporting if it's unhappy, but subsequent runs once a PR is opened will be suppressed by check-spelling's `suppress_push_for_open_pull_request`)
+2. `on:` / `pull_request_target:` / `types:` / `'ready_for_review'` -- this triggers a check when someone converts the PR from draft to ready for review (otherwise you'd have to wait for an additional push, which would be frustrating).
+
+
 ### Checking PRs by their merge commit
 
 If you use `actions/checkout` to get the source for checking, `push` and `pull_request` will naturally do the right thing.
