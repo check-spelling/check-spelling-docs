@@ -23,4 +23,4 @@ https://www.regexplanet.com/advanced/perl/) yours before committing to verify it
 
 ## advice.md
 
-As of 0.0.18, the file can be named `advice.md` instead of `advice.txt`.
+As of [v0.0.18](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.18), the file can be named `advice.md` instead of `advice.txt`.
