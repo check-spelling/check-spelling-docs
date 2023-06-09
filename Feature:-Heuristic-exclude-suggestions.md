@@ -32,9 +32,13 @@ Given open `$checked_files` and `$should_exclude_file` in parallel. Create a sta
 ### File extensions
 
 ... are pretty easy:
-```
+```sh
 get_extension_counts() {
-cat | perl -ne 's{^.*/}{};next unless s{^.*\.}{.}; print' |sort |uniq -c|perl -pne 's{\s*(\d+)\s+(\.\S+)}{$2 $1}'
+  cat |
+  perl -ne 's{^.*/}{};next unless s{^.*\.}{.}; print' |
+  sort |
+  uniq -c |
+  perl -pne 's{\s*(\d+)\s+(\.\S+)}{$2 $1}'
 }
 ```
 
