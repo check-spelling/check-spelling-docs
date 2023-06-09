@@ -44,7 +44,7 @@ not to have been run by your contributors.
 
 Example workflow snippet:
 
-```workflow
+```yaml
 on:
   push:
 ```
@@ -55,7 +55,7 @@ New in [0.0.17-alpha](https://github.com/check-spelling/check-spelling/releases/
 
 Example workflow snippet:
 
-```workflow
+```yaml
 on:
   push:
   pull_request_target:
@@ -82,7 +82,7 @@ This is understandably less than ideal.
 
 Example workflow snippet:
 
-```workflow
+```yaml
 on:
   push:
   pull_request:
@@ -107,7 +107,7 @@ See [timeframe](./Configuration:-Advanced#timeframe) for the configuration windo
 
 Example workflow snippet:
 
-```workflow
+```yaml
 on:
   push:
   schedule:
@@ -122,7 +122,7 @@ for a comment.
 
 If you don't want PRs to be spell checked eagerly, you can do something like:
 
-```workflow
+```yaml
 name: Spell checking
 on:
   pull_request_target:
@@ -150,7 +150,7 @@ However, `pull_request_target` will check out the _base_ of the PR, not the **HE
 
 If you want to check the results of a potential merge, you need something fancier:
 
-```workflow
+```yaml
     steps:
     - name: Check Spelling
       uses: check-spelling/check-spelling@v0.0.21
