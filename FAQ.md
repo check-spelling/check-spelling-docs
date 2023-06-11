@@ -6,7 +6,7 @@
 
 ## How do I upgrade?
 
-The recommended approach to upgrading is to _merge_ the contents of https://github.com/check-spelling/spell-check-this/blob/main/.github into your `.github` directory.
+The recommended approach to upgrading is to _merge_ the contents of https://github.com/check-spelling/spell-check-this/tree/main/.github into your `.github` directory.
 
 For the [workflow](https://github.com/check-spelling/spell-check-this/blob/main/.github/workflows/spelling.yml),
 you'll generally want to copy over any settings that you've applied (typically dictionary configuration) and remove any items you've removed. 
