@@ -54,6 +54,7 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
   - [Resolution](#resolution-19)
 - [slow-file](#slow-file)
   - [Resolution](#resolution-20)
+- [ignored-expect-variant](#ignored-expect-variant)
 
 ℹ️ As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), workflows can [[configure whether specific events are treated as ❌Errors or ⚠️Warnings|Feature: Treat specific errors as warnings]].
 
@@ -521,3 +522,20 @@ When processing a file, if the time to parse exceeds the `splitter_timeout` envi
 * Add the file to `excludes.txt`
 * Adjust patterns to improve parsing behavior
 * Increase [`splitter_timeout`](https://github.com/check-spelling/check-spelling/wiki/Feature%3A-Parsing-Timeouts#configuration)
+
+# ignored-expect-variant
+
+English / programming have interesting ways of handling proper nouns.
+
+In general, a term might be written as `MICROSOFT`, it's reasonable to decide that this is ok for use in a project.
+Doing this doesn't tend to mean that using `Microsoft` or `microsoft` would be acceptable.
+
+Otoh, once you've decided that `Microsoft` is acceptable, it's likely that you'll also accept `MICROSOFT` (e.g. as a constant or in some ALL CAPS SENTENCE) while still not allowing `microsoft`.
+
+If you decide that `microsoft` is acceptable, then it's likely that you'll also accept `Microsoft` (e.g. as the first word in a sentence).
+
+`expect.txt` is parsed with the assumption that only the most general form that's found in your code is listed.
+
+## Resolution
+* Remove the extraneous entry/entries from `expect.txt` -- the included `apply.pl` suggestions should help with this
+* Add forms to `allow.txt` which doesn't have this behavior
