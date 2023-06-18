@@ -55,6 +55,7 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
 - [slow-file](#slow-file)
   - [Resolution](#resolution-20)
 - [ignored-expect-variant](#ignored-expect-variant)
+  - [Resolution](#resolution-21)
 
 ℹ️ As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), workflows can [[configure whether specific events are treated as ❌Errors or ⚠️Warnings|Feature: Treat specific errors as warnings]].
 
