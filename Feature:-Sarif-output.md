@@ -33,6 +33,18 @@ jobs:
         use_sarif: 1
 ```
 
+## Visibility
+
+In general:
+
+> Security alerts for a repository are visible to people with write, maintain, or admin access to the repository
+
+See [Granting access to security alerts](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-security-and-analysis-settings-for-your-repository#granting-access-to-security-alerts) for more information.
+
+This means that if you're a contributor without write access to a repository, you probably won't be able to click the [👼 SARIF report?](#) link.
+
+If you'd like to see a similar report, you should be able to create a pull request in your fork and trigger the same workflow and view the equivalent report there.
+
 ## Adjusting sarif.json
 
 After v0.0.21 (available in prerelease), there's the ability to add a `sarif.json` file to adjust severities or other fields.
