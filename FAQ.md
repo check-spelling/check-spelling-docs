@@ -4,6 +4,8 @@
 
 * [How do I get comments to collapse?](#how-do-i-get-comments-to-collapse)
 
+* [Why can't I see the 👼 SARIF report?](#why-cant-i-see-the--sarif-report)
+
 ## How do I upgrade?
 
 The recommended approach to upgrading is to _merge_ the contents of https://github.com/check-spelling/spell-check-this/tree/main/.github into your `.github` directory.
@@ -23,3 +25,12 @@ When you _push_ to a **Pull Request**, the workflow that matters is generally th
 
 When you _comment_ on a **Pull Request**, the workflow that matters is the one for your **default branch**.
 
+## Why can't I see the 👼 SARIF report?
+
+Reports for some repositories will have an entry like:
+
+> See the [📂 files](#) view, the [📜action log](#) or [👼 SARIF report](#) for details.
+
+Users without write access to the repository will probably not be able to see the [👼 SARIF report](#), and will instead see a 404 page.
+
+This is relates to the fact that SARIF was designed for reporting results from security scanners, as such GitHub restricts who has access to the reports. For more information, see [[SARIF output visibility|Feature:-Sarif-output#visibility]].
