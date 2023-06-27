@@ -235,15 +235,30 @@ You could of course use your local tools to find the remaining instances.
 
 # dictionary-not-found
 
+## 503 (internal server error)
+
+> Failed to retrieve cspell:r/src/r.txt (https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20230509/dictionaries/r/src/r.txt)
+> HTTP/2 503 
+> server: Varnish
+> retry-after: 0
+
+### Resolution
+
+Rerun the workflow.
+
+🙏 Future versions of check-spelling will include code to retry these failures.
+
+## 404 (file not found)
+
 > Error: Failed to retrieve cspell:software-terms/softwareTerms.txt -- https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20220814/dictionaries/software-terms/softwareTerms.txt (dictionary-not-found)
 
 This can happen if a path to a dictionary is incorrect.
 
 The most common case is when upgrading versions of check-spelling. Newer versions may use refreshed versions of the [cspell: dictionaries](https://github.com/streetsidesoftware/cspell-dicts) and their dictionaries are reorganized periodically.
 
-## Resolution
+### Resolution
 
-### Auto-detect
+#### Auto-detect
 
 🪄 **Recommended Solution**
 
@@ -256,7 +271,7 @@ You can simply remove the dictionary reference(s) and remove (if present):
 
 This will let check-spelling suggest new dictionaries.
 
-### Update
+#### Update
 
 You can browse through the current dictionaries and identify suitable replacements. The output will show a URL which includes a repository and tag (e.g. `check-spelling/cspell-dicts/v20220814`), you can thus browse to https://github.com/check-spelling/cspell-dicts/tree/v20220814/dictionaries/. That might be something like (although you should consider which dictionary/dictionaries are relevant to your repository):
 
@@ -268,7 +283,7 @@ You can browse through the current dictionaries and identify suitable replacemen
       cspell:software-terms/src/network-protocols.txt
 ```
 
-### Use older dictionaries
+#### Use older dictionaries
 
 If you want to continue to use the previous dictionaries, you can check the run output of a previous version of check-spelling for the `with:` output, e.g.:
 ```
@@ -296,7 +311,7 @@ Will result in the same warning, but it will be non-fatal:
 
 > Failed to retrieve cspell:public-licenses/src/generated/public-licenses.txt -- https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20220427/dictionaries/public-licenses/src/generated/public-licenses.txt (dictionary-not-found)
 
-### Use multiple prefixes
+#### Use multiple prefixes
 
 In order to retain the `check_extra_dictionaries` behavior, while still retaining the old dictionary reference, and without having long urls in `extra_dictionaries`, you can add additional prefixes to `dictionary_source_prefixes`.
 
