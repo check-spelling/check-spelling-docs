@@ -546,7 +546,7 @@ English / programming have interesting ways of handling proper nouns.
 In general, a term might be written as `MICROSOFT`, it's reasonable to decide that this is ok for use in a project.
 Doing this doesn't tend to mean that using `Microsoft` or `microsoft` would be acceptable.
 
-Otoh, once you've decided that `Microsoft` is acceptable, it's likely that you'll also accept `MICROSOFT` (e.g. as a constant or in some ALL CAPS SENTENCE) while still not allowing `microsoft`.
+OTOH, once you've decided that `Microsoft` is acceptable, it's likely that you'll also accept `MICROSOFT` (e.g. as a constant or in some ALL CAPS SENTENCE) while still not allowing `microsoft`.
 
 If you decide that `microsoft` is acceptable, then it's likely that you'll also accept `Microsoft` (e.g. as the first word in a sentence).
 
