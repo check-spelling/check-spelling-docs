@@ -49,7 +49,7 @@ If you'd like to see a similar report, you should be able to create a pull reque
 
 After v0.0.21 (available in prerelease), there's the ability to add a `sarif.json` file to adjust severities or other fields.
 
-This is experimental (as is sarif support in general).
+This is experimental (as is SARIF support in general).
 
 https://github.com/check-spelling/check-spelling/issues/43
 
@@ -59,5 +59,5 @@ https://github.com/check-spelling/check-spelling/issues/43
 - [x] Support uploading it using [github/codeql-action/upload-sarif@releases/v2](https://github.com/github/codeql-action/tree/releases/v2/upload-sarif)
 - [x] Decide on how to opt-in/opt-out of using this format -- currently `use_sarif: 1`
 - [x] Test in the check-spelling org -- in progress
-- [ ] Select one or two repositories to trial this feature -- one candidate has volunteered
+- [x] Trial it in other repositories
 - [ ] Iterate
