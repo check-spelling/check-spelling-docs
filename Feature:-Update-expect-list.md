@@ -1,10 +1,10 @@
 # Update expect list
 
-Prior to 0.0.18, the action reports a comment which includes a posix(ish) shell command to update the expect list.
+Prior to [v0.0.18](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.18), the action reports a comment which includes a posix(ish) shell command to update the expect list.
 
 It would be much nicer if one could click something and have the action update the expect list.
 
-As of 0.0.18, you can enable this with:
+As of [v0.0.18](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.18), you can enable this with:
 
 ```yaml
     with:
@@ -71,7 +71,10 @@ To enable a smoother approach, the repository can be configured to use a [[read-
 #### SSH keys
 SSH keys can be user keys, or deploy keys.
 
-Deploy keys can be read-only or read-write.
+Deploy keys can be read-only or [read-write](#read-write-deploy-key).
+
+⚠️ Note that if you use `ssh-key`, it should be a valid private key file (not a PAT/`GITHUB_TOKEN`).
+As of [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21), check-spelling won't actively complain/warn if you pass a PAT, but it doesn't guarantee that it will work either. A future version may use `ssh-keygen -y -f file` to validate the input...
 
 ##### read-write deploy key
 Using a [read-write deploy key](https://docs.github.com/en/developers/overview/managing-deploy-keys#setup-2) should allow [**@check-spelling-bot**](https://github.com/check-spelling-bot) to update your PR and also trigger workflows. This will be the recommended approach as of v0.0.20 or thereabouts.
