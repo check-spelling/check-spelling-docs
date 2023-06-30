@@ -1,54 +1,54 @@
 # Configuration
 
-* [[Quick Start]]
+* [Quick Start](Quick-Start.md)
 * [Workflow Parameters](#workflow-parameters)
 * [Files](#files)
-* See [[Configuration: Workflows]] for the general workflow modes
+* See [Configuration: Workflows](./Configuration:-Workflows.md) for the general workflow modes
 
 ## Workflow Parameters
 
-See [[Configuration: Workflows]] for the supported GitHub workflows.
+See [Configuration: Workflows](./Configuration:-Workflows.md) for the supported GitHub workflows.
 
 | Parameter | Description |
 | ------------- | ------------- |
-| [GITHUB_TOKEN](#github_token) | github credential secret for api requests |
+| [GITHUB_TOKEN](#github-token) | github credential secret for api requests |
 | [config](#config) | directory with config files |
-| [dictionary_url](#dictionary_url) | url for primary dictionary |
-| [dictionary_version](#dictionary_version) | version of primary dictionary |
-| [experimental_apply_changes_via_bot](#experimental_apply_changes_via_bot) | allow [@check-spelling-bot](https://github.com/check-spelling-bot) to update PRs |
-| [experimental_parallel_jobs](#experimental_parallel_jobs) | parallelize spell checking file tasks |
-| [shortest_word](#shortest_word) | minimum word length |
-| [longest_word](#longest_word) | maximum word length |
-| [post_comment](#post_comment) | post comment |
-| [experimental_path](#experimental_path) | Directory root to check for spelling (note that bucket/project/config are independent of this) |
-| [capture_output_unknown_words](#capture_output_unknown_words) | Capture unknown words (should be added to expect.txt) as an action output |
-| [capture_output_stale_words](#capture_output_stale_words) | Capture stale words (should be removed from expect.txt) as an action output |
-| [capture_output_skipped_files](#capture_output_skipped_files) | Capture skipped files (could be added to excludes.txt) as an action output |
-| [experimental_commit_note](#experimental_commit_note) | If set, commit updates to expect automatically with this note |
-| [only_check_changed_files](#only_check_changed_files) | If set, only check changed files |
-| [dictionary_source_prefixes](#dictionary_source_prefixes) | prefixes for urls for dictionaries defined in [extra_dictionaries](#extra_dictionaries) |
-| [extra_dictionaries](#extra_dictionaries) | Dictionaries to include |
-| [check_extra_dictionaries](#check_extra_dictionaries) | If there are unknown words, see if they are in these additional dictionaries |
-| [extra_dictionary_limit](#extra_dictionary_limit) | The number of [check_extra_dictionaries](#check_extra_dictionaries) to report |
-| [event_aliases](#event_aliases) | Map an unsupported GitHub event to a known event |
-| [suppress_push_for_open_pull_request](#suppress_push_for_open_pull_request) | If running from a `push` event and there's an open `pull_request`, stop working and rely on the `pull_request` handling to check the branch |
-| [report_title_suffix](#report_title_suffix) | Appended to title (for use in [matrix configurations](https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#jobsjob_idstrategymatrix)) |
+| [dictionary_url](#dictionary-url) | url for primary dictionary |
+| [dictionary_version](#dictionary-version) | version of primary dictionary |
+| [experimental_apply_changes_via_bot](#experimental-apply-changes-via-bot) | allow [@check-spelling-bot](https://github.com/check-spelling-bot) to update PRs |
+| [experimental_parallel_jobs](#experimental-parallel-jobs) | parallelize spell checking file tasks |
+| [shortest_word](#shortest-word) | minimum word length |
+| [longest_word](#longest-word) | maximum word length |
+| [post_comment](#post-comment) | post comment |
+| [experimental_path](#experimental-path) | Directory root to check for spelling (note that bucket/project/config are independent of this) |
+| [capture_output_unknown_words](#capture-output-unknown-words) | Capture unknown words (should be added to expect.txt) as an action output |
+| [capture_output_stale_words](#capture-output-stale-words) | Capture stale words (should be removed from expect.txt) as an action output |
+| [capture_output_skipped_files](#capture-output-skipped-files) | Capture skipped files (could be added to excludes.txt) as an action output |
+| [experimental_commit_note](#experimental-commit-note) | If set, commit updates to expect automatically with this note |
+| [only_check_changed_files](#only-check-changed-files) | If set, only check changed files |
+| [dictionary_source_prefixes](#dictionary-source-prefixes) | prefixes for urls for dictionaries defined in [extra_dictionaries](#extra-dictionaries) |
+| [extra_dictionaries](#extra-dictionaries) | Dictionaries to include |
+| [check_extra_dictionaries](#check-extra-dictionaries) | If there are unknown words, see if they are in these additional dictionaries |
+| [extra_dictionary_limit](#extra-dictionary-limit) | The number of [check_extra_dictionaries](#check-extra-dictionaries) to report |
+| [event_aliases](#event-aliases) | Map an unsupported GitHub event to a known event |
+| [suppress_push_for_open_pull_request](#suppress-push-for-open-pull-request) | If running from a `push` event and there's an open `pull_request`, stop working and rely on the `pull_request` handling to check the branch |
+| [report_title_suffix](#report-title-suffix) | Appended to title (for use in [matrix configurations](https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#jobsjob_idstrategymatrix)) |
 | [warnings](#warnings) | Treat specific errors as warnings |
-| [custom_task](#custom_task) | Workflow magic |
-| [internal_state_directory](#internal_state_directory) | Workflow magic |
-| [check_file_names](#check_file_names) | Spell check file paths |
-| [anonymize_secpoll_source](#anonymize_secpoll_source) | Use public dns to check action security state |
-| [ignore_security_advisory](#ignore_security_advisory) | Override action security state warning |
-| [largest_file](#largest_file) | Ignore large files |
-| [unknown_word_limit](#unknown_word_limit) | Limit the number of reports per unknown word |
-| [disable_checks](#disable_checks) | Disable various check-spelling behaviors |
-| [check_commit_messages](#check_commit_messages) | Check commit / PR metadata |
-| [use_magic_file](#use_magic_file) | Detect binary files |
-| [use_sarif](#use_sarif) | Generate SARIF Reports |
-| [summary_table](#summary_table) | Summary Table |
+| [custom_task](#custom-task) | Workflow magic |
+| [internal_state_directory](#internal-state-directory) | Workflow magic |
+| [check_file_names](#check-file-names) | Spell check file paths |
+| [anonymize_secpoll_source](#anonymize-secpoll-source) | Use public dns to check action security state |
+| [ignore_security_advisory](#ignore-security-advisory) | Override action security state warning |
+| [largest_file](#largest-file) | Ignore large files |
+| [unknown_word_limit](#unknown-word-limit) | Limit the number of reports per unknown word |
+| [disable_checks](#disable-checks) | Disable various check-spelling behaviors |
+| [check_commit_messages](#check-commit-messages) | Check commit / PR metadata |
+| [use_magic_file](#use-magic-file) | Detect binary files |
+| [use_sarif](#use-sarif) | Generate SARIF Reports |
+| [summary_table](#summary-table) | Summary Table |
 | [report-timing](#report-timing) | Report file processing times |
 
-See [[Configuration: Advanced]] for additional options.
+See [Configuration: Advanced](./Configuration:-Advanced.md) for additional options.
 
 ### GITHUB_TOKEN
 
@@ -58,34 +58,34 @@ By default the [GITHUB_TOKEN](https://docs.github.com/en/actions/reference/authe
 ⚠️ [@dependabot](https://github.com/dependabot) appears to be unfriendly to this token.
 
 > **Note:** GitHub Actions get an automatic token which allows for read operations.
-> If the Action is a [pull_request](#pull_request) and the originating repository isn't trusted, then the automatic token will not have write permission, 
+> If the Action is a [pull_request](#pull-request) and the originating repository isn't trusted, then the automatic token will not have write permission, 
 > which means it won't be able to post a comment to the PR, there are three ways to address this:
-> * Use [pull_request_target](./Configuration:-Workflows#pull_request_target) recommended as of [0.0.17-alpha](https://github.com/check-spelling/check-spelling/releases/tag/0.0.17-alpha)
+> * Use [pull_request_target](./Configuration:-Workflows.md#pull-request-target) recommended as of [0.0.17-alpha](https://github.com/check-spelling/check-spelling/releases/tag/0.0.17-alpha)
 > * Create a custom Personal Access Token with `repo read` + `comment`
-> * Use [schedule](./Configuration:-Workflows#schedule) instead
+> * Use [schedule](./Configuration:-Workflows.md#schedule) instead
 
 ### config
 
 Default: `.github/actions/spelling`
 
-In this directory, you can place [files](#Files) to influence the spell checker.
+In this directory, you can place [files](#files) to influence the spell checker.
 
 ### dictionary_url
 
 If you don't define a dictionary using [dictionary](#dictionary) files,
 the spell checker will retrieve a dictionary. You can provide a different url
 if you have a preferred base. The default includes a variable (`$DICTIONARY_VERSION`)
-for a [version](#dictionary_version).
+for a [version](#dictionary-version).
 
-This [[feature|Feature: Versioned dictionaries]] is new with [0.0.17](https://github.com/check-spelling/check-spelling/releases/tag/0.0.17-alpha).
+This [feature](./Feature:-Versioned-dictionaries.md) is new with [0.0.17](https://github.com/check-spelling/check-spelling/releases/tag/0.0.17-alpha).
 
 ### dictionary_version
 
-If [dictionary_url](#dictionary_url) includes (`$DICTIONARY_VERSION`),
+If [dictionary_url](#dictionary-url) includes (`$DICTIONARY_VERSION`),
 you can override the default version.
 
 Over time, the default version will probably change.
-See [[versioned dictionaries|Feature: Versioned dictionaries]]
+See [versioned dictionaries](./Feature:-Versioned-dictionaries.md)
 for more information.
 
 ### experimental_apply_changes_via_bot
@@ -171,13 +171,13 @@ Future versions will select different tags for `cspell`, and you can mix and mat
 > **Warning**
 > If you don't override `check_extra_dictionaries`, you'll want to ensure that `cspell:` maps to something that has each of the items in it, otherwise check-spelling will be a bit upset...
 
-Used with [extra_dictionaries](#extra_dictionaries) / [check_extra_dictionaries](#check_extra_dictionaries) to define supplemental dictionary urls in a compact form.
+Used with [extra_dictionaries](#extra-dictionaries) / [check_extra_dictionaries](#check-extra-dictionaries) to define supplemental dictionary urls in a compact form.
 
 ### extra_dictionaries
 
 Extra dictionaries to be used when looking for unknown words.
 
-This is a list of urls, additional url prefixes are defined by [`dictionary_source_prefixes`](#dictionary_source_prefixes).
+This is a list of urls, additional url prefixes are defined by [`dictionary_source_prefixes`](#dictionary-source-prefixes).
 
 See [Area dictionaries](https://github.com/check-spelling/check-spelling/wiki/Feature:-Area-dictionaries).
 
@@ -185,11 +185,11 @@ See [Area dictionaries](https://github.com/check-spelling/check-spelling/wiki/Fe
 
 After unknown words are identified, they can be checked against additional dictionaries.
 
-This enables users to choose additional dictionaries to add to [extra_dictionaries](#extra_dictionaries) in future runs.
+This enables users to choose additional dictionaries to add to [extra_dictionaries](#extra-dictionaries) in future runs.
 
 ### extra_dictionary_limit
 
-In order to not drown in [check_extra_dictionaries](#check_extra_dictionaries) suggestions, only this number of dictionaries are suggested in reports. The rest are available in the generated artifact. If you find the number of listed dictionaries isn't sufficient, you can increase this number.
+In order to not drown in [check_extra_dictionaries](#check-extra-dictionaries) suggestions, only this number of dictionaries are suggested in reports. The rest are available in the generated artifact. If you find the number of listed dictionaries isn't sufficient, you can increase this number.
 
 ### event_aliases
 
@@ -215,7 +215,7 @@ The report_title_suffix enables each comment to have a distinct bit to help hint
 check-spelling defaults to defining certain events as errors and others as warnings. If you disagree with these
 values, you can change the mapping by using this field.
 
-See [[Treat specific errors as warnings|Feature: Treat specific errors as warnings]] for more information.
+See [Treat specific errors as warnings](./Feature:-Treat-specific-errors-as-warnings.md) for more information.
 
 ### custom_task
 
@@ -226,7 +226,7 @@ In order to run with restricted permissions under `pull_request_target`, check-s
 
 ### internal_state_directory
 
-As part of [custom_task](#custom_task), the default task returns its internal state. This needs to be passed to the `custom_task`: `comment` phase.
+As part of [custom_task](#custom-task), the default task returns its internal state. This needs to be passed to the `custom_task`: `comment` phase.
 
 Use this parameter to indicate where the internal state was stashed.
 
@@ -270,7 +270,7 @@ GitHub will try to attach annotations for the first couple of reported items.
 
 The downside of this limit, of course, is that if there are more instances of a given misspelled word than this limit, you will have to find the others on your own and fix them as well. (Or just iterate with the action until it's happy...)
 
-See [[Limit reports for each unknown word|Feature: Cap reports per unknown word]]
+See [Limit reports for each unknown word](./Feature:-Cap-reports-per-unknown-word.md)
 
 ## Files
 
@@ -296,7 +296,7 @@ posted to GitHub. It's freeform. You can use
 it to explain how contributors should decide
 where to put new entries.
 
-See [[Configuration Examples: advice]] for examples.
+See [Configuration Examples: advice](./Configuration-Examples:-advice.md) for examples.
 
 ### allow
 
@@ -316,7 +316,7 @@ Some candidates:
 
 See [Area dictionaries](https://github.com/check-spelling/check-spelling/wiki/Feature:-Area-dictionaries) for other examples.
 
-For entire reusable lists that don't live in your repository, you can use [extra_dictionaries](#extra_dictionaries) instead.
+For entire reusable lists that don't live in your repository, you can use [extra_dictionaries](#extra-dictionaries) instead.
 
 ### dictionary
 
@@ -327,9 +327,9 @@ If you want to include the default dictionary,
 place it into the directory next to your own.
 
 Alternatively, if you want to retrieve a dictionary from a remote URL,
-see the workflow configuration values [dictionary_url](#dictionary_url) and [dictionary_version](#dictionary_version).
+see the workflow configuration values [dictionary_url](#dictionary-url) and [dictionary_version](#dictionary-version).
 
-If you just want to supplement the dictionary, you can use [`extra_dictionaries`](#extra_dictionaries) or [allow](#allow).
+If you just want to supplement the dictionary, you can use [`extra_dictionaries`](#extra-dictionaries) or [allow](#allow).
 
 ### excludes
 
@@ -343,7 +343,7 @@ unless you explicitly use `(?:(?i)...)` or
 
 Files matching these patterns will be skipped.
 
-See [[Configuration Examples: excludes]] for examples.
+See [Configuration Examples: excludes](./Configuration-Examples:-excludes.md) for examples.
 
 Lines that start with `#` will be ignored.
 
@@ -395,7 +395,7 @@ unless you explicitly use `(?:(?i)...)` or
 
 Tokens within files that match these expressions will be flagged.
 
-See [[Configuration Examples: forbidden]] for examples.
+See [Configuration Examples: forbidden](./Configuration-Examples:-forbidden.md) for examples.
 
 ### only
 
@@ -405,7 +405,7 @@ They are merged using an `OR` (`|`).
 
 Files not matching these patterns will be skipped.
 
-See [[Configuration Examples: only]] for examples.
+See [Configuration Examples: only](./Configuration-Examples:-only.md) for examples.
 
 Lines that start with `#` will be ignored.
 
@@ -422,7 +422,7 @@ unless you explicitly use `(?:(?i)...)` or
 
 Tokens within files that match these expressions will be skipped.
 
-See [[Configuration Examples: patterns]] for examples.
+See [Configuration Examples: patterns](./Configuration-Examples:-patterns.md) for examples.
 
 ### reject
 
@@ -433,7 +433,7 @@ The order of operations is:
 
 > `(dictionary + allows) - reject`
 
-See [[Configuration Examples: reject]] for examples.
+See [Configuration Examples: reject](./Configuration-Examples:-reject.md) for examples.
 
 ## disable_checks
 
@@ -441,8 +441,8 @@ Introduced after v0.0.20:
 
 This is a comma-delimited list of flags:
 
-* `noisy-file` - [[Scan noisy files|Feature: Scan noisy files]]
-* `word-collating` - [[Disable word collating|Feature: Disable word collating]]
+* `noisy-file` - [Scan noisy files](./Feature:-Scan-noisy-files.md)
+* `word-collating` - [Disable word collating](./Feature:-Disable-word-collating.md)
 
 ## check_commit_messages
 
@@ -450,7 +450,7 @@ This is a comma-delimited list of flags:
 
 Introduced in [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21)
 
-[[Check commit / PR metadata|Feature: Check commit messages]]
+[Check commit / PR metadata](./Feature:-Check-commit-messages.md)
 
 You can specify multiple values
 
@@ -473,7 +473,7 @@ Quickly check if files are binary and skip them if they are.
 
 Introduced in [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21)
 
-See [[Feature: Sarif output]]. This can be used as an alternative to having the tool generate
+See [Feature: Sarif output](./Feature:-Sarif-output.md). This can be used as an alternative to having the tool generate
 comments on PRs / commits (i.e. you could remove the comment `jobs`).
 
 It integrates with GitHub's SARIF analysis and reporting.
@@ -487,9 +487,9 @@ to see reports, so the experience may be slightly bumpy for projects w/ external
 
 Introduced in [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22)
 
-Include a [[Summary Table|Feature: Summary Table]] in the [[Step Summary|Feature: Step Summary]].
+Include a [Summary Table](./Feature:-Summary-Table.md) in the [Step Summary](./Feature:-Step-Summary.md).
 
-See [[Feature: Summary Table]]
+See [Feature: Summary Table](./Feature:-Summary-Table.md)
 
 ## report-timing
 
@@ -499,4 +499,7 @@ Generate a csv file with the start and stop time for each processed file.
 
 Note that there can be multiple threads running and the precision is fairly low so it's very easy for a number of files to all have the same start and stop times.
 
-See [[Feature: Timing Report]]
+See [Feature: Timing Report](./Feature:-Timing-Report.md)
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

@@ -23,3 +23,6 @@ Files that are too large will be suggested for exclusion.
 ## Future
 
 I might also want to have check-spelling time itself and warn when it takes too long to scan a file. -- This would also be configurable.
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

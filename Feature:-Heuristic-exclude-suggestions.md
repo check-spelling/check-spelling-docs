@@ -20,7 +20,7 @@ I think initially if the number of files is large, I'll suggest that users look 
 The heuristics can also try to suggest ignoring common directories, common file names, or file extensions.
 
 Note to self:
-Currently the list of checked files [isn't persisted](https://github.com/check-spelling/check-spelling/blob/b07c0693e379e95c8d091519066bb2cec15e00d7/unknown-words.sh#L525-L526)
+Currently the list of checked files [isn't persisted](https://raw.githubusercontent.com/check-spelling/check-spelling/b07c0693e379e95c8d091519066bb2cec15e00d7/unknown-words.sh#L525-L526)
 
 imagine it's in a file called `$checked_files`
 the list of files to consider excluding is `$should_exclude_file`
@@ -58,3 +58,6 @@ Like File extensions, but instead of capturing the rhs of the `.` for the filena
 6. Go to the next candidate, subtract out no longer interesting files, and check its current count against the next candidate count
 7. If it's still highest, select it
 8. If it isn't, queue it to be rechecked at approximately where it should be in the scoring world and go to the next candidate
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

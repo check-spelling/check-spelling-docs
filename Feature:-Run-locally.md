@@ -3,8 +3,8 @@
 Possible approaches:
 
 * [Act](#act)
-* [Single script](#Single-script)
-* [Docker image](#Docker-image)
+* [Single script](#single-script)
+* [Docker image](#docker-image)
 
 ## Act
 
@@ -113,7 +113,7 @@ Nektos/Act may be missing support for newer GitHub Action features:
 * [GITHUB_STEP_SUMMARY](https://github.blog/2022-05-09-supercharging-github-actions-with-job-summaries/)
 
 #### Output steps
-As of Act [v0.2.24](https://github.com/nektos/act/releases/tag/v0.2.24), act can't handle [outputs from later steps](https://github.com/nektos/act/issues/758), as used in [https://github.com/check-spelling/spell-check-this/blob/prerelease/.github/workflows/spelling.yml#L17](https://github.com/check-spelling/spell-check-this/blob/18764e6cbb019a5d2067d6abe62ce43eb83275bd/.github/workflows/spelling.yml#L17) - It's possible to build a [patched version of act](https://github.com/ChristopherHX/act/commit/4c692919754ab0a72b340604e2c5c597e95f463a) -- but it requires fixing a [merge failure](https://github.com/jsoref/act/commit/a8f69e39d9b534d4eef09f37ab0d082cd308bb00). This shouldn't be a big deal as the output portions of the workflow won't work in act anyway...
+As of Act [v0.2.24](https://github.com/nektos/act/releases/tag/v0.2.24), act can't handle [outputs from later steps](https://github.com/nektos/act/issues/758), as used in [https://raw.githubusercontent.com/check-spelling/spell-check-this/prerelease/.github/workflows/spelling.yml#L17](https://github.com/check-spelling/spell-check-this/blob/18764e6cbb019a5d2067d6abe62ce43eb83275bd/.github/workflows/spelling.yml#L17) - It's possible to build a [patched version of act](https://github.com/ChristopherHX/act/commit/4c692919754ab0a72b340604e2c5c597e95f463a) -- but it requires fixing a [merge failure](https://github.com/jsoref/act/commit/a8f69e39d9b534d4eef09f37ab0d082cd308bb00). This shouldn't be a big deal as the output portions of the workflow won't work in act anyway...
 
 
 ## Single script
@@ -133,3 +133,6 @@ I investigated using Docker directly and did in the initial versions.
 Support was removed in an [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20).
 
 If you want to use check-spelling in Docker, please consider using `act` which wraps Docker...
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

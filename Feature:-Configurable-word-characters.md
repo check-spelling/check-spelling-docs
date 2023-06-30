@@ -1,6 +1,6 @@
 # Configurable word characters
 
-In [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21), check-spelling only looks at `/[A-Za-z']/` and generally with a [minimum run length of 3](Configuration#shortest_word).
+In [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21), check-spelling only looks at `/[A-Za-z']/` and generally with a [minimum run length of 3](Configuration.md#shortest-word).
 
 ## Caveats
 
@@ -99,3 +99,6 @@ In order for this to work reasonably well, support for hunspell `.dic` and `.aff
 ## Related
 
 Right now, characters that fall outside the recognized set are effectively blanked (replaced with a non-word character, currently `=`). I might switch to only parsing characters that match the regex. That'd save me a pass.
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

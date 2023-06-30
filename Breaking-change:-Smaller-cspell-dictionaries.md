@@ -19,3 +19,6 @@ Old|New
 `cspell:python/python.txt` | `cspell:python/src/python/python.txt` + `cspell:python/src/python/python-lib.txt` _probably_
 
 
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

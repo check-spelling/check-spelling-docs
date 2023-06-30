@@ -31,9 +31,12 @@
 
 ## timeframe
 
-Used by the **[schedule](./Configuration:-Workflows#schedule)** action. Any open pull requests from another repository
+Used by the **[schedule](./Configuration:-Workflows.md#schedule)** action. Any open pull requests from another repository
 will be checked, and if the commit is within that timeframe, it will be processed.
 
 ℹ️ In general you shouldn't need to use this as there are more recent ways to achieve desired goals.
 
 In [`v0.0.21`](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21), reports are available via the step summary w/o requiring any special permissions.
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

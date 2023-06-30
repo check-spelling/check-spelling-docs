@@ -10,22 +10,22 @@ If you see this error (instead of getting comments):
 
 >  curl: (6) Could not resolve host: null
 
-That's probably the problem. The fix is to [upgrade the workflow](https://github.com/check-spelling/spell-check-this/blob/main/.github/workflows/spelling.yml).
+That's probably the problem. The fix is to [upgrade the workflow](https://raw.githubusercontent.com/check-spelling/spell-check-this/main/.github/workflows/spelling.yml).
 
 Note that this can happen in a fork even if things are working fine in the upstream repository as default permissions can vary from organization to organization or repository to repository.
 
 ## Supported GitHub actions
 
 * [push](#push)
-* [pull_request_target](#pull_request_target)
-* [pull_request](#pull_request) ⚠️
+* [pull_request_target](#pull-request-target)
+* [pull_request](#pull-request) ⚠️
 * [schedule](#schedule)
 * [Checking potential merges for PRs](#checking-prs-by-their-merge-commit)
 
 ### Notes
 
 * [Ignore Draft PRs](#draft)
-* See [[Workflow Variables|Configuration#Workflow_Variables]]
+* See [Workflow Variables](Configuration.md#workflow-variables)
 
 ### push
 
@@ -64,7 +64,7 @@ on:
 
 ### pull_request
 
-ℹ️ You should be able to migrate to [pull_request_target](#pull_request_target)
+ℹ️ You should be able to migrate to [pull_request_target](#pull-request-target)
 when you upgrade to 0.0.17-alpha.
 
 ⚠️ Non-member contributors who create a pull request
@@ -101,9 +101,9 @@ Instead, for projects that receive PRs, I've settled on using a
 
 This is basically a cron job run by GitHub.
 It will look through open PRs and comment if they've been updated
-since the last run (assuming the [timeframe](./Configuration:-Advanced#timeframe) is correct).
+since the last run (assuming the [timeframe](./Configuration:-Advanced.md#timeframe) is correct).
 
-See [timeframe](./Configuration:-Advanced#timeframe) for the configuration window.
+See [timeframe](./Configuration:-Advanced.md#timeframe) for the configuration window.
 
 Example workflow snippet:
 
@@ -157,3 +157,6 @@ If you want to check the results of a potential merge, you need something fancie
       with:
         checkout: 1
 ```
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

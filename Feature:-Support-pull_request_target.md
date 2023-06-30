@@ -27,7 +27,7 @@ on:
 ```yaml
     - uses: actions/checkout@v2
       with:
-        ref: ${{ github.event.pull_request.head.sha }}
+        ref: ${% raw %}{{{% endraw %} github.event.pull_request.head.sha }}
 ```
 
 ## Security considerations
@@ -45,3 +45,6 @@ I don't believe that check-spelling is insecure (that's what everyone says, righ
 Once I get this working, `schedule` can be deprecated. I expect this feature will be available as a prerelease for a version, and then schedule will be deprecated for at least one version before potentially being removed.
 
 Released in [0.0.17-alpha](https://github.com/check-spelling/check-spelling/releases/tag/0.0.17-alpha.
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

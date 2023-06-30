@@ -20,3 +20,6 @@ To the extent that the bot can recognize that it's being upgraded, I think it'd 
 ## Caveats
 
 New environment variables from the new `action.yml` file won't be available and I don't expect `with` values would be either. It's really too hard to handle that case. (I'd have to reimplement `act`'s parsing which is probably overkill.)
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

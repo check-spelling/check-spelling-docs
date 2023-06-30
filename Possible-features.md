@@ -1,68 +1,71 @@
 # Possible features
 
-[Ready](#Ready) | [In progress](#In-progress) | [Near term](#Near-term) | [Distant future](#Distant-future) | [Currently out of scope](#Related-but-currently-out-of-scope)
+[Ready](#ready) | [In progress](#in-progress) | [Near term](#near-term) | [Distant future](#distant-future) | [Currently out of scope](#related-but-currently-out-of-scope)
 
 ## Ready
 
 * 📚 Dictionary changes
-  * ❄️ [[Dictionaries with unique value|Feature: Dictionaries with unique value]]
-  * 🥷 [[Suggest dictionaries when dictionaries aren't available|Feature: Suggest dictionaries when dictionaries aren't available]]
-  * 🗑️ [[Removed Dictionaries]]
-  * 📗 [[K8s|Dictionary: K8s]]
-  * 📙 [[Lisp|Dictionary: Lisp]]
-* 📊 [[Improve suggested dictionaries order|Feature: Improve suggested dictionaries order]]
+  * ❄️ [Dictionaries with unique value](./Feature:-Dictionaries-with-unique-value.md)
+  * 🥷 [Suggest dictionaries when dictionaries aren't available](./Feature:-Suggest-dictionaries-when-dictionaries-aren't-available.md)
+  * 🗑️ [Removed Dictionaries](Removed-Dictionaries.md)
+  * 📗 [K8s](./Dictionary:-K8s.md)
+  * 📙 [Lisp](./Dictionary:-Lisp.md)
+* 📊 [Improve suggested dictionaries order](./Feature:-Improve-suggested-dictionaries-order.md)
 * 🎨 [Adjust Sarif output](https://github.com/check-spelling/check-spelling/wiki/Feature:-Sarif-output#adjusting-sarifjson)
-* ⏱️ [[Timing Report|Feature: Timing Report]]
-* 🃏 [[Warning about substring matches|Feature: Warning about substring matches]]
+* ⏱️ [Timing Report](./Feature:-Timing-Report.md)
+* 🃏 [Warning about substring matches](./Feature:-Warning-about-substring-matches.md)
 * 🙊 [Masked content will be excluded from minified file detection](https://github.com/check-spelling/check-spelling/wiki/Feature:-Minified-file-detection#masked-content-will-be-excluded-from-accounting)
-* 🐣 [[Breaking change: Dropping printf special cases]]
-* 🔢 [[Fix error counts for Check filenames and paths|Feature: Check filenames and paths]]
-* ⌛ [[Parsing Timeouts|Feature: Parsing Timeouts]]
-* 🗣️ [[Support for non English languages|Feature: Support for non English languages]]
-  * 🗣️ [[Non-English languages|Feature: Non-English languages]]
-  * 🚆 [[Hunspell dictionary support|Feature: Hunspell dictionary support]]
-  * 🔢 [[Configurable word characters|Feature: Configurable word characters]]
-  * 🧙 [[Character Encoding Auto Detection|Feature: Character Encoding Auto Detection]]
+* 🐣 [Breaking change: Dropping printf special cases](./Breaking-change:-Dropping-printf-special-cases.md)
+* 🔢 [Fix error counts for Check filenames and paths](./Feature:-Check-filenames-and-paths.md)
+* ⌛ [Parsing Timeouts](./Feature:-Parsing-Timeouts.md)
+* 🗣️ [Support for non English languages](./Feature:-Support-for-non-English-languages.md)
+  * 🗣️ [Non-English languages](./Feature:-Non-English-languages.md)
+  * 🚆 [Hunspell dictionary support](./Feature:-Hunspell-dictionary-support.md)
+  * 🔢 [Configurable word characters](./Feature:-Configurable-word-characters.md)
+  * 🧙 [Character Encoding Auto Detection](./Feature:-Character-Encoding-Auto-Detection.md)
 
 ## In progress
 
-* 🧪 [[Regression testing]]
-* 😄 [[Easier to understand filenames|Feature: Easier to understand filenames]]
-* ↪️ [[Aliases|Feature: Aliases]]
-* ⚙️ [[JSON configuration|Feature: JSON configuration]]
-* 🔧 [[Replace jq|Task: Replace jq]]
-* 🔁 [[Handle GitHub Varnish failures|Feature: Handle GitHub Varnish failures]]
-* 🏦 [[Cache dictionaries|Feature: Cache dictionaries]]
+* 🧪 [Regression testing](Regression-testing.md)
+* 😄 [Easier to understand filenames](./Feature:-Easier-to-understand-filenames.md)
+* ↪️ [Aliases](./Feature:-Aliases.md)
+* ⚙️ [JSON configuration](./Feature:-JSON-configuration.md)
+* 🔧 [Replace jq](./Task:-Replace-jq.md)
+* 🔁 [Handle GitHub Varnish failures](./Feature:-Handle-GitHub-Varnish-failures.md)
+* 🏦 [Cache dictionaries](./Feature:-Cache-dictionaries.md)
 * 🙈 [Advanced exclusion suggestions](https://github.com/check-spelling/check-spelling/wiki/Feature:-Heuristic-exclude-suggestions#advanced-exclusion-suggestions)
 
 ## Near term
 
-* [[🩸Breaking change: Dropping schedule support|Breaking change: Dropping schedule support]]
-* [[💬Report associated comment for forbidden patterns|Feature: Report associated comment for forbidden patterns]]
-* [[👪Behavior change: case changes in expect|Behavior change: case changes in expect]]
-* [[🗜️Breaking change: Smaller dictionary|Breaking change: Smaller dictionary]]
-* [[🪆Subrepos|Feature: Subrepos]]
-* [[🪄Honor gitattributes|Feature: Honor gitattributes]]
-* [[🙈Support gitignore|Feature: Support gitignore]]
-* [[↬Update base branch|Feature: Update base branch]]
-* [[Behavior change: Log output order]]
-* [[♻️Workflow: retest support|Workflow: retest support]]
-* [[🏃Run in GitLab|Feature: Run in GitLab]]
-* [[🏃Run in Gitea|Feature: Run in Gitea]]
-* [[📄Reusable Workflows|Feature: Reusable Workflows]]
-* [[😸Customer satisfaction survey|Feature: Customer satisfaction survey]]
+* [🩸Breaking change: Dropping schedule support](./Breaking-change:-Dropping-schedule-support.md)
+* [💬Report associated comment for forbidden patterns](./Feature:-Report-associated-comment-for-forbidden-patterns.md)
+* [👪Behavior change: case changes in expect](./Behavior-change:-case-changes-in-expect.md)
+* [🗜️Breaking change: Smaller dictionary](./Breaking-change:-Smaller-dictionary.md)
+* [🪆Subrepos](./Feature:-Subrepos.md)
+* [🪄Honor gitattributes](./Feature:-Honor-gitattributes.md)
+* [🙈Support gitignore](./Feature:-Support-gitignore.md)
+* [↬Update base branch](./Feature:-Update-base-branch.md)
+* [Behavior change: Log output order](./Behavior-change:-Log-output-order.md)
+* [♻️Workflow: retest support](./Workflow:-retest-support.md)
+* [🏃Run in GitLab](./Feature:-Run-in-GitLab.md)
+* [🏃Run in Gitea](./Feature:-Run-in-Gitea.md)
+* [📄Reusable Workflows](./Feature:-Reusable-Workflows.md)
+* [😸Customer satisfaction survey](./Feature:-Customer-satisfaction-survey.md)
 
 ## Distant future
 
-* [[Tolerate engine upgrades|Feature: Tolerate engine upgrades]]
-* [[Correct misspelled words within GitHub|Feature: Correct misspelling]]
-* [[Learn from corrections|Feature: Learn from corrections]]
-* [[Plug into Pantsbuild|Feature: Pantsbuild plugin]]
-* [[Plug into Visual Studio Code|Feature: Visual Studio Code plugin]]
-* [[Block/Multiline Ignore|Feature: Block Ignore]]
-* [[Custom escape mappings|Feature: Custom escape mappings]]
+* [Tolerate engine upgrades](./Feature:-Tolerate-engine-upgrades.md)
+* [Correct misspelled words within GitHub](./Feature:-Correct-misspelling.md)
+* [Learn from corrections](./Feature:-Learn-from-corrections.md)
+* [Plug into Pantsbuild](./Feature:-Pantsbuild-plugin.md)
+* [Plug into Visual Studio Code](./Feature:-Visual-Studio-Code-plugin.md)
+* [Block/Multiline Ignore](./Feature:-Block-Ignore.md)
+* [Custom escape mappings](./Feature:-Custom-escape-mappings.md)
 
 ## Related but currently out of scope
 
-* [[Suggest corrections|Feature: Suggest corrections]]
-* [[Generate .git-blame-ignore-revs|Wishlist: .git blame ignore revs]]
+* [Suggest corrections](./Feature:-Suggest-corrections.md)
+* [Generate .git-blame-ignore-revs](./Wishlist:-.git-blame-ignore-revs.md)
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

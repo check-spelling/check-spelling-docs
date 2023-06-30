@@ -20,3 +20,6 @@ While this tool was written to catch misspellings within files, it's actually fa
 ## Improvements in v0.0.21
 
 In the next version, it will trigger its own warning `check-file-path`
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

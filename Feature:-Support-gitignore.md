@@ -16,3 +16,6 @@ If you have specific cases where you feel a need for this feature, please feel f
 
 None at this time. I'm still thinking it over. But it'll probably just happen one day.
 
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

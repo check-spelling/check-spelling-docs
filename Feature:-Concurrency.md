@@ -1,6 +1,6 @@
 # Concurrency
 
-Documented for [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20) and included in the [recommended workflow](https://github.com/check-spelling/spell-check-this/blob/main/.github/workflows/spelling.yml)
+Documented for [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20) and included in the [recommended workflow](https://raw.githubusercontent.com/check-spelling/spell-check-this/main/.github/workflows/spelling.yml)
 
 ## Background
 Added in April 2021, [GitHub Actions: Limit workflow run or job concurrency](https://github.blog/changelog/2021-04-19-github-actions-limit-workflow-run-or-job-concurrency/).
@@ -9,9 +9,9 @@ You're welcome to use this however you choose. Note that at the time this page w
 
 ## Recommended implementation
 
-If you aren't using [[Only changes|Feature: Only changes]], you probably want to use `cancel-in-progress: true` for the main spell check job.
+If you aren't using [Only changes](./Feature:-Only-changes.md), you probably want to use `cancel-in-progress: true` for the main spell check job.
 
-For [[Update expect list|Feature: Update expect list]], my recommended flow is to let both run but use concurrency to serialize the updates. I'm not sure if this is the right answer in general, and I don't know if this is the right answer for your project. I'm welcome implementation experience.
+For [Update expect list](./Feature:-Update-expect-list.md), my recommended flow is to let both run but use concurrency to serialize the updates. I'm not sure if this is the right answer in general, and I don't know if this is the right answer for your project. I'm welcome implementation experience.
 
 ## Note
 
@@ -21,3 +21,6 @@ You can see an implementation of it in [spell-check-this](https://github.com/che
 
 When triggered, you'll get an event like this:
 > Canceling since a higher priority waiting request for 'spelling-refs/heads/prerelease' exists
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

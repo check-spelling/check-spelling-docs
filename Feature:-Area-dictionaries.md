@@ -95,7 +95,7 @@ That said, if you really want to be fancy, you can use a matrix and apply certai
 
 ## Future work
 
-[[Suggest Area dictionaries|Feature: Suggest Area Dictionaries]]
+[Suggest Area dictionaries](./Feature:-Suggest-Area-Dictionaries.md)
 
 ## Potential Areas
 
@@ -152,3 +152,6 @@ That said, if you really want to be fancy, you can use a matrix and apply certai
   * MPL
   * GPL
   * ...
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

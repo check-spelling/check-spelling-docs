@@ -34,3 +34,6 @@ Output | [Acknowledge some word-like things that aren't in the dictionary](https
 Output | [Help users respond to the bot](https://github.com/check-spelling/check-spelling/wiki/Configuration-Examples:-advice) | md | advice | `?`
 
 Raised in https://github.com/check-spelling/check-spelling/issues/10
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)
