@@ -26,6 +26,7 @@ sub fix_page {
   $a =~ s{^([^.][^:]*)(:)}{./$1$2};
   return fix_anchor($a);
 };
+s/\{\{/{% raw %}{{{% endraw %}/g;
 $backticks++ if (/\`\`\`/);
 next if $backticks % 2;
 s{(\[[^\]]*\])(\(#[^)]*\))}{"$1".fix_anchor($2)}ge;
