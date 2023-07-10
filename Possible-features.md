@@ -26,6 +26,7 @@
 
 ## In progress
 
+* 💔 [[Breaking Change: Dropping support for act 0.2.34]]
 * 🧪 [[Regression testing]]
 * 😄 [[Easier to understand filenames|Feature: Easier to understand filenames]]
 * ↪️ [[Aliases|Feature: Aliases]]
