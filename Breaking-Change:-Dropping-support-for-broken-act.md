@@ -1,4 +1,4 @@
-# Breaking Change: Dropping support for act 0.2.34
+# Breaking Change: Dropping support for broken act
 
 ## Background
 
@@ -23,3 +23,7 @@ check-spelling had workarounds for them that relied on `github.action_path` as i
 ## Solution
 
 As the current version of [nektos/act](https://github.com/nektos/act) is [v0.2.46](https://github.com/nektos/act/releases/tag/v0.2.46), it seems like now is a fairly reasonable time to drop support for the workaround and switch to a form that works around the GitHub self-hosted runner bug instead...
+
+## Disclaimer
+
+While I'm fairly certain these bugs existed, since I reported them, and I worked around them, at this time, I can't reproduce them (using old versions of act), so it's possible that there weren't actually shipping versions with these bugs, but I'm pretty sure there were. Oh well.
