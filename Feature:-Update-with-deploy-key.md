@@ -60,7 +60,7 @@ rm -rf "$scratch"
 +      with:
 +        ssh-key: "${{ secrets.CHECK_SPELLING }}"
      - name: check-spelling
-       uses: check-spelling/check-spelling@v0.0.20-alpha5
+       uses: check-spelling/check-spelling@v0.0.21
        with:
          experimental_apply_changes_via_bot: 1
 ```
