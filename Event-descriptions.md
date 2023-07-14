@@ -235,6 +235,8 @@ You could of course use your local tools to find the remaining instances.
 
 # dictionary-not-found
 
+Test the url manually. What to do will depend on the error code from the web server.
+
 ## 503 (internal server error)
 
 > Failed to retrieve cspell:r/src/r.txt (https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20230509/dictionaries/r/src/r.txt)
