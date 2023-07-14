@@ -27,7 +27,7 @@ jobs:
     steps:
     - name: check-spelling
       id: spelling
-      uses: check-spelling/check-spelling@v0.0.21
+      uses: check-spelling/check-spelling@main
       with:
         # ...
         use_sarif: 1
