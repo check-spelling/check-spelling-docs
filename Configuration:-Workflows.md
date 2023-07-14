@@ -153,7 +153,7 @@ If you want to check the results of a potential merge, you need something fancie
 ```yaml
     steps:
     - name: Check Spelling
-      uses: check-spelling/check-spelling@v0.0.21
+      uses: check-spelling/check-spelling@main
       with:
         checkout: 1
 ```
