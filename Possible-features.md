@@ -1,6 +1,6 @@
 # Possible features
 
-[Ready](#Ready) | [In progress](#In-progress) | [Near term](#Near-term) | [Distant future](#Distant-future) | [Currently out of scope](#Related-but-currently-out-of-scope)
+[Ready](#ready) | [In progress](#in-progress) | [Near term](#near-term) | [Distant future](#distant-future) | [Currently out of scope](#related-but-currently-out-of-scope)
 
 ## Ready
 
