@@ -18,6 +18,7 @@
 * 🐣 [[Breaking change: Dropping printf special cases]]
 * 🔢 [[Fix error counts for Check filenames and paths|Feature: Check filenames and paths]]
 * ⌛ [[Parsing Timeouts|Feature: Parsing Timeouts]]
+* 🙈 [Advanced exclusion suggestions](https://github.com/check-spelling/check-spelling/wiki/Feature:-Heuristic-exclude-suggestions#advanced-exclusion-suggestions)
 * 🗣️ [[Support for non English languages|Feature: Support for non English languages]]
   * 🗣️ [[Non-English languages|Feature: Non-English languages]]
   * 🚆 [[Hunspell dictionary support|Feature: Hunspell dictionary support]]
@@ -34,7 +35,6 @@
 * 🔧 [[Replace jq|Task: Replace jq]]
 * 🔁 [[Handle GitHub Varnish failures|Feature: Handle GitHub Varnish failures]]
 * 🏦 [[Cache dictionaries|Feature: Cache dictionaries]]
-* 🙈 [Advanced exclusion suggestions](https://github.com/check-spelling/check-spelling/wiki/Feature:-Heuristic-exclude-suggestions#advanced-exclusion-suggestions)
 
 ## Near term
 
