@@ -14,6 +14,8 @@ Each dictionary's ETAG will be stored.
 
 Use the ETAG to retrieve (or not) the content.
 
+> The code doesn't currently handle the case that there is no etag from the server, that should be added (in the interim, please use servers that generate etags...)
+
 ### Clearing cache entries manually
 
 #### Programmatically
