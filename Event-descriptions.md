@@ -56,6 +56,8 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
   - [Resolution](#resolution-20)
 - [ignored-expect-variant](#ignored-expect-variant)
   - [Resolution](#resolution-21)
+- [no-files-to-check](#no-files-to-check)
+  - [Resolution](#resolution-22)
 
 ℹ️ As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), workflows can [[configure whether specific events are treated as ❌Errors or ⚠️Warnings|Feature: Treat specific errors as warnings]].
 
@@ -557,3 +559,13 @@ If you decide that `microsoft` is acceptable, then it's likely that you'll also 
 ## Resolution
 * Remove the extraneous entry/entries from `expect.txt` -- the included `apply.pl` suggestions should help with this
 * Add forms to `allow.txt` which doesn't have this behavior
+
+# No files to check
+
+Check Spelling works by reviewing files and identifying problems with them. You can configure which files it should check by using [excludes](https://github.com/check-spelling/check-spelling/wiki/Configuration#excludes) and [https://github.com/check-spelling/check-spelling/wiki/Configuration#only](only)
+
+## Resolution
+
+* Remove entries from [excludes](https://github.com/check-spelling/check-spelling/wiki/Configuration#excludes)
+* Adjust or add items in [https://github.com/check-spelling/check-spelling/wiki/Configuration#only](only)
+* Review the contents of the repository and compare against both
