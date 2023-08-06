@@ -560,7 +560,7 @@ If you decide that `microsoft` is acceptable, then it's likely that you'll also 
 * Remove the extraneous entry/entries from `expect.txt` -- the included `apply.pl` suggestions should help with this
 * Add forms to `allow.txt` which doesn't have this behavior
 
-# No files to check
+# no-files-to-check
 
 Check Spelling works by reviewing files and identifying problems with them. You can configure which files it should check by using [excludes](https://github.com/check-spelling/check-spelling/wiki/Configuration#excludes) and [https://github.com/check-spelling/check-spelling/wiki/Configuration#only](only)
 
