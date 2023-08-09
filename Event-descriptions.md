@@ -250,7 +250,7 @@ Test the url manually. What to do will depend on the error code from the web ser
 
 Rerun the workflow.
 
-🙏 Future versions of check-spelling will include code to retry these failures.
+check-spelling [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22) will include code to retry these failures.
 
 ## 404 (file not found)
 
