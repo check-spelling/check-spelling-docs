@@ -7,6 +7,7 @@
 * 📚 Dictionary changes
   * ❄️ [[Dictionaries with unique value|Feature: Dictionaries with unique value]]
   * 🥷 [[Suggest dictionaries when dictionaries aren't available|Feature: Suggest dictionaries when dictionaries aren't available]]
+  * 🐫 [[Parallel dictionary retrieval|Feature: Parallel dictionary retrieval]]
   * 🗑️ [[Removed Dictionaries]]
   * 📗 [[K8s|Dictionary: K8s]]
   * 📙 [[Lisp|Dictionary: Lisp]]
