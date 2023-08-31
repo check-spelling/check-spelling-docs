@@ -16,7 +16,7 @@
 * 🃏 [[Warning about substring matches|Feature: Warning about substring matches]]
 * 🙊 [Masked content will be excluded from minified file detection](https://github.com/check-spelling/check-spelling/wiki/Feature:-Minified-file-detection#masked-content-will-be-excluded-from-accounting)
 * 🐣 [[Breaking change: Dropping printf special cases]]
-* 💡 [[Behavior change: Report instances of items that used to be covered by a now missing expect entry]]
+* 📝 [[Report instances of items that used to be covered by a now missing expect entry|Bug fix: Report instances of items that used to be covered by a now missing expect entry]]
 * 🔢 [[Fix error counts for Check filenames and paths|Feature: Check filenames and paths]]
 * ⌛ [[Parsing Timeouts|Feature: Parsing Timeouts]]
 * 🙈 [Advanced exclusion suggestions](https://github.com/check-spelling/check-spelling/wiki/Feature:-Heuristic-exclude-suggestions#advanced-exclusion-suggestions)
