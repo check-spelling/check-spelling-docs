@@ -21,6 +21,7 @@
 * ⌛ [[Parsing Timeouts|Feature: Parsing Timeouts]]
 * 🙈 [Advanced exclusion suggestions](https://github.com/check-spelling/check-spelling/wiki/Feature:-Heuristic-exclude-suggestions#advanced-exclusion-suggestions)
 * 🔁 [[Handle GitHub Varnish failures|Feature: Handle GitHub Varnish failures]]
+* 💔 [[Breaking Change: Dropping support for broken act]]
 * 🗣️ [[Support for non English languages|Feature: Support for non English languages]]
   * 🗣️ [[Non-English languages|Feature: Non-English languages]]
   * 🚆 [[Hunspell dictionary support|Feature: Hunspell dictionary support]]
@@ -29,7 +30,6 @@
 
 ## In progress
 
-* 💔 [[Breaking Change: Dropping support for broken act]]
 * 🧪 [[Regression testing]]
 * 😄 [[Easier to understand filenames|Feature: Easier to understand filenames]]
 * ↪️ [[Aliases|Feature: Aliases]]
