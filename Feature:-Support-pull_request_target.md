@@ -4,11 +4,11 @@
 
 [pull_request](https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows#pull_request) gets a readonly `GITHUB_TOKEN` when a pull request is opened by a user from another repository who doesn't have write permissions to the destination repository. Because it's readonly, the action can't even _comment_ on the PR. This makes using a code-review action pretty painful.
 
-To work around that restriction, this action uses [schedule](https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows#schedule) instead.
+To work around that restriction, this action used [`schedule`](https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows#schedule) instead.
 
 ## pull_request_target
 
-GitHub introduced [pull_request_target](https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows#pull_request_target) as an improvement over [pull_request](https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows#pull_request).
+GitHub introduced [`pull_request_target`](https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows#pull_request_target) as an improvement over [`pull_request`](https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows#pull_request).
 
 For this action, the key value is:
 > This event allows you to do things like create workflows that label and comment on pull requests based on the contents of the event payload.
@@ -42,6 +42,7 @@ I don't believe that check-spelling is insecure (that's what everyone says, righ
 
 ## Feature schedule
 
-Once I get this working, `schedule` can be deprecated. I expect this feature will be available as a prerelease for a version, and then schedule will be deprecated for at least one version before potentially being removed.
-
 Released in [0.0.17-alpha](https://github.com/check-spelling/check-spelling/releases/tag/0.0.17-alpha).
+
+[[Breaking change: Dropping support for on: schedule]] should occur in 
+[v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22).
