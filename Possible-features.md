@@ -37,6 +37,9 @@
 * ⚙️ [[JSON configuration|Feature: JSON configuration]]
 * 🔧 [[Replace jq|Task: Replace jq]]
 * 🏦 [[Cache dictionaries|Feature: Cache dictionaries]]
+* 🎏 Deprecations
+  * [[📆Breaking change: Dropping schedule support|Breaking change: Dropping schedule support]]
+
 
 ## Near term
 
