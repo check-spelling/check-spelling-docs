@@ -1,4 +1,4 @@
-# Breaking change: Dropping `on: schedule` support
+# Breaking change: Dropping support for `on: schedule`
 
 ## History
 
