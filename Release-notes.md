@@ -5,6 +5,9 @@
 * [v0.0.21](#v0021)
 
 ## Unsupported
+
+❗ Please do not use these versions.
+
 * [v0.0.20](#v0020)
 * [v0.0.19](#v0019)
 * [v0.0.18](#v0018)
