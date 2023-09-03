@@ -33,7 +33,7 @@ Add as `\bm_data\b`
 
 Add as `\bJavascript\b`
 
-### MicroSoft
+### `MicroSoft`
 
 Both `micro` and `soft` are in the dictionary, so this will not naturally be flagged, even though it is probably problematic.
 
