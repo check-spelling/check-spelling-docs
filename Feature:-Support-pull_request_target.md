@@ -44,4 +44,4 @@ I don't believe that check-spelling is insecure (that's what everyone says, righ
 
 Once I get this working, `schedule` can be deprecated. I expect this feature will be available as a prerelease for a version, and then schedule will be deprecated for at least one version before potentially being removed.
 
-Released in [0.0.17-alpha](https://github.com/check-spelling/check-spelling/releases/tag/0.0.17-alpha.
+Released in [0.0.17-alpha](https://github.com/check-spelling/check-spelling/releases/tag/0.0.17-alpha).
