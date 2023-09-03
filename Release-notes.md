@@ -1,14 +1,17 @@
 # Release notes
 
+## Supported
 * [prerelease](#prerelease)
 * [v0.0.21](#v0021)
+
+## Unsupported
 * [v0.0.20](#v0020)
 * [v0.0.19](#v0019)
 * [v0.0.18](#v0018)
 * [0.0.17-alpha](#0017-alpha)
 * [0.0.16-alpha](#0016-alpha)
 
-## prerelease
+## Prerelease
 
 * 🏃 Performance fix for workflows that don't use patterns / forbidden / candidates
 * 🔧 Matrixes generate archives that the latest apply.pl can consume (fixes regression in [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21))
@@ -19,7 +22,9 @@
 🌟 Almost ready to transition from `prerelease` to release 🍽️
 
 -->
-## [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21)
+## v0.0.21
+
+[v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21)
 
 * [[Breaking change: Smaller cspell dictionaries]]
 * [[Behavior change: File line column notation]]
@@ -36,7 +41,9 @@
 * [[Scan noisy files|Feature: Scan noisy files]]
 * [[Workaround broken dependencies|Feature: Workaround broken dependencies]]
 
-## [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20)
+## v0.0.20
+
+[v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20)
 
 * [[Behavior change: Patterns masking character|Behavior change: Patterns masking character]]
 * [[Behavior change: Consumed line endings]]
@@ -64,12 +71,15 @@
 * [[Artifacts are zipped|Breaking change: Artifacts are zipped]]
 * [[User visible warning codes|Feature: User visible warning codes]]
 
-## [v0.0.19](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.19)
-❗ Please do not use versions older than this.
+## v0.0.19
 
-Information will be available in [GHSA-g86g-chm8-7r2p](https://github.com/check-spelling/check-spelling/security/advisories/GHSA-g86g-chm8-7r2p)
+[v0.0.19](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.19)
 
-## [v0.0.18](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.18)
+Information is available in [GHSA-g86g-chm8-7r2p](https://github.com/check-spelling/check-spelling/security/advisories/GHSA-g86g-chm8-7r2p)
+
+## v0.0.18
+
+[v0.0.18](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.18)
 
 * [[Behavior change: Dropping word stemming]]
 * [[Behavior change: Ignoring two letter words]]
@@ -79,7 +89,9 @@ Information will be available in [GHSA-g86g-chm8-7r2p](https://github.com/check-
 * [[First run advice|Feature: First run advice]]
 * All unrecognized words are reported in the log, instead of just the ones introduced by the current changes.
 
-## [0.0.17-alpha](https://github.com/check-spelling/check-spelling/releases/tag/0.0.17-alpha)
+## 0.0.17-alpha
+
+[0.0.17-alpha](https://github.com/check-spelling/check-spelling/releases/tag/0.0.17-alpha)
 
 * [[Feature: Easier bootstrapping]]
 * [[Feature: Spelling comments without config]]
@@ -91,7 +103,9 @@ Information will be available in [GHSA-g86g-chm8-7r2p](https://github.com/check-
 
 If you're using a private repository, the `push` event won't work correctly.
 
-## [0.0.16-alpha](https://github.com/check-spelling/check-spelling/releases/tag/0.0.16-alpha)
+## 0.0.16-alpha
+
+[0.0.16-alpha](https://github.com/check-spelling/check-spelling/releases/tag/0.0.16-alpha)
 
 * [[Feature: Allow]]
 * [[Feature: Expectlist]]
