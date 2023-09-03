@@ -20,6 +20,10 @@ It will include a warning linking to this item.
 
 Will probably not support `schedule`.
 
+## Migration
+
+In most cases you should be able to refresh your workflow using https://github.com/check-spelling/spell-check-this/blob/main/.github/workflows/spelling.yml adopting a standard [`on: pull_request_target`](./Feature:-Support-pull_request_target).
+
 ## Feedback
 
 If you're actually using `schedule`, please [check for an issue](https://github.com/check-spelling/check-spelling/issues?q=is%3Aissue+is%3Aopen+schedule+event+created%3A%3E%3D2023-04-01). If there is one, please add your use case to it, if there isn't one, please open an issue and explain why you're using `schedule` instead of `push`/`pull_request`/`pull_request_target`.
