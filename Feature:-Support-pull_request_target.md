@@ -44,5 +44,5 @@ I don't believe that check-spelling is insecure (that's what everyone says, righ
 
 Released in [0.0.17-alpha](https://github.com/check-spelling/check-spelling/releases/tag/0.0.17-alpha).
 
-[[Breaking change: Dropping support for on: schedule]] should occur in 
+[[Breaking change: Dropping support for on: schedule]] should occur after 
 [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22).
