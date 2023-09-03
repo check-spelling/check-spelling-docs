@@ -38,12 +38,12 @@
 * 🔧 [[Replace jq|Task: Replace jq]]
 * 🏦 [[Cache dictionaries|Feature: Cache dictionaries]]
 * 🎏 [[Deprecations]]
-  * 📆 [[Breaking change: Dropping schedule support]]
+  * 📆 [[Breaking change: Dropping \`on: schedule\` support]]
 
 
 ## Near term
 
-* [[🩸Breaking change: Dropping schedule support|Breaking change: Dropping schedule support]]
+* [[🩸Breaking change: Dropping \`on: schedule\` support|Breaking change: Dropping \`on: schedule\` support]]
 * [[💬Report associated comment for forbidden patterns|Feature: Report associated comment for forbidden patterns]]
 * [[👪Behavior change: case changes in expect|Behavior change: case changes in expect]]
 * [[🗜️Breaking change: Smaller dictionary|Breaking change: Smaller dictionary]]
