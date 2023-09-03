@@ -8,8 +8,8 @@
 * [v0.0.20](#v0020)
 * [v0.0.19](#v0019)
 * [v0.0.18](#v0018)
-* [0.0.17-alpha](#0017-alpha)
-* [0.0.16-alpha](#0016-alpha)
+* [v0.0.17](#v0017)
+* [v0.0.16](#v0016)
 
 ## Prerelease
 
@@ -89,7 +89,7 @@ Information is available in [GHSA-g86g-chm8-7r2p](https://github.com/check-spell
 * [[First run advice|Feature: First run advice]]
 * All unrecognized words are reported in the log, instead of just the ones introduced by the current changes.
 
-## 0.0.17-alpha
+## v0.0.17
 
 [0.0.17-alpha](https://github.com/check-spelling/check-spelling/releases/tag/0.0.17-alpha)
 
@@ -103,7 +103,7 @@ Information is available in [GHSA-g86g-chm8-7r2p](https://github.com/check-spell
 
 If you're using a private repository, the `push` event won't work correctly.
 
-## 0.0.16-alpha
+## v0.0.16
 
 [0.0.16-alpha](https://github.com/check-spelling/check-spelling/releases/tag/0.0.16-alpha)
 
