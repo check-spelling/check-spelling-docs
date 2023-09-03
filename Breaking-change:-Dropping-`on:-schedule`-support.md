@@ -1,8 +1,8 @@
-# Breaking change: Dropping schedule support
+# Breaking change: Dropping `on: schedule` support
 
 ## History
 
-The original workaround for not having permissions for pull requests from forks was to use the `schedule` event.
+The original workaround for not having permissions for pull requests from forks was to use the [`schedule` event](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule).
 
 That was supplanted with the introduction of support for [[pull_request_target|Feature: Support pull_request_target]].
 
