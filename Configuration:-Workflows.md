@@ -148,6 +148,10 @@ There are two sides to this:
 If you use `actions/checkout` to get the source for checking, `push` and `pull_request` will naturally do the right thing.
 However, `pull_request_target` will check out the _base_ of the PR, not the **HEAD**.
 
+The downsides of `pull_request` are that you can't use any `write` features (classically that was creating a `comment`, but with current versions of check-spelling, that's publishing a SARIF report).
+
+#### Built-in
+
 If you want to check the results of a potential merge, you need something fancier:
 
 ```yaml
@@ -156,4 +160,18 @@ If you want to check the results of a potential merge, you need something fancie
       uses: check-spelling/check-spelling@main
       with:
         checkout: 1
+```
+
+#### Using actions/checkout
+
+You can use whichever version of `actions/checkout` is current...
+
+```yaml
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        ref: ${{ github.event.pull_request && format('refs/pull/{0}/merge', github.event.pull_request.number) || github.event.ref }}
+    - name: Check Spelling
+      uses: check-spelling/check-spelling@main
 ```
