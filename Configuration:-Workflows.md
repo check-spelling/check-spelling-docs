@@ -19,7 +19,7 @@ Note that this can happen in a fork even if things are working fine in the upstr
 * [push](#push)
 * [pull_request_target](#pull_request_target)
 * [pull_request](#pull_request) ⚠️
-* [schedule](#schedule)
+* [schedule](#schedule) 🙅
 * [Checking potential merges for PRs](#checking-prs-by-their-merge-commit)
 
 ### Notes
@@ -99,7 +99,7 @@ Instead, for projects that receive PRs, I've settled on using a
 
 ### schedule
 
-⚠️ [[Breaking change%: Dropping support for on: schedule]] support will be removed after [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22)
+🙅 [[Breaking change: Dropping support for on: schedule]] after [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22)
 
 This is basically a cron job run by GitHub.
 It will look through open PRs and comment if they've been updated
