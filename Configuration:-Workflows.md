@@ -99,6 +99,8 @@ Instead, for projects that receive PRs, I've settled on using a
 
 ### schedule
 
+⚠️ [[Breaking change%: Dropping support for on: schedule]] support will be removed after [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22)
+
 This is basically a cron job run by GitHub.
 It will look through open PRs and comment if they've been updated
 since the last run (assuming the [timeframe](./Configuration:-Advanced#timeframe) is correct).
