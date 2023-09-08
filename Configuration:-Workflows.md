@@ -14,13 +14,16 @@ That's probably the problem. The fix is to [upgrade the workflow](https://github
 
 Note that this can happen in a fork even if things are working fine in the upstream repository as default permissions can vary from organization to organization or repository to repository.
 
-## Supported GitHub actions
+## Supported GitHub flows
 
 * [push](#push)
 * [pull_request_target](#pull_request_target)
+  * [Checking potential merges for PRs](#checking-prs-by-their-merge-commit)
+    * [checkout (built-in)](#built-in)
+    * [actions/checkout](#using-actionscheckout)
 * [pull_request](#pull_request) ⚠️
+* [issue_comment](#issue_comment)
 * [schedule](#schedule) 🙅
-* [Checking potential merges for PRs](#checking-prs-by-their-merge-commit)
 
 ### Notes
 
@@ -62,6 +65,51 @@ on:
     # this is recommended for all repositories that have PRs.
 ```
 
+
+
+### Checking PRs by their merge commit
+
+If you use `actions/checkout` to get the source for checking, `push` and `pull_request` will naturally do the right thing.
+However, `pull_request_target` will check out the _base_ of the PR, not the **HEAD**.
+
+The downsides of `pull_request` are that you can't use any `write` features (classically that was creating a `comment`, but with current versions of check-spelling, that's publishing a SARIF report).
+
+#### Built-in
+
+If you want to check the results of a potential merge, you need something fancier:
+
+```yaml
+on: pull_request_target
+
+jobs:
+  spelling:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check Spelling
+      uses: check-spelling/check-spelling@main
+      with:
+        checkout: 1
+```
+
+#### Using actions/checkout
+
+You can use whichever version of `actions/checkout` is current...
+
+```yaml
+on: pull_request_target
+
+jobs:
+  spelling:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        ref: ${{ github.event.pull_request && format('refs/pull/{0}/merge', github.event.pull_request.number) || github.event.ref }}
+    - name: Check Spelling
+      uses: check-spelling/check-spelling@main
+```
+
 ### pull_request
 
 ℹ️ You should be able to migrate to [pull_request_target](#pull_request_target)
@@ -96,6 +144,42 @@ with permission to comment, but that's a fairly high bar
 
 Instead, for projects that receive PRs, I've settled on using a
 [schedule](#schedule) which will be able to comment.
+
+### issue_comment
+
+If you want to let user [[update the expect list|Feature: Update expect list]] from a PR ([[smoothly with a deploy key|Feature: Update with deploy key]]), you can use a job like this:
+
+```yml
+on:
+  issue_comment:
+    types:
+    - 'created'
+
+jobs:
+  update:
+    name: Update PR
+    permissions:
+      contents: write
+      pull-requests: write
+      actions: read
+    runs-on: ubuntu-latest
+    if: ${{
+        github.event_name == 'issue_comment' &&
+        github.event.issue.pull_request &&
+        contains(github.event.comment.body, '@check-spelling-bot apply')
+      }}
+    steps:
+    - name: apply spelling updates
+      uses: check-spelling/check-spelling@main
+      with:
+        experimental_apply_changes_via_bot: 1
+        checkout: true
+        ssh_key: "${{ secrets.CHECK_SPELLING }}"
+```
+
+* `contents: write` is mostly for forks as the `ssh_key: "${{ secrets.CHECK_SPELLING }}"` will be used if possible to push the generated commit.
+* `pull-requests: write` enables collapsing the triggering comment.
+* `actions: read` is needed for private repositories.
 
 ### schedule
 
@@ -143,47 +227,3 @@ jobs:
 There are two sides to this:
 1. An additional `if:` condition for `github.event.pull_request.draft == false` -- this suppresses checks while the PR is in draft (note that any initial `push` events will still run and may trigger scanning / reporting if it's unhappy, but subsequent runs once a PR is opened will be suppressed by check-spelling's `suppress_push_for_open_pull_request`)
 2. `on:` / `pull_request_target:` / `types:` / `'ready_for_review'` -- this triggers a check when someone converts the PR from draft to ready for review (otherwise you'd have to wait for an additional push, which would be frustrating).
-
-
-### Checking PRs by their merge commit
-
-If you use `actions/checkout` to get the source for checking, `push` and `pull_request` will naturally do the right thing.
-However, `pull_request_target` will check out the _base_ of the PR, not the **HEAD**.
-
-The downsides of `pull_request` are that you can't use any `write` features (classically that was creating a `comment`, but with current versions of check-spelling, that's publishing a SARIF report).
-
-#### Built-in
-
-If you want to check the results of a potential merge, you need something fancier:
-
-```yaml
-on: pull_request_target
-
-jobs:
-  spelling:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Check Spelling
-      uses: check-spelling/check-spelling@main
-      with:
-        checkout: 1
-```
-
-#### Using actions/checkout
-
-You can use whichever version of `actions/checkout` is current...
-
-```yaml
-on: pull_request_target
-
-jobs:
-  spelling:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-      with:
-        ref: ${{ github.event.pull_request && format('refs/pull/{0}/merge', github.event.pull_request.number) || github.event.ref }}
-    - name: Check Spelling
-      uses: check-spelling/check-spelling@main
-```
