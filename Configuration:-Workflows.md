@@ -155,6 +155,11 @@ The downsides of `pull_request` are that you can't use any `write` features (cla
 If you want to check the results of a potential merge, you need something fancier:
 
 ```yaml
+on: pull_request_target
+
+jobs:
+  spelling:
+    runs-on: ubuntu-latest
     steps:
     - name: Check Spelling
       uses: check-spelling/check-spelling@main
@@ -167,6 +172,11 @@ If you want to check the results of a potential merge, you need something fancie
 You can use whichever version of `actions/checkout` is current...
 
 ```yaml
+on: pull_request_target
+
+jobs:
+  spelling:
+    runs-on: ubuntu-latest
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
