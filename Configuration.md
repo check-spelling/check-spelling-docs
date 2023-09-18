@@ -107,15 +107,30 @@ for more information.
 
 ### experimental_apply_changes_via_bot
 
-❗ As of [0.0.18](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.18), this feature is not ready for repositories with non members/other bots.
-   - It will 💬 in response to other bot's comments or other accounts not associated with the
-   PR explaining that it's confused.
+Allow [@check-spelling-bot](https://github.com/check-spelling-bot) to update PRs by
+incorporating the feedback it reports.
+
+ℹ️ Af of [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21), this feature _might_ be ready for use.
    - If everyone in a repository is a member, or if PRs from externals are unlikely to receive
    comments from externals besides the PR author, and you don't have other bots that would
    write comments on PRs, then you could use it.
 
-Allow [@check-spelling-bot](https://github.com/check-spelling-bot) to update PRs by
-incorporating the feedback it reports.
+   - To prevent it from 💬 in response to other bot's comments or other accounts not associated with the
+   PR explaining that it's confused, it should have a condition like this:
+
+    ```yaml
+      if: ${{
+        github.event_name == 'issue_comment' &&
+        github.event.issue.pull_request &&
+        contains(github.event.comment.body, '@check-spelling-bot apply')
+        }}
+    ```
+
+   See https://github.com/check-spelling/spell-check-this/blob/3a35a1cec1e660ab04638cbd5bdd086cf2fcd5c5/.github/workflows/spelling.yml#L126
+
+Current recommended practice is to only enable this feature in private repositories or forks, but not public upstreams.
+
+The code is designed to refused to operate in response to anyone who doesn't have write access to the repository.
 
 ### experimental_parallel_jobs
 
