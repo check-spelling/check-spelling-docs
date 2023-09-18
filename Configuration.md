@@ -130,7 +130,7 @@ incorporating the feedback it reports.
 
 Current recommended practice is to only enable this feature in private repositories or forks, but not public upstreams.
 
-The code is designed to refused to operate in response to anyone who doesn't have write access to the repository.
+The code is designed to refuse to operate in response to anyone who doesn't have write access to the repository.
 
 ### experimental_parallel_jobs
 
