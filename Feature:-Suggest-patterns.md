@@ -1,4 +1,4 @@
-Currently there is code to suggest dictionaries, it runs as a pass after all unrecognized words have been collected and then sees which words match which lists.
+As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), there was code to suggest dictionaries, it runs as a pass after all unrecognized words have been collected and then sees which words match which lists.
 
 There are a couple of ways to consider patterns:
 
@@ -13,7 +13,7 @@ This could be run after applying current patterns but before checking words agai
 
 This might scale poorly (each line of each file cross each pattern).
 
-I'm experimenting with this in `prerelease` post the 0.0.20 release.
+I'm experimenting with this in the [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21) release.
 
 ## After a word is found to not be in the dictionary
 
@@ -22,6 +22,8 @@ After finding a word, in order to report the word's position in the unmasked lin
 ### Cons
 
 If a pattern is bad, it could introduce unrecognized words that aren't naturally present. - Suggestions should be curated, so this shouldn't be a real problem.
+
+This turned out to be a bit of a problem which will be partially addressed in [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22) with the introduction of [`token-is-substring`](https://github.com/check-spelling/check-spelling/wiki/Event-descriptions#token-is-substring).
 
 ## Poor patterns
 
