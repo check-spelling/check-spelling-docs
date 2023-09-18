@@ -11,3 +11,11 @@
 ## Windows
 
 This should just work as of [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21).
+
+## Manually
+
+The code is provided as a convenience, what it does it take certain recommendations from check-spelling and apply them to the check-spelling configuration directory.
+
+* There are probably `Unrecognized words` that need to be added to `expect.txt` (or some variant)
+* There may be items that are no longer found that need to be removed from `expect.txt` (or some variant) so that they'd be flagged if they're reintroduced later.
+* If there are suggestions for additions to `excludes.txt`, versions after [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21) would apply them, and you could manually add them `excludes.txt` (although this isn't necessary).
