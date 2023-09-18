@@ -34,6 +34,7 @@ See [[Configuration: Workflows]] for the supported GitHub workflows.
 | [suppress_push_for_open_pull_request](#suppress_push_for_open_pull_request) | If running from a `push` event and there's an open `pull_request`, stop working and rely on the `pull_request` handling to check the branch |
 | [report_title_suffix](#report_title_suffix) | Appended to title (for use in [matrix configurations](https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#jobsjob_idstrategymatrix)) |
 | [warnings](#warnings) | Treat specific errors as warnings |
+| [notices](#notices) | Treat specific errors as notices |
 | [custom_task](#custom_task) | Workflow magic |
 | [internal_state_directory](#internal_state_directory) | Workflow magic |
 | [check_file_names](#check_file_names) | Spell check file paths |
@@ -47,6 +48,22 @@ See [[Configuration: Workflows]] for the supported GitHub workflows.
 | [use_sarif](#use_sarif) | Generate SARIF Reports |
 | [summary_table](#summary_table) | Summary Table |
 | [report-timing](#report-timing) | Report file processing times |
+| [alternate_engine](#alternate_engine) | Use another version of check-spelling |
+| [alternate_engine_key](#alternate_engine_key) | ssh key to check out alternate version of check-spelling |
+| [cache-dictionaries](#cache-dictionaries) | Allows workflows to disable caching dictionaries |
+| [caller_container](#caller_container) | Hack for `act` |
+| [candidate_example_limit](#candidate_example_limit) | Limit the number of reports per pattern suggestion |
+| [checkout](#checkout) | Let action manage checkout process |
+| [ignore-pattern](#ignore-pattern) | Characters to ignore while parsing lines |
+| [lower-pattern](#lower-pattern) | Pattern describing lowercase characters while parsing lines |
+| [not-lower-pattern](#not-lower-pattern) | Pattern describing non-lowercase characters while parsing lines |
+| [not-upper-or-lower-pattern](#not-upper-or-lower-pattern) | Pattern describing characters that are neither uppercase nor lowercase while parsing lines |
+| [punctuation-pattern](#punctuation-pattern) | Pattern describing punctuation characters while parsing lines |
+| [upper-pattern](#upper-pattern) | Pattern describing uppercase characters while parsing lines |
+| [quit_without_error](#quit_without_error) | Cause action not to trigger a failure state regardless of its internal status |
+| [spell_check_this](#spell_check_this) | Fallback configuration data to use with checkout |
+| [ssh_key](#ssh_key) | Git ssh key for checking out (to enable writes with workflows) |
+| [task](#task) | Workflow magic |
 
 See [[Configuration: Advanced]] for additional options.
 
@@ -217,6 +234,15 @@ values, you can change the mapping by using this field.
 
 See [[Treat specific errors as warnings|Feature: Treat specific errors as warnings]] for more information.
 
+## notices
+
+[v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21)
+
+check-spelling defaults to defining certain events as errors and others as warnings. As with [warnings](#warnings), if you disagree with these
+values, you can change the mapping by using this field.
+
+See [[Treat specific errors as warnings|Feature: Treat specific errors as warnings]] for more information.
+
 ### custom_task
 
 In order to run with restricted permissions under `pull_request_target`, check-spelling is split between two phases:
@@ -224,13 +250,15 @@ In order to run with restricted permissions under `pull_request_target`, check-s
 * `check-spelling` which has limited permissions but would include potentially untrusted content (this is the default task)
 * `comment` this phase should have permission to post a comment (but the untrusted content shouldn't be checked out)
 
+Replaced by [task](#task).
+
 ### internal_state_directory
 
 As part of [custom_task](#custom_task), the default task returns its internal state. This needs to be passed to the `custom_task`: `comment` phase.
 
 Use this parameter to indicate where the internal state was stashed.
 
-Generally stashing is done via `actions/upload-artifact@v2` and unstrashing via `actions/download-artifact@v2`, but the action itself doesn't care, so if you want to use something else, you can.
+Generally stashing is done via `actions/upload-artifact@v2` and unstashing via `actions/download-artifact@v2`, but the action itself doesn't care, so if you want to use something else, you can.
 
 ### check_file_names
 
@@ -500,3 +528,94 @@ Generate a csv file with the start and stop time for each processed file.
 Note that there can be multiple threads running and the precision is fairly low so it's very easy for a number of files to all have the same start and stop times.
 
 See [[Feature: Timing Report]]
+
+## alternate_engine
+
+For testing a different version of check-spelling, generally from a private repository. See also [alternate_engine_key](#alternate_engine_key)
+
+## alternate_engine_key
+
+ssh key to use to check out the [alternate_engine](#alternate_engine).
+
+## cache-dictionaries
+
+This enables consumers to disable [[Feature: Cache dictionaries]].
+
+## caller_container
+
+[act](https://github.com/nektos/act) Hack to enable passing check-spelling job data from one check-spelling job to another.
+
+```yaml
+        caller_container: ${{ needs.spelling.outputs.docker_container }}
+```
+
+## candidate_example_limit
+
+[v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22)
+
+Control how many lines are reported for each [[pattern suggestion|Feature: Suggest patterns]].
+
+## checkout
+
+check-spelling workflows often need `write` access in order to perform various actions (adding PR comments, adding commit comments, generating SARIF reports) and having write access is a bit of a pain for pull requests from foreign repositories (see [Configuration: Workflows `pull_request_target`](https://github.com/check-spelling/check-spelling/wiki/Configuration%3A-Workflows#pull_request_target) for the various combinations).
+
+With `checkout: 1`, the check-spelling action will use [actions/checkout](https://github.com/actions/checkout) to check out the repository and [check-spelling/checkout-merge](https://github.com/check-spelling/checkout-merge) to get the merged commit instead of requiring the workflow to include the messy logic.
+
+## bucket
+
+See [[Configuration: Advanced]].
+
+## project
+
+See [[Configuration: Advanced]].
+
+## debug
+
+See [[Configuration: Advanced]].
+
+## ignore-pattern
+
+Part of [[Feature: Configurable word characters]].
+
+## lower-pattern
+
+Part of [[Feature: Configurable word characters]].
+
+## not-lower-pattern
+
+Part of [[Feature: Configurable word characters]].
+
+## not-upper-or-lower-pattern
+
+Part of [[Feature: Configurable word characters]].
+
+## punctuation-pattern
+
+Part of [[Feature: Configurable word characters]].
+
+## upper-pattern
+
+Part of [[Feature: Configurable word characters]].
+
+## quit_without_error
+
+Prevent check-spelling from exiting with an error code.
+
+## spell_check_this
+
+repository containing check-spelling metadata to use when the current checkout doesn't have any. This is mostly useful for [[Feature: Easier bootstrapping]].
+
+## ssh_key
+
+The ssh key to use to check out the repository (when using [checkout](#checkout)), this enables [[Feature: Update with deploy key]] to work smoothly.
+
+If the value isn't set (e.g. because it points to an undefined secret), the code will rely on `contents: write` in order to update the repository.
+
+## task
+
+In order to run with restricted permissions under `pull_request_target`, check-spelling is split between two phases:
+
+* `check-spelling` which has limited permissions but would include potentially untrusted content (this is the default task)
+* `comment` this phase should have permission to post a comment (but the untrusted content shouldn't be checked out)
+
+Used to pass messages between multiple check-spelling stages, especially from a stage that doesn't have write permissions to one that does (to  add a comment, collapse a comment). This is mostly an implementation detail and shouldn't be specified directly.
