@@ -57,6 +57,7 @@
 * [[🏃Run in Gitea|Feature: Run in Gitea]]
 * [[📄Reusable Workflows|Feature: Reusable Workflows]]
 * [[😸Customer satisfaction survey|Feature: Customer satisfaction survey]]
+* [[🍪Only check changed hunks|Feature: Only check changed hunks]]
 
 ## Distant future
 
