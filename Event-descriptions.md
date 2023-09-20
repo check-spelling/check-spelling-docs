@@ -23,41 +23,46 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
 - [limited-references](#limited-references)
   - [Resolution](#resolution-9)
 - [dictionary-not-found](#dictionary-not-found)
-  - [Resolution](#resolution-10)
-    - [Auto-detect](#auto-detect)
-    - [Update](#update)
-    - [Use older dictionaries](#use-older-dictionaries)
-    - [Use multiple prefixes](#use-multiple-prefixes)
+  - [503 (internal server error)](#503-internal-server-error)
+    - [Resolution](#resolution-10)
+  - [404 (file not found)](#404-file-not-found)
+    - [Resolution](#resolution-11)
+      - [Auto-detect](#auto-detect)
+      - [Update](#update)
+      - [Use older dictionaries](#use-older-dictionaries)
+      - [Use multiple prefixes](#use-multiple-prefixes)
 - [candidate-pattern](#candidate-pattern)
-  - [Resolution](#resolution-11)
+  - [Resolution](#resolution-12)
 - [unsupported-repo-notation](#unsupported-repo-notation)
 - [unsupported-configuration](#unsupported-configuration)
   - [`only_check_changed_files` and `use_sarif`](#only_check_changed_files-and-use_sarif)
   - [`use_sarif` and `security-events: write`](#use_sarif-and-security-events-write)
-    - [Resolution](#resolution-12)
-  - [`use_sarif` and private repositories](#use_sarif-and-private-repositories)
     - [Resolution](#resolution-13)
+  - [`use_sarif` and private repositories](#use_sarif-and-private-repositories)
+    - [Resolution](#resolution-14)
   - [`use_sarif` and `act`](#use_sarif-and-act)
 - [minified-file](#minified-file)
-  - [Resolution](#resolution-14)
-- [duplicate-extra-dictionary](#duplicate-extra-dictionary)
   - [Resolution](#resolution-15)
-- [required-download-failed](#required-download-failed)
+- [duplicate-extra-dictionary](#duplicate-extra-dictionary)
   - [Resolution](#resolution-16)
+- [required-download-failed](#required-download-failed)
+  - [Resolution](#resolution-17)
     - [Examples](#examples)
 - [check-file-path](#check-file-path)
   - [Identifying the problematic items](#identifying-the-problematic-items)
-  - [Resolution](#resolution-17)
-- [token-is-substring](#token-is-substring)
   - [Resolution](#resolution-18)
-- [summary-table-skipped](#summary-table-skipped)
+- [token-is-substring](#token-is-substring)
   - [Resolution](#resolution-19)
-- [slow-file](#slow-file)
+- [summary-table-skipped](#summary-table-skipped)
   - [Resolution](#resolution-20)
-- [ignored-expect-variant](#ignored-expect-variant)
+- [slow-file](#slow-file)
   - [Resolution](#resolution-21)
-- [no-files-to-check](#no-files-to-check)
+- [ignored-expect-variant](#ignored-expect-variant)
   - [Resolution](#resolution-22)
+- [no-files-to-check](#no-files-to-check)
+  - [Resolution](#resolution-23)
+- [noisy-file-list](#noisy-file-list)
+  - [Resolution](#resolution-24)
 
 ℹ️ As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), workflows can [[configure whether specific events are treated as ❌Errors or ⚠️Warnings|Feature: Treat specific errors as warnings]].
 
@@ -569,3 +574,13 @@ Check Spelling works by reviewing files and identifying problems with them. You 
 * Remove entries from [excludes](https://github.com/check-spelling/check-spelling/wiki/Configuration#excludes)
 * Adjust or add items in [https://github.com/check-spelling/check-spelling/wiki/Configuration#only](only)
 * Review the contents of the repository and compare against both
+
+# noisy-file-list
+
+[Check filenames and paths|Feature: Check filenames and paths] results in a list of file paths to be checked as if it was the contents of a file. The general [noisy-file](#noisy-file) heuristic has triggered on the file list itself.
+
+## Resolution
+
+* Turn off [Check filenames and paths|Feature: Check filenames and paths].
+* Add file path words to the dictionary (`allow.txt`).
+* Add file paths to patterns (`patterns.txt`) to exclude noisy file paths.
