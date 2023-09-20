@@ -277,7 +277,7 @@ Generally stashing is done via `actions/upload-artifact@v2` and unstashing via `
 
 ### check_file_names
 
-People misspell file names too. If you want, Check Spelling can complain about them too.
+People misspell file names too. If you want, Check Spelling can complain about them too. [[Feature: Check filenames and paths]]
 
 ### anonymize_secpoll_source
 
