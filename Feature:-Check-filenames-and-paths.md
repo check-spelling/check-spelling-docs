@@ -19,4 +19,8 @@ While this tool was written to catch misspellings within files, it's actually fa
 
 ## Improvements in v0.0.21
 
-In the next version, it will trigger its own warning [`check-file-path`](https://github.com/check-spelling/check-spelling/wiki/Event-descriptions#check-file-path)
+* [`check-file-path`](https://github.com/check-spelling/check-spelling/wiki/Event-descriptions#noisy-file-list)
+
+## Improvements in v0.0.22
+
+* [`noisy-file-list`](https://github.com/check-spelling/check-spelling/wiki/Event-descriptions#noisy-file-list)
