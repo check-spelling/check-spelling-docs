@@ -581,6 +581,6 @@ Check Spelling works by reviewing files and identifying problems with them. You 
 
 ## Resolution
 
-* Turn off [Check filenames and paths|Feature: Check filenames and paths].
+* Turn off [[Check filenames and paths|Feature: Check filenames and paths]].
 * Add file path words to the dictionary (`allow.txt`).
 * Add file paths to patterns (`patterns.txt`) to exclude noisy file paths.
