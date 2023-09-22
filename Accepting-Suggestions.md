@@ -19,3 +19,13 @@ The code is provided as a convenience, what it does it take certain recommendati
 * There are probably `Unrecognized words` that need to be added to [`expect.txt`](https://github.com/check-spelling/check-spelling/wiki/Configuration#expect) (or some variant)
 * There may be items that are no longer found that need to be removed from [`expect.txt`](https://github.com/check-spelling/check-spelling/wiki/Configuration#expect) (or some variant) so that they'd be flagged if they're reintroduced later.
 * If there are [suggestions for additions to `excludes.txt`](https://github.com/check-spelling/check-spelling/wiki/Feature:-Heuristic-exclude-suggestions), versions after [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21) would apply them, and you could manually add them to [`excludes.txt`](https://github.com/check-spelling/check-spelling/wiki/Configuration#excludes) (although this isn't necessary).
+
+## Preformatted commit (v0.0.22+)
+
+As of [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22), in GitHub Job Summaries, you should also see:
+
+`To accept ✔️ these unrecognized words as correct, you could apply this commit`
+
+You can apply the commit as a command or paste it into `git apply` / `patch -p1` or whatever tooling you're comfortable using.
+
+Note that unlike the suggestions option, this will only update `expect.txt` (or its variants) and will not apply suggestions to `excludes.txt`, nor should it provide content from `spell-check-this`.
