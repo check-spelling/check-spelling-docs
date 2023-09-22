@@ -52,7 +52,7 @@
 * [[🪄Honor gitattributes|Feature: Honor gitattributes]]
 * [[🙈Support gitignore|Feature: Support gitignore]]
 * [[↬Update base branch|Feature: Update base branch]]
-* [[Behavior change: Log output order]]
+* [[↕️Behavior change: Log output order|Behavior change: Log output order]]
 * [[♻️Workflow: retest support|Workflow: retest support]]
 * [[🏃Run in GitLab|Feature: Run in GitLab]]
 * [[🏃Run in Gitea|Feature: Run in Gitea]]
