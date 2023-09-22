@@ -75,7 +75,7 @@ By default the [GITHUB_TOKEN](https://docs.github.com/en/actions/reference/authe
 ⚠️ [@dependabot](https://github.com/dependabot) appears to be unfriendly to this token.
 
 > **Note:** GitHub Actions get an automatic token which allows for read operations.
-> If the Action is a [pull_request](#pull_request) and the originating repository isn't trusted, then the automatic token will not have write permission, 
+> If the Action is a [pull_request](#pull_request) and the originating repository isn't trusted, then the automatic token will not have write permission,
 > which means it won't be able to post a comment to the PR, there are three ways to address this:
 > * Use [pull_request_target](./Configuration:-Workflows#pull_request_target) recommended as of [0.0.17-alpha](https://github.com/check-spelling/check-spelling/releases/tag/0.0.17-alpha)
 > * Create a custom Personal Access Token with `repo read` + `comment`
