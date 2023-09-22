@@ -22,6 +22,7 @@
 * ⌛ [[Parsing Timeouts|Feature: Parsing Timeouts]]
 * 🙈 [Advanced exclusion suggestions](https://github.com/check-spelling/check-spelling/wiki/Feature:-Heuristic-exclude-suggestions#advanced-exclusion-suggestions)
 * 🔁 [[Handle GitHub Varnish failures|Feature: Handle GitHub Varnish failures]]
+* 🗒️ [Plain text version of expect updates for people who do not want to run perl](https://github.com/check-spelling/check-spelling/wiki/Accepting-Suggestions#preformatted-commit-v0022)
 * 💔 [[Breaking Change: Dropping support for broken act]]
 * 🗣️ [[Support for non English languages|Feature: Support for non English languages]]
   * 🗣️ [[Non-English languages|Feature: Non-English languages]]
