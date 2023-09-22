@@ -24,6 +24,8 @@
 * 🔁 [[Handle GitHub Varnish failures|Feature: Handle GitHub Varnish failures]]
 * 🗒️ [Plain text version of expect updates for people who do not want to run perl](https://github.com/check-spelling/check-spelling/wiki/Accepting-Suggestions#preformatted-commit-v0022)
 * 💔 [[Breaking Change: Dropping support for broken act]]
+* 🎏 [[Deprecations]]
+  * 📆 [[🗣️ Breaking change: Dropping support for on: schedule|Breaking change: Dropping support for on: schedule]]
 * 🗣️ [[Support for non English languages|Feature: Support for non English languages]]
   * 🗣️ [[Non-English languages|Feature: Non-English languages]]
   * 🚆 [[Hunspell dictionary support|Feature: Hunspell dictionary support]]
@@ -38,8 +40,6 @@
 * ⚙️ [[JSON configuration|Feature: JSON configuration]]
 * 🔧 [[Replace jq|Task: Replace jq]]
 * 🏦 [[Cache dictionaries|Feature: Cache dictionaries]]
-* 🎏 [[Deprecations]]
-  * 📆 [[Breaking change: Dropping support for on: schedule]]
 
 
 ## Near term
