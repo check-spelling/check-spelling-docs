@@ -63,6 +63,8 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
   - [Resolution](#resolution-23)
 - [noisy-file-list](#noisy-file-list)
   - [Resolution](#resolution-24)
+- [utf16-surrogate](#utf16-surrogate)
+  - [Resolution](#resolution-24)
 
 ℹ️ As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), workflows can [[configure whether specific events are treated as ❌Errors or ⚠️Warnings|Feature: Treat specific errors as warnings]].
 
@@ -584,3 +586,14 @@ Check Spelling works by reviewing files and identifying problems with them. You 
 * Turn off [[Check filenames and paths|Feature: Check filenames and paths]].
 * Add file path words to the dictionary (`allow.txt`).
 * Add file paths to patterns (`patterns.txt`) to exclude noisy file paths.
+
+# utf16-surrogate
+
+In [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22), if a file contains utf16 surrogates, it'll be flagged.
+
+check-spelling is designed for utf-8 based files, so a file containing a utf-16 surrogate should be a reasonably good indication that the file won't contain content check-spelling can handle.
+
+## Resolution
+
+* Add the file to `excludes.txt`
+* If the heuristic is wrong, please file a bug.
