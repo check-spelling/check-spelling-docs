@@ -64,7 +64,10 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
 - [noisy-file-list](#noisy-file-list)
   - [Resolution](#resolution-24)
 - [utf16-surrogate](#utf16-surrogate)
-  - [Resolution](#resolution-24)
+  - [Resolution](#resolution-25)
+- [sarif-generation-failed](#sarif-generation-failed)
+  - [Resolution](#resolution-25)
+
 
 ℹ️ As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), workflows can [[configure whether specific events are treated as ❌Errors or ⚠️Warnings|Feature: Treat specific errors as warnings]].
 
@@ -597,3 +600,11 @@ check-spelling is designed for utf-8 based files, so a file containing a utf-16 
 
 * Add the file to `excludes.txt`
 * If the heuristic is wrong, please file a bug.
+
+# sarif-generation-failed
+
+If you encounter this, then check-spelling's Sarif module misbehaved. Sorry about that.
+
+## Resolution
+
+Please [file a bug](https://github.com/check-spelling/check-spelling/issues/new).
