@@ -1,8 +1,20 @@
-# Aliases
+# Content Mappings
 
 Currently there are a couple of [hard-coded](#hard-coded) aliases in the word splitter.
 
 There are a couple of others that probably [should be offered](#Future), and it'd be better if this were something that users could configure instead of requiring a new release each time.
+
+## Proposal
+
+Something like a `mappings.json`, which would probably be json-c (json with comments, possibly tolerating a trailing comma...):
+
+```json
+{
+  "&(?:apos|#39|#x27);|'{2,}": "'",
+  "&(?:quot|#34|#x22);": "\"",
+  "\\(aq": "'"
+}
+```
 
 ## hard-coded
 
