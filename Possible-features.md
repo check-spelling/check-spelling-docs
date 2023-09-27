@@ -36,7 +36,7 @@
 
 * 🧪 [[Regression testing]]
 * 😄 [[Easier to understand filenames|Feature: Easier to understand filenames]]
-* ↪️ [[Aliases|Feature: Aliases]]
+* ↪️ [[Content Mappings|Feature: Content Mappings]]
 * ⚙️ [[JSON configuration|Feature: JSON configuration]]
 * 🔧 [[Replace jq|Task: Replace jq]]
 * 🏦 [[Cache dictionaries|Feature: Cache dictionaries]]
