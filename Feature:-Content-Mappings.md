@@ -10,8 +10,8 @@ Something like a `mappings.json`, which would probably be json-c (json with comm
 
 ```json
 {
-  "&(?:apos|#39|#x27);|'{2,}": "'",
-  "&(?:quot|#34|#x22);": "\"",
+  "&(?:apos|#39|#x27|%27);|'{2,}": "'",
+  "&(?:quot|#34|#x22|%22);": "\"",
   "\\(aq": "'"
 }
 ```
