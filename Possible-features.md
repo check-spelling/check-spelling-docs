@@ -8,6 +8,7 @@
   * ❄️ [[Dictionaries with unique value|Feature: Dictionaries with unique value]]
   * 🥷 [[Suggest dictionaries when dictionaries aren't available|Feature: Suggest dictionaries when dictionaries aren't available]]
   * 🐫 [[Parallel dictionary retrieval|Feature: Parallel dictionary retrieval]]
+  * 🍳 [[Reorganized cspell Dictionaries in v0.0.22|Breaking Change: Reorganized cspell Dictionaries in v0.0.22]]
   * 🗑️ [[Removed Dictionaries]]
   * 📗 [[K8s|Dictionary: K8s]]
   * 📙 [[Lisp|Dictionary: Lisp]]
