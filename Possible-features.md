@@ -16,6 +16,7 @@
 
 ## Near term
 
+* [[👓Suppress PR check when workflow changes|Feature: Suppress PR check when workflow changes]]
 * [[🩸Breaking change: Dropping support for on: schedule|Breaking change: Dropping support for on: schedule]]
 * [[💬Report associated comment for forbidden patterns|Feature: Report associated comment for forbidden patterns]]
 * [[👪Behavior change: case changes in expect|Behavior change: case changes in expect]]
