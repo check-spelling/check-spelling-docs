@@ -2,6 +2,7 @@
 
 ## Supported
 * [prerelease](#prerelease)
+* [v0.0.22](#v0022)
 * [v0.0.21](#v0021)
 
 ## Unsupported
@@ -16,15 +17,49 @@
 
 ## Prerelease
 
-* 🏃 Performance fix for workflows that don't use patterns / forbidden / candidates
-* 🔧 Matrixes generate archives that the latest apply.pl can consume (fixes regression in [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21))
-* 🔧 Matrixes generate sarif reports with distinct categories enabling them all to render properly (fixes bug in [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21))
-
 <!--
 🛠️ In various states of `prerelease`
 🌟 Almost ready to transition from `prerelease` to release 🍽️
 
 -->
+## v0.0.22
+
+[v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22)
+
+* 📚 Dictionary changes
+  * ❄️ [[Dictionaries with unique value|Feature: Dictionaries with unique value]]
+  * 🥷 [[Suggest dictionaries when dictionaries aren't available|Feature: Suggest dictionaries when dictionaries aren't available]]
+  * 🐫 [[Parallel dictionary retrieval|Feature: Parallel dictionary retrieval]]
+  * 🍳 [[Reorganized cspell Dictionaries in v0.0.22|Breaking Change: Reorganized cspell Dictionaries in v0.0.22]]
+  * 🗑️ [[Removed Dictionaries]]
+  * 📗 [[K8s|Dictionary: K8s]]
+  * 📙 [[Lisp|Dictionary: Lisp]]
+* 📊 [[Improve suggested dictionaries order|Feature: Improve suggested dictionaries order]]
+* 🎨 [Adjust Sarif output](https://github.com/check-spelling/check-spelling/wiki/Feature:-Sarif-output#adjusting-sarifjson)
+* ⏱️ [[Timing Report|Feature: Timing Report]]
+* 🃏 [[Warning about substring matches|Feature: Warning about substring matches]]
+* 🙊 [Masked content will be excluded from minified file detection](https://github.com/check-spelling/check-spelling/wiki/Feature:-Minified-file-detection#masked-content-will-be-excluded-from-accounting)
+* 🐣 [[Breaking change: Dropping printf special cases]]
+* 📝 [[Report instances of items that used to be covered by a now missing expect entry|Bug fix: Report instances of items that used to be covered by a now missing expect entry]]
+* 🔢 [[Fix error counts for Check filenames and paths|Feature: Check filenames and paths]]
+* ⌛ [[Parsing Timeouts|Feature: Parsing Timeouts]]
+* 🙈 [Advanced exclusion suggestions](https://github.com/check-spelling/check-spelling/wiki/Feature:-Heuristic-exclude-suggestions#advanced-exclusion-suggestions)
+* 🔁 [[Handle GitHub Varnish failures|Feature: Handle GitHub Varnish failures]]
+* 🗒️ [Plain text version of expect updates for people who do not want to run perl](https://github.com/check-spelling/check-spelling/wiki/Accepting-Suggestions#preformatted-commit-v0022)
+* 💔 [[Breaking Change: Dropping support for broken act]]
+* 🎏 [[Deprecations]]
+  * 📆 [[🗣️ Breaking change: Dropping support for on: schedule|Breaking change: Dropping support for on: schedule]]
+* 🗣️ [[Support for non English languages|Feature: Support for non English languages]]
+  * 🗣️ [[Non-English languages|Feature: Non-English languages]]
+  * 🚆 [[Hunspell dictionary support|Feature: Hunspell dictionary support]]
+  * 🔢 [[Configurable word characters|Feature: Configurable word characters]]
+  * 🧙 [[Character Encoding Auto Detection|Feature: Character Encoding Auto Detection]]
+
+* 🏃 Performance fix for workflows that don't use patterns / forbidden / candidates
+* 🔧 Matrixes generate archives that the latest apply.pl can consume (fixes regression in [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21))
+* 🔧 Matrixes generate SARIF reports with distinct categories enabling them all to render properly (fixes bug in [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21))
+
+
 ## v0.0.21
 
 [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21)
