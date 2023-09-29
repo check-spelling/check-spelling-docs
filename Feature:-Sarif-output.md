@@ -9,7 +9,7 @@ When data is published to GitHub in this format, GitHub is supposed to automatic
 Release | Features
 -|-
 [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21) | [Initial support](#Enabling)
-[prerelease](https://github.com/check-spelling/check-spelling/commits/prerelease) | [Adjusting sarif.json](#adjusting-sarifjson)
+[v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22) | [Adjusting sarif.json](#adjusting-sarifjson)
 
 ## Enabling
 
@@ -47,7 +47,7 @@ If you'd like to see a similar report, you should be able to create a pull reque
 
 ## Adjusting sarif.json
 
-After v0.0.21 (available in prerelease), there's the ability to add a `sarif.json` file to adjust severities or other fields.
+With [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22), there's the ability to add a `sarif.json` file to adjust severities or other fields.
 
 This is experimental (as is SARIF support in general).
 
