@@ -20,3 +20,7 @@ To the extent that the bot can recognize that it's being upgraded, I think it'd 
 ## Caveats
 
 New environment variables from the new `action.yml` file won't be available and I don't expect `with` values would be either. It's really too hard to handle that case. (I'd have to reimplement `act`'s parsing which is probably overkill.)
+
+## See Also
+
+[[Suppress PR check when workflow changes|Feature: Suppress PR check when workflow changes]]
