@@ -2,9 +2,9 @@
 
 ## Background
 
-Normally in a repository, it makes sense to skip running CI on a push if there's an open PR for the same source branch.
+Normally in a repository, it makes sense to skip running CI on a push if there's an open PR for the same source branch (see [`suppress_push_for_open_pull_request`](https://github.com/check-spelling/check-spelling/wiki/Configuration#suppress_push_for_open_pull_request)) -- otherwise one can get two slightly conflicting reports and in general the reports from the PR side are more accurate wrt what a user should do.
 
-If the workflow itself changes and it would rely on `pull_request_target`, then the validity of the PR check is void.
+If the workflow itself changes and the PR would rely on `pull_request_target`, then the validity of the PR check is void.
 
 ## Simple workaround
 
@@ -14,4 +14,4 @@ A smarter implementation would be for the engine itself to check to see if the w
 
 ## See Also
 
-[[Tolerate engine upgrades|Feature: Tolerate engine upgrades]]
+Note that the above doesn't actually solve problems for PRs from forks, that will need to be addressed by [[Tolerate engine upgrades|Feature: Tolerate engine upgrades]]
