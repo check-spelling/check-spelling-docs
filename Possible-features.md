@@ -6,6 +6,7 @@
 
 ## In progress
 
+* [[👓Suppress PR check when workflow changes|Feature: Suppress PR check when workflow changes]]
 * 🧪 [[Regression testing]]
 * 😄 [[Easier to understand filenames|Feature: Easier to understand filenames]]
 * ↪️ [[Content Mappings|Feature: Content Mappings]]
@@ -13,10 +14,8 @@
 * 🔧 [[Replace jq|Task: Replace jq]]
 * 🏦 [[Cache dictionaries|Feature: Cache dictionaries]]
 
-
 ## Near term
 
-* [[👓Suppress PR check when workflow changes|Feature: Suppress PR check when workflow changes]]
 * [[🩸Breaking change: Dropping support for on: schedule|Breaking change: Dropping support for on: schedule]]
 * [[💬Report associated comment for forbidden patterns|Feature: Report associated comment for forbidden patterns]]
 * [[👪Behavior change: case changes in expect|Behavior change: case changes in expect]]
