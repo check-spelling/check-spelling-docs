@@ -53,6 +53,14 @@ This is experimental (as is SARIF support in general).
 
 https://github.com/check-spelling/check-spelling/issues/43
 
+## Results
+
+![Code scanning in PR](https://raw.githubusercontent.com/check-spelling/art/main/output/github-code-scanning-in-pr.png)
+
+![Code scanning list](https://raw.githubusercontent.com/check-spelling/art/main/output/github-code-scanning-list.png)
+
+![Code scanning entry](https://raw.githubusercontent.com/check-spelling/art/main/output/github-code-scanning-alert.png)
+
 ## Implementation plan
 
 - [x] Generate Sarif json
