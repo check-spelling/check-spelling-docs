@@ -35,6 +35,7 @@
   * 📙 [[Lisp|Dictionary: Lisp]]
 * 📊 [[Improve suggested dictionaries order|Feature: Improve suggested dictionaries order]]
 * 🎨 [Adjust Sarif output](https://github.com/check-spelling/check-spelling/wiki/Feature:-Sarif-output#adjusting-sarifjson)
+* 🧾 [[Summary Table|Feature: Summary Table]]
 * ⏱️ [[Timing Report|Feature: Timing Report]]
 * 🃏 [[Warning about substring matches|Feature: Warning about substring matches]]
 * 🙊 [Masked content will be excluded from minified file detection](https://github.com/check-spelling/check-spelling/wiki/Feature:-Minified-file-detection#masked-content-will-be-excluded-from-accounting)
