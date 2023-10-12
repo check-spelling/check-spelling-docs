@@ -53,6 +53,7 @@
 * 🚆 [[Hunspell dictionary support|Feature: Hunspell dictionary support]]
 * 🔢 [[Configurable word characters|Feature: Configurable word characters]]
 * 🧙 [[Character Encoding Auto Detection|Feature: Character Encoding Auto Detection]]
+* 🩹 [Pattern suggestions shouldn't trip over active patterns](https://github.com/check-spelling/check-spelling/wiki/Feature:-Suggest-patterns#multiple-patterns-for-a-line)
 * 🏃 Performance fix for workflows that don't use patterns / forbidden / candidates
 * 🔧 Matrixes generate archives that the latest apply.pl can consume (fixes regression in [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21))
 * 🔧 Matrixes generate SARIF reports with distinct categories enabling them all to render properly (fixes bug in [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21))
