@@ -1,11 +1,28 @@
 # Known Issues
 
+* [Only changed doesn't work when PRs are initially created from forks](#only-changed-doesnt-work-when-prs-are-initially-created-from-forks)
 * [Too many unrecognized words](#Too_many_unrecognized_words)
 * [@dependabot can't comment](#dependabot-cant-comment)
 
+## Only changed doesn't work when PRs are initially created from forks
+
+When using [`only_check_changed_files`](https://github.com/check-spelling/check-spelling/wiki/Configuration#only_check_changed_files) and a PR is _created_ from a **fork**, the initial check will probably not find files to check, producing a warning:
+
+> ⚠️ Was not provided any regular readable files
+
+When the PR is updated triggering a _synchronize_ event, check-spelling should be able to properly identify changed files and report them (but this will miss any files only changed in the initial PR and not in the updates).
+
+Reported in [v0.0.21](https://github.com/check-spelling/check-spelling/releases/v0.0.21) ([v0.0.22](https://github.com/check-spelling/check-spelling/releases/v0.0.22) was released around the time that v0.0.21 was added to the reporting repository).
+
+ℹ️ This should generally not be a problem as of [v0.0.23](https://github.com/check-spelling/check-spelling/releases/v0.0.23).
+
+### Workaround
+
+Please test [prerelease](https://github.com/check-spelling/check-spelling/tree/prerelease). Feedback welcome.
+
 ## Too many unrecognized words
 
-ℹ️ This should generally not be a problem as of v0.0.20.
+ℹ️ This should generally not be a problem as of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/v0.0.20).
 
 ### Problem
 
