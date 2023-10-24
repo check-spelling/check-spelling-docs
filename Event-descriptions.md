@@ -515,12 +515,13 @@ If the file / directory is misspelled, you'll need to use `git mv` to rename it.
 - You may also need to update any references.
   - It's possible references may live outside the repository. If that's the case, you may need to leave temporary shims (just as with fixing misspelled public APIs).
 
-
 # token-is-substring
 
 check-spelling tries to find "words" in your repository that it doesn't have in the dictionaries you've configured. It does that by applying heuristics to identify word boundaries. It also allows you to apply patterns to mask portions of lines. Most likely as a result of some patterns in the configuration, it found a "word" that wasn't in the dictionary, but when it looked through the line w/o applying the patterns, it couldn't determine where the word was.
 
 Most of the time, the fault is in pattern definitions, especially patterns that consume part of a word.
+
+⚠️ If this flags to the first line of a file and you have `check_file_names` enabled, it's possible it's warning about the file path as opposed to the line. A distinct warning will probably be added for this case at a later time.
 
 ## Resolution
 
