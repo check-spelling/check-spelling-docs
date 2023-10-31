@@ -1086,11 +1086,30 @@ Back off 15.937 seconds before retry.
 There is some handling for retries. Offhand, I think I want to try to parse the 
 `date: Thu, 19 Jan 2023 01:44:06 GMT` and `expires: Thu, 19 Jan 2023 01:49:06 GMT` fields to calculate a delay.
 
+Note that these headers are not always present (especially for `502`...).
+
 In theory the process is:
 1. `date`=`now`()
 2. `request_date`=`parse`(`headers`, `'date'`)
 3. `expires_date`=`parse`(`headers`, `'expires'`)
-4. `cache_duration`=`expires_date`-`request_date`
+4. `cache_duration`=`max`(`expires_date` && `request_date` && (`expires_date`-`request_date`), `1`)
 5. `sleep_until`(`date`+`cache_duration`)
 6. `retry_count`++
 7. `do_retry`()
+
+## Status
+
+check-spelling [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22) tolerates `429` and `503` responses.
+
+### 502
+
+Sometimes GitHub just returns something like this:
+```
+HTTP/2 502 
+content-type: text/plain; charset=utf-8
+x-served-by: cache-dfw-kdfw8210077
+content-length: 9
+```
+
+This was not handled by check-spelling [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22) as a `503` was expected.
+[v0.0.23](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.23) will tolerate `502` as well.
