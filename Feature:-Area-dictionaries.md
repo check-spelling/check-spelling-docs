@@ -118,8 +118,9 @@ Testing in prerelease versions of check-spelling/spell-check-this may start in 2
     * NYSE
     * ...
 * Countries
-  * ccTLDs -- https://github.com/incognico/list-of-top-level-domains
+  * ccTLDs -- https://github.com/incognico/list-of-top-level-domains (this is probably less useful as check-spelling doesn't generally care about 2 letter tokens)
 * Domains
+  * https://data.iana.org/TLD/tlds-alpha-by-domain.txt
   * Alexa
 * Jargon
   * Lorem -- https://www.lipsum.com/
