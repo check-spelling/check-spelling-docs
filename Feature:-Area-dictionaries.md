@@ -93,6 +93,12 @@ About the only time it does is for `elif` / `elsif` -- where one programming lan
 
 That said, if you really want to be fancy, you can use a matrix and apply certain dictionaries only in certain circumstances. While this isn't recommended, it is possible.
 
+## Assembly dictionaries
+
+A first draft has been added for [assembly-dictionaries](https://github.com/check-spelling/assembly-dictionaries/tree/20231110).
+
+Testing in prerelease versions of check-spelling/spell-check-this may start in 2024.
+
 ## Future work
 
 [[Suggest Area dictionaries|Feature: Suggest Area Dictionaries]]
