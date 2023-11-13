@@ -24,7 +24,7 @@ The code is provided as a convenience, what it does it take certain recommendati
 
 ## Preformatted commit (v0.0.22+)
 
-As of [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22), in GitHub Job Summaries, you should also see:
+As of [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22), in **GitHub Job Summaries** (if you're used to interacting with check-spelling via a comment, the comment will include a link to the `📝 job summary`), you should also see:
 
 `To accept ✔️ these unrecognized words as correct, you could apply this commit`
 
