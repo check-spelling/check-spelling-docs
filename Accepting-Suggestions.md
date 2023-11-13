@@ -12,6 +12,8 @@
 
 This should just work as of [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21).
 
+You may need to use `curl.exe` instead of `curl`.
+
 ## Manually
 
 The code is provided as a convenience, what it does it take certain recommendations from check-spelling and apply them to the check-spelling configuration directory.
