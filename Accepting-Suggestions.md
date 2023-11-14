@@ -8,11 +8,28 @@
 1. Optionally, review the changes.
 1. `git commit` and `git push` as usual.
 
+## GitHub's [`gh`](https://cli.github.com/) client
+
+As of [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22), the script relies on [`gh`](https://cli.github.com/).
+
+The script will drag you through the process, but you can do it eagerly:
+
+### Install
+* 🍎 macOS, 🍺 brew: [`brew install gh`](https://formulae.brew.sh/formula/gh)
+* 🪟 Windows, 🍫 choco: [`choco install gh`](https://community.chocolatey.org/packages/gh)
+* ... [All](https://github.com/cli/cli#installation)
+
+### Set up
+
+`gh auth login`
+
 ## Windows
 
 This should just work as of [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21).
 
 You may need to use `curl.exe` instead of `curl`.
+
+You probably want to use `git-bash` from https://git-scm.com/download/win (install with `Enable experimental support for pseudo consoles`).
 
 ## Manually
 
