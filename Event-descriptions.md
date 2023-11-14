@@ -573,12 +573,12 @@ If you decide that `microsoft` is acceptable, then it's likely that you'll also 
 
 # no-files-to-check
 
-Check Spelling works by reviewing files and identifying problems with them. You can configure which files it should check by using [excludes](https://github.com/check-spelling/check-spelling/wiki/Configuration#excludes) and [https://github.com/check-spelling/check-spelling/wiki/Configuration#only](only)
+Check Spelling works by reviewing files and identifying problems with them. You can configure which files it should check by using [excludes](https://github.com/check-spelling/check-spelling/wiki/Configuration#excludes) and [only](https://github.com/check-spelling/check-spelling/wiki/Configuration#only)
 
 ## Resolution
 
 * Remove entries from [excludes](https://github.com/check-spelling/check-spelling/wiki/Configuration#excludes)
-* Adjust or add items in [https://github.com/check-spelling/check-spelling/wiki/Configuration#only](only)
+* Adjust or add items in [only](https://github.com/check-spelling/check-spelling/wiki/Configuration#only)
 * Review the contents of the repository and compare against both
 
 # noisy-file-list
