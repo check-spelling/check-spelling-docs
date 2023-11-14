@@ -556,6 +556,8 @@ When processing a file, if the time to parse exceeds the `splitter_timeout` envi
 
 # ignored-expect-variant
 
+check-spelling looks for items not in the dictionary, once it finds them, it checks those items against the expect file. If words are in expect (and found), they will be used to cover additional variations (variants). If a word is covered by a base word, then it doesn't need to be explicitly listed again by its variant, and check-spelling will warn you about the superfluous entry.
+
 English / programming have interesting ways of handling proper nouns.
 
 In general, a term might be written as `MICROSOFT`, it's reasonable to decide that this is ok for use in a project.
@@ -566,6 +568,8 @@ OTOH, once you've decided that `Microsoft` is acceptable, it's likely that you'l
 If you decide that `microsoft` is acceptable, then it's likely that you'll also accept `Microsoft` (e.g. as the first word in a sentence).
 
 `expect.txt` is parsed with the assumption that only the most general form that's found in your code is listed.
+
+Similarly, if you use the term `widgit`, you might write it in a plural as `widgits`. If you include `widgit` in `expect`, you don't need to include `widgits` as check-spelling will assume that you are ok with that plural.
 
 ## Resolution
 * Remove the extraneous entry/entries from `expect.txt` -- the included `apply.pl` suggestions should help with this
