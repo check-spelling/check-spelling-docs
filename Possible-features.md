@@ -6,7 +6,7 @@
 
 ## In progress
 
-* [[👓Suppress PR check when workflow changes|Feature: Suppress PR check when workflow changes]]
+* 👓 [[Suppress PR check when workflow changes|Feature: Suppress PR check when workflow changes]]
 * 🧪 [[Regression testing]]
 * 😄 [[Easier to understand filenames|Feature: Easier to understand filenames]]
 * ↪️ [[Content Mappings|Feature: Content Mappings]]
@@ -31,6 +31,7 @@
 * [[📄Reusable Workflows|Feature: Reusable Workflows]]
 * [[😸Customer satisfaction survey|Feature: Customer satisfaction survey]]
 * [[🍪Only check changed hunks|Feature: Only check changed hunks]]
+* [[🧱Block/Multiline Ignore|Feature: Block Ignore]]
 
 ## Distant future
 
@@ -39,7 +40,6 @@
 * [[Learn from corrections|Feature: Learn from corrections]]
 * [[Plug into Pantsbuild|Feature: Pantsbuild plugin]]
 * [[Plug into Visual Studio Code|Feature: Visual Studio Code plugin]]
-* [[Block/Multiline Ignore|Feature: Block Ignore]]
 * [[Custom escape mappings|Feature: Custom escape mappings]]
 
 ## Related but currently out of scope
