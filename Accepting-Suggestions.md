@@ -29,7 +29,7 @@ This should just work as of [v0.0.21](https://github.com/check-spelling/check-sp
 
 You may need to use `curl.exe` instead of `curl`.
 
-You probably want to use `git-bash` from https://git-scm.com/download/win (install with `Enable experimental support for pseudo consoles`).
+You probably want to use `git-bash` from https://git-scm.com/download/win (install with `Enable experimental support for pseudo consoles`) which will give you `perl` (although you can use any Perl distribution).
 
 ## Manually
 
