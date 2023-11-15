@@ -33,9 +33,9 @@ You probably want to use `git-bash` from https://git-scm.com/download/win (insta
 
 ## Manually
 
-The code is provided as a convenience, what it does it take certain recommendations from check-spelling and apply them to the check-spelling configuration directory.
+The code is provided as a convenience--what it does it take certain recommendations from check-spelling and apply them to the check-spelling configuration directory.
 
-* There are probably `Unrecognized words` that need to be added to [`expect.txt`](https://github.com/check-spelling/check-spelling/wiki/Configuration#expect) (or some variant)
+* There are probably `Unrecognized words` that need to be added to [`expect.txt`](https://github.com/check-spelling/check-spelling/wiki/Configuration#expect) (or some variant).
 * There may be items that are no longer found that need to be removed from [`expect.txt`](https://github.com/check-spelling/check-spelling/wiki/Configuration#expect) (or some variant) so that they'd be flagged if they're reintroduced later.
 * If there are [suggestions for additions to `excludes.txt`](https://github.com/check-spelling/check-spelling/wiki/Feature:-Heuristic-exclude-suggestions), versions after [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21) would apply them, and you could manually add them to [`excludes.txt`](https://github.com/check-spelling/check-spelling/wiki/Configuration#excludes) (although this isn't necessary).
 
