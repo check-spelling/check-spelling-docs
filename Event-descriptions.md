@@ -488,7 +488,6 @@ If the version of check-spelling was recently upgraded (this can happen if you'r
 
 Between [v20220816](https://github.com/check-spelling/cspell-dicts/releases/tag/v20220816) and [v20230502](https://github.com/check-spelling/cspell-dicts/releases/tag/v20230502), a number of the dictionaries were renamed, mostly changing from `foo/bar.txt` to `foo/dict/bar.txt`, so, for this one, `cspell:bash/bash-words.txt` would become `cspell:bash/dict/bash-words.txt`.
  
-
 # check-file-path
 
 If you have enabled [[Check filenames and paths|Feature: Check filenames and paths]] with [`check_file_names: 1`](https://github.com/check-spelling/check-spelling/wiki/Configuration#check_file_names), then in addition to checking the contents of files, check-spelling will check the file paths.
