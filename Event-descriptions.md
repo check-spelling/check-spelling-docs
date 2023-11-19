@@ -587,7 +587,7 @@ Check Spelling works by reviewing files and identifying problems with them. You 
 
 # noisy-file-list
 
-[Check filenames and paths|Feature: Check filenames and paths] results in a list of file paths to be checked as if it was the contents of a file. The general [noisy-file](#noisy-file) heuristic has triggered on the file list itself.
+[[Check filenames and paths|Feature: Check filenames and paths]] results in a list of file paths to be checked as if it was the contents of a file. The general [noisy-file](#noisy-file) heuristic has triggered on the file list itself.
 
 ## Resolution
 
