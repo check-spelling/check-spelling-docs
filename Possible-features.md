@@ -21,6 +21,7 @@
 * [[👪Behavior change: case changes in expect|Behavior change: case changes in expect]]
 * [[🗜️Breaking change: Smaller dictionary|Breaking change: Smaller dictionary]]
 * [[🪆Subrepos|Feature: Subrepos]]
+* [[🪜base‐path|Feature: \`base‐path\`]]
 * [[🪄Honor gitattributes|Feature: Honor gitattributes]]
 * [[🙈Support gitignore|Feature: Support gitignore]]
 * [[↬Update base branch|Feature: Update base branch]]
