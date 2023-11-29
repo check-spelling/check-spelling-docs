@@ -604,6 +604,19 @@ check-spelling is designed for utf-8 based files, so a file containing a utf-16 
 
 * Add the file to `excludes.txt`
 * If the heuristic is wrong, please file a bug.
+* You can manually use `uses: actions/checkout@...` and then add a `run` step that converts from utf16 to utf8, e.g. using `iconv`:
+
+  ```sh
+  (
+    intermediate=$(mktemp);
+    for file in $utf16_files; do
+      iconv -f utf-16le -t utf-8 "$file" -o "$intermediate" &&
+        mv "$intermediate" "$file"
+    done
+  )
+  ```
+
+  -- Note that this is untested -- please send feedback if you try using it.
 
 # sarif-generation-failed
 
