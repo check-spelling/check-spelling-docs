@@ -372,7 +372,7 @@ If a candidate pattern appeals to you, you can (tinker with, and) add it to `pat
 Simple comment lines `# ` preceding a candidate line will be included in the output for candidates in the comment in the report.
 
 In order to give users a chance to understand how useful a given candidate is, a couple of lines that match each pattern are reported.
-These are just line matches at present, the system isn't recording which part of the line matches, although if that turns out to be important, it's possible to adjust the code to report that as well...
+Version 0.0.22 will highlight the matching part of the line when SARIF reporting is enabled.
 
 ## Resolution
 
