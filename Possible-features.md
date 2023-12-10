@@ -13,11 +13,11 @@
 * ⚙️ [[JSON configuration|Feature: JSON configuration]]
 * 🔧 [[Replace jq|Task: Replace jq]]
 * 🏦 [[Cache dictionaries|Feature: Cache dictionaries]]
+* 💬 [[Report associated comment for forbidden patterns|Feature: Report associated comment for forbidden patterns]]
 
 ## Near term
 
 * [[🩸Breaking change: Dropping support for on: schedule|Breaking change: Dropping support for on: schedule]]
-* [[💬Report associated comment for forbidden patterns|Feature: Report associated comment for forbidden patterns]]
 * [[👪Behavior change: case changes in expect|Behavior change: case changes in expect]]
 * [[🗜️Breaking change: Smaller dictionary|Breaking change: Smaller dictionary]]
 * [[🪆Subrepos|Feature: Subrepos]]
