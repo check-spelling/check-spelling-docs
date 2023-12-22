@@ -10,19 +10,21 @@ I'm mostly concerned about having to run a regular expression against a very lar
 
 * `begin`/`end` tags that do not span lines (i.e. `<!\n--` is not a valid `begin` tag)
 * if an `end` marker isn't found in a file, a warning can be logged but the `begin` tag will be honored
-* `begin`/`end` tags on the same line `<!--`..`-->` or `/*`...`*/`
 * `begin`/`end` tags are fixed characters (effectively wrapped in `\Q`...`\E` Perl Regular Expression handling)
+* no spell checking/pattern application for lines with `begin`/`end` tags
 
 ## Out of scope
 
 * `begin`/`end` tags that span lines (i.e. `<!\n--`)
+* `begin`/`end` tags on the same line `<!--`..`-->` or `/*`...`*/`
 * `begin`/`end` tags that use regular expressions
+* spell checking/pattern application for lines with `begin`/`end` tags
 
 ## Design
 
-Before applying patterns, check for any `begin` tag on the line. If one is hit, switch to a mode where the only way to leave the mode is EOF or the matching `end` tag (this means skipping all patterns and forbidden patterns and anything else).
+Before applying patterns, check for any `begin` tag on the line. If one is hit, switch to a mode where the only way to leave the mode is EOF or the matching `end` tag (this means skipping all patterns and forbidden patterns and anything else) and plan to skip pattern/spell checking for the first line.
 
-Once an `end` tag is hit, resume normal parsing (first for additional begin tags from the remainder of the line, and then for normal patterns/forbidden patterns/unknown words).
+Once an `end` tag is hit, resume normal parsing (first for additional begin tags from the remainder of the line, and then for normal patterns/forbidden patterns/unknown words) on the next line.
 
 ## Status
 
