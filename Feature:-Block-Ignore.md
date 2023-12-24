@@ -28,4 +28,16 @@ Once an `end` tag is hit, resume normal parsing (first for additional begin tags
 
 ## Status
 
+Draft support in a file `block-delimiters.list`, format:
+
+```block-delimiters.list
+# Description of format 1
+<begin token for format 1>
+<end token for format 1>
+
+# Description of format 2
+<begin token for format 2>
+<end token for format 2>
+```
+
 This is not yet implemented as of [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22)
