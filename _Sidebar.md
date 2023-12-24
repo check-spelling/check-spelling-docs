@@ -1,1 +1,0 @@
-https://github.com/check-spelling/check-spelling.wiki.git
