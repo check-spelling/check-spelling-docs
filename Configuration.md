@@ -324,6 +324,7 @@ or a directory, where each file with a `.txt` suffix will be merged together.
 | ------------- | ------------- |
 | [advice](#advice) | This allows you to supplement the comment. |
 | [allow](#allow) | This allows you to supplement the dictionary. |
+| [block delimiters](#block-delimiters) | This allows you to define block delimiters. |
 | [dictionary](#dictionary) | This allows you to replace the dictionary. |
 | [excludes](#excludes) | This allows you to skip checking files/directories. |
 | [expect](#expect) | This defines the list of words in the repository that aren't in the dictionary. |
@@ -360,6 +361,13 @@ Some candidates:
 See [Area dictionaries](https://github.com/check-spelling/check-spelling/wiki/Feature:-Area-dictionaries) for other examples.
 
 For entire reusable lists that don't live in your repository, you can use [extra_dictionaries](#extra_dictionaries) instead.
+
+
+### block delimiters
+
+This allows you to define a pair of start/stop delimiters which will cause check-spelling to skip the contents of lines between start and stop delimiters.
+
+See [[Configuration Examples: block delimiters]] for examples and [[Feature: Block Ignore]] for information about the feature.
 
 ### dictionary
 
