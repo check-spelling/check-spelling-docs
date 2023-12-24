@@ -66,7 +66,9 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
 - [utf16-surrogate](#utf16-surrogate)
   - [Resolution](#resolution-25)
 - [sarif-generation-failed](#sarif-generation-failed)
-  - [Resolution](#resolution-25)
+  - [Resolution](#resolution-26)
+- [unclosed-block-ignore](#unclosed-block-ignore)
+  - [Resolution](#resolution-27)
 
 
 ℹ️ As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), workflows can [[configure whether specific events are treated as ❌Errors or ⚠️Warnings|Feature: Treat specific errors as warnings]].
@@ -625,3 +627,16 @@ If you encounter this, then check-spelling's Sarif module misbehaved. Sorry abou
 ## Resolution
 
 Please [file a bug](https://github.com/check-spelling/check-spelling/issues/new).
+
+# unclosed-block-ignore
+
+A [[Block Ignore|Feature: Block Ignore]] rule's start pattern matched content in the file, but the corresponding end tag wasn't found.
+
+As a result, all content after the begin tag was ignored.
+
+Note that this feature is experimental, it's possible you've encountered a bug.
+
+## Resolution
+
+* If you believe the behavior is incorrect, please [file a bug](https://github.com/check-spelling/check-spelling/issues/new).
+* If the end token really isn't present, consider adjusting your begin/end tokens.
