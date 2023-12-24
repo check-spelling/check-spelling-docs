@@ -14,6 +14,7 @@
 * 🔧 [[Replace jq|Task: Replace jq]]
 * 🏦 [[Cache dictionaries|Feature: Cache dictionaries]]
 * 💬 [[Report associated comment for forbidden patterns|Feature: Report associated comment for forbidden patterns]]
+* 🙈 [[Block Ignore|Feature: Block Ignore]]
 
 ## Near term
 
