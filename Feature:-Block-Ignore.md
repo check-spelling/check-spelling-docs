@@ -2,16 +2,38 @@
 
 JSON/HTML/XML/Yaml/ssh keys often have nothing useful on a given line, but people still want to ignore a hunk.
 
-I don't have a particular plan for how to handle this. I don't think I'll implement it in the `patterns.txt` file as the way I've implemented patterns isn't really compatible w/ such an extension.
+This will not be implemented in the `patterns.txt` file as patterns isn't really compatible w/ such an extension.
 
-I'm mostly concerned about having to run a regular expression against a very large file as a single string.
+## Constraints
+
+* Running a regular expression against a very large file as a single string isn't viable
+* Building a very complicated state machine isn't viable
+* Dealing with the interactions between block ignore and normal patterns/forbidden patterns/unrecognized words itself is problematic as they expect to be able to report character positions and also reason over them, but it's really best if everything relating to a block is invisible to things.
 
 ## In scope
 
 * `begin`/`end` tags that do not span lines (i.e. `<!\n--` is not a valid `begin` tag)
-* if an `end` marker isn't found in a file, a warning can be logged but the `begin` tag will be honored
+* if an `end` marker isn't found in a file, a warning can be logged but the `begin` tag will be honored (this isn't implemented)
 * `begin`/`end` tags are fixed characters (effectively wrapped in `\Q`...`\E` Perl Regular Expression handling)
 * no spell checking/pattern application for lines with `begin`/`end` tags
+
+## Not implemented
+
+* Restricting by path (this unfortunately seems like something people will need -- a given rule could easily only apply to certain file extensions...)
+* Disqualifying a block rule after encountering another token -- e.g. for only excluding something in a header block
+* Complaining about multiple instances of the same `begin` token -- (first one probably wins, but this is not guaranteed and may be subject to change -- at a later date it'll likely result in the rules being discarded)
+
+Sadly, these items argue that the initial file format will not work and something fancier will be needed. It'll probably be of the form:
+
+```block-ignore.rules```
+name: (free text)
+begin-token: (token)
+end-token: (token)
+file-path-pattern: (regular-expression)
+stop-after: (token)
+```
+
+Where `file-path-pattern` and `stop-after` would be optional fields, but `begin-token` and `end-token` would be mandatory. Whether `name` will be mandatory is unclear at this time -- this whole file format is currently just an idea.
 
 ## Out of scope
 
