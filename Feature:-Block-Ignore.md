@@ -25,7 +25,8 @@ This will not be implemented in the `patterns.txt` file as patterns isn't really
 
 Sadly, these items argue that the initial file format will not work and something fancier will be needed. It'll probably be of the form:
 
-```block-ignore.rules```
+`block-ignore.rules`:
+```
 name: (free text)
 begin-token: (token)
 end-token: (token)
