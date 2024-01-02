@@ -14,7 +14,7 @@
 * 🔧 [[Replace jq|Task: Replace jq]]
 * 🏦 [[Cache dictionaries|Feature: Cache dictionaries]]
 * 💬 [[Report associated comment for forbidden patterns|Feature: Report associated comment for forbidden patterns]]
-* 🙈 [[Block Ignore|Feature: Block Ignore]]
+* 🧱 [[Block/Multiline Ignore|Feature: Block Ignore]]
 
 ## Near term
 
@@ -33,7 +33,6 @@
 * [[📄Reusable Workflows|Feature: Reusable Workflows]]
 * [[😸Customer satisfaction survey|Feature: Customer satisfaction survey]]
 * [[🍪Only check changed hunks|Feature: Only check changed hunks]]
-* [[🧱Block/Multiline Ignore|Feature: Block Ignore]]
 
 ## Distant future
 
