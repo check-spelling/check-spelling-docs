@@ -42,6 +42,7 @@
 * [[Plug into Pantsbuild|Feature: Pantsbuild plugin]]
 * [[Plug into Visual Studio Code|Feature: Visual Studio Code plugin]]
 * [[Custom escape mappings|Feature: Custom escape mappings]]
+* [Managed To‐Do list](https://github.com/check-spelling/check-spelling/wiki/Feature:-Managed-To%E2%80%90Do-list)
 
 ## Related but currently out of scope
 
