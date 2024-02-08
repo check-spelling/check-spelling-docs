@@ -7,24 +7,9 @@
 Things to try:
 
 ```json
-"cSpell.dictionaryDefinitions": [
-  {
-    "name": "custom-allow", "path": "${workspaceFolder}/.github/actions/spelling/allow.txt"
-  },
-  {
-    "name": "custom-expect", "path": "${workspaceFolder}/.github/actions/spelling/expect.txt"
-  },
-],
-"cSpell.dictionaries": [
-  "custom-allow",
-  "custom-expect"
-],
-```
-
-```json
 "cSpell.customDictionaries": {
   "custom-allow": { "name": "custom-allow", "path": "${workspaceFolder:Root}/.github/actions/spelling/allow.txt" },
-  "custom-expect": { "name": "custom-expect", "path": "${workspaceFolder:Root}/internal-terms.txt" , "addWords": true }
+  "custom-expect": { "name": "custom-expect", "path": "${workspaceFolder}/.github/actions/spelling/expect.txt" , "addWords": true }
 },
 ```
 
