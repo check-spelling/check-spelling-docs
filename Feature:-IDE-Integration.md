@@ -8,7 +8,7 @@ Things to try:
 
 ```json
 "cSpell.customDictionaries": {
-  "custom-allow": { "name": "custom-allow", "path": "${workspaceFolder:Root}/.github/actions/spelling/allow.txt" },
+  "custom-allow": { "name": "custom-allow", "path": "${workspaceFolder}/.github/actions/spelling/allow.txt" },
   "custom-expect": { "name": "custom-expect", "path": "${workspaceFolder}/.github/actions/spelling/expect.txt" , "addWords": true }
 },
 ```
