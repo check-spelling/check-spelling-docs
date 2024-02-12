@@ -8,6 +8,15 @@
 1. Optionally, review the changes.
 1. `git commit` and `git push` as usual.
 
+* [GitHub's `gh` client](#githubs-gh-client)
+  * [Install](#install)
+  * [Set up](#set-up)
+* [Windows](#windows)
+* [Manually](#manually)
+* [Preformatted commit (v0.0.22+)](#preformatted-commit-v0022)
+* [Caveats](#caveats)
+  * [Pull Requests from branches without check-spelling configured](#pull-requests-from-branches-without-check-spelling-configured)
+
 ## GitHub's [`gh`](https://cli.github.com/) client
 
 As of [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22), the script relies on [`gh`](https://cli.github.com/).
@@ -29,11 +38,11 @@ This should just work as of [v0.0.21](https://github.com/check-spelling/check-sp
 
 You may need to use `curl.exe` instead of `curl`.
 
-You probably want to use `git-bash` from https://git-scm.com/download/win (install with `Enable experimental support for pseudo consoles`) which will give you `perl` (although you can use any Perl distribution).
+You probably want to use `git-bash` from https://git-scm.com/download/win (install with `Enable experimental support for pseudo consoles`) which will give you `perl` (although you can use any [Perl distribution](https://www.perl.org/get.html).
 
 ## Manually
 
-The code is provided as a convenience--what it does it take certain recommendations from check-spelling and apply them to the check-spelling configuration directory.
+The code is provided as a convenience--what it does is take certain recommendations from check-spelling and apply them to the check-spelling configuration directory.
 
 * There are probably `Unrecognized words` that need to be added to [`expect.txt`](https://github.com/check-spelling/check-spelling/wiki/Configuration#expect) (or some variant).
 * There may be items that are no longer found that need to be removed from [`expect.txt`](https://github.com/check-spelling/check-spelling/wiki/Configuration#expect) (or some variant) so that they'd be flagged if they're reintroduced later.
@@ -48,3 +57,16 @@ As of [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0
 You can apply the commit as a command or paste it into `git apply` / `patch -p1` or whatever tooling you're comfortable using.
 
 Note that unlike the suggestions option, this will only update `expect.txt` (or its variants) and will not apply suggestions to `excludes.txt`, nor should it provide content from `spell-check-this`.
+
+## Caveats
+
+### Pull Requests from branches without check-spelling configured
+
+If your branch doesn't have check-spelling and you're making a pull request to a branch with check-spelling, it doesn't make sense for check-spelling to suggest applying changes to your head branch because that is guaranteed to result in a conflict.
+
+Instead, the command that's suggested is the command to add the metadata to the base branch.
+
+In order for this to be useful, you'll then need to create a merge commit between the modified head base and your head branch.
+
+You could rebase your commits onto the base branch at this point (or in some other order).
+
