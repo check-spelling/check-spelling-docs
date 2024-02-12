@@ -70,3 +70,4 @@ In order for this to be useful, you'll then need to create a merge commit betwee
 
 You could rebase your commits onto the base branch at this point (or in some other order).
 
+A version after 0.0.22 should include instructions for merging. Whether you merge or rebase is up to you or the project to which you're contributing. If you choose to rebase, you'll probably want to rearrange the commits. You might also want to rearrange the commits if you merge -- the order of commands given is designed to be likely to not immediately have merge conflicts but probably doesn't tell the best "story".
