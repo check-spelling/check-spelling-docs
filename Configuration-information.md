@@ -1,7 +1,7 @@
 ## Configuration information
 
 * [[Configuration]]
-* [Configuration Files](../Configuration#files)
+* [[Configuration Files]]
   * [[Configuration Examples: advice]]
   * [[Configuration Examples: allow]]
   * [[Configuration Examples: block delimiters]]
