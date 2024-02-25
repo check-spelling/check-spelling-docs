@@ -14,7 +14,7 @@ A lot of users were hoping for a stable script one could get from the check-spel
 ## Goals
 
 - [x] Support URLs pointing to Markdown flavored comments
-- [x] Support URLs pointing to GitHub action check logs (requires [[Log Check Run URL|Todo: Log Check Run URL]])
+- [x] Support URLs pointing to GitHub action check logs
 - [x] Support simple lists of adds/removes
 - [x] Support excludes
 - [x] Support spell-check-this
