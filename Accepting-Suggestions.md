@@ -8,14 +8,14 @@
 1. Optionally, review the changes.
 1. `git commit` and `git push` as usual.
 
-* [GitHub's `gh` client](#githubs-gh-client)
-  * [Install](#install)
-  * [Set up](#set-up)
-* [Windows](#windows)
-* [Manually](#manually)
-* [Preformatted commit (v0.0.22+)](#preformatted-commit-v0022)
-* [Caveats](#caveats)
-  * [Pull Requests from branches without check-spelling configured](#pull-requests-from-branches-without-check-spelling-configured)
+- [GitHub's `gh` client](#githubs-gh-client)
+  - [Install](#install)
+  - [Set up](#set-up)
+- [Windows](#windows)
+- [Manually](#manually)
+- [Preformatted commit (v0.0.22+)](#preformatted-commit-v0022)
+- [Caveats](#caveats)
+  - [Pull Requests from branches without check-spelling configured](#pull-requests-from-branches-without-check-spelling-configured)
 
 ## GitHub's [`gh`](https://cli.github.com/) client
 
@@ -24,9 +24,10 @@ As of [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0
 The script will drag you through the process, but you can do it eagerly:
 
 ### Install
-* 🍎 macOS, 🍺 brew: [`brew install gh`](https://formulae.brew.sh/formula/gh)
-* 🪟 Windows, 🍫 choco: [`choco install gh`](https://community.chocolatey.org/packages/gh)
-* ... [All](https://github.com/cli/cli#installation)
+
+- 🍎 macOS, 🍺 brew: [`brew install gh`](https://formulae.brew.sh/formula/gh)
+- 🪟 Windows, 🍫 choco: [`choco install gh`](https://community.chocolatey.org/packages/gh)
+- ... [All](https://github.com/cli/cli#installation)
 
 ### Set up
 
@@ -44,9 +45,9 @@ You probably want to use `git-bash` from https://git-scm.com/download/win (insta
 
 The code is provided as a convenience--what it does is take certain recommendations from check-spelling and apply them to the check-spelling configuration directory.
 
-* There are probably `Unrecognized words` that need to be added to [`expect.txt`](https://github.com/check-spelling/check-spelling/wiki/Configuration#expect) (or some variant).
-* There may be items that are no longer found that need to be removed from [`expect.txt`](https://github.com/check-spelling/check-spelling/wiki/Configuration#expect) (or some variant) so that they'd be flagged if they're reintroduced later.
-* If there are [suggestions for additions to `excludes.txt`](https://github.com/check-spelling/check-spelling/wiki/Feature:-Heuristic-exclude-suggestions), versions after [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21) would apply them, and you could manually add them to [`excludes.txt`](https://github.com/check-spelling/check-spelling/wiki/Configuration#excludes) (although this isn't necessary).
+- There are probably `Unrecognized words` that need to be added to [`expect.txt`](https://github.com/check-spelling/check-spelling/wiki/Configuration#expect) (or some variant).
+- There may be items that are no longer found that need to be removed from [`expect.txt`](https://github.com/check-spelling/check-spelling/wiki/Configuration#expect) (or some variant) so that they'd be flagged if they're reintroduced later.
+- If there are [suggestions for additions to `excludes.txt`](https://github.com/check-spelling/check-spelling/wiki/Feature:-Heuristic-exclude-suggestions), versions after [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21) would apply them, and you could manually add them to [`excludes.txt`](https://github.com/check-spelling/check-spelling/wiki/Configuration#excludes) (although this isn't necessary).
 
 ## Preformatted commit (v0.0.22+)
 

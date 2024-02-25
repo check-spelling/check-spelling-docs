@@ -3,6 +3,7 @@
 Documented for [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20) and included in the [recommended workflow](https://github.com/check-spelling/spell-check-this/blob/main/.github/workflows/spelling.yml)
 
 ## Background
+
 Added in April 2021, [GitHub Actions: Limit workflow run or job concurrency](https://github.blog/changelog/2021-04-19-github-actions-limit-workflow-run-or-job-concurrency/).
 
 You're welcome to use this however you choose. Note that at the time this page was written, the [feature](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#concurrency) was in beta.
@@ -20,4 +21,5 @@ This "feature" doesn't involve any changes to the action itself, it's purely a f
 You can see an implementation of it in [spell-check-this](https://github.com/check-spelling/spell-check-this/commit/0127a8b13e01b15ac458c362c1f03afecc818257).
 
 When triggered, you'll get an event like this:
+
 > Canceling since a higher priority waiting request for 'spelling-refs/heads/prerelease' exists

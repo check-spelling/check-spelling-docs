@@ -4,8 +4,8 @@
 
 There are a couple categories of files to consider:
 
-* binaries (e.g. pictures / audio / video)
-* files written in natural languages not recognized by the dictionary
+- binaries (e.g. pictures / audio / video)
+- files written in natural languages not recognized by the dictionary
 
 ## Possible strategies
 
@@ -15,8 +15,8 @@ Look for new filename extensions?
 
 ## See also
 
-* [[Detect non text files|Feature: Detect non text files]]
-* [[Detect binary files|Feature: Detect binary files]]
+- [[Detect non text files|Feature: Detect non text files]]
+- [[Detect binary files|Feature: Detect binary files]]
 
 ## Escape path
 

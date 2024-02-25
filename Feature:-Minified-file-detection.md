@@ -6,12 +6,10 @@ For a UTF-32 file, that only allows for 250 characters per line, but even that s
 
 ### Masked content will be excluded from accounting
 
-In [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22), runs of text that are masked by `patterns.txt` will not be counted in the bytes for the lines. 
+In [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22), runs of text that are masked by `patterns.txt` will not be counted in the bytes for the lines.
 
 https://github.com/check-spelling/check-spelling/issues/53
 
 ### opt out
 
 To disable, add `minified-file` to `disable_checks`, and please file a bug with a sample where you think it makes sense to check the file.
-
-

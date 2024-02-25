@@ -8,7 +8,7 @@ To the extent that the bot can recognize that it's being upgraded, I think it'd 
 
 ## Requirements
 
-* The bot needs to know the path to the running workflow (I'm not sure how readily available this is).
+- The bot needs to know the path to the running workflow (I'm not sure how readily available this is).
 
 ## Process
 

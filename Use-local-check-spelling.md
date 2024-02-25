@@ -27,7 +27,7 @@ $spellchecker/fast-install.pl && $spellchecker/unknown-words.sh
 ## Disclaimers
 
 1. Both this script and check-spelling itself will try to install software globally (curl, git, jq, and CheckSpelling's Perl modules)
-2. Check Spelling creates *lots* of temporary directories in your temp directory. It expects your system to clean them up (or not care that they're created). If this is a problem, run this in a docker or similar disposable world.
+2. Check Spelling creates _lots_ of temporary directories in your temp directory. It expects your system to clean them up (or not care that they're created). If this is a problem, run this in a docker or similar disposable world.
 
 ## Alternatives
 

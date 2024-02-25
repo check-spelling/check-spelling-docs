@@ -1,7 +1,7 @@
 # First run advice
 
-* As of `0.0.17`, the action will suggest changes to `expect`.
-* As of `0.0.18`, the action will suggest changes to `excludes`.
+- As of `0.0.17`, the action will suggest changes to `expect`.
+- As of `0.0.18`, the action will suggest changes to `excludes`.
 
 In general, the current recommendation is to copy the contents of https://github.com/check-spelling/spell-check-this/ into your repository as that should give you a good first-run experience.
 

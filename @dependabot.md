@@ -8,7 +8,7 @@ https://github.community/t/permissions-nesecary-to-comment-on-a-pr/179047/2
 
 ## Strategies
 
-* The bot could recognize that the commit it is handling is empty and comment on the parent (this seems generally useful) -- this may require the bot to fetch additional commits (not a big deal, it already does that occasionally).
+- The bot could recognize that the commit it is handling is empty and comment on the parent (this seems generally useful) -- this may require the bot to fetch additional commits (not a big deal, it already does that occasionally).
 
 1. Maybe the workflow can ask for permission to comment:
 

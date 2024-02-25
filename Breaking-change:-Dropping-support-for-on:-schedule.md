@@ -11,11 +11,13 @@ There was other contemplated work [[Limit schedule branches|Feature: Limit sched
 ## Plan
 
 ### [[v0.0.22|https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22]]
+
 Will probably be the last version supporting `schedule`.
 
 It will include a warning linking to this item.
 
 ### [[v0.0.23|https://github.com/check-spelling/check-spelling/releases/tag/v0.0.23]]
+
 (or whatever comes after 0.0.22)
 
 Will probably not support `schedule`.

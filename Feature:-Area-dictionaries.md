@@ -34,6 +34,7 @@ You can define other prefixes using `dictionary_source_prefixes`, the default de
 ### `cspell` dictionaries
 
 These `cspell:` dictionaries should work although most aren't tested:
+
 ```
 cspell:ada/ada.txt
 cspell:aws/aws.txt
@@ -68,11 +69,11 @@ Note, while `cspell:cpp/cpp.txt` exists, it includes too many typos to be includ
 
 ### Notes
 
-* For items that are single word-per-line, this will just work.
-* For companies which have multiple words on a line (e.g. `Johny's Farming Ltd.`), they could either be converted into patterns or split on whitespace -- treating each individual word as legal. (The latter is easier.)
-* A number of these dictionaries include misspelled words.
-  * You may want to review them and add words to `reject.txt`
-  * If you're keeping track of which dictionary contributed, `reject/cpp.txt`, e.g.
+- For items that are single word-per-line, this will just work.
+- For companies which have multiple words on a line (e.g. `Johny's Farming Ltd.`), they could either be converted into patterns or split on whitespace -- treating each individual word as legal. (The latter is easier.)
+- A number of these dictionaries include misspelled words.
+  - You may want to review them and add words to `reject.txt`
+  - If you're keeping track of which dictionary contributed, `reject/cpp.txt`, e.g.
     ```
     definitions
     ```
@@ -105,57 +106,57 @@ Testing in prerelease versions of check-spelling/spell-check-this may start in 2
 
 ## Potential Areas
 
-* Colors
-  * HTML/CSS -- https://drafts.csswg.org/css-color-3/
-  * Pantone
-  * X11
-  * ?
-* Companies
-  * Tech
-  * Fortune -- https://github.com/cmusam/fortune500/
-  * Stock Exchange lists
-    * NASDAQ -- https://datahub.io/core/nasdaq-listings (probably only the `Q,N,N,` status companies)
-    * NYSE
-    * ...
-* Countries
-  * ccTLDs -- https://github.com/incognico/list-of-top-level-domains (this is probably less useful as check-spelling doesn't generally care about 2 letter tokens)
-* Domains
-  * https://data.iana.org/TLD/tlds-alpha-by-domain.txt
-  * Alexa
-* Jargon
-  * Lorem -- https://www.lipsum.com/
-* Names
-  * Common
-  * Emoji (for, e.g., :smile:)
-  * HTML entities -- https://dev.w3.org/html5/html-author/charref (css: .named)
-  * GitHub
-    * Projects
-    * Users
-  * Major Twitter users?
-  * Unicode entities
-  * OpenHub
-    * Projects
-    * Contributors
-* Programming language keywords -- See [programming-languages](https://github.com/collections/programming-languages) for ideas?
-  * Basic
-  * C
-  * C++
-  * C#
-  * CSS
-  * Go
-  * HTML
-  * Java
-  * JavaScript
-  * Perl
-  * PHP
-  * Python
-  * Scala
-  * Shell
-  * SVG
-  * TypeScript
-  * ...
-* Licenses
-  * creativecommons
-  * MPL
-  * GPL
-  * ...
+- Colors
+  - HTML/CSS -- https://drafts.csswg.org/css-color-3/
+  - Pantone
+  - X11
+  - ?
+- Companies
+  - Tech
+  - Fortune -- https://github.com/cmusam/fortune500/
+  - Stock Exchange lists
+    - NASDAQ -- https://datahub.io/core/nasdaq-listings (probably only the `Q,N,N,` status companies)
+    - NYSE
+    - ...
+- Countries
+  - ccTLDs -- https://github.com/incognico/list-of-top-level-domains (this is probably less useful as check-spelling doesn't generally care about 2 letter tokens)
+- Domains
+  - https://data.iana.org/TLD/tlds-alpha-by-domain.txt
+  - Alexa
+- Jargon
+  - Lorem -- https://www.lipsum.com/
+- Names
+  - Common
+  - Emoji (for, e.g., :smile:)
+  - HTML entities -- https://dev.w3.org/html5/html-author/charref (css: .named)
+  - GitHub
+    - Projects
+    - Users
+  - Major Twitter users?
+  - Unicode entities
+  - OpenHub
+    - Projects
+    - Contributors
+- Programming language keywords -- See [programming-languages](https://github.com/collections/programming-languages) for ideas?
+  - Basic
+  - C
+  - C++
+  - C#
+  - CSS
+  - Go
+  - HTML
+  - Java
+  - JavaScript
+  - Perl
+  - PHP
+  - Python
+  - Scala
+  - Shell
+  - SVG
+  - TypeScript
+  - ...
+- Licenses
+  - creativecommons
+  - MPL
+  - GPL
+  - ...

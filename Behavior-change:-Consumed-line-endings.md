@@ -15,6 +15,7 @@ The change is mostly designed to make it easier for forbidden patterns to do som
 ```
 
 Without this change, the code would log:
+
 ```
 pkg/strutil/strutil_test.go: line 135, columns 2-12, Warning - `	args args
 pkg/strutil/strutil_test.go: ` matches a line_forbidden.patterns entry. (forbidden-pattern)

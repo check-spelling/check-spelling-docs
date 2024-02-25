@@ -6,8 +6,6 @@ Some dictionaries will have high overlap with other dictionaries.
 
 ### In [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20)
 
-
-
 > Unrecognized words (_number_)
 >
 > ... list
@@ -22,9 +20,9 @@ Some dictionaries will have high overlap with other dictionaries.
 >
 > ...
 >
-> * _dictionary_ (_total entries_) covers _matching entry count_ of them
-> * [cspell:software-terms/src/software-terms.txt](https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20220816/dictionaries/software-terms/src/software-terms.txt) (1237) covers 3 of them
-> * [cspell:cpp/src/cpp.txt](https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20220816/dictionaries/cpp/src/cpp.txt) (30216) covers 2 of them
+> - _dictionary_ (_total entries_) covers _matching entry count_ of them
+> - [cspell:software-terms/src/software-terms.txt](https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20220816/dictionaries/software-terms/src/software-terms.txt) (1237) covers 3 of them
+> - [cspell:cpp/src/cpp.txt](https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20220816/dictionaries/cpp/src/cpp.txt) (30216) covers 2 of them
 
 ## In prerelease
 
@@ -48,6 +46,7 @@ Consider adding them using (in `.github/workflows/spelling.yml`):
           cspell:cpp/src/cpp.txt
           cspell:clojure/src/clojure.txt
 ```
+
 To stop checking additional dictionaries, add:
 ``` yml
       with:

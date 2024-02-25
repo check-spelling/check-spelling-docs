@@ -10,11 +10,12 @@ It's actually possible to partially address this with the
 introduction of a file.
 
 Consensus for the filename appears to be `.git-blame-ignore-revs`:
-* [Docs: Support in GitHub for `.git-blame-ignore-revs`](https://docs.github.com/en/repositories/working-with-files/using-files/viewing-a-file#ignore-commits-in-the-blame-view) (since March 2022)
-* [Rob Allen: Ignoring mass reformatting commits with git blame](https://akrabat.com/ignoring-revisions-with-git-blame/)
-* [Moxio: Ignoring bulk change commits with git blame](https://www.moxio.com/blog/43/ignoring-bulk-change-commits-with-git-blame)
-* [Used in Chromium](https://chromium.googlesource.com/chromium/src.git/+/f0596779e57f46fccb115a0fd65f0305894e3031/.git-blame-ignore-revs)
-* [Request to support in GitLab](https://gitlab.com/gitlab-org/gitlab/-/issues/31423)
+
+- [Docs: Support in GitHub for `.git-blame-ignore-revs`](https://docs.github.com/en/repositories/working-with-files/using-files/viewing-a-file#ignore-commits-in-the-blame-view) (since March 2022)
+- [Rob Allen: Ignoring mass reformatting commits with git blame](https://akrabat.com/ignoring-revisions-with-git-blame/)
+- [Moxio: Ignoring bulk change commits with git blame](https://www.moxio.com/blog/43/ignoring-bulk-change-commits-with-git-blame)
+- [Used in Chromium](https://chromium.googlesource.com/chromium/src.git/+/f0596779e57f46fccb115a0fd65f0305894e3031/.git-blame-ignore-revs)
+- [Request to support in GitLab](https://gitlab.com/gitlab-org/gitlab/-/issues/31423)
 
 This isn't something that a cleanup PR itself should
 include, because it's reliant on the final commit-refs

@@ -2,9 +2,9 @@
 
 ## Simple script
 
-* [Input description](#Input-description)
-* [Observations](#Observations)
-* [Command run](#Command-run)
+- [Input description](#Input-description)
+- [Observations](#Observations)
+- [Command run](#Command-run)
 
 ### Input description
 

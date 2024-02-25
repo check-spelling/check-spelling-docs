@@ -25,5 +25,5 @@ Using `toJSON(inputs)` allows me to capture the current inputs (and thus greatly
 
 ### Benefits
 
-* Configuration doesn't need to be specified 2+ times (spelling, comment, optional update phase).
-* Only the pieces of configuration that are used by a given path would need to be parsed (currently the action.yml has to convert all inputs into env vars before the action actually starts running).
+- Configuration doesn't need to be specified 2+ times (spelling, comment, optional update phase).
+- Only the pieces of configuration that are used by a given path would need to be parsed (currently the action.yml has to convert all inputs into env vars before the action actually starts running).

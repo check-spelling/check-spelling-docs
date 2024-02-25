@@ -41,9 +41,11 @@ define('DYNDNS_PROVIDER_VALUES', 'all-inkl azure azure   citynetwork');
 ```
 
 And then flagging
+
 ```
- azure azure 
+ azure azure
 ```
+
 As a duplicate word (`azure`).
 
 ## Change

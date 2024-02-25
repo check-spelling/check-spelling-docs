@@ -10,11 +10,11 @@ Typically, as part of the first-run experience, it's possible that there will be
 
 ## Possible Approaches
 
-* Split report into multiple comments. - I've chosen not to do this, it seems too annoying, and people already hate comments.
+- Split report into multiple comments. - I've chosen not to do this, it seems too annoying, and people already hate comments.
 
-* Somehow truncate portions of the message
+- Somehow truncate portions of the message
 
-* Switch to GITHUB_STEP_SUMMARY
+- Switch to GITHUB_STEP_SUMMARY
 
 ## Truncation
 

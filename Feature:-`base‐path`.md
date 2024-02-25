@@ -5,4 +5,5 @@ Currently check-spelling has an `experimental_path`. It should be converted to a
 Tentatively, all paths in `excludes` and `only` would be relative to `base-path`.
 
 ## Requested
+
 https://github.com/ceph/ceph/pull/46824#issuecomment-1523640048

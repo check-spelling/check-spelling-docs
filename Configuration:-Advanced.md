@@ -1,31 +1,31 @@
 # Configuration: Advanced
 
-| Variable | Description |
-| ------------- | ------------- |
-| VERBOSE | `1` if you want to be reminded of how many words are in your expect list for each run. |
-| debug | If set, will print more debug messages in the job logs |
-| [bucket](#bucket) | file/url for which the tool has read access to a couple of files. |
-| [project](#project) | a folder within `bucket`. This allows you to share common items across projects. |
+| Variable                | Description                                                                                     |
+| ----------------------- | ----------------------------------------------------------------------------------------------- |
+| VERBOSE                 | `1` if you want to be reminded of how many words are in your expect list for each run.          |
+| debug                   | If set, will print more debug messages in the job logs                                          |
+| [bucket](#bucket)       | file/url for which the tool has read access to a couple of files.                               |
+| [project](#project)     | a folder within `bucket`. This allows you to share common items across projects.                |
 | [timeframe](#timeframe) | number of minutes (default 60) to consider when a **schedule** workflow checks for updated PRs. |
 
 ℹ️ These are additional items beyond the core items listed in [Configuration](https://github.com/check-spelling/check-spelling/wiki/Configuration).
 
 ## bucket
 
-* unset - especially initially...
-* `./path` - a local directory
-* `ssh://git@*`, `git@*` - git urls (if the url isn't for github, you'll need to have set up credentials)
-* `https://` (or `http://`) - curl compatible
-* `gs://` - gsutil url
+- unset - especially initially...
+- `./path` - a local directory
+- `ssh://git@*`, `git@*` - git urls (if the url isn't for github, you'll need to have set up credentials)
+- `https://` (or `http://`) - curl compatible
+- `gs://` - gsutil url
 
 ℹ️ This has been superseded by [`config`](https://github.com/check-spelling/check-spelling/wiki/Configuration#config)
 
 ## project
 
-* unset - especially initially
-* branch - for git urls
-* `./` - if you don't need an extra nesting layer
-* directory - especially for sharing a general bucket across multiple projects
+- unset - especially initially
+- branch - for git urls
+- `./` - if you don't need an extra nesting layer
+- directory - especially for sharing a general bucket across multiple projects
 
 ℹ️ This has been superseded by [`config`](https://github.com/check-spelling/check-spelling/wiki/Configuration#config)
 

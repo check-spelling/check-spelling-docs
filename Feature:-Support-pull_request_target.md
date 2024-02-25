@@ -11,6 +11,7 @@ To work around that restriction, this action used [`schedule`](https://docs.gith
 GitHub introduced [`pull_request_target`](https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows#pull_request_target) as an improvement over [`pull_request`](https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows#pull_request).
 
 For this action, the key value is:
+
 > This event allows you to do things like create workflows that label and comment on pull requests based on the contents of the event payload.
 
 ## Implementation
@@ -34,9 +35,9 @@ on:
 
 I believe anyone using `schedule` today would be just as vulnerable as someone using `pull_request_target` once it's supported.
 
-In general, from GitHub's perspective, there is a risk to this feature: 
+In general, from GitHub's perspective, there is a risk to this feature:
 
-* https://securitylab.github.com/research/github-actions-preventing-pwn-requests
+- https://securitylab.github.com/research/github-actions-preventing-pwn-requests
 
 I don't believe that check-spelling is insecure (that's what everyone says, right?), although it'd be great if someone were to confirm. It does use shell and Perl which are a pair of languages which certainly don't have a great reputation in this area.
 
@@ -44,5 +45,5 @@ I don't believe that check-spelling is insecure (that's what everyone says, righ
 
 Released in [0.0.17-alpha](https://github.com/check-spelling/check-spelling/releases/tag/0.0.17-alpha).
 
-[[Breaking change: Dropping support for on: schedule]] should occur after 
+[[Breaking change: Dropping support for on: schedule]] should occur after
 [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22).

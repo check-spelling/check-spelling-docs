@@ -4,11 +4,11 @@ Right now, `\\[nrt]` are effectively mapped to space, and some patterns are mapp
 
 ## Thoughts
 
-* The C escaped whitespace frequently trip on Windows paths. It would be possible to move them out of the engine entirely and have projects use `patterns.txt` instead as needed. Possibly aided by something to automatically suggest it.
+- The C escaped whitespace frequently trip on Windows paths. It would be possible to move them out of the engine entirely and have projects use `patterns.txt` instead as needed. Possibly aided by something to automatically suggest it.
 
-* Something which can automatically decide html escapes would handle most of the rest. I'm not sure I like this, since I'm not sure I'd always want to run it.
+- Something which can automatically decide html escapes would handle most of the rest. I'm not sure I like this, since I'm not sure I'd always want to run it.
 
-* It'd be possible to define a special file with something like:
+- It'd be possible to define a special file with something like:
 
 ```
 /&quot;/ => "

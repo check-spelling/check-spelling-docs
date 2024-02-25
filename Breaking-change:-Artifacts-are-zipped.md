@@ -14,5 +14,5 @@ Instead of trying to upload a half dozen or so tiny files, check-spelling will n
 
 ## Hazards
 
-* If someone upgrades the check job to a version that does this, but doesn't upgrade the comment job to a version that supports this, the generated artifacts will not work.
-* If a workflow has custom code relying on the files from artifact, it will need to be adjusted. -- I doubt anyone is doing this.
+- If someone upgrades the check job to a version that does this, but doesn't upgrade the comment job to a version that supports this, the generated artifacts will not work.
+- If a workflow has custom code relying on the files from artifact, it will need to be adjusted. -- I doubt anyone is doing this.

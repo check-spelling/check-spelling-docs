@@ -1,6 +1,7 @@
 # Treat specific errors as warnings
 
 ## Background
+
 check-spelling has a number of errors and warnings.
 
 It's understood that not every user will agree with which items should be errors and which warnings

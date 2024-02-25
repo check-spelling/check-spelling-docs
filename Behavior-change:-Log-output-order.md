@@ -2,7 +2,7 @@ Today, skipped files are listed quite late.
 
 In general, this has no material impact.
 
-If the GitHub Action runtime *fails*, it's possible to wait hours and then receive hundreds of megabytes of logs for individual unrecognized words without receiving the list of files that should be skipped.
+If the GitHub Action runtime _fails_, it's possible to wait hours and then receive hundreds of megabytes of logs for individual unrecognized words without receiving the list of files that should be skipped.
 
 Generally there are far fewer skipped files than unrecognized words, so listing them first isn't particularly harmful.
 

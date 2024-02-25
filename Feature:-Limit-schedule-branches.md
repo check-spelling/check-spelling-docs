@@ -20,6 +20,7 @@ I added `schedule` which goes in and looks for PRs and potentially checks things
 If `schedule` finds a PR that doesn't have spell checking configured, it imports its own settings and uses them. This is fine if the baseline is fairly error free. It's pretty overwhelming/confusing when that isn't the case -- because most complaints are about the baseline and not the PR changes.
 
 ---
+
 I think `schedule` can be suppressed by adding an `only.txt` file to a target branch.
 
 If I retain `schedule`, I probably need to introduce a way to define branches to check/ignore.

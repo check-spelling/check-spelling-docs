@@ -70,7 +70,6 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
 - [unclosed-block-ignore](#unclosed-block-ignore)
   - [Resolution](#resolution-27)
 
-
 ℹ️ As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), workflows can [[configure whether specific events are treated as ❌Errors or ⚠️Warnings|Feature: Treat specific errors as warnings]].
 
 # unrecognized-spelling
@@ -82,14 +81,14 @@ The token isn't in the dictionary
 
 ## Resolution
 
-* If there's a correct word (e.g. `compatibility`), correct the spelling
-* If the word should be in the dictionary, add it to `allow.txt`
-* If a portion of the line shouldn't be checked, add a pattern to `patterns.txt` -- see [[Configuration Examples: patterns]]
-* If it isn't really a word, but you're temporarily using it, add it to `expect.txt`
+- If there's a correct word (e.g. `compatibility`), correct the spelling
+- If the word should be in the dictionary, add it to `allow.txt`
+- If a portion of the line shouldn't be checked, add a pattern to `patterns.txt` -- see [[Configuration Examples: patterns]]
+- If it isn't really a word, but you're temporarily using it, add it to `expect.txt`
 
 # noisy-file
 
-> Warning: bridge/client/app/_models/metadata.ts:1:1 ... 1, Warning - Skipping `bridge/client/app/_models/metadata.ts` because there seems to be more noise (6) than unique words (3) (total: 6 / 7). (noisy-file)
+> Warning: bridge/client/app/\_models/metadata.ts:1:1 ... 1, Warning - Skipping `bridge/client/app/_models/metadata.ts` because there seems to be more noise (6) than unique words (3) (total: 6 / 7). (noisy-file)
 
 This generally means that the file doesn't appear to be English.
 
@@ -99,12 +98,12 @@ Technically it means there are fewer unique dictionary words in the file than un
 
 ## Resolution
 
-* If the file shouldn't be in the repository, `git rm` it (recently the tool flagged a spurious `.mp4` file)
-* If the file shouldn't be checked, add a matching entry to `excludes.txt`
-* If the file should be checked, some combination of:
+- If the file shouldn't be in the repository, `git rm` it (recently the tool flagged a spurious `.mp4` file)
+- If the file shouldn't be checked, add a matching entry to `excludes.txt`
+- If the file should be checked, some combination of:
   - add entries to the dictionary (via `allow.txt`)
   - mask runs of noise (via `patterns.txt`)
-* If you really just need to check the files, see [[Scan noisy files|Feature: Scan noisy files]]
+- If you really just need to check the files, see [[Scan noisy files|Feature: Scan noisy files]]
 
 # bad-regex
 
@@ -148,12 +147,13 @@ Since it doesn't see `sea-green` as a single word, trying to add `sea-green` to 
 
 ## Resolution
 
-* If the word you're trying to put in the dictionary is `pre-emptively`, just replace all instances of it with `preemptively`.
+- If the word you're trying to put in the dictionary is `pre-emptively`, just replace all instances of it with `preemptively`.
 
 If you want to accept `avii-ridge` in your repository, you can:
-* add `avii` to your dictionary (by adding it to `allow.txt`),
-* add `\bavii-ridge\b` in `patterns.txt`, or
-* add `avii` to `expect.txt`.
+
+- add `avii` to your dictionary (by adding it to `allow.txt`),
+- add `\bavii-ridge\b` in `patterns.txt`, or
+- add `avii` to `expect.txt`.
 
 # whitespace-in-dictionary
 
@@ -302,6 +302,7 @@ You can browse through the current dictionaries and identify suitable replacemen
 #### Use older dictionaries
 
 If you want to continue to use the previous dictionaries, you can check the run output of a previous version of check-spelling for the `with:` output, e.g.:
+
 ```
   with:
     dictionary_source_prefixes: {"cspell": "https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20220427/dictionaries/"}
@@ -349,10 +350,10 @@ In this example, the default for `dictionary_source_prefixes` is `{"cspell": "ht
 
 # candidate-pattern
 
-
 > Notice: src/Stack/Build/Source.hs:214:1 ... 1, Notice - Line matches candidate pattern `(?:^|[\t ,"'`=(])-\[DPWXYLlf](?=[A-Z]{2,}|[A-Z][a-z]|[a-z]{2,})` (candidate-pattern)
 
 The report will also include an entry like:
+
 ```perl
  hit-count: 169 file-count: 40
  Compiler flags
@@ -360,6 +361,7 @@ The report will also include an entry like:
 ```
 
 The [line in question](https://github.com/commercialhaskell/stack/blob/f3a167873f6081751babb8a6bb17de7c96f4d8a2/src/Stack/Build/Source.hs#L214) is:
+
 ```hs
     , concat [["-fhpc"] | isLocal && toCoverage (boptsTestOpts bopts)]
 ```
@@ -398,8 +400,8 @@ If the revision you selected doesn't work, feel free to file a bug with a public
 
 ## `only_check_changed_files` and `use_sarif`
 
-* `only_check_changed_files` will only check certain files
-* `use_sarif` generates a report which GitHub will diff against a previous report with anything missing being marked as resolved
+- `only_check_changed_files` will only check certain files
+- `use_sarif` generates a report which GitHub will diff against a previous report with anything missing being marked as resolved
 
 You can choose one or the other. By default, check-spelling favors the former. If you want to use the latter, you'll have to turn off the former.
 
@@ -428,9 +430,9 @@ This is possible for Public repositories on GitHub.com and for Enterprise Reposi
 
 ### Resolution
 
-* Switch to an enterprise plan (?)
-* Remove `use_sarif`
-* If you have a use for the sarif output beyond GitHub's handling, please file a bug describing your use case -- it's possible to adjust the code to handle this case, but this wasn't supported in the initial implementation, so you are here.
+- Switch to an enterprise plan (?)
+- Remove `use_sarif`
+- If you have a use for the sarif output beyond GitHub's handling, please file a bug describing your use case -- it's possible to adjust the code to handle this case, but this wasn't supported in the initial implementation, so you are here.
 
 ## `use_sarif` and `act`
 
@@ -446,13 +448,13 @@ The file has really long lines. It's probably minified.
 
 ## Resolution
 
-* If it's minified, add it to excludes
-* If it really should be checked, you can suppress the check by adding `minified-file` to `with:`/`disable_checks:`, e.g.:
+- If it's minified, add it to excludes
+- If it really should be checked, you can suppress the check by adding `minified-file` to `with:`/`disable_checks:`, e.g.:
   ```yaml
   with:
     disable_checks: minified-file
   ```
-* If you think the heuristic should be improved, please file a bug with an example
+- If you think the heuristic should be improved, please file a bug with an example
 
 # duplicate-extra-dictionary
 
@@ -489,7 +491,9 @@ If the version of check-spelling was recently upgraded (this can happen if you'r
 > Failed to retrieve cspell:bash/bash-words.txt -- https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20230502/dictionaries/bash/bash-words.txt (dictionary-not-found)
 
 Between [v20220816](https://github.com/check-spelling/cspell-dicts/releases/tag/v20220816) and [v20230502](https://github.com/check-spelling/cspell-dicts/releases/tag/v20230502), a number of the dictionaries were renamed, mostly changing from `foo/bar.txt` to `foo/dict/bar.txt`, so, for this one, `cspell:bash/bash-words.txt` would become `cspell:bash/dict/bash-words.txt`.
- 
+
+
+
 # check-file-path
 
 If you have enabled [[Check filenames and paths|Feature: Check filenames and paths]] with [`check_file_names: 1`](https://github.com/check-spelling/check-spelling/wiki/Configuration#check_file_names), then in addition to checking the contents of files, check-spelling will check the file paths.
@@ -503,9 +507,9 @@ In the log form, the numbers `9 ... 18` refer to character offsets within the fi
 
 ## Identifying the problematic items
 
-* If you enabled [[Summary Table|Feature: Summary Table]] with [`summary_table: 1`](https://github.com/check-spelling/check-spelling/wiki/Configuration#summary_table) and there is enough space, the individual paths should appear in the details table.
-* If you enabled [[Sarif output|Feature: Sarif output]] with [`use_sarif: 1`](https://github.com/check-spelling/check-spelling/wiki/Configuration#use_sarif) and the repository is public (or is private and has advanced security enabled) and you are a member of the security group / an owner/admin, then individual items should appear in the Sarif report.
-* You can find them listed in the `Spell check` section of the Action log (they should have `(check-file-path)` on each line).
+- If you enabled [[Summary Table|Feature: Summary Table]] with [`summary_table: 1`](https://github.com/check-spelling/check-spelling/wiki/Configuration#summary_table) and there is enough space, the individual paths should appear in the details table.
+- If you enabled [[Sarif output|Feature: Sarif output]] with [`use_sarif: 1`](https://github.com/check-spelling/check-spelling/wiki/Configuration#use_sarif) and the repository is public (or is private and has advanced security enabled) and you are a member of the security group / an owner/admin, then individual items should appear in the Sarif report.
+- You can find them listed in the `Spell check` section of the Action log (they should have `(check-file-path)` on each line).
 
 ## Resolution
 
@@ -526,9 +530,9 @@ Most of the time, the fault is in pattern definitions, especially patterns that 
 
 ## Resolution
 
-* Consider adding a `\b` or `\s` to the edges of your pattern.
-* It's possible to add the items to expect or to the dictionary if they're really correct.
-* See [[Warning about substring matches|Feature: Warning about substring matches]] for more advice.
+- Consider adding a `\b` or `\s` to the edges of your pattern.
+- It's possible to add the items to expect or to the dictionary if they're really correct.
+- See [[Warning about substring matches|Feature: Warning about substring matches]] for more advice.
 
 # summary-table-skipped
 
@@ -538,12 +542,12 @@ When producing a [[Summary Table|Feature: Summary Table]], if sections would cau
 
 Remove items
 
-* If there are suggested dictionaries, resolve them/disable the feature
-* Expand the dictionary by adding items to `allow.txt` or including additional `extra_dictionaries`
-* If there are too many forbidden items, remove some from `line_forbidden.patterns`
-* If there are pattern suggestions add them to `patterns.txt` or remove them from `candidate.patterns`
-* If files trigger too many items, skip them with `exclude.txt`
-* Focus on specific files with `only.txt`
+- If there are suggested dictionaries, resolve them/disable the feature
+- Expand the dictionary by adding items to `allow.txt` or including additional `extra_dictionaries`
+- If there are too many forbidden items, remove some from `line_forbidden.patterns`
+- If there are pattern suggestions add them to `patterns.txt` or remove them from `candidate.patterns`
+- If files trigger too many items, skip them with `exclude.txt`
+- Focus on specific files with `only.txt`
 
 # slow-file
 
@@ -551,9 +555,9 @@ When processing a file, if the time to parse exceeds the `splitter_timeout` envi
 
 ## Resolution
 
-* Add the file to `excludes.txt`
-* Adjust patterns to improve parsing behavior
-* Increase [`splitter_timeout`](https://github.com/check-spelling/check-spelling/wiki/Feature%3A-Parsing-Timeouts#configuration)
+- Add the file to `excludes.txt`
+- Adjust patterns to improve parsing behavior
+- Increase [`splitter_timeout`](https://github.com/check-spelling/check-spelling/wiki/Feature%3A-Parsing-Timeouts#configuration)
 
 # ignored-expect-variant
 
@@ -573,8 +577,9 @@ If you decide that `microsoft` is acceptable, then it's likely that you'll also 
 Similarly, if you use the term `widgit`, you might write it in a plural as `widgits`. If you include `widgit` in `expect`, you don't need to include `widgits` as check-spelling will assume that you are ok with that plural.
 
 ## Resolution
-* Remove the extraneous entry/entries from `expect.txt` -- the included `apply.pl` suggestions should help with this
-* Add forms to `allow.txt` which doesn't have this behavior
+
+- Remove the extraneous entry/entries from `expect.txt` -- the included `apply.pl` suggestions should help with this
+- Add forms to `allow.txt` which doesn't have this behavior
 
 # no-files-to-check
 
@@ -582,9 +587,9 @@ Check Spelling works by reviewing files and identifying problems with them. You 
 
 ## Resolution
 
-* Remove entries from [excludes](https://github.com/check-spelling/check-spelling/wiki/Configuration#excludes)
-* Adjust or add items in [only](https://github.com/check-spelling/check-spelling/wiki/Configuration#only)
-* Review the contents of the repository and compare against both
+- Remove entries from [excludes](https://github.com/check-spelling/check-spelling/wiki/Configuration#excludes)
+- Adjust or add items in [only](https://github.com/check-spelling/check-spelling/wiki/Configuration#only)
+- Review the contents of the repository and compare against both
 
 # noisy-file-list
 
@@ -592,9 +597,9 @@ Check Spelling works by reviewing files and identifying problems with them. You 
 
 ## Resolution
 
-* Turn off [[Check filenames and paths|Feature: Check filenames and paths]].
-* Add file path words to the dictionary (`allow.txt`).
-* Add file paths to patterns (`patterns.txt`) to exclude noisy file paths.
+- Turn off [[Check filenames and paths|Feature: Check filenames and paths]].
+- Add file path words to the dictionary (`allow.txt`).
+- Add file paths to patterns (`patterns.txt`) to exclude noisy file paths.
 
 # utf16-surrogate
 
@@ -604,9 +609,9 @@ check-spelling is designed for utf-8 based files, so a file containing a utf-16 
 
 ## Resolution
 
-* Add the file to `excludes.txt`
-* If the heuristic is wrong, please file a bug.
-* You can manually use `uses: actions/checkout@...` and then add a `run` step that converts from utf16 to utf8, e.g. using `iconv`:
+- Add the file to `excludes.txt`
+- If the heuristic is wrong, please file a bug.
+- You can manually use `uses: actions/checkout@...` and then add a `run` step that converts from utf16 to utf8, e.g. using `iconv`:
 
   ```sh
   (
@@ -638,5 +643,5 @@ Note that this feature is experimental, it's possible you've encountered a bug.
 
 ## Resolution
 
-* If you believe the behavior is incorrect, please [file a bug](https://github.com/check-spelling/check-spelling/issues/new).
-* If the end token really isn't present, consider adjusting your begin/end tokens.
+- If you believe the behavior is incorrect, please [file a bug](https://github.com/check-spelling/check-spelling/issues/new).
+- If the end token really isn't present, consider adjusting your begin/end tokens.

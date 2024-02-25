@@ -8,5 +8,3 @@ Format: One word per line.
 Each case/variation needs to be added individually.
 
 If you need something fancier, you can use [[hunspell .dic & .aff files|Feature: Hunspell dictionary support]] instead.
-
-

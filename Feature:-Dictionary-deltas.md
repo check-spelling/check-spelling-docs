@@ -10,10 +10,11 @@ As the initial implementation includes a `whitelist` of acceptable words, it see
 
 As this feature hasn't shipped, and as there's a desire/need for both additions and removals, I think I'm going to go with:
 
-* `allow`
-* `reject`
+- `allow`
+- `reject`
 
 The order of operations will be:
-* (base `dictionary` + `allow`) - `reject`
 
-This means that if a word is in both `allow` and `reject`, it will end up *not* being in the dictionary.
+- (base `dictionary` + `allow`) - `reject`
+
+This means that if a word is in both `allow` and `reject`, it will end up _not_ being in the dictionary.

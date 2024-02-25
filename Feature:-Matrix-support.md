@@ -9,17 +9,18 @@ In order to make the clock time for spell checking large repositories tolerable,
 ## Flags
 
 You almost certainly want `fail-fast: false`, otherwise the first matrix branch to find an unrecognized word will kill all the others, and thus people would have to fix each thing to discover the next, instead of being told about all unrecognized words at once:
+
 ```yaml
     strategy:
       fail-fast: false
 ```
 
 `report_title_suffix` is used to enable readers to distinguish between comments for different matrix items (if multiple trigger comments). It's also used by `experimental_apply_changes_via_bot` to determine which comment handler should handle the event.
+
 ```yaml
       with:
         report_title_suffix: (${{matrix.category}})
 ```
-
 
 ## Example
 
@@ -65,4 +66,4 @@ jobs:
 
 ### See also
 
-* [[Configuration: Multiple programming languages]]
+- [[Configuration: Multiple programming languages]]

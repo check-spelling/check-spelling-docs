@@ -24,11 +24,13 @@ As of [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0
 ### Example input
 
 `README.html`:
+
 ```markdown
 The fuzziest armies&apos; armor has vulnerabilities; allies&#39; assets aren't everything.
 ```
 
 `.github/actions/spelling/patterns.txt`
+
 ```perl
 # docker container
 [a-z,0-9]{12}
@@ -37,6 +39,7 @@ The fuzziest armies&apos; armor has vulnerabilities; allies&#39; assets aren't e
 ### Discussion
 
 When check-spelling processed the file, it ended up with this content:
+
 ```
 The fuzziest armies' armor has ============ies= allies' assets aren't everything=
 ```
@@ -46,7 +49,7 @@ It found `ies` which wasn't in its dictionary and then went back to the original
 There are lots of cases of `ies` in the original line:
 
 ```markdown
-The fuzziest *armies*&apos; armor has *vulnerabilities*; *allies*&#39; assets aren't everything.
+The fuzziest _armies_&apos; armor has _vulnerabilities_; _allies_&#39; assets aren't everything.
 ```
 
 It doesn't want to flag the wrong one(s), so it tries to only find instances that appear to cover entire words, not merely substrings.
@@ -78,10 +81,10 @@ cat checked_files.lst | xargs -0 -n1
 ```
 
 If you want to do something with them, you can do:
+
 ```sh
 cat checked_files.lst | xargs -0 -n1 SOMETHING...
 ```
-
 
 ### Reducing Patterns
 

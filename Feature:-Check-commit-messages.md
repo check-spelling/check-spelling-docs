@@ -4,7 +4,7 @@ Commit messages are often converted into changelogs which are often then committ
 
 If a repository has enabled incremental checking, then it wouldn't be terribly hard to check commit messages on PRs (or non-default branches).
 
-This would be *optional*, and I **don't expect** it to be on by default (although I may enable it in spell-check-this's workflow).
+This would be _optional_, and I **don't expect** it to be on by default (although I may enable it in spell-check-this's workflow).
 
 It's somewhat similar to [[Feature: Check filenames and paths]].
 
@@ -18,10 +18,10 @@ If you choose to use this feature today, you should either use [`only_check_chan
 
 ## Implemented modes
 
-* latest commit
-* commits since last push / pr base
-* PR description
-* PR summary
+- latest commit
+- commits since last push / pr base
+- PR description
+- PR summary
 
 ℹ️ Note: While PR description and PR summary aren't technically commit messages, there are a number of `commit` strategies (especially `Squash`) that will end up integrating them into a future commit, and thus it makes sense to offer to check them as well.
 
@@ -41,10 +41,11 @@ Split the check pass for these objects from the main pass. In order to handle th
 
 Use [`$GITHUB_STEP_SUMMARY`](https://github.blog/2022-05-09-supercharging-github-actions-with-job-summaries/)
 
-* Possibly show the git commands to see the individual commit message, e.g.
+- Possibly show the git commands to see the individual commit message, e.g.
   - `git show [SHA]`
   - curl api to get the pr description
 
 ## Potential additional modes
-* n commits - This is trivial to implement, but without a use case, I don't intend to implement it
-* commits since a specific sha or branch - This might be necessary in order to support adding items to [`expect.txt`](../Configuration#expect), although I'm convinced it makes more sense to use [`allow.txt`](../Configuration#allow) or [`patterns.txt`](../Configuration#patterns).
+
+- n commits - This is trivial to implement, but without a use case, I don't intend to implement it
+- commits since a specific sha or branch - This might be necessary in order to support adding items to [`expect.txt`](../Configuration#expect), although I'm convinced it makes more sense to use [`allow.txt`](../Configuration#allow) or [`patterns.txt`](../Configuration#patterns).

@@ -23,9 +23,9 @@ can be updated dynamically after the release.
 
 Each of:
 
-* [github/codeql-action@v2](https://github.com/github/codeql-action/releases/tag/v2)
-* [actions-download@v3](https://github.com/actions/download/releases/tag/v3)
-* [actions-upload-artifact@v3](https://github.com/actions/upload-artifact/releases/tag/v3)
+- [github/codeql-action@v2](https://github.com/github/codeql-action/releases/tag/v2)
+- [actions-download@v3](https://github.com/actions/download/releases/tag/v3)
+- [actions-upload-artifact@v3](https://github.com/actions/upload-artifact/releases/tag/v3)
 
 triggered warnings between the release of [`v0.0.20`](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20) and [`v0.0.21`](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21)
 

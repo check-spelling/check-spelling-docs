@@ -5,9 +5,10 @@ GitHub introduced [Job Step Summary](https://github.blog/2022-05-09-superchargin
 There are a number of benefits (1mb limits for summaries instead of 64k for summaries).
 
 There are some downsides:
-* While it's possible to reply to, react to, or resolve/minimize a comment, it isn't possible to do any of these things for a summary.
 
-* The `summary_raw` endpoint may be fairly new (I don't recall seeing it when I was developing this feature).
+- While it's possible to reply to, react to, or resolve/minimize a comment, it isn't possible to do any of these things for a summary.
+
+- The `summary_raw` endpoint may be fairly new (I don't recall seeing it when I was developing this feature).
 
 ## Initial implementation
 

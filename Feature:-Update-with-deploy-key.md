@@ -8,8 +8,6 @@ Deploy keys allow repository workflows to make pushes that trigger workflows, [u
 
 > When you use the repository's `GITHUB_TOKEN` to perform tasks, events triggered by the `GITHUB_TOKEN` will not create a new workflow run. This prevents you from accidentally creating recursive workflow runs. For example, if a workflow run pushes code using the repository's `GITHUB_TOKEN`, a new workflow will not run even when the repository contains a workflow configured to run when push events occur.
 
-
-
 The easiest way to set up a deploy key (or lots of them) is via scripting.
 
 This is possible using the [`gh` cli](https://cli.github.com/).
@@ -17,11 +15,13 @@ This is possible using the [`gh` cli](https://cli.github.com/).
 ## Script
 
 This script will:
-* create an ssh key,
-* add it as a deploy key to your repository (controlled by the `REPO` environment variable, or as automatically determined by the `gh` command),
-* add a corresponding secret.
+
+- create an ssh key,
+- add it as a deploy key to your repository (controlled by the `REPO` environment variable, or as automatically determined by the `gh` command),
+- add a corresponding secret.
 
 `create-check-spelling-deploy-key.sh`:
+
 ```sh
 #!/bin/sh
 # create-check-spelling-deploy-key.sh
@@ -36,6 +36,7 @@ rm -rf "$scratch"
 ```
 
 ## Steps
+
 1. Run `create-check-spelling-deploy-key.sh` from the repository to which you want to add the key (or use `REPO=...` to specify it).
 2. In the `update` job of the `.github/workflows/spelling.yml` workflow, add a reference to the secret created by the script:
 

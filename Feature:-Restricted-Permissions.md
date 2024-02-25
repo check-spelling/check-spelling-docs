@@ -12,20 +12,19 @@ It's better from a security perspective to use "least privilege".
 
 ### checking
 
-* `contents: read` -- to read the repository (to check it out) -- for a `pull_request_target`, this may include untrusted content (the merge)
-* `pull-requests: read` -- to determine if this `push` event should be skipped in favor of a related `pull_request_target` event.
+- `contents: read` -- to read the repository (to check it out) -- for a `pull_request_target`, this may include untrusted content (the merge)
+- `pull-requests: read` -- to determine if this `push` event should be skipped in favor of a related `pull_request_target` event.
 
 ### commenting
 
-* `contents: write` -- if it's commenting on a commit (i.e. `on: push`)
-* `pull-requests: write` -- if it's commenting on a PR (i.e. `on: pull_request_target`)
+- `contents: write` -- if it's commenting on a commit (i.e. `on: push`)
+- `pull-requests: write` -- if it's commenting on a PR (i.e. `on: pull_request_target`)
 
 ### updating branches
 
-* `contents: write` -- to write new commits
-* `pull-requests: write` -- to collapse existing comments and write a new comment
+- `contents: write` -- to write new commits
+- `pull-requests: write` -- to collapse existing comments and write a new comment
 
 ## Workflow
 
-* https://github.com/check-spelling/spell-check-this/blob/main/.github/workflows/spelling.yml defines a workflow that is compatible with these requirements
-
+- https://github.com/check-spelling/spell-check-this/blob/main/.github/workflows/spelling.yml defines a workflow that is compatible with these requirements

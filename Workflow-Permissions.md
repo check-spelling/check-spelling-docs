@@ -7,17 +7,20 @@ Generally speaking, check-spelling needs to be able to check out the repository 
 The normal way to do that is with:
 
 ### Permissions
+
 ```yaml
 permissions:
   contents: read
 ```
 
 ### Steps
+
 ```yaml
 - uses: actions/checkout@...
 ```
 
 or
+
 ```yaml
 - uses: check-spelling/check-spelling@...
   with:
@@ -30,6 +33,7 @@ In order to stop early when configured with [`suppress_push_for_open_pull_reques
 check-spelling needs to be able to check for pull requests.
 
 ### Permissions
+
 ```yaml
 permissions:
   pull-requests: read
@@ -42,8 +46,8 @@ In order to retrieve artifacts with [post_comment](https://github.com/check-spel
 The normal way to do that is with:
 
 ### Permissions
+
 ```yaml
 permissions:
   actions: read
 ```
-

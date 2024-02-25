@@ -8,7 +8,7 @@ It would be nice if the tool could recognize files that aren't interesting to it
 
 ## Simple algorithm
 
-If a file has more *non-words* than dictionary *words*, it's a good candidate for exclusion.
+If a file has more _non-words_ than dictionary _words_, it's a good candidate for exclusion.
 
 This is implemented in [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21) as part of [[Autodetect noisy files|Feature: Autodetect noisy files]]
 
@@ -24,13 +24,14 @@ This is implemented in [v0.0.21](https://github.com/check-spelling/check-spellin
 
 This is implemented in [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22) as part of [[Heuristic exclude suggestions|Feature: Heuristic exclude suggestions]]
 
-Totals for files could be checked by *file extension*, *file infix*, *file prefix*, and *directory name*
+Totals for files could be checked by _file extension_, _file infix_, _file prefix_, and _directory name_
 
 Probably with a different threshold (75%?), or different thresholds for each
 
 Suggestions could be made based on each of those categories:
 
 `exclude.txt`:
+
 ```
 # .png files:
 \.png$

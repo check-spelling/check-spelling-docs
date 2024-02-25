@@ -2,8 +2,7 @@ Just in time for Halloween 🎃 (2021), a spooky 👻 fast 🏃 speed improvemen
 
 ## Background
 
-In the [distant past](https://github.com/check-spelling/check-spelling/commit/52d5ec0bfe3b7c7e32f083bdf0edcfaad435d909
-), I ran into versions of `xargs` which would somehow fail because the constructed command-line exceeded the available space.
+In the [distant past](https://github.com/check-spelling/check-spelling/commit/52d5ec0bfe3b7c7e32f083bdf0edcfaad435d909), I ran into versions of `xargs` which would somehow fail because the constructed command-line exceeded the available space.
 
 In response, I made it absolutely pessimistic about how `xargs` worked.
 

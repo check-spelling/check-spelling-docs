@@ -4,7 +4,7 @@
 
 In theory, `github.action_path` and `env.GITHUB_ACTION_PATH` should be more or less interchangeable and work in all GitHub Action Runtime environments.
 
-Great theory. 🦄  🦷🧚‍♂️ 🎅...
+Great theory. 🦄 🦷🧚‍♂️ 🎅...
 
 ### There were bugs in [nektos/act](https://github.com/nektos/act)
 
@@ -18,7 +18,7 @@ check-spelling had workarounds for them that relied on `github.action_path` as i
 
 ### GitHub's [action runner](https://github.com/actions/runner) has bugs
 
-* [actions/runner#716](https://github.com/actions/runner/issues/716) - currently impacts self-hosted runners
+- [actions/runner#716](https://github.com/actions/runner/issues/716) - currently impacts self-hosted runners
 
 ## Solution
 

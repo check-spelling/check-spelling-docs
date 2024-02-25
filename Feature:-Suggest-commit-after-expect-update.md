@@ -2,7 +2,8 @@
 
 Included in [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20)
 
-##  Currently the flow is
+## Currently the flow is
+
 1. User creates a PR.
 2. This triggers a workflow which could add a ❌ status.
 3. User uses [[Update expect list|Feature: Update expect list]] which triggers an additional commit.

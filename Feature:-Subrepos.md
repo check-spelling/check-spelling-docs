@@ -4,11 +4,11 @@ Subrepos enable a git repository to reference other git repositories.
 
 ## Disclaimers
 
-* I generally don't use subrepos.
-* Handled subrepos can result in additional security vulnerabilities.
-* There are different approaches to checking them out to try to avoid tripping over the previous point...
-* I don't think that GitHub will allow annotations on items from subrepositories.
-* I suspect that properly tagging errors in subrepos will be fairly hard (essentially each file reference needs to do some complicated lookup instead of assuming the path is correct).
+- I generally don't use subrepos.
+- Handled subrepos can result in additional security vulnerabilities.
+- There are different approaches to checking them out to try to avoid tripping over the previous point...
+- I don't think that GitHub will allow annotations on items from subrepositories.
+- I suspect that properly tagging errors in subrepos will be fairly hard (essentially each file reference needs to do some complicated lookup instead of assuming the path is correct).
 
 ## Just do it
 

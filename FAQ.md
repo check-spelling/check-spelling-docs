@@ -1,17 +1,17 @@
 # Frequently Asked Questions
 
-* [How do I upgrade?](#how-do-i-upgrade)
+- [How do I upgrade?](#how-do-i-upgrade)
 
-* [How do I get comments to collapse?](#how-do-i-get-comments-to-collapse)
+- [How do I get comments to collapse?](#how-do-i-get-comments-to-collapse)
 
-* [Why can't I see the 👼 SARIF report?](#why-cant-i-see-the--sarif-report)
+- [Why can't I see the 👼 SARIF report?](#why-cant-i-see-the--sarif-report)
 
 ## How do I upgrade?
 
 The recommended approach to upgrading is to _merge_ the contents of https://github.com/check-spelling/spell-check-this/tree/main/.github into your `.github` directory.
 
 For the [workflow](https://github.com/check-spelling/spell-check-this/blob/main/.github/workflows/spelling.yml),
-you'll generally want to copy over any settings that you've applied (typically dictionary configuration) and remove any items you've removed. 
+you'll generally want to copy over any settings that you've applied (typically dictionary configuration) and remove any items you've removed.
 
 New releases of check-spelling will add new features, some of which may be enabled by default. But, often, to avoid behavior changes to existing deployments, they require opting in, and thus additional flags via [[workflow parameters|Configuration#workflow-parameters]].
 

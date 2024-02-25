@@ -11,6 +11,7 @@ If, you need these files to be checked, you can add:
 with:
   disable_checks: noisy-file
 ```
+
 to your configuration.
 
 ## Sample consumers

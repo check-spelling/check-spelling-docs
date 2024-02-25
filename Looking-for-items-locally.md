@@ -1,9 +1,10 @@
 # Looking for items locally
 
 This is a lazy script -- which isn't aware of all the features, but for average cases it should work:
+
 ```sh
 files=$(
-  (git ls-files 2>/dev/null||hg locate) | 
+  (git ls-files 2>/dev/null||hg locate) |
   perl -e '
     sub readfile {
       open F, q{<}, $_;
@@ -15,7 +16,7 @@ files=$(
     }
     sub readstring {
       my @files=glob($_[0]);
-      my @lines=map readfile, @files; 
+      my @lines=map readfile, @files;
       my $f=join "\n", @lines;
       $f =~ s/(.*)\n/(?:$1)|/g;
       return $f;
@@ -62,7 +63,7 @@ peek() {
   xargs -0 grep -H -- "$1" 2>/dev/null |
   pattern="$patterns" perl -pne 's/\r/\n/g;$pattern=$ENV{pattern};next unless $pattern; s{(^[^:]*:)}{};$file=$1;s{$pattern}{ }g;s{^}{$file};' |
   uniq |
-  grep --color=always -- "$( 
+  grep --color=always -- "$(
     pattern="$1" perl -e '$pattern=$ENV{pattern};
       $b = q<\b>;
       $p = q<\|>;
@@ -109,15 +110,21 @@ review() {
 ```
 
 ### usage
+
 #### find instances
+
 ```sh
 peek 'some"t"hang'
 ```
+
 #### build an expect file
+
 ```sh
 search > .github/actions/spell*/expect.txt
 ```
+
 #### review the expect file
+
 ```sh
 review .github/actions/spell*/expect.txt
 ```

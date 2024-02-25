@@ -22,6 +22,7 @@ One can also use this when spell checking takes too long (in general, anything o
 To define multiple sets, one can:
 
 `.github/workflows/spelling.yml`:
+
 ```yml
 name: Spell checking
 on:
@@ -52,61 +53,62 @@ jobs:
         report_title_suffix: ${{matrix.category}}
 ```
 
-* `.github/actions/spelling`:
-  * `advice.txt`:
+- `.github/actions/spelling`:
+  - `advice.txt`:
     You can include advice explaining how to update things and
     when to put items here instead of into the specific directories.
-  * `allow.txt`:
-    *Your global dictionary supplements*
-  * `reject.txt`:
-    *Your global dictionary removals*
-  * `excludes.txt`
-    *Your global excludes*
-  * `patterns.txt`:
-    *Your global patterns*
-  * ⚠️ You probably do not want to include `expect` in `spelling/`.
-* `.github/actions/spelling-python/`:
-  * `advice.txt`:
-    *symlink* to `../spelling/advice.txt`
-  * `allow/`:
-    * `allow.txt`:
-      *symlink* to `../../spelling/allow.txt`
-    * `python.txt`:
-      *Python dictionary supplements* (note: you could use `extra_dictionaries: cspell:python/python.txt` instead)
-   * `excludes/`:
-     * `excludes.txt`:
-       *symlink* to `../../spelling/excludes.txt`
-     * `python.txt`:
-       *Rules to exclude non python files*
-   * `only.txt`:
-       ```text
-       \.py$
-       ```
-   * `expect/`:
-      * `expect.txt`:
-        *Python expect*
-* `.github/actions/spelling-java/`:
-  * `advice.txt`:
-    *symlink* to `../spelling/advice.txt`
-  * `dictionary/`:
-    * `allow.txt`:
-      *symlink* to `../../spelling/allow.txt`
-    * `java.txt`:
-      *Java dictionary* (note: you could use `extra_dictionaries: cspell:java/java.txt` instead)
-   * `excludes/`:
-     * `excludes.txt`:
-       *symlink* to `../../spelling/excludes.txt`
-     * `java.txt`:
-       *Rules to exclude non java files*
-   * `only.txt`:
-       ```text
-       \.java$
-       ```
-   * `expect/`:
-      * `expect.txt`:
-        *Java expect*
+  - `allow.txt`:
+    _Your global dictionary supplements_
+  - `reject.txt`:
+    _Your global dictionary removals_
+  - `excludes.txt`
+    _Your global excludes_
+  - `patterns.txt`:
+    _Your global patterns_
+  - ⚠️ You probably do not want to include `expect` in `spelling/`.
+- `.github/actions/spelling-python/`:
+  - `advice.txt`:
+    _symlink_ to `../spelling/advice.txt`
+  - `allow/`:
+    - `allow.txt`:
+      _symlink_ to `../../spelling/allow.txt`
+    - `python.txt`:
+      _Python dictionary supplements_ (note: you could use `extra_dictionaries: cspell:python/python.txt` instead)
+  - `excludes/`:
+    - `excludes.txt`:
+      _symlink_ to `../../spelling/excludes.txt`
+    - `python.txt`:
+      _Rules to exclude non python files_
+  - `only.txt`:
+    ```text
+    \.py$
+    ```
+  - `expect/`:
+    - `expect.txt`:
+      _Python expect_
+- `.github/actions/spelling-java/`:
+  - `advice.txt`:
+    _symlink_ to `../spelling/advice.txt`
+  - `dictionary/`:
+    - `allow.txt`:
+      _symlink_ to `../../spelling/allow.txt`
+    - `java.txt`:
+      _Java dictionary_ (note: you could use `extra_dictionaries: cspell:java/java.txt` instead)
+  - `excludes/`:
+    - `excludes.txt`:
+      _symlink_ to `../../spelling/excludes.txt`
+    - `java.txt`:
+      _Rules to exclude non java files_
+  - `only.txt`:
+    ```text
+    \.java$
+    ```
+  - `expect/`:
+    - `expect.txt`:
+      _Java expect_
 
 ## Downsides
+
 You will get distinct reports
 (i.e. potentially multiple comments) for spelling errors from different kinds of files.
 

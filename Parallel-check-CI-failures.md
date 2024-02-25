@@ -6,6 +6,7 @@ Given that CI is expensive for me to set up locally, and I have limited local CP
 Imagine one could divide a list in halves and take only the odd halves. Then take original list and divide it into quarters and take the odd quarters. Repeat...
 
 This script implements a version of that (the slices aren't precisely as described above, but, the idea applies):
+
 ```perl
 my $input=shift;
 for ($i = 1; $i <= 4; $i++) {

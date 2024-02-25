@@ -7,6 +7,7 @@ It's possible to ask `file` to not use all its heuristics (which allow it to pre
 ⚠️ This is off by default.
 
 To enable, include:
+
 ```yaml
       with:
         use_magic_file: 1

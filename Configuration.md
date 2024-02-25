@@ -1,9 +1,9 @@
 # Configuration
 
-* [[Quick Start]]
-* [Workflow Parameters](#workflow-parameters)
-* [[Configuration Files]]
-* See [[Configuration: Workflows]] for the general workflow modes
+- [[Quick Start]]
+- [Workflow Parameters](#workflow-parameters)
+- [[Configuration Files]]
+- See [[Configuration: Workflows]] for the general workflow modes
 
 ## Workflow Parameters
 
@@ -77,9 +77,10 @@ By default the [GITHUB_TOKEN](https://docs.github.com/en/actions/reference/authe
 > **Note:** GitHub Actions get an automatic token which allows for read operations.
 > If the Action is a [pull_request](#pull_request) and the originating repository isn't trusted, then the automatic token will not have write permission,
 > which means it won't be able to post a comment to the PR, there are three ways to address this:
-> * Use [pull_request_target](./Configuration:-Workflows#pull_request_target) recommended as of [0.0.17-alpha](https://github.com/check-spelling/check-spelling/releases/tag/0.0.17-alpha)
-> * Create a custom Personal Access Token with `repo read` + `comment`
-> * Use [schedule](./Configuration:-Workflows#schedule) instead
+>
+> - Use [pull_request_target](./Configuration:-Workflows#pull_request_target) recommended as of [0.0.17-alpha](https://github.com/check-spelling/check-spelling/releases/tag/0.0.17-alpha)
+> - Create a custom Personal Access Token with `repo read` + `comment`
+> - Use [schedule](./Configuration:-Workflows#schedule) instead
 
 ### config
 
@@ -111,12 +112,14 @@ Allow [@check-spelling-bot](https://github.com/check-spelling-bot) to update PRs
 incorporating the feedback it reports.
 
 ℹ️ Af of [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21), this feature _might_ be ready for use.
-   - If everyone in a repository is a member, or if PRs from externals are unlikely to receive
-   comments from externals besides the PR author, and you don't have other bots that would
-   write comments on PRs, then you could use it.
 
-   - To prevent it from 💬 in response to other bot's comments or other accounts not associated with the
-   PR explaining that it's confused, it should have a condition like this:
+- If everyone in a repository is a member, or if PRs from externals are unlikely to receive
+  comments from externals besides the PR author, and you don't have other bots that would
+  write comments on PRs, then you could use it.
+
+- To prevent it from 💬 in response to other bot's comments or other accounts not associated with the
+  PR explaining that it's confused, it should have a condition like this:
+
 
     ```yaml
       if: ${{
@@ -126,7 +129,7 @@ incorporating the feedback it reports.
         }}
     ```
 
-   See https://github.com/check-spelling/spell-check-this/blob/3a35a1cec1e660ab04638cbd5bdd086cf2fcd5c5/.github/workflows/spelling.yml#L126
+See https://github.com/check-spelling/spell-check-this/blob/3a35a1cec1e660ab04638cbd5bdd086cf2fcd5c5/.github/workflows/spelling.yml#L126
 
 Current recommended practice is to only enable this feature in private repositories or forks, but not public upstreams.
 
@@ -262,8 +265,8 @@ See [[Treat specific errors as warnings|Feature: Treat specific errors as warnin
 
 In order to run with restricted permissions under `pull_request_target`, check-spelling is split between two phases:
 
-* `check-spelling` which has limited permissions but would include potentially untrusted content (this is the default task)
-* `comment` this phase should have permission to post a comment (but the untrusted content shouldn't be checked out)
+- `check-spelling` which has limited permissions but would include potentially untrusted content (this is the default task)
+- `comment` this phase should have permission to post a comment (but the untrusted content shouldn't be checked out)
 
 Replaced by [task](#task).
 
@@ -321,8 +324,8 @@ Introduced after v0.0.20:
 
 This is a comma-delimited list of flags:
 
-* `noisy-file` - [[Scan noisy files|Feature: Scan noisy files]]
-* `word-collating` - [[Disable word collating|Feature: Disable word collating]]
+- `noisy-file` - [[Scan noisy files|Feature: Scan noisy files]]
+- `word-collating` - [[Disable word collating|Feature: Disable word collating]]
 
 ## check_commit_messages
 
@@ -467,10 +470,10 @@ If the value isn't set (e.g. because it points to an undefined secret), the code
 
 In order to run with restricted permissions under `pull_request_target`, check-spelling is split between two phases:
 
-* `check-spelling` which has limited permissions but would include potentially untrusted content (this is the default task)
-* `comment` this phase should have permission to post a comment (but the untrusted content shouldn't be checked out)
+- `check-spelling` which has limited permissions but would include potentially untrusted content (this is the default task)
+- `comment` this phase should have permission to post a comment (but the untrusted content shouldn't be checked out)
 
-Used to pass messages between multiple check-spelling stages, especially from a stage that doesn't have write permissions to one that does (to  add a comment, collapse a comment). This is mostly an implementation detail and shouldn't be specified directly.
+Used to pass messages between multiple check-spelling stages, especially from a stage that doesn't have write permissions to one that does (to add a comment, collapse a comment). This is mostly an implementation detail and shouldn't be specified directly.
 
 ## Configuration Files
 
@@ -517,4 +520,3 @@ See [Configuration Files: Patterns](https://github.com/check-spelling/check-spel
 ##### reject
 
 See [Configuration Files: Reject](https://github.com/check-spelling/check-spelling/wiki/Configuration-Files#reject)
-

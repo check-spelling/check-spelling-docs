@@ -33,6 +33,7 @@ Right Single Quotation Mark (`’`)
 #### html entity encoded single quote
 
 apostrophe (`'`)
+
 ```pl
   s/\&(?:apos|#39|#x27);/'/g;
 ```
@@ -48,6 +49,7 @@ The main ones that I'm considering are:
 #### html entity encoded double quotes
 
 quotation mark (`"`)
+
 ```pl
   s/\&(?:quot|#34|#x22);/"/g;
 ```
@@ -55,6 +57,7 @@ quotation mark (`"`)
 ### troff
 
 apostrophe (`'`)
+
 ```pl
   s/\\(aq/'/g
 ```

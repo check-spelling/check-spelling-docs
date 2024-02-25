@@ -1,8 +1,8 @@
 # Known Issues
 
-* [Only changed doesn't work when PRs are initially created from forks](#only-changed-doesnt-work-when-prs-are-initially-created-from-forks)
-* [Too many unrecognized words](#Too_many_unrecognized_words)
-* [@dependabot can't comment](#dependabot-cant-comment)
+- [Only changed doesn't work when PRs are initially created from forks](#only-changed-doesnt-work-when-prs-are-initially-created-from-forks)
+- [Too many unrecognized words](#Too_many_unrecognized_words)
+- [@dependabot can't comment](#dependabot-cant-comment)
 
 ## Only changed doesn't work when PRs are initially created from forks
 
@@ -34,12 +34,12 @@ Usually this happens when a bunch of binary files are added and are not in `excl
 
 ### Indications
 
-* For `push`, `pull_request`, and `pull_request_target`, there will be a :x: indicator, but there will not be a comment.
-* The Action Log should include the information.
+- For `push`, `pull_request`, and `pull_request_target`, there will be a :x: indicator, but there will not be a comment.
+- The Action Log should include the information.
 
 ### Recommendations
 
-* Use `excludes` or `patterns` to suppress some of the content.
+- Use `excludes` or `patterns` to suppress some of the content.
 
 ### Resolution
 

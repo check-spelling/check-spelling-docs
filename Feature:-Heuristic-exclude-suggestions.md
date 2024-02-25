@@ -7,9 +7,10 @@ Roughly implementation compares the number of unique dictionary words in a file 
 This is implemented in `0.0.18`. _prerelease_
 
 To get a file to be checked, one will need to:
-* add words to the dictionary (`allow.txt`)
-* reduce the number of non dictionary by masking patterns (`patterns.txt`)
-* reduce the number of non dictionary words (by fixing typos)
+
+- add words to the dictionary (`allow.txt`)
+- reduce the number of non dictionary by masking patterns (`patterns.txt`)
+- reduce the number of non dictionary words (by fixing typos)
 
 ## Simple exclusion suggestions
 
@@ -33,6 +34,7 @@ https://github.com/check-spelling/spamassassin/commit/ce13394f9b5a421b6b3949b7a5
 <details><summary>Some files were automatically ignored :see_no_evil:</summary>
 
 These sample patterns would exclude them:
+
 ```
 (?:^|/)base64\.txt$
 (?:^|/)bs\.lm$
@@ -134,9 +136,11 @@ These sample patterns would exclude them:
 ^t/data/welcomelists/netcenter-direct_de$
 ^t/test_dir$
 ```
+
 You should consider excluding directory paths (e.g. `(?:^|/)vendor/`), filenames (e.g. `(?:^|/)yarn\.lock$`), or file extensions (e.g. `\.gz$`)
 
 You should consider adding them to:
+
 ```
 .github/actions/spelling/excludes.txt
 ```
@@ -144,6 +148,7 @@ You should consider adding them to:
 File matching is via Perl regular expressions.
 
 To check these files, more of their words need to be in the dictionary than not. You can use `patterns.txt` to exclude portions, add items to the dictionary (e.g. by adding them to `allow.txt`), or fix typos.
+
 </details>
 
 #### Highlights
@@ -164,6 +169,7 @@ Given open `$checked_files` and `$should_exclude_file` in parallel. Create a sta
 ### File extensions
 
 ... are pretty easy:
+
 ```sh
 get_extension_counts() {
   cat |

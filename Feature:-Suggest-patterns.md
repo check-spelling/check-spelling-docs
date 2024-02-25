@@ -8,8 +8,8 @@ It made sense to be able to suggest patterns to a similar effect as check-spelli
 
 There are a couple of ways to consider patterns:
 
-* [How many lines would a pattern match](#how-many-lines-would-a-pattern-match)
-* [After a word is found to not be in the dictionary](#after-a-word-is-found-to-not-be-in-the-dictionary)
+- [How many lines would a pattern match](#how-many-lines-would-a-pattern-match)
+- [After a word is found to not be in the dictionary](#after-a-word-is-found-to-not-be-in-the-dictionary)
 
 ## How many lines would a pattern match
 
@@ -36,6 +36,7 @@ This turned out to be a bit of a problem which is partially addressed in [v0.0.2
 ### Greedy
 
 This is an example of a pattern that is great once the corpus has been heavily filtered, but not great when applied too eagerly:
+
 ```
 # version suffix <word>v#
 [Vv]\d+(?:\b|(?=[a-zA-Z_]))
@@ -66,25 +67,28 @@ Prior to [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag
 ### Scenario
 
 `patterns.txt`:
+
 ```
 # Ignore any text between inline back-ticks
 `(.{2,}?)`
 ```
 
 `candidate.patterns`:
+
 ```
 >[-a-zA-Z=;:/0-9+]+=</
 ```
 
 `sdd.md`:
+
 ```md
 <a name="bufferSendIn">`bufferSendIn`</a> 
 ```
 
-
 ### [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21)
 
 The above would trigger this erroneous suggestion:
+
 ```
 `Line` matches candidate pattern `>[-a-zA-Z=;:/0-9+]+=</` (candidate-pattern)
 ```

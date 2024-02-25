@@ -15,5 +15,6 @@ And the last dictionary should be the largest dictionary that offers the worst c
 It's possible that dictionaries could be scored based on unique value. This isn't implemented yet.
 
 The implementation is basically:
+
 1. sort the union of all suggested dictionaries retaining only unique words
 2. for each dictionary, score any word that is in that list

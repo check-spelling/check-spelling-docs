@@ -1,9 +1,10 @@
 For workflows that are PR based (involving testing the merge head instead of the pr head), it'd be nice to be able to trigger a `retest` of the latest merge.
 
 This could be because:
-* the workflow points to a floating version of check spelling and thus retesting could give different results
-* the base branch has changed
-* the workflow is configured using external dictionaries that have changed
+
+- the workflow points to a floating version of check spelling and thus retesting could give different results
+- the base branch has changed
+- the workflow is configured using external dictionaries that have changed
 
 Conceptually this can be done using something like:
 

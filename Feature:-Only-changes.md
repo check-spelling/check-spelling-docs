@@ -11,8 +11,9 @@ Some repositories may take ~20-40 (or even 60-180) minutes to scan. As GitHub bi
 First working implementation: [a0d13938e0ff519c1ebfd23284e8d19780bd8811](https://github.com/check-spelling/check-spelling/commit/a0d13938e0ff519c1ebfd23284e8d19780bd8811)
 
 There are two modes:
-* `push` - changes are according to the changes that GitHub suggests in the `compare` field, for a force-push this may be between a commit and a replaced commit. This may be a single commit, or a series.
-* `pull_request_target` (or `pull_request`, although this isn't recommended) - the base of the pull request merge is checked. *If you don't configure the workflow to checkout a merge commit, the behavior is unspecified.
+
+- `push` - changes are according to the changes that GitHub suggests in the `compare` field, for a force-push this may be between a commit and a replaced commit. This may be a single commit, or a series.
+- `pull_request_target` (or `pull_request`, although this isn't recommended) - the base of the pull request merge is checked. \*If you don't configure the workflow to checkout a merge commit, the behavior is unspecified.
 
 ### Enable
 
@@ -23,7 +24,7 @@ There are two modes:
 
 ### Incompatible with
 
-* [[Concurrency|Feature: Concurrency]] -> `cancel-in-progress`
+- [[Concurrency|Feature: Concurrency]] -> `cancel-in-progress`
 
 ## Future Work
 

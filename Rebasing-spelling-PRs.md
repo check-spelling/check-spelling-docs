@@ -2,17 +2,17 @@
 
 These scripts require functions from [[Looking for items locally|Looking for items locally]]
 
-* `what_was_removed` is vaguely helpful to search for hunks that moved outside of merge conflicts
-* `where_are_they_now` is the counterpart to `what_was_removed` -- when this happens, use `rs what_was_removed replacement commit_word` -- if there's more than one, then use `git reset HEAD~` and repeat
-* `remap_pair` -- calls `rs` to replace a word pair, but then uncommits (because rebase)
-* `are_they_still_here` -- checking to see if typos have relocated
-* `lets_go_with_this` -- accepts the current state of things
-* `handle_conflicts` and `moving_on` are a way to move through `git rebase main`
-* `git_compare_branches` `git_compare_branches fork/main...fork/spelling upstream/main...spelling`
-* `git_diff_filter` -- mostly for use w/ `git_compare_branches`
-* `drop_everything` -- mostly for rebasing onto trees that have deleted files (typically for splitting a branch)
-* `top_wins` -- pick the first side of a three way merge
-* `what_needs_to_be_fixed` -- look for items that were removed in the current proposed commit but are still present when the commit conflicted
+- `what_was_removed` is vaguely helpful to search for hunks that moved outside of merge conflicts
+- `where_are_they_now` is the counterpart to `what_was_removed` -- when this happens, use `rs what_was_removed replacement commit_word` -- if there's more than one, then use `git reset HEAD~` and repeat
+- `remap_pair` -- calls `rs` to replace a word pair, but then uncommits (because rebase)
+- `are_they_still_here` -- checking to see if typos have relocated
+- `lets_go_with_this` -- accepts the current state of things
+- `handle_conflicts` and `moving_on` are a way to move through `git rebase main`
+- `git_compare_branches` `git_compare_branches fork/main...fork/spelling upstream/main...spelling`
+- `git_diff_filter` -- mostly for use w/ `git_compare_branches`
+- `drop_everything` -- mostly for rebasing onto trees that have deleted files (typically for splitting a branch)
+- `top_wins` -- pick the first side of a three way merge
+- `what_needs_to_be_fixed` -- look for items that were removed in the current proposed commit but are still present when the commit conflicted
 
 ```sh
 what_was_removed() {
@@ -43,7 +43,7 @@ are_they_still_here() {
 
 lets_go_with_this() {
   git add -u
-  GIT_EDITOR=true git rebase --continue 
+  GIT_EDITOR=true git rebase --continue
 }
 
 handle_conflicts() {

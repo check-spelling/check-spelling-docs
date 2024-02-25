@@ -17,9 +17,9 @@ Specifically, [w](https://github.com/jsoref/spelling/blob/main/w) understands
 enough about how programmers name things that it can split the above conventions
 into word-like things for checking against a dictionary.
 
-* [[Quick Start]]
-* [[Showcase]]
-* [[Event descriptions]]
-* [[Configuration information]]
-* [[Possible features]]
-* [[Security|Security]]
+- [[Quick Start]]
+- [[Showcase]]
+- [[Event descriptions]]
+- [[Configuration information]]
+- [[Possible features]]
+- [[Security|Security]]

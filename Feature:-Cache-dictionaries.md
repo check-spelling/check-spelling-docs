@@ -19,6 +19,7 @@ Use the ETAG to retrieve (or not) the content.
 ### Clearing cache entries manually
 
 #### Programmatically
+
 1. You can get a list of caches using [actions/cache: list-github-actions-caches-for-a-repository](https://docs.github.com/rest/actions/cache#list-github-actions-caches-for-a-repository)
 2. You can delete a cache entry by id using [actions/cache: delete-a-github-actions-cache-for-a-repository-using-a-cache-id](https://docs.github.com/rest/actions/cache#delete-a-github-actions-cache-for-a-repository-using-a-cache-id)
 
@@ -31,6 +32,7 @@ Caches are accessible below workflows on the actions page of each repository and
 There have been a couple of iterations so far... Layouts 1 and 2 (with etags) don't handle collisions in dictionary names particularly well...
 
 ### Proposed layout
+
 ```
 dictionary/
 - {sha}/
@@ -64,5 +66,6 @@ urls/
 11. Write `dictionary/{sha}/{extension}` (`{sha}` from 9, `{extension}` from 2).
 
 #### Cleanup after all resolution is done
-1. detect any `directory/{sha}` for which there is no urls/{*}/sha containing that value and delete it.
+
+1. detect any `directory/{sha}` for which there is no urls/{\*}/sha containing that value and delete it.
 2. detect any `urls/{*}/sha` for which there's more than one `urls/{*}` with the same `sha` file value and warn about it.

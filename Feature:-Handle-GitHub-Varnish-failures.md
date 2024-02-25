@@ -7,6 +7,7 @@ This [job run](https://github.com/check-spelling/vector/actions/runs/3954529980/
 <details><summary>Job Run Summary</summary>
 
 #### Annotations
+
 10 errors and 10 warnings
 
 [Check Spelling](https://github.com/check-spelling/vector/actions/runs/3954529980/jobs/6771960799#step:16:594)
@@ -68,6 +69,7 @@ Failed to download action 'https://api.github.com/repos/github/codeql-action/tar
 
 [Check Spelling](https://github.com/check-spelling/vector/actions/runs/3954529980/jobs/6771960799#step:1:44)
 Back off 15.937 seconds before retry.
+
 </details>
 
 <details><summary>Job Log</summary>
@@ -1083,12 +1085,13 @@ Back off 15.937 seconds before retry.
 
 ## Plan
 
-There is some handling for retries. Offhand, I think I want to try to parse the 
+There is some handling for retries. Offhand, I think I want to try to parse the
 `date: Thu, 19 Jan 2023 01:44:06 GMT` and `expires: Thu, 19 Jan 2023 01:49:06 GMT` fields to calculate a delay.
 
 Note that these headers are not always present (especially for `502`...).
 
 In theory the process is:
+
 1. `date`=`now`()
 2. `request_date`=`parse`(`headers`, `'date'`)
 3. `expires_date`=`parse`(`headers`, `'expires'`)
@@ -1104,6 +1107,7 @@ check-spelling [v0.0.22](https://github.com/check-spelling/check-spelling/releas
 ### 502
 
 Sometimes GitHub just returns something like this:
+
 ```
 HTTP/2 502 
 content-type: text/plain; charset=utf-8

@@ -8,7 +8,7 @@ If your spelling workflow & action haven't been updated to [v0.0.20](https://git
 
 If you see this error (instead of getting comments):
 
->  curl: (6) Could not resolve host: null
+> curl: (6) Could not resolve host: null
 
 That's probably the problem. The fix is to [upgrade the workflow](https://github.com/check-spelling/spell-check-this/blob/main/.github/workflows/spelling.yml).
 
@@ -16,19 +16,19 @@ Note that this can happen in a fork even if things are working fine in the upstr
 
 ## Supported GitHub flows
 
-* [push](#push)
-* [pull_request_target](#pull_request_target)
-  * [Checking potential merges for PRs](#checking-prs-by-their-merge-commit)
-    * [checkout (built-in)](#built-in)
-    * [actions/checkout](#using-actionscheckout)
-* [pull_request](#pull_request) ⚠️
-* [issue_comment](#issue_comment)
-* [schedule](#schedule) 🙅
+- [push](#push)
+- [pull_request_target](#pull_request_target)
+  - [Checking potential merges for PRs](#checking-prs-by-their-merge-commit)
+    - [checkout (built-in)](#built-in)
+    - [actions/checkout](#using-actionscheckout)
+- [pull_request](#pull_request) ⚠️
+- [issue_comment](#issue_comment)
+- [schedule](#schedule) 🙅
 
 ### Notes
 
-* [Ignore Draft PRs](#draft)
-* See [[Workflow Variables|Configuration#Workflow_Variables]]
+- [Ignore Draft PRs](#draft)
+- See [[Workflow Variables|Configuration#Workflow_Variables]]
 
 ### push
 
@@ -64,8 +64,6 @@ on:
   pull_request_target:
     # this is recommended for all repositories that have PRs.
 ```
-
-
 
 ### Checking PRs by their merge commit
 
@@ -177,9 +175,9 @@ jobs:
         ssh_key: "${{ secrets.CHECK_SPELLING }}"
 ```
 
-* `contents: write` is mostly for forks as the `ssh_key: "${{ secrets.CHECK_SPELLING }}"` will be used if possible to push the generated commit.
-* `pull-requests: write` enables collapsing the triggering comment.
-* `actions: read` is needed for private repositories.
+- `contents: write` is mostly for forks as the `ssh_key: "${{ secrets.CHECK_SPELLING }}"` will be used if possible to push the generated commit.
+- `pull-requests: write` enables collapsing the triggering comment.
+- `actions: read` is needed for private repositories.
 
 ### schedule
 
@@ -225,5 +223,6 @@ jobs:
 ```
 
 There are two sides to this:
+
 1. An additional `if:` condition for `github.event.pull_request.draft == false` -- this suppresses checks while the PR is in draft (note that any initial `push` events will still run and may trigger scanning / reporting if it's unhappy, but subsequent runs once a PR is opened will be suppressed by check-spelling's `suppress_push_for_open_pull_request`)
 2. `on:` / `pull_request_target:` / `types:` / `'ready_for_review'` -- this triggers a check when someone converts the PR from draft to ready for review (otherwise you'd have to wait for an additional push, which would be frustrating).

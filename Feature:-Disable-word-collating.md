@@ -10,13 +10,15 @@ If you're finding this behavior too confusing, or just want all forms to be list
 with:
   disable_checks: word-collating
 ```
+
 to your configuration.
 
 ## Warning
 
 There are actually two places where check-spelling does folding:
-* dictionary checks - for this, the disable feature retains case folding but drops folding of `'` and `/[sd]$/`.
-* expected output checks - for this, the disable feature case folding as well as folding of `'` and `/[sd]$/`.
+
+- dictionary checks - for this, the disable feature retains case folding but drops folding of `'` and `/[sd]$/`.
+- expected output checks - for this, the disable feature case folding as well as folding of `'` and `/[sd]$/`.
 
 ## Sample consumers
 

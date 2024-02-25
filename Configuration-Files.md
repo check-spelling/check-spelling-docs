@@ -35,16 +35,15 @@ They're really words, just not in the ancient base dictionary. They might not be
 
 Some candidates:
 
-* every html tag & attribute
-* the name of everyone in your company (and the name of your company)
-* names of css attributes/properties
-* C or JavaScript reserved words
-* The names of all types/ functions from the C standard library
+- every html tag & attribute
+- the name of everyone in your company (and the name of your company)
+- names of css attributes/properties
+- C or JavaScript reserved words
+- The names of all types/ functions from the C standard library
 
 See [Area dictionaries](https://github.com/check-spelling/check-spelling/wiki/Feature:-Area-dictionaries) for other examples.
 
 For entire reusable lists that don't live in your repository, you can use [extra_dictionaries](#extra_dictionaries) instead.
-
 
 ## block delimiters
 
@@ -101,7 +100,7 @@ Note that some automatic pruning may not properly handle this.
 
 ### expect - previous name
 
-:warning: This was previously called `whitelist` -- that name is *deprecated*.
+:warning: This was previously called `whitelist` -- that name is _deprecated_.
 Support for the deprecated name may be removed in a future release.
 Until then, warnings will be reported in the action run log.
 At a future date, comments may report this as well.

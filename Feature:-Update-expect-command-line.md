@@ -27,12 +27,12 @@ A lot of users were hoping for a stable script one could get from the check-spel
 
 ## Design choices
 
-* The Windows goal means the script itself would want to be pure `perl`, and the program could be run as `perl apply.pl ARGS...`
+- The Windows goal means the script itself would want to be pure `perl`, and the program could be run as `perl apply.pl ARGS...`
 
-* Retrieving the data will validate `gh` is present and authorized (`gh` insists on being logged in for most (all?) operations).
-* Retrieving the script will assume `curl` is present to have it retrieve the script.
-* The command assumes `perl` is in the path.
-* Unconditionally replace the script each time it runs. If run from a file it will check to see if it's stale.
+- Retrieving the data will validate `gh` is present and authorized (`gh` insists on being logged in for most (all?) operations).
+- Retrieving the script will assume `curl` is present to have it retrieve the script.
+- The command assumes `perl` is in the path.
+- Unconditionally replace the script each time it runs. If run from a file it will check to see if it's stale.
 
 ## Status
 

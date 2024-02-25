@@ -10,8 +10,8 @@ But there are definitely other examples, e.g., of a deprecated API.
 
 ## Implementation
 
-I can imagine adding an extra pass right before (or after? still thinking about this) `patterns.txt` which looks for `reject-patterns.txt` 
- / `forbidden.txt` that works like `patterns.txt`, but is run between patterns and the main spelling pass and screams if it finds matches.
+I can imagine adding an extra pass right before (or after? still thinking about this) `patterns.txt` which looks for `reject-patterns.txt`
+/ `forbidden.txt` that works like `patterns.txt`, but is run between patterns and the main spelling pass and screams if it finds matches.
 
 ## Implementation details
 
