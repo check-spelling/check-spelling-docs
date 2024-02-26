@@ -350,13 +350,13 @@ In this example, the default for `dictionary_source_prefixes` is `{"cspell": "ht
 
 # candidate-pattern
 
-> Notice: src/Stack/Build/Source.hs:214:1 ... 1, Notice - Line matches candidate pattern `(?:^|[\t ,"'`=(])-\[DPWXYLlf](?=[A-Z]{2,}|[A-Z][a-z]|[a-z]{2,})` (candidate-pattern)
+> Notice: src/Stack/Build/Source.hs:214:1 ... 1, Notice - Line matches candidate pattern `(?:^|[\t ,"'`=(])-\[DPWXYLlf](?=\[A-Z]{2,}|\[A-Z]\[a-z]|\[a-z]{2,})` (candidate-pattern)
 
 The report will also include an entry like:
 
 ```perl
- hit-count: 169 file-count: 40
- Compiler flags
+# hit-count: 169 file-count: 40
+# Compiler flags
 (?:^|[\t ,"'`=(])-[DPWXYLlf](?=[A-Z]{2,}|[A-Z][a-z]|[a-z]{2,})
 ```
 
