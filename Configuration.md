@@ -129,7 +129,7 @@ incorporating the feedback it reports.
         }}
     ```
 
-See https://github.com/check-spelling/spell-check-this/blob/3a35a1cec1e660ab04638cbd5bdd086cf2fcd5c5/.github/workflows/spelling.yml#L126
+See [check-spelling/spell-check-this @3a35a1cec1e660ab04638cbd5bdd086cf2fcd5c5 `.github/workflows/spelling.yml` #L126](https://github.com/check-spelling/spell-check-this/blob/3a35a1cec1e660ab04638cbd5bdd086cf2fcd5c5/.github/workflows/spelling.yml#L126)
 
 Current recommended practice is to only enable this feature in private repositories or forks, but not public upstreams.
 
