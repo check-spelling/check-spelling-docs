@@ -1,8 +1,16 @@
 # SARIF output
 
+[Static Analysis Results Interchange Format (SARIF)](https://sarifweb.azurewebsites.net/) is an industry standard enabling tools and development environments to interoperate. 
+
 GitHub has [SARIF support for code scanning](https://docs.github.com/en/code-security/code-scanning/integrating-with-code-scanning/sarif-support-for-code-scanning).
 
 When data is published to GitHub in this format, GitHub is supposed to automatically generate shiny annotations.
+
+Sometimes [`@github-advanced-security`](https://github.com/apps/github-advanced-security) will leave a comment on pull requests:
+
+![1000002788](https://github.com/check-spelling/check-spelling/assets/2119212/530d7cbf-802e-48b6-9e7a-deacaa3ccf1f)
+
+Users of [Visual Studio Code](https://code.visualstudio.com/) can install the [SARIF Viewer](https://marketplace.visualstudio.com/items?itemName=MS-SarifVSCode.sarif-viewer) extension to retrieve the reports. 
 
 ## Timeline
 
