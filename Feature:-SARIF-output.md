@@ -21,9 +21,9 @@ Release | Features
 
 ## Enabling
 
-Sarif support is still very experimental, but the general idea is that you need to give it permissions to write security-events and you need to tell the action to generate them.
+SARIF support is still very experimental, but the general idea is that you need to give it permissions to write security-events and you need to tell the action to generate them.
 
-Note that you may be able to drop the `comment` job entirely if you enable sarif. It's still early, hopefully it'll be clear whether this is in fact correct soon.
+Note that you may be able to drop the `comment` job entirely if you enable SARIF. It's still early, hopefully it'll be clear whether this is in fact correct soon.
 
 ```workflow
 jobs:
@@ -53,7 +53,7 @@ This means that if you're a contributor without write access to a repository, yo
 
 If you'd like to see a similar report, you should be able to create a pull request in your fork and trigger the same workflow and view the equivalent report there.
 
-## Adjusting sarif.json
+## Adjusting `sarif.json`
 
 With [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22), there's the ability to add a `sarif.json` file to adjust severities or other fields.
 
@@ -71,7 +71,7 @@ https://github.com/check-spelling/check-spelling/issues/43
 
 ## Implementation plan
 
-- [x] Generate Sarif json
+- [x] Generate SARIF json
 - [x] Support uploading it using [github/codeql-action/upload-sarif@releases/v2](https://github.com/github/codeql-action/tree/releases/v2/upload-sarif)
 - [x] Decide on how to opt-in/opt-out of using this format -- currently `use_sarif: 1`
 - [x] Test in the check-spelling org -- in progress
