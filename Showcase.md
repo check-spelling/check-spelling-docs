@@ -18,7 +18,9 @@ Here are some samples of what you can expect when using the action
 
 ![Log showing misspellings](https://raw.githubusercontent.com/check-spelling/art/main/output/check-spelling-log.png)
 
-## Sarif integration
+## SARIF integration
+
+[Static Analysis Results Interchange Format (SARIF)](https://sarifweb.azurewebsites.net/)
 
 ![Code scanning in PR](https://raw.githubusercontent.com/check-spelling/art/main/output/github-code-scanning-in-pr.png)
 
