@@ -27,3 +27,6 @@ As the current version of [nektos/act](https://github.com/nektos/act) is [v0.2.4
 ## Disclaimer
 
 While I'm fairly certain these bugs existed, since I reported them, and I worked around them, at this time, I can't reproduce them (using old versions of act), so it's possible that there weren't actually shipping versions with these bugs, but I'm pretty sure there were. Oh well.
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Deprecations](Deprecations.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

@@ -20,8 +20,11 @@ While this tool was written to catch misspellings within files, it's actually fa
 
 ## Improvements in v0.0.21
 
-- [`check-file-path`](https://github.com/check-spelling/check-spelling/wiki/Event-descriptions#noisy-file-list)
+- [`check-file-path`](Event-descriptions.md#noisy-file-list)
 
 ## Improvements in v0.0.22
 
-- [`noisy-file-list`](https://github.com/check-spelling/check-spelling/wiki/Event-descriptions#noisy-file-list)
+- [`noisy-file-list`](Event-descriptions.md#noisy-file-list)
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Deprecations](Deprecations.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

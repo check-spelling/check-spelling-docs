@@ -20,6 +20,9 @@ Instead of checking 8 files at a time, I'm splitting the work into approximately
 
 ## Future work
 
-I've been toying with sorting the check list to put the largest files first. [[Configurable file size limits|Feature: Configurable file size limits]] means that the meta analyzer potentially has access to this information before it starts assigning files to workers.
+I've been toying with sorting the check list to put the largest files first. [Configurable file size limits](./Feature:-Configurable-file-size-limits.md) means that the meta analyzer potentially has access to this information before it starts assigning files to workers.
 
 In theory this could reduce the likelihood that the last worker will be stuck working on a really large file.
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Deprecations](Deprecations.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

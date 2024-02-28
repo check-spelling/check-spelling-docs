@@ -38,3 +38,6 @@ If a branch fails, one can resample that set to find the problem.
 If a branch doesn't fail, one can exclude all of its commits and resample the remainder to find the problem.
 
 Since this generates 4 lists, one should be able to perform some intersections to get a fairly small list of potential culprits.
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Deprecations](Deprecations.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)
