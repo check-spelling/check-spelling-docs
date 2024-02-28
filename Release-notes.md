@@ -36,7 +36,7 @@
 - 📗 [[K8s|Dictionary: K8s]]
 - 📙 [[Lisp|Dictionary: Lisp]]
 - 📊 [[Improve suggested dictionaries order|Feature: Improve suggested dictionaries order]]
-- 🎨 [Adjust Sarif output](https://github.com/check-spelling/check-spelling/wiki/Feature:-Sarif-output#adjusting-sarifjson)
+- 🎨 [Adjust SARIF output](https://github.com/check-spelling/check-spelling/wiki/Feature:-SARIF-output#adjusting-sarifjson)
 - 🧾 [[Summary Table|Feature: Summary Table]]
 - ⏱️ [[Timing Report|Feature: Timing Report]]
 - 🃏 [[Warning about substring matches|Feature: Warning about substring matches]]
@@ -67,7 +67,7 @@
 - [[Breaking change: Smaller cspell dictionaries]]
 - [[Behavior change: File line column notation]]
 - [[Step Summary|Feature: Step Summary]]
-- [[Sarif output|Feature: Sarif output]]
+- [[SARIF output|Feature: SARIF output]]
 - [[Suggest patterns|Feature: Suggest patterns]]
 - [[Update expect command-line|Feature: Update expect command-line]]
 - [[Check commit messages|Feature: Check commit messages]]
