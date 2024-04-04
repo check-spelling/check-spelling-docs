@@ -69,6 +69,12 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
   - [Resolution](#resolution-26)
 - [unclosed-block-ignore](#unclosed-block-ignore)
   - [Resolution](#resolution-27)
+- [unclosed-block-ignore-begin](#unclosed-block-ignore-begin)
+  - [Resolution](#resolution-28)
+- [unclosed-block-ignore-end](#unclosed-block-ignore-end)
+  - [Resolution](#resolution-29)
+- [missing-on-pull-request-event](#missing-on-pull-request-event)
+  - [Resolution](#resolution-30)
 
 ℹ️ As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), workflows can [[configure whether specific events are treated as ❌Errors or ⚠️Warnings|Feature: Treat specific errors as warnings]].
 
@@ -645,3 +651,41 @@ Note that this feature is experimental, it's possible you've encountered a bug.
 
 - If you believe the behavior is incorrect, please [file a bug](https://github.com/check-spelling/check-spelling/issues/new).
 - If the end token really isn't present, consider adjusting your begin/end tokens.
+
+# unclosed-block-ignore-begin
+
+A [[Block Ignore|Feature: Block Ignore]] rule's start pattern matched content in the file, but the corresponding end tag wasn't found.
+
+As a result, all content after the begin tag was ignored.
+
+Note that this feature is experimental, it's possible you've encountered a bug.
+
+## Resolution
+
+- If you believe the behavior is incorrect, please [file a bug](https://github.com/check-spelling/check-spelling/issues/new).
+- If the end token really isn't present, consider adjusting your begin/end tokens.
+
+# unclosed-block-ignore-end
+
+A [[Block Ignore|Feature: Block Ignore]] rule's start pattern matched content in the file, but the corresponding end tag wasn't found.
+
+As a result, all content after the begin tag was ignored.
+
+Note that this feature is experimental, it's possible you've encountered a bug.
+
+## Resolution
+
+- If you believe the behavior is incorrect, please [file a bug](https://github.com/check-spelling/check-spelling/issues/new).
+- If the end token really isn't present, consider adjusting your begin/end tokens.
+
+# missing-on-pull-request-event
+
+The [`suppress_push_for_open_pull_request`](https://github.com/check-spelling/check-spelling/wiki/Configuration#suppress_push_for_open_pull_request) configuration expects there to be an `on:` containing `pull_request` or `pull_request_target` -- if it isn't found, there wouldn't be a place for check-spelling to run.
+
+Instead of leaving users without a run, the `suppress_push_for_open_pull_request` configuration will be ignored. 
+
+## Resolution
+
+- Add a `pull_request` or `pull_request_target` event to the `on:` block in the workflow.
+- Remove `suppress_push_for_open_pull_request` from the check-spelling configuration.
+- If you believe the behavior is incorrect, please [file a bug](https://github.com/check-spelling/check-spelling/issues/new).
