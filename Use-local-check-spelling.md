@@ -32,3 +32,6 @@ $spellchecker/fast-install.pl && $spellchecker/unknown-words.sh
 ## Alternatives
 
 For most people, using [nektos/act](https://github.com/nektos/act) should work well enough that one shouldn't need to use this script.
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Deprecations](Deprecations.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

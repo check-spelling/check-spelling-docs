@@ -1,12 +1,15 @@
 # Helpful scripts
 
-- [[Warnings to line excerpts|Warnings to line excerpts]]
-- [[Looking for items locally|Looking for items locally]]
-- [[Use local check spelling|Use local check spelling]]
-- [Update branch using deploy key](https://github.com/check-spelling/check-spelling/wiki/Feature:-Update-with-deploy-key#script)
-- [[Rebasing spelling PRs|Rebasing spelling PRs]]
-- [[Parallel check CI failures]]
-- [[Script: Files to Excludes]]
-- [[Script: Staging PRs]]
-- [[What does each dictionary cover]]
-- [[Miscellaneous commands]]
+- [Warnings to line excerpts](Warnings-to-line-excerpts.md)
+- [Looking for items locally](Looking-for-items-locally.md)
+- [Use local check spelling](Use-local-check-spelling.md)
+- [Update branch using deploy key](./Feature:-Update-with-deploy-key.md#script)
+- [Rebasing spelling PRs](Rebasing-spelling-PRs.md)
+- [Parallel check CI failures](Parallel-check-CI-failures.md)
+- [Script: Files to Excludes](./Script:-Files-to-Excludes.md)
+- [Script: Staging PRs](./Script:-Staging-PRs.md)
+- [What does each dictionary cover](What-does-each-dictionary-cover.md)
+- [Miscellaneous commands](Miscellaneous-commands.md)
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Deprecations](Deprecations.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

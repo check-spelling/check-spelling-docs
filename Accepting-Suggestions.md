@@ -45,9 +45,9 @@ You probably want to use `git-bash` from https://git-scm.com/download/win (insta
 
 The code is provided as a convenience--what it does is take certain recommendations from check-spelling and apply them to the check-spelling configuration directory.
 
-- There are probably `Unrecognized words` that need to be added to [`expect.txt`](https://github.com/check-spelling/check-spelling/wiki/Configuration#expect) (or some variant).
-- There may be items that are no longer found that need to be removed from [`expect.txt`](https://github.com/check-spelling/check-spelling/wiki/Configuration#expect) (or some variant) so that they'd be flagged if they're reintroduced later.
-- If there are [suggestions for additions to `excludes.txt`](https://github.com/check-spelling/check-spelling/wiki/Feature:-Heuristic-exclude-suggestions), versions after [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21) would apply them, and you could manually add them to [`excludes.txt`](https://github.com/check-spelling/check-spelling/wiki/Configuration#excludes) (although this isn't necessary).
+- There are probably `Unrecognized words` that need to be added to [`expect.txt`](Configuration.md#expect) (or some variant).
+- There may be items that are no longer found that need to be removed from [`expect.txt`](Configuration.md#expect) (or some variant) so that they'd be flagged if they're reintroduced later.
+- If there are [suggestions for additions to `excludes.txt`](./Feature:-Heuristic-exclude-suggestions), versions after [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21) would apply them, and you could manually add them to [`excludes.txt`](Configuration.md#excludes) (although this isn't necessary).
 
 ## Preformatted commit (v0.0.22+)
 
@@ -72,3 +72,6 @@ In order for this to be useful, you'll then need to create a merge commit betwee
 You could rebase your commits onto the base branch at this point (or in some other order).
 
 A version after 0.0.22 should include instructions for merging. Whether you merge or rebase is up to you or the project to which you're contributing. If you choose to rebase, you'll probably want to rearrange the commits. You might also want to rearrange the commits if you merge -- the order of commands given is designed to be likely to not immediately have merge conflicts but probably doesn't tell the best "story".
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Deprecations](Deprecations.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

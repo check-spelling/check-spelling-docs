@@ -17,3 +17,6 @@ It's possible for check-spelling to reset its `cspell` alias, its `extra_diction
 Instead of discarding all dictionaries, it can use a file to report the original names of all the dictionaries it couldn't resolve. That'll make it possible to retain the resolved dictionaries, clean up the code a bit, and get to the next part.
 
 When it's done, it can suggest removing the unavailable dictionaries and users can select from the suggested dictionaries.
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Deprecations](Deprecations.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

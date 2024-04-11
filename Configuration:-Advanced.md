@@ -8,7 +8,7 @@
 | [project](#project)     | a folder within `bucket`. This allows you to share common items across projects.                |
 | [timeframe](#timeframe) | number of minutes (default 60) to consider when a **schedule** workflow checks for updated PRs. |
 
-ℹ️ These are additional items beyond the core items listed in [Configuration](https://github.com/check-spelling/check-spelling/wiki/Configuration).
+ℹ️ These are additional items beyond the core items listed in [Configuration](Configuration.md).
 
 ## bucket
 
@@ -18,7 +18,7 @@
 - `https://` (or `http://`) - curl compatible
 - `gs://` - gsutil url
 
-ℹ️ This has been superseded by [`config`](https://github.com/check-spelling/check-spelling/wiki/Configuration#config)
+ℹ️ This has been superseded by [`config`](Configuration.md#config)
 
 ## project
 
@@ -27,13 +27,16 @@
 - `./` - if you don't need an extra nesting layer
 - directory - especially for sharing a general bucket across multiple projects
 
-ℹ️ This has been superseded by [`config`](https://github.com/check-spelling/check-spelling/wiki/Configuration#config)
+ℹ️ This has been superseded by [`config`](Configuration.md#config)
 
 ## timeframe
 
-Used by the **[schedule](./Configuration:-Workflows#schedule)** action. Any open pull requests from another repository
+Used by the **[schedule](./Configuration:-Workflows.md#schedule)** action. Any open pull requests from another repository
 will be checked, and if the commit is within that timeframe, it will be processed.
 
 ℹ️ In general you shouldn't need to use this as there are more recent ways to achieve desired goals.
 
 In [`v0.0.21`](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21), reports are available via the step summary w/o requiring any special permissions.
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Deprecations](Deprecations.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

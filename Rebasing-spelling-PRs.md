@@ -1,6 +1,6 @@
 # Rebasing spelling PRs
 
-These scripts require functions from [[Looking for items locally|Looking for items locally]]
+These scripts require functions from [Looking for items locally](Looking-for-items-locally.md)
 
 - `what_was_removed` is vaguely helpful to search for hunks that moved outside of merge conflicts
 - `where_are_they_now` is the counterpart to `what_was_removed` -- when this happens, use `rs what_was_removed replacement commit_word` -- if there's more than one, then use `git reset HEAD~` and repeat
@@ -97,3 +97,6 @@ what_needs_to_be_fixed() {
   review
 }
 ```
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Deprecations](Deprecations.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

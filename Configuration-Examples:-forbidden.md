@@ -20,10 +20,13 @@
 
 ## See also
 
-- [[Forbidden patterns|Feature: Forbidden patterns]]
-- [[Configuration Examples: patterns]]
+- [Forbidden patterns](./Feature:-Forbidden-patterns.md)
+- [Configuration Examples: patterns](./Configuration-Examples:-patterns.md)
 
 ## Notes
 
 - `forbidden` operate on a per line basis
-- there is no support for multiline patterns, see [[Feature: Block Ignore]] for my current thoughts
+- there is no support for multiline patterns, see [Feature: Block Ignore](./Feature:-Block-Ignore.md) for my current thoughts
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Deprecations](Deprecations.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

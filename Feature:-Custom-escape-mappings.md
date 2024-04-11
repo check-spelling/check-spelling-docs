@@ -18,3 +18,6 @@ Right now, `\\[nrt]` are effectively mapped to space, and some patterns are mapp
 I'm not sure I like this at all as the parsing will be painful.
 
 I could use JSON, but, I don't think that really improves things.
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Deprecations](Deprecations.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

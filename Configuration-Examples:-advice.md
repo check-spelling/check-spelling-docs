@@ -4,9 +4,9 @@ Advice is a file that is inserted raw into GitHub comments (or potentially in th
 
 Here are some examples:
 
-- [microsoft/terminal `.github/actions/spelling/advice.md`](https://github.com/microsoft/terminal/blob/main/.github/actions/spelling/advice.md)
-- [imazen/imageflow `.github/actions/spell-check/advice.txt`](https://github.com/imazen/imageflow/blob/main/.github/actions/spell-check/advice.txt)
-- [jsoref/jitsi-videobridge @ e26301eab0a15f2366f5d2b73e2c0cc714007a14 `.github/actions/spell-check/advice.txt`](https://github.com/jsoref/jitsi-videobridge/blob/e26301eab0a15f2366f5d2b73e2c0cc714007a14/.github/actions/spell-check/advice.txt)
+- [microsoft/terminal `.github/actions/spelling/advice.md`](https://raw.githubusercontent.com/microsoft/terminal/main/.github/actions/spelling/advice.md)
+- [imazen/imageflow `.github/actions/spell-check/advice.txt`](https://raw.githubusercontent.com/imazen/imageflow/main/.github/actions/spell-check/advice.txt)
+- [jsoref/jitsi-videobridge @ e26301eab0a15f2366f5d2b73e2c0cc714007a14 `.github/actions/spell-check/advice.txt`](https://raw.githubusercontent.com/jsoref/jitsi-videobridge/e26301eab0a15f2366f5d2b73e2c0cc714007a14/.github/actions/spell-check/advice.txt)
 
 ```
 <details><summary>If you see a bunch of garbage and it relates to a binary-ish string</summary>
@@ -25,3 +25,6 @@ https://www.regexplanet.com/advanced/perl/) yours before committing to verify it
 ## advice.md
 
 As of [v0.0.18](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.18), the file can be named `advice.md` instead of `advice.txt`.
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Deprecations](Deprecations.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

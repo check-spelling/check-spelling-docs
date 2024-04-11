@@ -1117,3 +1117,6 @@ content-length: 9
 
 This was not handled by check-spelling [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22) as a `503` was expected.
 [v0.0.23](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.23) will tolerate `502` as well.
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Deprecations](Deprecations.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

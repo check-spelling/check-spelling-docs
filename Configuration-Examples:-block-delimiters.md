@@ -17,7 +17,7 @@
 
 # See also
 
-- [[Block Ignore|Feature: Block Ignore]]
+- [Block Ignore](./Feature:-Block-Ignore.md)
 
 # Notes
 
@@ -27,3 +27,6 @@
 - The start and stop delimiters are checked for as strings not regular expressions.
 - Block delimiter checks happen before pattern evaluation (and are effectively mutually exclusive to them).
 - Each block delimiter must have both a start and stop delimiter and there can only be a single stop for a given start delimiter. If you encounter a case where you need to have a choice of possible stop delimiters for a specific start delimiter, please file a ticket with your example.
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Deprecations](Deprecations.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

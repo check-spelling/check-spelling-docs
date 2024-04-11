@@ -9,3 +9,6 @@ I looked into this in the summer of 2022 and found it didn't really reduce the s
 That said. It _sounds_ appealing and there's definitely interest.
 
 I'm hoping to work w/ a couple of people who are trying to make it work and we'll see if we can put something together before summer 2023 (hopefully sooner, but...).
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Deprecations](Deprecations.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

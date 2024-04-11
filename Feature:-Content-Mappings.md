@@ -2,7 +2,7 @@
 
 Currently there are a couple of [hard-coded](#hard-coded) aliases in the word splitter.
 
-There are a couple of others that probably [should be offered](#Future), and it'd be better if this were something that users could configure instead of requiring a new release each time.
+There are a couple of others that probably [should be offered](#future), and it'd be better if this were something that users could configure instead of requiring a new release each time.
 
 ## Proposal
 
@@ -61,3 +61,6 @@ apostrophe (`'`)
 ```pl
   s/\\(aq/'/g
 ```
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Deprecations](Deprecations.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

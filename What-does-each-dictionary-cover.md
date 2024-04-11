@@ -18,6 +18,9 @@ This would understandably be quite tedious.
 
 ## Script
 
-It's possible to leverage [[Looking for items locally]] to merge the contents of `expect.txt` (or `expect/*.txt`) and then use it to effectively _grep_ (using `perl` as there are a number of quirks which means _grep_ won't work) against each dictionary.
+It's possible to leverage [Looking for items locally](Looking-for-items-locally.md) to merge the contents of `expect.txt` (or `expect/*.txt`) and then use it to effectively _grep_ (using `perl` as there are a number of quirks which means _grep_ won't work) against each dictionary.
 
 (Script to follow, hopefully...)
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Deprecations](Deprecations.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

@@ -23,3 +23,6 @@ There are actually two places where check-spelling does folding:
 ## Sample consumers
 
 [cspell compact-dictionaries workflow](https://github.com/check-spelling/cspell-dicts/commit/2a5b8bb057f4580749933060b29c466e92c93400#diff-f38bd48888fa3290eb90897dc1e21411b2bcf12a6538cd72bb583e7608787698R88)
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Deprecations](Deprecations.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

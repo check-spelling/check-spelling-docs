@@ -47,19 +47,19 @@ rm -rf "$scratch"
        contents: write
        pull-requests: write
      runs-on: ubuntu-latest
-     if: ${{
+     if: ${% raw %}{{{% endraw %}
          github.event_name == 'issue_comment' &&
          github.event.issue.pull_request &&
          contains(github.event.comment.body, '@check-spelling-bot apply')
        }}
      concurrency:
-       group: spelling-update-${{ github.event.issue.number }}
+       group: spelling-update-${% raw %}{{{% endraw %} github.event.issue.number }}
        cancel-in-progress: false
      steps:
      - name: checkout
        uses: actions/checkout@v2
 +      with:
-+        ssh-key: "${{ secrets.CHECK_SPELLING }}"
++        ssh-key: "${% raw %}{{{% endraw %} secrets.CHECK_SPELLING }}"
      - name: check-spelling
        uses: check-spelling/check-spelling@main
        with:
@@ -69,3 +69,6 @@ rm -rf "$scratch"
 ## Improvements in [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21)
 
 The advice is now tailored to based on the workflow configuration.
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Deprecations](Deprecations.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)
