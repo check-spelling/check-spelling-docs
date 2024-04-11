@@ -1,6 +1,8 @@
 # Configurable word characters
 
-In [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21), check-spelling only looks at `/[A-Za-z']/` and generally with a [minimum run length of 3](Configuration#shortest_word).
+As of [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22), you can configure the characters that check-spelling handles.
+
+Previously, check-spelling would only look at `/[A-Za-z']/` and generally with a [minimum run length of 3](Configuration#shortest_word).
 
 ## Caveats
 
@@ -95,7 +97,7 @@ With some selection from available dictionaries:
 
 ## Dictionaries
 
-In order for this to work reasonably well, support for hunspell `.dic` and `.aff` files has been added (in [prerelease](https://github.com/check-spelling/check-spelling/commits/prerelease)).
+In order for this to work reasonably well, support for hunspell `.dic` and `.aff` files has been added (in [v0.0.22](https://github.com/check-spelling/check-spelling/commits/v0.0.22)).
 
 ## Related
 
