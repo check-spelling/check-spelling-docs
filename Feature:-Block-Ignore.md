@@ -64,4 +64,10 @@ Draft support in a file `block-delimiters.list`, format:
 <end token for format 2>
 ```
 
+`\#` at the beginning of a line is treated as `#`, whereas `#` at the beginning of a line is treated as a comment.
+
+This format is really lousy...
+
+### Availability
+
 This is not yet implemented as of [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22)
