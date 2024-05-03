@@ -35,6 +35,19 @@ file-path-pattern: (regular-expression)
 stop-after: (token)
 ```
 
+`block-ignore.toml`: (not strict toml, a minimal flavor)
+
+```toml
+[[block]]
+name = (free text)
+look-for-text = (token)
+stop-at-text = (token)
+look-for-pattern = (regular-expression)
+stop-at-pattern = (regular-expression)
+discontinue-at-text = (token)
+file-path-pattern = (regular-expression)
+```
+
 Where `file-path-pattern` and `stop-after` would be optional fields, but `begin-token` and `end-token` would be mandatory. Whether `name` will be mandatory is unclear at this time -- this whole file format is currently just an idea.
 
 ## Out of scope
