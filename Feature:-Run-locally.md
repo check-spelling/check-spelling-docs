@@ -3,6 +3,7 @@
 Possible approaches:
 
 - [Act](#act)
+- [Runnable script](#Runnable-script)
 - [Single script](#Single-script)
 - [Docker image](#Docker-image)
 
@@ -116,6 +117,85 @@ Nektos/Act may be missing support for newer GitHub Action features:
 #### Output steps
 
 As of Act [v0.2.24](https://github.com/nektos/act/releases/tag/v0.2.24), act can't handle [outputs from later steps](https://github.com/nektos/act/issues/758), as used in [https://github.com/check-spelling/spell-check-this/blob/prerelease/.github/workflows/spelling.yml#L17](https://github.com/check-spelling/spell-check-this/blob/18764e6cbb019a5d2067d6abe62ce43eb83275bd/.github/workflows/spelling.yml#L17) - It's possible to build a [patched version of act](https://github.com/ChristopherHX/act/commit/4c692919754ab0a72b340604e2c5c597e95f463a) -- but it requires fixing a [merge failure](https://github.com/jsoref/act/commit/a8f69e39d9b534d4eef09f37ab0d082cd308bb00). This shouldn't be a big deal as the output portions of the workflow won't work in act anyway...
+
+## Runnable script
+
+In [prerelease](https://github.com/check-spelling/check-spelling/tree/prerelease) and hopefully for [v0.0.23](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.23), you should be able to run `unknown-words.sh` from a local copy of the [check-spelling repository](https://github.com/check-spelling/check-spelling).
+
+
+### Running
+
+Parameters that would normally come from GitHub can be passed via a json object in the `INPUTS` environment variable:
+
+```sh
+INPUTS='{"extra_dictionaries": "cspell:software-terms/dict/softwareTerms.txt cspell:php/dict/php.txt cspell:node/node.txt cspell:python/src/python/python-lib.txt"}' ~/check-spelling/unknown-words.sh
+```
+
+### Results
+
+#### Success
+
+You should see:
+
+```
+No new words with misspellings found
+```
+
+and the exit status (`$?`) should be `0` (true).
+
+#### Failure
+
+Typically there will be something like:
+
+```markdown
+# @check-spelling-bot Report
+## :red_circle: Please review
+
+<details><summary>Unrecognized words (38)</summary>
+...
+```
+
+#### Outputs
+
+There will be lines like:
+
+```
+::set-output name=internal_state_directory::/var/folders/r3/n29fz25x72x191fdv6mhhr3m0000gp/T/tmp.mFX5l0SFiO
+::set-output name=warnings::/var/folders/r3/n29fz25x72x191fdv6mhhr3m0000gp/T/tmp.gr3kG8pJRq/warnings.txt
+```
+
+Presently, items in the `internal_state_directory` are zipped into a file called `artifacts.zip`
+
+#### Accessing outputs
+
+```sh
+check_spelling_log=$(mktemp);
+(INPUTS='{"extra_dictionaries": "cspell:software-terms/dict/softwareTerms.txt cspell:php/dict/php.txt cspell:node/node.txt cspell:python/src/python/python-lib.txt"}' ~/check-spelling/unknown-words.sh 2>&1 ) > "$check_spelling_log"
+if [ $? -gt 0 ]; then
+  echo 'check-spelling failed...'
+fi
+warnings=$(perl -ne 'next unless s/^::set-output name=warnings:://; print' "$check_spelling_log")
+export internal_state_directory=$(perl -ne 'next unless s/^::set-output name=internal_state_directory:://; print' "$check_spelling_log")
+artifact="$internal_state_directory/artifact.zip"
+unknown_words=$(perl -ne 'next unless s/^::set-output name=unknown_words:://; s!$ENV{internal_state_directory}/!!; print' "$check_spelling_log")
+stale_words=$(perl -ne 'next unless s/^::set-output name=stale_words:://; s!$ENV{internal_state_directory}/!!; print' "$check_spelling_log")
+if [ -n "$warnings" ] && [ -s "$warnings" ]; then
+  echo '# Warnings:'
+  cat "$warnings"
+  echo
+fi
+if [ -n "$stale_words" ]; then
+  echo '# Stale words:'
+  unzip -p "$artifact" "$stale_words"
+  echo
+  echo
+fi
+if [ -n "$unknown_words" ]; then
+  echo '# Unknown words:'
+  unzip -p "$artifact" "$unknown_words"
+  echo
+fi
+```
 
 ## Single script
 
