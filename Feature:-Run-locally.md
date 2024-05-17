@@ -174,27 +174,28 @@ check_spelling_log=$(mktemp);
 if [ $? -gt 0 ]; then
   echo 'check-spelling failed...'
 fi
+
 warnings=$(perl -ne 'next unless s/^::set-output name=warnings:://; print' "$check_spelling_log")
 export internal_state_directory=$(perl -ne 'next unless s/^::set-output name=internal_state_directory:://; print' "$check_spelling_log")
 artifact="$internal_state_directory/artifact.zip"
-unknown_words=$(perl -ne 'next unless s/^::set-output name=unknown_words:://; s!$ENV{internal_state_directory}/!!; print' "$check_spelling_log")
-stale_words=$(perl -ne 'next unless s/^::set-output name=stale_words:://; s!$ENV{internal_state_directory}/!!; print' "$check_spelling_log")
+
+report_segment() {
+file=$(key="$1" perl -ne 'next unless s/^::set-output name=$ENV{key}:://; s!$ENV{internal_state_directory}/!!; print' "$check_spelling_log")
+  if [ -n "$file" ]; then
+    echo "# $2:"
+    unzip -p "$artifact" "$file"
+    echo
+    echo
+  fi
+}
 if [ -n "$warnings" ] && [ -s "$warnings" ]; then
   echo '# Warnings:'
   cat "$warnings"
   echo
 fi
-if [ -n "$stale_words" ]; then
-  echo '# Stale words:'
-  unzip -p "$artifact" "$stale_words"
-  echo
-  echo
-fi
-if [ -n "$unknown_words" ]; then
-  echo '# Unknown words:'
-  unzip -p "$artifact" "$unknown_words"
-  echo
-fi
+report_segment stale_words 'Stale words'
+report_segment skipped_files 'Skipped files'
+report_segment unknown_words 'Unknown words'
 ```
 
 ## Single script
