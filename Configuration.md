@@ -11,48 +11,48 @@ See [Configuration: Workflows](./Configuration:-Workflows.md) for the supported 
 
 | Parameter | Description |
 | ------------- | ------------- |
-| [GITHUB_TOKEN](#github-token) | github credential secret for api requests |
+| [GITHUB_TOKEN](#githubtoken) | github credential secret for api requests |
 | [config](#config) | directory with config files |
-| [dictionary_url](#dictionary-url) | url for primary dictionary |
-| [dictionary_version](#dictionary-version) | version of primary dictionary |
-| [experimental_apply_changes_via_bot](#experimental-apply-changes-via-bot) | allow [@check-spelling-bot](https://github.com/check-spelling-bot) to update PRs |
-| [experimental_parallel_jobs](#experimental-parallel-jobs) | parallelize spell checking file tasks |
-| [shortest_word](#shortest-word) | minimum word length |
-| [longest_word](#longest-word) | maximum word length |
-| [post_comment](#post-comment) | post comment |
-| [experimental_path](#experimental-path) | Directory root to check for spelling (note that bucket/project/config are independent of this) |
-| [capture_output_unknown_words](#capture-output-unknown-words) | Capture unknown words (should be added to expect.txt) as an action output |
-| [capture_output_stale_words](#capture-output-stale-words) | Capture stale words (should be removed from expect.txt) as an action output |
-| [capture_output_skipped_files](#capture-output-skipped-files) | Capture skipped files (could be added to excludes.txt) as an action output |
-| [experimental_commit_note](#experimental-commit-note) | If set, commit updates to expect automatically with this note |
-| [only_check_changed_files](#only-check-changed-files) | If set, only check changed files |
-| [dictionary_source_prefixes](#dictionary-source-prefixes) | prefixes for urls for dictionaries defined in [extra_dictionaries](#extra-dictionaries) |
-| [extra_dictionaries](#extra-dictionaries) | Dictionaries to include |
-| [check_extra_dictionaries](#check-extra-dictionaries) | If there are unknown words, see if they are in these additional dictionaries |
-| [extra_dictionary_limit](#extra-dictionary-limit) | The number of [check_extra_dictionaries](#check-extra-dictionaries) to report |
-| [event_aliases](#event-aliases) | Map an unsupported GitHub event to a known event |
-| [suppress_push_for_open_pull_request](#suppress-push-for-open-pull-request) | If running from a `push` event and there's an open `pull_request`, stop working and rely on the `pull_request` handling to check the branch |
-| [report_title_suffix](#report-title-suffix) | Appended to title (for use in [matrix configurations](https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#jobsjob_idstrategymatrix)) |
+| [dictionary_url](#dictionaryurl) | url for primary dictionary |
+| [dictionary_version](#dictionaryversion) | version of primary dictionary |
+| [experimental_apply_changes_via_bot](#experimentalapplychangesviabot) | allow [@check-spelling-bot](https://github.com/check-spelling-bot) to update PRs |
+| [experimental_parallel_jobs](#experimentalparalleljobs) | parallelize spell checking file tasks |
+| [shortest_word](#shortestword) | minimum word length |
+| [longest_word](#longestword) | maximum word length |
+| [post_comment](#postcomment) | post comment |
+| [experimental_path](#experimentalpath) | Directory root to check for spelling (note that bucket/project/config are independent of this) |
+| [capture_output_unknown_words](#captureoutputunknownwords) | Capture unknown words (should be added to expect.txt) as an action output |
+| [capture_output_stale_words](#captureoutputstalewords) | Capture stale words (should be removed from expect.txt) as an action output |
+| [capture_output_skipped_files](#captureoutputskippedfiles) | Capture skipped files (could be added to excludes.txt) as an action output |
+| [experimental_commit_note](#experimentalcommitnote) | If set, commit updates to expect automatically with this note |
+| [only_check_changed_files](#onlycheckchangedfiles) | If set, only check changed files |
+| [dictionary_source_prefixes](#dictionarysourceprefixes) | prefixes for urls for dictionaries defined in [extra_dictionaries](#extradictionaries) |
+| [extra_dictionaries](#extradictionaries) | Dictionaries to include |
+| [check_extra_dictionaries](#checkextradictionaries) | If there are unknown words, see if they are in these additional dictionaries |
+| [extra_dictionary_limit](#extradictionarylimit) | The number of [check_extra_dictionaries](#checkextradictionaries) to report |
+| [event_aliases](#eventaliases) | Map an unsupported GitHub event to a known event |
+| [suppress_push_for_open_pull_request](#suppresspushforopenpullrequest) | If running from a `push` event and there's an open `pull_request`, stop working and rely on the `pull_request` handling to check the branch |
+| [report_title_suffix](#reporttitlesuffix) | Appended to title (for use in [matrix configurations](https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#jobsjob_idstrategymatrix)) |
 | [warnings](#warnings) | Treat specific errors as warnings |
 | [notices](#notices) | Treat specific errors as notices |
-| [custom_task](#custom-task) | Workflow magic |
-| [internal_state_directory](#internal-state-directory) | Workflow magic |
-| [check_file_names](#check-file-names) | Spell check file paths |
-| [anonymize_secpoll_source](#anonymize-secpoll-source) | Use public dns to check action security state |
-| [ignore_security_advisory](#ignore-security-advisory) | Override action security state warning |
-| [largest_file](#largest-file) | Ignore large files |
-| [unknown_word_limit](#unknown-word-limit) | Limit the number of reports per unknown word |
-| [disable_checks](#disable-checks) | Disable various check-spelling behaviors |
-| [check_commit_messages](#check-commit-messages) | Check commit / PR metadata |
-| [use_magic_file](#use-magic-file) | Detect binary files |
-| [use_sarif](#use-sarif) | Generate SARIF Reports |
-| [summary_table](#summary-table) | Summary Table |
+| [custom_task](#customtask) | Workflow magic |
+| [internal_state_directory](#internalstatedirectory) | Workflow magic |
+| [check_file_names](#checkfilenames) | Spell check file paths |
+| [anonymize_secpoll_source](#anonymizesecpollsource) | Use public dns to check action security state |
+| [ignore_security_advisory](#ignoresecurityadvisory) | Override action security state warning |
+| [largest_file](#largestfile) | Ignore large files |
+| [unknown_word_limit](#unknownwordlimit) | Limit the number of reports per unknown word |
+| [disable_checks](#disablechecks) | Disable various check-spelling behaviors |
+| [check_commit_messages](#checkcommitmessages) | Check commit / PR metadata |
+| [use_magic_file](#usemagicfile) | Detect binary files |
+| [use_sarif](#usesarif) | Generate SARIF Reports |
+| [summary_table](#summarytable) | Summary Table |
 | [report-timing](#report-timing) | Report file processing times |
-| [alternate_engine](#alternate-engine) | Use another version of check-spelling |
-| [alternate_engine_key](#alternate-engine-key) | ssh key to check out alternate version of check-spelling |
+| [alternate_engine](#alternateengine) | Use another version of check-spelling |
+| [alternate_engine_key](#alternateenginekey) | ssh key to check out alternate version of check-spelling |
 | [cache-dictionaries](#cache-dictionaries) | Allows workflows to disable caching dictionaries |
-| [caller_container](#caller-container) | Hack for `act` |
-| [candidate_example_limit](#candidate-example-limit) | Limit the number of reports per pattern suggestion |
+| [caller_container](#callercontainer) | Hack for `act` |
+| [candidate_example_limit](#candidateexamplelimit) | Limit the number of reports per pattern suggestion |
 | [checkout](#checkout) | Let action manage checkout process |
 | [ignore-pattern](#ignore-pattern) | Characters to ignore while parsing lines |
 | [lower-pattern](#lower-pattern) | Pattern describing lowercase characters while parsing lines |
@@ -60,9 +60,9 @@ See [Configuration: Workflows](./Configuration:-Workflows.md) for the supported 
 | [not-upper-or-lower-pattern](#not-upper-or-lower-pattern) | Pattern describing characters that are neither uppercase nor lowercase while parsing lines |
 | [punctuation-pattern](#punctuation-pattern) | Pattern describing punctuation characters while parsing lines |
 | [upper-pattern](#upper-pattern) | Pattern describing uppercase characters while parsing lines |
-| [quit_without_error](#quit-without-error) | Cause action not to trigger a failure state regardless of its internal status |
-| [spell_check_this](#spell-check-this) | Fallback configuration data to use with checkout |
-| [ssh_key](#ssh-key) | Git ssh key for checking out (to enable writes with workflows) |
+| [quit_without_error](#quitwithouterror) | Cause action not to trigger a failure state regardless of its internal status |
+| [spell_check_this](#spellcheckthis) | Fallback configuration data to use with checkout |
+| [ssh_key](#sshkey) | Git ssh key for checking out (to enable writes with workflows) |
 | [task](#task) | Workflow magic |
 
 See [Configuration: Advanced](./Configuration:-Advanced.md) for additional options.
