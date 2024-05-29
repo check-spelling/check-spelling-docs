@@ -16,6 +16,7 @@
 - 💬 [[Report associated comment for forbidden patterns|Feature: Report associated comment for forbidden patterns]]
 - 🧱 [[Block/Multiline Ignore|Feature: Block Ignore]]
 - 🌉 [[IDE Integration|Feature: IDE Integration]]
+- 🎏 [[Set event severity|Feature: Set event severity]]
 
 ## Near term
 
