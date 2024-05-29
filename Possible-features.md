@@ -6,6 +6,8 @@
 
 ## In progress
 
+- 🎏 [[Breaking change: events not listed in warnings and notices will not be promoted to errors|Feature: Set event severity]]
+- 🎏 [[Set event severity|Feature: Set event severity]]
 - 👓 [[Suppress PR check when workflow changes|Feature: Suppress PR check when workflow changes]]
 - 🧪 [[Regression testing]]
 - 😄 [[Easier to understand filenames|Feature: Easier to understand filenames]]
@@ -16,7 +18,6 @@
 - 💬 [[Report associated comment for forbidden patterns|Feature: Report associated comment for forbidden patterns]]
 - 🧱 [[Block/Multiline Ignore|Feature: Block Ignore]]
 - 🌉 [[IDE Integration|Feature: IDE Integration]]
-- 🎏 [[Set event severity|Feature: Set event severity]]
 
 ## Near term
 
