@@ -33,4 +33,4 @@ Reports for some repositories will have an entry like:
 
 Users without write access to the repository will probably not be able to see the [👼 SARIF report](#), and will instead see a 404 page.
 
-This relates to the fact that SARIF was designed for reporting results from security scanners, as such GitHub restricts who has access to the reports. For more information, see [[SARIF output visibility|Feature:-Sarif-output#visibility]].
+This relates to the fact that SARIF was designed for reporting results from security scanners, as such GitHub restricts who has access to the reports. For more information, see [[SARIF output visibility|Feature:-SARIF-output#visibility]].
