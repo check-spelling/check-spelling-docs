@@ -1,10 +1,10 @@
 # Summary Table
 
-Include a section in the [[Step Summary|Feature: Step Summary]] with links to individual lines for report items similar to the links that would be available from [[Sarif output|Feature: Sarif output]].
+Include a section in the [[Step Summary|Feature: Step Summary]] with links to individual lines for report items similar to the links that would be available from [[SARIF output|Feature: SARIF output]].
 
 ## Background
 
-The [[Sarif output|Feature: Sarif output]] feature generally only works for repository members, so, while it's quite fancy, it's problematic for open source repositories.
+The [[SARIF output|Feature: SARIF output]] feature generally only works for repository members, so, while it's quite fancy, it's problematic for open source repositories.
 
 ## Implementation
 
