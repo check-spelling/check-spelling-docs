@@ -98,7 +98,7 @@
 - [[Restricted Permissions|Feature: Restricted Permissions]]
 - [[Bug fix: Case changes should fail]]
 - [Play nice with `@dependabot`](https://github.com/check-spelling/check-spelling/wiki/@dependabot)
-- [[Check filenames and paths|Feature: check filenames and paths]]
+- [[Check filenames and paths|Feature: Check filenames and paths]]
 - [[Automatically truncate comment|Feature: Automatically truncate comment]]
 - [[Perl module testing|Feature: Perl module testing]]
 - [[Suggest commit after expect update|Feature: Suggest commit after expect update]]
