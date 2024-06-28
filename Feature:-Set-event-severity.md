@@ -6,7 +6,7 @@ check-spelling has a number of errors, warnings, and notices.
 
 It's understood that not every user will agree with which items should be errors and which warnings.
 
-Note that severities of events may be adjusted from release to release and the behavior of adding the same event name to multiple lists may change. As such, providing values for both `warnings` and `errors` should insulate you from such shifts. Please don't include the same event in multiple 
+Note that severities of events may be adjusted from release to release and the behavior of adding the same event name to multiple lists may change. As such, providing values for both `warnings` and `errors` should insulate you from such shifts. Please don't include the same event in multiple lists (`errors`, `warnings`, `notices`, `ignored`).
 
 ## Implementation
 
