@@ -438,7 +438,7 @@ This is possible for Public repositories on GitHub.com and for Enterprise Reposi
 
 - Switch to an enterprise plan (?)
 - Remove `use_sarif`
-- If you have a use for the sarif output beyond GitHub's handling, please file a bug describing your use case -- it's possible to adjust the code to handle this case, but this wasn't supported in the initial implementation, so you are here.
+- If you have a use for the SARIF output beyond GitHub's handling, please file a bug describing your use case -- it's possible to adjust the code to handle this case, but this wasn't supported in the initial implementation, so you are here.
 
 ## `use_sarif` and `act`
 
@@ -514,7 +514,7 @@ In the log form, the numbers `9 ... 18` refer to character offsets within the fi
 ## Identifying the problematic items
 
 - If you enabled [[Summary Table|Feature: Summary Table]] with [`summary_table: 1`](https://github.com/check-spelling/check-spelling/wiki/Configuration#summary_table) and there is enough space, the individual paths should appear in the details table.
-- If you enabled [[Sarif output|Feature: Sarif output]] with [`use_sarif: 1`](https://github.com/check-spelling/check-spelling/wiki/Configuration#use_sarif) and the repository is public (or is private and has advanced security enabled) and you are a member of the security group / an owner/admin, then individual items should appear in the Sarif report.
+- If you enabled [[SARIF output|Feature: SARIF output]] with [`use_sarif: 1`](https://github.com/check-spelling/check-spelling/wiki/Configuration#use_sarif) and the repository is public (or is private and has advanced security enabled) and you are a member of the security group / an owner/admin, then individual items should appear in the Sarif report.
 - You can find them listed in the `Spell check` section of the Action log (they should have `(check-file-path)` on each line).
 
 ## Resolution
