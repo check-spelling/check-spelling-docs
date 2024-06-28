@@ -1,0 +1,43 @@
+name: Link Checker
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  link-checker:
+    name: Run link checker
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    steps:
+    - name: set up link checker
+      run: |
+        python3 -m venv linkchecker
+        . linkchecker/bin/activate
+        pip3 install linkchecker
+    - name: check links
+      run: |
+        (
+          echo '# Link Checker'
+          echo
+          echo '```'
+          ./linkchecker/bin/linkchecker https://docs.check-spelling.dev/ |
+          perl -ne '
+            if (/^Start checking/) {
+              $state = 1;
+              print STDERR;
+              next;
+            }
+            if (/^Statistics:/) {
+              $state = 2;
+            }
+            if ($state == 1) {
+              print;
+            } else {
+              print STDERR;
+            }
+          '
+          echo '```'
+          echo
+        ) >> "$GITHUB_STEP_SUMMARY"
