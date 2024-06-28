@@ -3,7 +3,7 @@
 Included in [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20)
 
 To make the out-of-the-box flow better, it'd be helpful if the tool
-automatically suggested [[Area Dictionaries|Feature: Area Dictionaries]] to enable.
+automatically suggested [[Area Dictionaries|Feature: Area dictionaries]] to enable.
 
 As the work to parallelize the spell checker yields lists of unknown words,
 it's possible to check a number of potential supplemental dictionaries against
