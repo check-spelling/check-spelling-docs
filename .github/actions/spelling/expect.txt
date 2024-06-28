@@ -18,6 +18,7 @@ imageflow
 imazen
 interoperate
 jitsi
+linkchecker
 mergeable
 noreply
 oneline
