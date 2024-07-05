@@ -11,3 +11,7 @@ https://gitlab.com/yaook/meta/-/jobs/3267487105
 It's unclear why.
 
 I think this was a regression in nektos/act that was fixed in https://github.com/nektos/act/pull/1493
+
+## Alternatives
+
+You should be able to use [[Run from command line|Feature: Run from command line]] -- just ensure that check-spelling is available and the repository to check are available.
