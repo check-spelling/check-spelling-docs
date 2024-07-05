@@ -3,6 +3,7 @@
 [Ready](#ready) | [In progress](#in-progress) | [Near term](#near-term) | [Distant future](#distant-future) | [Currently out of scope](#related-but-currently-out-of-scope)
 
 ## Ready
+- 🏃  [[Run from command line|Feature: Run from command line]]
 
 ## In progress
 
