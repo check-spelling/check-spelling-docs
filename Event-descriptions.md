@@ -65,6 +65,8 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
   - [Resolution](#resolution-24)
 - [utf16-surrogate](#utf16-surrogate)
   - [Resolution](#resolution-25)
+- [utf16-surrogate-file](#utf16-surrogate-file)
+  - [Resolution](#resolution-25)
 - [sarif-generation-failed](#sarif-generation-failed)
   - [Resolution](#resolution-26)
 - [unclosed-block-ignore](#unclosed-block-ignore)
@@ -609,7 +611,15 @@ Check Spelling works by reviewing files and identifying problems with them. You 
 
 # utf16-surrogate
 
-In [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22), if a file contains utf16 surrogates, it'll be flagged.
+In [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22).
+
+See [utf16-surrogate-file](#utf16-surrogate-file) below.
+
+# utf16-surrogate-file
+
+If a file contains utf16 surrogates, it'll be flagged.
+
+This event was renamed from `utf16-surrogate` to `utf16-surrogate-file` in [v0.0.23](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.23).
 
 check-spelling is designed for utf-8 based files, so a file containing a utf-16 surrogate should be a reasonably good indication that the file won't contain content check-spelling can handle.
 
