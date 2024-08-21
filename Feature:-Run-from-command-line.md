@@ -19,4 +19,4 @@ A number of users want to be able to run check-spelling without needing to rely 
 
 ## More information
 
-For more information, see the tests (t/UnknownWords.t).
+For more information, see the tests ([`t/UnknownWords.t`](https://github.com/check-spelling/check-spelling/blob/prerelease/t/UnknownWords.t)).
