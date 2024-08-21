@@ -28,6 +28,7 @@ which given a bunch of GitHub (or GitLab) PRs (or commits)
 generated a PR (or just a commit) to update the file.
 
 - [Request for GitHub to support generating such entries](https://github.com/orgs/community/discussions/16880)
+- [Request for GitHub to warn about rebase/squash merging such entries](https://github.com/orgs/community/discussions/136477)
 
 It seems like a pretty neat small project, which someone
 could/should do.
