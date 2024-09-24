@@ -29,6 +29,14 @@ If you choose to use this feature today, you should either use [`only_check_chan
 
 Split the check pass for these objects from the main pass. In order to handle them, items really need to be added to `allow.txt`, otherwise a commit that adds a term to `expect.txt` to accept a commit message will then force the next PRs to remove the newly inserted `expect.txt` items.
 
+## Improve commit retrieval performance
+
+Currently check-spelling asks [actions/checkout](https://github.com/actions/checkout/) to retrieve the full commit history.
+
+That's pretty inefficient, because for this feature, it doesn't need anything beyond the commit messages.
+There's a clone mode `--filter=tree:0` which should allow for a much faster retrieval (on large repositories).
+It's described in [Get up to speed with partial clone and shallow clone](https://github.blog/open-source/git/get-up-to-speed-with-partial-clone-and-shallow-clone/).
+
 ## Presentation
 
 ### Lazy hackish implementation
