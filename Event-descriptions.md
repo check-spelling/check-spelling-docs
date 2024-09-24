@@ -668,18 +668,23 @@ A [[Block Ignore|Feature: Block Ignore]] rule's start pattern matched content in
 
 As a result, all content after the begin tag was ignored.
 
+For convenience, there should be a corresponding report [`unclosed-block-ignore-end`](#unclosed-block-ignore-end) that lists the marker that it was expected to find.
+
 Note that this feature is experimental, it's possible you've encountered a bug.
 
 ## Resolution
 
 - If you believe the behavior is incorrect, please [file a bug](https://github.com/check-spelling/check-spelling/issues/new).
 - If the end token really isn't present, consider adjusting your begin/end tokens.
+- One approach is to pick a new more specific begin token for the specific instance that would be hit first (but ideally only in this file) and a new end token that appears _after_ the begin token that doesn't have a matching end token.
 
 # unclosed-block-ignore-end
 
-A [[Block Ignore|Feature: Block Ignore]] rule's start pattern matched content in the file, but the corresponding end tag wasn't found.
+A [[Block Ignore|Feature: Block Ignore]] rule's start pattern matched content in the file, but the corresponding end tag wasn't found. The specific end marker should be listed in the report.
 
 As a result, all content after the begin tag was ignored.
+
+For convenience, there should be a corresponding report [`unclosed-block-ignore-begin`](#unclosed-block-ignore-begin) that lists the marker that started the unclosed block ignore.
 
 Note that this feature is experimental, it's possible you've encountered a bug.
 
@@ -687,6 +692,7 @@ Note that this feature is experimental, it's possible you've encountered a bug.
 
 - If you believe the behavior is incorrect, please [file a bug](https://github.com/check-spelling/check-spelling/issues/new).
 - If the end token really isn't present, consider adjusting your begin/end tokens.
+- One approach is to pick a new more specific begin token for the specific instance that would be hit first (but ideally only in this file) and a new end token that appears _after_ the begin token that doesn't have a matching end token.
 
 # missing-on-pull-request-event
 
