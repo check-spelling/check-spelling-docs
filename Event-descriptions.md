@@ -393,8 +393,8 @@ Version 0.0.22 will highlight the matching part of the line when SARIF reporting
 You can add the pattern into `patterns.txt`:
 
 ```perl
- hit-count: 169 file-count: 40
- Compiler flags
+# hit-count: 169 file-count: 40
+# Compiler flags
 (?:^|[\t ,"'`=(])-[DPWXYLlf](?=[A-Z]{2,}|[A-Z][a-z]|[a-z]{2,})
 ```
 
