@@ -34,7 +34,7 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
 - [candidate-pattern](#candidate-pattern)
   - [Resolution](#resolution-12)
   - [candidate-pattern with check_file_names file with use_sarif](#candidate-pattern-with-check_file_names-file-with-use_sarif)
-    - [Suggestions for candidate pattern matching paths-of-checked-files.txt](suggestions-for-candidate-pattern-matching-paths-of-checked-filestxt)
+    - [Suggestions for candidate pattern matching paths-of-checked-files.txt](#suggestions-for-candidate-pattern-matching-paths-of-checked-filestxt)
 - [unsupported-repo-notation](#unsupported-repo-notation)
 - [unsupported-configuration](#unsupported-configuration)
   - [`only_check_changed_files` and `use_sarif`](#only_check_changed_files-and-use_sarif)
