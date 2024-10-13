@@ -1,60 +1,60 @@
 # Configuration
 
-- [[Quick Start]]
+- [Quick Start](Quick-Start.md)
 - [Workflow Parameters](#workflow-parameters)
-- [[Configuration Files]]
-- See [[Configuration: Workflows]] for the general workflow modes
+- [Configuration Files](Configuration-Files.md)
+- See [Configuration: Workflows](./Configuration:-Workflows.md) for the general workflow modes
 
 ## Workflow Parameters
 
-See [[Configuration: Workflows]] for the supported GitHub workflows.
+See [Configuration: Workflows](./Configuration:-Workflows.md) for the supported GitHub workflows.
 
 | Parameter | Description |
 | ------------- | ------------- |
-| [GITHUB_TOKEN](#github_token) | github credential secret for api requests |
+| [GITHUB_TOKEN](#githubtoken) | github credential secret for api requests |
 | [config](#config) | directory with config files |
-| [dictionary_url](#dictionary_url) | url for primary dictionary |
-| [dictionary_version](#dictionary_version) | version of primary dictionary |
-| [experimental_apply_changes_via_bot](#experimental_apply_changes_via_bot) | allow [@check-spelling-bot](https://github.com/check-spelling-bot) to update PRs |
-| [experimental_parallel_jobs](#experimental_parallel_jobs) | parallelize spell checking file tasks |
-| [shortest_word](#shortest_word) | minimum word length |
-| [longest_word](#longest_word) | maximum word length |
-| [post_comment](#post_comment) | post comment |
-| [experimental_path](#experimental_path) | Directory root to check for spelling (note that bucket/project/config are independent of this) |
-| [capture_output_unknown_words](#capture_output_unknown_words) | Capture unknown words (should be added to expect.txt) as an action output |
-| [capture_output_stale_words](#capture_output_stale_words) | Capture stale words (should be removed from expect.txt) as an action output |
-| [capture_output_skipped_files](#capture_output_skipped_files) | Capture skipped files (could be added to excludes.txt) as an action output |
-| [experimental_commit_note](#experimental_commit_note) | If set, commit updates to expect automatically with this note |
-| [only_check_changed_files](#only_check_changed_files) | If set, only check changed files |
-| [dictionary_source_prefixes](#dictionary_source_prefixes) | prefixes for urls for dictionaries defined in [extra_dictionaries](#extra_dictionaries) |
-| [extra_dictionaries](#extra_dictionaries) | Dictionaries to include |
-| [check_extra_dictionaries](#check_extra_dictionaries) | If there are unknown words, see if they are in these additional dictionaries |
-| [extra_dictionary_limit](#extra_dictionary_limit) | The number of [check_extra_dictionaries](#check_extra_dictionaries) to report |
-| [event_aliases](#event_aliases) | Map an unsupported GitHub event to a known event |
-| [suppress_push_for_open_pull_request](#suppress_push_for_open_pull_request) | If running from a `push` event and there's an open `pull_request`, stop working and rely on the `pull_request` handling to check the branch |
-| [report_title_suffix](#report_title_suffix) | Appended to title (for use in [matrix configurations](https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#jobsjob_idstrategymatrix)) |
+| [dictionary_url](#dictionaryurl) | url for primary dictionary |
+| [dictionary_version](#dictionaryversion) | version of primary dictionary |
+| [experimental_apply_changes_via_bot](#experimentalapplychangesviabot) | allow [@check-spelling-bot](https://github.com/check-spelling-bot) to update PRs |
+| [experimental_parallel_jobs](#experimentalparalleljobs) | parallelize spell checking file tasks |
+| [shortest_word](#shortestword) | minimum word length |
+| [longest_word](#longestword) | maximum word length |
+| [post_comment](#postcomment) | post comment |
+| [experimental_path](#experimentalpath) | Directory root to check for spelling (note that bucket/project/config are independent of this) |
+| [capture_output_unknown_words](#captureoutputunknownwords) | Capture unknown words (should be added to expect.txt) as an action output |
+| [capture_output_stale_words](#captureoutputstalewords) | Capture stale words (should be removed from expect.txt) as an action output |
+| [capture_output_skipped_files](#captureoutputskippedfiles) | Capture skipped files (could be added to excludes.txt) as an action output |
+| [experimental_commit_note](#experimentalcommitnote) | If set, commit updates to expect automatically with this note |
+| [only_check_changed_files](#onlycheckchangedfiles) | If set, only check changed files |
+| [dictionary_source_prefixes](#dictionarysourceprefixes) | prefixes for urls for dictionaries defined in [extra_dictionaries](#extradictionaries) |
+| [extra_dictionaries](#extradictionaries) | Dictionaries to include |
+| [check_extra_dictionaries](#checkextradictionaries) | If there are unknown words, see if they are in these additional dictionaries |
+| [extra_dictionary_limit](#extradictionarylimit) | The number of [check_extra_dictionaries](#checkextradictionaries) to report |
+| [event_aliases](#eventaliases) | Map an unsupported GitHub event to a known event |
+| [suppress_push_for_open_pull_request](#suppresspushforopenpullrequest) | If running from a `push` event and there's an open `pull_request`, stop working and rely on the `pull_request` handling to check the branch |
+| [report_title_suffix](#reporttitlesuffix) | Appended to title (for use in [matrix configurations](https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#jobsjob_idstrategymatrix)) |
 | [ignored](#ignored) | Ignore specific events |
 | [errors](#errors) | Treat specific events as errors |
 | [notices](#notices) | Treat specific events as notices |
 | [warnings](#warnings) | Treat specific events as warnings |
-| [custom_task](#custom_task) | Workflow magic |
-| [internal_state_directory](#internal_state_directory) | Workflow magic |
-| [check_file_names](#check_file_names) | Spell check file paths |
-| [anonymize_secpoll_source](#anonymize_secpoll_source) | Use public dns to check action security state |
-| [ignore_security_advisory](#ignore_security_advisory) | Override action security state warning |
-| [largest_file](#largest_file) | Ignore large files |
-| [unknown_word_limit](#unknown_word_limit) | Limit the number of reports per unknown word |
-| [disable_checks](#disable_checks) | Disable various check-spelling behaviors |
-| [check_commit_messages](#check_commit_messages) | Check commit / PR metadata |
-| [use_magic_file](#use_magic_file) | Detect binary files |
-| [use_sarif](#use_sarif) | Generate SARIF Reports |
-| [summary_table](#summary_table) | Summary Table |
+| [custom_task](#customtask) | Workflow magic |
+| [internal_state_directory](#internalstatedirectory) | Workflow magic |
+| [check_file_names](#checkfilenames) | Spell check file paths |
+| [anonymize_secpoll_source](#anonymizesecpollsource) | Use public dns to check action security state |
+| [ignore_security_advisory](#ignoresecurityadvisory) | Override action security state warning |
+| [largest_file](#largestfile) | Ignore large files |
+| [unknown_word_limit](#unknownwordlimit) | Limit the number of reports per unknown word |
+| [disable_checks](#disablechecks) | Disable various check-spelling behaviors |
+| [check_commit_messages](#checkcommitmessages) | Check commit / PR metadata |
+| [use_magic_file](#usemagicfile) | Detect binary files |
+| [use_sarif](#usesarif) | Generate SARIF Reports |
+| [summary_table](#summarytable) | Summary Table |
 | [report-timing](#report-timing) | Report file processing times |
-| [alternate_engine](#alternate_engine) | Use another version of check-spelling |
-| [alternate_engine_key](#alternate_engine_key) | ssh key to check out alternate version of check-spelling |
+| [alternate_engine](#alternateengine) | Use another version of check-spelling |
+| [alternate_engine_key](#alternateenginekey) | ssh key to check out alternate version of check-spelling |
 | [cache-dictionaries](#cache-dictionaries) | Allows workflows to disable caching dictionaries |
-| [caller_container](#caller_container) | Hack for `act` |
-| [candidate_example_limit](#candidate_example_limit) | Limit the number of reports per pattern suggestion |
+| [caller_container](#callercontainer) | Hack for `act` |
+| [candidate_example_limit](#candidateexamplelimit) | Limit the number of reports per pattern suggestion |
 | [checkout](#checkout) | Let action manage checkout process |
 | [ignore-pattern](#ignore-pattern) | Characters to ignore while parsing lines |
 | [lower-pattern](#lower-pattern) | Pattern describing lowercase characters while parsing lines |
@@ -62,12 +62,12 @@ See [[Configuration: Workflows]] for the supported GitHub workflows.
 | [not-upper-or-lower-pattern](#not-upper-or-lower-pattern) | Pattern describing characters that are neither uppercase nor lowercase while parsing lines |
 | [punctuation-pattern](#punctuation-pattern) | Pattern describing punctuation characters while parsing lines |
 | [upper-pattern](#upper-pattern) | Pattern describing uppercase characters while parsing lines |
-| [quit_without_error](#quit_without_error) | Cause action not to trigger a failure state regardless of its internal status |
-| [spell_check_this](#spell_check_this) | Fallback configuration data to use with checkout |
-| [ssh_key](#ssh_key) | Git ssh key for checking out (to enable writes with workflows) |
+| [quit_without_error](#quitwithouterror) | Cause action not to trigger a failure state regardless of its internal status |
+| [spell_check_this](#spellcheckthis) | Fallback configuration data to use with checkout |
+| [ssh_key](#sshkey) | Git ssh key for checking out (to enable writes with workflows) |
 | [task](#task) | Workflow magic |
 
-See [[Configuration: Advanced]] for additional options.
+See [Configuration: Advanced](./Configuration:-Advanced.md) for additional options.
 
 ### GITHUB_TOKEN
 
@@ -77,34 +77,34 @@ By default the [GITHUB_TOKEN](https://docs.github.com/en/actions/reference/authe
 ⚠️ [@dependabot](https://github.com/dependabot) appears to be unfriendly to this token.
 
 > **Note:** GitHub Actions get an automatic token which allows for read operations.
-> If the Action is a [pull_request](../Configuration:-Workflows#pull_request) and the originating repository isn't trusted, then the automatic token will not have write permission,
+> If the Action is a [pull_request](./Configuration:-Workflows.md#pullrequest) and the originating repository isn't trusted, then the automatic token will not have write permission,
 > which means it won't be able to post a comment to the PR, there are three ways to address this:
 >
-> - Use [pull_request_target](../Configuration:-Workflows#pull_request_target) recommended as of [0.0.17-alpha](https://github.com/check-spelling/check-spelling/releases/tag/0.0.17-alpha)
+> - Use [pull_request_target](./Configuration:-Workflows.md#pullrequesttarget) recommended as of [0.0.17-alpha](https://github.com/check-spelling/check-spelling/releases/tag/0.0.17-alpha)
 > - Create a custom Personal Access Token with `repo read` + `comment`
 
 ### config
 
 Default: `.github/actions/spelling`
 
-In this directory, you can place [files](#Files) to influence the spell checker.
+In this directory, you can place [files](#files) to influence the spell checker.
 
 ### dictionary_url
 
 If you don't define a dictionary using [dictionary](#dictionary) files,
 the spell checker will retrieve a dictionary. You can provide a different url
 if you have a preferred base. The default includes a variable (`$DICTIONARY_VERSION`)
-for a [version](#dictionary_version).
+for a [version](#dictionaryversion).
 
-This [[feature|Feature: Versioned dictionaries]] is new with [0.0.17](https://github.com/check-spelling/check-spelling/releases/tag/0.0.17-alpha).
+This [feature](./Feature:-Versioned-dictionaries.md) is new with [0.0.17](https://github.com/check-spelling/check-spelling/releases/tag/0.0.17-alpha).
 
 ### dictionary_version
 
-If [dictionary_url](#dictionary_url) includes (`$DICTIONARY_VERSION`),
+If [dictionary_url](#dictionaryurl) includes (`$DICTIONARY_VERSION`),
 you can override the default version.
 
 Over time, the default version will probably change.
-See [[versioned dictionaries|Feature: Versioned dictionaries]]
+See [versioned dictionaries](./Feature:-Versioned-dictionaries.md)
 for more information.
 
 ### experimental_apply_changes_via_bot
@@ -123,7 +123,7 @@ incorporating the feedback it reports.
 
 
     ```yaml
-      if: ${{
+      if: ${% raw %}{{{% endraw %}
         github.event_name == 'issue_comment' &&
         github.event.issue.pull_request &&
         contains(github.event.comment.body, '@check-spelling-bot apply')
@@ -207,25 +207,25 @@ Future versions will select different tags for `cspell`, and you can mix and mat
 > **Warning**
 > If you don't override `check_extra_dictionaries`, you'll want to ensure that `cspell:` maps to something that has each of the items in it, otherwise check-spelling will be a bit upset...
 
-Used with [extra_dictionaries](#extra_dictionaries) / [check_extra_dictionaries](#check_extra_dictionaries) to define supplemental dictionary urls in a compact form.
+Used with [extra_dictionaries](#extradictionaries) / [check_extra_dictionaries](#checkextradictionaries) to define supplemental dictionary urls in a compact form.
 
 ### extra_dictionaries
 
 Extra dictionaries to be used when looking for unknown words.
 
-This is a list of urls, additional url prefixes are defined by [`dictionary_source_prefixes`](#dictionary_source_prefixes).
+This is a list of urls, additional url prefixes are defined by [`dictionary_source_prefixes`](#dictionarysourceprefixes).
 
-See [Area dictionaries](https://github.com/check-spelling/check-spelling/wiki/Feature:-Area-dictionaries).
+See [Area dictionaries](./Feature:-Area-dictionaries.md).
 
 ### check_extra_dictionaries
 
 After unknown words are identified, they can be checked against additional dictionaries.
 
-This enables users to choose additional dictionaries to add to [extra_dictionaries](#extra_dictionaries) in future runs.
+This enables users to choose additional dictionaries to add to [extra_dictionaries](#extradictionaries) in future runs.
 
 ### extra_dictionary_limit
 
-In order to not drown in [check_extra_dictionaries](#check_extra_dictionaries) suggestions, only this number of dictionaries are suggested in reports. The rest are available in the generated artifact. If you find the number of listed dictionaries isn't sufficient, you can increase this number.
+In order to not drown in [check_extra_dictionaries](#checkextradictionaries) suggestions, only this number of dictionaries are suggested in reports. The rest are available in the generated artifact. If you find the number of listed dictionaries isn't sufficient, you can increase this number.
 
 ### event_aliases
 
@@ -252,7 +252,7 @@ The report_title_suffix enables each comment to have a distinct bit to help hint
 
 check-spelling defaults to defining certain events as errors, warnings, or notices. To silence specific events, list them here.
 
-See [[Set event severity|Feature: Set event severity]] for more information.
+See [Set event severity](./Feature:-Set-event-severity.md) for more information.
 
 ### errors
 
@@ -261,7 +261,7 @@ See [[Set event severity|Feature: Set event severity]] for more information.
 check-spelling defaults to defining certain events as errors, warnings, or notices. If you disagree with these
 values, you can change the mapping by using this field.
 
-See [[Set event severity|Feature: Set event severity]] for more information.
+See [Set event severity](./Feature:-Set-event-severity.md) for more information.
 
 ### notices
 
@@ -270,14 +270,14 @@ See [[Set event severity|Feature: Set event severity]] for more information.
 check-spelling defaults to defining certain events as errors and others as warnings. If you disagree with these
 values, you can change the mapping by using this field.
 
-See [[Set event severity|Feature: Set event severity]] for more information.
+See [Set event severity](./Feature:-Set-event-severity.md) for more information.
 
 ### warnings
 
 check-spelling defaults to defining certain events as errors and others as warnings. If you disagree with these
 values, you can change the mapping by using this field.
 
-See [[Set event severity|Feature: Set event severity]] for more information.
+See [Set event severity](./Feature:-Set-event-severity.md) for more information.
 
 ### custom_task
 
@@ -290,7 +290,7 @@ Replaced by [task](#task).
 
 ### internal_state_directory
 
-As part of [custom_task](#custom_task), the default task returns its internal state. This needs to be passed to the `custom_task`: `comment` phase.
+As part of [custom_task](#customtask), the default task returns its internal state. This needs to be passed to the `custom_task`: `comment` phase.
 
 Use this parameter to indicate where the internal state was stashed.
 
@@ -298,7 +298,7 @@ Generally stashing is done via `actions/upload-artifact@v2` and unstashing via `
 
 ### check_file_names
 
-People misspell file names too. If you want, Check Spelling can complain about them too. [[Feature: Check filenames and paths]]
+People misspell file names too. If you want, Check Spelling can complain about them too. [Feature: Check filenames and paths](./Feature:-Check-filenames-and-paths.md)
 
 ### anonymize_secpoll_source
 
@@ -334,7 +334,7 @@ GitHub will try to attach annotations for the first couple of reported items.
 
 The downside of this limit, of course, is that if there are more instances of a given misspelled word than this limit, you will have to find the others on your own and fix them as well. (Or just iterate with the action until it's happy...)
 
-See [[Limit reports for each unknown word|Feature: Cap reports per unknown word]]
+See [Limit reports for each unknown word](./Feature:-Cap-reports-per-unknown-word.md)
 
 ## disable_checks
 
@@ -342,8 +342,8 @@ Introduced after v0.0.20:
 
 This is a comma-delimited list of flags:
 
-- `noisy-file` - [[Scan noisy files|Feature: Scan noisy files]]
-- `word-collating` - [[Disable word collating|Feature: Disable word collating]]
+- `noisy-file` - [Scan noisy files](./Feature:-Scan-noisy-files.md)
+- `word-collating` - [Disable word collating](./Feature:-Disable-word-collating.md)
 
 ## check_commit_messages
 
@@ -351,7 +351,7 @@ This is a comma-delimited list of flags:
 
 Introduced in [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21)
 
-[[Check commit / PR metadata|Feature: Check commit messages]]
+[Check commit / PR metadata](./Feature:-Check-commit-messages.md)
 
 You can specify multiple values
 
@@ -374,7 +374,7 @@ Quickly check if files are binary and skip them if they are.
 
 Introduced in [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21)
 
-See [[Feature: SARIF output]]. This can be used as an alternative to having the tool generate
+See [Feature: SARIF output](./Feature:-SARIF-output.md). This can be used as an alternative to having the tool generate
 comments on PRs / commits (i.e. you could remove the comment `jobs`).
 
 It integrates with GitHub's SARIF analysis and reporting.
@@ -388,9 +388,9 @@ to see reports, so the experience may be slightly bumpy for projects w/ external
 
 Introduced in [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22)
 
-Include a [[Summary Table|Feature: Summary Table]] in the [[Step Summary|Feature: Step Summary]].
+Include a [Summary Table](./Feature:-Summary-Table.md) in the [Step Summary](./Feature:-Step-Summary.md).
 
-See [[Feature: Summary Table]]
+See [Feature: Summary Table](./Feature:-Summary-Table.md)
 
 ## report-timing
 
@@ -400,75 +400,75 @@ Generate a csv file with the start and stop time for each processed file.
 
 Note that there can be multiple threads running and the precision is fairly low so it's very easy for a number of files to all have the same start and stop times.
 
-See [[Feature: Timing Report]]
+See [Feature: Timing Report](./Feature:-Timing-Report.md)
 
 ## alternate_engine
 
-For testing a different version of check-spelling, generally from a private repository. See also [alternate_engine_key](#alternate_engine_key)
+For testing a different version of check-spelling, generally from a private repository. See also [alternate_engine_key](#alternateenginekey)
 
 ## alternate_engine_key
 
-ssh key to use to check out the [alternate_engine](#alternate_engine).
+ssh key to use to check out the [alternate_engine](#alternateengine).
 
 ## cache-dictionaries
 
-This enables consumers to disable [[Feature: Cache dictionaries]].
+This enables consumers to disable [Feature: Cache dictionaries](./Feature:-Cache-dictionaries.md).
 
 ## caller_container
 
 [act](https://github.com/nektos/act) Hack to enable passing check-spelling job data from one check-spelling job to another.
 
 ```yaml
-        caller_container: ${{ needs.spelling.outputs.docker_container }}
+        caller_container: ${% raw %}{{{% endraw %} needs.spelling.outputs.docker_container }}
 ```
 
 ## candidate_example_limit
 
 [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22)
 
-Control how many lines are reported for each [[pattern suggestion|Feature: Suggest patterns]].
+Control how many lines are reported for each [pattern suggestion](./Feature:-Suggest-patterns.md).
 
 ## checkout
 
-check-spelling workflows often need `write` access in order to perform various actions (adding PR comments, adding commit comments, generating SARIF reports) and having write access is a bit of a pain for pull requests from foreign repositories (see [Configuration: Workflows `pull_request_target`](https://github.com/check-spelling/check-spelling/wiki/Configuration%3A-Workflows#pull_request_target) for the various combinations).
+check-spelling workflows often need `write` access in order to perform various actions (adding PR comments, adding commit comments, generating SARIF reports) and having write access is a bit of a pain for pull requests from foreign repositories (see [Configuration: Workflows `pull_request_target`](Configuration%3A-Workflows.md#pullrequesttarget) for the various combinations).
 
 With `checkout: 1`, the check-spelling action will use [actions/checkout](https://github.com/actions/checkout) to check out the repository and [check-spelling/checkout-merge](https://github.com/check-spelling/checkout-merge) to get the merged commit instead of requiring the workflow to include the messy logic.
 
 ## bucket
 
-See [[Configuration: Advanced]].
+See [Configuration: Advanced](./Configuration:-Advanced.md).
 
 ## project
 
-See [[Configuration: Advanced]].
+See [Configuration: Advanced](./Configuration:-Advanced.md).
 
 ## debug
 
-See [[Configuration: Advanced]].
+See [Configuration: Advanced](./Configuration:-Advanced.md).
 
 ## ignore-pattern
 
-Part of [[Feature: Configurable word characters]].
+Part of [Feature: Configurable word characters](./Feature:-Configurable-word-characters.md).
 
 ## lower-pattern
 
-Part of [[Feature: Configurable word characters]].
+Part of [Feature: Configurable word characters](./Feature:-Configurable-word-characters.md).
 
 ## not-lower-pattern
 
-Part of [[Feature: Configurable word characters]].
+Part of [Feature: Configurable word characters](./Feature:-Configurable-word-characters.md).
 
 ## not-upper-or-lower-pattern
 
-Part of [[Feature: Configurable word characters]].
+Part of [Feature: Configurable word characters](./Feature:-Configurable-word-characters.md).
 
 ## punctuation-pattern
 
-Part of [[Feature: Configurable word characters]].
+Part of [Feature: Configurable word characters](./Feature:-Configurable-word-characters.md).
 
 ## upper-pattern
 
-Part of [[Feature: Configurable word characters]].
+Part of [Feature: Configurable word characters](./Feature:-Configurable-word-characters.md).
 
 ## quit_without_error
 
@@ -476,11 +476,11 @@ Prevent check-spelling from exiting with an error code.
 
 ## spell_check_this
 
-repository containing check-spelling metadata to use when the current checkout doesn't have any. This is mostly useful for [[Feature: Easier bootstrapping]].
+repository containing check-spelling metadata to use when the current checkout doesn't have any. This is mostly useful for [Feature: Easier bootstrapping](./Feature:-Easier-bootstrapping.md).
 
 ## ssh_key
 
-The ssh key to use to check out the repository (when using [checkout](#checkout)), this enables [[Feature: Update with deploy key]] to work smoothly.
+The ssh key to use to check out the repository (when using [checkout](#checkout)), this enables [Feature: Update with deploy key](./Feature:-Update-with-deploy-key) to work smoothly.
 
 If the value isn't set (e.g. because it points to an undefined secret), the code will rely on `contents: write` in order to update the repository.
 
@@ -495,46 +495,49 @@ Used to pass messages between multiple check-spelling stages, especially from a 
 
 ## Configuration Files
 
-See [[Configuration Files]]
+See [Configuration Files](Configuration-Files.md)
 
 #### Files
 
 ##### advice
 
-See [Configuration Files: Advice](https://github.com/check-spelling/check-spelling/wiki/Configuration-Files#advice)
+See [Configuration Files: Advice](Configuration-Files.md#advice)
 
 ##### allow
 
-See [Configuration Files: Allow](https://github.com/check-spelling/check-spelling/wiki/Configuration-Files#allow)
+See [Configuration Files: Allow](Configuration-Files.md#allow)
 
 ##### block delimiters
 
-See [Configuration Files: Block Delimiters](https://github.com/check-spelling/check-spelling/wiki/Configuration-Files#block-delimiters)
+See [Configuration Files: Block Delimiters](Configuration-Files.md#block-delimiters)
 
 ##### dictionary
 
-See [Configuration Files: Dictionary](https://github.com/check-spelling/check-spelling/wiki/Configuration-Files#dictionary)
+See [Configuration Files: Dictionary](Configuration-Files.md#dictionary)
 
 ##### excludes
 
-See [Configuration Files: Excludes](https://github.com/check-spelling/check-spelling/wiki/Configuration-Files#excludes)
+See [Configuration Files: Excludes](Configuration-Files.md#excludes)
 
 ##### expect
 
-See [Configuration Files: Expect](https://github.com/check-spelling/check-spelling/wiki/Configuration-Files#expect)
+See [Configuration Files: Expect](Configuration-Files.md#expect)
 
 ##### forbidden
 
-See [Configuration Files: Forbidden](https://github.com/check-spelling/check-spelling/wiki/Configuration-Files#forbidden)
+See [Configuration Files: Forbidden](Configuration-Files.md#forbidden)
 
 ##### only
 
-See [Configuration Files: Only](https://github.com/check-spelling/check-spelling/wiki/Configuration-Files#only)
+See [Configuration Files: Only](Configuration-Files.md#only)
 
 ##### patterns
 
-See [Configuration Files: Patterns](https://github.com/check-spelling/check-spelling/wiki/Configuration-Files#patterns)
+See [Configuration Files: Patterns](Configuration-Files.md#patterns)
 
 ##### reject
 
-See [Configuration Files: Reject](https://github.com/check-spelling/check-spelling/wiki/Configuration-Files#reject)
+See [Configuration Files: Reject](Configuration-Files.md#reject)
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Deprecations](Deprecations.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

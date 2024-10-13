@@ -1,12 +1,12 @@
 # Known Issues
 
 - [Only changed doesn't work when PRs are initially created from forks](#only-changed-doesnt-work-when-prs-are-initially-created-from-forks)
-- [Too many unrecognized words](#Too_many_unrecognized_words)
+- [Too many unrecognized words](#toomanyunrecognizedwords)
 - [@dependabot can't comment](#dependabot-cant-comment)
 
 ## Only changed doesn't work when PRs are initially created from forks
 
-When using [`only_check_changed_files`](https://github.com/check-spelling/check-spelling/wiki/Configuration#only_check_changed_files) and a PR is _created_ from a **fork**, the initial check will probably not find files to check, producing a warning:
+When using [`only_check_changed_files`](Configuration.md#onlycheckchangedfiles) and a PR is _created_ from a **fork**, the initial check will probably not find files to check, producing a warning:
 
 > ⚠️ Was not provided any regular readable files
 
@@ -43,7 +43,7 @@ Usually this happens when a bunch of binary files are added and are not in `excl
 
 ### Resolution
 
-See [[Automatically truncate comment|Feature: Automatically truncate comment]]
+See [Automatically truncate comment](./Feature:-Automatically-truncate-comment.md)
 
 👷 Upgrade to [v0.0.20](https://github.com/check-spelling/check-spelling/releases/v0.0.20) (or newer)
 
@@ -55,4 +55,7 @@ See [[Automatically truncate comment|Feature: Automatically truncate comment]]
 
 ### Resolution
 
-See [[@dependabot]]
+See [@dependabot](@dependabot.md)
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Deprecations](Deprecations.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

@@ -16,4 +16,7 @@ It'd be nice to be able to provide something like this:
 
 In a Comment or a Step Summary, the form could also prefill the url for the PR / commit. But for a Comment, there really wouldn't be enough space.
 
-As such, this probably won't be implemented until after switching to [[Job Summaries|Behavior change: Job Summaries]].
+As such, this probably won't be implemented until after switching to [Job Summaries](./Behavior-change:-Job-Summaries.md).
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Deprecations](Deprecations.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

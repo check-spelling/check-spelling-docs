@@ -2,7 +2,7 @@
 
 ## Instructions
 
-1. Clone the [[https://github.com/check-spelling/spell-check-this/]] template repository
+1. Clone the [https://github.com/check-spelling/spell-check-this/](https://github.com/check-spelling/spell-check-this/) template repository
 2. Copy the contents of `.github/` into your repository
 3. `git add .github/`
 4. `git commit`
@@ -12,7 +12,7 @@
 
 This will give you handling for `push`, `pull_request_target`, and example files with a `README.md` describing the files and linking to more examples in this wiki.
 
-- If you have existing forks, you should see [[Onboarding]] for information about tweaks you can make to the workflow in order to improve the experience for PRs from those existing forks.
+- If you have existing forks, you should see [Onboarding](Onboarding.md) for information about tweaks you can make to the workflow in order to improve the experience for PRs from those existing forks.
 
 - Best-practice for workflows is to use a pinned version.
 
@@ -26,3 +26,6 @@ This will give you handling for `push`, `pull_request_target`, and example files
 ℹ️ In general, a file `task.ext` can be replaced with a directory `task/`
 containing multiple files ending with `.ext` if you prefer --
 the files will be merged together.
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Deprecations](Deprecations.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

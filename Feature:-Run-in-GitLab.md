@@ -14,4 +14,7 @@ I think this was a regression in nektos/act that was fixed in https://github.com
 
 ## Alternatives
 
-You should be able to use [[Run from command line|Feature: Run from command line]] -- just ensure that check-spelling is available and the repository to check are available.
+You should be able to use [Run from command line](./Feature:-Run-from-command-line.md) -- just ensure that check-spelling is available and the repository to check are available.
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Deprecations](Deprecations.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

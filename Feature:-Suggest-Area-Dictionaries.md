@@ -3,7 +3,7 @@
 Included in [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20)
 
 To make the out-of-the-box flow better, it'd be helpful if the tool
-automatically suggested [[Area Dictionaries|Feature: Area dictionaries]] to enable.
+automatically suggested [Area Dictionaries](./Feature:-Area-dictionaries.md) to enable.
 
 As the work to parallelize the spell checker yields lists of unknown words,
 it's possible to check a number of potential supplemental dictionaries against
@@ -52,3 +52,6 @@ You might wonder "why did the spell checker suggest lua?", the answer is that [L
 ## Future work
 
 I intend to work through at least the cpp dictionary to weed out some portion of the misspelled words. Sadly, the dictionary has >100k entries, and thus it is a fairly daunting task.
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Deprecations](Deprecations.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

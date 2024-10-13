@@ -23,14 +23,17 @@ GitHub Markdown | txt | md
 
 Category | Task | Format | Current | Proposed
 -|-|-|-|-
-Dictionary | [Replace base dictionary](https://github.com/check-spelling/check-spelling/wiki/Feature:-Dictionary-deltas) | words | dictionary | dictionary
-Dictionary | [Add items to dictionary](https://github.com/check-spelling/check-spelling/wiki/Feature:-Allow) | words | allow | dictionary_additions
-Dictionary | [Remove items from dictionary](https://github.com/check-spelling/check-spelling/wiki/Configuration-Examples:-reject) | patterns | reject | dictionary_removals
-Files | [Ignore files](https://github.com/check-spelling/check-spelling/wiki/Configuration-Examples:-excludes) | patterns | excludes | file_ignore
-Files | [Limit file checking](https://github.com/check-spelling/check-spelling/wiki/Configuration-Examples:-only) | patterns | only | file_exclusive
-Content | [Mask file content](https://github.com/check-spelling/check-spelling/wiki/Configuration-Examples:-patterns) | patterns | patterns | line_masks
-Content | [Forbidden patterns](https://github.com/check-spelling/check-spelling/wiki/Feature:-Forbidden-patterns) | patterns | line_forbidden | line_objections
-Output | [Acknowledge some word-like things that aren't in the dictionary](https://github.com/check-spelling/check-spelling/wiki/Configuration#expect) | words | expect | word_expectations
-Output | [Help users respond to the bot](https://github.com/check-spelling/check-spelling/wiki/Configuration-Examples:-advice) | md | advice | `?`
+Dictionary | [Replace base dictionary](./Feature:-Dictionary-deltas.md) | words | dictionary | dictionary
+Dictionary | [Add items to dictionary](./Feature:-Allow.md) | words | allow | dictionary_additions
+Dictionary | [Remove items from dictionary](./Configuration-Examples:-reject.md) | patterns | reject | dictionary_removals
+Files | [Ignore files](./Configuration-Examples:-excludes.md) | patterns | excludes | file_ignore
+Files | [Limit file checking](./Configuration-Examples:-only.md) | patterns | only | file_exclusive
+Content | [Mask file content](./Configuration-Examples:-patterns.md) | patterns | patterns | line_masks
+Content | [Forbidden patterns](./Feature:-Forbidden-patterns.md) | patterns | line_forbidden | line_objections
+Output | [Acknowledge some word-like things that aren't in the dictionary](Configuration.md#expect) | words | expect | word_expectations
+Output | [Help users respond to the bot](./Configuration-Examples:-advice.md) | md | advice | `?`
 
 Raised in https://github.com/check-spelling/check-spelling/issues/10
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Deprecations](Deprecations.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

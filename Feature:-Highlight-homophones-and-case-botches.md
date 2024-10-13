@@ -16,3 +16,6 @@
 - [greater _than_](https://github.com/check-spelling/spell-check-this/blob/6b13bdb3994f3dcb77147c4a06b128fe6d1fe8c8/.github/actions/spelling/line_forbidden.patterns#L54)
 - [less _than_](https://github.com/check-spelling/spell-check-this/blob/6b13bdb3994f3dcb77147c4a06b128fe6d1fe8c8/.github/actions/spelling/line_forbidden.patterns#L80)
 - [rather _than_](https://github.com/check-spelling/spell-check-this/blob/6b13bdb3994f3dcb77147c4a06b128fe6d1fe8c8/.github/actions/spelling/line_forbidden.patterns#L92)
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Deprecations](Deprecations.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)
