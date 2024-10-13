@@ -33,6 +33,8 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
       - [Use multiple prefixes](#use-multiple-prefixes)
 - [candidate-pattern](#candidate-pattern)
   - [Resolution](#resolution-12)
+  - [candidate-pattern with check_file_names file with use_sarif](#candidate-pattern-with-check_file_names-file-with-use_sarif)
+    - [Suggestions for candidate pattern matching paths-of-checked-files.txt](suggestions-for-candidate-pattern-matching-paths-of-checked-filestxt)
 - [unsupported-repo-notation](#unsupported-repo-notation)
 - [unsupported-configuration](#unsupported-configuration)
   - [`only_check_changed_files` and `use_sarif`](#only_check_changed_files-and-use_sarif)
@@ -397,6 +399,16 @@ You can add the pattern into `patterns.txt`:
 ```
 
 Or, if you've decided that the candidate pattern doesn't make sense for the repository, you can remove it from or comment it out in the `candidate.patterns` file.
+
+## candidate-pattern with check_file_names file with use_sarif
+
+If you're using [`check_file_names`](https://github.com/check-spelling/check-spelling/wiki/Configuration#check_file_names) and [`use_sarif`](https://github.com/check-spelling/check-spelling/wiki/Configuration#use_sarif) with the [SARIF Viewer](https://marketplace.visualstudio.com/items?itemName=MS-SarifVSCode.sarif-viewer) for [Visual Studio Code](https://code.visualstudio.com/) and a [suggested pattern|Feature:-Suggest-patterns] matches a file path, the location will be listed as `paths-of-checked-files.txt` and VS Code will not be able to identify the actual file.
+
+### Suggestions for candidate pattern matching paths-of-checked-files.txt
+
+* You can download the sarif json and open it to identify the matched file.
+* You can use [Looking for items locally] to generate a `$files` environment variable and dump that to a file. If you search that file using a case-sensitive regular expression for the suggested pattern, you should be able to identify the file.
+* Often files that match patterns themselves are worth excluding, so you might consider adding the pattern or a variation to [`excludes`|Configuration Examples: excludes] instead of [`patterns`|Configuration Examples: patterns]
 
 # unsupported-repo-notation
 
