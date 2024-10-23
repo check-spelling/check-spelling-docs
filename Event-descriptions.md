@@ -79,6 +79,9 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
   - [Resolution](#resolution-29)
 - [missing-on-pull-request-event](#missing-on-pull-request-event)
   - [Resolution](#resolution-30)
+- [missing-merge-head](#missing-merge-head)
+  - [Resolution](#resolution-31)
+
 
 ℹ️ As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), workflows can [[configure whether specific events are treated as ❌Errors or ⚠️Warnings|Feature: Treat specific errors as warnings]].
 
@@ -717,3 +720,12 @@ Instead of leaving users without a run, the `suppress_push_for_open_pull_request
 - Add a `pull_request` or `pull_request_target` event to the `on:` block in the workflow.
 - Remove `suppress_push_for_open_pull_request` from the check-spelling configuration.
 - If you believe the behavior is incorrect, please [file a bug](https://github.com/check-spelling/check-spelling/issues/new).
+
+# missing-merge-head
+
+This is known to happen when a PR is reopened. check-spelling as of [v0.0.23](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.23) should be able to check spelling, but will not be able to upload a SARIF report as that requires information about the PR merge commit.
+
+## Resolution
+
+It's possible that the commit will be regenerated, but the simplest thing to do is to push a new commit.
+
