@@ -8,6 +8,8 @@ Dictionaries will go to a specific directory and [actions/cache](https://github/
 
 The dictionary retrieval code can choose to skip retrieving any file(s) it already has.
 
+ℹ️ Caching is not implemented as of [v0.0.23](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.23). You could merge a number of dictionaries into a single file and reference it instead if you believe the performance of downloading a bunch of dictionaries in parallel is problematic. At the time of the release of [v0.0.23](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.23), the behavior of actions/cache was sufficiently problematic that all caching code was removed.
+
 ### Invalidation
 
 Each dictionary's ETAG will be stored.
