@@ -6,7 +6,7 @@ Spammers do periodically attack GitHub wikis and at least a couple of attacks ha
 
 ## Security Polling
 
-Check Spelling performs [[Security Polling|Feature: Security Polling]] to verify that the running version isn't known insecure.
+Check Spelling performs [Security Polling](./Feature:-Security-Polling.md) to verify that the running version isn't known insecure.
 
 ## Policy
 
@@ -27,3 +27,6 @@ There is a single legacy JavaScript file which replaced Docker and has been repl
 [actions/shellcheck](https://github.com/marketplace/actions/shellcheck) will probably be added eventually.
 
 It's expected that making it happy will require a non-trivial amount of effort.
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Deprecations](Deprecations.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

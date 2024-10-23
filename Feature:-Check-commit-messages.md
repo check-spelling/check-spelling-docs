@@ -6,7 +6,7 @@ If a repository has enabled incremental checking, then it wouldn't be terribly h
 
 This would be _optional_, and I **don't expect** it to be on by default (although I may enable it in spell-check-this's workflow).
 
-It's somewhat similar to [[Feature: Check filenames and paths]].
+It's somewhat similar to [Feature: Check filenames and paths](./Feature:-Check-filenames-and-paths.md).
 
 ## Status
 
@@ -14,7 +14,7 @@ It's somewhat similar to [[Feature: Check filenames and paths]].
 
 See [Future work](#future-work) for thoughts on how to improve the implementation.
 
-If you choose to use this feature today, you should either use [`only_check_changed_files`](../Configuration#only_check_changed_files) or include text in [`advice.md`](../Configuration#advice) suggesting that commit message / PR items be added to [`allow.txt`](../Configuration#allow) instead of [`expect.txt`](../Configuration#expect).
+If you choose to use this feature today, you should either use [`only_check_changed_files`](./Configuration.md#onlycheckchangedfiles) or include text in [`advice.md`](./Configuration.md#advice) suggesting that commit message / PR items be added to [`allow.txt`](./Configuration.md#allow) instead of [`expect.txt`](./Configuration.md#expect).
 
 ## Implemented modes
 
@@ -56,4 +56,7 @@ Use [`$GITHUB_STEP_SUMMARY`](https://github.blog/2022-05-09-supercharging-github
 ## Potential additional modes
 
 - n commits - This is trivial to implement, but without a use case, I don't intend to implement it
-- commits since a specific sha or branch - This might be necessary in order to support adding items to [`expect.txt`](../Configuration#expect), although I'm convinced it makes more sense to use [`allow.txt`](../Configuration#allow) or [`patterns.txt`](../Configuration#patterns).
+- commits since a specific sha or branch - This might be necessary in order to support adding items to [`expect.txt`](./Configuration.md#expect), although I'm convinced it makes more sense to use [`allow.txt`](./Configuration.md#allow) or [`patterns.txt`](./Configuration.md#patterns).
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Deprecations](Deprecations.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

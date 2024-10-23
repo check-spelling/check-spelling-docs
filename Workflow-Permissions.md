@@ -29,7 +29,7 @@ or
 
 ## `pull-requests: read`
 
-In order to stop early when configured with [`suppress_push_for_open_pull_request`](https://github.com/check-spelling/check-spelling/wiki/Configuration#suppress_push_for_open_pull_request),
+In order to stop early when configured with [`suppress_push_for_open_pull_request`](Configuration.md#suppresspushforopenpullrequest),
 check-spelling needs to be able to check for pull requests.
 
 ### Permissions
@@ -41,7 +41,7 @@ permissions:
 
 ## `actions: read`
 
-In order to retrieve artifacts with [post_comment](https://github.com/check-spelling/check-spelling/wiki/Configuration#post_comment), check-spelling will need `actions: read`.
+In order to retrieve artifacts with [post_comment](Configuration.md#postcomment), check-spelling will need `actions: read`.
 
 The normal way to do that is with:
 
@@ -51,3 +51,6 @@ The normal way to do that is with:
 permissions:
   actions: read
 ```
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Deprecations](Deprecations.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

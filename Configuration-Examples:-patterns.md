@@ -414,7 +414,7 @@ posthog\.init\((['"])phc_[^"',]+\g{-1},
 
 ## Duplicates
 
-If you have [duplicate detection](https://github.com/check-spelling/check-spelling/wiki/Feature%3A-Forbidden-patterns#duplicate-words), you may run into false positives, here are some examples of ways to suppress them:
+If you have [duplicate detection](Feature%3A-Forbidden-patterns.md#duplicate-words), you may run into false positives, here are some examples of ways to suppress them:
 
 ```
 # mounts
@@ -423,11 +423,14 @@ mount (?:-n |)-t (\w+)\s+\g{-1}
 
 ## See also
 
-- [[Forbidden patterns|Feature: Forbidden patterns]]
+- [Forbidden patterns](./Feature:-Forbidden-patterns.md)
 
 ## Notes
 
 - `patterns` operate on a per line basis
 - the first match wins, and matches are replaced by a single space character -- roughly resulting in the matched content being treated as a word break (and not seen by the word checker)
   - the behavior may change such that the length of a replacement matches the length of the replaced content...
-- there is no support for multiline patterns, see [[Feature: Block Ignore]] for my current thoughts
+- there is no support for multiline patterns, see [Feature: Block Ignore](./Feature:-Block-Ignore.md) for my current thoughts
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Deprecations](Deprecations.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

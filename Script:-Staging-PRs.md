@@ -35,3 +35,6 @@ for $branch (@branches) {
 1. `git remote add origin upstream-url`
 2. `git remote add check-spelling testing-fork-url`
 3. `migrate-prs`
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Deprecations](Deprecations.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

@@ -7,3 +7,6 @@ As of v0.0.21, the notation will be something like: `.github/workflows/spelling.
 filename:line-number:initial-offset ... end-offset.
 
 This should be friendlier to tools like `vi` or `VSCode`.
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Deprecations](Deprecations.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

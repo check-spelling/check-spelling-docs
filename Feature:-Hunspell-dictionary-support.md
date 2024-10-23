@@ -57,3 +57,6 @@ You can add any Hunspell `.dic` to `extra_dictionaries`:
 ```
 
 When check-spelling sees an instruction to use `.dic` file, it will automatically retrieve the corresponding `.aff` file as well.
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Deprecations](Deprecations.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

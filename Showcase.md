@@ -27,3 +27,6 @@ Here are some samples of what you can expect when using the action
 ![Code scanning list](https://raw.githubusercontent.com/check-spelling/art/main/output/github-code-scanning-list.png)
 
 ![Code scanning entry](https://raw.githubusercontent.com/check-spelling/art/main/output/github-code-scanning-alert.png)
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Deprecations](Deprecations.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)

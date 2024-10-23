@@ -102,7 +102,7 @@ Testing in prerelease versions of check-spelling/spell-check-this may start in 2
 
 ## Future work
 
-[[Suggest Area dictionaries|Feature: Suggest Area Dictionaries]]
+[Suggest Area dictionaries](./Feature:-Suggest-Area-Dictionaries.md)
 
 ## Potential Areas
 
@@ -160,3 +160,6 @@ Testing in prerelease versions of check-spelling/spell-check-this may start in 2
   - MPL
   - GPL
   - ...
+
+---
+[FAQ](FAQ.md) | [Showcase](Showcase.md) | [Event descriptions](Event-descriptions.md) | [Configuration information](Configuration-information.md) | [Known Issues](Known-Issues.md) | [Possible features](Possible-features.md) | [Deprecations](Deprecations.md) | [Release notes](Release-notes.md) | [Helpful scripts](Helpful-scripts.md)
