@@ -3,20 +3,15 @@
 [Ready](#ready) | [In progress](#in-progress) | [Near term](#near-term) | [Distant future](#distant-future) | [Currently out of scope](#related-but-currently-out-of-scope)
 
 ## Ready
-- 🏃  [[Run from command line|Feature: Run from command line]]
 
 ## In progress
 
-- 🎏 [[Breaking change: events not listed in warnings and notices will not be promoted to errors|Feature: Set event severity]]
-- 🎏 [[Set event severity|Feature: Set event severity]]
-- 👓 [[Suppress PR check when workflow changes|Feature: Suppress PR check when workflow changes]]
-- 🧪 [[Regression testing]]
 - 😄 [[Easier to understand filenames|Feature: Easier to understand filenames]]
 - ↪️ [[Content Mappings|Feature: Content Mappings]]
 - ⚙️ [[JSON configuration|Feature: JSON configuration]]
 - 🔧 [[Replace jq|Task: Replace jq]]
-- 🏦 [[Cache dictionaries|Feature: Cache dictionaries]]
-- 💬 [[Report associated comment for forbidden patterns|Feature: Report associated comment for forbidden patterns]]
+- 🧪 [[Regression testing]]
+- 👓 [[Suppress PR check when workflow changes|Feature: Suppress PR check when workflow changes]]
 - 🧱 [[Block/Multiline Ignore|Feature: Block Ignore]]
 - 🌉 [[IDE Integration|Feature: IDE Integration]]
 
