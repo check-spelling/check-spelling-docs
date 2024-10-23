@@ -15,7 +15,7 @@ You should generally use the [latest version of act](https://github.com/nektos/a
 
 ### General status
 
-Act [v0.2.24](https://github.com/nektos/act/releases/tag/v0.2.24)+ should work reasonably well...
+Act [v0.2.25](https://github.com/nektos/act/releases/tag/v0.2.25)+ should work reasonably well...
 
 Running `act` in a repository with `push` and `pull_request_target` (with `suppress_push_for_open_pull_request`) should work.
 
@@ -110,17 +110,12 @@ You can use `perl -pne 's{^\| }{}'` to strip the Act padding when check-spelling
 
 Nektos/Act may be missing support for newer GitHub Action features:
 
-- [pull_request_target](https://github.blog/2020-08-03-github-actions-improvements-for-fork-and-pull-request-workflows/)
 - [workflow_run](https://github.blog/2020-08-03-github-actions-improvements-for-fork-and-pull-request-workflows/)
 - [GITHUB_STEP_SUMMARY](https://github.blog/2022-05-09-supercharging-github-actions-with-job-summaries/)
 
-#### Output steps
-
-As of Act [v0.2.24](https://github.com/nektos/act/releases/tag/v0.2.24), act can't handle [outputs from later steps](https://github.com/nektos/act/issues/758), as used in [https://github.com/check-spelling/spell-check-this/blob/prerelease/.github/workflows/spelling.yml#L17](https://github.com/check-spelling/spell-check-this/blob/18764e6cbb019a5d2067d6abe62ce43eb83275bd/.github/workflows/spelling.yml#L17) - It's possible to build a [patched version of act](https://github.com/ChristopherHX/act/commit/4c692919754ab0a72b340604e2c5c597e95f463a) -- but it requires fixing a [merge failure](https://github.com/jsoref/act/commit/a8f69e39d9b534d4eef09f37ab0d082cd308bb00). This shouldn't be a big deal as the output portions of the workflow won't work in act anyway...
-
 ## Runnable script
 
-In [prerelease](https://github.com/check-spelling/check-spelling/tree/prerelease) and hopefully for [v0.0.23](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.23), you should be able to run `unknown-words.sh` from a local copy of the [check-spelling repository](https://github.com/check-spelling/check-spelling).
+As of [v0.0.23](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.23), you should be able to run `unknown-words.sh` from a local copy of the [check-spelling repository](https://github.com/check-spelling/check-spelling).
 
 
 ### Running
