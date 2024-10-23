@@ -3,13 +3,14 @@
 ## Supported
 
 - [prerelease](#prerelease)
+- [v0.0.23](#v0023)
 - [v0.0.22](#v0022)
-- [v0.0.21](#v0021)
 
 ## Unsupported
 
 ❗ Please do not use these versions.
 
+- [v0.0.21](#v0021)
 - [v0.0.20](#v0020)
 - [v0.0.19](#v0019)
 - [v0.0.18](#v0018)
@@ -23,6 +24,11 @@
 🌟 Almost ready to transition from `prerelease` to release 🍽️
 
 -->
+
+## v0.0.23
+
+See
+[v0.0.23](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.23)
 
 ## v0.0.22
 
