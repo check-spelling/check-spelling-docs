@@ -368,7 +368,7 @@ Introduced in [v0.0.21](https://github.com/check-spelling/check-spelling/release
 
 Quickly check if files are binary and skip them if they are.
 
-(This is off by default because enabling it by default would be a behavior change and it would be hard to allow users to override it.)
+Enabled by default in [v0.0.23](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.23)
 
 ## use_sarif
 
