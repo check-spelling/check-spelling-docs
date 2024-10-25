@@ -30,6 +30,13 @@
 See
 [v0.0.23](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.23)
 
+- 🏃 [[Run from command line|Feature: Run from command line]]
+- 🎏 [[Set event severity|Feature: Set event severity]]
+- 🎏 [[Breaking change: events not listed in warnings and notices will not be promoted to errors|Feature: Set event severity]]
+- 💬 [[Report associated comment for forbidden patterns|Feature: Report associated comment for forbidden patterns]]
+
+...
+
 ## v0.0.22
 
 [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22)
