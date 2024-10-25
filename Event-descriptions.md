@@ -472,6 +472,7 @@ The file has really long lines. It's probably minified.
 ## Resolution
 
 - If it's minified, add it to excludes
+- If certain lines are really long because they contain inline minified content, add a pattern that matches that content
 - If it really should be checked, you can suppress the check by adding `minified-file` to `with:`/`disable_checks:`, e.g.:
   ```yaml
   with:
