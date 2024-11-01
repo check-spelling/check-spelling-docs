@@ -2,14 +2,24 @@
 
 ## To-date
 
-Right now, most check-spelling testing is done through live use of the action
+Right now, most check-spelling testing is done through live use of the action.
 
-## Plan
+## Phase 0
+
+1. Create a repository [check-spelling-sandbox/autotest-check-spelling](https://github.com/check-spelling-sandbox/autotest-check-spelling)
+2. Give it a secret so that it can push to its own repository
+3. Create a workflow which pushes the current commits from check-spelling and check-spelling-sandbox for `main` and `prerelease` to newly https://github.com/check-spelling-sandbox/autotest-check-spelling/blob/main/.github/workflows/autotest.yml
+
+### Rationale
+
+This enables at least catching bugs involving dates changing (there was one fixed for [v0.0.24](https://github.com/check-spelling/check-spelling/releases/v0.0.24)).
+
+## Plan 1
 
 1. Create a repository `check-spelling/regression-tests`
 2. Create a template of commits
 3. Create a workflow which on each push applies each of the templated commits filling in the targeted revision and pushing them to `check-spelling/regression-tests`
-4. Ideally have the workflow retrieve the results of each of the commits' actions and compare them against expected results.
+4. Ideally have the workflow retrieve the results of each of the commits' actions and compare them against expected results. -- It should be possible to do this using either additional steps in the workflow job or using another job in the workflow or by using workflow call with a final workflow.
 
 ## Plan 2
 
@@ -26,4 +36,8 @@ Right now, most check-spelling testing is done through live use of the action
 
 ## Timeline
 
-Uncertain
+Date | Phase
+-|-
+2024-11-01 | [Phase 0](#phase-0) [check-spelling-sandbox/autotest-check-spelling](https://github.com/check-spelling-sandbox/autotest-check-spelling)
+Uncertain | [Plan 1](#plan-1) `check-spelling/regression-tests`
+...
