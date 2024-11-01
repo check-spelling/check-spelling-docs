@@ -3,6 +3,7 @@
 ## Supported
 
 - [prerelease](#prerelease)
+- [v0.0.24](#v0024)
 - [v0.0.23](#v0023)
 - [v0.0.22](#v0022)
 
@@ -25,9 +26,18 @@
 
 -->
 
+## v0.0.24
+
+[v0.0.24](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.24)
+
+* [SARIF reports will upload on `push` / if the action performs the checkout](https://github.com/check-spelling/check-spelling/issues/71)
+* [`followup` should not be set unless a comment needs to be made/collapsed](https://github.com/check-spelling/check-spelling/issues/70)
+* [Files with Mac OS (`\r`) line endings will not trigger `minified-file` warnings](https://github.com/check-spelling/check-spelling/issues/75)
+* [`GITHUB_TOKEN` is no longer listed as `required`](https://github.com/check-spelling/check-spelling/issues/42)
+
+
 ## v0.0.23
 
-See
 [v0.0.23](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.23)
 
 - 🏃 [[Run from command line|Feature: Run from command line]]
