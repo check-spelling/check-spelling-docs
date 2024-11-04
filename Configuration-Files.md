@@ -43,7 +43,7 @@ Some candidates:
 
 See [Area dictionaries](https://github.com/check-spelling/check-spelling/wiki/Feature:-Area-dictionaries) for other examples.
 
-For entire reusable lists that don't live in your repository, you can use [extra_dictionaries](#extra_dictionaries) instead.
+For entire reusable lists that don't live in your repository, you can use [extra_dictionaries](https://github.com/check-spelling/check-spelling/wiki/Configuration#extra_dictionaries) instead.
 
 ## block delimiters
 
@@ -62,7 +62,7 @@ place it into the directory next to your own.
 Alternatively, if you want to retrieve a dictionary from a remote URL,
 see the workflow configuration values [dictionary_url](#dictionary_url) and [dictionary_version](#dictionary_version).
 
-If you just want to supplement the dictionary, you can use [`extra_dictionaries`](#extra_dictionaries) or [allow](#allow).
+If you just want to supplement the dictionary, you can use [`extra_dictionaries`](https://github.com/check-spelling/check-spelling/wiki/Configuration#extra_dictionaries) or [allow](#allow).
 
 ## excludes
 
