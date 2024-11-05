@@ -1,6 +1,6 @@
 # Known Issues
 
-- [Changes to the workflow will not be tested in a pull request if the workflow is configured to use `pull_request_target`](changes-to-the-workflow-will-not-be-tested-in-a-pull-request-if-the-workflow-is-configured-to-use-pull_request_target)
+- [Changes to the workflow will not be tested in a pull request if the workflow is configured to use `pull_request_target`](#changes-to-the-workflow-will-not-be-tested-in-a-pull-request-if-the-workflow-is-configured-to-use-pull_request_target)
 - [Only changed doesn't work when PRs are initially created from forks](#only-changed-doesnt-work-when-prs-are-initially-created-from-forks)
 - [Too many unrecognized words](#Too_many_unrecognized_words)
 - [@dependabot can't comment](#dependabot-cant-comment)
