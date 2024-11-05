@@ -1,8 +1,19 @@
 # Known Issues
 
+- [Changes to the workflow will not be tested in a pull request if the workflow is configured to use `pull_request_target`](changes-to-the-workflow-will-not-be-tested-in-a-pull-request-if-the-workflow-is-configured-to-use-pull_request_target)
 - [Only changed doesn't work when PRs are initially created from forks](#only-changed-doesnt-work-when-prs-are-initially-created-from-forks)
 - [Too many unrecognized words](#Too_many_unrecognized_words)
 - [@dependabot can't comment](#dependabot-cant-comment)
+
+## Changes to the workflow will not be tested in a pull request if the workflow is configured to use `pull_request_target`
+
+The [recommended configuration](https://github.com/check-spelling/spell-check-this/blob/main/.github/workflows/spelling.yml) for check-spelling uses `pull_request_target` which behaves differently from `pull_request` in a couple of ways.
+
+One of those ways is that the configuration that's used for the workflow file itself is the one in the pull_request base as opposed to the pull request head. In order to test changes to the workflow itself, you'll need to `push` the workflow changes into a branch and review its output.
+
+If you're using [`suppress_push_for_open_pull_request`](https://github.com/check-spelling/check-spelling/wiki/Configuration#suppress_push_for_open_pull_request), you should avoid pushing your change and immediately creating a PR into the same repository as the `push` event which would trigger a workflow run that would validate your changes will quit noting that it found the pull_request event which will not do what you want. Instead, just `push` the changes to a branch in your repository to verify that they do what you want, and then create a pull request to integrate them.
+
+Note that for version upgrades, you may need to temporarily include additional entries either via `allow` or `expect` in order to enable the older version of check-spelling to tolerate things which the newer version may tolerate for other reasons.
 
 ## Only changed doesn't work when PRs are initially created from forks
 
