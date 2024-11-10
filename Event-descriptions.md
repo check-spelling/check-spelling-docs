@@ -546,9 +546,11 @@ If the file / directory is misspelled, you'll need to use `git mv` to rename it.
 
 # token-is-substring
 
-check-spelling tries to find "words" in your repository that it doesn't have in the dictionaries you've configured. It does that by applying heuristics to identify word boundaries. It also allows you to apply patterns to mask portions of lines. Most likely as a result of some patterns in the configuration, it found a "word" that wasn't in the dictionary, but when it looked through the line w/o applying the patterns, it couldn't determine where the word was.
+check-spelling tries to find "words" in your repository that it doesn't have in the dictionaries you've configured. It does that by applying heuristics to identify word boundaries. It also allows you to apply patterns to mask portions of lines  (but it doesn't keep track of where things were when it does this). Most likely as a result of some patterns in the configuration, it found a "word" that wasn't in the dictionary, but when it looked through the line w/o applying the patterns, it couldn't determine where the word was.
 
 Most of the time, the fault is in pattern definitions, especially patterns that consume part of a word.
+
+Sometimes the fault is due to an internal pattern (mostly aliases for fancy apostrophes to simple apostrophes, or collapsing apostrophes).
 
 ⚠️ If this flags to the first line of a file and you have `check_file_names` enabled, it's possible it's warning about the file path as opposed to the line. A distinct warning will probably be added for this case at a later time.
 
