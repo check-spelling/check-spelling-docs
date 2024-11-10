@@ -40,6 +40,11 @@ apostrophe (`'`)
 
 ## Future
 
+### Ligatures
+
+* ﬃ -> ffi
+* ﬀ -> ff
+
 ### HTML Entities
 
 It might make sense to just teach the tool to convert all HTML entities into their pretty forms...
