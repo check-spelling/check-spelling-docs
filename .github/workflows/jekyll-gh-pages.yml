@@ -27,6 +27,12 @@ jobs:
         with:
           source: ./
           destination: ./_site
+      - name: Fix code anchors (# `something` or another) or (# thing or `thing`) which are unfortunately encoded as (id="codesomethingcode-or-another") or (id="thing-or-codethingcode")
+        working-directory: ./_site
+        shell: bash
+        run: |
+          : 'Fix anchors that poorly encoded "`foo`" as "codefoocode"'
+          sudo perl -pi -e 'while (s/(id="[^"]*)code([^"]+)code/$1$2/g) {};' *.html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 

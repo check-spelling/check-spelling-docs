@@ -163,6 +163,9 @@ x-served-by: \S+
 # Candidate pattern
 Line matches candidate pattern `.*` \(candidate-pattern\)
 
+# jekyll bug
+".*?code.*?code.*?"
+
 # Questionably acceptable forms of `in to`
 # Personally, I prefer `log into`, but people object
 # https://www.tprteaching.com/log-into-log-in-to-login/
