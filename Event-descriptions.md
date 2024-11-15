@@ -22,6 +22,9 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
   - [Resolution](#resolution-8)
 - [limited-references](#limited-references)
   - [Resolution](#resolution-9)
+- [check-dictionary-not-found](#check-dictionary-not-found)
+- [extra-dictionary-not-found](#extra-dictionary-not-found)
+- [fallback-dictionary-not-found](#fallback-dictionary-not-found)
 - [dictionary-not-found](#dictionary-not-found)
   - [503 (internal server error)](#503-internal-server-error)
     - [Resolution](#resolution-10)
@@ -81,7 +84,6 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
   - [Resolution](#resolution-30)
 - [missing-merge-head](#missing-merge-head)
   - [Resolution](#resolution-31)
-
 
 ℹ️ As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), workflows can [[configure whether specific events are treated as ❌Errors or ⚠️Warnings|Feature: Treat specific errors as warnings]].
 
@@ -259,6 +261,15 @@ If the file(s) containing it shouldn't be checked, add patterns to skip them to 
 
 If the item is misspelled, fixing the reported instances will disclose additional instances.
 You could of course use your local tools to find the remaining instances.
+
+# check-dictionary-not-found
+This is reported when a [check_extra_dictionaries](https://github.com/check-spelling/check-spelling/wiki/Configuration#check_extra_dictionaries) is not found. See [dictionary-not-found](#dictionary-not-found).
+
+# extra-dictionary-not-found
+This is reported when a [extra_dictionaries](https://github.com/check-spelling/check-spelling/wiki/Configuration#extra_dictionaries) is not found. See [dictionary-not-found](#dictionary-not-found).
+
+# fallback-dictionary-not-found
+A second attempt is made to resolve [extra_dictionaries](https://github.com/check-spelling/check-spelling/wiki/Configuration#extra_dictionaries), and when they fail this is reported. See [dictionary-not-found](#dictionary-not-found).
 
 # dictionary-not-found
 
