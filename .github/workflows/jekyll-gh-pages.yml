@@ -55,3 +55,7 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  check-links:
+    needs: deploy
+    uses: check-spelling/check-spelling-docs/.github/workflows/link-checker.yml@main

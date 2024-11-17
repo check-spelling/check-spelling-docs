@@ -1,7 +1,7 @@
 name: Link Checker
 
 on:
-  push:
+  workflow_call:
   workflow_dispatch:
 
 jobs:
@@ -20,6 +20,7 @@ jobs:
       env:
         site: ${{ vars.gh_pages_site || 'docs.check-spelling.dev' }}
       run: |
+        : Link Checker
         (
           echo "# Link Checker ($site)"
           echo
