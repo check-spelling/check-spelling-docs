@@ -195,13 +195,22 @@ Downside: if someone changes any of the config files, it's likely that they will
 
 As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), this holds a single prefix `cspell` which maps to `https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20220427/dictionaries/`.
 
-Future versions will select different tags for `cspell`, and you can mix and match them, e.g.:
+Different versions will select different tags for `cspell` and the available dictionaries/paths may differ, and you can mix and match them, e.g.:
 
-```
+```yaml
         dictionary_source_prefixes: '{"cspell": "https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20220427/dictionaries/","cspell1": "https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20220814/dictionaries/"}'
         extra_dictionaries:
           cspell:lorem-ipsum/dictionary.txt
           cspell1:software-terms/src/software-terms.txt
+```
+
+For a more readable notation, you can use `>` (this example is based on check-spelling [v0.0.24](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.24) as a baseline but with `cspell1` set to what might be `cspell` as of v0.0.25 when it's released):
+```yaml
+          dictionary_source_prefixes: >
+            {
+            "cspell": "https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20230509/dictionaries/",
+            "cspell1": "https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20241114/dictionaries/"
+            }
 ```
 
 > **Warning**
