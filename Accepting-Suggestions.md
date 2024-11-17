@@ -57,7 +57,8 @@ As of [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0
 
 You can apply the commit as a command or paste it into `git apply` / `patch -p1` or whatever tooling you're comfortable using.
 
-Note that unlike the suggestions option, this will only update `expect.txt` (or its variants) and will not apply suggestions to `excludes.txt`, nor should it provide content from `spell-check-this`.
+Note that unlike the suggestions option, this will only update `expect.txt` (or its variants) and will not apply suggestions to `excludes.txt`,
+nor should it provide content from `spell-check-this`.
 
 ## Caveats
 
