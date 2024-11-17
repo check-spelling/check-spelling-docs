@@ -69,20 +69,15 @@ on:
       - "opened"
       - "reopened"
       - "synchronize"
-  issue_comment:
-    types:
-      - "created"
 
 jobs:
-  spelling:
-    name: Check Spelling
+  spelling-main:
+    name: Check Spelling (main)
     permissions:
       contents: read
       pull-requests: read
       actions: read
       security-events: write
-    outputs:
-      followup: ${{ steps.spelling.outputs.followup }}
     runs-on: ubuntu-latest
     if: ${{ contains(github.event_name, 'pull_request') || github.event_name == 'push' }}
     concurrency:
@@ -94,6 +89,7 @@ jobs:
         id: spelling
         uses: check-spelling/check-spelling@prerelease
         with:
+          report_title_suffix: main
           suppress_push_for_open_pull_request: ${{ github.actor != 'dependabot[bot]' && 1 }}
           checkout: true
           check_file_names: 1
@@ -102,7 +98,54 @@ jobs:
           use_magic_file: 1
           report-timing: 1
           warnings: bad-regex,binary-file,deprecated-feature,ignored-expect-variant,large-file,limited-references,no-newline-at-eof,noisy-file,non-alpha-in-dictionary,token-is-substring,unexpected-line-ending,whitespace-in-dictionary,minified-file,unsupported-configuration,no-files-to-check,unclosed-block-ignore-begin,unclosed-block-ignore-end
-          experimental_apply_changes_via_bot: 1
+          use_sarif: ${{ (!github.event.pull_request || (github.event.pull_request.head.repo.full_name == github.repository)) && 1 }}
+          check_extra_dictionaries: ''
+          dictionary_source_prefixes: >
+            {
+            "cspell": "https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20241114/dictionaries/"
+            }
+          extra_dictionaries: |
+            cspell:software-terms/softwareTerms.txt
+            cspell:aws/aws.txt
+            cspell:filetypes/filetypes.txt
+            cspell:node/node.txt
+            cspell:npm/npm.txt
+
+  spelling-gh-pages:
+    if: github.ref_name == github.event.repository.default_branch
+    name: Check Spelling (gh-pages)
+    permissions:
+      contents: read
+      pull-requests: read
+      actions: read
+      security-events: write
+    runs-on: ubuntu-latest
+    concurrency:
+      group: spelling-pages-${{ github.event.pull_request.number || github.ref }}
+      # note: If you use only_check_changed_files, you do not want cancel-in-progress
+      cancel-in-progress: true
+    steps:
+      - name: Get config
+        uses: actions/checkout@v4
+      - name: Get gh-pages content
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: gh-pages
+      - name: check-spelling
+        id: spelling
+        uses: check-spelling/check-spelling@prerelease
+        with:
+          config: .github/actions/spelling-pages
+          report_title_suffix: gh-pages
+          suppress_push_for_open_pull_request: ${{ github.actor != 'dependabot[bot]' && 1 }}
+          experimental_path: gh-pages
+          check_file_names: 1
+          spell_check_this: check-spelling/spell-check-this@prerelease
+          post_comment: 0
+          use_magic_file: 1
+          report-timing: 1
+          warnings: bad-regex,binary-file,deprecated-feature,ignored-expect-variant,large-file,limited-references,no-newline-at-eof,noisy-file,non-alpha-in-dictionary,token-is-substring,unexpected-line-ending,whitespace-in-dictionary,minified-file,unsupported-configuration,no-files-to-check,unclosed-block-ignore-begin,unclosed-block-ignore-end
           use_sarif: ${{ (!github.event.pull_request || (github.event.pull_request.head.repo.full_name == github.repository)) && 1 }}
           check_extra_dictionaries: ''
           dictionary_source_prefixes: >
@@ -114,20 +157,9 @@ jobs:
             cspell:aws/aws.txt
             cspell:php/php.txt
             cspell:node/node.txt
-            cspell:python/python/python-lib.txt
-            cspell:npm/npm.txt
             cspell:html/html.txt
-            cspell:dotnet/dotnet.txt
-            cspell:typescript/typescript.txt
+            cspell:python/python/python-lib.txt
             cspell:filetypes/filetypes.txt
-            cspell:css/css.txt
-            cspell:python/python/python.txt
-            cspell:shell/shell-all-words.txt
             cspell:r/r.txt
-            cspell:django/django.txt
-            cspell:golang/go.txt
-            cspell:cpp/ecosystem.txt
-            cspell:fullstack/fullstack.txt
-            cspell:fonts/fonts.txt
-            cspell:java/java-terms.txt
-            cspell:java/java.txt
+            cspell:shell/shell-all-words.txt
+            cspell:ruby/ruby.txt

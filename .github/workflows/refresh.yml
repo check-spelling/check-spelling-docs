@@ -10,10 +10,14 @@ jobs:
     permissions:
       contents: write
     steps:
+    - name: checkout workflow
+      uses: actions/checkout@v4
     - name: checkout docs
       uses: actions/checkout@v4
       with:
         fetch-depth: 0
+        path: gh-pages
+        ref: gh-pages
     - name: update docs
       shell: bash
       env:
@@ -21,6 +25,8 @@ jobs:
         GIT_COMMITTER_NAME: check-spelling-bot
         GIT_COMMITTER_EMAIL: check-spelling-bot@users.noreply.github.com
       run: |
+        PATH=$(pwd):$PATH
+        cd gh-pages
         set -x
         old_commit=$(git rev-parse HEAD)
         latest_commit_message="$(git log --pretty=format:%s -1)"
@@ -32,7 +38,7 @@ jobs:
         git remote add wiki "${wiki:-https://github.com/check-spelling/check-spelling.wiki.git}"
         git fetch wiki
         git rebase FETCH_HEAD
-        ./build.sh
+        build.sh
         git add -u
         git config user.email "$GIT_COMMITTER_EMAIL"
         git config user.name "$GIT_COMMITTER_NAME"

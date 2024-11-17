@@ -80,5 +80,9 @@ ignore$
 \.xpm$
 \.xz$
 \.zip$
-^\.github/actions/spelling
+^\.github/actions/spelling/
 ^\Q.github/workflows/spelling.yml\E$
+^\QArchaic-words.md\E$
+^\QConfiguration-Examples:-patterns.md\E$
+^\QConfiguration-Examples:-reject.md\E$
+^\QFeature:-Parsing-Timeouts.md\E$
