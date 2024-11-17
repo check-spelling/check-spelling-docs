@@ -3,7 +3,7 @@
 `allow.txt` allows words to be added to the dictionary.
 
 One word per line.
-Words are at least partially case sensitive -- adding a proper name (e.g. `Microsoft`) doesn't result in the lowercase variant being accepted (you'd add that on another line).
+Words are at least partially case-sensitive -- adding a proper name (e.g. `Microsoft`) doesn't result in the lowercase variant being accepted (you'd add that on another line).
 
 ## History
 
