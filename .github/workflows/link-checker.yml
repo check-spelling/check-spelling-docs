@@ -17,12 +17,14 @@ jobs:
         . linkchecker/bin/activate
         pip3 install linkchecker
     - name: check links
+      env:
+        site: ${{ vars.gh_pages_site || 'docs.check-spelling.dev' }}
       run: |
         (
-          echo '# Link Checker'
+          echo "# Link Checker ($site)"
           echo
           echo '```'
-          ./linkchecker/bin/linkchecker https://docs.check-spelling.dev/ |
+          ./linkchecker/bin/linkchecker "https://$site/" |
           perl -ne '
             if (/^Start checking/) {
               $state = 1;
