@@ -347,7 +347,7 @@ You can browse through the current dictionaries and identify suitable replacemen
 
 If you want to continue to use the previous dictionaries, you can check the run output of a previous version of check-spelling for the `with:` output, e.g.:
 
-```
+```yaml
   with:
     dictionary_source_prefixes: {"cspell": "https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20220427/dictionaries/"}
 ```
