@@ -646,10 +646,17 @@ Similarly, if you use the term `widgit`, you might write it in a plural as `widg
 
 # no-files-to-check
 
-Check Spelling works by reviewing files and identifying problems with them. You can configure which files it should check by using [excludes](https://github.com/check-spelling/check-spelling/wiki/Configuration#excludes) and [only](https://github.com/check-spelling/check-spelling/wiki/Configuration#only)
+Check Spelling works by reviewing files and identifying problems with them.
+
+It can be configured to check out the repository for you, or you can check out the repository in the workflow job before using the action. Without checking out files, it won't find any files to check.
+
+You can configure which files it should check by using [excludes](https://github.com/check-spelling/check-spelling/wiki/Configuration#excludes) and [only](https://github.com/check-spelling/check-spelling/wiki/Configuration#only).
 
 ## Resolution
 
+- Check out the repository
+  - Add `checkout: true` to the `step` `uses: check-spelling/check-spelling@...`'s `with:` block, or
+  - Add a `uses: actions/checkout@...` step before the `uses: check-spelling/check-spelling@...` step
 - Remove entries from [excludes](https://github.com/check-spelling/check-spelling/wiki/Configuration#excludes)
 - Adjust or add items in [only](https://github.com/check-spelling/check-spelling/wiki/Configuration#only)
 - Review the contents of the repository and compare against both
