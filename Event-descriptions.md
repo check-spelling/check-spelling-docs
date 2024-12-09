@@ -84,6 +84,8 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
   - [Resolution](#resolution-30)
 - [missing-merge-head](#missing-merge-head)
   - [Resolution](#resolution-31)
+- [missing-checkout](#missing-checkout)
+  - [Resolution](#resolution-32)
 
 ℹ️ As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), workflows can [[configure whether specific events are treated as ❌Errors or ⚠️Warnings|Feature: Treat specific errors as warnings]].
 
@@ -776,3 +778,12 @@ This is known to happen when a PR is reopened. check-spelling as of [v0.0.23](ht
 
 It's possible that the commit will be regenerated, but the simplest thing to do is to push a new commit.
 
+# missing-checkout
+
+There wasn't a checked out repository in the configured location.
+
+## Resolution
+
+Check out the repository:
+- Add `checkout: true` to the `step` `uses: check-spelling/check-spelling@...`'s `with:` block, or
+- Add a `uses: actions/checkout@...` step before the `uses: check-spelling/check-spelling@...` step
