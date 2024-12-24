@@ -90,6 +90,8 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
   - [Resolution](#resolution-33)
 - [binary-file](#binary-file)
   - [Resolution](#resolution-34)
+- [missing-rule-definition](#missing-rule-definition)
+  - [Resolution](#resolution-35)
 
 ℹ️ As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), workflows can [[configure whether specific events are treated as ❌Errors or ⚠️Warnings|Feature: Treat specific errors as warnings]].
 
@@ -816,3 +818,11 @@ When [[magic file detection|Feature: Detect binary files]] is enabled, some file
 * Add the files to `excludes.txt`.
 * Disable detection by using `use_magic_file: 0`.
 * If the file should not be identified as a binary file, please search for an issue, and if you don't find one, please [file a ticket](https://github.com/check-spelling/check-spelling/issues/new).
+
+# missing-rule-definition
+
+Each event in check-spelling should have a definition in check-spelling's `sarif.json` file which in turn should link to a specific event description (in this document). Unfortunately, if you're reading this because you clicked a link from a GitHub event, then that means that there was an event in check-spelling that isn't documented in `sarif.json`.
+
+## Resolution
+
+Please search for an issue, and if you don't find one, please [file a ticket](https://github.com/check-spelling/check-spelling/issues/new); include as much detail about the occurrence as possible.
