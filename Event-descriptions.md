@@ -88,6 +88,8 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
   - [Resolution](#resolution-32)
 - [excludes-generation-failed](#excludes-generation-failed)
   - [Resolution](#resolution-33)
+- [binary-file](#binary-file)
+  - [Resolution](#resolution-34)
 
 ℹ️ As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), workflows can [[configure whether specific events are treated as ❌Errors or ⚠️Warnings|Feature: Treat specific errors as warnings]].
 
@@ -804,3 +806,13 @@ If an error is encountered in `SuggestsExcludes`, check-spelling won't be able t
 
 * If you're using [0.0.24](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.24) you can try prerelease or the version after [0.0.24](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.24).
 * If you find one in a version after the fix for https://github.com/check-spelling/check-spelling/issues/85, please search for additional issues, and if you don't find one, please [file a ticket](https://github.com/check-spelling/check-spelling/issues/new).
+
+# binary-file
+
+When [[magic file detection|Feature: Detect binary files]] is enabled, some files may be identified as binaries and thus skipped.
+
+## Resolution
+
+* Add the files to `excludes.txt`.
+* Disable detection by using `use_magic_file: 0`.
+* If the file should not be identified as a binary file, please search for an issue, and if you don't find one, please [file a ticket](https://github.com/check-spelling/check-spelling/issues/new).
