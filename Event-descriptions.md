@@ -86,6 +86,8 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
   - [Resolution](#resolution-31)
 - [missing-checkout](#missing-checkout)
   - [Resolution](#resolution-32)
+- [excludes-generation-failed](#excludes-generation-failed)
+  - [Resolution](#resolution-33)
 
 ℹ️ As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), workflows can [[configure whether specific events are treated as ❌Errors or ⚠️Warnings|Feature: Treat specific errors as warnings]].
 
@@ -787,3 +789,18 @@ There wasn't a checked out repository in the configured location.
 Check out the repository:
 - Add `checkout: true` to the `step` `uses: check-spelling/check-spelling@...`'s `with:` block, or
 - Add a `uses: actions/checkout@...` step before the `uses: check-spelling/check-spelling@...` step
+
+# excludes-generation-failed
+
+One of the lines in `excludes.txt` (or equivalent) tripped up the `SuggestsExcludes` code.
+
+_Note that this is not necessarily reported as an event, but it may appear as an annotation or in the log._
+
+The `SuggestsExcludes` implementation may have bugs (and does as of [0.0.24](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.24)).
+
+If an error is encountered in `SuggestsExcludes`, check-spelling won't be able to suggest additional excludes, but it should otherwise function.
+
+## Resolution
+
+* If you're using [0.0.24](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.24) you can try prerelease or the version after [0.0.24](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.24).
+* If you find one in a version after the fix for https://github.com/check-spelling/check-spelling/issues/85, please search for additional issues, and if you don't find one, please [file a ticket](https://github.com/check-spelling/check-spelling/issues/new).
