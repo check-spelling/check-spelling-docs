@@ -92,6 +92,8 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
   - [Resolution](#resolution-34)
 - [missing-rule-definition](#missing-rule-definition)
   - [Resolution](#resolution-35)
+- [single-line-file](#single-line-file)
+  - [Resolution](#resolution-36)
 
 ℹ️ As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), workflows can [[configure whether specific events are treated as ❌Errors or ⚠️Warnings|Feature: Treat specific errors as warnings]].
 
@@ -826,3 +828,14 @@ Each event in check-spelling should have a definition in check-spelling's `sarif
 ## Resolution
 
 Please search for an issue, and if you don't find one, please [file a ticket](https://github.com/check-spelling/check-spelling/issues/new); include as much detail about the occurrence as possible.
+
+# single-line-file
+
+The file has a single very long line. As these files tend to be minified files, it was skipped.
+
+## Resolution
+
+* Add the files to `excludes.txt`.
+* Split the file into multiple lines. For markdown files you can generally insert single newlines anywhere, but splitting between `. ` is a good practice.
+* Disable detection by adding `single-line-file` to [`disable_checks`](https://github.com/check-spelling/check-spelling/wiki/Configuration#disable_checks).
+* If you have a good reason for the file to be a single line file and have check-spelling check its spelling, please search for an issue, and if you don't find one, please [file a ticket](https://github.com/check-spelling/check-spelling/issues/new) including an explanation of your use case.
