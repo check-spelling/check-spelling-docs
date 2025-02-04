@@ -1,10 +1,9 @@
 # Frequently Asked Questions
 
 - [How do I upgrade?](#how-do-i-upgrade)
-
 - [How do I get comments to collapse?](#how-do-i-get-comments-to-collapse)
-
 - [Why can't I see the 👼 SARIF report?](#why-cant-i-see-the--sarif-report)
+- [How does `expect` work?](#how-does-expect-work)
 
 ## How do I upgrade?
 
@@ -34,3 +33,9 @@ Reports for some repositories will have an entry like:
 Users without write access to the repository will probably not be able to see the [👼 SARIF report](#), and will instead see a 404 page.
 
 This relates to the fact that SARIF was designed for reporting results from security scanners, as such GitHub restricts who has access to the reports. For more information, see [[SARIF output visibility|Feature:-SARIF-output#visibility]].
+
+## How does `expect` work?
+
+check-spelling tries to maintain a minimized list of items that are not covered by the configured dictionary (including extra dictionaries, `allow.txt`, and excluding words rejected by `reject.txt`). It only wants to have a single case for a word, and it should be the most general form that is found in the corpus. Having more than one flavor (e.g. both `Microsoft` and `microsoft`) will probably result in it being fairly unhappy. If you're having trouble, it's probably simplest to remove all flavors of the word and let check-spelling tell you which version you should place in the file.
+
+See [How check-spelling manages expect.txt](https://github.com/check-spelling/check-spelling/blob/f3aa8e9eed02c1caea34758266778124cc98424e/README.md#how-check-spelling-manages-expecttxt).
