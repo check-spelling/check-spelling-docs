@@ -6,6 +6,7 @@
 
 ## In progress
 
+- 🩸 [[Breaking Change: Dropping support for out of tree project files|Breaking Change: Dropping support for out of tree project files]]
 - 😄 [[Easier to understand filenames|Feature: Easier to understand filenames]]
 - ↪️ [[Content Mappings|Feature: Content Mappings]]
 - ⚙️ [[JSON configuration|Feature: JSON configuration]]
