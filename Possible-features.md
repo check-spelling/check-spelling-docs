@@ -7,6 +7,7 @@
 ## In progress
 
 - 🩸 [[Breaking Change: Dropping support for out of tree project files|Breaking Change: Dropping support for out of tree project files]]
+- 🪆 [[Subrepos|Feature: Subrepos]]
 - 😄 [[Easier to understand filenames|Feature: Easier to understand filenames]]
 - ↪️ [[Content Mappings|Feature: Content Mappings]]
 - ⚙️ [[JSON configuration|Feature: JSON configuration]]
@@ -21,7 +22,6 @@
 - [[🩸Breaking change: Dropping support for on: schedule|Breaking change: Dropping support for on: schedule]]
 - [[👪Behavior change: case changes in expect|Behavior change: case changes in expect]]
 - [[🗜️Breaking change: Smaller dictionary|Breaking change: Smaller dictionary]]
-- [[🪆Subrepos|Feature: Subrepos]]
 - [[🪜base‐path|Feature: \`base‐path\`]]
 - [[🪄Honor gitattributes|Feature: Honor gitattributes]]
 - [[🙈Support gitignore|Feature: Support gitignore]]
