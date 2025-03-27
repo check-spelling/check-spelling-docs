@@ -1,5 +1,4 @@
 autotest
-backticks
 bopts
 briandfoy
 edk
@@ -7,6 +6,7 @@ endraw
 Expectlist
 GFM
 gms
+google
 GPG
 gson
 hpc
@@ -14,7 +14,6 @@ imageflow
 imazen
 interoperate
 jitsi
-linkchecker
 nomatch
 oneline
 openapitools
