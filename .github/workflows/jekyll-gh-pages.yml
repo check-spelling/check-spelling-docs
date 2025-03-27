@@ -24,6 +24,12 @@ jobs:
           ref: gh-pages
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: Mermaid
+        shell: bash
+        run: |
+          for file in $(git ls-files -z|xargs -0 grep -l '```mermaid'); do
+            aa-exec --profile=chrome npx -p @mermaid-js/mermaid-cli mmdc --input "$file" --output "$file"
+          done
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
