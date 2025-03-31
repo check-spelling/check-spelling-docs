@@ -4,7 +4,7 @@ Dictionaries that people really use are composed of more than just word lists. T
 
 With [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22)+, users are able to provide Hunspell dictionaries (`.aff` + `.dic`).
 
-⚠️ Note that hunspell support is mostly broken in [v0.0.24](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.24).
+⚠️ Note that hunspell support is mostly broken in [v0.0.23](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.23) and [v0.0.24](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.24). It should be fixed in the next release and should be tested so that it works going forward.
 
 ## Configuration
 
