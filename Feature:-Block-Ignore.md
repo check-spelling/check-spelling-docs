@@ -17,6 +17,10 @@ This will not be implemented in the `patterns.txt` file as patterns isn't really
 - `begin`/`end` tags are fixed characters (effectively wrapped in `\Q`...`\E` Perl Regular Expression handling)
 - no spell checking/pattern application for lines with `begin`/`end` tags
 
+## Concerns
+
+- Other scanners are likely to read the metadata file and will likely have complaints about portions of it (e.g. leak detection may object to patterns for the start/end of signature data). Hopefully those scanners have ways to tune them, if those mechanisms require inline/nearby annotations, it probably would be good to be able to support that.
+
 ## Not implemented
 
 - Restricting by path (this unfortunately seems like something people will need -- a given rule could easily only apply to certain file extensions...)
