@@ -94,6 +94,8 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
   - [Resolution](#resolution-35)
 - [single-line-file](#single-line-file)
   - [Resolution](#resolution-36)
+- [checkout-failed-unknown-cause](#checkout-failed-unknown-cause)
+  - [Resolution](#resolution-37)
 
 ℹ️ As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), workflows can [[configure whether specific events are treated as ❌Errors or ⚠️Warnings|Feature: Treat specific errors as warnings]].
 
@@ -839,3 +841,12 @@ The file has a single very long line. As these files tend to be minified files, 
 * Split the file into multiple lines. For markdown files you can generally insert single newlines anywhere, but splitting between `. ` is a good practice.
 * Disable detection by adding `single-line-file` to [`disable_checks`](https://github.com/check-spelling/check-spelling/wiki/Configuration#disable_checks).
 * If you have a good reason for the file to be a single line file and have check-spelling check its spelling, please search for an issue, and if you don't find one, please [file a ticket](https://github.com/check-spelling/check-spelling/issues/new) including an explanation of your use case.
+
+# checkout-failed-unknown-cause
+
+GitHub [actions/checkout](https://github.com/actions/checkout) can fail for various reasons. When [checkout](https://github.com/actions/checkout) fails, check-spelling tries to identify known reasons and offer advice, but sometimes it just doesn't know what to say. You can help by reporting your failures...
+
+## Resolution
+
+1. Check for [🐛s about `checkout-failed-unknown-cause`](https://github.com/check-spelling/check-spelling/issues?q=is%3Aissue%20checkout-failed-unknown-cause%20).
+2. If none match your problem, please [open a 🐛 bug report](https://github.com/check-spelling/check-spelling/issues/new?title=[checkout-failed-unknown-cause]%20scenario&body=Please%20provide%20details+preferably%20including%20a%20link%20to%20a%20workflow%20run,%20the%20configuration%20of%20the%20repository,%20and%20anything%20else%20you%20may%20know%20about%20the%20problem.).
