@@ -7,6 +7,7 @@
 - [[Rebasing spelling PRs|Rebasing spelling PRs]]
 - [[Parallel check CI failures]]
 - [[Script: Files to Excludes]]
+- [[Script: GitHub Logs with timestamps to relative timestamps]]
 - [[Script: Staging PRs]]
 - [[What does each dictionary cover]]
 - [[Miscellaneous commands]]
