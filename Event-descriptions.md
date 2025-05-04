@@ -456,7 +456,7 @@ If you're using [`check_file_names`](https://github.com/check-spelling/check-spe
 
 ### Suggestions for candidate pattern matching paths-of-checked-files.txt
 
-* You can download the sarif json and open it to identify the matched file.
+* You can download the SARIF json and open it to identify the matched file.
 * You can use [Looking for items locally] to generate a `$files` environment variable and dump that to a file. If you search that file using a case-sensitive regular expression for the suggested pattern, you should be able to identify the file.
 * Often files that match patterns themselves are worth excluding, so you might consider adding the pattern or a variation to [`excludes`|Configuration Examples: excludes] instead of [`patterns`|Configuration Examples: patterns]
 
@@ -477,7 +477,7 @@ You can choose one or the other. By default, check-spelling favors the former. I
 
 ## `use_sarif` and `security-events: write`
 
-To [upload sarif results](https://docs.github.com/en/code-security/code-scanning/integrating-with-code-scanning/uploading-a-sarif-file-to-github), `use_sarif` needs `security-events: write`.
+To [upload SARIF results](https://docs.github.com/en/code-security/code-scanning/integrating-with-code-scanning/uploading-a-sarif-file-to-github), `use_sarif` needs `security-events: write`.
 
 ### Resolution
 
@@ -581,7 +581,7 @@ In the log form, the numbers `9 ... 18` refer to character offsets within the fi
 ## Identifying the problematic items
 
 - If you enabled [[Summary Table|Feature: Summary Table]] with [`summary_table: 1`](https://github.com/check-spelling/check-spelling/wiki/Configuration#summary_table) and there is enough space, the individual paths should appear in the details table.
-- If you enabled [[SARIF output|Feature: SARIF output]] with [`use_sarif: 1`](https://github.com/check-spelling/check-spelling/wiki/Configuration#use_sarif) and the repository is public (or is private and has advanced security enabled) and you are a member of the security group / an owner/admin, then individual items should appear in the Sarif report.
+- If you enabled [[SARIF output|Feature: SARIF output]] with [`use_sarif: 1`](https://github.com/check-spelling/check-spelling/wiki/Configuration#use_sarif) and the repository is public (or is private and has advanced security enabled) and you are a member of the security group / an owner/admin, then individual items should appear in the SARIF report.
 - You can find them listed in the `Spell check` section of the Action log (they should have `(check-file-path)` on each line).
 
 ## Resolution
@@ -717,11 +717,11 @@ check-spelling is designed for utf-8 based files, so a file containing a utf-16 
 
 # sarif-generation-failed
 
-If you encounter this, then check-spelling's Sarif module misbehaved. Sorry about that.
+If you encounter this, then check-spelling's SARIF module misbehaved. Sorry about that.
 
 ## Resolution
 
-Please [file a bug](https://github.com/check-spelling/check-spelling/issues/new).
+Please [review known `sarif-generation-failed` bugs](https://github.com/check-spelling/check-spelling/issues?q=is%3Aissue%20state%3Aopen%20sarif-generation-failed) and if you don't find a match, [file a bug](https://github.com/check-spelling/check-spelling/issues/new).
 
 # unclosed-block-ignore
 
