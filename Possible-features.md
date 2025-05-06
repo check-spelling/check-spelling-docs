@@ -4,10 +4,13 @@
 
 ## Ready
 
+- 📏 [[Breaking Change: Code Scanning action requires a Code Scanning Ruleset]]
+- 🩸 [[Breaking Change: Dropping support for out of tree project files|Breaking Change: Dropping support for out of tree project files]]
+- 🩸 [[Breaking change: Dropping support for on: schedule|Breaking change: Dropping support for on: schedule]]
+- 🪆 [[Subrepos|Feature: Subrepos]]
+
 ## In progress
 
-- 🩸 [[Breaking Change: Dropping support for out of tree project files|Breaking Change: Dropping support for out of tree project files]]
-- 🪆 [[Subrepos|Feature: Subrepos]]
 - 😄 [[Easier to understand filenames|Feature: Easier to understand filenames]]
 - ↪️ [[Content Mappings|Feature: Content Mappings]]
 - ⚙️ [[JSON configuration|Feature: JSON configuration]]
@@ -19,7 +22,6 @@
 
 ## Near term
 
-- [[🩸Breaking change: Dropping support for on: schedule|Breaking change: Dropping support for on: schedule]]
 - [[👪Behavior change: case changes in expect|Behavior change: case changes in expect]]
 - [[🗜️Breaking change: Smaller dictionary|Breaking change: Smaller dictionary]]
 - [[🪜base‐path|Feature: \`base‐path\`]]
