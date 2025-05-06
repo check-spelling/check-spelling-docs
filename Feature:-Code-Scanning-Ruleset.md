@@ -1,4 +1,4 @@
-# Ruleset
+# Code Scanning Ruleset
 
 For more information on Rulesets, see [Creating rulesets for a repository](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/creating-rulesets-for-a-repository).
 
