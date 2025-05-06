@@ -4,7 +4,7 @@
 
 ## Ready
 
-- 📏 [[Breaking Change: Code Scanning action requires a Code Scanning Ruleset]]
+- 🩸 [[Breaking Change: Code Scanning action requires a Code Scanning Ruleset]]
 - 🩸 [[Breaking Change: Dropping support for out of tree project files|Breaking Change: Dropping support for out of tree project files]]
 - 🩸 [[Breaking change: Dropping support for on: schedule|Breaking change: Dropping support for on: schedule]]
 - 🪆 [[Subrepos|Feature: Subrepos]]
