@@ -2,7 +2,7 @@
 
 I received feedback that colors were problematic.
 
-To address this, I've add support for:
+To address this, I've added support for:
 
 - `expect` <=> `whitelist`
 
