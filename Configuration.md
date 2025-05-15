@@ -447,8 +447,11 @@ With `checkout: 1`, the check-spelling action will use [actions/checkout](https:
 
 ## submodules
 
-If `true`, check spelling of submodules, if `recursive`, also check recursively.
-If [checkout](#checkout) is enabled, the checkout step will pass the value of `submodules` to the checkout action.
+If `true`, check spelling of submodules.
+
+If `recursive`, also check recursively.
+
+If [checkout](#checkout) is enabled, the checkout step will pass the value of `submodules` to [actions/checkout](https://github.com/actions/checkout).
 
 ## bucket
 
