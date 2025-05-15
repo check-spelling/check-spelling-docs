@@ -9,6 +9,7 @@
 - 🩸 [[Breaking change: Dropping support for on: schedule|Breaking change: Dropping support for on: schedule]]
 - 🪆 [[Subrepos|Feature: Subrepos]]
 - 🔒 [[Automatically remove persisted‐credentials|Feature: Automatically remove persisted‐credentials]]
+- 🩺 [[Diagnose failed checkouts|Feature: Diagnose failed checkouts]]
 
 ## In progress
 
