@@ -56,6 +56,7 @@ See [[Configuration: Workflows]] for the supported GitHub workflows.
 | [caller_container](#caller_container) | Hack for `act` |
 | [candidate_example_limit](#candidate_example_limit) | Limit the number of reports per pattern suggestion |
 | [checkout](#checkout) | Let action manage checkout process |
+| [submodules](#submodules) | Check submodules |
 | [ignore-pattern](#ignore-pattern) | Characters to ignore while parsing lines |
 | [lower-pattern](#lower-pattern) | Pattern describing lowercase characters while parsing lines |
 | [not-lower-pattern](#not-lower-pattern) | Pattern describing non-lowercase characters while parsing lines |
@@ -443,6 +444,11 @@ Control how many lines are reported for each [[pattern suggestion|Feature: Sugge
 check-spelling workflows often need `write` access in order to perform various actions (adding PR comments, adding commit comments, generating SARIF reports) and having write access is a bit of a pain for pull requests from foreign repositories (see [Configuration: Workflows `pull_request_target`](https://github.com/check-spelling/check-spelling/wiki/Configuration%3A-Workflows#pull_request_target) for the various combinations).
 
 With `checkout: 1`, the check-spelling action will use [actions/checkout](https://github.com/actions/checkout) to check out the repository and [check-spelling/checkout-merge](https://github.com/check-spelling/checkout-merge) to get the merged commit instead of requiring the workflow to include the messy logic.
+
+## submodules
+
+If `true`, check spelling of submodules, if `recursive`, also check recursively.
+If [checkout](#checkout) is enabled, checkout will pass the value of `submodules` to the checkout action.
 
 ## bucket
 
