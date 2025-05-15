@@ -66,6 +66,7 @@ See [[Configuration: Workflows]] for the supported GitHub workflows.
 | [spell_check_this](#spell_check_this) | Fallback configuration data to use with checkout |
 | [ssh_key](#ssh_key) | Git ssh key for checking out (to enable writes with workflows) |
 | [task](#task) | Workflow magic |
+| [unknown_file_word_limit](#unknown_file_word_limit) | Limit the number of reports for a specific unknown word in file paths |
 
 See [[Configuration: Advanced]] for additional options.
 
@@ -501,6 +502,10 @@ In order to run with restricted permissions under `pull_request_target`, check-s
 - `comment` this phase should have permission to post a comment (but the untrusted content shouldn't be checked out)
 
 Used to pass messages between multiple check-spelling stages, especially from a stage that doesn't have write permissions to one that does (to add a comment, collapse a comment). This is mostly an implementation detail and shouldn't be specified directly.
+
+## unknown_file_word_limit
+
+Limit the number of reports for a specific unknown word in file paths.
 
 ## Configuration Files
 
