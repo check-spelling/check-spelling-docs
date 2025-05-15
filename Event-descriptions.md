@@ -291,10 +291,14 @@ If the item is misspelled, fixing the reported instances will disclose additiona
 You could of course use your local tools to find the remaining instances.
 
 # check-dictionary-not-found
-This is reported when a [check_extra_dictionaries](https://github.com/check-spelling/check-spelling/wiki/Configuration#check_extra_dictionaries) is not found. See [dictionary-not-found](#dictionary-not-found).
+This is reported when entries in [check_extra_dictionaries](https://github.com/check-spelling/check-spelling/wiki/Configuration#check_extra_dictionaries) are not found. See [dictionary-not-found](#dictionary-not-found).
+
+As of [v0.0.25](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.25), check-spelling should be able to properly test fallback dictionaries and make suggestions based on them.
 
 # extra-dictionary-not-found
-This is reported when a [extra_dictionaries](https://github.com/check-spelling/check-spelling/wiki/Configuration#extra_dictionaries) is not found. See [dictionary-not-found](#dictionary-not-found).
+This is reported when entries in [extra_dictionaries](https://github.com/check-spelling/check-spelling/wiki/Configuration#extra_dictionaries) are not found. See [dictionary-not-found](#dictionary-not-found).
+
+Note that there is no fallback for entries in `extra_dictionaries`.
 
 # fallback-dictionary-not-found
 A second attempt is made to resolve [extra_dictionaries](https://github.com/check-spelling/check-spelling/wiki/Configuration#extra_dictionaries), and when they fail this is reported. See [dictionary-not-found](#dictionary-not-found).
