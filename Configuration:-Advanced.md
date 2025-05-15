@@ -3,12 +3,16 @@
 | Variable                | Description                                                                                     |
 | ----------------------- | ----------------------------------------------------------------------------------------------- |
 | VERBOSE                 | `1` if you want to be reminded of how many words are in your expect list for each run.          |
-| debug                   | If set, will print more debug messages in the job logs                                          |
+| [debug](#debug)         | If set, will print more debug messages in the job logs                                          |
 | [bucket](#bucket)       | file/url for which the tool has read access to a couple of files.                               |
 | [project](#project)     | a folder within `bucket`. This allows you to share common items across projects.                |
 | [timeframe](#timeframe) | number of minutes (default 60) to consider when a **schedule** workflow checks for updated PRs. |
 
 ℹ️ These are additional items beyond the core items listed in [Configuration](https://github.com/check-spelling/check-spelling/wiki/Configuration).
+
+## debug
+
+Enable debug tracing of check-spelling action.
 
 ## bucket
 
