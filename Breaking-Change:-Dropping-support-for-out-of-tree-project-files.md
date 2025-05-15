@@ -10,8 +10,6 @@ Thus, check-spelling evolved to focussing on in tree project files.
 
 ## Changes
 
-The next release will not support out of tree project files.
+[v0.0.25](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.25) does not support out of tree project files.
 
-Anyone who needs to use out of tree project files can add steps before the check-spelling action to check out the repository and retrieve the project files.
-
-
+Anyone who needs to use out of tree project files can add steps before the check-spelling action to check out the repository and retrieve the project files, or they can simply commit the project files to the repository (typically in the `.github/actions/spelling` directory, although that is configurable with [`config`](https://github.com/check-spelling/check-spelling/wiki/Configuration#config).
