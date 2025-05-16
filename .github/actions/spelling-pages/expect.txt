@@ -22,12 +22,12 @@ petstore
 readstring
 rediff
 rescanned
+ruleset
 secpoll
 Spammers
 spellchecking
 strutil
-subrepos
-subrepositories
+Subrepos
 TCHARs
 tianocore
 tre
