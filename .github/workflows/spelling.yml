@@ -69,6 +69,11 @@ on:
       - "opened"
       - "reopened"
       - "synchronize"
+  workflow_call:
+    inputs:
+      reusable:
+        type: boolean
+        default: true
   workflow_dispatch:
 
 jobs:
@@ -80,7 +85,7 @@ jobs:
       actions: read
       security-events: write
     runs-on: ubuntu-latest
-    if: ${{ contains(github.event_name, 'pull_request') || github.event_name == 'push' || github.event_name == 'workflow_dispatch' }}
+    if: ${{ !inputs.reusable && (contains(github.event_name, 'pull_request') || github.event_name == 'push' || github.event_name == 'workflow_dispatch') }}
     concurrency:
       group: spelling-${{ github.event.pull_request.number || github.ref }}
       # note: If you use only_check_changed_files, you do not want cancel-in-progress
@@ -111,9 +116,10 @@ jobs:
             cspell:filetypes/filetypes.txt
             cspell:node/node.txt
             cspell:npm/npm.txt
+          event_aliases: '{"workflow_dispatch":"push"}'
 
   spelling-gh-pages:
-    if: github.ref_name == github.event.repository.default_branch || github.event_name == 'workflow_dispatch'
+    if: github.event_name == 'workflow_dispatch' || github.event_name == 'workflow_call'
     name: Check Spelling (gh-pages)
     permissions:
       contents: read
@@ -165,3 +171,4 @@ jobs:
             cspell:r/r.txt
             cspell:shell/shell-all-words.txt
             cspell:ruby/ruby.txt
+          event_aliases: '{"workflow_dispatch":"push"}'

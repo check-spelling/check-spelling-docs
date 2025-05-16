@@ -11,9 +11,9 @@ jobs:
       contents: write
     steps:
     - name: checkout workflow
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
     - name: checkout docs
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
       with:
         fetch-depth: 0
         path: gh-pages
@@ -58,3 +58,13 @@ jobs:
         if ! git push origin HEAD --force-with-lease; then
           git log -p FETCH_HEAD..HEAD | cat
         fi
+
+
+  check-spelling:
+    needs: refresh
+    permissions:
+      actions: read
+      contents: read
+      pull-requests: read
+      security-events: write
+    uses: check-spelling/check-spelling-docs/.github/workflows/spelling.yml@main
