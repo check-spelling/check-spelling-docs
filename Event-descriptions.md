@@ -1,101 +1,103 @@
 Each event should be listed in the [**Action Log**](https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/using-workflow-run-logs#viewing-logs-to-diagnose-failures).
 
 - [unrecognized-spelling](#unrecognized-spelling)
-  - [Resolution](#resolution)
+  - [Resolution](#unrecognized-spelling-r)
 - [noisy-file](#noisy-file)
-  - [Resolution](#resolution-1)
+  - [Resolution](#noisy-file-r)
 - [bad-regex](#bad-regex)
 - [no-newline-at-eof](#no-newline-at-eof)
-  - [Resolution](#resolution-2)
+  - [Resolution](#no-newline-at-eof-r)
 - [non-alpha-in-dictionary](#non-alpha-in-dictionary)
-  - [Resolution](#resolution-3)
+  - [Resolution](#non-alpha-in-dictionary-r)
 - [whitespace-in-dictionary](#whitespace-in-dictionary)
-  - [Resolution](#resolution-4)
+  - [Resolution](#whitespace-in-dictionary-r)
   - [Future](#future)
 - [unexpected-line-ending](#unexpected-line-ending)
-  - [Resolution](#resolution-5)
+  - [Resolution](#unexpected-line-ending-r)
 - [forbidden-pattern](#forbidden-pattern)
-  - [Resolution](#resolution-6)
+  - [Resolution](#forbidden-pattern-r)
 - [deprecated-feature](#deprecated-feature)
-  - [Resolution](#resolution-7)
+  - [Resolution](#deprecated-feature-r)
 - [large-file](#large-file)
-  - [Resolution](#resolution-8)
+  - [Resolution](#large-file-r)
 - [limited-references](#limited-references)
-  - [Resolution](#resolution-9)
+  - [Resolution](#limited-references-r)
 - [check-dictionary-not-found](#check-dictionary-not-found)
 - [extra-dictionary-not-found](#extra-dictionary-not-found)
 - [fallback-dictionary-not-found](#fallback-dictionary-not-found)
 - [dictionary-not-found](#dictionary-not-found)
   - [503 (internal server error)](#503-internal-server-error)
-    - [Resolution](#resolution-10)
+    - [Resolution](#503-internal-server-error-r)
+  - [429 (too-many-requests)](#429-too-many-requests)
+    - [Resolution](#429-too-many-requests-r)
   - [404 (file not found)](#404-file-not-found)
-    - [Resolution](#resolution-11)
+    - [Resolution](#404-file-not-found-r)
       - [Auto-detect](#auto-detect)
       - [Update](#update)
       - [Use older dictionaries](#use-older-dictionaries)
       - [Use multiple prefixes](#use-multiple-prefixes)
 - [candidate-pattern](#candidate-pattern)
-  - [Resolution](#resolution-12)
+  - [Resolution](#candidate-pattern-r)
   - [candidate-pattern with check_file_names file with use_sarif](#candidate-pattern-with-check_file_names-file-with-use_sarif)
     - [Suggestions for candidate pattern matching paths-of-checked-files.txt](#suggestions-for-candidate-pattern-matching-paths-of-checked-filestxt)
 - [unsupported-repo-notation](#unsupported-repo-notation)
 - [unsupported-configuration](#unsupported-configuration)
   - [`only_check_changed_files` and `use_sarif`](#only_check_changed_files-and-use_sarif)
   - [`use_sarif` and `security-events: write`](#use_sarif-and-security-events-write)
-    - [Resolution](#resolution-13)
+    - [Resolution](#use_sarif-and-security-events-write-r)
   - [`use_sarif` and private repositories](#use_sarif-and-private-repositories)
-    - [Resolution](#resolution-14)
+    - [Resolution](#use_sarif-and-private-repositories-r)
   - [`use_sarif` and `act`](#use_sarif-and-act)
 - [minified-file](#minified-file)
-  - [Resolution](#resolution-15)
+  - [Resolution](#minified-file-r)
 - [duplicate-extra-dictionary](#duplicate-extra-dictionary)
-  - [Resolution](#resolution-16)
+  - [Resolution](#duplicate-extra-dictionary-r)
 - [required-download-failed](#required-download-failed)
-  - [Resolution](#resolution-17)
+  - [Resolution](#required-download-failed-r)
     - [Examples](#examples)
 - [check-file-path](#check-file-path)
   - [Identifying the problematic items](#identifying-the-problematic-items)
-  - [Resolution](#resolution-18)
+  - [Resolution](#identifying-the-problematic-items-r)
 - [token-is-substring](#token-is-substring)
-  - [Resolution](#resolution-19)
+  - [Resolution](#token-is-substring-r)
 - [summary-table-skipped](#summary-table-skipped)
-  - [Resolution](#resolution-20)
+  - [Resolution](#summary-table-skipped-r)
 - [slow-file](#slow-file)
-  - [Resolution](#resolution-21)
+  - [Resolution](#slow-file-r)
 - [ignored-expect-variant](#ignored-expect-variant)
-  - [Resolution](#resolution-22)
+  - [Resolution](#ignored-expect-variant-r)
 - [no-files-to-check](#no-files-to-check)
-  - [Resolution](#resolution-23)
+  - [Resolution](#no-files-to-check-r)
 - [noisy-file-list](#noisy-file-list)
-  - [Resolution](#resolution-24)
+  - [Resolution](#noisy-file-list-r)
 - [utf16-surrogate](#utf16-surrogate)
-  - [Resolution](#resolution-25)
+  - [Resolution](#utf16-surrogate-r)
 - [utf16-surrogate-file](#utf16-surrogate-file)
-  - [Resolution](#resolution-25)
+  - [Resolution](#utf16-surrogate-file-r)
 - [sarif-generation-failed](#sarif-generation-failed)
-  - [Resolution](#resolution-26)
+  - [Resolution](#sarif-generation-failed-r)
 - [unclosed-block-ignore](#unclosed-block-ignore)
-  - [Resolution](#resolution-27)
+  - [Resolution](#unclosed-block-ignore-r)
 - [unclosed-block-ignore-begin](#unclosed-block-ignore-begin)
-  - [Resolution](#resolution-28)
+  - [Resolution](#unclosed-block-ignore-begin-r)
 - [unclosed-block-ignore-end](#unclosed-block-ignore-end)
-  - [Resolution](#resolution-29)
+  - [Resolution](#unclosed-block-ignore-end-r)
 - [missing-on-pull-request-event](#missing-on-pull-request-event)
-  - [Resolution](#resolution-30)
+  - [Resolution](#missing-on-pull-request-event-r)
 - [missing-merge-head](#missing-merge-head)
-  - [Resolution](#resolution-31)
+  - [Resolution](#missing-merge-head-r)
 - [missing-checkout](#missing-checkout)
-  - [Resolution](#resolution-32)
+  - [Resolution](#missing-checkout-r)
 - [excludes-generation-failed](#excludes-generation-failed)
-  - [Resolution](#resolution-33)
+  - [Resolution](#excludes-generation-failed-r)
 - [binary-file](#binary-file)
-  - [Resolution](#resolution-34)
+  - [Resolution](#binary-file-r)
 - [missing-rule-definition](#missing-rule-definition)
-  - [Resolution](#resolution-35)
+  - [Resolution](#missing-rule-definition-r)
 - [single-line-file](#single-line-file)
-  - [Resolution](#resolution-36)
+  - [Resolution](#single-line-file-r)
 - [checkout-failed-unknown-cause](#checkout-failed-unknown-cause)
-  - [Resolution](#resolution-37)
+  - [Resolution](#checkout-failed-unknown-cause-r)
 
 ℹ️ As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), workflows can [[configure whether specific events are treated as ❌Errors or ⚠️Warnings|Feature: Treat specific errors as warnings]].
 
@@ -108,7 +110,7 @@ Warning: src/browserlib/extract-dfns.mjs:159:11 ... 20, Warning - `hyperlink` is
 
 The token isn't in the dictionary
 
-## Resolution
+## <a id='unrecognized-spelling-r'>Resolution
 
 - If there's a correct word (e.g. `compatibility`), correct the spelling
 - If the word should be in the dictionary, add it to `allow.txt`
@@ -127,7 +129,7 @@ Technically it means there are fewer unique dictionary words in the file than un
 
 ℹ️ Info: [[Feature: Autodetect noisy files]]
 
-## Resolution
+## <a id="noisy-file-r"></a>Resolution
 
 - If the file shouldn't be in the repository, `git rm` it (recently the tool flagged a spurious `.mp4` file)
 - If the file shouldn't be checked, add a matching entry to `excludes.txt`
@@ -160,7 +162,7 @@ Unix tools get quite upset and confused by this.
 
 `wc -l` will not treat the last line of your file as a file (an off by one error of sorts).
 
-## Resolution
+## <a id="no-newline-at-eof-r"></a>Resolution
 
 `echo >> file`
 
@@ -178,7 +180,7 @@ This is mostly a matter of pragmatism. You might be worried that the tool doesn'
 
 Since it doesn't see `sea-green` as a single word, trying to add `sea-green` to your dictionary won't work.
 
-## Resolution
+## <a id="non-alpha-in-dictionary-r"></a>Resolution
 
 - If the word you're trying to put in the dictionary is `pre-emptively`, just replace all instances of it with `preemptively`.
 
@@ -198,7 +200,7 @@ This generally means you have a mix of DOS and Unix line endings.
 
 The tool generally assumes it's only going to see Unix line endings.
 
-## Resolution
+## <a id="whitespace-in-dictionary-r"></a>Resolution
 
 Use `dos2unix`.
 
@@ -222,7 +224,7 @@ This generally means you have a mix of DOS and Unix line endings.
 
 The tool generally assumes it's only going to see Unix line endings.
 
-## Resolution
+## <a id="unexpected-line-ending-r"></a>Resolution
 
 Use `dos2unix`.
 
@@ -244,7 +246,7 @@ The repository has a specific regular expression defining a pattern that it does
 
 ⚠️ Currently each hit will be logged whereas [unrecognized-spelling](#unrecognized-spelling) will trigger [limited-references](#limited-references). This will probably change, possibly before [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20).
 
-## Resolution
+## <a id="forbidden-pattern-r"></a>Resolution
 
 Identify the pattern and either rewrite your code not to match it, or adjust the pattern not to match your code.
 
@@ -253,7 +255,7 @@ Identify the pattern and either rewrite your code not to match it, or adjust the
 Over time, features will be deprecated. Typically a replacement will be available.
 Eventually support for the deprecated feature will be removed.
 
-## Resolution
+## <a id="deprecated-feature-r"></a>Resolution
 
 Please try to migrate to the newer supported item.
 
@@ -265,7 +267,7 @@ Warning: gigantic-file.sh:0:0 ... 0, Warning - size `10000000` exceeds limit `10
 
 This is generated by [[Configurable file size limits|Feature: Configurable file size limits]].
 
-## Resolution
+## <a id="large-file-r"></a>Resolution
 
 If you want to check the file, you can adjust the file size limit.
 
@@ -279,7 +281,7 @@ Warning: pkg/testutil/testutil_windows.go:26:67 ... 69, Warning - `amd` is not a
 
 This is generated when a word appears more than [[unknown_word_limit|Configuration#unknown_word_limit]] times.
 
-## Resolution
+## <a id="limited-references-r"></a>Resolution
 
 If the item is a word, add it to `expect` or `allow`.
 
@@ -316,11 +318,23 @@ server: Varnish
 retry-after: 0
 ```
 
-### Resolution
+### <a id="503-internal-server-error-r"></a>Resolution
 
 Rerun the workflow.
 
 check-spelling [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22)+ includes code to retry these failures.
+
+## 429 (too many requests)
+
+```
+Error: Failed to retrieve cspell:java/src/java-terms.txt -- HTTP 429 for https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20230509/dictionaries/java/src/java-terms.txt (check-dictionary-not-found)
+```
+
+### <a id="429-too-many-requests-r"></a>Resolution
+
+For `check-dictionary-not-found`, consider limiting the list of [`check_extra_dictionaries`](https://github.com/check-spelling/check-spelling/wiki/Configuration#check_extra_dictionaries) -- possibly to `""`
+
+You can also merge `.txt` dictionaries together into a single file and then point to that combined dictionary. You can use a normal `https:` url instead of a `cspell:` url -- the `cspell:` urls are just aliases to paths in `https://raw.githubusercontent.com/`.
 
 ## 404 (file not found)
 
@@ -332,7 +346,7 @@ This can happen if a path to a dictionary is incorrect.
 
 The most common case is when upgrading versions of check-spelling. Newer versions may use refreshed versions of the [cspell: dictionaries](https://github.com/streetsidesoftware/cspell-dicts) and their dictionaries are reorganized periodically.
 
-### Resolution
+### <a id="404-file-not-found-r"></a>Resolution
 
 #### Auto-detect
 
@@ -442,7 +456,7 @@ Simple comment lines `# ` preceding a candidate line will be included in the out
 In order to give users a chance to understand how useful a given candidate is, a couple of lines that match each pattern are reported.
 Version 0.0.22 will highlight the matching part of the line when SARIF reporting is enabled.
 
-## Resolution
+## <a id="compiler-flags-r"></a>Resolution
 
 You can add the pattern into `patterns.txt`:
 
@@ -483,7 +497,7 @@ You can choose one or the other. By default, check-spelling favors the former. I
 
 To [upload SARIF results](https://docs.github.com/en/code-security/code-scanning/integrating-with-code-scanning/uploading-a-sarif-file-to-github), `use_sarif` needs `security-events: write`.
 
-### Resolution
+### <a id="use_sarif-and-security-events-write-r"></a>Resolution
 
 If you want to use sarif, add:
 
@@ -502,7 +516,7 @@ GitHub SARIF processing requires GitHub Advanced Security to be enabled.
 
 This is possible for Public repositories on GitHub.com and for Enterprise Repositories, but it's possible that you can't use it with Private repositories on GitHub.com.
 
-### Resolution
+### <a id="use_sarif-and-private-repositories-r"></a>Resolution
 
 - Switch to an enterprise plan (?)
 - Remove `use_sarif`
@@ -520,7 +534,7 @@ Eventually provisions will be made to generally expose the artifact itself. Ther
 
 The file has really long lines. It's probably minified.
 
-## Resolution
+## <a id="minified-file-r"></a>Resolution
 
 - If it's minified, add it to excludes
 - If certain lines are really long because they contain inline minified content, add a pattern that matches that content
@@ -535,7 +549,7 @@ The file has really long lines. It's probably minified.
 
 This can happen if you have the same entry multiple times in `extra_dictionaries`.
 
-## Resolution
+## <a id="duplicate-extra-dictionary-r"></a>Resolution
 
 Remove duplicate entries. check-spelling will ignore duplicate instances.
 
@@ -553,7 +567,7 @@ Then you've run into a case where check-spelling needed a resource (here, the di
 
 Because the dictionary is required in order to determine whether things are misspelled, check-spelling gave up.
 
-## Resolution
+## <a id="required-download-failed-r"></a>Resolution
 
 Most of the time, this will be a transient error, you can click the [`Re-run jobs` drop down and select `Re-run failed jobs`](https://docs.github.com/en/actions/managing-workflow-runs/re-running-workflows-and-jobs#re-running-failed-jobs-in-a-workflow).
 
@@ -588,7 +602,7 @@ In the log form, the numbers `9 ... 18` refer to character offsets within the fi
 - If you enabled [[SARIF output|Feature: SARIF output]] with [`use_sarif: 1`](https://github.com/check-spelling/check-spelling/wiki/Configuration#use_sarif) and the repository is public (or is private and has advanced security enabled) and you are a member of the security group / an owner/admin, then individual items should appear in the SARIF report.
 - You can find them listed in the `Spell check` section of the Action log (they should have `(check-file-path)` on each line).
 
-## Resolution
+## <a id="identifying-the-problematic-items-r"></a>Resolution
 
 For false positives, you can add entries to `expect.txt` or `allow.txt` (this is an especially good idea if you're using a term as a term of art, e.g. `graphql`) just as if the items were found in the files themselves, or add patterns to `patterns.txt`.
 
@@ -607,7 +621,7 @@ Sometimes the fault is due to an internal pattern (mostly aliases for fancy apos
 
 ⚠️ If this flags to the first line of a file and you have `check_file_names` enabled, it's possible it's warning about the file path as opposed to the line. A distinct warning will probably be added for this case at a later time.
 
-## Resolution
+## <a id="token-is-substring-r"></a>Resolution
 
 - Consider adding a `\b` or `\s` to the edges of your pattern.
 - It's possible to add the items to expect or to the dictionary if they're really correct.
@@ -617,7 +631,7 @@ Sometimes the fault is due to an internal pattern (mostly aliases for fancy apos
 
 When producing a [[Summary Table|Feature: Summary Table]], if sections would cause the Summary to exceed its size limit, they'll be dropped.
 
-## Resolution
+## <a id="summary-table-skipped-r"></a>Resolution
 
 Remove items
 
@@ -632,7 +646,7 @@ Remove items
 
 When processing a file, if the time to parse exceeds the `splitter_timeout` environment variable, parsing will stop.
 
-## Resolution
+## <a id="slow-file-r"></a>Resolution
 
 - Add the file to `excludes.txt`
 - Adjust patterns to improve parsing behavior
@@ -655,7 +669,7 @@ If you decide that `microsoft` is acceptable, then it's likely that you'll also 
 
 Similarly, if you use the term `widgit`, you might write it in a plural as `widgits`. If you include `widgit` in `expect`, you don't need to include `widgits` as check-spelling will assume that you are ok with that plural.
 
-## Resolution
+## <a id="ignored-expect-variant-r"></a>Resolution
 
 - Remove the extraneous entry/entries from `expect.txt` -- the included `apply.pl` suggestions should help with this
 - Add forms to `allow.txt` which doesn't have this behavior
@@ -668,7 +682,7 @@ It can be configured to check out the repository for you, or you can check out t
 
 You can configure which files it should check by using [excludes](https://github.com/check-spelling/check-spelling/wiki/Configuration#excludes) and [only](https://github.com/check-spelling/check-spelling/wiki/Configuration#only).
 
-## Resolution
+## <a id="no-files-to-check-r"></a>Resolution
 
 - Check out the repository
   - Add `checkout: true` to the `step` `uses: check-spelling/check-spelling@...`'s `with:` block, or
@@ -681,7 +695,7 @@ You can configure which files it should check by using [excludes](https://github
 
 [[Check filenames and paths|Feature: Check filenames and paths]] results in a list of file paths to be checked as if it was the contents of a file. The general [noisy-file](#noisy-file) heuristic has triggered on the file list itself.
 
-## Resolution
+## <a id="noisy-file-list-r"></a>Resolution
 
 - Turn off [[Check filenames and paths|Feature: Check filenames and paths]].
 - Add file path words to the dictionary (`allow.txt`).
@@ -701,7 +715,7 @@ This event was renamed from `utf16-surrogate` to `utf16-surrogate-file` in [v0.0
 
 check-spelling is designed for utf-8 based files, so a file containing a utf-16 surrogate should be a reasonably good indication that the file won't contain content check-spelling can handle.
 
-## Resolution
+## <a id="utf16-surrogate-file-r"></a>Resolution
 
 - Add the file to `excludes.txt`
 - If the heuristic is wrong, please file a bug.
@@ -723,7 +737,7 @@ check-spelling is designed for utf-8 based files, so a file containing a utf-16 
 
 If you encounter this, then check-spelling's SARIF module misbehaved. Sorry about that.
 
-## Resolution
+## <a id="sarif-generation-failed-r"></a>Resolution
 
 Please [review known `sarif-generation-failed` bugs](https://github.com/check-spelling/check-spelling/issues?q=is%3Aissue%20state%3Aopen%20sarif-generation-failed) and if you don't find a match, [file a bug](https://github.com/check-spelling/check-spelling/issues/new).
 
@@ -735,7 +749,7 @@ As a result, all content after the begin tag was ignored.
 
 Note that this feature is experimental, it's possible you've encountered a bug.
 
-## Resolution
+## <a id="unclosed-block-ignore-r"></a>Resolution
 
 - If you believe the behavior is incorrect, please [file a bug](https://github.com/check-spelling/check-spelling/issues/new).
 - If the end token really isn't present, consider adjusting your begin/end tokens.
@@ -750,7 +764,7 @@ For convenience, there should be a corresponding report [`unclosed-block-ignore-
 
 Note that this feature is experimental, it's possible you've encountered a bug.
 
-## Resolution
+## <a id="unclosed-block-ignore-begin-r"></a>Resolution
 
 - If you believe the behavior is incorrect, please [file a bug](https://github.com/check-spelling/check-spelling/issues/new).
 - If the end token really isn't present, consider adjusting your begin/end tokens.
@@ -766,7 +780,7 @@ For convenience, there should be a corresponding report [`unclosed-block-ignore-
 
 Note that this feature is experimental, it's possible you've encountered a bug.
 
-## Resolution
+## <a id="unclosed-block-ignore-end-r"></a>Resolution
 
 - If you believe the behavior is incorrect, please [file a bug](https://github.com/check-spelling/check-spelling/issues/new).
 - If the end token really isn't present, consider adjusting your begin/end tokens.
@@ -778,7 +792,7 @@ The [`suppress_push_for_open_pull_request`](https://github.com/check-spelling/ch
 
 Instead of leaving users without a run, the `suppress_push_for_open_pull_request` configuration will be ignored. 
 
-## Resolution
+## <a id="missing-on-pull-request-event-r"></a>Resolution
 
 - Add a `pull_request` or `pull_request_target` event to the `on:` block in the workflow.
 - Remove `suppress_push_for_open_pull_request` from the check-spelling configuration.
@@ -788,7 +802,7 @@ Instead of leaving users without a run, the `suppress_push_for_open_pull_request
 
 This is known to happen when a PR is reopened. check-spelling as of [v0.0.23](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.23) should be able to check spelling, but will not be able to upload a SARIF report as that requires information about the PR merge commit.
 
-## Resolution
+## <a id="missing-merge-head-r"></a>Resolution
 
 It's possible that the commit will be regenerated, but the simplest thing to do is to push a new commit.
 
@@ -796,7 +810,7 @@ It's possible that the commit will be regenerated, but the simplest thing to do 
 
 There wasn't a checked out repository in the configured location.
 
-## Resolution
+## <a id="missing-checkout-r"></a>Resolution
 
 Check out the repository:
 - Add `checkout: true` to the `step` `uses: check-spelling/check-spelling@...`'s `with:` block, or
@@ -812,7 +826,7 @@ The `SuggestsExcludes` implementation may have bugs (and does as of [0.0.24](htt
 
 If an error is encountered in `SuggestsExcludes`, check-spelling won't be able to suggest additional excludes, but it should otherwise function.
 
-## Resolution
+## <a id="excludes-generation-failed-r"></a>Resolution
 
 * If you're using [0.0.24](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.24) you can try prerelease or the version after [0.0.24](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.24).
 * If you find one in a version after the fix for https://github.com/check-spelling/check-spelling/issues/85, please search for additional issues, and if you don't find one, please [file a ticket](https://github.com/check-spelling/check-spelling/issues/new).
@@ -821,7 +835,7 @@ If an error is encountered in `SuggestsExcludes`, check-spelling won't be able t
 
 When [[magic file detection|Feature: Detect binary files]] is enabled, some files may be identified as binaries and thus skipped.
 
-## Resolution
+## <a id="binary-file-r"></a>Resolution
 
 * Add the files to `excludes.txt`.
 * Disable detection by using `use_magic_file: 0`.
@@ -831,7 +845,7 @@ When [[magic file detection|Feature: Detect binary files]] is enabled, some file
 
 Each event in check-spelling should have a definition in check-spelling's `sarif.json` file which in turn should link to a specific event description (in this document). Unfortunately, if you're reading this because you clicked a link from a GitHub event, then that means that there was an event in check-spelling that isn't documented in `sarif.json`.
 
-## Resolution
+## <a id="missing-rule-definition-r"></a>Resolution
 
 Please search for an issue, and if you don't find one, please [file a ticket](https://github.com/check-spelling/check-spelling/issues/new); include as much detail about the occurrence as possible.
 
@@ -839,7 +853,7 @@ Please search for an issue, and if you don't find one, please [file a ticket](ht
 
 The file has a single very long line. As these files tend to be minified files, it was skipped.
 
-## Resolution
+## <a id="single-line-file-r"></a>Resolution
 
 * Add the files to `excludes.txt`.
 * Split the file into multiple lines. For markdown files you can generally insert single newlines anywhere, but splitting between `. ` is a good practice.
@@ -850,7 +864,7 @@ The file has a single very long line. As these files tend to be minified files, 
 
 GitHub [actions/checkout](https://github.com/actions/checkout) can fail for various reasons. When [checkout](https://github.com/actions/checkout) fails, check-spelling tries to identify known reasons and offer advice, but sometimes it just doesn't know what to say. You can help by reporting your failures...
 
-## Resolution
+## <a id="checkout-failed-unknown-cause-r"></a>Resolution
 
 1. Check for [🐛s about `checkout-failed-unknown-cause`](https://github.com/check-spelling/check-spelling/issues?q=is%3Aissue%20checkout-failed-unknown-cause%20).
 2. If none match your problem, please [open a 🐛 bug report](https://github.com/check-spelling/check-spelling/issues/new?title=[checkout-failed-unknown-cause]%20scenario&body=Please%20provide%20details+preferably%20including%20a%20link%20to%20a%20workflow%20run,%20the%20configuration%20of%20the%20repository,%20and%20anything%20else%20you%20may%20know%20about%20the%20problem.).
