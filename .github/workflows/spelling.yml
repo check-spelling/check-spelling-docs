@@ -129,10 +129,12 @@ jobs:
       - name: Get config
         uses: actions/checkout@v4
       - name: Get gh-pages content
-        uses: actions/checkout@v4
-        with:
-          ref: gh-pages
-          path: gh-pages
+        run: |
+          : Get gh-pages content
+          HEAD=$(git rev-parse HEAD)
+          git fetch origin gh-pages
+          git checkout gh-pages
+          git checkout $HEAD -- .github/actions/spelling-pages
       - name: check-spelling
         id: spelling
         uses: check-spelling/check-spelling@prerelease
@@ -140,7 +142,6 @@ jobs:
           config: .github/actions/spelling-pages
           report_title_suffix: gh-pages
           suppress_push_for_open_pull_request: ${{ github.actor != 'dependabot[bot]' && 1 }}
-          experimental_path: gh-pages
           check_file_names: 1
           spell_check_this: check-spelling/spell-check-this@prerelease
           post_comment: 0
