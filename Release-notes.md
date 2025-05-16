@@ -3,14 +3,15 @@
 ## Supported
 
 - [prerelease](#prerelease)
+- [v0.0.25](#v0025)
 - [v0.0.24](#v0024)
 - [v0.0.23](#v0023)
-- [v0.0.22](#v0022)
 
 ## Unsupported
 
 ❗ Please do not use these versions.
 
+- [v0.0.22](#v0022)
 - [v0.0.21](#v0021)
 - [v0.0.20](#v0020)
 - [v0.0.19](#v0019)
@@ -26,15 +27,25 @@
 
 -->
 
+## v0.0.25
+
+[v0.0.25](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.25)
+
+- 🩸 [[Breaking Change: Code Scanning action requires a Code Scanning Ruleset]]
+- 🩸 [[Breaking Change: Dropping support for out of tree project files|Breaking Change: Dropping support for out of tree project files]]
+- 🩸 [[Breaking change: Dropping support for on: schedule|Breaking change: Dropping support for on: schedule]]
+- 🪆 [[Subrepos|Feature: Subrepos]]
+- 🔒 [[Automatically remove persisted‐credentials|Feature: Automatically remove persisted‐credentials]]
+- 🩺 [[Diagnose failed checkouts|Feature: Diagnose failed checkouts]]
+
 ## v0.0.24
 
 [v0.0.24](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.24)
 
-* [SARIF reports will upload on `push` / if the action performs the checkout](https://github.com/check-spelling/check-spelling/issues/71)
-* [`followup` should not be set unless a comment needs to be made/collapsed](https://github.com/check-spelling/check-spelling/issues/70)
-* [Files with Mac OS (`\r`) line endings will not trigger `minified-file` warnings](https://github.com/check-spelling/check-spelling/issues/75)
-* [`GITHUB_TOKEN` is no longer listed as `required`](https://github.com/check-spelling/check-spelling/issues/42)
-
+- [SARIF reports will upload on `push` / if the action performs the checkout](https://github.com/check-spelling/check-spelling/issues/71)
+- [`followup` should not be set unless a comment needs to be made/collapsed](https://github.com/check-spelling/check-spelling/issues/70)
+- [Files with Mac OS (`\r`) line endings will not trigger `minified-file` warnings](https://github.com/check-spelling/check-spelling/issues/75)
+- [`GITHUB_TOKEN` is no longer listed as `required`](https://github.com/check-spelling/check-spelling/issues/42)
 
 ## v0.0.23
 
