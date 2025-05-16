@@ -4,13 +4,6 @@
 
 ## Ready
 
-- 🩸 [[Breaking Change: Code Scanning action requires a Code Scanning Ruleset]]
-- 🩸 [[Breaking Change: Dropping support for out of tree project files|Breaking Change: Dropping support for out of tree project files]]
-- 🩸 [[Breaking change: Dropping support for on: schedule|Breaking change: Dropping support for on: schedule]]
-- 🪆 [[Subrepos|Feature: Subrepos]]
-- 🔒 [[Automatically remove persisted‐credentials|Feature: Automatically remove persisted‐credentials]]
-- 🩺 [[Diagnose failed checkouts|Feature: Diagnose failed checkouts]]
-
 ## In progress
 
 - 😄 [[Easier to understand filenames|Feature: Easier to understand filenames]]
