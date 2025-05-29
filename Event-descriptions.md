@@ -64,6 +64,8 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
   - [Resolution](#summary-table-skipped-r)
 - [slow-file](#slow-file)
   - [Resolution](#slow-file-r)
+- [slow-file-list](#slow-file-list)
+  - [Resolution](#slow-file-list-r)
 - [ignored-expect-variant](#ignored-expect-variant)
   - [Resolution](#ignored-expect-variant-r)
 - [no-files-to-check](#no-files-to-check)
@@ -649,6 +651,16 @@ When processing a file, if the time to parse exceeds the `splitter_timeout` envi
 ## <a id="slow-file-r"></a>Resolution
 
 - Add the file to `excludes.txt`
+- Adjust patterns to improve parsing behavior
+- Increase [`splitter_timeout`](https://github.com/check-spelling/check-spelling/wiki/Feature%3A-Parsing-Timeouts#configuration)
+
+# slow-file-list
+
+If you're using [`check_file_names`](https://github.com/check-spelling/check-spelling/wiki/Configuration#check_file_names) and the file list is too long or the patterns for it collectively are too long, it might not be possible to check them.
+
+## <a id="slow-file-list-r"></a>Resolution
+
+- Disable [`check_file_names`](https://github.com/check-spelling/check-spelling/wiki/Configuration#check_file_names)
 - Adjust patterns to improve parsing behavior
 - Increase [`splitter_timeout`](https://github.com/check-spelling/check-spelling/wiki/Feature%3A-Parsing-Timeouts#configuration)
 
