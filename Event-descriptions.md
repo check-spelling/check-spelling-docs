@@ -135,6 +135,7 @@ Technically it means there are fewer unique dictionary words in the file than un
 
 - If the file shouldn't be in the repository, `git rm` it (recently the tool flagged a spurious `.mp4` file)
 - If the file shouldn't be checked, add a matching entry to `excludes.txt`
+  - there should be a section "Some files were automatically ignored 🙈" which includes sample entries and the location where they should be added
 - If the file should be checked, some combination of:
   - add entries to the dictionary (via `allow.txt`)
   - mask runs of noise (via `patterns.txt`)
