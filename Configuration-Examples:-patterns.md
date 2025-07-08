@@ -139,8 +139,6 @@ accounts.binance.com/[a-z/]*oauth/authorize\?[-0-9a-zA-Z&%]*
 # bitbucket commits
 \bbitbucket\.org/[^/]+/[^/]+/commits?/[0-9a-f]+
 
-# bit.ly
-\bbit\.ly/\w+
 
 # bitrise
 \bapp\.bitrise\.io/app/[0-9a-f]*/[\w.?=&]*
