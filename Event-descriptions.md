@@ -23,6 +23,7 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
 - [limited-references](#limited-references)
   - [Resolution](#limited-references-r)
 - [check-dictionary-not-found](#check-dictionary-not-found)
+  - [Resolution](#check-dictionary-not-found-r)
 - [extra-dictionary-not-found](#extra-dictionary-not-found)
 - [fallback-dictionary-not-found](#fallback-dictionary-not-found)
 - [dictionary-not-found](#dictionary-not-found)
@@ -299,6 +300,11 @@ You could of course use your local tools to find the remaining instances.
 This is reported when entries in [check_extra_dictionaries](https://github.com/check-spelling/check-spelling/wiki/Configuration#check_extra_dictionaries) are not found. See [dictionary-not-found](#dictionary-not-found).
 
 As of [v0.0.25](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.25), check-spelling should be able to properly test fallback dictionaries and make suggestions based on them.
+
+## <a id="check-dictionary-not-found-r"></a>Resolution
+
+* If you have set `cspell` to something in `dictionary_source_prefixes` but have not set `check_extra_dictionaries` to something based on that value, you'll want to set it to an appropriate value, possibly `check_extra_dictionaries: ""`.
+* If you have set `check_extra_dictionaries` to a value, you'll want to make sure that the values it has are compatible with the values of `dictionary_source_prefixes` / map to available resources.
 
 # extra-dictionary-not-found
 This is reported when entries in [extra_dictionaries](https://github.com/check-spelling/check-spelling/wiki/Configuration#extra_dictionaries) are not found. See [dictionary-not-found](#dictionary-not-found).
