@@ -1,8 +1,17 @@
 # Code Scanning action requires a Code Scanning Ruleset
 
-As of [check-spelling v0.0.25](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.25), if you enable [[SARIF output|Feature: SARIF output]], then check-spelling will not yield an :x: for errors. If you are relying on status checks, you'll need to add a code-scanning rule instead. The following is an example of a code-scanning rule which should work:
+As of [check-spelling v0.0.25](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.25), if you enable [[SARIF output|Feature: SARIF output]], then check-spelling will not yield an ❌ for errors.
 
-## Sample ruleset
+If you are relying on status checks, you'll need to add a code-scanning rule instead.
+
+## Migration
+
+1. You should change your `use_sarif: ...` condition to `use_sarif: 1` because otherwise code-scanning will only run some of the time. (And when it doesn't run, your ruleset will block pull requests from being mergeable).
+2. You need to add a ruleset.
+
+The following is an example of a code-scanning rule which should work:
+
+### Sample ruleset
 
 ```json
 {
