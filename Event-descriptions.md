@@ -344,7 +344,7 @@ Error: Failed to retrieve cspell:java/src/java-terms.txt -- HTTP 429 for https:/
 
 ### <a id="429-too-many-requests-r"></a>Resolution
 
-For `check-dictionary-not-found`, consider limiting the list of [`check_extra_dictionaries`](https://github.com/check-spelling/check-spelling/wiki/Configuration#check_extra_dictionaries) -- possibly to `""`
+For `check-dictionary-not-found`, consider limiting the list of [`check_extra_dictionaries`](https://github.com/check-spelling/check-spelling/wiki/Configuration#check_extra_dictionaries) -- possibly to `""`.
 
 You can also merge `.txt` dictionaries together into a single file and then point to that combined dictionary. You can use a normal `https:` url instead of a `cspell:` url -- the `cspell:` urls are just aliases to paths in `https://raw.githubusercontent.com/`.
 
