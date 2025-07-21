@@ -12,7 +12,6 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
   - [Resolution](#non-alpha-in-dictionary-r)
 - [whitespace-in-dictionary](#whitespace-in-dictionary)
   - [Resolution](#whitespace-in-dictionary-r)
-  - [Future](#future)
 - [unexpected-line-ending](#unexpected-line-ending)
   - [Resolution](#unexpected-line-ending-r)
 - [forbidden-pattern](#forbidden-pattern)
@@ -202,6 +201,8 @@ If you want to accept `avii-ridge` in your repository, you can:
 
 # whitespace-in-dictionary
 
+This warning was renamed to `unexpected-line-ending` in [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20)
+
 ```
 Warning: .github/actions/spelling/expect.txt:1:5 ... 6, Warning - entry has unexpected whitespace (whitespace-in-dictionary)
 ```
@@ -219,10 +220,6 @@ e.g.:
 ```
 dos2unix .github/actions/spelling/expect.txt
 ```
-
-## Future
-
-This may be renamed to `unexpected-line-ending` in the future.
 
 # unexpected-line-ending
 
