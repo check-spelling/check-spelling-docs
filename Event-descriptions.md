@@ -465,7 +465,7 @@ Simple comment lines `# ` preceding a candidate line will be included in the out
 In order to give users a chance to understand how useful a given candidate is, a couple of lines that match each pattern are reported.
 Version 0.0.22 will highlight the matching part of the line when SARIF reporting is enabled.
 
-## <a id="compiler-flags-r"></a>Resolution
+## <a id="candidate-pattern-r"></a>Resolution
 
 If the pattern seems sensible, open the `patterns.txt` file.
 
