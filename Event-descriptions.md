@@ -467,7 +467,11 @@ Version 0.0.22 will highlight the matching part of the line when SARIF reporting
 
 ## <a id="compiler-flags-r"></a>Resolution
 
-You can add the pattern into `patterns.txt`:
+If the pattern seems sensible, open the `patterns.txt` file.
+
+If a similar pattern already exists, you might want to merge the changes.
+
+Otherwise, you can add the pattern:
 
 ```perl
 # hit-count: 169 file-count: 40
