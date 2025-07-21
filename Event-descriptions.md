@@ -74,7 +74,6 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
 - [noisy-file-list](#noisy-file-list)
   - [Resolution](#noisy-file-list-r)
 - [utf16-surrogate](#utf16-surrogate)
-  - [Resolution](#utf16-surrogate-r)
 - [utf16-surrogate-file](#utf16-surrogate-file)
   - [Resolution](#utf16-surrogate-file-r)
 - [sarif-generation-failed](#sarif-generation-failed)
