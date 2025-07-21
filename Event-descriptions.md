@@ -201,7 +201,7 @@ If you want to accept `avii-ridge` in your repository, you can:
 
 # whitespace-in-dictionary
 
-This warning was renamed to `unexpected-line-ending` in [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20)
+ℹ️ This warning was renamed to `unexpected-line-ending` in [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20).
 
 ```
 Warning: .github/actions/spelling/expect.txt:1:5 ... 6, Warning - entry has unexpected whitespace (whitespace-in-dictionary)
