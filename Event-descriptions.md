@@ -100,6 +100,8 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
   - [Resolution](#single-line-file-r)
 - [checkout-failed-unknown-cause](#checkout-failed-unknown-cause)
   - [Resolution](#checkout-failed-unknown-cause-r)
+- [unused-config-file](#unused-config-file)
+  - [Resolution](#unused-config-file-r)
 
 ℹ️ As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), workflows can [[configure whether specific events are treated as ❌Errors or ⚠️Warnings|Feature: Treat specific errors as warnings]].
 
@@ -895,3 +897,17 @@ GitHub [actions/checkout](https://github.com/actions/checkout) can fail for vari
 
 1. Check for [🐛s about `checkout-failed-unknown-cause`](https://github.com/check-spelling/check-spelling/issues?q=is%3Aissue%20checkout-failed-unknown-cause%20).
 2. If none match your problem, please [open a 🐛 bug report](https://github.com/check-spelling/check-spelling/issues/new?title=[checkout-failed-unknown-cause]%20scenario&body=Please%20provide%20details+preferably%20including%20a%20link%20to%20a%20workflow%20run,%20the%20configuration%20of%20the%20repository,%20and%20anything%20else%20you%20may%20know%20about%20the%20problem.).
+
+# unused-config-file
+
+A file was found in the configuration directory and wasn't used. This could be because:
+* support was dropped
+* or it's from a future version
+* you have multiple supported files for the same feature and only one will be used (newer file names are favored over deprecated/soon to be deprecated names/formats)
+* you have both a single file and a directory for the same format (only one of the two will be used)
+* the filename is misspelled
+* you put another file into the configuration directory -- there's nothing wrong with this, the message should not be a warning/error, it's just informative
+
+## <a id="unused-config-file-r"></a>Resolution
+
+If you weren't expecting this message, you should determine which case applies, possibly by reading release notes/checking where you got the file and update (filenames, or versions) as applicable.
