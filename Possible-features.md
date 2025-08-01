@@ -6,6 +6,7 @@
 
 ## In progress
 
+- ℹ️ [[Unused configuration file warning|Feature: Unused configuration file warning]]
 - 😄 [[Easier to understand filenames|Feature: Easier to understand filenames]]
 - ↪️ [[Content Mappings|Feature: Content Mappings]]
 - ⚙️ [[JSON configuration|Feature: JSON configuration]]
