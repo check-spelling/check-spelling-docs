@@ -901,12 +901,12 @@ GitHub [actions/checkout](https://github.com/actions/checkout) can fail for vari
 # unused-config-file
 
 A file was found in the configuration directory and wasn't used. This could be because:
-* support was dropped
-* or it's from a future version
-* you have multiple supported files for the same feature and only one will be used (newer file names are favored over deprecated/soon to be deprecated names/formats)
-* you have both a single file and a directory for the same format (only one of the two will be used)
-* the filename is misspelled
-* you put another file into the configuration directory -- there's nothing wrong with this, the message should not be a warning/error, it's just informative
+* Support was dropped
+* It's from a future version
+* Multiple supported files for the same feature were present. Only one will be used (newer file names are favored over deprecated/soon to be deprecated names/formats)
+* Both a single file and a directory for the same feature (only one of the two will be used)
+* The filename is misspelled
+* A random file was placed in the configuration directory -- there's nothing wrong with this, the message should not be a warning/error, it's just informative.
 
 ## <a id="unused-config-file-r"></a>Resolution
 
