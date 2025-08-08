@@ -535,6 +535,7 @@ This is possible for Public repositories on GitHub.com and for Enterprise Reposi
 
 ### <a id="use_sarif-and-private-repositories-r"></a>Resolution
 
+- If your repository doesn't need to be private (for example, you accidentally create it as a private repository), you can change it to public
 - Switch to an enterprise plan (?)
 - Remove `use_sarif`
 - If you have a use for the SARIF output beyond GitHub's handling, please file a bug describing your use case -- it's possible to adjust the code to handle this case, but this wasn't supported in the initial implementation, so you are here.
