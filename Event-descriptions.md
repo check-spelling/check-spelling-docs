@@ -917,7 +917,7 @@ If you weren't expecting this message, you should determine which case applies, 
 
 # no-new-commits-to-check
 
-The [check_commit_messages](https://github.com/check-spelling/check-spelling/wiki/Configuration#check_commit_messages) feature is intentionally not retroactive. If first commit changing this feature isn't followed by another commit in the same push, this notification will be presented.
+The [check_commit_messages](https://github.com/check-spelling/check-spelling/wiki/Configuration#check_commit_messages) feature is intentionally not retroactive. If the first commit changing this feature isn't followed by another commit in the same push, this event will be reported.
 
 ## <a id="no-new-commits-to-check-r"></a>Resolution
 
