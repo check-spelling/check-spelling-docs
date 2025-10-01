@@ -102,6 +102,8 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
   - [Resolution](#checkout-failed-unknown-cause-r)
 - [unused-config-file](#unused-config-file)
   - [Resolution](#unused-config-file-r)
+- [no-new-commits-to-check](#no-new-commits-to-check)
+  - [Resolution](#no-new-commits-to-check-r)
 
 ℹ️ As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), workflows can [[configure whether specific events are treated as ❌Errors or ⚠️Warnings|Feature: Treat specific errors as warnings]].
 
@@ -912,3 +914,11 @@ A file was found in the configuration directory and wasn't used. This could be b
 ## <a id="unused-config-file-r"></a>Resolution
 
 If you weren't expecting this message, you should determine which case applies, possibly by reading release notes/checking where you got the file and update (filenames, or versions) as applicable.
+
+# no-new-commits-to-check
+
+The [check_commit_messages](https://github.com/check-spelling/check-spelling/wiki/Configuration#check_commit_messages) feature is intentionally not retroactive. If first commit changing this feature isn't followed by another commit in the same push, this notification will be presented.
+
+## <a id="no-new-commits-to-check-r"></a>Resolution
+
+This is purely informative. Future commits added to a branch or PR with this setting active will be checked.
