@@ -24,7 +24,7 @@ Some dictionaries will have high overlap with other dictionaries.
 > - [cspell:software-terms/src/software-terms.txt](https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20220816/dictionaries/software-terms/src/software-terms.txt) (1237) covers 3 of them
 > - [cspell:cpp/src/cpp.txt](https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20220816/dictionaries/cpp/src/cpp.txt) (30216) covers 2 of them
 
-## In prerelease
+## In [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21)
 
 They're now shown in table form which will make it easier to expose an extra column of data...
 
