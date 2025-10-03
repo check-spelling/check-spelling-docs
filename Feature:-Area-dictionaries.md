@@ -8,10 +8,10 @@ You can pull in any public url that has a flat list of words.
 
 By default, you can easily pull in dictionaries from [streetsidesoftware/cspell-dicts](https://github.com/streetsidesoftware/cspell-dicts/tree/master/dictionaries/).
 
-Implemented in `prerelease` as:
+Implemented in [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20) as:
 
 ```yaml
-    - uses: check-spelling/check-spelling@prerelease
+    - uses: check-spelling/check-spelling@v0.0.20
       with:
         extra_dictionaries:
           cspell:css/css.txt
@@ -21,7 +21,7 @@ Implemented in `prerelease` as:
 You can define other prefixes using `dictionary_source_prefixes`, the default definition is something like (but generally using some tag):
 
 ```yaml
-    - uses: check-spelling/check-spelling@prerelease
+    - uses: check-spelling/check-spelling@v0.0.20
       with:
         dictionary_source_prefixes: >
           {
@@ -98,7 +98,7 @@ That said, if you really want to be fancy, you can use a matrix and apply certai
 
 A first draft has been added for [assembly-dictionaries](https://github.com/check-spelling/assembly-dictionaries/tree/20231110).
 
-Testing in prerelease versions of check-spelling/spell-check-this may start in 2024.
+Testing in prerelease versions of check-spelling/spell-check-this started October 2025.
 
 ## Future work
 
