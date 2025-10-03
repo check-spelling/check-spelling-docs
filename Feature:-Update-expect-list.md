@@ -15,11 +15,11 @@ As of [v0.0.18](https://github.com/check-spelling/check-spelling/releases/tag/v0
 
 ### Comment handling
 
-This is implemented today in prerelease:
+This is implemented in [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20):
 
-1. 🤖 posts a comment (as it does today)
-1. 🤖 gets its url (🌟 implemented in prerelease)
-1. 🤖 update the comment with the url and instructions saying roughly "reply quoting this line" (🌟 implemented in prerelease)
+1. 🤖 posts a comment
+1. 🤖 gets its url
+1. 🤖 update the comment with the url and instructions saying roughly "reply quoting this line"
 1. 🤺 user performs the action above
 1. 🤖 responds to the action by retrieving the comment (based on the url which is encoded in the reply)
 1. ➡ proceed to work
@@ -65,7 +65,7 @@ HTTPS tokens can be a [personal access token](https://docs.github.com/en/authent
 
 ##### `GITHUB_TOKEN`
 
-The [`GITHUB_TOKEN`](https://docs.github.com/en/actions/security-guides/automatic-token-authentication). can allow pushes, but when used, it [doesn't trigger other workflows](https://docs.github.com/en/actions/security-guides/automatic-token-authentication#using-the-github_token-in-a-workflow), which means it's problematic for automatic updates.
+The [`GITHUB_TOKEN`](https://docs.github.com/en/actions/security-guides/automatic-token-authentication) can allow pushes, but when used, it [doesn't trigger other workflows](https://docs.github.com/en/actions/security-guides/automatic-token-authentication#using-the-github_token-in-a-workflow), which means it's problematic for automatic updates.
 
 This mode will trigger a [[Disclaimer about missing status|Feature: Disclaimer about missing status]].
 
