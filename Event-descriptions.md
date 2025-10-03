@@ -2,6 +2,12 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
 
 - [unrecognized-spelling](#unrecognized-spelling)
   - [Resolution](#unrecognized-spelling-r)
+- [unrecognized-spelling-commit-message](#unrecognized-spelling-commit-message)
+  - [Resolution](#unrecognized-spelling-commit-message-r)
+- [unrecognized-spelling-pr-description](#unrecognized-spelling-pr-description)
+  - [Resolution](#unrecognized-spelling-pr-description-r)
+- [unrecognized-spelling-pr-title](#unrecognized-spelling-pr-title)
+  - [Resolution](#unrecognized-spelling-pr-title-r)
 - [noisy-file](#noisy-file)
   - [Resolution](#noisy-file-r)
 - [bad-regex](#bad-regex)
@@ -116,12 +122,63 @@ Warning: src/browserlib/extract-dfns.mjs:159:11 ... 20, Warning - `hyperlink` is
 
 The token isn't in the dictionary
 
-## <a id='unrecognized-spelling-r'>Resolution
+## <a id="unrecognized-spelling-r"></a>Resolution
 
 - If there's a correct word (e.g. `compatibility`), correct the spelling
 - If the word should be in the dictionary, add it to `allow.txt`
 - If a portion of the line shouldn't be checked, add a pattern to `patterns.txt` -- see [[Configuration Examples: patterns]]
 - If it isn't really a word, but you're temporarily using it, add it to `expect.txt`
+
+# unrecognized-spelling-commit-message
+
+```
+Error: https://github.com/check-spelling-sandbox/autotest-check-spelling/commit/47aecbdae2b9f31f1b332b24b42e41e7338bcc14#:11:30 ... 37, Error - `oneline` is not a recognized word. (unrecognized-spelling-commit-message)
+```
+
+The token found in the commit message isn't in the dictionary
+
+## <a id="unrecognized-spelling-commit-message-r"></a>Resolution
+
+- If there's a correct word (e.g. `one-line`), correct the spelling
+- If the word should be in the dictionary, add it to `allow.txt`
+- If a portion of the line shouldn't be checked, add a pattern to `patterns.txt` -- see [[Configuration Examples: patterns]]
+- If commit messages shouldn't be checked, disable the feature [check_commit_messages](https://github.com/check-spelling/check-spelling/wiki/Configuration#check_commit_messages)
+
+Note that for commit messages and pull requests, `expect.txt` isn't checked.
+
+# unrecognized-spelling-pr-description
+
+```
+Error: https://github.com/check-spelling-sandbox/autotest-check-spelling/pull/1#:11:30 ... 37, Error - `oneline` is not a recognized word. (unrecognized-spelling-pr-description)
+```
+
+The token found in the pull request description isn't in the dictionary
+
+## <a id="unrecognized-spelling-pr-description-r"></a>Resolution
+
+- If there's a correct word (e.g. `one-line`), correct the spelling
+- If the word should be in the dictionary, add it to `allow.txt`
+- If a portion of the line shouldn't be checked, add a pattern to `patterns.txt` -- see [[Configuration Examples: patterns]]
+- If commit messages shouldn't be checked, disable the feature [check_commit_messages](https://github.com/check-spelling/check-spelling/wiki/Configuration#check_commit_messages)
+
+Note that for commit messages and pull requests, `expect.txt` isn't checked.
+
+# unrecognized-spelling-pr-title
+
+```
+Error: https://github.com/check-spelling-sandbox/autotest-check-spelling/pull/1#:1:30 ... 37, Error - `oneline` is not a recognized word. (unrecognized-spelling-pr-title)
+```
+
+The token found in the pull request title isn't in the dictionary
+
+## <a id="unrecognized-spelling-pr-title-r"></a>Resolution
+
+- If there's a correct word (e.g. `one-line`), correct the spelling
+- If the word should be in the dictionary, add it to `allow.txt`
+- If a portion of the line shouldn't be checked, add a pattern to `patterns.txt` -- see [[Configuration Examples: patterns]]
+- If commit messages shouldn't be checked, disable the feature [check_commit_messages](https://github.com/check-spelling/check-spelling/wiki/Configuration#check_commit_messages)
+
+Note that for commit messages and pull requests, `expect.txt` isn't checked.
 
 # noisy-file
 
