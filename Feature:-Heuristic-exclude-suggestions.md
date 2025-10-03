@@ -4,7 +4,7 @@ I've also been thinking about having the system do heuristics, if there are prop
 
 Roughly implementation compares the number of unique dictionary words in a file with the number of unique non dictionary words in the file. If there are more non dictionary words, the file will be skipped.
 
-This is implemented in `0.0.18`. _prerelease_
+This is implemented in [`v0.0.18`](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.18).
 
 To get a file to be checked, one will need to:
 
