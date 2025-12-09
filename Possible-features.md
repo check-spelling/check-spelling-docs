@@ -18,6 +18,7 @@
 
 ## Near term
 
+- [[⏭️Skip next line|Feature: skip‐next‐line]]
 - [[👪Behavior change: case changes in expect|Behavior change: case changes in expect]]
 - [[🗜️Breaking change: Smaller dictionary|Breaking change: Smaller dictionary]]
 - [[🪜base‐path|Feature: \`base‐path\`]]
