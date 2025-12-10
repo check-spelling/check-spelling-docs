@@ -15,10 +15,10 @@
 - 👓 [[Suppress PR check when workflow changes|Feature: Suppress PR check when workflow changes]]
 - 🧱 [[Block/Multiline Ignore|Feature: Block Ignore]]
 - 🌉 [[IDE Integration|Feature: IDE Integration]]
+- ⏭️ [[Skip next line|Feature: skip‐next‐line]]
 
 ## Near term
 
-- [[⏭️Skip next line|Feature: skip‐next‐line]]
 - [[👪Behavior change: case changes in expect|Behavior change: case changes in expect]]
 - [[🗜️Breaking change: Smaller dictionary|Breaking change: Smaller dictionary]]
 - [[🪜base‐path|Feature: \`base‐path\`]]
