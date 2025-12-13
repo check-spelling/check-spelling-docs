@@ -1,6 +1,6 @@
 # Suppress push comment for open PRs
 
-Included in [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20)
+Introduced in [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20)
 
 ## Background
 
@@ -21,9 +21,19 @@ check.
 
 ### Deployment
 
-As this is a new feature, and it's possible it has bugs, it is currently opt-in.
-
 ```yaml
 with:
   suppress_push_for_open_pull_request: 1
 ```
+
+### Rendering
+
+You'll see something like:
+#### ⏭️ Workflow skipped
+See [`check-spelling pull_request_target` workflow (`.github/workflows/spelling.yml`)](https://github.com/check-spelling-sandbox/miniature-octo-spoon/actions/workflows/.github/workflows/spelling.yml?query=event:pull_request_target+branch:jsoref-patch-1) in PR [#1](https://github.com/check-spelling-sandbox/miniature-octo-spoon/pull/1).
+
+https://github.com/check-spelling-sandbox/miniature-octo-spoon/pull/1/checks
+
+---
+
+The links should take you to the relevant pull request and enable you to reason through the checks.
