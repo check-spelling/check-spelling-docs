@@ -16,7 +16,7 @@ Offhand, I think `no` is the right answer for all three.
 
 ## Implementation
 
-It should be fairly easy to use the equivalent of `git blame BASE..HEAD -- file` to identify which line numbers should be checked and only check them.
+It should be fairly easy to use the equivalent of `git blame -s BASE..HEAD -- file` to identify which line numbers should be checked and only check them.
 
 (It's possible the implementation will use porcelain output as opposed to actually using the naive `git blame BASE..HEAD`, but that's a minor implementation detail.)
 
