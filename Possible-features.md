@@ -19,6 +19,8 @@
 
 ## Near term
 
+- [[🤫File specific allow list|Feature: File specific allow list]]
+- [[🍪Only check changed hunks|Feature: Only check changed hunks]]
 - [[👪Behavior change: case changes in expect|Behavior change: case changes in expect]]
 - [[🗜️Breaking change: Smaller dictionary|Breaking change: Smaller dictionary]]
 - [[🪜base‐path|Feature: \`base‐path\`]]
@@ -31,7 +33,6 @@
 - [[🏃Run in Gitea|Feature: Run in Gitea]]
 - [[📄Reusable Workflows|Feature: Reusable Workflows]]
 - [[😸Customer satisfaction survey|Feature: Customer satisfaction survey]]
-- [[🍪Only check changed hunks|Feature: Only check changed hunks]]
 
 ## Distant future
 
