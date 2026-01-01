@@ -27,6 +27,7 @@ jobs:
       - name: Mermaid
         shell: bash
         run: |
+          : Mermaid
           for file in $(git ls-files -z|xargs -0 grep -l '```mermaid'); do
             aa-exec --profile=chrome npx -p @mermaid-js/mermaid-cli mmdc --input "$file" --output "$file"
           done
