@@ -48,3 +48,7 @@ Add as `\bMicroSoft\b`
 # Reject duplicate words
 \b(\w{3,})\s\g{-1}\b
 ```
+
+### Homophones and case botches
+
+See [[Highlight homophones and case botches|Feature: Highlight homophones and case botches]]
