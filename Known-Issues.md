@@ -1,9 +1,16 @@
 # Known Issues
 
+- [Current script differs from `apply.pl`](#current-script-differs-from-applypl)
 - [Changes to the workflow will not be tested in a pull request if the workflow is configured to use `pull_request_target`](#changes-to-the-workflow-will-not-be-tested-in-a-pull-request-if-the-workflow-is-configured-to-use-pull_request_target)
 - [Only changed doesn't work when PRs are initially created from forks](#only-changed-doesnt-work-when-prs-are-initially-created-from-forks)
 - [Too many unrecognized words](#Too_many_unrecognized_words)
 - [@dependabot can't comment](#dependabot-cant-comment)
+
+## Current script differs from `apply.pl`
+
+This message will often happen if you're using a named branch instead of a release, or in cases where the release didn't include a change to target the correct branch/commit for `apply.pl` before shipping.
+
+For more information, see [[Current script differs from apply.pl]].
 
 ## Changes to the workflow will not be tested in a pull request if the workflow is configured to use `pull_request_target`
 
