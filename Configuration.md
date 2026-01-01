@@ -305,7 +305,7 @@ As part of [custom_task](#custom_task), the default task returns its internal st
 
 Use this parameter to indicate where the internal state was stashed.
 
-Generally stashing is done via `actions/upload-artifact@v2` and unstashing via `actions/download-artifact@v2`, but the action itself doesn't care, so if you want to use something else, you can.
+Generally stashing is done via [`actions/upload-artifact`](https://github.com/actions/upload-artifact) and unstashing via [`gh run download`](https://cli.github.com/manual/gh_run_download), but the action itself doesn't care, so if you want to use something else, you can.
 
 ### check_file_names
 
