@@ -133,7 +133,7 @@ jobs:
       cancel-in-progress: true
     steps:
       - name: Get config
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Get gh-pages content
         run: |
           : Get gh-pages content
