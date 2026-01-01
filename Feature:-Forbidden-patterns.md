@@ -4,9 +4,12 @@ Included in [v0.0.20](https://github.com/check-spelling/check-spelling/releases/
 
 Since the spell checker has to run against all lines, there was a request to be able to reject a pattern, even though it is technically composed of valid words.
 
-The canonical example was [m_data](https://github.com/nasa/fprime/discussions/855#discussion-3469739) which is apparently a macro in [VxWorks](https://www.windriver.com/products/vxworks) that at least [nasa/fprime](https://github.com/nasa/fprime/pull/797) and [Qt](https://github.com/qtproject/qt-solutions/blame/fb7bc42bfcc578ff3fa3b9ca21a41e96eb37c1c7/qtscriptclassic/src/qscriptbuffer_p.h#L46) tripped over.
+The canonical example was [`m_data`](https://github.com/nasa/fprime/discussions/855#discussion-3469739) which is apparently a macro in [VxWorks](https://www.windriver.com/products/vxworks) that at least [nasa/fprime](https://github.com/nasa/fprime/pull/797) and [Qt](https://github.com/qtproject/qt-solutions/blame/fb7bc42bfcc578ff3fa3b9ca21a41e96eb37c1c7/qtscriptclassic/src/qscriptbuffer_p.h#L46) tripped over.
 
 But there are definitely other examples, e.g., of a deprecated API.
+
+Originally drafted as [[Reject specific patterns|Feature: Reject patterns]].
+
 
 ## Implementation
 
