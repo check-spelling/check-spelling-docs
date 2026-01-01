@@ -1,6 +1,7 @@
 backticks
 eol
 linkchecker
+mktemp
 mmdc
 proesses
 venv

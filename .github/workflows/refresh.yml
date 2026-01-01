@@ -46,14 +46,21 @@ jobs:
         new_commit=$(git rev-parse HEAD)
         (
           echo '# Refresh website'
+          changes=$(mktemp)
+          git diff "$old_commit" --stat > "$changes"
+          if [ ! -s "$changes" ]; then
+            echo '## No changes'
+          fi
           URL_BASE="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY"
           echo "[Updates]($URL_BASE/compare/$old_commit..$new_commit) • [All Changes]($URL_BASE/compare/$old_commit...$new_commit)"
           echo "[$old_commit]($URL_BASE/commit/$old_commit) :arrow_right: [$new_commit]($URL_BASE/commit/$new_commit)"
           echo
-          echo '---'
-          echo '```'
-          git diff "$old_commit" --stat
-          echo '```'
+          if [ -s "$changes" ]; then
+            echo '---'
+            echo '```diff'
+            cat "$changes"
+            echo '```'
+          fi
         ) >> "$GITHUB_STEP_SUMMARY"
         if ! git push origin HEAD --force-with-lease; then
           git log -p FETCH_HEAD..HEAD | cat
