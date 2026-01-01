@@ -68,6 +68,7 @@ See [[Configuration: Workflows]] for the supported GitHub workflows.
 | [ssh_key](#ssh_key) | Git ssh key for checking out (to enable writes with workflows) |
 | [task](#task) | Workflow magic |
 | [unknown_file_word_limit](#unknown_file_word_limit) | Limit the number of reports for a specific unknown word in file paths |
+| [ignore-next-line](#ignore-next-line) | Define value(s) to trigger ignoring content on the next line |
 
 See [[Configuration: Advanced]] for additional options.
 
@@ -515,6 +516,12 @@ Used to pass messages between multiple check-spelling stages, especially from a 
 ## unknown_file_word_limit
 
 Limit the number of reports for a specific unknown word in file paths.
+
+## ignore-next-line
+
+Specify value(s) to cause errors on the next line to be ignored.
+
+See [[ignore‐next‐line|Feature: ignore‐next‐line]]
 
 ## Configuration Files
 
