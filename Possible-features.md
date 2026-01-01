@@ -4,9 +4,11 @@
 
 ## Ready
 
+- ℹ️ [[Unused configuration file warning|Feature: Unused configuration file warning]]
+- ⏭️ [[Ignore next line|Feature: ignore‐next‐line]]
+
 ## In progress
 
-- ℹ️ [[Unused configuration file warning|Feature: Unused configuration file warning]]
 - 😄 [[Easier to understand filenames|Feature: Easier to understand filenames]]
 - ↪️ [[Content Mappings|Feature: Content Mappings]]
 - ⚙️ [[JSON configuration|Feature: JSON configuration]]
@@ -15,7 +17,6 @@
 - 👓 [[Suppress PR check when workflow changes|Feature: Suppress PR check when workflow changes]]
 - 🧱 [[Block/Multiline Ignore|Feature: Block Ignore]]
 - 🌉 [[IDE Integration|Feature: IDE Integration]]
-- ⏭️ [[Skip next line|Feature: skip‐next‐line]]
 
 ## Near term
 
