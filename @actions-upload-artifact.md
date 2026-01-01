@@ -59,7 +59,7 @@ The implementation in Python: https://github.com/KOLANICH-libs/miniGHAPI.py/blob
 
 Few highlights:
 
-- providing api version as a part of a query string is not heeded, works fine without it.
+- providing api version as a part of a query string is not needed, works fine without it.
 
 - There are 3 queries.
 
