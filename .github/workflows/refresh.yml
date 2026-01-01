@@ -61,6 +61,19 @@ jobs:
             cat "$changes"
             echo '```'
           fi
+          orphans=$(mktemp)
+          # Make sure when no files are found that '*.md' is not the value of the variable
+          shopt -s nullglob
+          ../find-orphaned-pages.pl *.md > "$orphans"
+          if [ -s "$orphans" ]; then
+            echo
+            echo '## Orphans'
+            echo
+            for a in $(cat "$orphans"); do
+              echo '* `'"$a"'`'
+            done
+            echo
+          fi
         ) >> "$GITHUB_STEP_SUMMARY"
         if ! git push origin HEAD --force-with-lease; then
           git log -p FETCH_HEAD..HEAD | cat

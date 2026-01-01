@@ -3,5 +3,7 @@ eol
 linkchecker
 mktemp
 mmdc
+nullglob
 proesses
+shopt
 venv
