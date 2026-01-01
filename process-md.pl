@@ -17,13 +17,6 @@ sub fix_page {
   my ($a) = @_;
   $a =~ tr/ /-/;
   unless ($a =~ m{^https?://}) {
-    unless ($a =~ /\.md/) {
-      if (/#/) {
-        $a =~ s/(.)#/$1.md#/;
-      } else {
-        $a =~ s/(.)$/$1.md/;
-      }
-    }
     $a =~ s{^([^.][^:]*)(:)}{./$1$2};
   }
   return fix_anchor($a);
