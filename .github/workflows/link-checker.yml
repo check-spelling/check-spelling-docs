@@ -24,9 +24,12 @@ jobs:
         (
           echo "# Link Checker ($site)"
           echo
-          echo '```'
           ./linkchecker/bin/linkchecker "https://$site/" |
-          perl -ne '
+          perl -e '
+          $m="```\n";
+          print $m;
+          my $summary = "";
+          while (<>) {
             if (/^Start checking/) {
               $state = 1;
               print STDERR;
@@ -34,13 +37,20 @@ jobs:
             }
             if (/^Statistics:/) {
               $state = 2;
+              print STDERR;
+              next;
             }
             if ($state == 1) {
               print;
+            } elsif ($state == 2 && /found/) {
+              $summary = $_;
+              print STDERR;
             } else {
               print STDERR;
             }
+          }
+          print $m;
+          print "\n";
+          print $summary;
           '
-          echo '```'
-          echo
         ) >> "$GITHUB_STEP_SUMMARY"
