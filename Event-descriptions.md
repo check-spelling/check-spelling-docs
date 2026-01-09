@@ -55,6 +55,8 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
   - [`use_sarif` and private repositories](#use_sarif-and-private-repositories)
     - [Resolution](#use_sarif-and-private-repositories-r)
   - [`use_sarif` and `act`](#use_sarif-and-act)
+- [unsupported-task](#unsupported-task)
+  - [Resolution](#unsupported-task-r)
 - [minified-file](#minified-file)
   - [Resolution](#minified-file-r)
 - [duplicate-extra-dictionary](#duplicate-extra-dictionary)
@@ -606,6 +608,24 @@ You can try setting [`GITHUB_TOKEN`](https://github.com/nektos/act#github_token)
 This isn't supported and is unlikely to work.
 
 Eventually provisions will be made to generally expose the artifact itself. There is an artifact server which could help....
+
+# unsupported-task
+
+Normally tasks are automatically provided as an output from check-spelling, it's possibly that the configuration for this has been corrupted.
+
+Check the workflow configuration.
+
+## <a id="unsupported-task-r"></a>Resolution
+
+Configure a supported task.
+
+Supported tasks are:
+- collapse_previous_comment
+- comment
+- hash-dictionaries
+- pr_head_sha
+- spelling
+- update
 
 # minified-file
 
