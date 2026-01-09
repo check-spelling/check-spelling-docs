@@ -1,8 +1,8 @@
 # ignore-next-line
 
-Many spell checking tools have a magic token for skipping the next line. 
+Many spell checking tools have a magic token for skipping the next line.
 
-## Implementation 
+## Implementation
 
 An input (`ignore-next-line`) containing a whitespace delimited list of tokens.
 
