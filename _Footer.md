@@ -1,1 +1,1 @@
-[[FAQ]] | [[Showcase]] | [[Event descriptions]] | [[Configuration information]] | [[Known Issues]] | [[Possible features]] | [[Deprecations]] | [[Release notes]] | [[Helpful scripts]]
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

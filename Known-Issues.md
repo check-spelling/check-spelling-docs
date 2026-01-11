@@ -1,30 +1,30 @@
 # Known Issues
 
 - [Current script differs from `apply.pl`](#current-script-differs-from-applypl)
-- [Changes to the workflow will not be tested in a pull request if the workflow is configured to use `pull_request_target`](#changes-to-the-workflow-will-not-be-tested-in-a-pull-request-if-the-workflow-is-configured-to-use-pull_request_target)
+- [Changes to the workflow will not be tested in a pull request if the workflow is configured to use `pull_request_target`](#changes-to-the-workflow-will-not-be-tested-in-a-pull-request-if-the-workflow-is-configured-to-use-pullrequesttarget)
 - [Only changed doesn't work when PRs are initially created from forks](#only-changed-doesnt-work-when-prs-are-initially-created-from-forks)
-- [Too many unrecognized words](#Too_many_unrecognized_words)
+- [Too many unrecognized words](#toomanyunrecognizedwords)
 - [@dependabot can't comment](#dependabot-cant-comment)
 
 ## Current script differs from `apply.pl`
 
 This message will often happen if you're using a named branch instead of a release, or in cases where the release didn't include a change to target the correct branch/commit for `apply.pl` before shipping.
 
-For more information, see [[Current script differs from apply.pl]].
+For more information, see [Current script differs from apply.pl](Current-script-differs-from-apply.pl).
 
 ## Changes to the workflow will not be tested in a pull request if the workflow is configured to use `pull_request_target`
 
-The [recommended configuration](https://github.com/check-spelling/spell-check-this/blob/main/.github/workflows/spelling.yml) for check-spelling uses `pull_request_target` which behaves differently from `pull_request` in a couple of ways.
+The [recommended configuration](https://raw.githubusercontent.com/check-spelling/spell-check-this/main/.github/workflows/spelling.yml) for check-spelling uses `pull_request_target` which behaves differently from `pull_request` in a couple of ways.
 
 One of those ways is that the configuration that's used for the workflow file itself is the one in the pull_request base as opposed to the pull request head. In order to test changes to the workflow itself, you'll need to `push` the workflow changes into a branch and review its output.
 
-If you're using [`suppress_push_for_open_pull_request`](https://github.com/check-spelling/check-spelling/wiki/Configuration#suppress_push_for_open_pull_request), you should avoid pushing your change and immediately creating a PR into the same repository as the `push` event which would trigger a workflow run that would validate your changes will quit noting that it found the pull_request event which will not do what you want. Instead, just `push` the changes to a branch in your repository to verify that they do what you want, and then create a pull request to integrate them.
+If you're using [`suppress_push_for_open_pull_request`](Configuration#suppresspushforopenpullrequest), you should avoid pushing your change and immediately creating a PR into the same repository as the `push` event which would trigger a workflow run that would validate your changes will quit noting that it found the pull_request event which will not do what you want. Instead, just `push` the changes to a branch in your repository to verify that they do what you want, and then create a pull request to integrate them.
 
 Note that for version upgrades, you may need to temporarily include additional entries either via `allow` or `expect` in order to enable the older version of check-spelling to tolerate things which the newer version may tolerate for other reasons.
 
 ## Only changed doesn't work when PRs are initially created from forks
 
-When using [`only_check_changed_files`](https://github.com/check-spelling/check-spelling/wiki/Configuration#only_check_changed_files) and a PR is _created_ from a **fork**, the initial check will probably not find files to check, producing a warning:
+When using [`only_check_changed_files`](Configuration#onlycheckchangedfiles) and a PR is _created_ from a **fork**, the initial check will probably not find files to check, producing a warning:
 
 > ⚠️ Was not provided any regular readable files
 
@@ -61,7 +61,7 @@ Usually this happens when a bunch of binary files are added and are not in `excl
 
 ### Resolution
 
-See [[Automatically truncate comment|Feature: Automatically truncate comment]]
+See [Automatically truncate comment](./Feature:-Automatically-truncate-comment)
 
 👷 Upgrade to [v0.0.20](https://github.com/check-spelling/check-spelling/releases/v0.0.20) (or newer)
 
@@ -73,4 +73,7 @@ See [[Automatically truncate comment|Feature: Automatically truncate comment]]
 
 ### Resolution
 
-See [[@dependabot]]
+See [@dependabot](@dependabot)
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

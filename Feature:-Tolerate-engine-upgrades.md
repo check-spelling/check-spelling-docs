@@ -23,4 +23,7 @@ New environment variables from the new `action.yml` file won't be available and 
 
 ## See Also
 
-[[Suppress PR check when workflow changes|Feature: Suppress PR check when workflow changes]]
+[Suppress PR check when workflow changes](./Feature:-Suppress-PR-check-when-workflow-changes)
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

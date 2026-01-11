@@ -113,3 +113,6 @@ Here, adding some `\b`s will work magic:
 -[a-z,0-9]{12}
 +\b[a-z,0-9]{12}\b
 ```
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

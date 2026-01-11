@@ -23,7 +23,7 @@ posted to GitHub. It's freeform. You can use
 it to explain how contributors should decide
 where to put new entries.
 
-See [[Configuration Examples: advice]] for examples.
+See [Configuration Examples: advice](./Configuration-Examples:-advice) for examples.
 
 ## allow
 
@@ -41,15 +41,15 @@ Some candidates:
 - C or JavaScript reserved words
 - The names of all types/ functions from the C standard library
 
-See [Area dictionaries](https://github.com/check-spelling/check-spelling/wiki/Feature:-Area-dictionaries) for other examples.
+See [Area dictionaries](./Feature:-Area-dictionaries) for other examples.
 
-For entire reusable lists that don't live in your repository, you can use [extra_dictionaries](https://github.com/check-spelling/check-spelling/wiki/Configuration#extra_dictionaries) instead.
+For entire reusable lists that don't live in your repository, you can use [extra_dictionaries](Configuration#extradictionaries) instead.
 
 ## block delimiters
 
 This allows you to define a pair of start/stop delimiters which will cause check-spelling to skip the contents of lines between start and stop delimiters.
 
-See [[Configuration Examples: block delimiters]] for examples and [[Feature: Block Ignore]] for information about the feature.
+See [Configuration Examples: block delimiters](./Configuration-Examples:-block-delimiters) for examples and [Feature: Block Ignore](./Feature:-Block-Ignore) for information about the feature.
 
 ## dictionary
 
@@ -60,9 +60,9 @@ If you want to include the default dictionary,
 place it into the directory next to your own.
 
 Alternatively, if you want to retrieve a dictionary from a remote URL,
-see the workflow configuration values [dictionary_url](#dictionary_url) and [dictionary_version](#dictionary_version).
+see the workflow configuration values [dictionary_url](#dictionaryurl) and [dictionary_version](#dictionaryversion).
 
-If you just want to supplement the dictionary, you can use [`extra_dictionaries`](https://github.com/check-spelling/check-spelling/wiki/Configuration#extra_dictionaries) or [allow](#allow).
+If you just want to supplement the dictionary, you can use [`extra_dictionaries`](Configuration#extradictionaries) or [allow](#allow).
 
 ## excludes
 
@@ -76,7 +76,7 @@ unless you explicitly use `(?:(?i)...)` or
 
 Files matching these patterns will be skipped.
 
-See [[Configuration Examples: excludes]] for examples.
+See [Configuration Examples: excludes](./Configuration-Examples:-excludes) for examples.
 
 Lines that start with `#` will be ignored.
 
@@ -128,7 +128,7 @@ unless you explicitly use `(?:(?i)...)` or
 
 Tokens within files that match these expressions will be flagged.
 
-See [[Configuration Examples: forbidden]] for examples.
+See [Configuration Examples: forbidden](./Configuration-Examples:-forbidden) for examples.
 
 ## only
 
@@ -138,7 +138,7 @@ They are merged using an `OR` (`|`).
 
 Files not matching these patterns will be skipped.
 
-See [[Configuration Examples: only]] for examples.
+See [Configuration Examples: only](./Configuration-Examples:-only) for examples.
 
 Lines that start with `#` will be ignored.
 
@@ -155,7 +155,7 @@ unless you explicitly use `(?:(?i)...)` or
 
 Tokens within files that match these expressions will be skipped.
 
-See [[Configuration Examples: patterns]] for examples.
+See [Configuration Examples: patterns](./Configuration-Examples:-patterns) for examples.
 
 ## reject
 
@@ -166,4 +166,7 @@ The order of operations is:
 
 > `(dictionary + allows) - reject`
 
-See [[Configuration Examples: reject]] for examples.
+See [Configuration Examples: reject](./Configuration-Examples:-reject) for examples.
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

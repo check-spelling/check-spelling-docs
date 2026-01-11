@@ -10,25 +10,25 @@ If you see this error (instead of getting comments):
 
 > curl: (6) Could not resolve host: null
 
-That's probably the problem. The fix is to [upgrade the workflow](https://github.com/check-spelling/spell-check-this/blob/main/.github/workflows/spelling.yml).
+That's probably the problem. The fix is to [upgrade the workflow](https://raw.githubusercontent.com/check-spelling/spell-check-this/main/.github/workflows/spelling.yml).
 
 Note that this can happen in a fork even if things are working fine in the upstream repository as default permissions can vary from organization to organization or repository to repository.
 
 ## Supported GitHub flows
 
 - [push](#push)
-- [pull_request_target](#pull_request_target)
+- [pull_request_target](#pullrequesttarget)
   - [Checking potential merges for PRs](#checking-prs-by-their-merge-commit)
     - [checkout (built-in)](#built-in)
     - [actions/checkout](#using-actionscheckout)
-- [pull_request](#pull_request) ⚠️
-- [issue_comment](#issue_comment)
+- [pull_request](#pullrequest) ⚠️
+- [issue_comment](#issuecomment)
 - [schedule](#schedule) 🙅
 
 ### Notes
 
 - [Ignore Draft PRs](#draft)
-- See [[Workflow Variables|Configuration#Workflow_Variables]]
+- See [Workflow Variables](Configuration#workflowvariables)
 
 ### push
 
@@ -103,14 +103,14 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
       with:
-        ref: ${{ github.event.pull_request && format('refs/pull/{0}/merge', github.event.pull_request.number) || github.event.ref }}
+        ref: ${% raw %}{{{% endraw %} github.event.pull_request && format('refs/pull/{0}/merge', github.event.pull_request.number) || github.event.ref }}
     - name: Check Spelling
       uses: check-spelling/check-spelling@main
 ```
 
 ### pull_request
 
-ℹ️ You should be able to migrate to [pull_request_target](#pull_request_target)
+ℹ️ You should be able to migrate to [pull_request_target](#pullrequesttarget)
 when you upgrade to 0.0.17-alpha.
 
 ⚠️ Non-member contributors who create a pull request
@@ -145,7 +145,7 @@ Instead, for projects that receive PRs, I've settled on using a
 
 ### issue_comment
 
-If you want to let user [[update the expect list|Feature: Update expect list]] from a PR ([[smoothly with a deploy key|Feature: Update with deploy key]]), you can use a job like this:
+If you want to let user [update the expect list](./Feature:-Update-expect-list) from a PR ([smoothly with a deploy key](./Feature:-Update-with-deploy-key)), you can use a job like this:
 
 ```yml
 on:
@@ -161,7 +161,7 @@ jobs:
       pull-requests: write
       actions: read
     runs-on: ubuntu-latest
-    if: ${{
+    if: ${% raw %}{{{% endraw %}
         github.event_name == 'issue_comment' &&
         github.event.issue.pull_request &&
         contains(github.event.comment.body, '@check-spelling-bot apply')
@@ -172,16 +172,16 @@ jobs:
       with:
         experimental_apply_changes_via_bot: 1
         checkout: true
-        ssh_key: "${{ secrets.CHECK_SPELLING }}"
+        ssh_key: "${% raw %}{{{% endraw %} secrets.CHECK_SPELLING }}"
 ```
 
-- `contents: write` is mostly for forks as the `ssh_key: "${{ secrets.CHECK_SPELLING }}"` will be used if possible to push the generated commit.
+- `contents: write` is mostly for forks as the `ssh_key: "${% raw %}{{{% endraw %} secrets.CHECK_SPELLING }}"` will be used if possible to push the generated commit.
 - `pull-requests: write` enables collapsing the triggering comment.
 - `actions: read` is needed for private repositories.
 
 ### schedule
 
-🙅 [[Breaking change: Dropping support for on: schedule]] after [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22)
+🙅 [Breaking change: Dropping support for on: schedule](./Breaking-change:-Dropping-support-for-on:-schedule) after [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22)
 
 This is basically a cron job run by GitHub.
 It will look through open PRs and comment if they've been updated
@@ -226,3 +226,6 @@ There are two sides to this:
 
 1. An additional `if:` condition for `github.event.pull_request.draft == false` -- this suppresses checks while the PR is in draft (note that any initial `push` events will still run and may trigger scanning / reporting if it's unhappy, but subsequent runs once a PR is opened will be suppressed by check-spelling's `suppress_push_for_open_pull_request`)
 2. `on:` / `pull_request_target:` / `types:` / `'ready_for_review'` -- this triggers a check when someone converts the PR from draft to ready for review (otherwise you'd have to wait for an additional push, which would be frustrating).
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

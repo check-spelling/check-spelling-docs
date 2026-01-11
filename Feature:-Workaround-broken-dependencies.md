@@ -33,3 +33,6 @@ triggered warnings between the release of [`v0.0.20`](https://github.com/check-s
 
 As of `v0.0.21`, there are no workarounds in active deployment.
 A future release may rely on this feature...
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

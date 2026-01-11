@@ -27,4 +27,7 @@ It's better from a security perspective to use "least privilege".
 
 ## Workflow
 
-- https://github.com/check-spelling/spell-check-this/blob/main/.github/workflows/spelling.yml defines a workflow that is compatible with these requirements
+- https://raw.githubusercontent.com/check-spelling/spell-check-this/main/.github/workflows/spelling.yml defines a workflow that is compatible with these requirements
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

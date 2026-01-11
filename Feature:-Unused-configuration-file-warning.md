@@ -11,3 +11,6 @@ check-spelling can't really *know* what a future version will support, but it do
 ## Implementation
 
 check-spelling will keep track of which configuration files it's trying to use and compare that to the list of files in the configuration directory and provide an informative not about files that aren't recognized.
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)
