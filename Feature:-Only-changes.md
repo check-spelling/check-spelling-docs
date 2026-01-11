@@ -8,7 +8,7 @@ Some repositories may take ~20-40 (or even 60-180) minutes to scan. As GitHub bi
 
 ## Check changed files
 
-First working implementation: [a0d13938e0ff519c1ebfd23284e8d19780bd8811](https://github.com/check-spelling/check-spelling/commit/a0d13938e0ff519c1ebfd23284e8d19780bd8811)
+First working implementation: [7d2e11811a52714a02fec3dd502395680c07b005](https://github.com/check-spelling/check-spelling/commit/7d2e11811a52714a02fec3dd502395680c07b005)
 
 There are two modes:
 
