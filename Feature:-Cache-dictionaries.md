@@ -4,7 +4,7 @@ There is _some_ cost to dictionaries, so it seems to be worth caching them (espe
 
 ## Implementation
 
-Dictionaries will go to a specific directory and [actions/cache](https://github/actions/cache) will track the directory.
+Dictionaries will go to a specific directory and [actions/cache](https://github.com/actions/cache) will track the directory.
 
 The dictionary retrieval code can choose to skip retrieving any file(s) it already has.
 
