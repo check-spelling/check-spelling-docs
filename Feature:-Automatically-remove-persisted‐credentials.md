@@ -22,4 +22,4 @@ It does not use the `actions/checkout` implementation, although the general beha
 3. `actions/checkout` checks out the desired reference
 4. _something_ attempts to iterate over the checked out repository to remove the credentials
 
-The implementation lives in [`remove-persisted-credentials`](https://github.com/check-spelling/check-spelling/blob/eca22f4/wrappers/remove-persisted-credentials).
+The implementation lives in [`remove-persisted-credentials`](https://raw.githubusercontent.com/check-spelling/check-spelling/38c2f28482de5482c7e127b4fd40725b57340394/wrappers/remove-persisted-credentials).
