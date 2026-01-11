@@ -6,7 +6,7 @@ on:
 
 jobs:
   link-checker:
-    name: Run link checker
+    name: Run linkchecker/linkchecker
     permissions:
       contents: read
     runs-on: ubuntu-latest
@@ -52,5 +52,105 @@ jobs:
           print $m;
           print "\n";
           print $summary;
+          '
+        ) >> "$GITHUB_STEP_SUMMARY"
+
+  blc:
+    name: Run stevenvachon/broken-link-checker
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    steps:
+    - name: set up link checker
+      run: |
+        npm install broken-link-checker -g
+    - name: check links
+      env:
+        site: ${{ vars.gh_pages_site || 'docs.check-spelling.dev' }}
+      run: |
+        : Link Checker
+        log=$(mktemp)
+        (
+          echo "# Broken Link Checker ($site)"
+          echo
+          blc -f -r -o "https://$site/" | tee /dev/stderr | perl -e '
+            sub dump_page_errors {
+              my ($page, $page_errors) = (@_);
+              return unless %{$page_errors};
+              print "## $page\n";
+              for my $code (keys %{$page_errors}) {
+                next if $code < 400;
+                print "### $code\n";
+                for my $link (keys %{$page_errors->{$code}}) {
+                  print "* $link\n";
+                }
+                print "\n";
+              }
+            }
+            sub main {
+              my $summary = "";
+              my $finished = "";
+              my $location = "";
+              my $broken = 0;
+              my $unique_broken = 0;
+              my %error_map = ();
+              my %page_errors = ();
+              my %codes = ();
+              while (<>) {
+                next if /^Elapsed time:/;
+                if (/^Getting links from: (.*)/) {
+                  if ($location ne "") {
+                    $error_map{$location} = \%page_errors;
+                    dump_page_errors($location, \%page_errors);
+                    %page_errors = ();
+                  }
+                  $location = $1;
+                  $location =~ s/#.*//;
+                }
+                next if /Error: Expected type ".*" but got ".*"/;
+                next unless /\w/;
+                next if /───OK───/;
+                if (/^Finished! (.*)/) {
+                  $finished = $1;
+                  next;
+                }
+                if (/─BROKEN─ (.*?) \((.*?)\)/) {
+                  my ($url, $code) = ($1, $2);
+                  $url =~ s/#.*//;
+                  $code =~ s/^HTTP_//;
+                  next if $code < 400;
+                  $codes{$code}++;
+                  ++$broken;
+                  unless (defined $page_errors{$code}) {
+                    if ($unique_broken++ == 0) {
+                      print "# Broken links\n\n";
+                    }
+                    $page_errors{$code} = ();
+                  }
+                  ++$page_errors{$code}{$url};
+                }
+              }
+              dump_page_errors($location, \%page_errors);
+              print "## Summary\n";
+              print "* Link Details\n";
+              if ($finished =~ /(\d+) links found\./) {
+                print "  * Links: $1\n";
+              }
+              if ($finished =~ /(\d+) excluded\./) {
+                print "  * Excluded: $1\n";
+              }
+              if ($finished =~ /(\d+) broken\./) {
+                print "  * Broken: $1\n";
+              }
+              if ($broken > 0) {
+                my $unique_message = $broken > $unique_broken ? " (unique: $unique_broken)" : "";
+                print "* Broken links: $broken$unique_message\n";
+                print "* Error codes: ".(keys %codes)."\n";
+                for my $code (sort keys %codes) {
+                  print "  * $code\n";
+                }
+              }
+            }
+            main();
           '
         ) >> "$GITHUB_STEP_SUMMARY"
