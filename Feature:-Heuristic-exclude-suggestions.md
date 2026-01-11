@@ -20,12 +20,6 @@ I think initially if the number of files is large, I'll suggest that users look 
 
 The heuristics can also try to suggest ignoring common directories, common file names, or file extensions.
 
-Note to self:
-Currently the list of checked files [isn't persisted](https://github.com/check-spelling/check-spelling/blob/b07c0693e379e95c8d091519066bb2cec15e00d7/unknown-words.sh#L525-L526)
-
-imagine it's in a file called `$checked_files`
-the list of files to consider excluding is `$should_exclude_file`
-
 ### Availability
 
 In [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22), output could look like this:
