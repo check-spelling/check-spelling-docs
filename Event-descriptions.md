@@ -611,7 +611,7 @@ Eventually provisions will be made to generally expose the artifact itself. Ther
 
 # unsupported-task
 
-Normally tasks are automatically provided as an output from check-spelling, it's possible that the configuration for this has been corrupted.
+Normally tasks are automatically provided as an output from check-spelling (usually of the form `task: ${{ needs.spelling.outputs.followup }}`), it's possible that the configuration for this has been corrupted.
 
 Check the workflow configuration.
 
