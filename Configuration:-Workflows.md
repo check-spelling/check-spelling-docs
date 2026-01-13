@@ -28,7 +28,7 @@ Note that this can happen in a fork even if things are working fine in the upstr
 ### Notes
 
 - [Ignore Draft PRs](#draft)
-- See [[Workflow Variables|Configuration#Workflow_Variables]]
+- See [[Workflow Parameters|Configuration#workflow-parameters]]
 
 ### push
 
