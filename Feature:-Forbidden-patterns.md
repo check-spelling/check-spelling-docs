@@ -8,7 +8,7 @@ The canonical example was [`m_data`](https://github.com/nasa/fprime/discussions/
 
 But there are definitely other examples, e.g., of a deprecated API.
 
-Originally drafted as [[Reject specific patterns|Feature: Reject patterns]].
+Originally drafted as [Reject specific patterns](./Feature:-Reject-patterns).
 
 
 ## Implementation
@@ -51,4 +51,7 @@ Add as `\bMicroSoft\b`
 
 ### Homophones and case botches
 
-See [[Highlight homophones and case botches|Feature: Highlight homophones and case botches]]
+See [Highlight homophones and case botches](./Feature:-Highlight-homophones-and-case-botches)
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

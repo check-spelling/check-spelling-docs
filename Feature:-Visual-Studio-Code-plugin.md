@@ -7,3 +7,6 @@ The biggest problem is dealing with how to package something written in Shell+Pe
 It's possible to only offer to work if `Perl`/`Docker` or an equivalent are present.
 
 I don't have any particular plans to implement this, but as I'm starting to use VSCode, it's something I'm thinking about.
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

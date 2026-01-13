@@ -45,11 +45,11 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
       - [Use multiple prefixes](#use-multiple-prefixes)
 - [candidate-pattern](#candidate-pattern)
   - [Resolution](#candidate-pattern-r)
-  - [candidate-pattern with check_file_names file with use_sarif](#candidate-pattern-with-check_file_names-file-with-use_sarif)
+  - [candidate-pattern with check_file_names file with use_sarif](#candidate-pattern-with-checkfilenames-file-with-usesarif)
     - [Suggestions for candidate pattern matching paths-of-checked-files.txt](#suggestions-for-candidate-pattern-matching-paths-of-checked-filestxt)
 - [unsupported-repo-notation](#unsupported-repo-notation)
 - [unsupported-configuration](#unsupported-configuration)
-  - [`only_check_changed_files` and `use_sarif`](#only_check_changed_files-and-use_sarif)
+  - [`only_check_changed_files` and `use_sarif`](#onlycheckchangedfiles-and-usesarif)
   - [`use_sarif` and `security-events: write`](#use-sarif-and-security-events-write)
     - [Resolution](#use-sarif-and-security-events-write-r)
   - [`use_sarif` and private repositories](#use-sarif-and-private-repositories)
@@ -113,7 +113,7 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
 - [no-new-commits-to-check](#no-new-commits-to-check)
   - [Resolution](#no-new-commits-to-check-r)
 
-ℹ️ As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), workflows can [[configure whether specific events are treated as ❌Errors or ⚠️Warnings|Feature: Treat specific errors as warnings]].
+ℹ️ As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), workflows can [configure whether specific events are treated as ❌Errors or ⚠️Warnings](./Feature:-Treat-specific-errors-as-warnings).
 
 # unrecognized-spelling
 
@@ -128,7 +128,7 @@ The token isn't in the dictionary
 
 - If there's a correct word (e.g. `compatibility`), correct the spelling
 - If the word should be in the dictionary, add it to `allow.txt`
-- If a portion of the line shouldn't be checked, add a pattern to `patterns.txt` -- see [[Configuration Examples: patterns]]
+- If a portion of the line shouldn't be checked, add a pattern to `patterns.txt` -- see [Configuration Examples: patterns](./Configuration-Examples:-patterns)
 - If it isn't really a word, but you're temporarily using it, add it to `expect.txt`
 
 # unrecognized-spelling-commit-message
@@ -143,8 +143,8 @@ The token found in the commit message isn't in the dictionary
 
 - If there's a correct word (e.g. `one-line`), correct the spelling
 - If the word should be in the dictionary, add it to `allow.txt`
-- If a portion of the line shouldn't be checked, add a pattern to `patterns.txt` -- see [[Configuration Examples: patterns]]
-- If commit messages shouldn't be checked, disable the feature [check_commit_messages](https://github.com/check-spelling/check-spelling/wiki/Configuration#check_commit_messages)
+- If a portion of the line shouldn't be checked, add a pattern to `patterns.txt` -- see [Configuration Examples: patterns](./Configuration-Examples:-patterns)
+- If commit messages shouldn't be checked, disable the feature [check_commit_messages](Configuration#checkcommitmessages)
 
 Note that for commit messages and pull requests, `expect.txt` isn't checked.
 
@@ -160,8 +160,8 @@ The token found in the pull request description isn't in the dictionary
 
 - If there's a correct word (e.g. `one-line`), correct the spelling
 - If the word should be in the dictionary, add it to `allow.txt`
-- If a portion of the line shouldn't be checked, add a pattern to `patterns.txt` -- see [[Configuration Examples: patterns]]
-- If commit messages shouldn't be checked, disable the feature [check_commit_messages](https://github.com/check-spelling/check-spelling/wiki/Configuration#check_commit_messages)
+- If a portion of the line shouldn't be checked, add a pattern to `patterns.txt` -- see [Configuration Examples: patterns](./Configuration-Examples:-patterns)
+- If commit messages shouldn't be checked, disable the feature [check_commit_messages](Configuration#checkcommitmessages)
 
 Note that for commit messages and pull requests, `expect.txt` isn't checked.
 
@@ -177,8 +177,8 @@ The token found in the pull request title isn't in the dictionary
 
 - If there's a correct word (e.g. `one-line`), correct the spelling
 - If the word should be in the dictionary, add it to `allow.txt`
-- If a portion of the line shouldn't be checked, add a pattern to `patterns.txt` -- see [[Configuration Examples: patterns]]
-- If commit messages shouldn't be checked, disable the feature [check_commit_messages](https://github.com/check-spelling/check-spelling/wiki/Configuration#check_commit_messages)
+- If a portion of the line shouldn't be checked, add a pattern to `patterns.txt` -- see [Configuration Examples: patterns](./Configuration-Examples:-patterns)
+- If commit messages shouldn't be checked, disable the feature [check_commit_messages](Configuration#checkcommitmessages)
 
 Note that for commit messages and pull requests, `expect.txt` isn't checked.
 
@@ -192,7 +192,7 @@ This generally means that the file doesn't appear to be English.
 
 Technically it means there are fewer unique dictionary words in the file than unique non-word tokens.
 
-ℹ️ Info: [[Feature: Autodetect noisy files]]
+ℹ️ Info: [Feature: Autodetect noisy files](./Feature:-Autodetect-noisy-files)
 
 ## <a id="noisy-file-r"></a>Resolution
 
@@ -202,7 +202,7 @@ Technically it means there are fewer unique dictionary words in the file than un
 - If the file should be checked, some combination of:
   - add entries to the dictionary (via `allow.txt`)
   - mask runs of noise (via `patterns.txt`)
-- If you really just need to check the files, see [[Scan noisy files|Feature: Scan noisy files]]
+- If you really just need to check the files, see [Scan noisy files](./Feature:-Scan-noisy-files)
 
 # bad-regex
 
@@ -309,7 +309,7 @@ dos2unix .github/actions/spelling/expect.txt
 Warning: unknown-words.sh:894:43 ... 59, Warning - `patterns patterns` matches an objections.patterns entry. (forbidden-pattern)
 ```
 
-This is generated by [[Forbidden patterns|Feature: Forbidden patterns]].
+This is generated by [Forbidden patterns](./Feature:-Forbidden-patterns).
 
 The repository has a specific regular expression defining a pattern that it doesn't want used.
 
@@ -334,7 +334,7 @@ Please try to migrate to the newer supported item.
 Warning: gigantic-file.sh:0:0 ... 0, Warning - size `10000000` exceeds limit `1000000`. (large-file)
 ```
 
-This is generated by [[Configurable file size limits|Feature: Configurable file size limits]].
+This is generated by [Configurable file size limits](./Feature:-Configurable-file-size-limits).
 
 ## <a id="large-file-r"></a>Resolution
 
@@ -348,7 +348,7 @@ If the file should be skipped, please add it to `excludes.txt`.
 Warning: pkg/testutil/testutil_windows.go:26:67 ... 69, Warning - `amd` is not a recognized word-- found 80 times. (limited-references)
 ```
 
-This is generated when a word appears more than [[unknown_word_limit|Configuration#unknown_word_limit]] times.
+This is generated when a word appears more than [unknown_word_limit](Configuration#unknownwordlimit) times.
 
 ## <a id="limited-references-r"></a>Resolution
 
@@ -362,7 +362,7 @@ If the item is misspelled, fixing the reported instances will disclose additiona
 You could of course use your local tools to find the remaining instances.
 
 # check-dictionary-not-found
-This is reported when entries in [check_extra_dictionaries](https://github.com/check-spelling/check-spelling/wiki/Configuration#check_extra_dictionaries) are not found. See [dictionary-not-found](#dictionary-not-found).
+This is reported when entries in [check_extra_dictionaries](Configuration#checkextradictionaries) are not found. See [dictionary-not-found](#dictionary-not-found).
 
 As of [v0.0.25](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.25), check-spelling should be able to properly test fallback dictionaries and make suggestions based on them.
 
@@ -372,12 +372,12 @@ As of [v0.0.25](https://github.com/check-spelling/check-spelling/releases/tag/v0
 * If you have set `check_extra_dictionaries` to a value, you'll want to make sure that the values it has are compatible with the values of `dictionary_source_prefixes` / map to available resources.
 
 # extra-dictionary-not-found
-This is reported when entries in [extra_dictionaries](https://github.com/check-spelling/check-spelling/wiki/Configuration#extra_dictionaries) are not found. See [dictionary-not-found](#dictionary-not-found).
+This is reported when entries in [extra_dictionaries](Configuration#extradictionaries) are not found. See [dictionary-not-found](#dictionary-not-found).
 
 Note that there is no fallback for entries in `extra_dictionaries`.
 
 # fallback-dictionary-not-found
-A second attempt is made to resolve [extra_dictionaries](https://github.com/check-spelling/check-spelling/wiki/Configuration#extra_dictionaries), and when they fail this is reported. See [dictionary-not-found](#dictionary-not-found).
+A second attempt is made to resolve [extra_dictionaries](Configuration#extradictionaries), and when they fail this is reported. See [dictionary-not-found](#dictionary-not-found).
 
 # dictionary-not-found
 
@@ -406,7 +406,7 @@ Error: Failed to retrieve cspell:java/src/java-terms.txt -- HTTP 429 for https:/
 
 ### <a id="429-too-many-requests-r"></a>Resolution
 
-For `check-dictionary-not-found`, consider limiting the list of [`check_extra_dictionaries`](https://github.com/check-spelling/check-spelling/wiki/Configuration#check_extra_dictionaries) -- possibly to `""`.
+For `check-dictionary-not-found`, consider limiting the list of [`check_extra_dictionaries`](Configuration#checkextradictionaries) -- possibly to `""`.
 
 You can also merge `.txt` dictionaries together into a single file and then point to that combined dictionary. You can use a normal `https:` url instead of a `cspell:` url -- the `cspell:` urls are just aliases to paths in `https://raw.githubusercontent.com/`.
 
@@ -518,7 +518,7 @@ The [line in question](https://github.com/commercialhaskell/stack/blob/f3a167873
     , concat [["-fhpc"] | isLocal && toCoverage (boptsTestOpts bopts)]
 ```
 
-👩‍🔬 In a version after 0.0.20, as part of [[Suggest patterns|Feature: Suggest patterns]], you can provide a `candidate.patterns` file.
+👩‍🔬 In a version after 0.0.20, as part of [Suggest patterns](./Feature:-Suggest-patterns), you can provide a `candidate.patterns` file.
 
 If a line in a file (that isn't _excluded_), and after being filtered for patterns has word-like items that aren't in the dictionary,
 then those lines will be checked against _candidate patterns_. Each candidate will report separately against each line.
@@ -548,7 +548,7 @@ Or, if you've decided that the candidate pattern doesn't make sense for the repo
 
 ## candidate-pattern with check_file_names file with use_sarif
 
-If you're using [`check_file_names`](https://github.com/check-spelling/check-spelling/wiki/Configuration#check_file_names) and [`use_sarif`](https://github.com/check-spelling/check-spelling/wiki/Configuration#use_sarif) with the [SARIF Viewer](https://marketplace.visualstudio.com/items?itemName=MS-SarifVSCode.sarif-viewer) for [Visual Studio Code](https://code.visualstudio.com/) and a [suggested pattern|Feature:-Suggest-patterns] matches a file path, the location will be listed as `paths-of-checked-files.txt` and VS Code will not be able to identify the actual file.
+If you're using [`check_file_names`](Configuration#checkfilenames) and [`use_sarif`](Configuration#usesarif) with the [SARIF Viewer](https://marketplace.visualstudio.com/items?itemName=MS-SarifVSCode.sarif-viewer) for [Visual Studio Code](https://code.visualstudio.com/) and a [suggested pattern|Feature:-Suggest-patterns] matches a file path, the location will be listed as `paths-of-checked-files.txt` and VS Code will not be able to identify the actual file.
 
 ### Suggestions for candidate pattern matching paths-of-checked-files.txt
 
@@ -611,7 +611,7 @@ Eventually provisions will be made to generally expose the artifact itself. Ther
 
 # unsupported-task
 
-Normally tasks are automatically provided as an output from check-spelling (usually of the form `task: ${{ needs.spelling.outputs.followup }}`), it's possible that the configuration for this has been corrupted.
+Normally tasks are automatically provided as an output from check-spelling (usually of the form `task: ${% raw %}{{{% endraw %} needs.spelling.outputs.followup }}`), it's possible that the configuration for this has been corrupted.
 
 Check the workflow configuration.
 
@@ -684,7 +684,7 @@ Between [v20220816](https://github.com/check-spelling/cspell-dicts/releases/tag/
 
 # check-file-path
 
-If you have enabled [[Check filenames and paths|Feature: Check filenames and paths]] with [`check_file_names: 1`](https://github.com/check-spelling/check-spelling/wiki/Configuration#check_file_names), then in addition to checking the contents of files, check-spelling will check the file paths.
+If you have enabled [Check filenames and paths](./Feature:-Check-filenames-and-paths) with [`check_file_names: 1`](Configuration#checkfilenames), then in addition to checking the contents of files, check-spelling will check the file paths.
 
 A reported item will correspond to a portion of a file path, possibly a folder, possibly a file name, or possibly the file extension. Initially, a bunch of the items listed will be false positives, but it's quite possible that one or two of them will be misspellings.
 
@@ -695,8 +695,8 @@ In the log form, the numbers `9 ... 18` refer to character offsets within the fi
 
 ## Identifying the problematic items
 
-- If you enabled [[Summary Table|Feature: Summary Table]] with [`summary_table: 1`](https://github.com/check-spelling/check-spelling/wiki/Configuration#summary_table) and there is enough space, the individual paths should appear in the details table.
-- If you enabled [[SARIF output|Feature: SARIF output]] with [`use_sarif: 1`](https://github.com/check-spelling/check-spelling/wiki/Configuration#use_sarif) and the repository is public (or is private and has advanced security enabled) and you are a member of the security group / an owner/admin, then individual items should appear in the SARIF report.
+- If you enabled [Summary Table](./Feature:-Summary-Table) with [`summary_table: 1`](Configuration#summarytable) and there is enough space, the individual paths should appear in the details table.
+- If you enabled [SARIF output](./Feature:-SARIF-output) with [`use_sarif: 1`](Configuration#usesarif) and the repository is public (or is private and has advanced security enabled) and you are a member of the security group / an owner/admin, then individual items should appear in the SARIF report.
 - You can find them listed in the `Spell check` section of the Action log (they should have `(check-file-path)` on each line).
 
 ## <a id="identifying-the-problematic-items-r"></a>Resolution
@@ -722,11 +722,11 @@ Sometimes the fault is due to an internal pattern (mostly aliases for fancy apos
 
 - Consider adding a `\b` or `\s` to the edges of your pattern.
 - It's possible to add the items to expect or to the dictionary if they're really correct.
-- See [[Warning about substring matches|Feature: Warning about substring matches]] for more advice.
+- See [Warning about substring matches](./Feature:-Warning-about-substring-matches) for more advice.
 
 # summary-table-skipped
 
-When producing a [[Summary Table|Feature: Summary Table]], if sections would cause the Summary to exceed its size limit, they'll be dropped.
+When producing a [Summary Table](./Feature:-Summary-Table), if sections would cause the Summary to exceed its size limit, they'll be dropped.
 
 ## <a id="summary-table-skipped-r"></a>Resolution
 
@@ -747,17 +747,17 @@ When processing a file, if the time to parse exceeds the `splitter_timeout` envi
 
 - Add the file to `excludes.txt`
 - Adjust patterns to improve parsing behavior
-- Increase [`splitter_timeout`](https://github.com/check-spelling/check-spelling/wiki/Feature%3A-Parsing-Timeouts#configuration)
+- Increase [`splitter_timeout`](Feature%3A-Parsing-Timeouts#configuration)
 
 # slow-file-list
 
-If you're using [`check_file_names`](https://github.com/check-spelling/check-spelling/wiki/Configuration#check_file_names) and the file list is too long or the patterns for it collectively are too long, it might not be possible to check them.
+If you're using [`check_file_names`](Configuration#checkfilenames) and the file list is too long or the patterns for it collectively are too long, it might not be possible to check them.
 
 ## <a id="slow-file-list-r"></a>Resolution
 
-- Disable [`check_file_names`](https://github.com/check-spelling/check-spelling/wiki/Configuration#check_file_names)
+- Disable [`check_file_names`](Configuration#checkfilenames)
 - Adjust patterns to improve parsing behavior
-- Increase [`splitter_timeout`](https://github.com/check-spelling/check-spelling/wiki/Feature%3A-Parsing-Timeouts#configuration)
+- Increase [`splitter_timeout`](Feature%3A-Parsing-Timeouts#configuration)
 
 # ignored-expect-variant
 
@@ -787,24 +787,24 @@ Check Spelling works by reviewing files and identifying problems with them.
 
 It can be configured to check out the repository for you, or you can check out the repository in the workflow job before using the action. Without checking out files, it won't find any files to check.
 
-You can configure which files it should check by using [excludes](https://github.com/check-spelling/check-spelling/wiki/Configuration#excludes) and [only](https://github.com/check-spelling/check-spelling/wiki/Configuration#only).
+You can configure which files it should check by using [excludes](Configuration#excludes) and [only](Configuration#only).
 
 ## <a id="no-files-to-check-r"></a>Resolution
 
 - Check out the repository
   - Add `checkout: true` to the `step` `uses: check-spelling/check-spelling@...`'s `with:` block, or
   - Add a `uses: actions/checkout@...` step before the `uses: check-spelling/check-spelling@...` step
-- Remove entries from [excludes](https://github.com/check-spelling/check-spelling/wiki/Configuration#excludes)
-- Adjust or add items in [only](https://github.com/check-spelling/check-spelling/wiki/Configuration#only)
+- Remove entries from [excludes](Configuration#excludes)
+- Adjust or add items in [only](Configuration#only)
 - Review the contents of the repository and compare against both
 
 # noisy-file-list
 
-[[Check filenames and paths|Feature: Check filenames and paths]] results in a list of file paths to be checked as if it was the contents of a file. The general [noisy-file](#noisy-file) heuristic has triggered on the file list itself.
+[Check filenames and paths](./Feature:-Check-filenames-and-paths) results in a list of file paths to be checked as if it was the contents of a file. The general [noisy-file](#noisy-file) heuristic has triggered on the file list itself.
 
 ## <a id="noisy-file-list-r"></a>Resolution
 
-- Turn off [[Check filenames and paths|Feature: Check filenames and paths]].
+- Turn off [Check filenames and paths](./Feature:-Check-filenames-and-paths).
 - Add file path words to the dictionary (`allow.txt`).
 - Add file paths to patterns (`patterns.txt`) to exclude noisy file paths.
 
@@ -850,7 +850,7 @@ Please [review known `sarif-generation-failed` bugs](https://github.com/check-sp
 
 # unclosed-block-ignore
 
-A [[Block Ignore|Feature: Block Ignore]] rule's start pattern matched content in the file, but the corresponding end tag wasn't found.
+A [Block Ignore](./Feature:-Block-Ignore) rule's start pattern matched content in the file, but the corresponding end tag wasn't found.
 
 As a result, all content after the begin tag was ignored.
 
@@ -863,7 +863,7 @@ Note that this feature is experimental, it's possible you've encountered a bug.
 
 # unclosed-block-ignore-begin
 
-A [[Block Ignore|Feature: Block Ignore]] rule's start pattern matched content in the file, but the corresponding end tag wasn't found.
+A [Block Ignore](./Feature:-Block-Ignore) rule's start pattern matched content in the file, but the corresponding end tag wasn't found.
 
 As a result, all content after the begin tag was ignored.
 
@@ -879,7 +879,7 @@ Note that this feature is experimental, it's possible you've encountered a bug.
 
 # unclosed-block-ignore-end
 
-A [[Block Ignore|Feature: Block Ignore]] rule's start pattern matched content in the file, but the corresponding end tag wasn't found. The specific end marker should be listed in the report.
+A [Block Ignore](./Feature:-Block-Ignore) rule's start pattern matched content in the file, but the corresponding end tag wasn't found. The specific end marker should be listed in the report.
 
 As a result, all content after the begin tag was ignored.
 
@@ -895,7 +895,7 @@ Note that this feature is experimental, it's possible you've encountered a bug.
 
 # missing-on-pull-request-event
 
-The [`suppress_push_for_open_pull_request`](https://github.com/check-spelling/check-spelling/wiki/Configuration#suppress_push_for_open_pull_request) configuration expects there to be an `on:` containing `pull_request` or `pull_request_target` -- if it isn't found, there wouldn't be a place for check-spelling to run.
+The [`suppress_push_for_open_pull_request`](Configuration#suppresspushforopenpullrequest) configuration expects there to be an `on:` containing `pull_request` or `pull_request_target` -- if it isn't found, there wouldn't be a place for check-spelling to run.
 
 Instead of leaving users without a run, the `suppress_push_for_open_pull_request` configuration will be ignored. 
 
@@ -942,7 +942,7 @@ If an error is encountered in `SuggestsExcludes`, check-spelling won't be able t
 
 # binary-file
 
-When [[magic file detection|Feature: Detect binary files]] is enabled, some files may be identified as binaries and thus skipped.
+When [magic file detection](./Feature:-Detect-binary-files) is enabled, some files may be identified as binaries and thus skipped.
 
 ## <a id="binary-file-r"></a>Resolution
 
@@ -966,7 +966,7 @@ The file has a single very long line. As these files tend to be minified files, 
 
 * Add the files to `excludes.txt`.
 * Split the file into multiple lines. For markdown files you can generally insert single newlines anywhere, but splitting between `. ` is a good practice.
-* Disable detection by adding `single-line-file` to [`disable_checks`](https://github.com/check-spelling/check-spelling/wiki/Configuration#disable_checks).
+* Disable detection by adding `single-line-file` to [`disable_checks`](Configuration#disablechecks).
 * If you have a good reason for the file to be a single line file and have check-spelling check its spelling, please search for an issue, and if you don't find one, please [file a ticket](https://github.com/check-spelling/check-spelling/issues/new) including an explanation of your use case.
 
 # checkout-failed-unknown-cause
@@ -994,8 +994,11 @@ If you weren't expecting this message, you should determine which case applies, 
 
 # no-new-commits-to-check
 
-The [check_commit_messages](https://github.com/check-spelling/check-spelling/wiki/Configuration#check_commit_messages) feature is intentionally not retroactive. If the first commit changing this feature isn't followed by another commit in the same push, this event will be reported.
+The [check_commit_messages](Configuration#checkcommitmessages) feature is intentionally not retroactive. If the first commit changing this feature isn't followed by another commit in the same push, this event will be reported.
 
 ## <a id="no-new-commits-to-check-r"></a>Resolution
 
 This is purely informative. Future commits added to a branch or PR with this setting active will be checked.
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

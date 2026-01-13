@@ -27,7 +27,7 @@ This is implemented in [v0.0.20](https://github.com/check-spelling/check-spellin
 ### Commit implementation
 
 1. Retrieve the shell script from the comment, run its equivalent, git add -u, commit.
-1. The command (which used to be **posix shell**) is now [[Perl|Feature: Other shells]]
+1. The command (which used to be **posix shell**) is now [Perl](./Feature:-Other-shells)
 1. With the command retrieved from the comment
 1. Perform the command equivalent (the command is refactored so that the same code can be shared between the two code paths)
 1. I don't intend to delete empty files, as they represent structure even if they're temporarily empty.
@@ -61,15 +61,15 @@ One can push to GitHub using two mechanisms:
 
 Historically HTTPS tokens could have been a user's password, but support for that was [removed a while back](https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/).
 
-HTTPS tokens can be a [personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) with various arbitrary permissions or the [`GITHUB_TOKEN`](#github_token).
+HTTPS tokens can be a [personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) with various arbitrary permissions or the [`GITHUB_TOKEN`](#githubtoken).
 
 ##### `GITHUB_TOKEN`
 
 The [`GITHUB_TOKEN`](https://docs.github.com/en/actions/security-guides/automatic-token-authentication) can allow pushes, but when used, it [doesn't trigger other workflows](https://docs.github.com/en/actions/security-guides/automatic-token-authentication#using-the-github_token-in-a-workflow), which means it's problematic for automatic updates.
 
-This mode will trigger a [[Disclaimer about missing status|Feature: Disclaimer about missing status]].
+This mode will trigger a [Disclaimer about missing status](./Feature:-Disclaimer-about-missing-status).
 
-To enable a smoother approach, the repository can be configured to use a [[read-write deploy key|Feature:-Update-with-deploy-key]].
+To enable a smoother approach, the repository can be configured to use a [read-write deploy key](./Feature:-Update-with-deploy-key).
 
 #### SSH keys
 
@@ -93,7 +93,7 @@ Essentially, this involves:
 - name: checkout
   uses: actions/checkout@v3
   with:
-    ssh-key: "${{ secrets.CHECK_SPELLING }}"
+    ssh-key: "${% raw %}{{{% endraw %} secrets.CHECK_SPELLING }}"
 ```
 
 ###### read-write deploy key limitations
@@ -153,3 +153,6 @@ The best dummy change is a blank line in the expect file itself. It will have mi
 I see a lot of people running the commands blindly and missing the fact that there are real misspellings in the output.
 
 - Part of this is that they aren't used to looking at the output.
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

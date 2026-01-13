@@ -13,17 +13,26 @@ A lot of users were hoping for a stable script one could get from the check-spel
 
 ## Goals
 
-- [x] Support URLs pointing to Markdown flavored comments
-- [x] Support URLs pointing to GitHub action check logs
-- [x] Support simple lists of adds/removes
-- [x] Support excludes
-- [x] Support spell-check-this
-- [x] Support private repositories (you can't use `curl` to retrieve content from these w/o a token, and I don't want to task users for a token)
-- [x] Enable switching from using a `comment` to using `github_step_summary`
+&#x2611; Support URLs pointing to Markdown flavored comments
 
-- [x] Switch reported shell script / logged shell script to use this script instead
+&#x2611; Support URLs pointing to GitHub action check logs
 
-- [x] Support running on Windows
+&#x2611; Support simple lists of adds/removes
+
+&#x2611; Support excludes
+
+&#x2611; Support spell-check-this
+
+&#x2611; Support private repositories (you can't use `curl` to retrieve content from these w/o a token, and I don't want to task users for a token)
+
+&#x2611; Enable switching from using a `comment` to using `github_step_summary`
+
+
+&#x2611; Switch reported shell script / logged shell script to use this script instead
+
+
+&#x2611; Support running on Windows
+
 
 ## Design choices
 
@@ -36,9 +45,15 @@ A lot of users were hoping for a stable script one could get from the check-spel
 
 ## Status
 
-- [x] `main` generates something like `curl -L 'https://raw.githubusercontent.com/check-spelling/check-spelling/prerelease/apply.pl' |
+&#x2611; `main` generates something like `curl -L 'https://raw.githubusercontent.com/check-spelling/check-spelling/prerelease/apply.pl' |
+
 perl - 'https://github.com/check-spelling/lit/actions/runs/3319354094/attempts/1'`
-- [x] `main` talk-to-bot can handle such a url
+&#x2611; `main` talk-to-bot can handle such a url
+
   - [x] `main` validates that the url corresponds to its PR
   - [x] `main` consumes the url (and handle errors)
-- [x] `main` generates comments of this form
+&#x2611; `main` generates comments of this form
+
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

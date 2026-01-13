@@ -88,3 +88,6 @@ This format is really lousy...
 ### Availability
 
 This is not yet implemented as of [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22)
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

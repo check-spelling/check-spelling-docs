@@ -23,3 +23,6 @@ I'm currently truncating first the stale items, and then the misspelled items.
 Generally during first run, the first thing to do is to tune `excludes`, and thus the focus should be on either adding excludes or adding dictionaries. Currently these two are not automatically truncated. If I get feedback that someone managed to have too many exclude suggestions, then I may add support for truncating that as well.
 
 The log should include the truncated content.
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

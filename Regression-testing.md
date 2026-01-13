@@ -8,7 +8,7 @@ Right now, most check-spelling testing is done through live use of the action.
 
 1. Create a repository [check-spelling-sandbox/autotest-check-spelling](https://github.com/check-spelling-sandbox/autotest-check-spelling)
 2. Give it a secret so that it can push to its own repository
-3. Create a workflow which pushes the current commits from check-spelling and check-spelling-sandbox for `main` and `prerelease` to newly https://github.com/check-spelling-sandbox/autotest-check-spelling/blob/main/.github/workflows/autotest.yml
+3. Create a workflow which pushes the current commits from check-spelling and check-spelling-sandbox for `main` and `prerelease` to newly https://raw.githubusercontent.com/check-spelling-sandbox/autotest-check-spelling/main/.github/workflows/autotest.yml
 
 ### Rationale
 
@@ -41,3 +41,6 @@ Date | Phase
 2024-11-01 | [Phase 0](#phase-0) [check-spelling-sandbox/autotest-check-spelling](https://github.com/check-spelling-sandbox/autotest-check-spelling)
 Uncertain | [Plan 1](#plan-1) `check-spelling/regression-tests`
 ...
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

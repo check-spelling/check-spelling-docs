@@ -21,3 +21,6 @@ https://github.community/t/permissions-nesecary-to-comment-on-a-pr/179047/2
 
    1. create an empty commit and push that.
    2. amend the current commit and force push it. (This might upset `@dependabot`)
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)
