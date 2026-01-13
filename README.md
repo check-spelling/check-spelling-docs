@@ -11,6 +11,6 @@ It mostly contains a number of [workflows](.github/workflows/):
 * [spelling](.github/workflows/spelling.yml) is responsible for checking the spelling of both this branch and the gh-pages branch
 
 Supporting scripts:
-* [`build.sh`](build.sh) proesses all of the wiki pages (calling `process-md.pl` and `add-footer.pl`)
+* [`build.sh`](build.sh) processes all of the wiki pages (calling `process-md.pl` and `add-footer.pl`)
 * [`process-md.pl`](process-md.pl) handles most divergences between GitHub's wiki markdown and gh-pages's markdown (with the exception of a quirk in relating to `code` anchors which is handled by [jekyll-gh-pages](.github/workflows/jekyll-gh-pages.yml))
 * [`add-footer.pl`](add-footer.pl) ensures that each page has a footer
