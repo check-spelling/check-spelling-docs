@@ -50,11 +50,11 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
 - [unsupported-repo-notation](#unsupported-repo-notation)
 - [unsupported-configuration](#unsupported-configuration)
   - [`only_check_changed_files` and `use_sarif`](#only_check_changed_files-and-use_sarif)
-  - [`use_sarif` and `security-events: write`](#use_sarif-and-security-events-write)
-    - [Resolution](#use_sarif-and-security-events-write-r)
-  - [`use_sarif` and private repositories](#use_sarif-and-private-repositories)
-    - [Resolution](#use_sarif-and-private-repositories-r)
-  - [`use_sarif` and `act`](#use_sarif-and-act)
+  - [`use_sarif` and `security-events: write`](#use-sarif-and-security-events-write)
+    - [Resolution](#use-sarif-and-security-events-write-r)
+  - [`use_sarif` and private repositories](#use-sarif-and-private-repositories)
+    - [Resolution](#use-sarif-and-private-repositories-r)
+  - [`use_sarif` and `act`](#use-sarif-and-act)
 - [unsupported-task](#unsupported-task)
   - [Resolution](#unsupported-task-r)
 - [minified-file](#minified-file)
@@ -571,11 +571,11 @@ If the revision you selected doesn't work, feel free to file a bug with a public
 
 You can choose one or the other. By default, check-spelling favors the former. If you want to use the latter, you'll have to turn off the former.
 
-## <a id="use_sarif-and-security-events-write"></a>`use_sarif` and `security-events: write`
+## <a id="use-sarif-and-security-events-write"></a>`use_sarif` and `security-events: write`
 
 To [upload SARIF results](https://docs.github.com/en/code-security/code-scanning/integrating-with-code-scanning/uploading-a-sarif-file-to-github), `use_sarif` needs `security-events: write`.
 
-### <a id="use_sarif-and-security-events-write-r"></a>Resolution
+### <a id="use-sarif-and-security-events-write-r"></a>Resolution
 
 If you want to use sarif, add:
 
@@ -588,20 +588,20 @@ to the `job` that contains the `use_sarif` configuration.
 
 Alternatively, you can remove `use_sarif: ...` from the job in which case the classic error reporting mechanism will be used.
 
-## <a id="use_sarif-and-private-repositories"></a>`use_sarif` and private repositories
+## <a id="use-sarif-and-private-repositories"></a>`use_sarif` and private repositories
 
 GitHub SARIF processing requires GitHub Advanced Security to be enabled.
 
 This is possible for Public repositories on GitHub.com and for Enterprise Repositories, but it's possible that you can't use it with Private repositories on GitHub.com.
 
-### <a id="use_sarif-and-private-repositories-r"></a>Resolution
+### <a id="use-sarif-and-private-repositories-r"></a>Resolution
 
 - If your repository doesn't need to be private (for example, you accidentally create it as a private repository), you can change it to public
 - Switch to an enterprise plan (?)
 - Remove `use_sarif`
 - If you have a use for the SARIF output beyond GitHub's handling, please file a bug describing your use case -- it's possible to adjust the code to handle this case, but this wasn't supported in the initial implementation, so you are here.
 
-## `use_sarif` and `act`
+## <a id="use-sarif-and-act"></a>`use_sarif` and `act`
 
 You can try setting [`GITHUB_TOKEN`](https://github.com/nektos/act#github_token).
 
