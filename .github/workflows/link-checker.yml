@@ -5,52 +5,30 @@ on:
   workflow_dispatch:
 
 jobs:
-  link-checker:
-    name: Run link checker
-    permissions:
-      contents: read
+  linkcheck:
+    name: Run linkcheck
+    permissions: {}
     runs-on: ubuntu-latest
     steps:
-    - name: set up link checker
+    - name: set up dart
+      uses: dart-lang/setup-dart@v1
+    - name: set up linkcheck
       run: |
-        python3 -m venv linkchecker
-        . linkchecker/bin/activate
-        pip3 install linkchecker
+        : install linkcheck
+        dart pub global activate linkcheck
     - name: check links
-      env:
-        site: ${{ vars.gh_pages_site || 'docs.check-spelling.dev' }}
       run: |
         : Link Checker
         (
           echo "# Link Checker ($site)"
           echo
-          ./linkchecker/bin/linkchecker "https://$site/" |
-          perl -e '
-          $m="```\n";
-          print $m;
-          my $summary = "";
-          while (<>) {
-            if (/^Start checking/) {
-              $state = 1;
-              print STDERR;
-              next;
-            }
-            if (/^Statistics:/) {
-              $state = 2;
-              print STDERR;
-              next;
-            }
-            if ($state == 1) {
-              print;
-            } elsif ($state == 2 && /found/) {
-              $summary = $_;
-              print STDERR;
-            } else {
-              print STDERR;
-            }
-          }
-          print $m;
-          print "\n";
-          print $summary;
-          '
+          linkcheck "$site" |
+          perl -pe '
+            s/^([A-Z]\w+)\W+?(\s*)$/## $1$2/;
+            s!^(https?://)!### $1!;
+            s/\s{3,}/- /;
+          ' |
+          tee /dev/stderr
         ) >> "$GITHUB_STEP_SUMMARY"
+      env:
+        site: ${{ vars.gh_pages_site || 'docs.check-spelling.dev' }}

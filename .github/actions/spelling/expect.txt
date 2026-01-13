@@ -1,8 +1,7 @@
 backticks
 eol
-linkchecker
+linkcheck
 mktemp
 mmdc
 nullglob
 shopt
-venv
