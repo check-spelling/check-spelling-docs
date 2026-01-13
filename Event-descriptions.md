@@ -383,7 +383,7 @@ A second attempt is made to resolve [extra_dictionaries](https://github.com/chec
 
 Test the url manually. What to do will depend on the error code from the web server.
 
-## 503 (internal server error)
+## <a id="503-internal-server-error"></a>503 (internal server error)
 
 ```
 Failed to retrieve cspell:r/src/r.txt (https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20230509/dictionaries/r/src/r.txt)
@@ -398,7 +398,7 @@ Rerun the workflow.
 
 check-spelling [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22)+ includes code to retry these failures.
 
-## 429 (too many requests)
+## <a id="429-too-many-requests"></a>429 (too many requests)
 
 ```
 Error: Failed to retrieve cspell:java/src/java-terms.txt -- HTTP 429 for https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20230509/dictionaries/java/src/java-terms.txt (check-dictionary-not-found)
@@ -410,7 +410,7 @@ For `check-dictionary-not-found`, consider limiting the list of [`check_extra_di
 
 You can also merge `.txt` dictionaries together into a single file and then point to that combined dictionary. You can use a normal `https:` url instead of a `cspell:` url -- the `cspell:` urls are just aliases to paths in `https://raw.githubusercontent.com/`.
 
-## 404 (file not found)
+## <a id="404-file-not-found"></a>404 (file not found)
 
 ```
 Error: Failed to retrieve cspell:software-terms/softwareTerms.txt -- https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20220814/dictionaries/software-terms/softwareTerms.txt (dictionary-not-found)
@@ -571,7 +571,7 @@ If the revision you selected doesn't work, feel free to file a bug with a public
 
 You can choose one or the other. By default, check-spelling favors the former. If you want to use the latter, you'll have to turn off the former.
 
-## `use_sarif` and `security-events: write`
+## <a id="use_sarif-and-security-events-write"></a>`use_sarif` and `security-events: write`
 
 To [upload SARIF results](https://docs.github.com/en/code-security/code-scanning/integrating-with-code-scanning/uploading-a-sarif-file-to-github), `use_sarif` needs `security-events: write`.
 
@@ -588,7 +588,7 @@ to the `job` that contains the `use_sarif` configuration.
 
 Alternatively, you can remove `use_sarif: ...` from the job in which case the classic error reporting mechanism will be used.
 
-## `use_sarif` and private repositories
+## <a id="use_sarif-and-private-repositories"></a>`use_sarif` and private repositories
 
 GitHub SARIF processing requires GitHub Advanced Security to be enabled.
 
