@@ -60,7 +60,7 @@ If you want to include the default dictionary,
 place it into the directory next to your own.
 
 Alternatively, if you want to retrieve a dictionary from a remote URL,
-see the workflow configuration values [dictionary_url](#dictionary_url) and [dictionary_version](#dictionary_version).
+see the workflow configuration values [[dictionary_url|Configuration#dictionary_url]] and [[dictionary_version|Configuration#dictionary_version]].
 
 If you just want to supplement the dictionary, you can use [`extra_dictionaries`](https://github.com/check-spelling/check-spelling/wiki/Configuration#extra_dictionaries) or [allow](#allow).
 
