@@ -17,7 +17,7 @@
 - [Caveats](#caveats)
   - [Pull Requests from branches without check-spelling configured](#pull-requests-from-branches-without-check-spelling-configured)
 
-## GitHub's [`gh`](https://cli.github.com/) client
+## GitHub's `gh` client
 
 As of [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22), the script relies on [`gh`](https://cli.github.com/).
 
