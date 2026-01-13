@@ -1,5 +1,8 @@
+amd
 backticks
 eol
+esac
+filiph
 linkcheck
 mktemp
 mmdc

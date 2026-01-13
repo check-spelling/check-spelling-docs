@@ -1,8 +1,6 @@
 # See https://github.com/check-spelling/check-spelling/wiki/Configuration-Examples:-patterns
 
 # Automatically suggested patterns
-
-# Automatically suggested patterns
 # hit-count: 60 file-count: 33
 # https/http/file urls
 (?:\b(?:https?|ftp|file)://)[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]
@@ -10,6 +8,10 @@
 # hit-count: 10 file-count: 5
 # perl run
 perl(?:\s+-[a-zA-Z]\w*)+
+
+# hit-count: 1 file-count: 1
+# tar arguments
+\b(?:\\n|)g?tar(?:\.exe|)(?:(?:\s+--[-a-zA-Z]+|\s+-[a-zA-Z]+|\s[ABGJMOPRSUWZacdfh-pr-xz]+\b)(?:=[^ ]*|))+
 
 # Patterns
 m\{.*\}
