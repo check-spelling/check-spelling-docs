@@ -15,6 +15,7 @@ imageflow
 imazen
 interoperate
 jitsi
+laurikari
 nomatch
 oneline
 openapitools
