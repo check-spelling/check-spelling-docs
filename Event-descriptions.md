@@ -81,6 +81,12 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
   - [Resolution](#no-files-to-check-r)
 - [noisy-file-list](#noisy-file-list)
   - [Resolution](#noisy-file-list-r)
+- [noisy-commit-message](#noisy-commit-message)
+  - [Resolution](#noisy-commit-message-r)
+- [noisy-pr-title](#noisy-pr-title)
+  - [Resolution](#noisy-pr-title-r)
+- [noisy-pr-description](#noisy-pr-description)
+  - [Resolution](#noisy-pr-description-r)
 - [utf16-surrogate](#utf16-surrogate)
 - [utf16-surrogate-file](#utf16-surrogate-file)
   - [Resolution](#utf16-surrogate-file-r)
@@ -807,6 +813,36 @@ You can configure which files it should check by using [excludes](https://github
 - Turn off [[Check filenames and paths|Feature: Check filenames and paths]].
 - Add file path words to the dictionary (`allow.txt`).
 - Add file paths to patterns (`patterns.txt`) to exclude noisy file paths.
+
+# noisy-commit-message
+
+[[Check commit messages|Feature: Check commit messages]] results in a set of commit messages checked as if they are the contents of a file/files. The general [noisy-file](#noisy-file) heuristic has triggered on the one of these files.
+
+## <a id="noisy-commit-message-r"></a>Resolution
+
+- Remove `commit` or `commits` from [[Check filenames and paths|Feature: Check commit messages]].
+- Add commit message words to the dictionary (`allow.txt`).
+- Use patterns (`patterns.txt`) to mask tokens.
+
+# noisy-pr-title
+
+[[Check commit messages|Feature: Check commit messages]] results in the PR title checked as if is the contents of a file. The general [noisy-file](#noisy-file) heuristic has triggered on this file.
+
+## <a id="noisy-pr-title-r"></a>Resolution
+
+- Remove `title` from [[Check filenames and paths|Feature: Check commit messages]].
+- Add PR title words to the dictionary (`allow.txt`).
+- Use patterns (`patterns.txt`) to mask tokens.
+
+# noisy-pr-description
+
+[[Check commit messages|Feature: Check commit messages]] results in the PR description checked as if is the contents of a file. The general [noisy-file](#noisy-file) heuristic has triggered on this file.
+
+## <a id="noisy-pr-description-r"></a>Resolution
+
+- Remove `description` from [[Check filenames and paths|Feature: Check commit messages]].
+- Add PR description words to the dictionary (`allow.txt`).
+- Use patterns (`patterns.txt`) to mask tokens.
 
 # utf16-surrogate
 
