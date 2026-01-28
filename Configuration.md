@@ -26,6 +26,7 @@ See [[Configuration: Workflows]] for the supported GitHub workflows.
 | [capture_output_skipped_files](#capture_output_skipped_files) | Capture skipped files (could be added to excludes.txt) as an action output |
 | [experimental_commit_note](#experimental_commit_note) | If set, commit updates to expect automatically with this note |
 | [only_check_changed_files](#only_check_changed_files) | If set, only check changed files |
+| [allow-hunspell](#allow-hunspell) | Whether or not to support Hunspell dictionaries |
 | [dictionary_source_prefixes](#dictionary_source_prefixes) | prefixes for urls for dictionaries defined in [extra_dictionaries](#extra_dictionaries) |
 | [extra_dictionaries](#extra_dictionaries) | Dictionaries to include |
 | [check_extra_dictionaries](#check_extra_dictionaries) | If there are unknown words, see if they are in these additional dictionaries |
@@ -69,6 +70,7 @@ See [[Configuration: Workflows]] for the supported GitHub workflows.
 | [task](#task) | Workflow magic |
 | [unknown_file_word_limit](#unknown_file_word_limit) | Limit the number of reports for a specific unknown word in file paths |
 | [ignore-next-line](#ignore-next-line) | Define value(s) to trigger ignoring content on the next line |
+| [load-config-from](#load-config-from) | Define to allow loading specific configuration from `config.json` in `pull_request_target` events |
 
 See [[Configuration: Advanced]] for additional options.
 
@@ -193,6 +195,10 @@ Some repositories are quite large and typically have very few files changing at 
 With `only_check_changed_files: 1`, only the files changed (either by a PR, or since the previous commit tracked by GitHub for the branch/tag) will be checked.
 
 Downside: if someone changes any of the config files, it's likely that they will have changed files that aren't being checked and you won't find out until they're touched at a later date. This can be frustrating for contributors (although, any linter can be frustrating).
+
+### allow-hunspell
+
+Whether or not to support [[Hunspell dictionaries|Feature: Hunspell dictionary support]]
 
 ### dictionary_source_prefixes
 
@@ -522,6 +528,35 @@ Limit the number of reports for a specific unknown word in file paths.
 Specify value(s) to cause errors on the next line to be ignored.
 
 See [[ignore‐next‐line|Feature: ignore‐next‐line]]
+
+## load-config-from
+
+For workflows running via `on: pull_request_target`, [GitHub changed how workflow dispatch works](https://github.blog/changelog/2025-11-07-actions-pull_request_target-and-environment-branch-protections-changes/).
+
+Expected to be available in check-spelling v0.0.26, you can set the value (in the workflow on the **default branch**) to something like:
+
+```json
+{
+  "pr-base-keys": [
+    "check_extra_dictionaries",
+    "dictionary_source_prefixes",
+    "extra_dictionaries",
+    ""
+  ],
+  "pr-trusted-keys": [
+    "extra_dictionary_limit",
+    ""
+  ],
+  "": []
+}
+```
+
+* Values in a `config.json` of the pull request base for `check_extra_dictionaries`, `dictionary_source_prefixes`, and `extra_dictionaries` keys will be used (replacing the values specified in the workflow configuration on the default branch).
+* Values in a `config.json` of the pull request head for `extra_dictionary_limit` will be used (replacing the values specified in the workflow configuration on the default branch).
+
+The supported keys is limited to a subset of all configuration options (e.g. `config` will never be supported because that's used to find the `config.json` file) which may expand over time.
+
+The empty items (`""` & `"": []`) are ignored and provided to allow for happy Git blame when new lines are added (to avoid being blamed for adding the last item in a list).
 
 ## Configuration Files
 
