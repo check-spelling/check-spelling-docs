@@ -15,6 +15,7 @@ or a directory, where each file with a `.txt` suffix will be merged together.
 | [only](#only) | This allows you to limit checking to certain files/directories. |
 | [patterns](#patterns) | This allows you to define patterns of acceptable strings. |
 | [reject](#reject) | This allows you to remove items from the default dictionary. |
+| [config](#config) | This lets you set some action configuration from a json file instead of from the workflow file. |
 
 ## advice
 
@@ -167,3 +168,9 @@ The order of operations is:
 > `(dictionary + allows) - reject`
 
 See [[Configuration Examples: reject]] for examples.
+
+## config
+
+A json file (`config.json`) with keys from [[Configuration|Configuration#workflow-parameters]] and values for those values.
+
+For workflows running via `on: pull_request_target`, see [[load-config-from|Configuration#load-config-from]].
