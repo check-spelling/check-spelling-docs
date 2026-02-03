@@ -39,6 +39,7 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
     - [Resolution](#429-too-many-requests-r)
   - [404 (file not found)](#404-file-not-found)
     - [Resolution](#404-file-not-found-r)
+      - [If the url exists](#if-the-url-exists)
       - [Auto-detect](#auto-detect)
       - [Update](#update)
       - [Use older dictionaries](#use-older-dictionaries)
@@ -426,7 +427,17 @@ This can happen if a path to a dictionary is incorrect.
 
 The most common case is when upgrading versions of check-spelling. Newer versions may use refreshed versions of the [cspell: dictionaries](https://github.com/streetsidesoftware/cspell-dicts) and their dictionaries are reorganized periodically.
 
+Another case that happens is when GitHub is broken.
+
 ### <a id="404-file-not-found-r"></a>Resolution
+
+#### If the url exists
+
+If the dictionary should exist, verify it exists by visiting the url in a browser.
+
+File a [ticket against support](https://support.github.com/contact/bug-report).
+
+The logs should include a `x-github-request-id`, possibly a `x-served-by` and an `x-fastly-request-id`. You should probably include all the request headers...
 
 #### Auto-detect
 
