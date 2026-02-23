@@ -956,7 +956,7 @@ Instead of leaving users without a run, the `suppress_push_for_open_pull_request
 
 This is known to happen when a PR is reopened. check-spelling as of [v0.0.23](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.23) should be able to check spelling, but will not be able to upload a SARIF report as that requires information about the PR merge commit.
 
-Reruns of a check-spelling job for a merged PR will not work as GitHub will never recreate the merge head for a merged PR. You can create a new PR.
+Reruns of a check-spelling job for a merged PR (prior to [v0.0.26](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.26)) will not work as GitHub will never recreate the merge head for a merged PR. You can create a new PR.
 
 ## <a id="missing-merge-head-r"></a>Resolution
 
