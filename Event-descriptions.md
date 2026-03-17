@@ -893,7 +893,7 @@ If you encounter this, then check-spelling's SARIF module misbehaved. Sorry abou
 
 ## <a id="sarif-generation-failed-r"></a>Resolution
 
-Please [review known `sarif-generation-failed` bugs](https://github.com/check-spelling/check-spelling/issues?q=is%3Aissue%20state%3Aopen%20sarif-generation-failed) and if you don't find a match, [file a bug](https://github.com/check-spelling/check-spelling/issues/new).
+Please [review known `sarif-generation-failed` bugs](https://github.com/check-spelling/check-spelling/issues?q=is%3Aissue%20sarif-generation-failed) and if you don't find a match, [file a bug](https://github.com/check-spelling/check-spelling/issues/new).
 
 # unclosed-block-ignore
 
