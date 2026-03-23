@@ -16,7 +16,7 @@ or a directory, where each file with a `.txt` suffix will be merged together.
 | [patterns](#patterns) | This allows you to define patterns of acceptable strings. |
 | [reject](#reject) | This allows you to remove items from the default dictionary. |
 | [config](#config) | This lets you set some action configuration from a json file instead of from the workflow file. |
-| [homoglyph](#homoglyph) | This allows you to define homomglyphs. |
+| [homoglyph](#homoglyph) | This allows you to define homoglyphs. |
 
 ## advice
 
