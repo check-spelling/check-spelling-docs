@@ -1,6 +1,7 @@
 autotest
 bopts
 briandfoy
+codebox
 Cowabunga
 edk
 endraw
@@ -10,6 +11,7 @@ gms
 google
 GPG
 gson
+homoglyph
 hpc
 imageflow
 imazen
