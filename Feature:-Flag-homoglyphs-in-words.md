@@ -1,7 +1,7 @@
 # Flag homoglyphs in words
 
 ## Background
-People often replace `c` with `с` (especially because of a certain keymap where they're on the same key but using a different shift-state).
+People often replace `c` with `с` (especially because of a certain keyboard layout where they're on the same key but using a different shift-state).
 
 One problem with this is that homoglyphs result in search failures.
 
