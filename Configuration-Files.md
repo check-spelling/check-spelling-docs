@@ -16,6 +16,7 @@ or a directory, where each file with a `.txt` suffix will be merged together.
 | [patterns](#patterns) | This allows you to define patterns of acceptable strings. |
 | [reject](#reject) | This allows you to remove items from the default dictionary. |
 | [config](#config) | This lets you set some action configuration from a json file instead of from the workflow file. |
+| [homoglyph](#homoglyph) | This allows you to define homomglyphs. |
 
 ## advice
 
@@ -174,3 +175,13 @@ See [[Configuration Examples: reject]] for examples.
 A json file (`config.json`) with keys from [[Configuration|Configuration#workflow-parameters]] and values for those values.
 
 For workflows running via `on: pull_request_target`, see [[load-config-from|Configuration#load-config-from]].
+
+## homoglyph
+
+See [[Flag homoglyphs in words|Feature: Flag homoglyphs in words]]
+
+- Lines beginning with `#` are comments.
+- You can use `\#` if you need to define homoglyphs for `#` (as most languages don't use `#` as a word character, this doesn't seem like a real concern).
+- The first character is the character in the dictionary, all subsequent characters are homoglyphs that when found will be checked using the first character.
+
+If a word is present in the dictionary using the first character from the line based on the presence of a homoglyph, the word will be flagged and the corresponding dictionary word will be reported.
