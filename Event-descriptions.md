@@ -109,6 +109,8 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
   - [Resolution](#excludes-generation-failed-r)
 - [binary-file](#binary-file)
   - [Resolution](#binary-file-r)
+- [homoglyph-word](#homoglyph-word)
+  - [Resolution](#homoglyph-word-r)
 - [missing-rule-definition](#missing-rule-definition)
   - [Resolution](#missing-rule-definition-r)
 - [single-line-file](#single-line-file)
@@ -996,6 +998,16 @@ When [[magic file detection|Feature: Detect binary files]] is enabled, some file
 * Add the files to `excludes.txt`.
 * Disable detection by using `use_magic_file: 0`.
 * If the file should not be identified as a binary file, please search for an issue, and if you don't find one, please [file a ticket](https://github.com/check-spelling/check-spelling/issues/new).
+
+# homoglyph-word
+
+When [[Flag homoglyphs in words|Feature: Flag homoglyphs in words]] is enabled, if a homoglyph is detected and the corresponding character would result in a word in the dictionary, it will be flagged.
+
+## <a id="homoglyph-word-r"></a>Resolution
+
+* If the homoglyph is unintentional, replace the word with the suggested correction.
+* If the character shouldn't be treated as a homoglyph, it can be removed from the homoglyph list.
+* If the feature isn't working / desirable, it can be disabled with `check-homoglyphs: false`
 
 # missing-rule-definition
 
