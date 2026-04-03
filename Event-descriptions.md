@@ -123,6 +123,8 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
   - [Resolution](#no-new-commits-to-check-r)
 - [check-for-bug-report](#check-for-bug-report)
   - [Resolution](#check-for-bug-report-r)
+- [broken-configuration](#broken-configuration)
+  - [Resolution](#broken-configuration-r)
 
 ℹ️ As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), workflows can [[configure whether specific events are treated as ❌Errors or ⚠️Warnings|Feature: Treat specific errors as warnings]].
 
@@ -1068,3 +1070,11 @@ check-spelling encountered something unexpected.
 ## <a id="check-for-bug-report-r"></a>Resolution
 
 Please [check for a bug report](https://github.com/check-spelling/check-spelling/issues/?q=is%3Aissue) relating to the issue.
+
+# broken-configuration
+
+The configuration is broken.
+
+## <a id="broken-configuration-r"></a>Resolution
+
+The fix will depend on the error, but assuming the reported problem is `INPUT_DICTIONARY_URL`, the fix would be to ensure `dictionary_url` is either set to a proper value or not specified (such that the defaults are used).
