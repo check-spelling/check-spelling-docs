@@ -70,6 +70,8 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
   - [Resolution](#identifying-the-problematic-items-r)
 - [token-is-substring](#token-is-substring)
   - [Resolution](#token-is-substring-r)
+- [summary-table-error](#summary-table-error)
+  - [Resolution](#summary-table-error-r)
 - [summary-table-skipped](#summary-table-skipped)
   - [Resolution](#summary-table-skipped-r)
 - [slow-file](#slow-file)
@@ -752,6 +754,14 @@ Sometimes the fault is due to an internal pattern (mostly aliases for fancy apos
 - Consider adding a `\b` or `\s` to the edges of your pattern.
 - It's possible to add the items to expect or to the dictionary if they're really correct.
 - See [[Warning about substring matches|Feature: Warning about substring matches]] for more advice.
+
+# summary-table-error
+
+There was an error building a [[Summary Table|Feature: Summary Table]].
+
+## <a id="summary-table-error-r"></a>Resolution
+
+Please [review the list of known 🐛 bugs](https://github.com/check-spelling/check-spelling/issues?q=is%3Aissue%20%22summary-table-error%22) and if you cannot find one that matches this case, please [file a 🐛 bug](https://github.com/check-spelling/check-spelling/issues/new?title=%5Bsummary-table-error%5D%20scenario&body=Please%20provide%20details+preferably%20including%20a%20link%20to%20a%20workflow%20run,%20the%20configuration%20of%20the%20repository,%20and%20anything%20else%20you%20may%20know%20about%20the%20problem%2e).
 
 # summary-table-skipped
 
