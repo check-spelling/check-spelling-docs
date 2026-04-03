@@ -127,6 +127,8 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
   - [Resolution](#broken-configuration-r)
 - [empty-github-repository](#empty-github-repository)
   - [Resolution](#empty-github-repository-r)
+- [migrate-underscores-to-dashes](#migrate-underscores-to-dashes)
+  - [Resolution](#migrate-underscores-to-dashes-r)
 
 ℹ️ As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), workflows can [[configure whether specific events are treated as ❌Errors or ⚠️Warnings|Feature: Treat specific errors as warnings]].
 
@@ -1088,3 +1090,15 @@ The [`GITHUB_REPOSITORY` environment variable](https://docs.github.com/en/action
 ## <a id="empty-github-repository-r"></a>Resolution
 
 Review the [list of known 🐛 bugs](https://github.com/check-spelling/check-spelling/issues?q=is%3Aissue%20%22empty-github-repository%22) and if you cannot find one that matches this case, please [file a 🐛 bug (empty-github-repository)](https://github.com/check-spelling/check-spelling/issues/new?title=%5Bempty-github-repository%5D%20scenario&body=Please%20provide%20details+preferably%20including%20a%20link%20to%20a%20workflow%20run,%20the%20configuration%20of%20the%20repository,%20and%20anything%20else%20you%20may%20know%20about%20the%20problem%2e).
+
+# migrate-underscores-to-dashes
+
+GitHub action inputs seem to favor [`kebab-case`](https://en.wikipedia.org/wiki/Kebab_case) over [`snake_case`](https://en.wikipedia.org/wiki/Snake_case).
+
+check-spelling has a number of configuration items which were written using snake_case before the author realized this wasn't the preferred style. There is some work to switch.
+
+check-spelling internally maps both forms to the same configuration value but insists that only one value be specified for any particular configuration.
+
+## <a id="migrate-underscores-to-dashes-r"></a>Resolution
+
+Check to see if you are using both `this-form: ...` and `this_form: ...` for specific inputs and remove one. In general, check [[Configuration]] for the recommended style for each input.
