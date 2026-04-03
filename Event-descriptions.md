@@ -121,6 +121,8 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
   - [Resolution](#unused-config-file-r)
 - [no-new-commits-to-check](#no-new-commits-to-check)
   - [Resolution](#no-new-commits-to-check-r)
+- [check-for-bug-report](#check-for-bug-report)
+  - [Resolution](#check-for-bug-report-r)
 
 ℹ️ As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), workflows can [[configure whether specific events are treated as ❌Errors or ⚠️Warnings|Feature: Treat specific errors as warnings]].
 
@@ -1058,3 +1060,11 @@ The [check_commit_messages](https://github.com/check-spelling/check-spelling/wik
 ## <a id="no-new-commits-to-check-r"></a>Resolution
 
 This is purely informative. Future commits added to a branch or PR with this setting active will be checked.
+
+# check-for-bug-report
+
+check-spelling encountered something unexpected.
+
+## <a id="check-for-bug-report-r"></a>Resolution
+
+Please [check for a bug report](https://github.com/check-spelling/check-spelling/issues/?q=is%3Aissue) relating to the issue.
