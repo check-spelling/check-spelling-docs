@@ -28,3 +28,11 @@ It's better from a security perspective to use "least privilege".
 ## Workflow
 
 - https://github.com/check-spelling/spell-check-this/blob/main/.github/workflows/spelling.yml defines a workflow that is compatible with these requirements
+
+## Known issues
+
+### checks for forks always fail as of April 2026
+
+GitHub recently changed its API response for one of the checks that check-spelling used to identify write-access. Unfortunately this means that check-spelling will refuse to run on any PRs from cross repository forks.
+
+[v0.0.26](https://github.com/check-spelling/check-spelling/releases/v0.0.26) will use a different test and should be released shortly as this is significant showstopper.
