@@ -125,6 +125,8 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
   - [Resolution](#check-for-bug-report-r)
 - [broken-configuration](#broken-configuration)
   - [Resolution](#broken-configuration-r)
+- [empty-github-repository](#empty-github-repository)
+  - [Resolution](#empty-github-repository-r)
 
 ℹ️ As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), workflows can [[configure whether specific events are treated as ❌Errors or ⚠️Warnings|Feature: Treat specific errors as warnings]].
 
@@ -1078,3 +1080,11 @@ The configuration is broken.
 ## <a id="broken-configuration-r"></a>Resolution
 
 The fix will depend on the error, but assuming the reported problem is `INPUT_DICTIONARY_URL`, the fix would be to ensure `dictionary_url` is either set to a proper value or not specified (such that the defaults are used).
+
+# empty-github-repository
+
+The [`GITHUB_REPOSITORY` environment variable](https://docs.github.com/en/actions/reference/workflows-and-actions/variables#default-environment-variables) was empty.
+
+## <a id="empty-github-repository-r"></a>Resolution
+
+Review the [list of known 🐛 bugs](https://github.com/check-spelling/check-spelling/issues?q=is%3Aissue%20%22empty-github-repository%22) and if you cannot find one that matches this case, please [file a 🐛 bug (empty-github-repository)](https://github.com/check-spelling/check-spelling/issues/new?title=%5Bempty-github-repository%5D%20scenario&body=Please%20provide%20details+preferably%20including%20a%20link%20to%20a%20workflow%20run,%20the%20configuration%20of%20the%20repository,%20and%20anything%20else%20you%20may%20know%20about%20the%20problem%2e).
