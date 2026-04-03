@@ -129,6 +129,8 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
   - [Resolution](#empty-github-repository-r)
 - [migrate-underscores-to-dashes](#migrate-underscores-to-dashes)
   - [Resolution](#migrate-underscores-to-dashes-r)
+- [out-of-bounds-symbolic-link](#out-of-bounds-symbolic-link)
+  - [Resolution](#out-of-bounds-symbolic-link-r)
 
 ℹ️ As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), workflows can [[configure whether specific events are treated as ❌Errors or ⚠️Warnings|Feature: Treat specific errors as warnings]].
 
@@ -1102,3 +1104,11 @@ check-spelling internally maps both forms to the same configuration value but in
 ## <a id="migrate-underscores-to-dashes-r"></a>Resolution
 
 Check to see if you are using both `this-form: ...` and `this_form: ...` for specific inputs and remove one. In general, check [[Configuration]] for the recommended style for each input.
+
+# out-of-bounds-symbolic-link
+
+Symbolic link points outside repository
+
+## <a id="out-of-bounds-symbolic-link-r"></a>Resolution
+
+Add file to excludes.
