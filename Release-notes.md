@@ -42,7 +42,7 @@
 - Fix GitHub code scanning detection -- GitHub changed the response previously used to identify its availability
 - Waits for hunspell dictionary downloads to resolve before proceeding to check spelling
 - Switched to using UTF8
-- Switched from `:...:` to unicode emojis
+- Switched from `:...:` to unicode emoji
 - Improved pattern parsing and handling of broken patterns
 - Removed most use of `rsync`
 - Comment task no longer requires a `checkout` (all information is produced in the `spelling` task and packaged in the artifact)
