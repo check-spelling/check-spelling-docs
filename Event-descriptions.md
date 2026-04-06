@@ -139,6 +139,8 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
   - [Resolution](#migrate-underscores-to-dashes-r)
 - [out-of-bounds-symbolic-link](#out-of-bounds-symbolic-link)
   - [Resolution](#out-of-bounds-symbolic-link-r)
+- [unexpected-input-value](#unexpected-input-value)
+  - [Resolution](#unexpected-input-value-r)
 
 ℹ️ As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), workflows can [[configure whether specific events are treated as ❌Errors or ⚠️Warnings|Feature: Treat specific errors as warnings]].
 
@@ -1164,3 +1166,14 @@ Symbolic link points outside repository
 ## <a id="out-of-bounds-symbolic-link-r"></a>Resolution
 
 Add file to excludes.
+
+# unexpected-input-value
+
+Unexpected input value. GitHub Personal Access Tokens are only supported as inputs for `token` input parameters (including `GH_TOKEN`).
+
+## <a id="unexpected-input-value-r"></a>Resolution
+
+- Check the workflow configuration.
+  - If you committed a personal access token into the repository, you will need to rotate the secret (and not commit the replacement).
+  - If you're using a `${{ secrets.VALUE }}`, it should work as long as the field is a `token` input, if it doesn't work, please check for a bug report.
+
