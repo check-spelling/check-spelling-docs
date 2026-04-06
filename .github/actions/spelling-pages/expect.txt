@@ -4,6 +4,7 @@ briandfoy
 codebox
 Cowabunga
 edk
+emoji
 endraw
 Expectlist
 GFM
