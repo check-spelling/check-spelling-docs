@@ -20,6 +20,8 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
   - [Resolution](#whitespace-in-dictionary-r)
 - [unexpected-line-ending](#unexpected-line-ending)
   - [Resolution](#unexpected-line-ending-r)
+- [duplicate-pattern](#duplicate-pattern)
+  - [Resolution](#duplicate-pattern-r)
 - [forbidden-pattern](#forbidden-pattern)
   - [Resolution](#forbidden-pattern-r)
 - [deprecated-feature](#deprecated-feature)
@@ -323,6 +325,20 @@ e.g.:
 ```
 dos2unix .github/actions/spelling/expect.txt
 ```
+
+# duplicate-pattern
+
+```
+Warning: .github/actions/spell-check/patterns.txt:201:1 ... 58, Warning - Pattern is the same as pattern on `.github/actions/spell-check/patterns.txt:72` (duplicate-pattern)
+```
+
+This is generated when a pattern is defined more than once.
+
+This may be caused by updating/merging an update for a base (e.g. from [check-spelling/spell-check-this](https://github.com/check-spelling/spell-check-this)).
+
+## <a id="duplicate-pattern-r"></a>Resolution
+
+As the check is for strictly identical patterns, you should remove the duplicate patterns.
 
 # forbidden-pattern
 
