@@ -3,14 +3,14 @@
 ## Supported
 
 - [prerelease](#prerelease)
-- [v0.0.25](#v0025)
-- [v0.0.24](#v0024)
-- [v0.0.23](#v0023)
+- [v0.0.26](#v0026)
 
 ## Unsupported
 
 ❗ Please do not use these versions.
 
+- [v0.0.24](#v0024)
+- [v0.0.23](#v0023)
 - [v0.0.22](#v0022)
 - [v0.0.21](#v0021)
 - [v0.0.20](#v0020)
@@ -26,6 +26,29 @@
 🌟 Almost ready to transition from `prerelease` to release 🍽️
 
 -->
+
+## v0.0.26
+
+[v0.0.26](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.26)
+
+- ℹ️ [[Unused configuration file warning|Feature: Unused configuration file warning]]
+- ⏭️ [[Ignore next line|Feature: ignore‐next‐line]]
+- 🏴 [[Flag homoglyphs in words|Feature: Flag homoglyphs in words]]
+- ⚙️ [`config.json`](https://github.com/check-spelling/check-spelling/wiki/Configuration-Files#config) for defining configuration using `json` instead of in workflows. This should make it easier to merge configuration/use unified configuration. It also enables `load-config-from`
+- ⚙️ [`load-config-from`](https://github.com/check-spelling/check-spelling/wiki/Configuration#load-config-from) -- GitHub changed the behavior of workflows running via `pull_request_target` to rely on the default branch for configuration.  You can use this setting to allow interpreting specific settings from `config.json` from the base branch (or the head branch).
+- [Permission check for pull requests from forks](https://github.com/check-spelling/check-spelling/issues/103) -- GitHub broke an API at the beginning of April 2026
+- Ignore `suppress_push_for_open_pull_request` when [pull requests are disabled](https://github.blog/changelog/2026-02-13-new-repository-settings-for-configuring-pull-request-access/)
+- [Git config is no longer edited](https://github.com/check-spelling/check-spelling/issues/94)
+- Fix GitHub code scanning detection -- GitHub changed the response previously used to identify its availability
+- Waits for hunspell dictionary downloads to resolve before proceeding to check spelling
+- Switched to using UTF8
+- Switched from `:...:` to unicode emojis
+- Improved pattern parsing and handling of broken patterns
+- Removed most use of `rsync`
+- Comment task no longer requires a `checkout` (all information is produced in the `spelling` task and packaged in the artifact)
+- Added `allow-hunspell` -- for use as `allow-hunspell: false` to disable hunspell support
+- Improved YAML parsing
+- Candidate and Forbidden Patterns will now automatically expand if there are only **one** or **two**
 
 ## v0.0.25
 
