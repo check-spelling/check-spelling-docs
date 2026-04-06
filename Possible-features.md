@@ -6,6 +6,7 @@
 
 - ℹ️ [[Unused configuration file warning|Feature: Unused configuration file warning]]
 - ⏭️ [[Ignore next line|Feature: ignore‐next‐line]]
+- 🏴 [[Flag homoglyphs in words|Feature: Flag homoglyphs in words]]
 
 ## In progress
 
@@ -33,7 +34,6 @@
 - [[🏃Run in GitLab|Feature: Run in GitLab]]
 - [[🏃Run in Gitea|Feature: Run in Gitea]]
 - [[📄Reusable Workflows|Feature: Reusable Workflows]]
-- [[🏴Flag homoglyphs in words|Feature: Flag homoglyphs in words]]
 - [[😸Customer satisfaction survey|Feature: Customer satisfaction survey]]
 
 ## Distant future
