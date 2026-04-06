@@ -20,6 +20,8 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
   - [Resolution](#whitespace-in-dictionary-r)
 - [unexpected-line-ending](#unexpected-line-ending)
   - [Resolution](#unexpected-line-ending-r)
+- [mixed-line-endings](#mixed-line-endings)
+  - [Resolution](#mixed-line-endings-r)
 - [duplicate-pattern](#duplicate-pattern)
   - [Resolution](#duplicate-pattern-r)
 - [forbidden-pattern](#forbidden-pattern)
@@ -326,6 +328,20 @@ e.g.:
 
 ```
 dos2unix .github/actions/spelling/expect.txt
+```
+
+# mixed-line-endings
+
+This generally means you have a mix of DOS and Unix line endings.
+
+## <a id="mixed-line-endings-r"></a>Resolution
+
+Use `dos2unix`.
+
+e.g.:
+
+```
+dos2unix your-file.txt
 ```
 
 # duplicate-pattern
