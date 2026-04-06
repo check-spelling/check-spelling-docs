@@ -16,9 +16,11 @@ hpc
 imageflow
 imazen
 interoperate
+JCUKEN
 jitsi
 laurikari
 nomatch
+ocr
 oneline
 openapitools
 parcelable
