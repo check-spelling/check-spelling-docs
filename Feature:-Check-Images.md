@@ -1,4 +1,4 @@
-# Check images
+# Check Images
 
 ## Background
 People (and AI) can burn typos into pictures in addition to making typos in text files.
