@@ -46,6 +46,8 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
       - [Update](#update)
       - [Use older dictionaries](#use-older-dictionaries)
       - [Use multiple prefixes](#use-multiple-prefixes)
+- [bad-dictionary-source-prefixes](#bad-dictionary-source-prefixes)
+  - [Resolution](#bad-dictionary-source-prefixes-r)
 - [candidate-pattern](#candidate-pattern)
   - [Resolution](#candidate-pattern-r)
   - [candidate-pattern with check_file_names file with use_sarif](#candidate-pattern-with-check_file_names-file-with-use_sarif)
@@ -544,6 +546,14 @@ In this example, the default for `dictionary_source_prefixes` is `{"cspell": "ht
 -      cspell:software-terms/softwareTerms.txt
 +      cspell0:software-terms/softwareTerms.txt
 ```
+
+# bad-dictionary-source-prefixes
+
+This happens if [`dictionary_source_prefixes`](https://github.com/check-spelling/check-spelling/wiki/Configuration#dictionary_source_prefixes) cannot be parsed as a json dictionary.
+
+## <a id="bad-dictionary-source-prefixes-r"></a>Resolution
+
+Find the configured value and fix it. You can copy a version from the [action](https://github.com/check-spelling/check-spelling/blob/main/action.yml) or from [spell-check-this](https://github.com/check-spelling/spell-check-this/). In many cases you can omit the value and rely on check-spelling's default.
 
 # candidate-pattern
 
