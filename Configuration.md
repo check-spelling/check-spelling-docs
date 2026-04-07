@@ -581,6 +581,10 @@ See [Configuration Files: Allow](https://github.com/check-spelling/check-spellin
 
 See [Configuration Files: Block Delimiters](https://github.com/check-spelling/check-spelling/wiki/Configuration-Files#block-delimiters)
 
+#### config
+
+See [Configuration Files: Config](https://github.com/check-spelling/check-spelling/wiki/Configuration-Files#config)
+
 ##### dictionary
 
 See [Configuration Files: Dictionary](https://github.com/check-spelling/check-spelling/wiki/Configuration-Files#dictionary)
