@@ -357,7 +357,7 @@ See [[Limit reports for each unknown word|Feature: Cap reports per unknown word]
 
 ## disable_checks
 
-Introduced after v0.0.20:
+Introduced in [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21)
 
 This is a comma-delimited list of flags:
 
@@ -366,7 +366,9 @@ This is a comma-delimited list of flags:
 
 ## check_commit_messages
 
-⚠️ While check-spelling will be able to identify typos, any items you add to `expect.txt` will be suggested for removal once your PR merges, which will be very confusing. Instead, add items to `allow.txt`. This feature will be reworked in [v0.0.26](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.26).
+⚠️ While check-spelling will be able to identify typos, any items you add to `expect.txt` will be suggested for removal once your PR merges, which will be very confusing. Instead, add items to `allow.txt`.
+
+Reworked in [v0.0.26](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.26)
 
 Introduced in [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21)
 
@@ -534,7 +536,7 @@ See [[ignore‐next‐line|Feature: ignore‐next‐line]]
 
 For workflows running via `on: pull_request_target`, [GitHub changed how workflow dispatch works](https://github.blog/changelog/2025-11-07-actions-pull_request_target-and-environment-branch-protections-changes/).
 
-Expected to be available in check-spelling v0.0.26, you can set the value (in the workflow on the **default branch**) to something like:
+Introduced in [v0.0.26](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.26), you can set the value (in the workflow on the **default branch**) to something like:
 
 ```json
 {
