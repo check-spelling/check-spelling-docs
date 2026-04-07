@@ -1,5 +1,8 @@
 # See https://github.com/check-spelling/check-spelling/wiki/Configuration-Examples:-patterns
 
+# Dictionaries
+"(?:asm|cspell\d*):[^"]+\.(?:dic|txt)"
+
 # Automatically suggested patterns
 # hit-count: 68 file-count: 38
 # GitHub SHAs (markdown)
