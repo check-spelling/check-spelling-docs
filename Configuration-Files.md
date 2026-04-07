@@ -176,6 +176,8 @@ A json file (`config.json`) with keys from [[Configuration|Configuration#workflo
 
 For workflows running via `on: pull_request_target`, see [[load-config-from|Configuration#load-config-from]].
 
+See [[Configuration Examples: config]] for examples.
+
 ## homoglyph
 
 See [[Flag homoglyphs in words|Feature: Flag homoglyphs in words]]
