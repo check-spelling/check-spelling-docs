@@ -1,5 +1,15 @@
 # Restricted Permissions
 
+## ⚠️ Versions before [v0.0.26](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.26) are broken
+
+If you are running a version prior to [v0.0.26](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.26), you will erroneously receive this message. Please upgrade to [v0.0.26](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.26) or newer.
+
+You should see a notice hinting about this of the form:
+
+> ⚠️ Found note for version 0.0.25: 'If you accept PRs from forks, they won't work. Please upgrade to https://github.com/check-spelling/check-spelling/releases/v0.0.26'
+
+## History
+
 Included in [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20)
 
 GitHub introduced [permissions for GITHUB_TOKEN](https://github.blog/changelog/2021-04-20-github-actions-control-permissions-for-github_token/) which enables one to restrict tokens to just the necessary permissions.
