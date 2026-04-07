@@ -5,6 +5,7 @@
   - [[Configuration Examples: advice]]
   - [[Configuration Examples: allow]]
   - [[Configuration Examples: block delimiters]]
+  - [[Configuration Examples: config]]
   - [[Configuration Examples: excludes]]
   - [[Configuration Examples: forbidden]]
   - [[Configuration Examples: only]]
