@@ -28,7 +28,7 @@ If you choose to use this feature today, you should either use [`only_check_chan
 
 ## Improve commit retrieval performance
 
-Implemented in [v0.0.23](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.23)
+Implemented in [v0.0.23](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.23).
 Previously check-spelling asked [actions/checkout](https://github.com/actions/checkout/) to retrieve the full commit history.
 
 That's pretty inefficient, because for this feature, it doesn't need anything beyond the commit messages.
@@ -38,14 +38,14 @@ It's described in [Get up to speed with partial clone and shallow clone](https:/
 
 ## Improve reporting
 
-Tentatively for [v0.0.26](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.26).
+Released in [v0.0.26](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.26).
 
 While unrecognized words in commit messages and pull requests are typos, treating exactly the same as unrecognized words in code doesn't quite work. Since `expect.txt` is processed against what is included in the codebase, items that would _transiently_ be seen in commit messages / pull requests really don't fit there.
 
-As of [v0.0.26](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.26), such words will:
-* be listed in details by their own distinct events###  ([`unrecognized-spelling-commit-message`](https://github.com/check-spelling/check-spelling/wiki/Event-descriptions#unrecognized-spelling-commit-message) / [`unrecognized-spelling-pr-description`](https://github.com/check-spelling/check-spelling/wiki/Event-descriptions#unrecognized-spelling-pr-description) / [`unrecognized-spelling-pr-title`](https://github.com/check-spelling/check-spelling/wiki/Event-descriptions#unrecognized-spelling-pr-title)
-* not be suggested as additions to `expect.txt`
-* not be reported in the list of unrecognized words
+As of [v0.0.26](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.26), such words are:
+* listed in details by their own distinct events ([`unrecognized-spelling-commit-message`](https://github.com/check-spelling/check-spelling/wiki/Event-descriptions#unrecognized-spelling-commit-message) / [`unrecognized-spelling-pr-description`](https://github.com/check-spelling/check-spelling/wiki/Event-descriptions#unrecognized-spelling-pr-description) / [`unrecognized-spelling-pr-title`](https://github.com/check-spelling/check-spelling/wiki/Event-descriptions#unrecognized-spelling-pr-title))
+* not suggested as additions to `expect.txt`
+* not reported in the list of unrecognized words
 
 # Future Work
 
