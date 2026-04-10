@@ -86,6 +86,8 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
   - [Resolution](#slow-file-list-r)
 - [ignored-expect-variant](#ignored-expect-variant)
   - [Resolution](#ignored-expect-variant-r)
+- [update-expect-variant](#update-expect-variant)
+  - [Resolution](#update-expect-variant-r)
 - [no-files-to-check](#no-files-to-check)
   - [Resolution](#no-files-to-check-r)
 - [noisy-file-list](#noisy-file-list)
@@ -862,6 +864,21 @@ Similarly, if you use the term `widgit`, you might write it in a plural as `widg
 ## <a id="ignored-expect-variant-r"></a>Resolution
 
 - Remove the extraneous entry/entries from `expect.txt` -- the included `apply.pl` suggestions should help with this
+- Replace the forms that are present with a strictly lowercase form
+- Add forms to `allow.txt` which doesn't have this behavior
+
+# update-expect-variant
+
+check-spelling looks for items not in the dictionary, once it finds them, it checks those items against the expect file. If words are in expect (and found), they will be used to cover additional variations (variants). If multiple variations of a word are found but the base word isn't present, the base word will be suggested instead.
+
+English / programming have interesting ways of handling proper nouns.
+
+If you've used `CLSIDs` and `Clsids`, the common form is `clsids`, and that's the form that should be added to `expect.txt`.
+If you only want to allow `CLSIDs` and `Clsids`, but not `clsids`, you can add those two forms to `allow.txt`.
+
+## <a id="update-expect-variant-r"></a>Resolution
+
+- Replace the entries in `expect.txt` with the suggested form
 - Add forms to `allow.txt` which doesn't have this behavior
 
 # no-files-to-check
