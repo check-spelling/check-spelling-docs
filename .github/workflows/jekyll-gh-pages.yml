@@ -43,7 +43,7 @@ jobs:
           : 'Fix anchors that poorly encoded "`foo`" as "codefoocode"'
           sudo perl -pi -e 'while (s/(id="[^"]*)code([^"]+)code/$1$2/g) {};' *.html
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v5.0.0
 
   # Deployment job
   deploy:
