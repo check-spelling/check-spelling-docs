@@ -563,7 +563,7 @@ The empty items (`""` & `"": []`) are ignored and provided to allow for happy Gi
 
 ## check-images
 
-[[Check images|Feature:-Check-images]]
+[[Check Images|Feature:-Check-Images]]
 
 ## Configuration Files
 
