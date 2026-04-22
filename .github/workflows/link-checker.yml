@@ -78,7 +78,9 @@ jobs:
           '
         ) >> "$GITHUB_STEP_SUMMARY"
         cat log
-        echo "exit-code=$(cat exit-code)" >> "$GITHUB_OUTPUT"
+        exit_code=$(cat exit-code)
+        echo "exit-code=$exit_code" >> "$GITHUB_OUTPUT"
+        exit $exit_code
       env:
         linkcheck: ${{ steps.setup.outputs.linkcheck }}
         arguments: https://${{ vars.gh_pages_site || 'docs.check-spelling.dev' }}
