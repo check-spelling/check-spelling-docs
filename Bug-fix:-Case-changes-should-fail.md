@@ -16,3 +16,6 @@ might add a general lowercase noun and write it as the first word in an English 
 English_ and if/when check-spelling starts trying to support other languages, this feature could go away.
 
 Note: The generated expect update script (in the log, or the next time you get a fail) will properly update `Microsoft` to `microsoft`.
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

@@ -37,7 +37,7 @@ It's better from a security perspective to use "least privilege".
 
 ## Workflow
 
-- https://github.com/check-spelling/spell-check-this/blob/main/.github/workflows/spelling.yml defines a workflow that is compatible with these requirements
+- https://raw.githubusercontent.com/check-spelling/spell-check-this/main/.github/workflows/spelling.yml defines a workflow that is compatible with these requirements
 
 ## Known issues
 
@@ -48,3 +48,6 @@ As of April 2026, GitHub recently changed its API response for one of the checks
 - Tracked as [check-spelling#103](https://github.com/check-spelling/check-spelling/issues/103)
 - secpoll was updated to explain the issue and now suggests upgrading
 - Fixed in [v0.0.26](https://github.com/check-spelling/check-spelling/releases/v0.0.26) to use a different test
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

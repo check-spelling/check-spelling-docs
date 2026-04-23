@@ -17,7 +17,7 @@ on:
 
 jobs:
   spelling:
-    if: ${{
+    if: ${% raw %}{{{% endraw %}
         contains(github.event_name, 'pull_request') ||
         github.event_name == 'push' ||
         github.event_name == 'issue_comment' &&
@@ -29,3 +29,6 @@ jobs:
 To do this, a bit more glue would be necessary to teach the action side to treat this comment as a pull_request event...
 
 I'm not entirely sure how much plumbing would be necessary from the action's side, there's already an event aliases option which might help a bit to map the comment to the pull_request handling...
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

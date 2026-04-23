@@ -9,3 +9,6 @@ In v0.0.18, when one asks the bot to apply changes, the changes suggestion and r
 The implementation uses GraphQL to ask for the right comment and some filtering to find the comment node.
 
 With the comment node, it's trivial to call the collapsing code.
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

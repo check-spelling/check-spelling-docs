@@ -6,43 +6,46 @@
 
 ## In progress
 
-- 😄 [[Easier to understand filenames|Feature: Easier to understand filenames]]
-- ↪️ [[Content Mappings|Feature: Content Mappings]]
-- ⚙️ [[JSON configuration|Feature: JSON configuration]]
-- 🔧 [[Replace jq|Task: Replace jq]]
-- 🧪 [[Regression testing]]
-- 👓 [[Suppress PR check when workflow changes|Feature: Suppress PR check when workflow changes]]
-- 🧱 [[Block/Multiline Ignore|Feature: Block Ignore]]
-- 🌉 [[IDE Integration|Feature: IDE Integration]]
+- 😄 [Easier to understand filenames](./Feature:-Easier-to-understand-filenames)
+- ↪️ [Content Mappings](./Feature:-Content-Mappings)
+- ⚙️ [JSON configuration](./Feature:-JSON-configuration)
+- 🔧 [Replace jq](./Task:-Replace-jq)
+- 🧪 [Regression testing](Regression-testing)
+- 👓 [Suppress PR check when workflow changes](./Feature:-Suppress-PR-check-when-workflow-changes)
+- 🧱 [Block/Multiline Ignore](./Feature:-Block-Ignore)
+- 🌉 [IDE Integration](./Feature:-IDE-Integration)
 
 ## Near term
 
-- [[🤫File specific allow list|Feature: File specific allow list]]
-- [[🍪Only check changed hunks|Feature: Only check changed hunks]]
-- [[👪Behavior change: case changes in expect|Behavior change: case changes in expect]]
-- [[🗜️Breaking change: Smaller dictionary|Breaking change: Smaller dictionary]]
-- [[🪜base‐path|Feature: \`base‐path\`]]
-- [[🪄Honor gitattributes|Feature: Honor gitattributes]]
-- [[🙈Support gitignore|Feature: Support gitignore]]
-- [[↬Update base branch|Feature: Update base branch]]
-- [[↕️Behavior change: Log output order|Behavior change: Log output order]]
-- [[♻️Workflow: retest support|Workflow: retest support]]
-- [[🏃Run in GitLab|Feature: Run in GitLab]]
-- [[🏃Run in Gitea|Feature: Run in Gitea]]
-- [[📄Reusable Workflows|Feature: Reusable Workflows]]
-- [[😸Customer satisfaction survey|Feature: Customer satisfaction survey]]
+- [🤫File specific allow list](./Feature:-File-specific-allow-list)
+- [🍪Only check changed hunks](./Feature:-Only-check-changed-hunks)
+- [👪Behavior change: case changes in expect](./Behavior-change:-case-changes-in-expect)
+- [🗜️Breaking change: Smaller dictionary](./Breaking-change:-Smaller-dictionary)
+- [🪜base‐path](./Feature:-\`base‐path\`)
+- [🪄Honor gitattributes](./Feature:-Honor-gitattributes)
+- [🙈Support gitignore](./Feature:-Support-gitignore)
+- [↬Update base branch](./Feature:-Update-base-branch)
+- [↕️Behavior change: Log output order](./Behavior-change:-Log-output-order)
+- [♻️Workflow: retest support](./Workflow:-retest-support)
+- [🏃Run in GitLab](./Feature:-Run-in-GitLab)
+- [🏃Run in Gitea](./Feature:-Run-in-Gitea)
+- [📄Reusable Workflows](./Feature:-Reusable-Workflows)
+- [😸Customer satisfaction survey](./Feature:-Customer-satisfaction-survey)
 
 ## Distant future
 
-- [[Tolerate engine upgrades|Feature: Tolerate engine upgrades]]
-- [[Correct misspelled words within GitHub|Feature: Correct misspelling]]
-- [[Learn from corrections|Feature: Learn from corrections]]
-- [[Plug into Pantsbuild|Feature: Pantsbuild plugin]]
-- [[Plug into Visual Studio Code|Feature: Visual Studio Code plugin]]
-- [[Custom escape mappings|Feature: Custom escape mappings]]
-- [Managed To‐Do list](https://github.com/check-spelling/check-spelling/wiki/Feature:-Managed-To%E2%80%90Do-list)
+- [Tolerate engine upgrades](./Feature:-Tolerate-engine-upgrades)
+- [Correct misspelled words within GitHub](./Feature:-Correct-misspelling)
+- [Learn from corrections](./Feature:-Learn-from-corrections)
+- [Plug into Pantsbuild](./Feature:-Pantsbuild-plugin)
+- [Plug into Visual Studio Code](./Feature:-Visual-Studio-Code-plugin)
+- [Custom escape mappings](./Feature:-Custom-escape-mappings)
+- [Managed To‐Do list](./Feature:-Managed-To%E2%80%90Do-list)
 
 ## Related but currently out of scope
 
-- [[Suggest corrections|Feature: Suggest corrections]]
-- [[Generate .git-blame-ignore-revs|Wishlist: .git blame ignore revs]]
+- [Suggest corrections](./Feature:-Suggest-corrections)
+- [Generate .git-blame-ignore-revs](./Wishlist:-.git-blame-ignore-revs)
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

@@ -37,3 +37,6 @@ https://github.com/check-spelling-sandbox/miniature-octo-spoon/pull/1/checks
 ---
 
 The links should take you to the relevant pull request and enable you to reason through the checks.
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

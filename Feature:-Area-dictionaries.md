@@ -102,7 +102,7 @@ Testing in prerelease versions of check-spelling/spell-check-this started Octobe
 
 ## Future work
 
-[[Suggest Area dictionaries|Feature: Suggest Area Dictionaries]]
+[Suggest Area dictionaries](./Feature:-Suggest-Area-Dictionaries)
 
 ## Potential Areas
 
@@ -160,3 +160,6 @@ Testing in prerelease versions of check-spelling/spell-check-this started Octobe
   - MPL
   - GPL
   - ...
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)
