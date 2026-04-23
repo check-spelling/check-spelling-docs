@@ -167,6 +167,10 @@ If you want to suppress commenting, you can use this.
 
 Note: if you're using a split workflow, you will use this in the main task stage, and will not use it in the comment stage.
 
+⚠️ `post_comment` for `push` requires comments to be enabled for the repository.
+If your [organization disabled comments](https://github.blog/changelog/2026-04-23-disable-commit-comments-across-your-organization/) or your [repository disabled comments](https://github.blog/changelog/2026-03-25-disable-comments-on-individual-commits/) it makes more sense to just use `post_comment: 0`, remove any jobs dedicated to commenting on push, and rely on the GitHub Step Summary report instead (note that commenting on pull requests are unaffected by this flag and would probably work).
+
+
 ### experimental_path
 
 If you want to specify the directory to test, and so to not test all the project files. Default is `.`.
