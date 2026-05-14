@@ -14,6 +14,7 @@
 - 👓 [[Suppress PR check when workflow changes|Feature: Suppress PR check when workflow changes]]
 - 🧱 [[Block/Multiline Ignore|Feature: Block Ignore]]
 - 🌉 [[IDE Integration|Feature: IDE Integration]]
+- 💡 [[Identify likely corrections|Feature: Identify likely corrections]]
 
 ## Near term
 
