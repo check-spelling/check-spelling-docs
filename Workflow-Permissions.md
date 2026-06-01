@@ -29,7 +29,7 @@ or
 
 ## `pull-requests: read`
 
-In order to stop early when configured with [`suppress_push_for_open_pull_request`](https://github.com/check-spelling/check-spelling/wiki/Configuration#suppress_push_for_open_pull_request),
+In order to stop early when configured with [`suppress_push_for_open_pull_request`](Configuration#suppresspushforopenpullrequest),
 check-spelling needs to be able to check for pull requests.
 
 ### Permissions
@@ -41,7 +41,7 @@ permissions:
 
 ## `actions: read`
 
-In order to retrieve artifacts with [post_comment](https://github.com/check-spelling/check-spelling/wiki/Configuration#post_comment), check-spelling will need `actions: read`.
+In order to retrieve artifacts with [post_comment](Configuration#postcomment), check-spelling will need `actions: read`.
 
 The normal way to do that is with:
 
@@ -143,3 +143,6 @@ gitGraph LR:
     merge fix-commenting-branch type:HIGHLIGHT
     merge first-pull-request-branch type:NORMAL
 ```
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

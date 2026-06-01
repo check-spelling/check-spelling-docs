@@ -22,3 +22,6 @@ Job Summaries are an alternative to comments
 ## Timeline
 
 I haven't figured out how to integrate this feature into my workflow.
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

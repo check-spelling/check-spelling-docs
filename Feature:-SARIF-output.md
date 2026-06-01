@@ -16,7 +16,7 @@ Users of [Visual Studio Code](https://code.visualstudio.com/) can install the [S
 
 Release | Features
 -|-
-[v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21) | [Initial support](#Enabling)
+[v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21) | [Initial support](#enabling)
 [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22) | [Adjusting sarif.json](#adjusting-sarifjson)
 
 ## Enabling
@@ -71,9 +71,18 @@ https://github.com/check-spelling/check-spelling/issues/43
 
 ## Implementation plan
 
-- [x] Generate SARIF json
-- [x] Support uploading it using [github/codeql-action/upload-sarif@releases/v2](https://github.com/github/codeql-action/tree/releases/v2/upload-sarif)
-- [x] Decide on how to opt-in/opt-out of using this format -- currently `use_sarif: 1`
-- [x] Test in the check-spelling org -- in progress
-- [x] Trial it in other repositories
-- [ ] Iterate
+&#x2611; Generate SARIF json
+
+&#x2611; Support uploading it using [github/codeql-action/upload-sarif@releases/v2](https://github.com/github/codeql-action/tree/releases/v2/upload-sarif)
+
+&#x2611; Decide on how to opt-in/opt-out of using this format -- currently `use_sarif: 1`
+
+&#x2611; Test in the check-spelling org -- in progress
+
+&#x2611; Trial it in other repositories
+
+&#x2610; Iterate
+
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

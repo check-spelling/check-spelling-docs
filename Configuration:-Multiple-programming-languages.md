@@ -36,21 +36,21 @@ jobs:
       fail-fast: false
       matrix:
         category: ["java", "python", "other"]
-    name: Spell checking (${{matrix.category}})
+    name: Spell checking (${% raw %}{{{% endraw %}matrix.category}})
     steps:
     - name: checkout-merge
       if: "contains(github.event_name, 'pull_request')"
       uses: actions/checkout@v2
       with:
-        ref: refs/pull/${{github.event.pull_request.number}}/merge
+        ref: refs/pull/${% raw %}{{{% endraw %}github.event.pull_request.number}}/merge
     - name: checkout
       if: "!contains(github.event_name, 'pull_request')"
       uses: actions/checkout@v2
     - uses: check-spelling/check-spelling@prerelease
       id: spelling
       with:
-        config: .github/actions/spelling-${{matrix.category}}
-        report_title_suffix: ${{matrix.category}}
+        config: .github/actions/spelling-${% raw %}{{{% endraw %}matrix.category}}
+        report_title_suffix: ${% raw %}{{{% endraw %}matrix.category}}
 ```
 
 - `.github/actions/spelling`:
@@ -120,4 +120,7 @@ I suspect that this would mean each category would get its own 10 😃 .
 
 ## See also
 
-Using [[Area dictionaries|Feature: Area dictionaries]] should make this pretty reasonable (you could specify distinct area dictionaries using the matrix, but, you the cost for the extra dictionaries is minimal, so I'd just include all of them unconditionally).
+Using [Area dictionaries](./Feature:-Area-dictionaries) should make this pretty reasonable (you could specify distinct area dictionaries using the matrix, but, you the cost for the extra dictionaries is minimal, so I'd just include all of them unconditionally).
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

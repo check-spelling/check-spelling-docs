@@ -13,3 +13,6 @@ https://github.com/check-spelling/check-spelling/issues/53
 ### opt out
 
 To disable, add `minified-file` to `disable_checks`, and please file a bug with a sample where you think it makes sense to check the file.
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

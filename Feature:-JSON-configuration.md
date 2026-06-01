@@ -15,7 +15,7 @@ The last point means that check-spelling needs a json parser in order to do anyt
 
 ## Proposal
 
-Instead of having lots of lines of config in the `action.yml` file, and similar lines in the reusable workflow, I'm contemplating having just one or two configurable items in the `action.yml` -- mostly the path to the config directory [`config`](https://github.com/check-spelling/check-spelling/wiki/Configuration#config) and the [`custom_task`](https://github.com/check-spelling/check-spelling/wiki/Configuration#custom_task)).
+Instead of having lots of lines of config in the `action.yml` file, and similar lines in the reusable workflow, I'm contemplating having just one or two configurable items in the `action.yml` -- mostly the path to the config directory [`config`](Configuration#config) and the [`custom_task`](Configuration#customtask)).
 
 A new file will be added (tentatively `config.json`) containing the other configuration that used to be defined in `action.yml` and specified in the workflow.
 
@@ -27,3 +27,6 @@ Using `toJSON(inputs)` allows me to capture the current inputs (and thus greatly
 
 - Configuration doesn't need to be specified 2+ times (spelling, comment, optional update phase).
 - Only the pieces of configuration that are used by a given path would need to be parsed (currently the action.yml has to convert all inputs into env vars before the action actually starts running).
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

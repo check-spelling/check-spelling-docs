@@ -4,4 +4,7 @@ check-spelling uses [streetsidesoftware/cspell-dicts](https://github.com/streets
 
 This means that `cspell:` paths that reference the old locations are likely to break.
 
-You are likely to encounter a [`dictionary-not-found`](https://github.com/check-spelling/check-spelling/wiki/Event-descriptions#dictionary-not-found) error which should walk you through the steps necessary to resolve the problem.
+You are likely to encounter a [`dictionary-not-found`](Event-descriptions#dictionary-not-found) error which should walk you through the steps necessary to resolve the problem.
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

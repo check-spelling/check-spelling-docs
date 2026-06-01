@@ -7,3 +7,6 @@ Tentatively, all paths in `excludes` and `only` would be relative to `base-path`
 ## Requested
 
 https://github.com/ceph/ceph/pull/46824#issuecomment-1523640048
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

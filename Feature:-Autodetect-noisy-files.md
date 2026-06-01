@@ -15,11 +15,14 @@ Look for new filename extensions?
 
 ## See also
 
-- [[Detect non text files|Feature: Detect non text files]]
-- [[Detect binary files|Feature: Detect binary files]]
+- [Detect non text files](./Feature:-Detect-non-text-files)
+- [Detect binary files](./Feature:-Detect-binary-files)
 
 ## Escape path
 
 If this feature trips on files you need scanned, see:
 
-[[Scan noisy files|Feature: Scan noisy files]]
+[Scan noisy files](./Feature:-Scan-noisy-files)
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

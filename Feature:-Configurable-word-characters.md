@@ -2,7 +2,7 @@
 
 As of [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22), you can configure the characters that check-spelling handles.
 
-Previously, check-spelling would only look at `/[A-Za-z']/` and generally with a [minimum run length of 3](Configuration#shortest_word).
+Previously, check-spelling would only look at `/[A-Za-z']/` and generally with a [minimum run length of 3](Configuration#shortestword).
 
 ## Caveats
 
@@ -102,3 +102,6 @@ In order for this to work reasonably well, support for hunspell `.dic` and `.aff
 ## Related
 
 Right now, characters that fall outside the recognized set are effectively blanked (replaced with a non-word character, currently `=`). I might switch to only parsing characters that match the regex. That'd save me a pass.
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

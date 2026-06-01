@@ -23,3 +23,6 @@ An alternative workflow is (check-spelling is not integrated into the base repo)
 
 1. Teach classic to recognize the case (as talk-to-the-bot already does) and have it suggest patches to BASE instead of HEAD
 2. Teach talk-to-the-bot how to update HEAD instead of BASE -- this requires considering the permissions model a lot more. It might also involve a different set of commands, since the default is to both Add and Remove items from `expect.txt`. I'd be tempted to have it default to only adding, and require a fancier command for removal. A lot of work is required here.
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

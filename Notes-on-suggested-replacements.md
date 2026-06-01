@@ -2,9 +2,9 @@
 
 ## Simple script
 
-- [Input description](#Input-description)
-- [Observations](#Observations)
-- [Command run](#Command-run)
+- [Input description](#input-description)
+- [Observations](#observations)
+- [Command run](#command-run)
 
 ### Input description
 
@@ -14,7 +14,7 @@ I haven't created a PR for the repository yet because the list was so large.
 
 ### Observations
 
-This output is a good argument in favor of a smaller dictionary along with [[Area dictionaries|Feature: Area dictionaries]].
+This output is a good argument in favor of a smaller dictionary along with [Area dictionaries](./Feature:-Area-dictionaries).
 
 ### Command run
 
@@ -952,3 +952,6 @@ ZDUMMY --> dummy
 zplan .> IPLAN PLAN plan
 ZRANK .> arank brank crank drank Frank frank grank prank Rank rank trank
 ```
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

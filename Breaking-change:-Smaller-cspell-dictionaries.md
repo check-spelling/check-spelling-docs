@@ -17,3 +17,6 @@ Old|New
 -|-
 `cspell:companies/companies.txt` | `cspell:companies/src/companies.txt`
 `cspell:python/python.txt` | `cspell:python/src/python/python.txt` + `cspell:python/src/python/python-lib.txt` _probably_
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)
