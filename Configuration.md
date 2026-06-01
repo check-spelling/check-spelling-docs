@@ -71,6 +71,7 @@ See [[Configuration: Workflows]] for the supported GitHub workflows.
 | [unknown_file_word_limit](#unknown_file_word_limit) | Limit the number of reports for a specific unknown word in file paths |
 | [ignore-next-line](#ignore-next-line) | Define value(s) to trigger ignoring content on the next line |
 | [load-config-from](#load-config-from) | Define to allow loading specific configuration from `config.json` in `pull_request_target` events |
+| [check-homoglyphs](#check-homoglyphs) | Check for homoglyphs |
 | [check-images](#check-images) | Use OCR to get text from images and then check the content |
 
 See [[Configuration: Advanced]] for additional options.
@@ -564,6 +565,10 @@ Introduced in [v0.0.26](https://github.com/check-spelling/check-spelling/release
 The supported keys is limited to a subset of all configuration options (e.g. `config` will never be supported because that's used to find the `config.json` file) which may expand over time.
 
 The empty items (`""` & `"": []`) are ignored and provided to allow for happy Git blame when new lines are added (to avoid being blamed for adding the last item in a list).
+
+## check-homoglyphs
+
+[[Flag homoglyphs in words|Feature:-Flag-homoglyphs-in-words]]
 
 ## check-images
 
