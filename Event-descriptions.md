@@ -98,6 +98,7 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
   - [Resolution](#noisy-pr-title-r)
 - [noisy-pr-description](#noisy-pr-description)
   - [Resolution](#noisy-pr-description-r)
+- [empty-file](#empty-file)
 - [utf16-surrogate](#utf16-surrogate)
 - [utf16-surrogate-file](#utf16-surrogate-file)
   - [Resolution](#utf16-surrogate-file-r)
@@ -937,6 +938,12 @@ You can configure which files it should check by using [excludes](https://github
 - Remove `description` from [[Check filenames and paths|Feature: Check commit messages]].
 - Add PR description words to the dictionary (`allow.txt`).
 - Use patterns (`patterns.txt`) to mask tokens.
+
+# empty-file
+
+In [v0.0.26](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.26).
+
+If a configuration file is empty. This is an optional notice. It is usually not a problem.
 
 # utf16-surrogate
 
