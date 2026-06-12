@@ -1,23 +1,12 @@
 # Release notes
 
+* [Supported](#supported)
+* [Unsupported](#unsupported)
+
 ## Supported
 
 - [prerelease](#prerelease)
 - [v0.0.26](#v0026)
-
-## Unsupported
-
-❗ Please do not use these versions.
-
-- [v0.0.24](#v0024)
-- [v0.0.23](#v0023)
-- [v0.0.22](#v0022)
-- [v0.0.21](#v0021)
-- [v0.0.20](#v0020)
-- [v0.0.19](#v0019)
-- [v0.0.18](#v0018)
-- [v0.0.17](#v0017)
-- [v0.0.16](#v0016)
 
 ## Prerelease
 
@@ -49,6 +38,21 @@
 - Added `allow-hunspell` -- for use as `allow-hunspell: false` to disable hunspell support
 - Improved YAML parsing
 - Candidate and Forbidden Patterns will now automatically expand if there are only **one** or **two**
+
+## Unsupported
+
+❗ Please do not use these versions.
+
+- [v0.0.25](#v0025)
+- [v0.0.24](#v0024)
+- [v0.0.23](#v0023)
+- [v0.0.22](#v0022)
+- [v0.0.21](#v0021)
+- [v0.0.20](#v0020)
+- [v0.0.19](#v0019)
+- [v0.0.18](#v0018)
+- [v0.0.17](#v0017)
+- [v0.0.16](#v0016)
 
 ## v0.0.25
 
