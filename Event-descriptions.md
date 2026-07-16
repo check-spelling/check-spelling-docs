@@ -1064,6 +1064,8 @@ Check out the repository:
 
 # excludes-generation-failed
 
+Prior to [0.0.27](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.27), [only_check_changed_files](https://github.com/check-spelling/check-spelling/wiki/Configuration#only_check_changed_files) would trigger this message.
+
 One of the lines in `excludes.txt` (or equivalent) tripped up the `SuggestsExcludes` code.
 
 _Note that this is not necessarily reported as an event, but it may appear as an annotation or in the log._
@@ -1074,7 +1076,8 @@ If an error is encountered in `SuggestsExcludes`, check-spelling won't be able t
 
 ## <a id="excludes-generation-failed-r"></a>Resolution
 
-* If you're using [0.0.24](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.24) you can try prerelease or the version after [0.0.24](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.24).
+* If you're using [only_check_changed_files](https://github.com/check-spelling/check-spelling/wiki/Configuration#only_check_changed_files) and [0.0.26](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.26) you can version after [0.0.26](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.26) or prerelease, or just ignore the message.
+* If you're using [0.0.24](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.24) you can version [0.0.25](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.25) or later.
 * If you find one in a version after the fix for https://github.com/check-spelling/check-spelling/issues/85, please search for additional issues, and if you don't find one, please [file a ticket](https://github.com/check-spelling/check-spelling/issues/new).
 
 # binary-file
