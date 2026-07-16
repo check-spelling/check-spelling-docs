@@ -1077,7 +1077,7 @@ If an error is encountered in `SuggestsExcludes`, check-spelling won't be able t
 ## <a id="excludes-generation-failed-r"></a>Resolution
 
 * If you're using [only_check_changed_files](https://github.com/check-spelling/check-spelling/wiki/Configuration#only_check_changed_files) and [0.0.26](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.26) you can try the version after [0.0.26](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.26) or prerelease, or just ignore the message.
-* If you're using [0.0.24](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.24) you can version [0.0.25](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.25) or later.
+* If you're using [0.0.24](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.24) you can try version [0.0.25](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.25) or later.
 * If you find one in a version after the fix for https://github.com/check-spelling/check-spelling/issues/85, please search for additional issues, and if you don't find one, please [file a ticket](https://github.com/check-spelling/check-spelling/issues/new).
 
 # binary-file
