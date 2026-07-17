@@ -62,6 +62,8 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
   - [`use_sarif` and private repositories](#use-sarif-and-private-repositories)
     - [Resolution](#use-sarif-and-private-repositories-r)
   - [`use_sarif` and `act`](#use-sarif-and-act)
+  - [`check_extra_dictionaries` in `pr-trusted-keys` of `load-config-from`](#check_extra_dictionaries-in-pr-trusted-keys-load-config-from)
+    - [Resolution](#check_extra_dictionaries-in-pr-trusted-keys-load-config-from-r)
 - [unsupported-task](#unsupported-task)
   - [Resolution](#unsupported-task-r)
 - [minified-file](#minified-file)
@@ -686,6 +688,17 @@ You can try setting [`GITHUB_TOKEN`](https://github.com/nektos/act#github_token)
 This isn't supported and is unlikely to work.
 
 Eventually provisions will be made to generally expose the artifact itself. There is an artifact server which could help....
+
+## <a id="check_extra_dictionaries-in-pr-trusted-keys-load-config-from"></a>`check_extra_dictionaries` in `pr-trusted-keys` of `load-config-from`
+
+In [v0.0.26](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.26), `check_extra_dictionaries` isn't supported in `pr-trusted-keys`.
+
+This is fixed in prerelease and should be available in [v0.0.27](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.27).
+
+### <a id="check_extra_dictionaries-in-pr-trusted-keys-load-config-from-r"></a>Resolution
+
+- Upgrade to prerelease or [v0.0.27](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.27).
+- Don't set `check_extra_dictionaries` in `pr-trusted-keys`, and don't override `cspell` in `dictionary_source_prefixes` -- instead retain the value for `cspell` from the version of check-spelling and define an alternative prefix for custom dictionaries (e.g. `cspell1`).
 
 # unsupported-task
 
