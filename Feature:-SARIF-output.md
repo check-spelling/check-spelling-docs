@@ -77,3 +77,5 @@ https://github.com/check-spelling/check-spelling/issues/43
 - [x] Test in the check-spelling org -- in progress
 - [x] Trial it in other repositories
 - [ ] Iterate
+  - [x] Replace github/codeql-action/upload-sarif with a hand-rolled uploader for various reasons (starting with [v0.0.25](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.25))
+
