@@ -64,6 +64,8 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
   - [`use_sarif` and `act`](#use-sarif-and-act)
   - [`check_extra_dictionaries` in `pr-trusted-keys` of `load-config-from`](#check-extra-dictionaries-in-pr-trusted-keys-load-config-from)
     - [Resolution](#check-extra-dictionaries-in-pr-trusted-keys-load-config-from-r)
+- [unsupported-configuration-event](#unsupported-configuration-event)
+  - [Resolution](#unsupported-configuration-event-r)
 - [unsupported-task](#unsupported-task)
   - [Resolution](#unsupported-task-r)
 - [minified-file](#minified-file)
@@ -699,6 +701,33 @@ This is fixed in prerelease and should be available in [v0.0.27](https://github.
 
 - Upgrade to prerelease or [v0.0.27](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.27).
 - Don't set `check_extra_dictionaries` in `pr-trusted-keys`, and don't override `cspell` in `dictionary_source_prefixes` -- instead retain the value for `cspell` from the version of check-spelling and define an alternative prefix for custom dictionaries (e.g. `cspell1`).
+
+# unsupported-configuration-event
+
+GitHub periodically adds new [events](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows).
+
+In order to work, check-spelling needs to understand the event structure and how to handle it.
+
+## <a id="unsupported-configuration-event-r"></a>Resolution
+
+### If there is a similar supported event
+
+Sometimes you can use the [`event_aliases`](https://docs.check-spelling.dev/Configuration#eventaliases):
+
+```yml
+with:
+   ...
+   event_aliases: '{"merge_group":"pull_request"}'
+```
+
+Where each key is the name of an unsupported event and the corresponding value is a supported event that you believe should handle the event. The main supported events to which you are likely to map events are `push` and `pull_request`.
+
+### Otherwise
+
+If the event isn't supported, and there isn't a corresponding supported event you can do one of the following:
+- Remove the event from `on:`
+- If the workflow is shared with other actions, use an `if:` for the job/step to skip the `check-spelling` job/step for that event
+- If you want check-spelling to support the event, check for a [request](https://github.com/check-spelling/check-spelling/issues?q=is%3Aissue%20state%3Aopen%20unsupported-configuration-event), and if there isn't one, [file a ticket](https://github.com/check-spelling/check-spelling/issues/new?title=[unsupported-configuration-event]%20name_of_unsupported_event&body=Describe%20what%20you%20want%20the%20event%20to%20do.)
 
 # unsupported-task
 
