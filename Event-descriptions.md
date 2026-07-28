@@ -725,9 +725,9 @@ Where each key is the name of an unsupported event and the corresponding value i
 ### Otherwise
 
 If the event isn't supported, and there isn't a corresponding supported event you can do one of the following:
-- Remove the event from `on:`
-- If the workflow is shared with other actions, use an `if:` for the job/step to skip the `check-spelling` job/step for that event
-- If you want check-spelling to support the event, check for a [request](https://github.com/check-spelling/check-spelling/issues?q=is%3Aissue%20state%3Aopen%20unsupported-configuration-event), and if there isn't one, [file a ticket](https://github.com/check-spelling/check-spelling/issues/new?title=[unsupported-configuration-event]%20name_of_unsupported_event&body=Describe%20what%20you%20want%20the%20event%20to%20do.)
+- If the workflow is only used for check-spelling, remove the event from `on:`.
+- If the workflow is shared with other actions, use an `if:` for the job/step to skip the `check-spelling` job/step for that event.
+- If you want check-spelling to support the event, check for a [request](https://github.com/check-spelling/check-spelling/issues?q=is%3Aissue%20state%3Aopen%20unsupported-configuration-event), and if there isn't one, [file a ticket](https://github.com/check-spelling/check-spelling/issues/new?title=[unsupported-configuration-event]%20name_of_unsupported_event&body=Describe%20what%20you%20want%20the%20event%20to%20do.).
 
 # unsupported-task
 
