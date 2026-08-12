@@ -1,4 +1,4 @@
-# <img alt="check-spelling logo" src="https://github.com/check-spelling/art/blob/main/logo/spell-check.png" width="30"> check spelling action
+# <img alt="check-spelling logo" src="https://raw.githubusercontent.com/check-spelling/art/main/logo/spell-check.png" width="30"> check spelling action
 
 The [check-spelling](https://github.com/marketplace/actions/check-spelling) GitHub action enables you to catch misspellings.
 
@@ -13,13 +13,16 @@ with a really high false-positive rate, people don't tend to enable spellcheckin
 at all.
 
 This action's tools are capable of tolerating all of those variations.
-Specifically, [w](https://github.com/jsoref/spelling/blob/main/w) understands
+Specifically, [w](https://raw.githubusercontent.com/jsoref/spelling/main/w) understands
 enough about how programmers name things that it can split the above conventions
 into word-like things for checking against a dictionary.
 
-- [[Quick Start]]
-- [[Showcase]]
-- [[Event descriptions]]
-- [[Configuration information]]
-- [[Possible features]]
-- [[Security|Security]]
+- [Quick Start](Quick-Start)
+- [Showcase](Showcase)
+- [Event descriptions](Event-descriptions)
+- [Configuration information](Configuration-information)
+- [Possible features](Possible-features)
+- [Security](Security)
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

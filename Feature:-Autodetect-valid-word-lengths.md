@@ -1,6 +1,6 @@
 # Autodetect valid word lengths
 
-With [[Heuristic exclude suggestions|Feature: Heuristic exclude suggestions]], I've started reviewing what's worth checking.
+With [Heuristic exclude suggestions](./Feature:-Heuristic-exclude-suggestions), I've started reviewing what's worth checking.
 
 For one, a significant portion of the two letter space is already in the dictionary.
 
@@ -19,3 +19,6 @@ There are now two flags to configure the length of "words":
 
 - `shortest_word` -- you can set this to `"2"` to restore the old behavior
 - `longest_word` -- you could set this to some obscene number like `"32767"` to get closer to the old behavior
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

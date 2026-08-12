@@ -71,3 +71,6 @@ urls/
 
 1. detect any `directory/{sha}` for which there is no urls/{\*}/sha containing that value and delete it.
 2. detect any `urls/{*}/sha` for which there's more than one `urls/{*}` with the same `sha` file value and warn about it.
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

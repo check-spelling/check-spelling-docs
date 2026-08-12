@@ -18,3 +18,6 @@ The implementation is basically:
 
 1. sort the union of all suggested dictionaries retaining only unique words
 2. for each dictionary, score any word that is in that list
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

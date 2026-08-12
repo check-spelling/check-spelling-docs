@@ -6,16 +6,16 @@ Originally patterns resulted in roughly a single "` `", and more recently a "` `
 
 ## Problems
 
-With the introduction of [[Forbidden patterns|Feature: Forbidden patterns]], how those masked items worked mattered a bit.
+With the introduction of [Forbidden patterns](./Feature:-Forbidden-patterns), how those masked items worked mattered a bit.
 
-Specifically, if one used this pattern (from [[Configuration Examples: patterns]]):
+Specifically, if one used this pattern (from [Configuration Examples: patterns](./Configuration-Examples:-patterns)):
 
 ```
 # version suffix <word>v#
 [Vv]\d+(?:\b|(?=[a-zA-Z_]))
 ```
 
-And this forbidden pattern (from [[Configuration Examples: forbidden]]):
+And this forbidden pattern (from [Configuration Examples: forbidden](./Configuration-Examples:-forbidden)):
 
 ```
 # Reject duplicate words
@@ -54,4 +54,7 @@ Instead of masking `patterns` with "` `", as of [v0.0.20](https://github.com/che
 
 It's unlikely that anyone will notice this change as the only place this should matter is forbidden patterns which are v0.0.20 feature.
 
-The spell checker itself ignores non-alpha characters (treating them as equivalent to "` `") already. So the "`=`" is really only relevant during evaluation of [[Forbidden patterns|Feature: Forbidden patterns]].
+The spell checker itself ignores non-alpha characters (treating them as equivalent to "` `") already. So the "`=`" is really only relevant during evaluation of [Forbidden patterns](./Feature:-Forbidden-patterns).
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

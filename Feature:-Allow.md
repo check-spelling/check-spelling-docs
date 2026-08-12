@@ -13,4 +13,7 @@ It is nicer if one can just supply the new words without having to maintain a co
 
 Released in [0.0.16-alpha](https://github.com/check-spelling/check-spelling/releases/tag/0.0.16-alpha) as: `allow`.
 
-Note that this is distinct from [[expect|Feature: Expectlist]].
+Note that this is distinct from [expect](./Feature:-Expectlist).
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

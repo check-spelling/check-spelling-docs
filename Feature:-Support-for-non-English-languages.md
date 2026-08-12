@@ -6,7 +6,7 @@ Previously, you could add dictionaries from other languages, but unless all the 
 
 ## Implementation details
 
-By adding [[Configurable word characters|Feature: Configurable word characters]], check-spelling can be tuned to accept a different range of word characters, enabling it to check words with accent marks as well as, for example, words with Arabic or Cyrillic letters.
+By adding [Configurable word characters](./Feature:-Configurable-word-characters), check-spelling can be tuned to accept a different range of word characters, enabling it to check words with accent marks as well as, for example, words with Arabic or Cyrillic letters.
 
 ## Available dictionaries
 
@@ -61,3 +61,6 @@ You can pull in any of these hunspell dictionaries from [`cspell`](https://githu
 ```
 
 When check-spelling sees an instruction to use `.dic` file, it will automatically retrieve the corresponding `.aff` file as well.
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

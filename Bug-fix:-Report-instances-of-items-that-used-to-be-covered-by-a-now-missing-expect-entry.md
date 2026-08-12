@@ -23,3 +23,6 @@ check-spelling would complain about `Helllo` (suggesting adding it to `expect.tx
 ## Availability
 
 Expected to be available in [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22)
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

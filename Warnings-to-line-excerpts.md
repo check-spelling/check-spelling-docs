@@ -90,3 +90,6 @@ If you set `$show_context = 0`, you'll get only the matching content. This is us
 
 Will yield output like this:
 > samples/client/petstore/java/okhttp-gson-parcelableModel/src/main/java/org/openapitools/client/model/FileSchemaTestClass.java:222:      JsonArray json**Arrayfiles** = jsonObj.getAsJsonArray("files");
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

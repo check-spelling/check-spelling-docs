@@ -24,7 +24,7 @@ There are two modes:
 
 ### Incompatible with
 
-- [[Concurrency|Feature: Concurrency]] -> `cancel-in-progress`
+- [Concurrency](./Feature:-Concurrency) -> `cancel-in-progress`
 
 ## Future Work
 
@@ -33,3 +33,6 @@ There are two modes:
 It could look at the _removed_ side of diffs and use that to keep a list of items from `expect` -- anything that it doesn't find in the _added_ side could be treated as suspect.
 
 It could then do one round of checking the unchecked files (or all files if the initial check pass is only on the _added_ line hunks and not the entirety of the changed files) for just the that subset of `expect`. I think that should be faster than the full parse path, but I'd definitely make it an optional thing, and I'd probably implement it later.
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

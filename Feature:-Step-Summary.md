@@ -16,8 +16,11 @@ Because I didn't see `summary_raw`, the integration for check-spelling involves 
 
 Roughly, the output is the same as the comment output. Unlike comments, it doesn't enforce the 64k limit. I'm not currently enforcing a 1mb limit, so if you manage to generate >1mb, the summary will fail -- if you run into this, please file a bug, I'd like to think about what to do when this happens instead of just writing something up.
 
-See [[Behavior change: Job Summaries]].
+See [Behavior change: Job Summaries](./Behavior-change:-Job-Summaries).
 
 ## Possible changes
 
 I _might_ add support for retrieving the data from `summary_raw` instead. But, I don't know that I will.
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

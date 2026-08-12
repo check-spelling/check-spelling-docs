@@ -25,7 +25,7 @@ posted to GitHub. It's freeform. You can use
 it to explain how contributors should decide
 where to put new entries.
 
-See [[Configuration Examples: advice]] for examples.
+See [Configuration Examples: advice](./Configuration-Examples:-advice) for examples.
 
 ## allow
 
@@ -43,15 +43,15 @@ Some candidates:
 - C or JavaScript reserved words
 - The names of all types/ functions from the C standard library
 
-See [Area dictionaries](https://github.com/check-spelling/check-spelling/wiki/Feature:-Area-dictionaries) for other examples.
+See [Area dictionaries](./Feature:-Area-dictionaries) for other examples.
 
-For entire reusable lists that don't live in your repository, you can use [extra_dictionaries](https://github.com/check-spelling/check-spelling/wiki/Configuration#extra_dictionaries) instead.
+For entire reusable lists that don't live in your repository, you can use [extra_dictionaries](Configuration#extradictionaries) instead.
 
 ## block delimiters
 
 This allows you to define a pair of start/stop delimiters which will cause check-spelling to skip the contents of lines between start and stop delimiters.
 
-See [[Configuration Examples: block delimiters]] for examples and [[Feature: Block Ignore]] for information about the feature.
+See [Configuration Examples: block delimiters](./Configuration-Examples:-block-delimiters) for examples and [Feature: Block Ignore](./Feature:-Block-Ignore) for information about the feature.
 
 ## dictionary
 
@@ -62,9 +62,9 @@ If you want to include the default dictionary,
 place it into the directory next to your own.
 
 Alternatively, if you want to retrieve a dictionary from a remote URL,
-see the workflow configuration values [[dictionary_url|Configuration#dictionary_url]] and [[dictionary_version|Configuration#dictionary_version]].
+see the workflow configuration values [dictionary_url](Configuration#dictionaryurl) and [dictionary_version](Configuration#dictionaryversion).
 
-If you just want to supplement the dictionary, you can use [`extra_dictionaries`](https://github.com/check-spelling/check-spelling/wiki/Configuration#extra_dictionaries) or [allow](#allow).
+If you just want to supplement the dictionary, you can use [`extra_dictionaries`](Configuration#extradictionaries) or [allow](#allow).
 
 ## excludes
 
@@ -78,7 +78,7 @@ unless you explicitly use `(?:(?i)...)` or
 
 Files matching these patterns will be skipped.
 
-See [[Configuration Examples: excludes]] for examples.
+See [Configuration Examples: excludes](./Configuration-Examples:-excludes) for examples.
 
 Lines that start with `#` will be ignored.
 
@@ -130,7 +130,7 @@ unless you explicitly use `(?:(?i)...)` or
 
 Tokens within files that match these expressions will be flagged.
 
-See [[Configuration Examples: forbidden]] for examples.
+See [Configuration Examples: forbidden](./Configuration-Examples:-forbidden) for examples.
 
 ## only
 
@@ -140,7 +140,7 @@ They are merged using an `OR` (`|`).
 
 Files not matching these patterns will be skipped.
 
-See [[Configuration Examples: only]] for examples.
+See [Configuration Examples: only](./Configuration-Examples:-only) for examples.
 
 Lines that start with `#` will be ignored.
 
@@ -157,7 +157,7 @@ unless you explicitly use `(?:(?i)...)` or
 
 Tokens within files that match these expressions will be skipped.
 
-See [[Configuration Examples: patterns]] for examples.
+See [Configuration Examples: patterns](./Configuration-Examples:-patterns) for examples.
 
 ## reject
 
@@ -168,22 +168,25 @@ The order of operations is:
 
 > `(dictionary + allows) - reject`
 
-See [[Configuration Examples: reject]] for examples.
+See [Configuration Examples: reject](./Configuration-Examples:-reject) for examples.
 
 ## config
 
-A json file (`config.json`) with keys from [[Configuration|Configuration#workflow-parameters]] and values for those values.
+A json file (`config.json`) with keys from [Configuration](Configuration#workflow-parameters) and values for those values.
 
-For workflows running via `on: pull_request_target`, see [[load-config-from|Configuration#load-config-from]].
+For workflows running via `on: pull_request_target`, see [load-config-from](Configuration#load-config-from).
 
-See [[Configuration Examples: config]] for examples.
+See [Configuration Examples: config](./Configuration-Examples:-config) for examples.
 
 ## homoglyph
 
-See [[Flag homoglyphs in words|Feature: Flag homoglyphs in words]]
+See [Flag homoglyphs in words](./Feature:-Flag-homoglyphs-in-words)
 
 - Lines beginning with `#` are comments.
 - You can use `\#` if you need to define homoglyphs for `#` (as most languages don't use `#` as a word character, this doesn't seem like a real concern).
 - The first character is the character in the dictionary, all subsequent characters are homoglyphs that when found will be checked using the first character.
 
 If a word is present in the dictionary using the first character from the line based on the presence of a homoglyph, the word will be flagged and the corresponding dictionary word will be reported.
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

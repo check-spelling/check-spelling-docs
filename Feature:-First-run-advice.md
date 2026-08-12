@@ -13,3 +13,6 @@ This isn't particularly good...
 
 If there's an `expect` file and no `excludes` file, I think I'll have it suggest an `excludes` file.
 If there's an `expect` and an `excludes`, I might have it suggest a `patterns` file.
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

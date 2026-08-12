@@ -10,7 +10,7 @@ It would be nice if the tool could recognize files that aren't interesting to it
 
 If a file has more _non-words_ than dictionary _words_, it's a good candidate for exclusion.
 
-This is implemented in [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21) as part of [[Autodetect noisy files|Feature: Autodetect noisy files]]
+This is implemented in [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21) as part of [Autodetect noisy files](./Feature:-Autodetect-noisy-files)
 
 ### Implementation
 
@@ -22,7 +22,7 @@ This is implemented in [v0.0.21](https://github.com/check-spelling/check-spellin
 
 ## File patterns
 
-This is implemented in [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22) as part of [[Heuristic exclude suggestions|Feature: Heuristic exclude suggestions]]
+This is implemented in [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22) as part of [Heuristic exclude suggestions](./Feature:-Heuristic-exclude-suggestions)
 
 Totals for files could be checked by _file extension_, _file infix_, _file prefix_, and _directory name_
 
@@ -42,3 +42,6 @@ Suggestions could be made based on each of those categories:
 # test-data directory:
 /test-data/
 ```
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

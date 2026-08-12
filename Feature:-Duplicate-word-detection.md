@@ -6,7 +6,7 @@ The classic example is `the the quick`
 
 ## Proposal
 
-This is possible using [[Forbidden patterns|Feature: Forbidden patterns]]:
+This is possible using [Forbidden patterns](./Feature:-Forbidden-patterns):
 
 `line_objections.patterns`:
 
@@ -17,3 +17,6 @@ This is possible using [[Forbidden patterns|Feature: Forbidden patterns]]:
 ### Cons
 
 I fully expect this to have a significant performance penalty (and it has to be done fairly early, before any other parsing...)
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

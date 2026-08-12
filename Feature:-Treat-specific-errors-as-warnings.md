@@ -9,10 +9,10 @@ It's understood that not every user will agree with which items should be errors
 ## Implementation
 
 As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20),
-you can specify which [[events|Event descriptions]] should be treated as warnings using the `warnings` parameter.
+you can specify which [events](Event-descriptions) should be treated as warnings using the `warnings` parameter.
 
 As of [v0.0.21](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.21),
-you can specify which [[events|Event descriptions]] should be treated as notices using the `notices` parameter.
+you can specify which [events](Event-descriptions) should be treated as notices using the `notices` parameter.
 
 ## Default settings
 
@@ -34,3 +34,6 @@ If you wanted to treat `unrecognized-spelling` as a warning and `deprecated-feat
 with:
   warnings: unrecognized-spelling,bad-regex,binary-file,large-file,limited-references,no-newline-at-eof,noisy-file,non-alpha-in-dictionary,unexpected-line-ending,whitespace-in-dictionary,minified-file,unsupported-configuration
 ```
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

@@ -28,7 +28,7 @@ on:
 ```yaml
     - uses: actions/checkout@v2
       with:
-        ref: ${{ github.event.pull_request.head.sha }}
+        ref: ${% raw %}{{{% endraw %} github.event.pull_request.head.sha }}
 ```
 
 ## Security considerations
@@ -45,5 +45,8 @@ I don't believe that check-spelling is insecure (that's what everyone says, righ
 
 Released in [0.0.17-alpha](https://github.com/check-spelling/check-spelling/releases/tag/0.0.17-alpha).
 
-[[Breaking change: Dropping support for on: schedule]] should occur after
+[Breaking change: Dropping support for on: schedule](./Breaking-change:-Dropping-support-for-on:-schedule) should occur after
 [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22).
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

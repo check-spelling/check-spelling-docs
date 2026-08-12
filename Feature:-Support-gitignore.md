@@ -15,3 +15,6 @@ If you have specific cases where you feel a need for this feature, please feel f
 # ETA
 
 None at this time. I'm still thinking it over. But it'll probably just happen one day.
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

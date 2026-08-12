@@ -15,3 +15,6 @@ check-spelling resets its `cspell` alias, its `extra_dictionaries` and `check_ex
 Instead of discarding all dictionaries, it can use a file to report the original names of all the dictionaries it couldn't resolve. That'll make it possible to retain the resolved dictionaries, clean up the code a bit, and get to the next part.
 
 When it's done, it can suggest removing the unavailable dictionaries and users can select from the suggested dictionaries.
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

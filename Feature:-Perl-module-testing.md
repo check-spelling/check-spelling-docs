@@ -23,3 +23,6 @@ It also provides a roadmap for more test coverage.
 ## Future steps
 
 I might try [Devel::Cover](https://metacpan.org/pod/Devel::Cover)
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

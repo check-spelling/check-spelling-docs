@@ -12,9 +12,9 @@
 ## Workflow
 
 - If you don't need to comment on commits/pull requests, a single workflow with a single job without `contents: write` / `pull-requests: write` will generally work. (Uploading SARIF is another rough edge that seems to require `security-events: write` although ideally it shouldn't...)
-  - https://github.com/check-spelling/spell-check-this/blob/main/.github/workflows/spelling.yml -- delete non checking jobs
+  - https://raw.githubusercontent.com/check-spelling/spell-check-this/main/.github/workflows/spelling.yml -- delete non checking jobs
 - Versions up to [v0.0.26](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.26) support a two job workflow where the checking job does not have `write` permissions and the second job has the required `write` permissions but doesn't check out the repository which should address concerns of handling untrusted content.
-  - https://github.com/check-spelling/spell-check-this/blob/1645aae0fda1e04e3c44f156334b628aa651aeb0/.github/workflows/spelling.yml defines a workflow that is compatible with these requirements
+  - https://raw.githubusercontent.com/check-spelling/spell-check-this/1645aae0fda1e04e3c44f156334b628aa651aeb0/.github/workflows/spelling.yml defines a workflow that is compatible with these requirements
 - Versions after [v0.0.26](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.26) should support a two workflow model where the checking workflow file / job does not have `write` permissions and the second workflow file / job responds to `workflow_run` and has any necessary `write` permissions
 
 ## Requirements by phase
@@ -60,3 +60,6 @@ As of April 2026, GitHub recently changed its API response for one of the checks
 - Tracked as [check-spelling#103](https://github.com/check-spelling/check-spelling/issues/103)
 - secpoll was updated to explain the issue and now suggests upgrading
 - Fixed in [v0.0.26](https://github.com/check-spelling/check-spelling/releases/v0.0.26) to use a different test
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)
