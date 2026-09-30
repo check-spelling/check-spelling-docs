@@ -150,6 +150,8 @@ Each event should be listed in the [**Action Log**](https://docs.github.com/en/a
   - [Resolution](#out-of-bounds-symbolic-link-r)
 - [unexpected-input-value](#unexpected-input-value)
   - [Resolution](#unexpected-input-value-r)
+- [rate-limit-hit](#rate-limit-hit)
+  - [Resolution](#rate-limit-hit-r)
 
 ℹ️ As of [v0.0.20](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.20), workflows can [[configure whether specific events are treated as ❌Errors or ⚠️Warnings|Feature: Treat specific errors as warnings]].
 
@@ -1261,3 +1263,11 @@ Unexpected input value. GitHub Personal Access Tokens are only supported as inpu
   - If you committed a personal access token into the repository, you will need to rotate the secret (and not commit the replacement).
   - If you're using a `${{ secrets.VALUE }}`, it should work as long as the field is a `token` input, if it doesn't work, please check for a bug report.
 
+# rate-limit-hit
+
+API rate limit exceeded for installation. If you reach out to GitHub Support for help, please include the request ID ... and timestamp .... 
+
+## <a id="rate-limit-hit-r"></a>Resolution
+
+- Contact GitHub Support
+- It might be possible to set up a github personal access token
