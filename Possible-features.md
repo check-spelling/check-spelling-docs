@@ -6,6 +6,7 @@
 
 ## In progress
 
+- 🔒 [[Support for GitHub Actions Policy changes to pull_request_target 2026‐12‐02|GitHub Actions Policy changes to pull_request_target 2026‐12‐02]]
 - 😄 [[Easier to understand filenames|Feature: Easier to understand filenames]]
 - ↪️ [[Content Mappings|Feature: Content Mappings]]
 - ⚙️ [[JSON configuration|Feature: JSON configuration]]
