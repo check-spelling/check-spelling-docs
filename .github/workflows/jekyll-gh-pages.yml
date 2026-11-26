@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           ref: gh-pages
       - name: Setup Pages
@@ -29,8 +29,10 @@ jobs:
         shell: bash
         run: |
           : Mermaid
+          puppeteer_config=$(mktemp)
+          echo '{ "args": ["--no-sandbox", "--disable-setuid-sandbox"] }' > "$puppeteer_config"
           for file in $(git ls-files -z|xargs -0 grep -l '```mermaid'); do
-            aa-exec --profile=chrome npx -p @mermaid-js/mermaid-cli mmdc --input "$file" --output "$file"
+            npx -p @mermaid-js/mermaid-cli mmdc -p "$puppeteer_config" --input "$file" --output "$file"
           done
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
