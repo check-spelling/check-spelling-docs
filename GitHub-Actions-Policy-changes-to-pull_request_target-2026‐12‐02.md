@@ -53,7 +53,7 @@ Upcoming changes will result in [pull_request_target blocked by default December
 
 check-spelling prerelease includes support for a [split workflow](https://github.com/check-spelling/spell-check-this/tree/f7e8a481363df94f15c0bdf2d4da385e4ad4b0a7/.github/workflows):
 
-- [`spelling.yml`](https://github.com/check-spelling/spell-check-this/blob/f7e8a481363df94f15c0bdf2d4da385e4ad4b0a7/.github/workflows/spelling.yml) -- readonly permissions:
+- [`spelling.yml`](https://github.com/check-spelling/spell-check-this/blob/ba677e970f245397cb9c0204b793fcc078f5f352/.github/workflows/spelling.yml) -- readonly permissions:
 
     ```yaml
     permissions:
@@ -62,11 +62,11 @@ check-spelling prerelease includes support for a [split workflow](https://github
       actions: read
     ```
 
-- [`spelling-comment.yml`](https://github.com/check-spelling/spell-check-this/blob/f7e8a481363df94f15c0bdf2d4da385e4ad4b0a7/.github/workflows/spelling-comment.yml) (the name will be changed) -- write permissions:
+- [`spelling-workflow-run.yml`](https://github.com/check-spelling/spell-check-this/blob/ba677e970f245397cb9c0204b793fcc078f5f352/.github/workflows/spelling-workflow-run.yml) -- write permissions:
 
   ```yaml
-  comment-pr:
-    name: Comment (PR)
+  pull-request:
+    name: Report (PR)
     runs-on: ubuntu-slim
     permissions:
       actions: read
