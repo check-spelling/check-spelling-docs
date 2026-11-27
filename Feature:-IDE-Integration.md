@@ -14,3 +14,6 @@ Things to try:
 ```
 
 - Ref: [streetsidesoftware/vscode-spell-checker#681](https://github.com/streetsidesoftware/vscode-spell-checker/issues/681)
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

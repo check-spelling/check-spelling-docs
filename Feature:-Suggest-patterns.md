@@ -29,7 +29,7 @@ After finding a word, in order to report the word's position in the unmasked lin
 
 If a pattern is bad, it could introduce unrecognized words that aren't naturally present. - Suggestions should be curated, so this shouldn't be a real problem.
 
-This turned out to be a bit of a problem which is partially addressed in [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22) with the introduction of [`token-is-substring`](https://github.com/check-spelling/check-spelling/wiki/Event-descriptions#token-is-substring).
+This turned out to be a bit of a problem which is partially addressed in [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22) with the introduction of [`token-is-substring`](Event-descriptions#token-is-substring).
 
 ## Poor patterns
 
@@ -96,3 +96,6 @@ The above would trigger this erroneous suggestion:
 ### [v0.0.22](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.22)
 
 The way pattern suggestions are calculated has been improved such that these erroneous suggestions should not happen.
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

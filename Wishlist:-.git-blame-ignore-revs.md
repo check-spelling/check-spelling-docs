@@ -32,3 +32,6 @@ generated a PR (or just a commit) to update the file.
 
 It seems like a pretty neat small project, which someone
 could/should do.
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

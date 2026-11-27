@@ -19,7 +19,7 @@ See https://github.com/Lombiq/GitHub-Actions/blob/50a53552bd3e62309cf44ce962fe0f
 
 [v0.0.25](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.25) includes initial support for `submodules`.
 
-Whether you use [`actions/checkout`](https://github.com/actions/checkout) yourself or use [`checkout`](https://github.com/check-spelling/check-spelling/wiki/Configuration#checkout), you can add [`submodules`](https://github.com/check-spelling/check-spelling/wiki/Configuration#submodules):
+Whether you use [`actions/checkout`](https://github.com/actions/checkout) yourself or use [`checkout`](Configuration#checkout), you can add [`submodules`](Configuration#submodules):
 
 ```yaml
 with:
@@ -34,10 +34,13 @@ with:
 
 to the check-spelling configuration to enable check-spelling to check files in submodules.
 
-If using [`checkout`](https://github.com/check-spelling/check-spelling/wiki/Configuration#checkout), check-spelling will try to check out your submodules (it has some additional code to avoid tripping on broken submodules, because this stuff is a mess).
+If using [`checkout`](Configuration#checkout), check-spelling will try to check out your submodules (it has some additional code to avoid tripping on broken submodules, because this stuff is a mess).
 
 check-spelling will list files from submodules and check them as long as they aren't excluded by your normal excludes configuration.
 
 Files with issues will have annotated links to their origin repositories.
 
 SARIF reports will include their paths, but GitHub will not be happy about them because the files are not part of the main repository. (Other tools that consume the files should be happy as long as they are present in your working repository.)
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

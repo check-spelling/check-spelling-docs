@@ -1,3 +1,6 @@
 # Reject specific patterns
 
-See [[Forbidden patterns|Feature: Forbidden patterns]].
+See [Forbidden patterns](./Feature:-Forbidden-patterns).
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

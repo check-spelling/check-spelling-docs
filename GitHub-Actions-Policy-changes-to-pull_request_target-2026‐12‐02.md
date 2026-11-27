@@ -53,7 +53,7 @@ Upcoming changes will result in [pull_request_target blocked by default December
 
 check-spelling prerelease includes support for a [split workflow](https://github.com/check-spelling/spell-check-this/tree/f7e8a481363df94f15c0bdf2d4da385e4ad4b0a7/.github/workflows):
 
-- [`spelling.yml`](https://github.com/check-spelling/spell-check-this/blob/ba677e970f245397cb9c0204b793fcc078f5f352/.github/workflows/spelling.yml) -- readonly permissions:
+- [`spelling.yml`](https://raw.githubusercontent.com/check-spelling/spell-check-this/ba677e970f245397cb9c0204b793fcc078f5f352/.github/workflows/spelling.yml) -- readonly permissions:
 
     ```yaml
     permissions:
@@ -62,7 +62,7 @@ check-spelling prerelease includes support for a [split workflow](https://github
       actions: read
     ```
 
-- [`spelling-workflow-run.yml`](https://github.com/check-spelling/spell-check-this/blob/ba677e970f245397cb9c0204b793fcc078f5f352/.github/workflows/spelling-workflow-run.yml) -- write permissions:
+- [`spelling-workflow-run.yml`](https://raw.githubusercontent.com/check-spelling/spell-check-this/ba677e970f245397cb9c0204b793fcc078f5f352/.github/workflows/spelling-workflow-run.yml) -- write permissions:
 
   ```yaml
   pull-request:
@@ -77,3 +77,6 @@ check-spelling prerelease includes support for a [split workflow](https://github
   If you aren't using the `push` comment block, you'd remove that from the workflow.
 
 A [v0.0.27 release](https://github.com/check-spelling/check-spelling/releases/tag/v0.0.27) should come by Sunday, November 29, 2026.
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

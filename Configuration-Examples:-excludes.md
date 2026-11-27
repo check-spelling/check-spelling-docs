@@ -42,3 +42,6 @@ Once you've upgraded, you can safely convert...
 ## Purpose
 
 `excludes` is designed to enable check-spelling to skip files that match any of the patterns in `excludes`.
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)

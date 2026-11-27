@@ -1,11 +1,11 @@
 # Onboarding
 
-The easiest way to get started is by following the [[Quick Start]] instructions.
+The easiest way to get started is by following the [Quick Start](Quick-Start) instructions.
 
 If you do this before people create forks of your repository, things should go fairly smoothly.
 
 As of v0.0.21 (but hopefully not the next release), if a user creates a branch from before check-spelling is added,
-but creates a PR to the repository with check-spelling as configured by [spell-check-this in `.github/workflows/spelling.yml`](https://github.com/check-spelling/spell-check-this/blob/6b83ae39834cdf4e64ffff2b8693afe0536c5823/.github/workflows/spelling.yml),
+but creates a PR to the repository with check-spelling as configured by [spell-check-this in `.github/workflows/spelling.yml`](https://raw.githubusercontent.com/check-spelling/spell-check-this/6b83ae39834cdf4e64ffff2b8693afe0536c5823/.github/workflows/spelling.yml),
 check-spelling will run but not find its configuration.
 Because it won't find its configuration, it will almost certainly get somewhat upset with users and
 lead them to be at least a little bit confused.
@@ -31,3 +31,6 @@ Thus, if your repository is `octocat/Spoon-Knife` and you're adding check-spelli
 ```
 
 The active assumption here is that any PRs to branches that are created after check-spelling is added to `octocat/Spoon-Knife@main` will be created based on commits that already include check-spelling, and thus the `spell_check_this` codepath won't be used.
+
+---
+[FAQ](FAQ) | [Showcase](Showcase) | [Event descriptions](Event-descriptions) | [Configuration information](Configuration-information) | [Known Issues](Known-Issues) | [Possible features](Possible-features) | [Deprecations](Deprecations) | [Release notes](Release-notes) | [Helpful scripts](Helpful-scripts)
